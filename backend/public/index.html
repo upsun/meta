@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust-API - Upsun Service Registry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #2563eb;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            font-size: 16px;
+        }
+
+        .version {
+            display: inline-block;
+            background: #dbeafe;
+            color: #2563eb;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .main-link {
+            display: block;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+            text-decoration: none;
+            padding: 20px 30px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 30px 0;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .main-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        .main-link .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .endpoints {
+            margin-top: 30px;
+        }
+
+        .endpoints h2 {
+            color: #374151;
+            font-size: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .endpoint-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .endpoint {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 16px;
+            transition: border-color 0.2s;
+        }
+
+        .endpoint:hover {
+            border-color: #2563eb;
+        }
+
+        .endpoint-method {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .endpoint-path {
+            font-family: 'Courier New', monospace;
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .endpoint-desc {
+            color: #6b7280;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .endpoint-example {
+            background: #f3f4f6;
+            border-left: 3px solid #2563eb;
+            padding: 8px 12px;
+            margin-top: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: #374151;
+            border-radius: 4px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 30px 0;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 20px;
+            background: #f9fafb;
+            border-radius: 8px;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 4px;
+        }
+
+        .feature-desc {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 24px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🚀</div>
+            <h1>Trust-API</h1>
+            <p class="subtitle">Upsun Service Registry API</p>
+            <span class="version">v1.0.0</span>
+        </div>
+
+        <a href="/api-docs" class="main-link">
+            <span class="icon">📚</span>
+            Access Interactive Documentation (Scalar)
+        </a>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">✅</div>
+                <div class="feature-title">Zod Validation</div>
+                <div class="feature-desc">Type-safe with runtime validation</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📖</div>
+                <div class="feature-title">Scalar UI</div>
+                <div class="feature-desc">Modern OpenAPI documentation</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔒</div>
+                <div class="feature-title">Rate Limiting</div>
+                <div class="feature-desc">Anti-abuse protection</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">Pino Logs</div>
+                <div class="feature-desc">Structured monitoring</div>
+            </div>
+        </div>
+
+        <div class="endpoints">
+            <h2>🔌 API Endpoints</h2>
+            <div class="endpoint-list">
+                <div class="endpoint">
+                    <div>
+                        <span class="endpoint-method">GET</span>
+                        <span class="endpoint-path">/service</span>
+                    </div>
+                    <div class="endpoint-desc">
+                        Retrieves the complete list of all available services
+                    </div>
+                    <div class="endpoint-example">
+                        curl http://localhost:3000/service
+                    </div>
+                </div>
+
+                <div class="endpoint">
+                    <div>
+                        <span class="endpoint-method">GET</span>
+                        <span class="endpoint-path">/service/:name</span>
+                    </div>
+                    <div class="endpoint-desc">
+                        Retrieves complete information for a specific service
+                    </div>
+                    <div class="endpoint-example">
+                        curl http://localhost:3000/service/nodejs
+                    </div>
+                </div>
+
+                <div class="endpoint">
+                    <div>
+                        <span class="endpoint-method">GET</span>
+                        <span class="endpoint-path">/service/:name?items=...</span>
+                    </div>
+                    <div class="endpoint-desc">
+                        Filters returned properties (versions, endpoint, etc.)
+                    </div>
+                    <div class="endpoint-example">
+                        curl http://localhost:3000/service/php?items=versions,endpoint
+                    </div>
+                </div>
+
+                <div class="endpoint">
+                    <div>
+                        <span class="endpoint-method">GET</span>
+                        <span class="endpoint-path">/openapi.json</span>
+                    </div>
+                    <div class="endpoint-desc">
+                        Downloads the OpenAPI 3.0 specification (for Postman, SDKs, etc.)
+                    </div>
+                    <div class="endpoint-example">
+                        curl http://localhost:3000/openapi.json
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>
+                Powered by <strong>Express</strong> + <strong>Zod</strong> + <strong>Scalar</strong>
+                <br>
+                <a href="https://github.com/upsun/upsun-docs" target="_blank">Upsun Docs</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
