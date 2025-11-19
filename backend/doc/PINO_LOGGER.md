@@ -97,20 +97,20 @@ The `httpLogger` middleware automatically logs all HTTP requests.
 
 ### Incoming Request
 ```
-[14:30:25] INFO: → GET /service/nodejs
+[14:30:25] INFO: → GET /image/nodejs
     type: "request"
     method: "GET"
-    url: "/service/nodejs"
+    url: "/image/nodejs"
     ip: "::1"
     userAgent: "curl/7.68.0"
 ```
 
 ### Outgoing Response
 ```
-[14:30:25] INFO: ← GET /service/nodejs 200 (45ms)
+[14:30:25] INFO: ← GET /image/nodejs 200 (45ms)
     type: "response"
     method: "GET"
-    url: "/service/nodejs"
+    url: "/image/nodejs"
     statusCode: 200
     duration: "45ms"
     ip: "::1"
@@ -147,16 +147,16 @@ LOG_LEVEL=warn
 ### In Routes
 
 ```typescript
-app.get('/service/:name', async (req, res) => {
+app.get('/image/:name', async (req, res) => {
   try {
-    const data = await getServiceData(req.params.name);
+    const data = await getImageData(req.params.name);
     res.json(data);
   } catch (error: any) {
     logger.error({ 
       error: error.message, 
-      serviceName: req.params.name,
+      imageName: req.params.name,
       stack: error.stack 
-    }, 'Failed to get service data');
+    }, 'Failed to get image data');
     
     res.status(500).json({ error: error.message });
   }
@@ -189,7 +189,7 @@ logger.warn({ origin: 'https://malicious.com' }, 'CORS: Origin BLOCKED');
 ## Rate Limiting Logs
 
 ```typescript
-logger.warn({ ip: '192.168.1.100', path: '/service/nodejs' }, 'Rate limit exceeded');
+logger.warn({ ip: '192.168.1.100', path: '/image/nodejs' }, 'Rate limit exceeded');
 logger.warn({ ip: '192.168.1.100', path: '/upload' }, 'Strict rate limit exceeded');
 ```
 
@@ -197,7 +197,7 @@ logger.warn({ ip: '192.168.1.100', path: '/upload' }, 'Strict rate limit exceede
 
 ```typescript
 logger.debug({ mode: 'github', url: 'https://...' }, 'Fetching resource from GitHub');
-logger.info({ filePath: 'service/registry.json' }, 'Successfully fetched from GitHub');
+logger.info({ filePath: 'image/registry.json' }, 'Successfully fetched from GitHub');
 logger.error({ filePath: 'missing.json', error: 'Not found' }, 'Failed to read local resource');
 ```
 

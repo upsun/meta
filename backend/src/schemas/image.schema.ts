@@ -5,42 +5,42 @@ import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
 extendZodWithOpenApi(z);
 
 /**
- * Schema for a single service in the registry
+ * Schema for a single image in the registry
  */
-export const ServiceSchema = z.object({
+export const ImageSchema = z.object({
   name: z.string().openapi({
-    description: 'Service name',
+    description: 'Image name',
     example: 'nodejs'
   }),
   endpoint: z.string().url().openapi({
-    description: 'Service endpoint URL',
-    example: 'https://api.upsun.com/v1/services/nodejs'
+    description: 'Image endpoint URL',
+    example: 'https://api.upsun.com/v1/images/nodejs'
   }),
   versions: z.array(z.string()).optional().openapi({
     description: 'List of available versions',
     example: ['18', '20', '22']
   }),
   type: z.string().optional().openapi({
-    description: 'Service type',
+    description: 'Image type',
     example: 'runtime'
   })
-}).passthrough().openapi('Service'); // passthrough to allow additional properties
+}).passthrough().openapi('Image'); // passthrough to allow additional properties
 
 /**
- * Schema for the complete service registry
+ * Schema for the complete image registry
  */
-export const ServiceRegistrySchema = z.record(z.string(), ServiceSchema).openapi('ServiceRegistry', {
-  description: 'Complete registry containing all available services',
+export const ImageRegistrySchema = z.record(z.string(), ImageSchema).openapi('ImageRegistry', {
+  description: 'Complete registry containing all available images',
   example: {
     'nodejs': {
       name: 'nodejs',
-      endpoint: 'https://api.upsun.com/v1/services/nodejs',
+      endpoint: 'https://api.upsun.com/v1/images/nodejs',
       versions: ['18', '20', '22'],
       type: 'runtime'
     },
     'php': {
       name: 'php',
-      endpoint: 'https://api.upsun.com/v1/services/php',
+      endpoint: 'https://api.upsun.com/v1/images/php',
       versions: ['8.1', '8.2', '8.3'],
       type: 'runtime'
     }
@@ -48,13 +48,13 @@ export const ServiceRegistrySchema = z.record(z.string(), ServiceSchema).openapi
 });
 
 /**
- * Schema for filtered service response
+ * Schema for filtered image response
  */
-export const FilteredServiceSchema = z.record(z.string(), z.any()).openapi('FilteredService', {
-  description: 'Filtered properties of a service',
+export const FilteredImageSchema = z.record(z.string(), z.any()).openapi('FilteredImage', {
+  description: 'Filtered properties of an image',
   example: {
     versions: ['18', '20', '22'],
-    endpoint: 'https://api.upsun.com/v1/services/nodejs'
+    endpoint: 'https://api.upsun.com/v1/images/nodejs'
   }
 });
 
@@ -64,10 +64,10 @@ export const FilteredServiceSchema = z.record(z.string(), z.any()).openapi('Filt
 export const ErrorSchema = z.object({
   error: z.string().openapi({
     description: 'Error message',
-    example: 'Service not found'
+    example: 'Image not found'
   }),
-  availableServices: z.array(z.string()).optional().openapi({
-    description: 'List of available services (for 404 service error)',
+  availableImages: z.array(z.string()).optional().openapi({
+    description: 'List of available images (for 404 image error)',
     example: ['nodejs', 'php', 'chrome-headless']
   }),
   availableItems: z.array(z.string()).optional().openapi({
@@ -112,12 +112,12 @@ export const ApiInfoSchema = z.object({
       path: z.string(),
       description: z.string()
     }),
-    getService: z.object({
+    getImage: z.object({
       path: z.string(),
       description: z.string(),
       examples: z.array(z.string())
     }),
-    getServiceFiltered: z.object({
+    getImageFiltered: z.object({
       path: z.string(),
       description: z.string(),
       queryParams: z.object({
@@ -131,7 +131,7 @@ export const ApiInfoSchema = z.object({
 /**
  * Schema for query parameters
  */
-export const ServiceQuerySchema = z.object({
+export const ImageQuerySchema = z.object({
   items: z.string().optional().openapi({
     description: 'List of properties to return, separated by commas',
     example: 'versions,endpoint'
@@ -139,9 +139,9 @@ export const ServiceQuerySchema = z.object({
 });
 
 // Type exports for TypeScript
-export type Service = z.infer<typeof ServiceSchema>;
-export type ServiceRegistry = z.infer<typeof ServiceRegistrySchema>;
-export type FilteredService = z.infer<typeof FilteredServiceSchema>;
+export type Image = z.infer<typeof ImageSchema>;
+export type ImageRegistry = z.infer<typeof ImageRegistrySchema>;
+export type FilteredImage = z.infer<typeof FilteredImageSchema>;
 export type ErrorResponse = z.infer<typeof ErrorSchema>;
 export type ApiInfo = z.infer<typeof ApiInfoSchema>;
-export type ServiceQuery = z.infer<typeof ServiceQuerySchema>;
+export type ImageQuery = z.infer<typeof ImageQuerySchema>;

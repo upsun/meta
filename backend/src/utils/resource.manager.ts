@@ -41,7 +41,7 @@ export class ResourceManager {
 
   /**
    * Get the content of a resource file
-   * @param filePath - Relative path to the file (e.g., 'service/registry.json')
+   * @param filePath - Relative path to the file (e.g., 'image/registry.json')
    */
   async getResource(filePath: string): Promise<any> {
     if (this.config.mode === 'local') {

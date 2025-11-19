@@ -3,10 +3,10 @@ import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
 import { ResourceManager, logger } from '../utils/index.js';
 import { 
-  ServiceSchema, 
-  ServiceRegistrySchema, 
+  ImageSchema, 
+  ImageRegistrySchema, 
   ErrorSchema 
-} from '../schemas/service.schema.js';
+} from '../schemas/image.schema.js';
 
 // Create dedicated API logger
 const apiLogger = logger.child({ component: 'API' });
@@ -15,23 +15,23 @@ const apiLogger = logger.child({ component: 'API' });
 const resourceManager = new ResourceManager();
 
 // ========================================
-// SERVICE ROUTES - SINGLE SOURCE OF TRUTH
+// IMAGE ROUTES - SINGLE SOURCE OF TRUTH
 // ========================================
-export const serviceRouter = new ApiRouter();
+export const imageRouter = new ApiRouter();
 
 // ========================================
-// GET /service - Get all services
+// GET /image - Get all images
 // ========================================
-serviceRouter.route({
+imageRouter.route({
   method: 'get',
-  path: '/service',
-  summary: 'Get all services',
-  description: 'Returns the complete list of available services with all their information (name, endpoint, versions, etc.)',
-  tags: ['Services'],
+  path: '/image',
+  summary: 'Get all images',
+  description: 'Returns the complete list of available images with all their information (name, endpoint, versions, etc.)',
+  tags: ['Images'],
   responses: {
     200: {
-      description: 'Complete service registry',
-      schema: ServiceRegistrySchema
+      description: 'Complete image registry',
+      schema: ImageRegistrySchema
     },
     500: {
       description: 'Internal server error',
@@ -40,7 +40,7 @@ serviceRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const registry = await resourceManager.getResource('service/registry.json');
+      const registry = await resourceManager.getResource('image/registry.json');
       res.json(registry);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read registry');
@@ -50,34 +50,34 @@ serviceRouter.route({
 });
 
 // ========================================
-// GET /service/:name - Get service by name
+// GET /image/:name - Get image by name
 // ========================================
-serviceRouter.route({
+imageRouter.route({
   method: 'get',
-  path: '/service/:name',
-  summary: 'Get service by name',
+  path: '/image/:name',
+  summary: 'Get image by name',
   description: `
-Returns information for a specific service.
+Returns information for a specific image.
 
-**Without query parameter**: Returns all service information
+**Without query parameter**: Returns all image information
 **With \`items\` parameter**: Filters returned properties
 
 ### Usage Examples
 
 \`\`\`bash
 # All information
-GET /service/nodejs
+GET /image/nodejs
 
 # Only versions
-GET /service/nodejs?items=versions
+GET /image/nodejs?items=versions
 
 # Multiple properties
-GET /service/php?items=versions,endpoint
+GET /image/php?items=versions,endpoint
 \`\`\`
   `,
-  tags: ['Services'],
+  tags: ['Images'],
   params: z.object({
-    name: z.string().describe('Service name (e.g., nodejs, php, chrome-headless)')
+    name: z.string().describe('Image name (e.g., nodejs, php, chrome-headless)')
   }),
   query: z.object({
     items: z.string()
@@ -86,15 +86,15 @@ GET /service/php?items=versions,endpoint
   }),
   responses: {
     200: {
-      description: 'Service found and returned',
-      schema: ServiceSchema
+      description: 'Image found and returned',
+      schema: ImageSchema
     },
     400: {
       description: 'Invalid query parameter',
       schema: ErrorSchema
     },
     404: {
-      description: 'Service not found',
+      description: 'Image not found',
       schema: ErrorSchema
     }
   },
@@ -104,20 +104,20 @@ GET /service/php?items=versions,endpoint
       const { items } = req.query as { items?: string };
 
       // Get registry
-      const registry = await resourceManager.getResource('service/registry.json');
+      const registry = await resourceManager.getResource('image/registry.json');
 
-      // Check if service exists
+      // Check if image exists
       if (!registry[name]) {
-        const availableServices = Object.keys(registry);
-        apiLogger.warn({ service: name }, 'Service not found');
+        const availableImages = Object.keys(registry);
+        apiLogger.warn({ image: name }, 'Image not found');
         
         return res.status(404).json({
-          error: `Service '${name}' not found`,
-          availableServices
+          error: `Image '${name}' not found`,
+          availableImages
         });
       }
 
-      let serviceData = registry[name];
+      let imageData = registry[name];
 
       // Filter properties if items parameter is provided
       if (items) {
@@ -125,8 +125,8 @@ GET /service/php?items=versions,endpoint
         const filteredData: any = {};
 
         requestedFields.forEach(field => {
-          if (field in serviceData) {
-            filteredData[field] = serviceData[field];
+          if (field in imageData) {
+            filteredData[field] = imageData[field];
           }
         });
 
@@ -134,14 +134,14 @@ GET /service/php?items=versions,endpoint
         if (Object.keys(filteredData).length === 0) {
           return res.status(404).json({
             error: `No valid properties found in '${items}'`,
-            availableProperties: Object.keys(serviceData)
+            availableProperties: Object.keys(imageData)
           });
         }
 
-        serviceData = filteredData;
+        imageData = filteredData;
       }
 
-      res.json(serviceData);
+      res.json(imageData);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read registry file');
       res.status(500).json({ error: error.message || 'Unable to read registry file' });
