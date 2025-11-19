@@ -7,7 +7,7 @@ import { logger } from './utils/index.js';
 import { configureCors, configureRateLimit, httpLogger } from './middleware/index.js';
 
 // Import routes - SINGLE SOURCE OF TRUTH
-import { serviceRouter } from './routes/service.routes.js';
+import { imageRouter } from './routes/image.routes.js';
 import { regionRouter } from './routes/region.routes.js';
 
 // ESM equivalent of __dirname
@@ -35,27 +35,27 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // ========================================
 // AUTO-REGISTER ROUTES FROM SINGLE SOURCE
-// No duplication - routes defined once in service.routes.ts
+// No duplication - routes defined once in image.routes.ts
 // ========================================
-serviceRouter.registerToExpress(app);
+imageRouter.registerToExpress(app);
 regionRouter.registerToExpress(app);
 
 // ========================================
 // AUTO-GENERATE OPENAPI SPEC
 // Same source as Express routes!
 // ========================================
-const serviceSpec = serviceRouter.generateOpenApiSpec({
-  title: 'Trust-API - Upsun Service & Region Registry API',
+const imageSpec = imageRouter.generateOpenApiSpec({
+  title: 'Trust-API - Upsun Image & Region Registry API',
   version: '1.0.0',
   description: `
-# Upsun Service & Region Registry API
+# Upsun Image & Region Registry API
 
-REST API to access Upsun service and region information from the official registry.
+REST API to access Upsun image and region information from the official registry.
 
 ## Features
 
-- 📋 **Complete lists**: Retrieval of all available services and regions
-- 🔍 **Search by name**: Access to specific service or region information
+- 📋 **Complete lists**: Retrieval of all available images and regions
+- 🔍 **Search by name**: Access to specific image or region information
 - 🌍 **Filter by provider/zone**: Find regions by cloud provider or geographic zone
 - 🎯 **Flexible filtering**: Select properties to return via query parameters
 - ✅ **Zod validation**: Automatic data schema validation
@@ -65,7 +65,7 @@ REST API to access Upsun service and region information from the official regist
 
 ### 📦 Supported Data Sources
 
-- **Services**: \`/ressources/service/registry.json\` (local) or GitHub
+- **Images**: \`/ressources/image/registry.json\` (local) or GitHub
 - **Regions**: \`/ressources/host/regions_location.json\` (local) or GitHub
 
 ---
@@ -102,14 +102,14 @@ const regionSpec = regionRouter.generateOpenApiSpec({
 
 // Merge paths from both specs
 const openApiSpec = {
-  ...serviceSpec,
+  ...imageSpec,
   paths: {
-    ...serviceSpec.paths,
+    ...imageSpec.paths,
     ...regionSpec.paths
   },
   components: {
     schemas: {
-      ...(serviceSpec.components?.schemas || {}),
+      ...(imageSpec.components?.schemas || {}),
       ...(regionSpec.components?.schemas || {})
     }
   }

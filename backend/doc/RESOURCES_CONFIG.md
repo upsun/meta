@@ -62,7 +62,7 @@ Resources must be organized as follows:
 
 ```
 ressources/
-└── service/
+└── image/
     └── registry.json
 ```
 
@@ -71,14 +71,14 @@ ressources/
 ### Available Endpoints
 
 1. **GET /** - API information and active resource mode
-2. **GET /service** - Complete registry list of all services
-3. **GET /service/:name** - Versions of a specific service (e.g., `/service/nodejs`)
+2. **GET /image** - Complete registry list of all images
+3. **GET /image/:name** - Versions of a specific image (e.g., `/image/nodejs`)
 
 ### Examples
 
 ```bash
 # Get all Node.js versions
-curl http://localhost:3000/service/nodejs
+curl http://localhost:3000/image/nodejs
 
 # Response:
 {
@@ -87,7 +87,7 @@ curl http://localhost:3000/service/nodejs
 }
 
 # Get all Chrome Headless versions
-curl http://localhost:3000/service/chrome-headless
+curl http://localhost:3000/image/chrome-headless
 
 # Response:
 {

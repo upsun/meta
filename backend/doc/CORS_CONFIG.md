@@ -66,17 +66,17 @@ curl -H "Origin: https://example.com" \
      -H "Access-Control-Request-Method: GET" \
      -H "Access-Control-Request-Headers: Content-Type" \
      -X OPTIONS \
-     http://localhost:3000/service
+     http://localhost:3000/image
 
 # GET test
 curl -H "Origin: https://example.com" \
-     http://localhost:3000/service/nodejs
+     http://localhost:3000/image/nodejs
 ```
 
 ### With JavaScript (browser)
 
 ```javascript
-fetch('http://localhost:3000/service/nodejs', {
+fetch('http://localhost:3000/image/nodejs', {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json'
