@@ -1,6 +1,6 @@
 {
   "chrome-headless": {
-    "description": "",
+    "description": "Chrome Headless service",
     "disk": false,
     "docs": {
       "relationship_name": "chrome-headless",
@@ -28,9 +28,7 @@
         "95",
         "91"
       ],
-      "legacy": [
-
-      ]
+      "legacy": []
     },
     "versions-dedicated-gen-3": {
       "deprecated": [],
