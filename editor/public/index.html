@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-File Editor</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+    const { useState, useEffect } = React;
+
+    const ChevronRight = () => (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+    );
+
+    const ChevronDown = () => (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+    );
+
+    const History = () => (
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+    );
+
+    const Save = () => (
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+            <polyline points="7 3 7 8 15 8"></polyline>
+        </svg>
+    );
+
+    const Upload = () => (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+        </svg>
+    );
+
+    const Download = () => (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+    );
+
+    const Plus = () => (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+    );
+
+    const Trash = () => (
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <polyline points="3 6 5 6 21 6"></polyline>
+            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+        </svg>
+    );
+
+    const API_BASE = 'http://localhost:3000/api';
+
+    const highlightJSON = (json) => {
+        if (!json) return '';
+
+        try {
+            const parsed = JSON.parse(json);
+            json = JSON.stringify(parsed, null, 2);
+        } catch (e) {
+            // Not valid JSON
+        }
+
+        return json
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, (match) => {
+                let cls = 'text-orange-500';
+                if (/^"/.test(match)) {
+                    if (/:$/.test(match)) {
+                        cls = 'text-blue-600 font-semibold';
+                    } else {
+                        cls = 'text-green-600';
+                    }
+                } else if (/true|false/.test(match)) {
+                    cls = 'text-purple-600';
+                } else if (/null/.test(match)) {
+                    cls = 'text-gray-400';
+                }
+                return '<span class="' + cls + '">' + match + '</span>';
+            });
+    };
+
+    const MultiFileEditor = () => {
+        const [files, setFiles] = useState([]);
+        const [currentFile, setCurrentFile] = useState(null);
+        const [data, setData] = useState(null);
+        const [history, setHistory] = useState({});
+        const [selectedNode, setSelectedNode] = useState(null);
+        const [expandedNodes, setExpandedNodes] = useState(new Set());
+        const [editValue, setEditValue] = useState('');
+        const [searchTerm, setSearchTerm] = useState('');
+        const [loading, setLoading] = useState(true);
+        const [showNewFileModal, setShowNewFileModal] = useState(false);
+        const [newFileName, setNewFileName] = useState('');
+        const [newFileType, setNewFileType] = useState('json');
+        const [showAddNodeModal, setShowAddNodeModal] = useState(false);
+        const [newNodeKey, setNewNodeKey] = useState('');
+        const [newNodeValue, setNewNodeValue] = useState('{}');
+        const [newNodeValueType, setNewNodeValueType] = useState('object');
+        const [showAddChildModal, setShowAddChildModal] = useState(false);
+        const [parentPath, setParentPath] = useState([]);
+        const [childNodeKey, setChildNodeKey] = useState('');
+        const [childNodeValue, setChildNodeValue] = useState('{}');
+        const [childNodeValueType, setChildNodeValueType] = useState('object');
+        
+        useEffect(() => {
+            loadFiles();
+
+            // Charger le fichier depuis l'URL si spécifié
+            const params = new URLSearchParams(window.location.search);
+            const fileParam = params.get('file');
+            if (fileParam) {
+                loadFile(fileParam);
+            }
+        }, []);
+
+        const loadFiles = async () => {
+            try {
+                const response = await fetch(`${API_BASE}/files`);
+                const fileList = await response.json();
+                setFiles(fileList);
+                setLoading(false);
+
+                // Ne charger automatiquement que si aucun fichier n'est spécifié dans l'URL
+                const params = new URLSearchParams(window.location.search);
+                if (!params.get('file') && fileList.length > 0 && !currentFile) {
+                    loadFile(fileList[0].name);
+                }
+            } catch (error) {
+                console.error('Loading error:', error);
+                alert('Server connection error. Please check that the Node.js server is running.');
+                setLoading(false);
+            }
+        };
+
+        const loadFile = async (filename) => {
+            try {
+                const [fileResponse, histResponse] = await Promise.all([
+                    fetch(`${API_BASE}/file/${filename}`),
+                    fetch(`${API_BASE}/history/${filename}`)
+                ]);
+
+                const fileData = await fileResponse.json();
+                const histData = await histResponse.json();
+
+                setCurrentFile(filename);
+                setData(fileData.data);
+                setHistory(histData);
+                setExpandedNodes(new Set());
+                setSelectedNode(null);
+            } catch (error) {
+                alert('Error loading file: ' + error.message);
+            }
+        };
+
+        const saveFile = async () => {
+            if (!currentFile) return;
+
+            try {
+                await fetch(`${API_BASE}/file/${currentFile}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ data })
+                });
+
+                await fetch(`${API_BASE}/history/${currentFile}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(history)
+                });
+
+                alert('File saved successfully!');
+            } catch (error) {
+                alert('Error saving file: ' + error.message);
+            }
+        };
+
+        const createNewFile = async () => {
+            if (!newFileName) {
+                alert('Please enter a filename');
+                return;
+            }
+
+            const extension = newFileType === 'json' ? '.json' : '.yaml';
+            const filename = newFileName.endsWith(extension) ? newFileName : newFileName + extension;
+
+            try {
+                await fetch(`${API_BASE}/file`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ filename, type: newFileType })
+                });
+
+                setShowNewFileModal(false);
+                setNewFileName('');
+                await loadFiles();
+                loadFile(filename);
+            } catch (error) {
+                alert('Error creating file: ' + error.message);
+            }
+        };
+
+        const deleteFile = async (filename) => {
+            if (!confirm(`Delete ${filename}?`)) return;
+
+            try {
+                await fetch(`${API_BASE}/file/${filename}`, {
+                    method: 'DELETE'
+                });
+
+                await loadFiles();
+                if (currentFile === filename) {
+                    setCurrentFile(null);
+                    setData(null);
+                }
+            } catch (error) {
+                alert('Error deleting file: ' + error.message);
+            }
+        };
+
+        const getNodePath = (path) => path.join('.');
+
+        const addToHistory = async (path, oldValue, newValue) => {
+            const pathKey = getNodePath(path);
+            const historyEntry = {
+                timestamp: new Date().toISOString(),
+                oldValue: JSON.stringify(oldValue, null, 2),
+                newValue: JSON.stringify(newValue, null, 2),
+                path: pathKey
+            };
+
+            // Mettre à jour le state local
+            setHistory(prev => ({
+                ...prev,
+                [pathKey]: [...(prev[pathKey] || []), historyEntry]
+            }));
+
+            // SAUVEGARDER IMMÉDIATEMENT SUR LE SERVEUR
+            try {
+                await fetch(`${API_BASE}/history/${currentFile}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        ...history,
+                        [pathKey]: [...(history[pathKey] || []), historyEntry]
+                    })
+                });
+            } catch (error) {
+                console.error('Error saving history to server:', error);
+            }
+        };
+
+        const updateNodeValue = async (path, value) => {
+            const newData = JSON.parse(JSON.stringify(data));
+            let current = newData;
+
+            for (let i = 0; i < path.length - 1; i++) {
+                current = current[path[i]];
+            }
+
+            const lastKey = path[path.length - 1];
+            const oldValue = current[lastKey];
+
+            try {
+                current[lastKey] = JSON.parse(value);
+            } catch {
+                current[lastKey] = value;
+            }
+
+            await addToHistory(path, oldValue, current[lastKey]);
+            setData(newData);
+            setSelectedNode(null);
+        };
+
+        const addRootNode = async () => {
+            if (!newNodeKey.trim()) {
+                alert('Please enter a key name');
+                return;
+            }
+
+            if (!currentFile) {
+                alert('No file selected');
+                return;
+            }
+
+            try {
+                let parsedValue;
+
+                // Traitement spécial pour les types simples
+                switch(newNodeValueType) {
+                    case 'string':
+                        // Enlever les guillemets s'ils sont présents
+                        parsedValue = newNodeValue.replace(/^"(.*)"$/, '$1');
+                        break;
+                    case 'number':
+                        parsedValue = Number(newNodeValue);
+                        if (isNaN(parsedValue)) {
+                            alert('Please enter a valid number');
+                            return;
+                        }
+                        break;
+                    case 'boolean':
+                        parsedValue = newNodeValue.toLowerCase() === 'true';
+                        break;
+                    case 'null':
+                        parsedValue = null;
+                        break;
+                    case 'array':
+                        try {
+                            parsedValue = JSON.parse(newNodeValue);
+                            if (!Array.isArray(parsedValue)) {
+                                alert('Please enter a valid array');
+                                return;
+                            }
+                        } catch (e) {
+                            alert('Invalid array format. Use: ["item1", "item2"]');
+                            return;
+                        }
+                        break;
+                    case 'object':
+                    default:
+                        try {
+                            parsedValue = JSON.parse(newNodeValue);
+                            if (Array.isArray(parsedValue)) {
+                                alert('For arrays, please select "Array" as value type');
+                                return;
+                            }
+                        } catch (e) {
+                            // Si ce n'est pas du JSON valide, traiter comme une string
+                            parsedValue = newNodeValue;
+                        }
+                }
+
+                // Vérifier si la clé existe déjà à la racine
+                if (data && data[newNodeKey] !== undefined) {
+                    alert(`Key "${newNodeKey}" already exists at root level`);
+                    return;
+                }
+
+                // Mettre à jour les données localement
+                const newData = { ...data, [newNodeKey]: parsedValue };
+                setData(newData);
+
+                // Ajouter à l'historique
+                const path = [newNodeKey];
+                await addToHistory(path, undefined, parsedValue);
+
+                // Fermer la modal et réinitialiser
+                setShowAddNodeModal(false);
+                setNewNodeKey('');
+                setNewNodeValue('{}');
+                setNewNodeValueType('object');
+
+            } catch (error) {
+                alert('Error adding node: ' + error.message);
+            }
+        };
+
+        const deleteRootNode = async (key) => {
+            if (!confirm(`Delete root node "${key}"?`)) return;
+
+            try {
+                const oldValue = data[key];
+
+                // Mettre à jour les données localement
+                const newData = { ...data };
+                delete newData[key];
+                setData(newData);
+
+                // Ajouter à l'historique
+                const path = [key];
+                await addToHistory(path, oldValue, undefined);
+
+                // Sauvegarder sur le serveur
+                await fetch(`${API_BASE}/file/${currentFile}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ data: newData })
+                });
+
+            } catch (error) {
+                alert('Error deleting node: ' + error.message);
+            }
+        };
+
+        // Fonction pour convertir les données en format approprié
+        const serializeData = (data, filename) => {
+            if (filename.endsWith('.json')) {
+                return JSON.stringify(data, null, 2);
+            } else {
+                // Pour YAML, on utilise js-yaml dans le serveur
+                return data; // Le serveur s'occupe de la conversion
+            }
+        };
+
+        // Fonction pour parser les données
+        const parseData = (content, filename) => {
+            if (filename.endsWith('.json')) {
+                return JSON.parse(content);
+            } else {
+                // Pour YAML, on envoie le contenu brut au serveur
+                // Le serveur fera la conversion
+                return content;
+            }
+        };
+
+        // Fonction pour détecter le type de fichier
+        const getFileType = (filename) => {
+            return filename.endsWith('.json') ? 'json' : 'yaml';
+        };
+
+        const addChildNode = async () => {
+            if (!childNodeKey.trim()) {
+                alert('Please enter a key name');
+                return;
+            }
+
+            try {
+                const newData = JSON.parse(JSON.stringify(data));
+                let current = newData;
+
+                // Naviguer jusqu'au parent
+                for (const key of parentPath) {
+                    current = current[key];
+                }
+
+                let parsedValue;
+
+                // Logique de parsing
+                switch(childNodeValueType) {
+                    case 'string':
+                        parsedValue = childNodeValue.replace(/^"(.*)"$/, '$1');
+                        break;
+                    case 'number':
+                        parsedValue = Number(childNodeValue);
+                        if (isNaN(parsedValue)) {
+                            alert('Please enter a valid number');
+                            return;
+                        }
+                        break;
+                    case 'boolean':
+                        parsedValue = childNodeValue.toLowerCase() === 'true';
+                        break;
+                    case 'null':
+                        parsedValue = null;
+                        break;
+                    case 'array':
+                        try {
+                            parsedValue = JSON.parse(childNodeValue);
+                            if (!Array.isArray(parsedValue)) {
+                                alert('Please enter a valid array');
+                                return;
+                            }
+                        } catch (e) {
+                            alert('Invalid array format. Use: ["item1", "item2"]');
+                            return;
+                        }
+                        break;
+                    case 'object':
+                    default:
+                        try {
+                            parsedValue = JSON.parse(childNodeValue);
+                        } catch (e) {
+                            parsedValue = childNodeValue;
+                        }
+                }
+
+                // CONVERSION AUTOMATIQUE : Si le parent n'est pas un objet, le convertir
+                const parentKey = parentPath[parentPath.length - 1];
+                let parentObject = current;
+
+                if (typeof parentObject !== 'object' || parentObject === null || Array.isArray(parentObject)) {
+                    const conversionPath = parentPath.slice(0, -1); // Chemin vers le grand-parent
+                    let grandParent = newData;
+
+                    for (const key of conversionPath) {
+                        grandParent = grandParent[key];
+                    }
+
+                    // Sauvegarder l'ancienne valeur pour l'historique
+                    const oldValue = grandParent[parentKey];
+
+                    // Convertir en objet
+                    grandParent[parentKey] = {};
+
+                    // Ajouter à l'historique la conversion
+                    await addToHistory(parentPath, oldValue, {});
+
+                    // Mettre à jour la référence current
+                    current = grandParent[parentKey];
+                }
+
+                // Vérifier si la clé existe déjà
+                if (current[childNodeKey] !== undefined) {
+                    alert(`Key "${childNodeKey}" already exists in this object`);
+                    return;
+                }
+
+                // Ajouter l'enfant
+                current[childNodeKey] = parsedValue;
+
+                // Mettre à jour l'historique
+                const fullPath = [...parentPath, childNodeKey];
+                await addToHistory(fullPath, undefined, parsedValue);
+
+                setData(newData);
+                setShowAddChildModal(false);
+                setChildNodeKey('');
+                setChildNodeValue('{}');
+                setChildNodeValueType('object');
+
+            } catch (error) {
+                alert('Error adding child node: ' + error.message);
+            }
+        };
+        const toggleExpand = (path) => {
+            const pathKey = getNodePath(path);
+            setExpandedNodes(prev => {
+                const newSet = new Set(prev);
+                if (newSet.has(pathKey)) {
+                    newSet.delete(pathKey);
+                } else {
+                    newSet.add(pathKey);
+                }
+                return newSet;
+            });
+        };
+
+        const renderValue = (value) => {
+            if (value === null) return <span className="text-gray-400">null</span>;
+            if (typeof value === 'string') return <span className="text-green-600">"{value}"</span>;
+            if (typeof value === 'number') return <span className="text-blue-600">{value}</span>;
+            if (typeof value === 'boolean') return <span className="text-purple-600">{value.toString()}</span>;
+            if (Array.isArray(value)) return <span className="text-orange-600">[{value.length} items]</span>;
+            return <span className="text-gray-500">{'{...}'}</span>;
+        };
+
+        const renderNode = (nodeData, path = []) => {
+            if (!nodeData || typeof nodeData !== 'object') return null;
+
+            const entries = Object.entries(nodeData);
+
+            return entries.map(([key, value]) => {
+                const currentPath = [...path, key];
+                const pathKey = getNodePath(currentPath);
+                const isExpanded = expandedNodes.has(pathKey);
+                const isObject = value && typeof value === 'object';
+                const nodeHistory = history[pathKey] || [];
+                const hasHistory = nodeHistory.length > 0;
+
+                if (searchTerm && !pathKey.toLowerCase().includes(searchTerm.toLowerCase())) {
+                    return null;
+                }
+
+                return (
+                    <div key={pathKey} className="ml-4">
+                        <div className="flex items-center gap-2 py-1 hover:bg-gray-50 rounded px-2 group">
+                            {isObject && (
+                                <button
+                                    onClick={() => toggleExpand(currentPath)}
+                                    className="text-gray-400 hover:text-gray-600"
+                                >
+                                    {isExpanded ? <ChevronDown /> : <ChevronRight />}
+                                </button>
+                            )}
+                            {!isObject && <span className="w-4" />}
+
+                            <span className="font-mono text-sm font-semibold text-indigo-700">{key}:</span>
+                            <span className="font-mono text-sm">{renderValue(value)}</span>
+
+                            <div className="ml-auto flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                {hasHistory && (
+                                    <button
+                                        onClick={() => setSelectedNode({ path: currentPath, history: nodeHistory })}
+                                        className="px-2 py-1 text-xs bg-blue-500 text-white hover:bg-blue-600 rounded flex items-center gap-1"
+                                        title="View history"
+                                    >
+                                        <History />
+                                        History
+                                    </button>
+                                )}
+                                <button
+                                    onClick={() => {
+                                        setEditValue(JSON.stringify(value, null, 2));
+                                        setSelectedNode({ path: currentPath, editing: true });
+                                    }}
+                                    className="px-2 py-1 text-xs bg-green-500 text-white hover:bg-green-600 rounded flex items-center gap-1"
+                                    title="Edit value"
+                                >
+                                    ✏️ Edit
+                                </button>
+                                {(
+                                    <button
+                                        onClick={() => {
+                                            setParentPath(currentPath);
+                                            setShowAddChildModal(true);
+                                        }}
+                                        className="px-2 py-1 text-xs bg-indigo-500 text-white hover:bg-indigo-600 rounded flex items-center gap-1"
+                                        title="Add child node"
+                                    >
+                                        <Plus />
+                                        Add Child
+                                    </button>
+                                )}
+                                {path.length === 0 && (
+                                    <button
+                                        onClick={() => deleteRootNode(key)}
+                                        className="px-2 py-1 text-xs bg-red-500 text-white hover:bg-red-600 rounded flex items-center gap-1"
+                                        title="Delete node"
+                                    >
+                                        <Trash />
+                                    </button>
+                                )}
+                            </div>
+                        </div>
+
+                        {isObject && isExpanded && renderNode(value, currentPath)}
+                    </div>
+                );
+            });
+        };
+
+        const importFile = (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = async (event) => {
+                try {
+                    const content = event.target.result;
+                    let importData;
+
+                    if (file.name.endsWith('.json')) {
+                        importData = JSON.parse(content);
+                    } else {
+                        // Pour YAML, on va juste uploader le contenu brut
+                        alert('YAML import: Please use the server API directly');
+                        return;
+                    }
+
+                    await fetch(`${API_BASE}/upload/${currentFile}`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ data: importData })
+                    });
+
+                    setData(importData);
+                    setHistory({});
+                    alert('File imported successfully!');
+                } catch (error) {
+                    alert('Error importing file: ' + error.message);
+                }
+            };
+            reader.readAsText(file);
+        };
+
+        const exportFile = () => {
+            if (!currentFile) return;
+
+            // Ouvrir le fichier directement via l'API serveur
+            window.open(`${API_BASE}/file/${currentFile}?download=true`, '_blank');
+        };
+
+        if (loading) {
+            return (
+                <div className="flex items-center justify-center h-screen">
+                    <div className="text-lg text-gray-500">Loading...</div>
+                </div>
+            );
+        }
+
+        return (
+            <div className="h-screen flex flex-col bg-gray-50">
+                <div className="bg-white border-b px-6 py-4 flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                        <a href="/" className="text-2xl font-bold text-gray-800 hover:text-blue-600">Multi-File Editor</a>
+                        {currentFile && (
+                            <span className="text-sm text-gray-500">
+                                Editing: <span className="font-mono text-gray-700">{currentFile}</span>
+                                <span className={`ml-2 text-xs px-2 py-1 rounded ${
+                                    currentFile.endsWith('.json') ? 'bg-green-100 text-green-700' : 'bg-purple-100 text-purple-700'
+                                }`}>
+                                    {currentFile.endsWith('.json') ? 'JSON' : 'YAML'}
+                                </span>
+                            </span>
+                        )}
+                    </div>
+                    <div className="flex gap-2">
+                        <button
+                            onClick={() => setShowNewFileModal(true)}
+                            className="flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded"
+                        >
+                            <Plus />
+                            New File
+                        </button>
+                        <input
+                            type="file"
+                            accept=".json,.yaml,.yml"
+                            onChange={importFile}
+                            className="hidden"
+                            id="import-file"
+                        />
+                        <label
+                            htmlFor="import-file"
+                            className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded cursor-pointer"
+                        >
+                            <Upload />
+                            Import
+                        </label>
+                        <button
+                            onClick={exportFile}
+                            disabled={!currentFile}
+                            className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded disabled:opacity-50"
+                        >
+                            <Download />
+                            Export
+                        </button>
+                        <button
+                            onClick={saveFile}
+                            disabled={!currentFile}
+                            className="flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded disabled:opacity-50"
+                        >
+                            <Save />
+                            Save
+                        </button>
+                    </div>
+                </div>
+
+                <div className="flex-1 flex overflow-hidden">
+                    {/* File List Sidebar */}
+                    <div className="w-64 bg-white border-r overflow-auto">
+                        <div className="p-4 border-b">
+                            <h2 className="font-semibold text-gray-700">Files</h2>
+                        </div>
+                        <div className="p-2">
+                            {files.map(file => (
+                                <div
+                                    key={file.name}
+                                    className={`flex items-center justify-between px-3 py-2 rounded cursor-pointer group ${
+                                        currentFile === file.name ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'
+                                    }`}
+                                >
+                                    <div
+                                        onClick={() => loadFile(file.name)}
+                                        className="flex-1 flex items-center gap-2"
+                                    >
+                                            <span className={`text-xs px-2 py-1 rounded ${
+                                                file.type === 'json' ? 'bg-green-100 text-green-700' : 'bg-purple-100 text-purple-700'
+                                            }`}>
+                                                {file.type.toUpperCase()}
+                                            </span>
+                                        <span className="font-mono text-sm truncate">{file.name}</span>
+                                    </div>
+                                    <button
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            deleteFile(file.name);
+                                        }}
+                                        className="opacity-0 group-hover:opacity-100 p-1 text-red-500 hover:bg-red-50 rounded"
+                                        title="Delete file"
+                                    >
+                                        <Trash />
+                                    </button>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Main Content */}
+                    <div className="flex-1 flex flex-col overflow-hidden">
+                        {currentFile && (
+                            <>
+                                <div className="bg-white border-b px-6 py-3">
+                                    <input
+                                        type="text"
+                                        placeholder="Search for a node..."
+                                        value={searchTerm}
+                                        onChange={(e) => setSearchTerm(e.target.value)}
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    />
+                                </div>
+
+                                <div className="flex-1 flex overflow-hidden">
+                                    <div className="flex-1 overflow-auto p-6">
+                                        <div className="bg-white rounded-lg shadow-sm p-4">
+                                            <div className="flex justify-between items-center mb-4 pb-3 border-b">
+                                                <h3 className="font-semibold text-gray-700">Content</h3>
+                                                <button
+                                                    onClick={() => setShowAddNodeModal(true)}
+                                                    className="px-3 py-1 text-sm bg-green-500 hover:bg-green-600 text-white rounded flex items-center gap-1"
+                                                >
+                                                    <Plus />
+                                                    Add Root Node
+                                                </button>
+                                            </div>
+                                            {data && Object.keys(data).length === 0 ? (
+                                                <div className="text-center py-8 text-gray-400">
+                                                    <p className="mb-2">Empty file</p>
+                                                    <p className="text-sm">Click "Add Root Node" to add content</p>
+                                                </div>
+                                            ) : (
+                                                renderNode(data)
+                                            )}
+                                        </div>
+                                    </div>
+
+                                    {selectedNode && (
+                                        <div className="w-96 bg-white border-l overflow-auto">
+                                            <div className="p-4 border-b flex items-center justify-between">
+                                                <h2 className="font-semibold text-lg">
+                                                    {selectedNode.editing ? 'Edit' : 'History'}
+                                                </h2>
+                                                <button
+                                                    onClick={() => setSelectedNode(null)}
+                                                    className="text-gray-400 hover:text-gray-600"
+                                                >
+                                                    ✕
+                                                </button>
+                                            </div>
+
+                                            {selectedNode.editing ? (
+                                                <div className="p-4">
+                                                    <div className="mb-2 text-sm text-gray-600 font-mono">
+                                                        {getNodePath(selectedNode.path)}
+                                                    </div>
+                                                    <div className="relative">
+                                                            <textarea
+                                                                value={editValue}
+                                                                onChange={(e) => setEditValue(e.target.value)}
+                                                                className="w-full h-64 p-3 border rounded font-mono text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50 resize-none"
+                                                                spellCheck="false"
+                                                            />
+                                                        <pre className="absolute top-0 left-0 w-full h-64 p-3 font-mono text-sm pointer-events-none overflow-auto whitespace-pre-wrap break-words" style={{color: 'transparent'}}>
+                                                                <code dangerouslySetInnerHTML={{__html: highlightJSON(editValue)}} />
+                                                            </pre>
+                                                    </div>
+                                                    <div className="flex gap-2 mt-4">
+                                                        <button
+                                                            onClick={() => updateNodeValue(selectedNode.path, editValue)}
+                                                            className="flex-1 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded"
+                                                        >
+                                                            Save
+                                                        </button>
+                                                        <button
+                                                            onClick={() => setSelectedNode(null)}
+                                                            className="flex-1 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded"
+                                                        >
+                                                            Cancel
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            ) : (
+                                                <div className="p-4">
+                                                    <div className="mb-4 text-sm text-gray-600 font-mono">
+                                                        {getNodePath(selectedNode.path)}
+                                                    </div>
+                                                    {selectedNode.history.length === 0 ? (
+                                                        <div className="text-gray-400 text-center py-8">
+                                                            No history available
+                                                        </div>
+                                                    ) : (
+                                                        <div className="space-y-4">
+                                                            {selectedNode.history.map((entry, idx) => (
+                                                                <div key={idx} className="border rounded p-3 bg-gray-50">
+                                                                    <div className="text-xs text-gray-500 mb-2">
+                                                                        {new Date(entry.timestamp).toLocaleString()}
+                                                                    </div>
+                                                                    <div className="space-y-2">
+                                                                        <div>
+                                                                            <div className="text-xs font-semibold text-red-600 mb-1">Old:</div>
+                                                                            <pre className="text-xs bg-red-50 p-2 rounded overflow-auto max-h-32">
+                                                                                    {entry.oldValue}
+                                                                                </pre>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div className="text-xs font-semibold text-green-600 mb-1">New:</div>
+                                                                            <pre className="text-xs bg-green-50 p-2 rounded overflow-auto max-h-32">
+                                                                                    {entry.newValue}
+                                                                                </pre>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
+                                </div>
+                            </>
+                        )}
+
+                        {!currentFile && (
+                            <div className="flex-1 flex items-center justify-center text-gray-400">
+                                <div className="text-center">
+                                    <p className="text-lg mb-2">No file selected</p>
+                                    <p className="text-sm">Select a file from the sidebar or create a new one</p>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+                {/* New File Modal */}
+                {showNewFileModal && (
+                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                        <div className="bg-white rounded-lg p-6 w-96">
+                            <h2 className="text-xl font-bold mb-4">Create New File</h2>
+                            <div className="space-y-4">
+                                <div>
+                                    <label className="block text-sm font-medium mb-1">Filename</label>
+                                    <input
+                                        type="text"
+                                        value={newFileName}
+                                        onChange={(e) => setNewFileName(e.target.value)}
+                                        placeholder={newFileType === 'json' ? 'myfile.json' : 'myfile.yaml'}
+                                        className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium mb-1">File Type</label>
+                                    <div className="flex gap-4">
+                                        <label className="flex items-center">
+                                            <input
+                                                type="radio"
+                                                value="json"
+                                                checked={newFileType === 'json'}
+                                                onChange={(e) => setNewFileType(e.target.value)}
+                                                className="mr-2"
+                                            />
+                                            JSON
+                                        </label>
+                                        <label className="flex items-center">
+                                            <input
+                                                type="radio"
+                                                value="yaml"
+                                                checked={newFileType === 'yaml'}
+                                                onChange={(e) => setNewFileType(e.target.value)}
+                                                className="mr-2"
+                                            />
+                                            YAML
+                                        </label>
+                                    </div>
+                                    <p className="text-xs text-gray-500 mt-2">
+                                        {newFileType === 'json'
+                                            ? 'Stores data in JSON format'
+                                            : 'Stores data in YAML format (compatible with JSON structure)'}
+                                    </p>
+                                </div>
+                                <div className="flex gap-2">
+                                    <button
+                                        onClick={createNewFile}
+                                        className="flex-1 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded"
+                                    >
+                                        Create
+                                    </button>
+                                    <button
+                                        onClick={() => {
+                                            setShowNewFileModal(false);
+                                            setNewFileName('');
+                                        }}
+                                        className="flex-1 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded"
+                                    >
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* Add Node Modal */}
+                {showAddNodeModal && (
+                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                        <div className="bg-white rounded-lg p-6 w-[500px]">
+                            <h2 className="text-xl font-bold mb-4">Add Root Node</h2>
+                            <div className="space-y-4">
+                                <div>
+                                    <label className="block text-sm font-medium mb-1">Key Name</label>
+                                    <input
+                                        type="text"
+                                        value={newNodeKey}
+                                        onChange={(e) => setNewNodeKey(e.target.value)}
+                                        placeholder="mynode"
+                                        className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    />
+                                </div>
+
+                                <div>
+                                    <label className="block text-sm font-medium mb-1">Value Type</label>
+                                    <select
+                                        value={newNodeValueType}
+                                        onChange={(e) => {
+                                            setNewNodeValueType(e.target.value);
+                                            // Définir une valeur par défaut selon le type
+                                            switch(e.target.value) {
+                                                case 'object':
+                                                    setNewNodeValue('{}');
+                                                    break;
+                                                case 'array':
+                                                    setNewNodeValue('[]');
+                                                    break;
+                                                case 'string':
+                                                    setNewNodeValue('""');
+                                                    break;
+                                                case 'number':
+                                                    setNewNodeValue('0');
+                                                    break;
+                                                case 'boolean':
+                                                    setNewNodeValue('true');
+                                                    break;
+                                                case 'null':
+                                                    setNewNodeValue('null');
+                                                    break;
+                                                default:
+                                                    setNewNodeValue('{}');
+                                            }
+                                        }}
+                                        className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    >
+                                        <option value="object">Object</option>
+                                        <option value="array">Array</option>
+                                        <option value="string">String</option>
+                                        <option value="number">Number</option>
+                                        <option value="boolean">Boolean</option>
+                                        <option value="null">Null</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label className="block text-sm font-medium mb-1">
+                                        Value {currentFile && currentFile.endsWith('.json') ? '(JSON format)' : '(YAML compatible)'}
+                                    </label>
+                                    <textarea
+                                        value={newNodeValue}
+                                        onChange={(e) => setNewNodeValue(e.target.value)}
+                                        placeholder={
+                                            newNodeValueType === 'object' ? '{"key": "value"}' :
+                                                newNodeValueType === 'array' ? '["item1", "item2"]' :
+                                                    newNodeValueType === 'string' ? '"text"' :
+                                                        newNodeValueType === 'number' ? '123' :
+                                                            newNodeValueType === 'boolean' ? 'true' :
+                                                                'null'
+                                        }
+                                        rows="6"
+                                        className="w-full px-3 py-2 border rounded font-mono text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    />
+                                    <p className="text-xs text-gray-500 mt-1">
+                                        {newNodeValueType === 'object' && 'Examples: {"name": "John"}, {"enabled": true, "count": 5}'}
+                                        {newNodeValueType === 'array' && 'Examples: ["item1", "item2"], [1, 2, 3]'}
+                                        {newNodeValueType === 'string' && 'Examples: "text", "Hello World"'}
+                                        {newNodeValueType === 'number' && 'Examples: 123, 45.67, -10'}
+                                        {newNodeValueType === 'boolean' && 'Examples: true, false'}
+                                        {newNodeValueType === 'null' && 'Value will be set to null'}
+                                    </p>
+                                </div>
+
+                                <div className="flex gap-2">
+                                    <button
+                                        onClick={addRootNode}
+                                        className="flex-1 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded"
+                                    >
+                                        Add Node
+                                    </button>
+                                    <button
+                                        onClick={() => {
+                                            setShowAddNodeModal(false);
+                                            setNewNodeKey('');
+                                            setNewNodeValue('{}');
+                                            setNewNodeValueType('object');
+                                        }}
+                                        className="flex-1 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded"
+                                    >
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {showAddChildModal && (
+                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                        <div className="bg-white rounded-lg p-6 w-[500px]">
+                            <h2 className="text-xl font-bold mb-4">
+                                Add Child Node to {getNodePath(parentPath)}
+                            </h2>
+                            <div className="space-y-4">
+                                <div>
+                                    <label className="block text-sm font-medium mb-1">Key Name</label>
+                                    <input
+                                        type="text"
+                                        value={childNodeKey}
+                                        onChange={(e) => setChildNodeKey(e.target.value)}
+                                        placeholder="childnode"
+                                        className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    />
+                                </div>
+
+                                <div>
+                                    <label className="block text-sm font-medium mb-1">Value Type</label>
+                                    <select
+                                        value={childNodeValueType}
+                                        onChange={(e) => {
+                                            setChildNodeValueType(e.target.value);
+                                            switch(e.target.value) {
+                                                case 'object': setChildNodeValue('{}'); break;
+                                                case 'array': setChildNodeValue('[]'); break;
+                                                case 'string': setChildNodeValue('""'); break;
+                                                case 'number': setChildNodeValue('0'); break;
+                                                case 'boolean': setChildNodeValue('true'); break;
+                                                case 'null': setChildNodeValue('null'); break;
+                                                default: setChildNodeValue('{}');
+                                            }
+                                        }}
+                                        className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    >
+                                        <option value="object">Object</option>
+                                        <option value="array">Array</option>
+                                        <option value="string">String</option>
+                                        <option value="number">Number</option>
+                                        <option value="boolean">Boolean</option>
+                                        <option value="null">Null</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label className="block text-sm font-medium mb-1">Value</label>
+                                    <textarea
+                                        value={childNodeValue}
+                                        onChange={(e) => setChildNodeValue(e.target.value)}
+                                        rows="6"
+                                        className="w-full px-3 py-2 border rounded font-mono text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    />
+                                </div>
+
+                                <div className="flex gap-2">
+                                    <button
+                                        onClick={addChildNode}
+                                        className="flex-1 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded"
+                                    >
+                                        Add Child
+                                    </button>
+                                    <button
+                                        onClick={() => {
+                                            setShowAddChildModal(false);
+                                            setChildNodeKey('');
+                                            setChildNodeValue('{}');
+                                            setChildNodeValueType('object');
+                                        }}
+                                        className="flex-1 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded"
+                                    >
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </div>
+        );
+    };
+
+    ReactDOM.render(<MultiFileEditor />, document.getElementById('root'));
+</script>
+</body>
+</html>
