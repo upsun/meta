@@ -1,6 +1,10 @@
 import { Express, RequestHandler } from 'express';
 import { z } from 'zod';
 import { OpenAPIRegistry, OpenApiGeneratorV3, RouteConfig } from '@asteasolutions/zod-to-openapi';
+import { logger } from './logger.js';
+
+// Create a dedicated child logger for API Router
+const routerLogger = logger.child({ component: 'ApiRouter' });
 
 /**
  * Route definition - Single source of truth
@@ -95,7 +99,7 @@ export class ApiRouter {
 
       // Register route with validation + handler
       app[method](path, validationMiddleware, handler);
-      console.log(`[Route] ${method.toUpperCase()} ${path}`);
+      routerLogger.info({ method: method.toUpperCase(), path }, `Route registered ${method.toUpperCase()} ${path}`);
     });
   }
 

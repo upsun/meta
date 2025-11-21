@@ -12,6 +12,7 @@ class EnvironmentConfig {
   readonly server: {
     PORT: number;
     NODE_ENV: string;
+    BASE_URL: string;
   };
 
   // Logging Configuration
@@ -52,6 +53,7 @@ class EnvironmentConfig {
     this.server = {
       PORT: this.getNumber('PORT', 3000),
       NODE_ENV: this.getString('NODE_ENV', 'development'),
+      BASE_URL: this.getString('BASE_URL', 'http://localhost:3000'),
     };
 
     // Logging Configuration

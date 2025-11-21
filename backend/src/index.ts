@@ -80,12 +80,8 @@ REST API to access Upsun image and region information from the official registry
   },
   servers: [
     {
-      url: 'http://localhost:3000',
-      description: 'Local development server'
-    },
-    {
-      url: 'https://meta.upsun.com',
-      description: 'Production server'
+      url: config.server.BASE_URL,
+      description: config.isDevelopment() ? 'Development server' : 'Production server'
     }
   ]
 });
