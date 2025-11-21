@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Trust-API uses CORS (Cross-Origin Resource Sharing) to control which domains can access the API.
+The Trust-Registry uses CORS (Cross-Origin Resource Sharing) to control which domains can access the API.
 
 ## 🔧 Configuration
 

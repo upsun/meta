@@ -1,4 +1,4 @@
-# Trust-API - Resources Configuration
+# Trust-Registry - Resources Configuration
 
 This project supports two resource loading modes: **local** and **GitHub**.
 

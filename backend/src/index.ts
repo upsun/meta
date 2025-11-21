@@ -45,7 +45,7 @@ regionRouter.registerToExpress(app);
 // Same source as Express routes!
 // ========================================
 const imageSpec = imageRouter.generateOpenApiSpec({
-  title: 'Trust-API - Upsun Image & Region Registry API',
+  title: 'Trust-Registry - Upsun Image & Region Registry API',
   version: '1.0.0',
   description: `
 # Upsun Image & Region Registry API

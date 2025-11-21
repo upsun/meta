@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Trust-API uses **Pino**, an ultra-fast logger for Node.js, with colored formatting in development thanks to **pino-pretty**.
+The Trust-Registry uses **Pino**, an ultra-fast logger for Node.js, with colored formatting in development thanks to **pino-pretty**.
 
 ## Configuration
 
