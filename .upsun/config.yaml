@@ -23,3 +23,10 @@ applications:
           root: public
           passthru: true
           allow: false
+
+routes:
+  "https://{default}/":
+    type: upstream
+    id: backend
+    upstream: "backend:http"
+
