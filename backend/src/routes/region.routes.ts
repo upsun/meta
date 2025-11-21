@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
 import { ResourceManager, logger } from '../utils/index.js';
-import { 
+import {
   RegionSchema,
   RegionsListSchema,
   RegionCountSchema,
@@ -144,7 +144,7 @@ GET /region/eu.platform.sh?items=provider,zone,timezone
       if (!region) {
         const availableRegions = regions.map((r: any) => r.name);
         apiLogger.warn({ region: name }, 'Region not found');
-        
+
         return res.status(404).json({
           error: `Region '${name}' not found`,
           availableRegions

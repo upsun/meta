@@ -2,10 +2,10 @@ import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
 import { ResourceManager, logger } from '../utils/index.js';
-import { 
-  ImageSchema, 
-  ImageRegistrySchema, 
-  ErrorSchema 
+import {
+  ImageSchema,
+  ImageRegistrySchema,
+  ErrorSchema
 } from '../schemas/image.schema.js';
 
 // Create dedicated API logger
@@ -110,7 +110,7 @@ GET /image/php?items=versions,endpoint
       if (!registry[name]) {
         const availableImages = Object.keys(registry);
         apiLogger.warn({ image: name }, 'Image not found');
-        
+
         return res.status(404).json({
           error: `Image '${name}' not found`,
           availableImages

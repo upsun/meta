@@ -8,12 +8,12 @@ const strictRateLimitLogger = logger.child({ component: 'StrictRateLimit' });
 
 /**
  * Configure rate limiting middleware based on environment variables
- * 
+ *
  * Environment variables:
  * - RATE_LIMIT_WINDOW_MS: Time window in milliseconds (default: 15 minutes)
  * - RATE_LIMIT_MAX_REQUESTS: Maximum requests per window (default: 100)
  * - RATE_LIMIT_MESSAGE: Custom error message
- * 
+ *
  * @returns Configured rate limit middleware
  */
 export function configureRateLimit() {
@@ -44,10 +44,10 @@ export function configureRateLimit() {
     },
   });
 
-  rateLimitLogger.info({ 
+  rateLimitLogger.info({
     windowSeconds: windowMs / 1000,
     windowMinutes: windowMs / 60000,
-    maxRequests 
+    maxRequests
   }, 'Configuration initialized');
 
   return limiter;
@@ -55,7 +55,7 @@ export function configureRateLimit() {
 
 /**
  * Stricter rate limit for sensitive endpoints
- * 
+ *
  * @returns Configured strict rate limit middleware
  */
 export function configureStrictRateLimit() {
@@ -80,9 +80,9 @@ export function configureStrictRateLimit() {
     },
   });
 
-  strictRateLimitLogger.info({ 
+  strictRateLimitLogger.info({
     windowSeconds: windowMs / 1000,
-    maxRequests 
+    maxRequests
   }, 'Configuration initialized');
 
   return limiter;

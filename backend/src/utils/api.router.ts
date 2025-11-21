@@ -166,7 +166,7 @@ export class ApiRouter {
 
     // Generate OpenAPI document
     const generator = new OpenApiGeneratorV3(this.registry.definitions);
-    
+
     return generator.generateDocument({
       openapi: '3.0.0',
       info: {

@@ -51,15 +51,15 @@ export class ResourceManager {
    */
   private getLocalResource(filePath: string): any {
     const fullPath = path.join(__dirname, this.config.localPath!, filePath);
-    
-    resourceLogger.debug({ 
+
+    resourceLogger.debug({
       mode: this.config.mode,
       dirname: __dirname,
       localPath: this.config.localPath,
       filePath,
-      fullPath 
+      fullPath
     }, 'Reading local resource');
-    
+
     try {
       const content = fs.readFileSync(fullPath, 'utf-8');
       resourceLogger.info({ filePath, fullPath }, 'Local resource read successfully');
@@ -75,17 +75,17 @@ export class ResourceManager {
    */
   private async getGithubResource(filePath: string): Promise<any> {
     const { REPO_OWNER: owner, REPO_NAME: repo, BRANCH: branch, BASE_PATH: basePath, TOKEN: token } = this.config.githubConfig!;
-    
+
     if (!owner || !repo) {
       throw new Error('GitHub configuration is incomplete');
     }
 
     // Construct the full path with basePath if provided
     const fullPath = basePath ? `${basePath}/${filePath}` : filePath;
-    
+
     // GitHub raw content URL
     const url = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${fullPath}`;
-    
+
     resourceLogger.debug({ mode: this.config.mode, url }, 'Fetching resource from GitHub');
 
     try {
@@ -95,7 +95,7 @@ export class ResourceManager {
       }
 
       const response = await fetch(url, { headers });
-      
+
       if (!response.ok) {
         if (response.status === 404) {
           resourceLogger.error({ filePath, url }, 'File not found on GitHub');

@@ -3,11 +3,11 @@ import { config } from '../config/env.config.js';
 
 /**
  * Configure Pino logger based on environment
- * 
+ *
  * Environment variables:
  * - LOG_LEVEL: Logging level (default: info)
  * - NODE_ENV: Environment (development/production)
- * 
+ *
  * @returns Configured Pino logger instance
  */
 export function configureLogger() {
