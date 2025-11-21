@@ -1,5 +1,6 @@
 import rateLimit from 'express-rate-limit';
 import { logger } from '../utils/logger.js';
+import { config } from '../config/env.config.js';
 
 // Create dedicated child loggers for Rate Limiting
 const rateLimitLogger = logger.child({ component: 'RateLimit' });
@@ -17,9 +18,9 @@ const strictRateLimitLogger = logger.child({ component: 'StrictRateLimit' });
  */
 export function configureRateLimit() {
   // Parse configuration from environment variables
-  const windowMs = parseInt(process.env.RATE_LIMIT_WINDOW_MS || '900000', 10); // 15 minutes
-  const maxRequests = parseInt(process.env.RATE_LIMIT_MAX_REQUESTS || '100', 10);
-  const message = process.env.RATE_LIMIT_MESSAGE || 'Too many requests from this IP, please try again later.';
+  const windowMs = config.rateLimit.WINDOW_MS;
+  const maxRequests = config.rateLimit.MAX_REQUESTS;
+  const message = 'Too many requests from this IP, please try again later.';
 
   const limiter = rateLimit({
     windowMs,
@@ -58,8 +59,8 @@ export function configureRateLimit() {
  * @returns Configured strict rate limit middleware
  */
 export function configureStrictRateLimit() {
-  const windowMs = parseInt(process.env.STRICT_RATE_LIMIT_WINDOW_MS || '60000', 10); // 1 minute
-  const maxRequests = parseInt(process.env.STRICT_RATE_LIMIT_MAX_REQUESTS || '10', 10);
+  const windowMs = config.rateLimit.STRICT_WINDOW_MS;
+  const maxRequests = config.rateLimit.STRICT_MAX_REQUESTS;
 
   const limiter = rateLimit({
     windowMs,

@@ -1,11 +1,11 @@
 import express, { Express, Request, Response } from 'express';
-import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { apiReference } from '@scalar/express-api-reference';
 import { logger } from './utils/index.js';
 import { configureCors, configureRateLimit, httpLogger } from './middleware/index.js';
 import { generateHomePage } from './views/home.template.js';
+import { config } from './config/env.config.js';
 
 // Import routes - SINGLE SOURCE OF TRUTH
 import { imageRouter } from './routes/image.routes.js';
@@ -15,15 +15,12 @@ import { regionRouter } from './routes/region.routes.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Load environment variables
-dotenv.config();
-
 // Create dedicated server logger
 const serverLogger = logger.child({ component: 'Server' });
 
 // Initialize Express app
 const app: Express = express();
-const PORT = process.env.PORT || 3000;
+const PORT = config.server.PORT;
 
 // Middleware
 app.use(httpLogger());

@@ -1,5 +1,6 @@
 import cors from 'cors';
 import { logger } from '../utils/logger.js';
+import { config } from '../config/env.config.js';
 
 // Create a dedicated child logger for CORS
 const corsLogger = logger.child({ component: 'CORS' });
@@ -10,7 +11,7 @@ const corsLogger = logger.child({ component: 'CORS' });
  * @returns Configured CORS middleware
  */
 export function configureCors() {
-  const corsOrigins = process.env.CORS_ORIGINS || '*';
+  const corsOrigins = config.cors.ORIGINS;
   const allowedOrigins = corsOrigins === '*' 
     ? '*' 
     : corsOrigins.split(',').map(origin => origin.trim());

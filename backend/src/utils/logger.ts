@@ -1,4 +1,5 @@
 import pino from 'pino';
+import { config } from '../config/env.config.js';
 
 /**
  * Configure Pino logger based on environment
@@ -10,8 +11,8 @@ import pino from 'pino';
  * @returns Configured Pino logger instance
  */
 export function configureLogger() {
-  const isDevelopment = process.env.NODE_ENV !== 'production';
-  const logLevel = process.env.LOG_LEVEL || 'info';
+  const isDevelopment = config.isDevelopment();
+  const logLevel = config.logging.LOG_LEVEL;
 
   const logger = pino({
     level: logLevel,

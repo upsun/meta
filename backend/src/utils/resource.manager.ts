@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { logger } from './logger.js';
+import { config } from '../config/env.config.js';
 
 // ESM equivalent of __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -14,11 +15,11 @@ interface ResourceConfig {
   mode: 'local' | 'github';
   localPath?: string;
   githubConfig?: {
-    owner: string;
-    repo: string;
-    branch: string;
-    basePath?: string;
-    token?: string;
+    REPO_OWNER: string;
+    REPO_NAME: string;
+    BRANCH: string;
+    BASE_PATH?: string;
+    TOKEN?: string;
   };
 }
 
@@ -27,15 +28,9 @@ export class ResourceManager {
 
   constructor() {
     this.config = {
-      mode: (process.env.RESOURCES_MODE as 'local' | 'github') || 'local',
-      localPath: process.env.LOCAL_RESOURCES_PATH || '../../../resources',
-      githubConfig: {
-        owner: process.env.GITHUB_REPO_OWNER || '',
-        repo: process.env.GITHUB_REPO_NAME || '',
-        branch: process.env.GITHUB_BRANCH || 'main',
-        basePath: process.env.GITHUB_BASE_PATH || '',
-        token: process.env.GITHUB_TOKEN,
-      },
+      mode: config.resources.MODE,
+      localPath: config.resources.LOCAL_PATH,
+      githubConfig: config.github,
     };
   }
 
@@ -79,7 +74,7 @@ export class ResourceManager {
    * Fetch resource from GitHub repository
    */
   private async getGithubResource(filePath: string): Promise<any> {
-    const { owner, repo, branch, basePath, token } = this.config.githubConfig!;
+    const { REPO_OWNER: owner, REPO_NAME: repo, BRANCH: branch, BASE_PATH: basePath, TOKEN: token } = this.config.githubConfig!;
     
     if (!owner || !repo) {
       throw new Error('GitHub configuration is incomplete');
