@@ -21,3 +21,38 @@ applications:
           root: public
           passthru: true
           allow: false
+  editor:
+    type: nodejs:24
+
+    build:
+      flavor: none
+
+    hooks:
+      build: |
+        set -ex
+        cd editor
+        npm install
+        npm run build
+
+    web:
+      commands:
+        start: cd editor ; npm start
+
+      locations:
+        /:
+          root: public
+          passthru: true
+          allow: false
+    mounts:
+      '/history/':
+        source: storage
+      '/resources':
+        source: storage
+routes:
+  https://{default}/:
+    type: upstream
+    upstream: backend:http
+  https://editor.{default}/:
+    type: upstream
+    upstream: editor:http
+    

@@ -1,0 +1,5 @@
+# Dependencies
+editor/node_modules/
+
+# History files (spécifique à Upsun)
+history/
