@@ -143,12 +143,12 @@ app.get('/', (req: Request, res: Response) => {
         method: method.toUpperCase(),
         path: path,
         description: details.summary || details.description || 'No description',
-        example: `curl http://localhost:3000${path}`
+        example: `curl ${config.server.BASE_URL}${path}`
       }));
   });
 
-  // Generate and send HTML
-  const html = generateHomePage(endpoints);
+  // Generate and send HTML with BASE_URL
+  const html = generateHomePage(endpoints, config.server.BASE_URL);
   res.send(html);
 });
 

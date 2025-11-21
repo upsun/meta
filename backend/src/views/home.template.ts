@@ -5,7 +5,7 @@ interface Endpoint {
   example: string;
 }
 
-export function generateHomePage(endpoints: Endpoint[]): string {
+export function generateHomePage(endpoints: Endpoint[], baseUrl: string): string {
   const endpointListHTML = endpoints.map(endpoint => `
                 <div class="endpoint">
                     <div>
@@ -16,7 +16,7 @@ export function generateHomePage(endpoints: Endpoint[]): string {
                         ${endpoint.description}
                     </div>
                     <div class="endpoint-example">
-                        curl http://localhost:3000${endpoint.path.replace(/\{[^}]+\}/g, match => {
+                        curl ${baseUrl}${endpoint.path.replace(/\{[^}]+\}/g, match => {
                           // Replace {name} with example value
                           if (match === '{name}') return 'nodejs';
                           if (match === '{regionId}') return 'eu-5.platform';
