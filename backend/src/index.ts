@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import { apiReference } from '@scalar/express-api-reference';
 import { logger } from './utils/index.js';
 import { configureCors, configureRateLimit, httpLogger } from './middleware/index.js';
+import { generateHomePage } from './views/home.template.js';
 
 // Import routes - SINGLE SOURCE OF TRUTH
 import { imageRouter } from './routes/image.routes.js';
@@ -29,9 +30,6 @@ app.use(httpLogger());
 app.use(configureCors());
 app.use(configureRateLimit());
 app.use(express.json());
-
-// Serve static files from public directory
-app.use(express.static(path.join(__dirname, '../public')));
 
 // ========================================
 // AUTO-REGISTER ROUTES FROM SINGLE SOURCE
@@ -139,6 +137,30 @@ app.get('/openapi.json', (req: Request, res: Response) => {
   res.setHeader('Content-Type', 'application/json');
   res.json(openApiSpec);
 });
+
+// ========================================
+// HOME PAGE - DYNAMICALLY GENERATED FROM OPENAPI SPEC
+// ========================================
+app.get('/', (req: Request, res: Response) => {
+  // Extract endpoints from OpenAPI spec
+  const endpoints = Object.entries(openApiSpec.paths || {}).flatMap(([path, methods]) => {
+    return Object.entries(methods as any)
+      .filter(([method]) => ['get', 'post', 'put', 'delete', 'patch'].includes(method))
+      .map(([method, details]: [string, any]) => ({
+        method: method.toUpperCase(),
+        path: path,
+        description: details.summary || details.description || 'No description',
+        example: `curl http://localhost:3000${path}`
+      }));
+  });
+
+  // Generate and send HTML
+  const html = generateHomePage(endpoints);
+  res.send(html);
+});
+
+// Serve static files from public directory (for other assets if needed)
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Start server
 app.listen(PORT, () => {

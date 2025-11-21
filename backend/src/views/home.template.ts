@@ -1,9 +1,36 @@
-<!DOCTYPE html>
+interface Endpoint {
+  method: string;
+  path: string;
+  description: string;
+  example: string;
+}
+
+export function generateHomePage(endpoints: Endpoint[]): string {
+  const endpointListHTML = endpoints.map(endpoint => `
+                <div class="endpoint">
+                    <div>
+                        <span class="endpoint-method">${endpoint.method}</span>
+                        <span class="endpoint-path">${endpoint.path}</span>
+                    </div>
+                    <div class="endpoint-desc">
+                        ${endpoint.description}
+                    </div>
+                    <div class="endpoint-example">
+                        curl http://localhost:3000${endpoint.path.replace(/\{[^}]+\}/g, match => {
+                          // Replace {name} with example value
+                          if (match === '{name}') return 'nodejs';
+                          if (match === '{regionId}') return 'eu-5.platform';
+                          return match;
+                        })}
+                    </div>
+                </div>`).join('\n');
+
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trust-Registry - Upsun Service Registry</title>
+    <title>Upsun Trust-Registry</title>
     <style>
         * {
             margin: 0;
@@ -14,8 +41,8 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #1f2937;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: rgb(255, 255, 255);
+            background: rgb(14, 17, 19);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -24,9 +51,10 @@
         }
 
         .container {
-            background: white;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
             max-width: 800px;
             width: 100%;
             padding: 40px;
@@ -43,20 +71,20 @@
         }
 
         h1 {
-            color: #2563eb;
+            color: rgb(213, 248, 0);
             font-size: 32px;
             margin-bottom: 10px;
         }
 
         .subtitle {
-            color: #6b7280;
+            color: rgba(255, 255, 255, 0.7);
             font-size: 16px;
         }
 
         .version {
             display: inline-block;
-            background: #dbeafe;
-            color: #2563eb;
+            background: rgba(213, 248, 0, 0.2);
+            color: rgb(213, 248, 0);
             padding: 4px 12px;
             border-radius: 12px;
             font-size: 12px;
@@ -66,7 +94,7 @@
 
         .main-link {
             display: block;
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            background: rgb(96, 70, 255);
             color: white;
             text-decoration: none;
             padding: 20px 30px;
@@ -75,13 +103,14 @@
             font-size: 18px;
             font-weight: 600;
             margin: 30px 0;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+            box-shadow: 0 4px 12px rgba(96, 70, 255, 0.3);
         }
 
         .main-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+            box-shadow: 0 8px 20px rgba(96, 70, 255, 0.5);
+            background: rgba(96, 70, 255, 0.9);
         }
 
         .main-link .icon {
@@ -94,7 +123,7 @@
         }
 
         .endpoints h2 {
-            color: #374151;
+            color: rgb(255, 255, 255);
             font-size: 20px;
             margin-bottom: 20px;
             display: flex;
@@ -108,21 +137,22 @@
         }
 
         .endpoint {
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 8px;
             padding: 16px;
-            transition: border-color 0.2s;
+            transition: border-color 0.2s, background 0.2s;
         }
 
         .endpoint:hover {
-            border-color: #2563eb;
+            border-color: rgb(213, 248, 0);
+            background: rgba(255, 255, 255, 0.05);
         }
 
         .endpoint-method {
             display: inline-block;
-            background: #10b981;
-            color: white;
+            background: rgb(213, 248, 0);
+            color: rgb(14, 17, 19);
             padding: 4px 8px;
             border-radius: 4px;
             font-size: 12px;
@@ -132,24 +162,24 @@
 
         .endpoint-path {
             font-family: 'Courier New', monospace;
-            color: #2563eb;
+            color: rgb(213, 248, 0);
             font-weight: 600;
         }
 
         .endpoint-desc {
-            color: #6b7280;
+            color: rgba(255, 255, 255, 0.7);
             font-size: 14px;
             margin-top: 8px;
         }
 
         .endpoint-example {
-            background: #f3f4f6;
-            border-left: 3px solid #2563eb;
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid rgb(96, 70, 255);
             padding: 8px 12px;
             margin-top: 8px;
             font-family: 'Courier New', monospace;
             font-size: 13px;
-            color: #374151;
+            color: rgba(255, 255, 255, 0.9);
             border-radius: 4px;
         }
 
@@ -163,8 +193,14 @@
         .feature {
             text-align: center;
             padding: 20px;
-            background: #f9fafb;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 8px;
+            transition: border-color 0.2s;
+        }
+
+        .feature:hover {
+            border-color: rgba(213, 248, 0, 0.3);
         }
 
         .feature-icon {
@@ -174,26 +210,26 @@
 
         .feature-title {
             font-weight: 600;
-            color: #374151;
+            color: rgb(255, 255, 255);
             margin-bottom: 4px;
         }
 
         .feature-desc {
             font-size: 13px;
-            color: #6b7280;
+            color: rgba(255, 255, 255, 0.6);
         }
 
         .footer {
             text-align: center;
             margin-top: 40px;
             padding-top: 20px;
-            border-top: 1px solid #e5e7eb;
-            color: #6b7280;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
             font-size: 14px;
         }
 
         .footer a {
-            color: #2563eb;
+            color: rgb(213, 248, 0);
             text-decoration: none;
         }
 
@@ -220,7 +256,7 @@
     <div class="container">
         <div class="header">
             <div class="logo">🚀</div>
-            <h1>Trust-Registry</h1>
+            <h1>Upsun Trust-Registry</h1>
             <p class="subtitle">Upsun Service Registry API</p>
             <span class="version">v1.0.0</span>
         </div>
@@ -232,81 +268,31 @@
 
         <div class="features">
             <div class="feature">
-                <div class="feature-icon">✅</div>
-                <div class="feature-title">Zod Validation</div>
-                <div class="feature-desc">Type-safe with runtime validation</div>
+                <div class="feature-icon">🖼️</div>
+                <div class="feature-title">Container Images</div>
+                <div class="feature-desc">Complete registry of available images</div>
             </div>
             <div class="feature">
-                <div class="feature-icon">📖</div>
-                <div class="feature-title">Scalar UI</div>
-                <div class="feature-desc">Modern OpenAPI documentation</div>
+                <div class="feature-icon">🌍</div>
+                <div class="feature-title">Regions</div>
+                <div class="feature-desc">Global infrastructure locations</div>
             </div>
             <div class="feature">
-                <div class="feature-icon">🔒</div>
-                <div class="feature-title">Rate Limiting</div>
-                <div class="feature-desc">Anti-abuse protection</div>
+                <div class="feature-icon">📦</div>
+                <div class="feature-title">Versions</div>
+                <div class="feature-desc">Detailed version information</div>
             </div>
             <div class="feature">
-                <div class="feature-icon">📊</div>
-                <div class="feature-title">Pino Logs</div>
-                <div class="feature-desc">Structured monitoring</div>
+                <div class="feature-icon">🔗</div>
+                <div class="feature-title">Endpoints</div>
+                <div class="feature-desc">Registry access points</div>
             </div>
         </div>
 
         <div class="endpoints">
             <h2>🔌 API Endpoints</h2>
             <div class="endpoint-list">
-                <div class="endpoint">
-                    <div>
-                        <span class="endpoint-method">GET</span>
-                        <span class="endpoint-path">/image</span>
-                    </div>
-                    <div class="endpoint-desc">
-                        Retrieves the complete list of all available images
-                    </div>
-                    <div class="endpoint-example">
-                        curl http://localhost:3000/image
-                    </div>
-                </div>
-
-                <div class="endpoint">
-                    <div>
-                        <span class="endpoint-method">GET</span>
-                        <span class="endpoint-path">/image/:name</span>
-                    </div>
-                    <div class="endpoint-desc">
-                        Retrieves complete information for a specific image
-                    </div>
-                    <div class="endpoint-example">
-                        curl http://localhost:3000/image/nodejs
-                    </div>
-                </div>
-
-                <div class="endpoint">
-                    <div>
-                        <span class="endpoint-method">GET</span>
-                        <span class="endpoint-path">/image/:name?items=...</span>
-                    </div>
-                    <div class="endpoint-desc">
-                        Filters returned properties (versions, endpoint, etc.)
-                    </div>
-                    <div class="endpoint-example">
-                        curl http://localhost:3000/service/php?items=versions,endpoint
-                    </div>
-                </div>
-
-                <div class="endpoint">
-                    <div>
-                        <span class="endpoint-method">GET</span>
-                        <span class="endpoint-path">/openapi.json</span>
-                    </div>
-                    <div class="endpoint-desc">
-                        Downloads the OpenAPI 3.0 specification (for Postman, SDKs, etc.)
-                    </div>
-                    <div class="endpoint-example">
-                        curl http://localhost:3000/openapi.json
-                    </div>
-                </div>
+${endpointListHTML}
             </div>
         </div>
 
@@ -314,9 +300,10 @@
             <p>
                 Powered by <strong>Express</strong> + <strong>Zod</strong> + <strong>Scalar</strong>
                 <br>
-                <a href="https://github.com/upsun/upsun-docs" target="_blank">Upsun Docs</a>
+                <a href="https://docs.upsun.com" target="_blank">Upsun Docs</a>
             </p>
         </div>
     </div>
 </body>
-</html>
+</html>`;
+}

@@ -2,19 +2,21 @@ applications:
   backend:
     type: nodejs:24
 
+    source:
+      root: "backend"
+
     build:
       flavor: none
 
     hooks:
       build: |
         set -ex
-        cd backend
         npm install
         npm run build
 
     web:
       commands:
-        start: cd backend ; npm start
+        start: npm start
 
       locations:
         /:
