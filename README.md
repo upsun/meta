@@ -61,7 +61,7 @@ GET /region/{regionId}
 ## 🏗️ Project Structure
 
 - **backend/**: Express API server with TypeScript
-- **ressources/**: Source data (image registries, region configuration)
+- **resources/**: Source data (image registries, region configuration)
 
 ## 🔐 Source of Trust
 

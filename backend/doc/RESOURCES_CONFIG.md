@@ -43,7 +43,7 @@ To use local files during development:
 
 ```env
 RESOURCES_MODE=local
-LOCAL_RESOURCES_PATH=../../ressources
+LOCAL_RESOURCES_PATH=../../resources
 ```
 
 ## 📁 Resource Structure
@@ -61,7 +61,7 @@ upsun-docs/
 Resources must be organized as follows:
 
 ```
-ressources/
+resources/
 └── image/
     └── registry.json
 ```

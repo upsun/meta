@@ -63,8 +63,8 @@ REST API to access Upsun image and region information from the official registry
 
 ### 📦 Supported Data Sources
 
-- **Images**: \`/ressources/image/registry.json\` (local) or GitHub
-- **Regions**: \`/ressources/host/regions_location.json\` (local) or GitHub
+- **Images**: \`/resources/image/registry.json\` (local) or GitHub
+- **Regions**: \`/resources/host/regions_location.json\` (local) or GitHub
 
 ---
 

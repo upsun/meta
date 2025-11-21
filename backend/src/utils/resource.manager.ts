@@ -28,7 +28,7 @@ export class ResourceManager {
   constructor() {
     this.config = {
       mode: (process.env.RESOURCES_MODE as 'local' | 'github') || 'local',
-      localPath: process.env.LOCAL_RESOURCES_PATH || '../../../ressources',
+      localPath: process.env.LOCAL_RESOURCES_PATH || '../../../resources',
       githubConfig: {
         owner: process.env.GITHUB_REPO_OWNER || '',
         repo: process.env.GITHUB_REPO_NAME || '',
