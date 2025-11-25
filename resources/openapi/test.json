@@ -1,3 +1,7 @@
 {
-  "europe": "{\"test\"}"
+  "europe": "{\"test\"}",
+  "test": {
+    "item1": "2",
+    "item2": "4"
+  }
 }
