@@ -1,10 +1,5 @@
-# PHP Extensions Configuration
-# Generated: 2025-12-01T22:10:49.720Z
-# Source: PHP Extension Parser API
-
-# Dedicated Instances (simple alphabetical list)
 dedicated:
-  "5.4": #  DEPRECATED
+  "5.4":
     - apc
     - apcu
     - bcmath
@@ -84,7 +79,7 @@ dedicated:
     - zendopcache
     - zip
 
-  "5.5": #  DEPRECATED
+  "5.5":
     - apcu
     - bcmath
     - blackfire
@@ -163,7 +158,7 @@ dedicated:
     - xsl
     - zip
 
-  "5.6": #  DEPRECATED
+  "5.6":
     - apcu
     - bcmath
     - blackfire
@@ -244,7 +239,7 @@ dedicated:
     - xsl
     - zip
 
-  "7.0": #  DEPRECATED
+  "7.0":
     - amqp
     - apcu
     - apcu_bc
@@ -333,7 +328,7 @@ dedicated:
     - zbarcode
     - zip
 
-  "7.1": #  DEPRECATED
+  "7.1":
     - amqp
     - apcu
     - apcu_bc
@@ -425,7 +420,7 @@ dedicated:
     - zbarcode
     - zip
 
-  "7.2": #  DEPRECATED
+  "7.2":
     - amqp
     - apcu
     - apcu_bc
@@ -515,7 +510,7 @@ dedicated:
     - zend_test
     - zip
 
-  "7.3": #  DEPRECATED
+  "7.3":
     - amqp
     - apcu
     - apcu_bc
@@ -609,7 +604,7 @@ dedicated:
     - zend_test
     - zip
 
-  "7.4": #  DEPRECATED
+  "7.4":
     - amqp
     - apcu
     - apcu_bc
@@ -700,7 +695,7 @@ dedicated:
     - zend_test
     - zip
 
-  "8.0": #  DEPRECATED
+  "8.0":
     - amqp
     - apcu
     - bcmath
@@ -787,7 +782,7 @@ dedicated:
     - zend_test
     - zip
 
-  "8.1": #  SUPPORTED
+  "8.1":
     - amqp
     - apcu
     - bcmath
@@ -878,7 +873,7 @@ dedicated:
     - zend_test
     - zip
 
-  "8.2": #  SUPPORTED
+  "8.2":
     - amqp
     - apcu
     - bcmath
@@ -976,7 +971,7 @@ dedicated:
     - zend_test
     - zip
 
-  "8.3": #  SUPPORTED
+  "8.3":
     - amqp
     - apcu
     - bcmath
@@ -1074,7 +1069,7 @@ dedicated:
     - zend_test
     - zip
 
-  "8.4": #  SUPPORTED
+  "8.4":
     - amqp
     - apcu
     - bcmath
@@ -1170,7 +1165,7 @@ dedicated:
     - zend_test
     - zip
 
-  "8.5": #  SUPPORTED
+  "8.5":
     - apcu
     - bcmath
     - blackfire
@@ -1257,9 +1252,8 @@ dedicated:
     - zend_test
     - zip
 
-# Standard Grid Instances (categorized)
 grid:
-  "5.4": #  DEPRECATED
+  "5.4":
     available:
       - apc
       - apcu
@@ -1343,7 +1337,7 @@ grid:
     built-in:
       []
 
-  "5.5": #  DEPRECATED
+  "5.5":
     available:
       - apcu
       - blackfire
@@ -1425,7 +1419,7 @@ grid:
     built-in:
       - opcache
 
-  "5.6": #  DEPRECATED
+  "5.6":
     available:
       - apcu
       - blackfire
@@ -1509,7 +1503,7 @@ grid:
     built-in:
       - opcache
 
-  "7.0": #  DEPRECATED
+  "7.0":
     available:
       - amqp
       - apcu
@@ -1601,7 +1595,7 @@ grid:
     built-in:
       - opcache
 
-  "7.1": #  DEPRECATED
+  "7.1":
     available:
       - amqp
       - apcu
@@ -1696,7 +1690,7 @@ grid:
     built-in:
       - opcache
 
-  "7.2": #  DEPRECATED
+  "7.2":
     available:
       - amqp
       - apcu
@@ -1789,7 +1783,7 @@ grid:
     built-in:
       - opcache
 
-  "7.3": #  DEPRECATED
+  "7.3":
     available:
       - amqp
       - apcu
@@ -1886,7 +1880,7 @@ grid:
     built-in:
       - opcache
 
-  "7.4": #  DEPRECATED
+  "7.4":
     available:
       - amqp
       - apcu
@@ -1980,7 +1974,7 @@ grid:
     built-in:
       - opcache
 
-  "8.0": #  DEPRECATED
+  "8.0":
     available:
       - amqp
       - apcu
@@ -2070,7 +2064,7 @@ grid:
       - json
       - opcache
 
-  "8.1": #  SUPPORTED
+  "8.1":
     available:
       - amqp
       - apcu
@@ -2164,7 +2158,7 @@ grid:
       - json
       - opcache
 
-  "8.2": #  SUPPORTED
+  "8.2":
     available:
       - amqp
       - apcu
@@ -2265,7 +2259,7 @@ grid:
       - json
       - opcache
 
-  "8.3": #  SUPPORTED
+  "8.3":
     available:
       - amqp
       - apcu
@@ -2366,7 +2360,7 @@ grid:
       - json
       - opcache
 
-  "8.4": #  SUPPORTED
+  "8.4":
     available:
       - amqp
       - apcu
@@ -2465,7 +2459,7 @@ grid:
       - json
       - opcache
 
-  "8.5": #  SUPPORTED
+  "8.5":
     available:
       - apcu
       - blackfire
