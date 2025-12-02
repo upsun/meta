@@ -1,6 +1,9 @@
 dedicated:
   "5.4":
+    - apc
+    - apcu
     - bcmath
+    - blackfire
     - calendar
     - com_dotnet
     - ctype
@@ -14,8 +17,12 @@ dedicated:
     - filter
     - ftp
     - gd
+    - gearman
+    - geoip
     - gmp
     - hash
+    - http
+    - imagick
     - imap
     - interbase
     - intl
@@ -24,6 +31,9 @@ dedicated:
     - libxml
     - mbstring
     - mcrypt
+    - memcache
+    - memcached
+    - mongo
     - mssql
     - mysql
     - mysqli
@@ -39,10 +49,12 @@ dedicated:
     - pdo_sqlite
     - pgsql
     - phar
+    - pinba
     - posix
     - pspell
     - readline
     - recode
+    - redis
     - reflection
     - session
     - shmop
@@ -51,7 +63,9 @@ dedicated:
     - soap
     - sockets
     - spl
+    - spplus
     - sqlite3
+    - ssh2
     - standard
     - sysvmsg
     - sysvsem
@@ -59,15 +73,21 @@ dedicated:
     - tidy
     - tokenizer
     - wddx
+    - xcache
+    - xdebug
+    - xhprof
     - xml
     - xmlreader
     - xmlrpc
     - xmlwriter
     - xsl
+    - zendopcache
     - zip
 
   "5.5":
+    - apcu
     - bcmath
+    - blackfire
     - calendar
     - com_dotnet
     - ctype
@@ -81,8 +101,11 @@ dedicated:
     - filter
     - ftp
     - gd
+    - gearman
+    - geoip
     - gmp
     - hash
+    - imagick
     - imap
     - interbase
     - intl
@@ -91,6 +114,9 @@ dedicated:
     - libxml
     - mbstring
     - mcrypt
+    - memcache
+    - memcached
+    - mongo
     - mssql
     - mysql
     - mysqli
@@ -105,12 +131,15 @@ dedicated:
     - pdo_odbc
     - pdo_pgsql
     - pdo_sqlite
+    - pecl-http
     - pgsql
     - phar
+    - pinba
     - posix
     - pspell
     - readline
     - recode
+    - redis
     - reflection
     - session
     - shmop
@@ -119,7 +148,9 @@ dedicated:
     - soap
     - sockets
     - spl
+    - spplus
     - sqlite3
+    - ssh2
     - standard
     - sysvmsg
     - sysvsem
@@ -127,6 +158,9 @@ dedicated:
     - tidy
     - tokenizer
     - wddx
+    - xcache
+    - xdebug
+    - xhprof
     - xml
     - xmlreader
     - xmlrpc
@@ -135,7 +169,9 @@ dedicated:
     - zip
 
   "5.6":
+    - apcu
     - bcmath
+    - blackfire
     - calendar
     - com_dotnet
     - ctype
@@ -149,8 +185,11 @@ dedicated:
     - filter
     - ftp
     - gd
+    - gearman
+    - geoip
     - gmp
     - hash
+    - imagick
     - imap
     - interbase
     - intl
@@ -159,10 +198,15 @@ dedicated:
     - libxml
     - mbstring
     - mcrypt
+    - memcache
+    - memcached
+    - mongo
+    - msgpack
     - mssql
     - mysql
     - mysqli
     - mysqlnd
+    - newrelic
     - odbc
     - opcache
     - pcntl
@@ -173,12 +217,17 @@ dedicated:
     - pdo_odbc
     - pdo_pgsql
     - pdo_sqlite
+    - pecl-http
     - pgsql
     - phar
+    - pinba
     - posix
+    - propro
     - pspell
+    - raphf
     - readline
     - recode
+    - redis
     - reflection
     - session
     - shmop
@@ -188,6 +237,7 @@ dedicated:
     - sockets
     - spl
     - sqlite3
+    - ssh2
     - standard
     - sysvmsg
     - sysvsem
@@ -195,6 +245,8 @@ dedicated:
     - tidy
     - tokenizer
     - wddx
+    - xdebug
+    - xhprof
     - xml
     - xmlreader
     - xmlrpc
@@ -203,7 +255,12 @@ dedicated:
     - zip
 
   "7.0":
+    - amqp
+    - apcu
+    - apcu_bc
+    - applepay
     - bcmath
+    - blackfire
     - bz2
     - calendar
     - com_dotnet
@@ -218,20 +275,30 @@ dedicated:
     - filter
     - ftp
     - gd
+    - geoip
     - gettext
     - gmp
     - hash
     - iconv
+    - igbinary
+    - imagick
     - imap
     - interbase
     - intl
+    - ioncube
     - json
     - ldap
     - libxml
+    - mailparse
     - mbstring
     - mcrypt
+    - memcached
+    - mongodb
+    - msgpack
     - mysqli
     - mysqlnd
+    - newrelic
+    - oauth
     - odbc
     - opcache
     - pcntl
@@ -242,12 +309,14 @@ dedicated:
     - pdo_odbc
     - pdo_pgsql
     - pdo_sqlite
+    - pdo_sqlsrv
     - pgsql
     - phar
     - posix
     - pspell
     - readline
     - recode
+    - redis
     - reflection
     - session
     - shmop
@@ -255,24 +324,37 @@ dedicated:
     - snmp
     - soap
     - sockets
+    - sourceguardian
     - spl
     - sqlite3
+    - sqlsrv
+    - ssh2
     - standard
+    - sybase
     - sysvmsg
     - sysvsem
     - sysvshm
+    - tideways
+    - tideways_xhprof
     - tidy
     - tokenizer
     - wddx
+    - xdebug
     - xml
     - xmlreader
     - xmlrpc
     - xmlwriter
     - xsl
+    - zbarcode
     - zip
 
   "7.1":
+    - amqp
+    - apcu
+    - apcu_bc
+    - applepay
     - bcmath
+    - blackfire
     - bz2
     - calendar
     - com_dotnet
@@ -282,25 +364,36 @@ dedicated:
     - dba
     - dom
     - enchant
+    - event
     - exif
     - fileinfo
     - filter
     - ftp
     - gd
+    - geoip
     - gettext
     - gmp
     - hash
     - iconv
+    - igbinary
+    - imagick
     - imap
     - interbase
     - intl
+    - ioncube
     - json
     - ldap
     - libxml
+    - mailparse
     - mbstring
     - mcrypt
+    - memcached
+    - mongodb
+    - msgpack
     - mysqli
     - mysqlnd
+    - newrelic
+    - oauth
     - odbc
     - opcache
     - pcntl
@@ -311,12 +404,14 @@ dedicated:
     - pdo_odbc
     - pdo_pgsql
     - pdo_sqlite
+    - pdo_sqlsrv
     - pgsql
     - phar
     - posix
     - pspell
     - readline
     - recode
+    - redis
     - reflection
     - session
     - shmop
@@ -324,24 +419,38 @@ dedicated:
     - snmp
     - soap
     - sockets
+    - sourceguardian
     - spl
     - sqlite3
+    - sqlsrv
+    - ssh2
     - standard
+    - sybase
     - sysvmsg
     - sysvsem
     - sysvshm
+    - tideways
+    - tideways_xhprof
     - tidy
     - tokenizer
+    - uuid
     - wddx
+    - xdebug
     - xml
     - xmlreader
     - xmlrpc
     - xmlwriter
     - xsl
+    - yaml
+    - zbarcode
     - zip
 
   "7.2":
+    - amqp
+    - apcu
+    - apcu_bc
     - bcmath
+    - blackfire
     - bz2
     - calendar
     - com_dotnet
@@ -351,24 +460,35 @@ dedicated:
     - dba
     - dom
     - enchant
+    - event
     - exif
     - fileinfo
     - filter
     - ftp
     - gd
+    - geoip
     - gettext
     - gmp
     - hash
     - iconv
+    - igbinary
+    - imagick
     - imap
     - interbase
     - intl
+    - ioncube
     - json
     - ldap
     - libxml
+    - mailparse
     - mbstring
+    - memcached
+    - mongodb
+    - msgpack
     - mysqli
     - mysqlnd
+    - newrelic
+    - oauth
     - odbc
     - opcache
     - pcntl
@@ -378,12 +498,14 @@ dedicated:
     - pdo_odbc
     - pdo_pgsql
     - pdo_sqlite
+    - pdo_sqlsrv
     - pgsql
     - phar
     - posix
     - pspell
     - readline
     - recode
+    - redis
     - reflection
     - session
     - shmop
@@ -392,24 +514,39 @@ dedicated:
     - soap
     - sockets
     - sodium
+    - sourceguardian
     - spl
     - sqlite3
+    - sqlsrv
+    - ssh2
+    - sybase
     - sysvmsg
     - sysvsem
     - sysvshm
+    - tideways
+    - tideways_xhprof
     - tidy
     - tokenizer
+    - uuid
     - wddx
+    - xdebug
     - xml
     - xmlreader
     - xmlrpc
     - xmlwriter
     - xsl
+    - yaml
+    - zbarcode
     - zend_test
     - zip
 
   "7.3":
+    - amqp
+    - apcu
+    - apcu_bc
+    - applepay
     - bcmath
+    - blackfire
     - bz2
     - calendar
     - com_dotnet
@@ -419,24 +556,226 @@ dedicated:
     - dba
     - dom
     - enchant
+    - event
     - exif
     - fileinfo
     - filter
     - ftp
     - gd
+    - geoip
     - gettext
     - gmp
     - hash
+    - http
     - iconv
+    - igbinary
+    - imagick
+    - imap
+    - interbase
+    - intl
+    - ioncube
+    - json
+    - ldap
+    - libxml
+    - mailparse
+    - mbstring
+    - memcached
+    - mongodb
+    - msgpack
+    - mysqli
+    - mysqlnd
+    - newrelic
+    - oauth
+    - odbc
+    - opcache
+    - pcntl
+    - pdo
+    - pdo_dblib
+    - pdo_mysql
+    - pdo_odbc
+    - pdo_pgsql
+    - pdo_sqlite
+    - pdo_sqlsrv
+    - pgsql
+    - phar
+    - posix
+    - propro
+    - pspell
+    - raphf
+    - readline
+    - recode
+    - redis
+    - reflection
+    - session
+    - shmop
+    - simplexml
+    - snmp
+    - soap
+    - sockets
+    - sodium
+    - sourceguardian
+    - spl
+    - sqlite3
+    - sqlsrv
+    - ssh2
+    - sybase
+    - sysvmsg
+    - sysvsem
+    - sysvshm
+    - tideways
+    - tideways_xhprof
+    - tidy
+    - tokenizer
+    - uuid
+    - wddx
+    - xdebug
+    - xml
+    - xmlreader
+    - xmlrpc
+    - xmlwriter
+    - xsl
+    - yaml
+    - zbarcode
+    - zend_test
+    - zip
+
+  "7.4":
+    - amqp
+    - apcu
+    - apcu_bc
+    - applepay
+    - bcmath
+    - blackfire
+    - bz2
+    - calendar
+    - com_dotnet
+    - ctype
+    - curl
+    - date
+    - dba
+    - dom
+    - enchant
+    - event
+    - exif
+    - ffi
+    - fileinfo
+    - filter
+    - ftp
+    - gd
+    - geoip
+    - gettext
+    - gmp
+    - http
+    - iconv
+    - igbinary
+    - imagick
+    - imap
+    - interbase
+    - intl
+    - ioncube
+    - json
+    - ldap
+    - mailparse
+    - mbstring
+    - memcached
+    - mongodb
+    - msgpack
+    - mysqli
+    - mysqlnd
+    - newrelic
+    - oauth
+    - odbc
+    - opcache
+    - pcntl
+    - pdo
+    - pdo_dblib
+    - pdo_mysql
+    - pdo_odbc
+    - pdo_pgsql
+    - pdo_sqlite
+    - pdo_sqlsrv
+    - pgsql
+    - phar
+    - posix
+    - propro
+    - pspell
+    - raphf
+    - readline
+    - redis
+    - reflection
+    - session
+    - shmop
+    - simplexml
+    - snmp
+    - soap
+    - sockets
+    - sodium
+    - sourceguardian
+    - spl
+    - sqlite3
+    - sqlsrv
+    - ssh2
+    - sybase
+    - sysvmsg
+    - sysvsem
+    - sysvshm
+    - tideways
+    - tideways_xhprof
+    - tidy
+    - tokenizer
+    - uuid
+    - xdebug
+    - xml
+    - xmlreader
+    - xmlrpc
+    - xmlwriter
+    - xsl
+    - yaml
+    - zend_test
+    - zip
+
+  "8.0":
+    - amqp
+    - apcu
+    - bcmath
+    - blackfire
+    - bz2
+    - calendar
+    - com_dotnet
+    - ctype
+    - curl
+    - date
+    - dba
+    - dom
+    - enchant
+    - event
+    - exif
+    - ffi
+    - fileinfo
+    - filter
+    - ftp
+    - gd
+    - geoip
+    - gettext
+    - gmp
+    - http
+    - iconv
+    - igbinary
+    - imagick
     - imap
     - interbase
     - intl
     - json
     - ldap
-    - libxml
+    - mailparse
     - mbstring
+    - memcached
+    - mongodb
+    - msgpack
     - mysqli
     - mysqlnd
+    - newrelic
+    - oauth
     - odbc
     - opcache
     - pcntl
@@ -446,12 +785,14 @@ dedicated:
     - pdo_odbc
     - pdo_pgsql
     - pdo_sqlite
+    - pdo_sqlsrv
     - pgsql
     - phar
     - posix
     - pspell
+    - raphf
     - readline
-    - recode
+    - redis
     - reflection
     - session
     - shmop
@@ -460,151 +801,35 @@ dedicated:
     - soap
     - sockets
     - sodium
+    - sourceguardian
     - spl
     - sqlite3
+    - sqlsrv
+    - ssh2
+    - sybase
     - sysvmsg
     - sysvsem
     - sysvshm
+    - tideways
+    - tideways_xhprof
     - tidy
     - tokenizer
-    - wddx
+    - uuid
+    - xdebug
     - xml
     - xmlreader
     - xmlrpc
     - xmlwriter
     - xsl
-    - zend_test
-    - zip
-
-  "7.4":
-    - bcmath
-    - bz2
-    - calendar
-    - com_dotnet
-    - ctype
-    - curl
-    - date
-    - dba
-    - dom
-    - enchant
-    - exif
-    - ffi
-    - fileinfo
-    - filter
-    - ftp
-    - gd
-    - gettext
-    - gmp
-    - iconv
-    - imap
-    - intl
-    - json
-    - ldap
-    - mbstring
-    - mysqli
-    - mysqlnd
-    - odbc
-    - opcache
-    - pcntl
-    - pdo
-    - pdo_dblib
-    - pdo_mysql
-    - pdo_odbc
-    - pdo_pgsql
-    - pdo_sqlite
-    - pgsql
-    - phar
-    - posix
-    - pspell
-    - readline
-    - reflection
-    - session
-    - shmop
-    - simplexml
-    - snmp
-    - soap
-    - sockets
-    - sodium
-    - spl
-    - sqlite3
-    - sysvmsg
-    - sysvsem
-    - sysvshm
-    - tidy
-    - tokenizer
-    - xml
-    - xmlreader
-    - xmlrpc
-    - xmlwriter
-    - xsl
-    - zend_test
-    - zip
-
-  "8.0":
-    - bcmath
-    - bz2
-    - calendar
-    - com_dotnet
-    - ctype
-    - curl
-    - date
-    - dba
-    - dom
-    - enchant
-    - exif
-    - ffi
-    - fileinfo
-    - filter
-    - ftp
-    - gd
-    - gettext
-    - gmp
-    - iconv
-    - imap
-    - intl
-    - json
-    - ldap
-    - mbstring
-    - mysqli
-    - mysqlnd
-    - odbc
-    - opcache
-    - pcntl
-    - pdo
-    - pdo_dblib
-    - pdo_mysql
-    - pdo_odbc
-    - pdo_pgsql
-    - pdo_sqlite
-    - pgsql
-    - phar
-    - posix
-    - pspell
-    - readline
-    - reflection
-    - session
-    - shmop
-    - simplexml
-    - snmp
-    - soap
-    - sockets
-    - sodium
-    - spl
-    - sqlite3
-    - sysvmsg
-    - sysvsem
-    - sysvshm
-    - tidy
-    - tokenizer
-    - xml
-    - xmlreader
-    - xmlwriter
-    - xsl
+    - yaml
     - zend_test
     - zip
 
   "8.1":
+    - amqp
+    - apcu
     - bcmath
+    - blackfire
     - bz2
     - calendar
     - com_dotnet
@@ -615,22 +840,35 @@ dedicated:
     - dl_test
     - dom
     - enchant
+    - event
     - exif
     - ffi
     - fileinfo
     - filter
     - ftp
     - gd
+    - geoip
     - gettext
     - gmp
+    - http
     - iconv
+    - igbinary
+    - imagick
     - imap
+    - interbase
     - intl
+    - ioncube
     - json
     - ldap
+    - mailparse
     - mbstring
+    - memcached
+    - mongodb
+    - msgpack
     - mysqli
     - mysqlnd
+    - newrelic
+    - oauth
     - odbc
     - opcache
     - pcntl
@@ -640,11 +878,16 @@ dedicated:
     - pdo_odbc
     - pdo_pgsql
     - pdo_sqlite
+    - pdo_sqlsrv
     - pgsql
     - phar
     - posix
+    - protobuf
     - pspell
+    - raphf
+    - rdkafka
     - readline
+    - redis
     - reflection
     - session
     - shmop
@@ -653,50 +896,80 @@ dedicated:
     - soap
     - sockets
     - sodium
+    - sourceguardian
     - spl
     - sqlite3
+    - sqlsrv
+    - ssh2
+    - sybase
     - sysvmsg
     - sysvsem
     - sysvshm
+    - tideways
+    - tideways_xhprof
     - tidy
     - tokenizer
+    - uuid
+    - xdebug
     - xml
     - xmlreader
+    - xmlrpc
     - xmlwriter
     - xsl
+    - yaml
     - zend_test
     - zip
 
   "8.2":
+    - amqp
+    - apcu
     - bcmath
+    - blackfire
     - bz2
     - calendar
     - com_dotnet
     - ctype
     - curl
+    - datadog-profiling
     - date
     - dba
     - dl_test
     - dom
     - enchant
+    - event
     - exif
     - ffi
     - fileinfo
     - filter
     - ftp
     - gd
+    - geoip
     - gettext
     - gmp
+    - gnupg
+    - http
     - iconv
+    - igbinary
+    - imagick
     - imap
+    - interbase
     - intl
+    - ioncube
     - json
     - ldap
+    - mailparse
     - mbstring
+    - memcached
+    - mongodb
+    - msgpack
     - mysqli
     - mysqlnd
+    - newrelic
+    - oauth
     - odbc
     - opcache
+    - openswoole
+    - opentelemetry
     - pcntl
     - pdo
     - pdo_dblib
@@ -705,12 +978,17 @@ dedicated:
     - pdo_odbc
     - pdo_pgsql
     - pdo_sqlite
+    - pdo_sqlsrv
     - pgsql
     - phar
     - posix
+    - protobuf
     - pspell
     - random
+    - raphf
+    - rdkafka
     - readline
+    - redis
     - reflection
     - session
     - shmop
@@ -719,50 +997,80 @@ dedicated:
     - soap
     - sockets
     - sodium
+    - sourceguardian
     - spl
     - sqlite3
+    - sqlsrv
+    - ssh2
+    - swoole
+    - sybase
     - sysvmsg
     - sysvsem
     - sysvshm
+    - tideways
+    - tideways_xhprof
     - tidy
     - tokenizer
+    - uuid
+    - xdebug
     - xml
     - xmlreader
+    - xmlrpc
     - xmlwriter
     - xsl
+    - yaml
     - zend_test
     - zip
 
   "8.3":
+    - amqp
+    - apcu
     - bcmath
+    - blackfire
     - bz2
     - calendar
     - com_dotnet
     - ctype
     - curl
+    - datadog-profiling
     - date
     - dba
     - dl_test
     - dom
     - enchant
+    - event
     - exif
     - ffi
     - fileinfo
     - filter
     - ftp
     - gd
+    - geoip
     - gettext
     - gmp
+    - gnupg
+    - http
     - iconv
+    - igbinary
+    - imagick
     - imap
     - intl
+    - ioncube
     - json
     - ldap
+    - mailparse
     - mbstring
+    - memcached
+    - mongodb
+    - msgpack
     - mysqli
     - mysqlnd
+    - newrelic
+    - oauth
     - odbc
     - opcache
+    - openswoole
+    - opentelemetry
     - pcntl
     - pdo
     - pdo_dblib
@@ -771,12 +1079,17 @@ dedicated:
     - pdo_odbc
     - pdo_pgsql
     - pdo_sqlite
+    - pdo_sqlsrv
     - pgsql
     - phar
     - posix
+    - protobuf
     - pspell
     - random
+    - raphf
+    - rdkafka
     - readline
+    - redis
     - reflection
     - session
     - shmop
@@ -785,49 +1098,82 @@ dedicated:
     - soap
     - sockets
     - sodium
+    - sourceguardian
     - spl
     - sqlite3
+    - sqlsrv
+    - ssh2
+    - swoole
+    - sybase
     - sysvmsg
     - sysvsem
     - sysvshm
+    - tideways
+    - tideways_xhprof
     - tidy
     - tokenizer
+    - uuid
+    - uv
+    - xdebug
     - xml
     - xmlreader
+    - xmlrpc
     - xmlwriter
     - xsl
+    - yaml
     - zend_test
     - zip
 
   "8.4":
+    - amqp
+    - apcu
     - bcmath
+    - blackfire
     - bz2
     - calendar
     - com_dotnet
     - ctype
     - curl
+    - datadog-profiling
     - date
     - dba
     - dl_test
     - dom
     - enchant
+    - event
     - exif
     - ffi
     - fileinfo
     - filter
     - ftp
     - gd
+    - geoip
     - gettext
     - gmp
+    - gnupg
+    - grpc
+    - http
     - iconv
+    - igbinary
+    - imagick
+    - imap
     - intl
+    - ioncube
     - json
     - ldap
+    - mailparse
     - mbstring
+    - memcached
+    - mongodb
+    - msgpack
     - mysqli
     - mysqlnd
+    - newrelic
+    - oauth
     - odbc
     - opcache
+    - openswoole
+    - opentelemetry
     - pcntl
     - pdo
     - pdo_dblib
@@ -836,11 +1182,16 @@ dedicated:
     - pdo_odbc
     - pdo_pgsql
     - pdo_sqlite
+    - pdo_sqlsrv
     - pgsql
     - phar
     - posix
+    - protobuf
     - random
+    - raphf
+    - rdkafka
     - readline
+    - redis
     - reflection
     - session
     - shmop
@@ -849,50 +1200,76 @@ dedicated:
     - soap
     - sockets
     - sodium
+    - sourceguardian
     - spl
     - sqlite3
+    - ssh2
+    - swoole
+    - sybase
     - sysvmsg
     - sysvsem
     - sysvshm
+    - tideways
     - tidy
     - tokenizer
+    - uuid
+    - uv
+    - xdebug
     - xml
     - xmlreader
+    - xmlrpc
     - xmlwriter
     - xsl
+    - yaml
     - zend_test
     - zip
 
   "8.5":
+    - apcu
     - bcmath
+    - blackfire
     - bz2
     - calendar
     - com_dotnet
     - ctype
     - curl
+    - datadog-profiling
     - date
     - dba
     - dl_test
     - dom
     - enchant
+    - event
     - exif
     - ffi
     - fileinfo
     - filter
     - ftp
     - gd
+    - geoip
     - gettext
     - gmp
+    - gnupg
+    - http
     - iconv
+    - igbinary
+    - imagick
+    - imap
     - intl
     - json
     - ldap
     - lexbor
+    - mailparse
     - mbstring
+    - mongodb
+    - msgpack
     - mysqli
     - mysqlnd
+    - newrelic
+    - oauth
     - odbc
     - opcache
+    - opentelemetry
     - pcntl
     - pdo
     - pdo_dblib
@@ -901,11 +1278,16 @@ dedicated:
     - pdo_odbc
     - pdo_pgsql
     - pdo_sqlite
+    - pdo_sqlsrv
     - pgsql
     - phar
     - posix
+    - protobuf
     - random
+    - raphf
+    - rdkafka
     - readline
+    - redis
     - reflection
     - session
     - shmop
@@ -916,28 +1298,43 @@ dedicated:
     - sodium
     - spl
     - sqlite3
+    - sybase
     - sysvmsg
     - sysvsem
     - sysvshm
+    - tideways
     - tidy
     - tokenizer
+    - uuid
     - xml
     - xmlreader
+    - xmlrpc
     - xmlwriter
     - xsl
+    - yaml
     - zend_test
     - zip
 
 grid:
   "5.4":
     available:
+      - apc
+      - apcu
+      - blackfire
       - curl
       - enchant
+      - gearman
+      - geoip
       - gmp
+      - http
+      - imagick
       - imap
       - interbase
       - ldap
       - mcrypt
+      - memcache
+      - memcached
+      - mongo
       - mssql
       - mysql
       - mysqlnd
@@ -949,14 +1346,22 @@ grid:
       - pdo_pgsql
       - pdo_sqlite
       - pgsql
+      - pinba
       - pspell
       - readline
       - recode
+      - redis
       - snmp
+      - spplus
       - sqlite3
+      - ssh2
       - tidy
+      - xcache
+      - xdebug
+      - xhprof
       - xmlrpc
       - xsl
+      - zendopcache
     default:
       - bcmath
       - calendar
@@ -1002,13 +1407,21 @@ grid:
 
   "5.5":
     available:
+      - apcu
+      - blackfire
       - curl
       - enchant
+      - gearman
+      - geoip
       - gmp
+      - imagick
       - imap
       - interbase
       - ldap
       - mcrypt
+      - memcache
+      - memcached
+      - mongo
       - mssql
       - mysql
       - mysqlnd
@@ -1019,13 +1432,21 @@ grid:
       - pdo_odbc
       - pdo_pgsql
       - pdo_sqlite
+      - pecl-http
       - pgsql
+      - pinba
       - pspell
       - readline
       - recode
+      - redis
       - snmp
+      - spplus
       - sqlite3
+      - ssh2
       - tidy
+      - xcache
+      - xdebug
+      - xhprof
       - xmlrpc
       - xsl
     default:
@@ -1073,16 +1494,26 @@ grid:
 
   "5.6":
     available:
+      - apcu
+      - blackfire
       - curl
       - enchant
+      - gearman
+      - geoip
       - gmp
+      - imagick
       - imap
       - interbase
       - ldap
       - mcrypt
+      - memcache
+      - memcached
+      - mongo
+      - msgpack
       - mssql
       - mysql
       - mysqlnd
+      - newrelic
       - odbc
       - pdo_dblib
       - pdo_firebird
@@ -1090,13 +1521,21 @@ grid:
       - pdo_odbc
       - pdo_pgsql
       - pdo_sqlite
+      - pecl-http
       - pgsql
+      - pinba
+      - propro
       - pspell
+      - raphf
       - readline
       - recode
+      - redis
       - snmp
       - sqlite3
+      - ssh2
       - tidy
+      - xdebug
+      - xhprof
       - xmlrpc
       - xsl
     default:
@@ -1144,17 +1583,32 @@ grid:
 
   "7.0":
     available:
+      - amqp
+      - apcu
+      - apcu_bc
+      - applepay
+      - blackfire
       - bz2
       - curl
       - enchant
+      - geoip
       - gettext
       - gmp
       - iconv
+      - igbinary
+      - imagick
       - imap
       - interbase
+      - ioncube
       - ldap
+      - mailparse
       - mcrypt
+      - memcached
+      - mongodb
+      - msgpack
       - mysqlnd
+      - newrelic
+      - oauth
       - odbc
       - pdo_dblib
       - pdo_firebird
@@ -1162,15 +1616,25 @@ grid:
       - pdo_odbc
       - pdo_pgsql
       - pdo_sqlite
+      - pdo_sqlsrv
       - pgsql
       - pspell
       - readline
       - recode
+      - redis
       - snmp
+      - sourceguardian
       - sqlite3
+      - sqlsrv
+      - ssh2
+      - sybase
+      - tideways
+      - tideways_xhprof
       - tidy
+      - xdebug
       - xmlrpc
       - xsl
+      - zbarcode
     default:
       - bcmath
       - calendar
@@ -1216,17 +1680,33 @@ grid:
 
   "7.1":
     available:
+      - amqp
+      - apcu
+      - apcu_bc
+      - applepay
+      - blackfire
       - bz2
       - curl
       - enchant
+      - event
+      - geoip
       - gettext
       - gmp
       - iconv
+      - igbinary
+      - imagick
       - imap
       - interbase
+      - ioncube
       - ldap
+      - mailparse
       - mcrypt
+      - memcached
+      - mongodb
+      - msgpack
       - mysqlnd
+      - newrelic
+      - oauth
       - odbc
       - pdo_dblib
       - pdo_firebird
@@ -1234,15 +1714,27 @@ grid:
       - pdo_odbc
       - pdo_pgsql
       - pdo_sqlite
+      - pdo_sqlsrv
       - pgsql
       - pspell
       - readline
       - recode
+      - redis
       - snmp
+      - sourceguardian
       - sqlite3
+      - sqlsrv
+      - ssh2
+      - sybase
+      - tideways
+      - tideways_xhprof
       - tidy
+      - uuid
+      - xdebug
       - xmlrpc
       - xsl
+      - yaml
+      - zbarcode
     default:
       - bcmath
       - calendar
@@ -1288,32 +1780,59 @@ grid:
 
   "7.2":
     available:
+      - amqp
+      - apcu
+      - apcu_bc
+      - blackfire
       - bz2
       - curl
       - enchant
+      - event
+      - geoip
       - gettext
       - gmp
       - iconv
+      - igbinary
+      - imagick
       - imap
       - interbase
+      - ioncube
       - ldap
+      - mailparse
+      - memcached
+      - mongodb
+      - msgpack
       - mysqlnd
+      - newrelic
+      - oauth
       - odbc
       - pdo_dblib
       - pdo_mysql
       - pdo_odbc
       - pdo_pgsql
       - pdo_sqlite
+      - pdo_sqlsrv
       - pgsql
       - pspell
       - readline
       - recode
+      - redis
       - snmp
       - sodium
+      - sourceguardian
       - sqlite3
+      - sqlsrv
+      - ssh2
+      - sybase
+      - tideways
+      - tideways_xhprof
       - tidy
+      - uuid
+      - xdebug
       - xmlrpc
       - xsl
+      - yaml
+      - zbarcode
     default:
       - bcmath
       - calendar
@@ -1359,32 +1878,63 @@ grid:
 
   "7.3":
     available:
+      - amqp
+      - apcu
+      - apcu_bc
+      - applepay
+      - blackfire
       - bz2
       - curl
       - enchant
+      - event
+      - geoip
       - gettext
       - gmp
+      - http
       - iconv
+      - igbinary
+      - imagick
       - imap
       - interbase
+      - ioncube
       - ldap
+      - mailparse
+      - memcached
+      - mongodb
+      - msgpack
       - mysqlnd
+      - newrelic
+      - oauth
       - odbc
       - pdo_dblib
       - pdo_mysql
       - pdo_odbc
       - pdo_pgsql
       - pdo_sqlite
+      - pdo_sqlsrv
       - pgsql
+      - propro
       - pspell
+      - raphf
       - readline
       - recode
+      - redis
       - snmp
       - sodium
+      - sourceguardian
       - sqlite3
+      - sqlsrv
+      - ssh2
+      - sybase
+      - tideways
+      - tideways_xhprof
       - tidy
+      - uuid
+      - xdebug
       - xmlrpc
       - xsl
+      - yaml
+      - zbarcode
     default:
       - bcmath
       - calendar
@@ -1430,32 +1980,63 @@ grid:
 
   "7.4":
     available:
+      - amqp
+      - apcu
+      - apcu_bc
+      - applepay
+      - blackfire
       - bz2
       - curl
       - enchant
+      - event
       - ffi
+      - geoip
       - gettext
       - gmp
+      - http
       - iconv
+      - igbinary
+      - imagick
       - imap
+      - interbase
+      - ioncube
       - ldap
+      - mailparse
+      - memcached
+      - mongodb
+      - msgpack
       - mysqli
       - mysqlnd
+      - newrelic
+      - oauth
       - odbc
       - pdo_dblib
       - pdo_mysql
       - pdo_odbc
       - pdo_pgsql
       - pdo_sqlite
+      - pdo_sqlsrv
       - pgsql
+      - propro
       - pspell
+      - raphf
       - readline
+      - redis
       - snmp
       - sodium
+      - sourceguardian
       - sqlite3
+      - sqlsrv
+      - ssh2
+      - sybase
+      - tideways
+      - tideways_xhprof
       - tidy
+      - uuid
+      - xdebug
       - xmlrpc
       - xsl
+      - yaml
       - zip
     default:
       - bcmath
@@ -1497,31 +2078,59 @@ grid:
 
   "8.0":
     available:
+      - amqp
+      - apcu
+      - blackfire
       - bz2
       - curl
       - enchant
+      - event
       - ffi
+      - geoip
       - gettext
       - gmp
+      - http
       - iconv
+      - igbinary
+      - imagick
       - imap
+      - interbase
       - ldap
+      - mailparse
+      - memcached
+      - mongodb
+      - msgpack
       - mysqli
       - mysqlnd
+      - newrelic
+      - oauth
       - odbc
       - pdo_dblib
       - pdo_mysql
       - pdo_odbc
       - pdo_pgsql
       - pdo_sqlite
+      - pdo_sqlsrv
       - pgsql
       - pspell
+      - raphf
       - readline
+      - redis
       - snmp
       - sodium
+      - sourceguardian
       - sqlite3
+      - sqlsrv
+      - ssh2
+      - sybase
+      - tideways
+      - tideways_xhprof
       - tidy
+      - uuid
+      - xdebug
+      - xmlrpc
       - xsl
+      - yaml
       - zip
     default:
       - bcmath
@@ -1563,31 +2172,62 @@ grid:
 
   "8.1":
     available:
+      - amqp
+      - apcu
+      - blackfire
       - bz2
       - curl
       - enchant
+      - event
       - ffi
+      - geoip
       - gettext
       - gmp
+      - http
       - iconv
+      - igbinary
+      - imagick
       - imap
+      - interbase
+      - ioncube
       - ldap
+      - mailparse
+      - memcached
+      - mongodb
+      - msgpack
       - mysqli
       - mysqlnd
+      - newrelic
+      - oauth
       - odbc
       - pdo_dblib
       - pdo_mysql
       - pdo_odbc
       - pdo_pgsql
       - pdo_sqlite
+      - pdo_sqlsrv
       - pgsql
+      - protobuf
       - pspell
+      - raphf
+      - rdkafka
       - readline
+      - redis
       - snmp
       - sodium
+      - sourceguardian
       - sqlite3
+      - sqlsrv
+      - ssh2
+      - sybase
+      - tideways
+      - tideways_xhprof
       - tidy
+      - uuid
+      - xdebug
+      - xmlrpc
       - xsl
+      - yaml
       - zip
     default:
       - bcmath
@@ -1630,32 +2270,68 @@ grid:
 
   "8.2":
     available:
+      - amqp
+      - apcu
+      - blackfire
       - bz2
       - curl
+      - datadog-profiling
       - enchant
+      - event
       - ffi
+      - geoip
       - gettext
       - gmp
+      - gnupg
+      - http
       - iconv
+      - igbinary
+      - imagick
       - imap
+      - interbase
+      - ioncube
       - ldap
+      - mailparse
+      - memcached
+      - mongodb
+      - msgpack
       - mysqli
       - mysqlnd
+      - newrelic
+      - oauth
       - odbc
+      - openswoole
+      - opentelemetry
       - pdo_dblib
       - pdo_firebird
       - pdo_mysql
       - pdo_odbc
       - pdo_pgsql
       - pdo_sqlite
+      - pdo_sqlsrv
       - pgsql
+      - protobuf
       - pspell
+      - raphf
+      - rdkafka
       - readline
+      - redis
       - snmp
       - sodium
+      - sourceguardian
       - sqlite3
+      - sqlsrv
+      - ssh2
+      - swoole
+      - sybase
+      - tideways
+      - tideways_xhprof
       - tidy
+      - uuid
+      - xdebug
+      - xmlrpc
       - xsl
+      - yaml
       - zip
     default:
       - bcmath
@@ -1699,32 +2375,68 @@ grid:
 
   "8.3":
     available:
+      - amqp
+      - apcu
+      - blackfire
       - bz2
       - curl
+      - datadog-profiling
       - enchant
+      - event
       - ffi
+      - geoip
       - gettext
       - gmp
+      - gnupg
+      - http
       - iconv
+      - igbinary
+      - imagick
       - imap
+      - ioncube
       - ldap
+      - mailparse
+      - memcached
+      - mongodb
+      - msgpack
       - mysqli
       - mysqlnd
+      - newrelic
+      - oauth
       - odbc
+      - openswoole
+      - opentelemetry
       - pdo_dblib
       - pdo_firebird
       - pdo_mysql
       - pdo_odbc
       - pdo_pgsql
       - pdo_sqlite
+      - pdo_sqlsrv
       - pgsql
+      - protobuf
       - pspell
+      - raphf
+      - rdkafka
       - readline
+      - redis
       - snmp
       - sodium
+      - sourceguardian
       - sqlite3
+      - sqlsrv
+      - ssh2
+      - swoole
+      - sybase
+      - tideways
+      - tideways_xhprof
       - tidy
+      - uuid
+      - uv
+      - xdebug
+      - xmlrpc
       - xsl
+      - yaml
       - zip
     default:
       - bcmath
@@ -1768,30 +2480,66 @@ grid:
 
   "8.4":
     available:
+      - amqp
+      - apcu
+      - blackfire
       - bz2
       - curl
+      - datadog-profiling
       - enchant
+      - event
       - ffi
+      - geoip
       - gettext
       - gmp
+      - gnupg
+      - grpc
+      - http
       - iconv
+      - igbinary
+      - imagick
+      - imap
+      - ioncube
       - ldap
+      - mailparse
+      - memcached
+      - mongodb
+      - msgpack
       - mysqli
       - mysqlnd
+      - newrelic
+      - oauth
       - odbc
+      - openswoole
+      - opentelemetry
       - pdo_dblib
       - pdo_firebird
       - pdo_mysql
       - pdo_odbc
       - pdo_pgsql
       - pdo_sqlite
+      - pdo_sqlsrv
       - pgsql
+      - protobuf
+      - raphf
+      - rdkafka
       - readline
+      - redis
       - snmp
       - sodium
+      - sourceguardian
       - sqlite3
+      - ssh2
+      - swoole
+      - sybase
+      - tideways
       - tidy
+      - uuid
+      - uv
+      - xdebug
+      - xmlrpc
       - xsl
+      - yaml
       - zip
     default:
       - bcmath
@@ -1835,30 +2583,56 @@ grid:
 
   "8.5":
     available:
+      - apcu
+      - blackfire
       - bz2
       - curl
+      - datadog-profiling
       - enchant
+      - event
       - ffi
+      - geoip
       - gettext
       - gmp
+      - gnupg
+      - http
       - iconv
+      - igbinary
+      - imagick
+      - imap
       - ldap
+      - mailparse
+      - mongodb
+      - msgpack
       - mysqli
       - mysqlnd
+      - newrelic
+      - oauth
       - odbc
+      - opentelemetry
       - pdo_dblib
       - pdo_firebird
       - pdo_mysql
       - pdo_odbc
       - pdo_pgsql
       - pdo_sqlite
+      - pdo_sqlsrv
       - pgsql
+      - protobuf
+      - raphf
+      - rdkafka
       - readline
+      - redis
       - snmp
       - sodium
       - sqlite3
+      - sybase
+      - tideways
       - tidy
+      - uuid
+      - xmlrpc
       - xsl
+      - yaml
       - zip
     default:
       - bcmath
