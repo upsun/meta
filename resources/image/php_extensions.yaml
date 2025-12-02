@@ -19,6 +19,40 @@ dedicated:
     - gmp
     - igbinary
     - imagick
+    - imap
+    - interbase
+    - intl
+    - ldap
+    - mailparse
+    - mbstring
+    - memcached
+    - msgpack
+    - mysql
+    - oauth
+    - odbc
+    - opcache
+    - pdo-sqlsrv
+    - pgsql
+    - phpdbg
+    - pspell
+    - readline
+    - redis
+    - snmp
+    - soap
+    - sodium
+    - sqlite3
+    - sqlsrv
+    - ssh2
+    - sybase
+    - tideways-xhprof
+    - tidy
+    - twig
+    - uuid
+    - xcache
+    - xdebug
+    - xml
+    - xsl
+    - zip
 
   "7.0":
     - amqp
