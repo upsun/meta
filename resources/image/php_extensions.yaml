@@ -1,4 +1,25 @@
 dedicated:
+  "5.x":
+    - amqp
+    - apcu
+    - apcu-bc
+    - bcmath
+    - bz2
+    - cgi
+    - cli
+    - common
+    - curl
+    - dba
+    - dev
+    - enchant
+    - event
+    - fpm
+    - gd
+    - geoip
+    - gmp
+    - igbinary
+    - imagick
+
   "7.0":
     - amqp
     - apcu
