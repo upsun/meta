@@ -1250,9 +1250,7 @@
     "runtime": false,
     "type": "valkey",
     "versions": {
-      "supported": [
-        "8.0"
-      ],
+      "supported": [],
       "deprecated": []
     },
     "versions-dedicated-gen-2": {
