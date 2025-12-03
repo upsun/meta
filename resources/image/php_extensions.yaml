@@ -53,7 +53,7 @@ dedicated:
     - xml
     - xsl
     - zip
-  '7.0':
+  "7.0":
     - apcu-bc
     - apcu
     - bcmath
@@ -101,7 +101,7 @@ dedicated:
     - xmlrpc
     - zbarcode
     - zip
-  '7.1':
+  "7.1":
     - amqp
     - apcu
     - apcu-bc
@@ -156,7 +156,7 @@ dedicated:
     - zbarcode
     - zip
     - zts
-  '7.2':
+  "7.2":
     - amqp
     - apcu
     - apcu-bc
@@ -214,7 +214,7 @@ dedicated:
     - zbarcode
     - zip
     - zts
-  '7.3':
+  "7.3":
     - amqp
     - apcu
     - apcu-bc
@@ -272,7 +272,7 @@ dedicated:
     - zbarcode
     - zip
     - zts
-  '7.4':
+  "7.4":
     - amqp
     - apcu
     - apcu-bc
@@ -328,7 +328,7 @@ dedicated:
     - xsl
     - zip
     - zts
-  '8.0':
+  "8.0":
     - amqp
     - apcu
     - bcmath
@@ -350,7 +350,7 @@ dedicated:
     - imap
     - interbase
     - intl
-    - json
+    - json # json is built in from version 8.0
     - ldap
     - mailparse
     - mbstring
@@ -381,7 +381,7 @@ dedicated:
     - xsl
     - zip
     - zts
-  '8.1':
+  "8.1":
     - amqp
     - apcu
     - bcmath
@@ -401,7 +401,7 @@ dedicated:
     - imagick
     - imap
     - intl
-    - json
+    - json # json is built in from version 8.0
     - ldap
     - mailparse
     - mbstring
@@ -432,7 +432,7 @@ dedicated:
     - xsl
     - zip
     - zts
-  '8.2':
+  "8.2":
     - amqp
     - apcu
     - bcmath
@@ -451,7 +451,7 @@ dedicated:
     - imagick
     - imap
     - intl
-    - json
+    - json # json is built in from version 8.0
     - ldap
     - mailparse
     - mbstring
@@ -480,7 +480,7 @@ dedicated:
     - xml
     - xsl
     - zip
-  '8.3':
+  "8.3":
     - amqp
     - apcu
     - bcmath
@@ -499,7 +499,7 @@ dedicated:
     - imagick
     - imap
     - intl
-    - json
+    - json # json is built in from version 8.0
     - ldap
     - mailparse
     - mbstring
@@ -527,7 +527,7 @@ dedicated:
     - xsl
     - zip
 grid:
-  '5.4':
+  "5.4":
     available:
       - apc
       - apcu
@@ -578,7 +578,7 @@ grid:
       - pdo_sqlite
       - sqlite3
       - zendopcache
-  '5.5':
+  "5.5":
     available:
       - apcu
       - blackfire
@@ -630,7 +630,7 @@ grid:
       - sqlite3
     built-in:
       - opcache
-  '5.6':
+  "5.6":
     available:
       - apcu
       - blackfire
@@ -684,7 +684,7 @@ grid:
       - sqlite3
     built-in:
       - opcache
-  '7.0':
+  "7.0":
     available:
       - amqp
       - apcu
@@ -770,7 +770,7 @@ grid:
       - zip
     built-in:
       - opcache
-  '7.1':
+  "7.1":
     available:
       - amqp
       - apcu
@@ -859,7 +859,7 @@ grid:
       - zip
     built-in:
       - opcache
-  '7.2':
+  "7.2":
     available:
       - amqp
       - apcu
@@ -946,7 +946,7 @@ grid:
       - zip
     built-in:
       - opcache
-  '7.3':
+  "7.3":
     available:
       - amqp
       - apcu
@@ -1037,7 +1037,7 @@ grid:
       - zip
     built-in:
       - opcache
-  '7.4':
+  "7.4":
     available:
       - amqp
       - apcu
@@ -1126,7 +1126,7 @@ grid:
       - zip
     built-in:
       - opcache
-  '8.0':
+  "8.0":
     available:
       - amqp
       - apcu
@@ -1210,7 +1210,7 @@ grid:
       - zip
     built-in:
       - opcache
-  '8.1':
+  "8.1":
     available:
       - amqp
       - apcu
@@ -1297,7 +1297,7 @@ grid:
       - zip
     built-in:
       - opcache
-  '8.2':
+  "8.2":
     available:
       - amqp
       - apcu
@@ -1390,7 +1390,7 @@ grid:
       - zip
     built-in:
       - opcache
-  '8.3':
+  "8.3":
     available:
       - amqp
       - apcu
@@ -1483,7 +1483,7 @@ grid:
       - zip
     built-in:
       - opcache
-  '8.4':
+  "8.4":
     available:
       - amqp
       - apcu
@@ -1574,7 +1574,7 @@ grid:
       - zip
     built-in:
       - opcache
-  '8.5':
+  "8.5":
     available:
       - apcu
       - blackfire
