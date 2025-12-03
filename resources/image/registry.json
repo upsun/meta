@@ -69,14 +69,8 @@
     "runtime": true,
     "type": "dotnet",
     "versions": {
-      "deprecated": [
-        "7.0",
-        "6.0",
-        "5.0"
-      ],
-      "supported": [
-        "8.0"
-      ],
+      "deprecated": [],
+      "supported": [],
       "legacy": [
         "3.1",
         "2.2",
