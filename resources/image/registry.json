@@ -14,10 +14,7 @@
     "runtime": false,
     "type": "chrome-headless",
     "versions": {
-      "deprecated": [],
-      "supported": [
-        "120",
-        "113",
+      "deprecated": [
         "95",
         "91",
         "86",
@@ -25,6 +22,10 @@
         "83",
         "81",
         "80"
+      ],
+      "supported": [
+        "120",
+        "113"
       ],
       "legacy": []
     },
