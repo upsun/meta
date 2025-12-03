@@ -14,17 +14,17 @@
     "runtime": false,
     "type": "chrome-headless",
     "versions": {
-      "deprecated": [
-        "80",
-        "81",
-        "83",
-        "84",
-        "86"
-      ],
+      "deprecated": [],
       "supported": [
+        "120",
         "113",
         "95",
-        "91"
+        "91",
+        "86",
+        "84",
+        "83",
+        "81",
+        "80"
       ],
       "legacy": []
     },
@@ -70,13 +70,11 @@
     "type": "dotnet",
     "versions": {
       "deprecated": [
-        "3.1",
-        "2.2",
-        "2.1",
-        "2.0"
+        "7.0",
+        "6.0",
+        "5.0"
       ],
       "supported": [
-        "6.0",
         "8.0"
       ],
       "legacy": [
@@ -775,15 +773,18 @@
     },
     "versions": {
       "deprecated": [
+        "8.0",
         "7.4",
         "7.3",
         "7.2",
         "7.1",
         "7.0",
         "5.6",
+        "5.5",
         "5.4"
       ],
       "supported": [
+        "8.5",
         "8.4",
         "8.3",
         "8.2",
@@ -1121,8 +1122,7 @@
     "type": "rust",
     "versions": {
       "deprecated": [],
-      "supported": [
-      ]
+      "supported": []
     }
   },
   "solr": {
@@ -1206,6 +1206,7 @@
     "type": "valkey",
     "versions": {
       "supported": [
+        "8.1",
         "8.0"
       ],
       "deprecated": []
@@ -1234,15 +1235,13 @@
     "runtime": false,
     "type": "varnish",
     "versions": {
-      "deprecated": [
-        "5.2",
-        "6.3",
-        "6.4",
-        "7.1"
-      ],
+      "deprecated": [],
       "supported": [
+        "7.6",
         "7.3",
         "7.2",
+        "7.1",
+        "6.3",
         "6.0"
       ]
     }
@@ -1263,8 +1262,7 @@
     "runtime": false,
     "type": "vault-kms",
     "versions": {
-      "supported": [
-      ],
+      "supported": [],
       "deprecated": [
         "1.6"
       ],
