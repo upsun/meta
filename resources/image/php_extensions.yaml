@@ -53,7 +53,7 @@ dedicated:
     - xml
     - xsl
     - zip
-  "7.0":
+  '7.0':
     - apcu-bc
     - apcu
     - bcmath
@@ -101,7 +101,7 @@ dedicated:
     - xmlrpc
     - zbarcode
     - zip
-  "7.1":
+  '7.1':
     - amqp
     - apcu
     - apcu-bc
@@ -156,7 +156,7 @@ dedicated:
     - zbarcode
     - zip
     - zts
-  "7.2":
+  '7.2':
     - amqp
     - apcu
     - apcu-bc
@@ -214,7 +214,7 @@ dedicated:
     - zbarcode
     - zip
     - zts
-  "7.3":
+  '7.3':
     - amqp
     - apcu
     - apcu-bc
@@ -272,7 +272,7 @@ dedicated:
     - zbarcode
     - zip
     - zts
-  "7.4":
+  '7.4':
     - amqp
     - apcu
     - apcu-bc
@@ -328,7 +328,7 @@ dedicated:
     - xsl
     - zip
     - zts
-  "8.0":
+  '8.0':
     - amqp
     - apcu
     - bcmath
@@ -350,7 +350,7 @@ dedicated:
     - imap
     - interbase
     - intl
-    - json # json is built in from version 8.0
+    - json
     - ldap
     - mailparse
     - mbstring
@@ -381,7 +381,7 @@ dedicated:
     - xsl
     - zip
     - zts
-  "8.1":
+  '8.1':
     - amqp
     - apcu
     - bcmath
@@ -401,7 +401,7 @@ dedicated:
     - imagick
     - imap
     - intl
-    - json # json is built in from version 8.0
+    - json
     - ldap
     - mailparse
     - mbstring
@@ -432,7 +432,7 @@ dedicated:
     - xsl
     - zip
     - zts
-  "8.2":
+  '8.2':
     - amqp
     - apcu
     - bcmath
@@ -451,7 +451,7 @@ dedicated:
     - imagick
     - imap
     - intl
-    - json # json is built in from version 8.0
+    - json
     - ldap
     - mailparse
     - mbstring
@@ -480,7 +480,7 @@ dedicated:
     - xml
     - xsl
     - zip
-  "8.3":
+  '8.3':
     - amqp
     - apcu
     - bcmath
@@ -499,7 +499,7 @@ dedicated:
     - imagick
     - imap
     - intl
-    - json # json is built in from version 8.0
+    - json
     - ldap
     - mailparse
     - mbstring
@@ -527,7 +527,7 @@ dedicated:
     - xsl
     - zip
 grid:
-  "5.4":
+  '5.4':
     available:
       - apc
       - apcu
@@ -559,7 +559,6 @@ grid:
       - snmp
       - spplus
       - ssh2
-      - sybase
       - tidy
       - xcache
       - xdebug
@@ -579,7 +578,7 @@ grid:
       - pdo_sqlite
       - sqlite3
       - zendopcache
-  "5.5":
+  '5.5':
     available:
       - apcu
       - blackfire
@@ -587,10 +586,10 @@ grid:
       - gearman
       - geoip
       - gmp
-      - http
       - imagick
       - imap
       - interbase
+      - json
       - ldap
       - memcache
       - memcached
@@ -601,6 +600,7 @@ grid:
       - pdo_firebird
       - pdo_odbc
       - pdo_pgsql
+      - pecl-http
       - pgsql
       - pinba
       - pspell
@@ -609,7 +609,6 @@ grid:
       - redis
       - snmp
       - spplus
-      - sybase
       - ssh2
       - tidy
       - xcache
@@ -625,14 +624,13 @@ grid:
       - mysql
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
       - sqlite3
     built-in:
-      - zendopcache
-  "5.6":
+      - opcache
+  '5.6':
     available:
       - apcu
       - blackfire
@@ -657,7 +655,6 @@ grid:
       - pdo_pgsql
       - pecl-http
       - pgsql
-      - phpdbg
       - pinba
       - propro
       - pspell
@@ -667,7 +664,6 @@ grid:
       - redis
       - snmp
       - ssh2
-      - sybase
       - tidy
       - xdebug
       - xhprof
@@ -682,14 +678,13 @@ grid:
       - mysql
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
       - sqlite3
     built-in:
-      - zendopcache
-  "7.0":
+      - opcache
+  '7.0':
     available:
       - amqp
       - apcu
@@ -711,7 +706,6 @@ grid:
       - memcached
       - mongodb
       - msgpack
-      - mysql
       - newrelic
       - oauth
       - odbc
@@ -757,7 +751,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -776,8 +769,8 @@ grid:
       - xmlwriter
       - zip
     built-in:
-      - zendopcache
-  "7.1":
+      - opcache
+  '7.1':
     available:
       - amqp
       - apcu
@@ -799,7 +792,6 @@ grid:
       - memcached
       - mongodb
       - msgpack
-      - mysql
       - newrelic
       - oauth
       - odbc
@@ -810,7 +802,6 @@ grid:
       - pdo_sqlsrv
       - pgsql
       - pspell
-      - pthreads
       - readline
       - recode
       - redis
@@ -849,7 +840,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -868,8 +858,8 @@ grid:
       - xmlwriter
       - zip
     built-in:
-      - zendopcache
-  "7.2":
+      - opcache
+  '7.2':
     available:
       - amqp
       - apcu
@@ -889,7 +879,6 @@ grid:
       - memcached
       - mongodb
       - msgpack
-      - mysql
       - newrelic
       - oauth
       - odbc
@@ -899,7 +888,6 @@ grid:
       - pdo_sqlsrv
       - pgsql
       - pspell
-      - pthreads
       - readline
       - recode
       - redis
@@ -939,7 +927,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -958,8 +945,8 @@ grid:
       - xmlwriter
       - zip
     built-in:
-      - zendopcache
-  "7.3":
+      - opcache
+  '7.3':
     available:
       - amqp
       - apcu
@@ -981,7 +968,6 @@ grid:
       - memcached
       - mongodb
       - msgpack
-      - mysql
       - newrelic
       - oauth
       - odbc
@@ -990,6 +976,7 @@ grid:
       - pdo_pgsql
       - pdo_sqlsrv
       - pgsql
+      - propro
       - pspell
       - raphf
       - readline
@@ -1031,7 +1018,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -1050,8 +1036,8 @@ grid:
       - xmlwriter
       - zip
     built-in:
-      - zendopcache
-  "7.4":
+      - opcache
+  '7.4':
     available:
       - amqp
       - apcu
@@ -1074,7 +1060,6 @@ grid:
       - memcached
       - mongodb
       - msgpack
-      - mysql
       - newrelic
       - oauth
       - odbc
@@ -1083,6 +1068,7 @@ grid:
       - pdo_pgsql
       - pdo_sqlsrv
       - pgsql
+      - propro
       - pspell
       - raphf
       - readline
@@ -1098,7 +1084,6 @@ grid:
       - tideways_xhprof
       - tidy
       - uuid
-      - wddx
       - xdebug
       - xmlrpc
       - xsl
@@ -1122,7 +1107,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -1141,8 +1125,8 @@ grid:
       - xmlwriter
       - zip
     built-in:
-      - zendopcache
-  "8.0":
+      - opcache
+  '8.0':
     available:
       - amqp
       - apcu
@@ -1157,13 +1141,11 @@ grid:
       - imagick
       - imap
       - interbase
-      - ioncube
       - ldap
       - mailparse
       - memcached
       - mongodb
       - msgpack
-      - mysql
       - newrelic
       - oauth
       - odbc
@@ -1209,7 +1191,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -1228,11 +1209,8 @@ grid:
       - xmlwriter
       - zip
     built-in:
-      - json
-      - zendopcache
-    with-webp:
-      - imagick
-  "8.1":
+      - opcache
+  '8.1':
     available:
       - amqp
       - apcu
@@ -1244,6 +1222,7 @@ grid:
       - gmp
       - http
       - igbinary
+      - imagick
       - imap
       - interbase
       - ioncube
@@ -1252,7 +1231,6 @@ grid:
       - memcached
       - mongodb
       - msgpack
-      - mysql
       - newrelic
       - oauth
       - odbc
@@ -1300,7 +1278,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -1319,16 +1296,13 @@ grid:
       - xmlwriter
       - zip
     built-in:
-      - json
-      - zendopcache
-    with-webp:
-      - imagick
-  "8.2":
+      - opcache
+  '8.2':
     available:
       - amqp
       - apcu
       - blackfire
-      - datadog
+      - datadog-profiling
       - enchant
       - event
       - ffi
@@ -1337,6 +1311,7 @@ grid:
       - gnupg
       - http
       - igbinary
+      - imagick
       - imap
       - interbase
       - ioncube
@@ -1345,7 +1320,6 @@ grid:
       - memcached
       - mongodb
       - msgpack
-      - mysql
       - newrelic
       - oauth
       - odbc
@@ -1357,6 +1331,7 @@ grid:
       - pdo_pgsql
       - pdo_sqlsrv
       - pgsql
+      - protobuf
       - pspell
       - raphf
       - rdkafka
@@ -1371,6 +1346,7 @@ grid:
       - swoole
       - sybase
       - tideways
+      - tideways_xhprof
       - tidy
       - uuid
       - xdebug
@@ -1395,7 +1371,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -1414,16 +1389,13 @@ grid:
       - xmlwriter
       - zip
     built-in:
-      - json
-      - zendopcache
-    with-webp:
-      - imagick
-  "8.3":
+      - opcache
+  '8.3':
     available:
       - amqp
       - apcu
       - blackfire
-      - datadog
+      - datadog-profiling
       - enchant
       - event
       - ffi
@@ -1432,13 +1404,14 @@ grid:
       - gnupg
       - http
       - igbinary
+      - imagick
       - imap
+      - ioncube
       - ldap
       - mailparse
       - memcached
       - mongodb
       - msgpack
-      - mysql
       - newrelic
       - oauth
       - odbc
@@ -1450,6 +1423,7 @@ grid:
       - pdo_pgsql
       - pdo_sqlsrv
       - pgsql
+      - protobuf
       - pspell
       - raphf
       - rdkafka
@@ -1463,8 +1437,9 @@ grid:
       - ssh2
       - swoole
       - sybase
-      - tidy
       - tideways
+      - tideways_xhprof
+      - tidy
       - uuid
       - uv
       - xdebug
@@ -1489,7 +1464,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -1508,139 +1482,67 @@ grid:
       - xmlwriter
       - zip
     built-in:
-      - json
-      - zendopcache
-    with-webp:
-      - imagick
-  "8.4":
+      - opcache
+  '8.4':
     available:
       - amqp
       - apcu
-      - bcmath
       - blackfire
-      - bz2
-      - calendar
-      - ctype
-      - curl
       - datadog-profiling
-      - dba
-      - dom
       - enchant
       - event
-      - exif
       - ffi
-      - fileinfo
-      - ftp
-      - gd
       - geoip
-      - gettext
-      - gnupg
       - gmp
+      - gnupg
       - grpc
       - http
-      - iconv
       - igbinary
       - imagick
       - imap
-      - intl
       - ioncube
       - ldap
       - mailparse
-      - mbstring
       - memcached
       - mongodb
       - msgpack
-      - mysqli
-      - mysqlnd
       - newrelic
       - oauth
       - odbc
-      - opcache
       - openswoole
       - opentelemetry
-      - pdo
       - pdo_dblib
       - pdo_firebird
-      - pdo_mysql
       - pdo_odbc
       - pdo_pgsql
-      - pdo_sqlite
       - pdo_sqlsrv
       - pgsql
-      - phar
-      - posix
       - protobuf
       - raphf
       - rdkafka
       - readline
       - redis
       - shmop
-      - simplexml
       - snmp
-      - soap
-      - sockets
       - sodium
       - sourceguardian
-      - sqlite3
       - ssh2
       - swoole
       - sybase
-      - sysvmsg
-      - sysvsem
-      - sysvshm
-      - tidy
       - tideways
-      - tokenizer
+      - tidy
       - uuid
       - uv
       - xdebug
-      - xml
-      - xmlreader
       - xmlrpc
-      - xmlwriter
       - xsl
       - yaml
-      - zip
-    built-in:
-      - json
-      - zendopcache
-  "8.5":
-    available:
-      - apcu
-      - blackfire
-      - datadog-profiling
-      - enchant
-      - event
-      - ffi
-      - geoip
-      - gmp
-      - igbinary
-      - ldap
-      - mailparse
-      - newrelic
-      - odbc
-      - pdo_dblib
-      - pdo_firebird
-      - pdo_odbc
-      - pdo_pgsql
-      - pdo_sqlsrv
-      - pgsql
-      - readline
-      - redis
-      - shmop
-      - snmp
-      - sodium
-      - sybase
-      - tideways
-      - tidy
-      - xmlrpc
-      - xsl
     default:
       - bcmath
       - bz2
       - calendar
-      - curl
       - ctype
+      - curl
       - dba
       - dom
       - exif
@@ -1653,7 +1555,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -1672,5 +1573,83 @@ grid:
       - xmlwriter
       - zip
     built-in:
-      - json
-      - zendopcache
+      - opcache
+  '8.5':
+    available:
+      - apcu
+      - blackfire
+      - datadog-profiling
+      - enchant
+      - event
+      - ffi
+      - geoip
+      - gmp
+      - gnupg
+      - http
+      - igbinary
+      - imagick
+      - imap
+      - ldap
+      - mailparse
+      - mongodb
+      - msgpack
+      - newrelic
+      - oauth
+      - odbc
+      - opentelemetry
+      - pdo_dblib
+      - pdo_firebird
+      - pdo_odbc
+      - pdo_pgsql
+      - pdo_sqlsrv
+      - pgsql
+      - protobuf
+      - raphf
+      - rdkafka
+      - readline
+      - redis
+      - shmop
+      - snmp
+      - sodium
+      - sybase
+      - tideways
+      - tidy
+      - uuid
+      - xmlrpc
+      - xsl
+      - yaml
+    default:
+      - bcmath
+      - bz2
+      - calendar
+      - ctype
+      - curl
+      - dba
+      - dom
+      - exif
+      - fileinfo
+      - ftp
+      - gd
+      - gettext
+      - iconv
+      - intl
+      - mbstring
+      - mysqli
+      - mysqlnd
+      - pdo
+      - pdo_mysql
+      - pdo_sqlite
+      - phar
+      - posix
+      - simplexml
+      - soap
+      - sockets
+      - sqlite3
+      - sysvmsg
+      - sysvsem
+      - sysvshm
+      - tokenizer
+      - xml
+      - xmlreader
+      - xmlwriter
+      - zip
