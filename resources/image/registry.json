@@ -14,17 +14,17 @@
     "runtime": false,
     "type": "chrome-headless",
     "versions": {
-      "deprecated": [
-        "80",
-        "81",
-        "83",
-        "84",
-        "86"
-      ],
+      "deprecated": [],
       "supported": [
+        "120",
         "113",
         "95",
-        "91"
+        "91",
+        "86",
+        "84",
+        "83",
+        "81",
+        "80"
       ],
       "legacy": []
     },
@@ -1237,15 +1237,13 @@
     "runtime": false,
     "type": "varnish",
     "versions": {
-      "deprecated": [
-        "5.2",
-        "6.3",
-        "6.4",
-        "7.1"
-      ],
+      "deprecated": [],
       "supported": [
+        "7.6",
         "7.3",
         "7.2",
+        "7.1",
+        "6.3",
         "6.0"
       ]
     }
