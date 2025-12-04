@@ -629,6 +629,9 @@ grid:
       - pdo_mysql
       - pdo_sqlite
       - sqlite3
+    built-in:
+      - opcache
+      - zendopcache
   "5.6":
     available:
       - apcu
@@ -682,6 +685,9 @@ grid:
       - pdo_mysql
       - pdo_sqlite
       - sqlite3
+    built-in:
+      - opcache
+      - zendopcache
   "7.0":
     available:
       - amqp
@@ -767,6 +773,9 @@ grid:
       - xmlreader
       - xmlwriter
       - zip
+    built-in:
+      - opcache
+      - zendopcache
   "7.1":
     available:
       - amqp
@@ -855,6 +864,9 @@ grid:
       - xmlreader
       - xmlwriter
       - zip
+    built-in:
+      - opcache
+      - zendopcache
   "7.2":
     available:
       - amqp
@@ -941,6 +953,9 @@ grid:
       - xmlreader
       - xmlwriter
       - zip
+    built-in:
+      - opcache
+      - zendopcache
   "7.3":
     available:
       - amqp
@@ -1031,6 +1046,9 @@ grid:
       - xmlreader
       - xmlwriter
       - zip
+    built-in:
+      - opcache
+      - zendopcache
   "7.4":
     available:
       - amqp
@@ -1119,6 +1137,9 @@ grid:
       - xmlreader
       - xmlwriter
       - zip
+    built-in:
+      - opcache
+      - zendopcache
   "8.0":
     available:
       - amqp
@@ -1202,6 +1223,10 @@ grid:
       - xmlreader
       - xmlwriter
       - zip
+    built-in:
+      - json
+      - opcache
+      - zendopcache
   "8.1":
     available:
       - amqp
@@ -1288,6 +1313,10 @@ grid:
       - xmlreader
       - xmlwriter
       - zip
+    built-in:
+      - json
+      - opcache
+      - zendopcache
   "8.2":
     available:
       - amqp
@@ -1380,6 +1409,10 @@ grid:
       - xmlreader
       - xmlwriter
       - zip
+    built-in:
+      - json
+      - opcache
+      - zendopcache
   "8.3":
     available:
       - amqp
@@ -1472,6 +1505,10 @@ grid:
       - xmlreader
       - xmlwriter
       - zip
+    built-in:
+      - json
+      - opcache
+      - zendopcache
   "8.4":
     available:
       - amqp
@@ -1562,6 +1599,10 @@ grid:
       - xmlreader
       - xmlwriter
       - zip
+    built-in:
+      - json
+      - opcache
+      - zendopcache
   "8.5":
     available:
       - apcu
@@ -1641,3 +1682,7 @@ grid:
       - xmlreader
       - xmlwriter
       - zip
+    built-in:
+      - json
+      - opcache
+      - zendopcache
