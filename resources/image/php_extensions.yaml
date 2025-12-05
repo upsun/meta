@@ -578,6 +578,8 @@ grid:
       - pdo_sqlite
       - sqlite3
       - zendopcache
+    built-in:
+      - zendopcache
   "5.5":
     available:
       - apcu
