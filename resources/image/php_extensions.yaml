@@ -573,13 +573,13 @@ grid:
       - mysql
       - mysqli
       - mysqlnd
+      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
       - sqlite3
-      - zendopcache
     built-in:
-      - zendopcache
+      - opcache
   "5.5":
     available:
       - apcu
@@ -633,7 +633,6 @@ grid:
       - sqlite3
     built-in:
       - opcache
-      - zendopcache
   "5.6":
     available:
       - apcu
@@ -689,7 +688,6 @@ grid:
       - sqlite3
     built-in:
       - opcache
-      - zendopcache
   "7.0":
     available:
       - amqp
@@ -777,7 +775,6 @@ grid:
       - zip
     built-in:
       - opcache
-      - zendopcache
   "7.1":
     available:
       - amqp
@@ -868,7 +865,6 @@ grid:
       - zip
     built-in:
       - opcache
-      - zendopcache
   "7.2":
     available:
       - amqp
@@ -957,7 +953,6 @@ grid:
       - zip
     built-in:
       - opcache
-      - zendopcache
   "7.3":
     available:
       - amqp
@@ -1050,7 +1045,6 @@ grid:
       - zip
     built-in:
       - opcache
-      - zendopcache
   "7.4":
     available:
       - amqp
@@ -1141,7 +1135,6 @@ grid:
       - zip
     built-in:
       - opcache
-      - zendopcache
   "8.0":
     available:
       - amqp
@@ -1228,7 +1221,6 @@ grid:
     built-in:
       - json
       - opcache
-      - zendopcache
   "8.1":
     available:
       - amqp
@@ -1318,7 +1310,6 @@ grid:
     built-in:
       - json
       - opcache
-      - zendopcache
   "8.2":
     available:
       - amqp
@@ -1414,7 +1405,6 @@ grid:
     built-in:
       - json
       - opcache
-      - zendopcache
   "8.3":
     available:
       - amqp
@@ -1510,7 +1500,6 @@ grid:
     built-in:
       - json
       - opcache
-      - zendopcache
   "8.4":
     available:
       - amqp
@@ -1604,7 +1593,6 @@ grid:
     built-in:
       - json
       - opcache
-      - zendopcache
   "8.5":
     available:
       - apcu
@@ -1687,4 +1675,3 @@ grid:
     built-in:
       - json
       - opcache
-      - zendopcache
