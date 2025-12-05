@@ -1219,6 +1219,8 @@ grid:
     built-in:
       - json
       - opcache
+    with-webp:
+      - imagick
   "8.1":
     available:
       - amqp
@@ -1307,6 +1309,8 @@ grid:
     built-in:
       - json
       - opcache
+    with-webp:
+      - imagick
   "8.2":
     available:
       - amqp
@@ -1401,6 +1405,8 @@ grid:
     built-in:
       - json
       - opcache
+    with-webp:
+      - imagick
   "8.3":
     available:
       - amqp
@@ -1495,6 +1501,8 @@ grid:
     built-in:
       - json
       - opcache
+    with-webp:
+      - imagick
   "8.4":
     available:
       - amqp
@@ -1587,6 +1595,8 @@ grid:
     built-in:
       - json
       - opcache
+    with-webp:
+      - imagick
   "8.5":
     available:
       - apcu
@@ -1669,3 +1679,5 @@ grid:
     built-in:
       - json
       - opcache
+    with-webp:
+      - imagick
