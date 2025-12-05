@@ -579,7 +579,7 @@ grid:
       - pdo_sqlite
       - sqlite3
     built-in:
-      - opcache
+      - json
   "5.5":
     available:
       - apcu
@@ -591,7 +591,6 @@ grid:
       - imagick
       - imap
       - interbase
-      - json
       - ldap
       - memcache
       - memcached
@@ -626,12 +625,12 @@ grid:
       - mysql
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
       - sqlite3
     built-in:
+      - json
       - opcache
   "5.6":
     available:
@@ -681,12 +680,12 @@ grid:
       - mysql
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
       - sqlite3
     built-in:
+      - json
       - opcache
   "7.0":
     available:
@@ -755,7 +754,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -774,6 +772,7 @@ grid:
       - xmlwriter
       - zip
     built-in:
+      - json
       - opcache
   "7.1":
     available:
@@ -845,7 +844,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -864,6 +862,7 @@ grid:
       - xmlwriter
       - zip
     built-in:
+      - json
       - opcache
   "7.2":
     available:
@@ -933,7 +932,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -952,6 +950,7 @@ grid:
       - xmlwriter
       - zip
     built-in:
+      - json
       - opcache
   "7.3":
     available:
@@ -1025,7 +1024,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -1044,6 +1042,7 @@ grid:
       - xmlwriter
       - zip
     built-in:
+      - json
       - opcache
   "7.4":
     available:
@@ -1115,7 +1114,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -1134,6 +1132,7 @@ grid:
       - xmlwriter
       - zip
     built-in:
+      - json
       - opcache
   "8.0":
     available:
@@ -1200,7 +1199,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -1289,7 +1287,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -1384,7 +1381,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -1479,7 +1475,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
@@ -1572,7 +1567,6 @@ grid:
       - mbstring
       - mysqli
       - mysqlnd
-      - opcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
