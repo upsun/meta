@@ -10,6 +10,7 @@ import { config } from './config/env.config.js';
 // Import routes - SINGLE SOURCE OF TRUTH
 import { imageRouter } from './routes/image.routes.js';
 import { regionRouter } from './routes/region.routes.js';
+import { extensionRouter } from './routes/extension.routes.js';
 
 // ESM equivalent of __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -21,6 +22,9 @@ const serverLogger = logger.child({ component: 'Server' });
 // Initialize Express app
 const app: Express = express();
 const PORT = config.server.PORT;
+
+// Disable ETag to avoid 304 on dynamic content negotiation (e.g., YAML preview in docs)
+app.set('etag', false);
 
 // Middleware
 app.use(httpLogger());
@@ -34,6 +38,7 @@ app.use(express.json());
 // ========================================
 imageRouter.registerToExpress(app);
 regionRouter.registerToExpress(app);
+extensionRouter.registerToExpress(app);
 
 // ========================================
 // AUTO-GENERATE OPENAPI SPEC
@@ -91,17 +96,24 @@ const regionSpec = regionRouter.generateOpenApiSpec({
   version: '1.0.0'
 });
 
+const extensionSpec = extensionRouter.generateOpenApiSpec({
+  title: 'Extensions',
+  version: '1.0.0'
+});
+
 // Merge paths from both specs
 const openApiSpec = {
   ...imageSpec,
   paths: {
     ...imageSpec.paths,
-    ...regionSpec.paths
+    ...regionSpec.paths,
+    ...extensionSpec.paths
   },
   components: {
     schemas: {
       ...(imageSpec.components?.schemas || {}),
-      ...(regionSpec.components?.schemas || {})
+      ...(regionSpec.components?.schemas || {}),
+      ...(extensionSpec.components?.schemas || {})
     }
   }
 };
