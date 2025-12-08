@@ -33,10 +33,10 @@ const PhpExtensionsSchema = z.record(
 
 export const extensionRouter = new ApiRouter();
 
-// GET /extension - full YAML content
+// GET /extension/php - full YAML content
 extensionRouter.route({
   method: 'get',
-  path: '/extension',
+  path: '/extension/php',
   summary: 'Get all PHP extensions (YAML)',
   description: `
 Returns the full content of the PHP extensions registry YAML.
@@ -46,7 +46,7 @@ Source file: \`resources/extension/php_extensions.yaml\`
 Example:
 
 \`\`\`bash
-GET /extension
+GET /extension/php
 \`\`\`
 
 Example response (truncated):
@@ -136,10 +136,10 @@ function toGrid(data: any) {
   });
 }
 
-// GET /extension/grid - grouped for grid
+// GET /extension/php/grid - grouped for grid
 extensionRouter.route({
   method: 'get',
-  path: '/extension/grid',
+  path: '/extension/php/grid',
   summary: 'Get extensions grouped for grid view',
   description: `
 Returns the raw \`grid\` node from \`php_extensions.yaml\` (preserves nested structure).
@@ -147,7 +147,7 @@ Returns the raw \`grid\` node from \`php_extensions.yaml\` (preserves nested str
 Example:
 
 \`\`\`bash
-GET /extension/grid
+GET /extension/php/grid
 \`\`\`
 
 Supports content negotiation:
@@ -215,10 +215,10 @@ grid:
   }
 });
 
-// GET /extension/grid/:version - grid filtered by version
+// GET /extension/php/grid/:version - grid filtered by version
 extensionRouter.route({
   method: 'get',
-  path: '/extension/grid/:version',
+  path: '/extension/php/grid/:version',
   summary: 'Get grid entries for a specific version',
   description: `
 Filter grid results by version key (e.g., \`8.2\`).
@@ -227,7 +227,7 @@ Data is read from the \`grid\` root node in \`php_extensions.yaml\`.
 Example:
 
 \`\`\`bash
-GET /extension/grid/8.2
+GET /extension/php/grid/8.2
 \`\`\`
 
 Supports content negotiation:
@@ -314,10 +314,10 @@ Example response (truncated):
   }
 });
 
-// GET /extension/grid/:version/:type - specific extension group for a version
+// GET /extension/php/grid/:version/:type - specific extension group for a version
 extensionRouter.route({
   method: 'get',
-  path: '/extension/grid/:version/:type',
+  path: '/extension/php/grid/:version/:type',
   summary: 'Get a specific extension group for a version',
   description: `
 Filter grid results by version **and** group type (\`available\`, \`default\`, \`built-in\`, \`with-webp\`).
@@ -326,7 +326,7 @@ Data is read from the \`grid\` root node in \`php_extensions.yaml\`.
 Example:
 
 \`\`\`bash
-GET /extension/grid/8.2/available
+GET /extension/php/grid/8.2/available
 \`\`\`
 
 Supports content negotiation:

@@ -60,19 +60,19 @@ GET /region/{regionId}
 
 ### Get all PHP extensions (raw YAML content)
 ```bash
-GET /extension
+GET /extension/php
 ```
 
 ### Get extensions grouped for grid view
 Returns entries shaped as `{ runtime, service, version, extensions[] }`.
 ```bash
-GET /extension/grid
+GET /extension/php/grid
 ```
 
 ### Get extensions for a specific service
 Example for `dedicated` service:
 ```bash
-GET /extension/grid/dedicated
+GET /extension/php/grid/dedicated
 ```
 If the service does not exist, returns `404` with `availableServices`.
 
