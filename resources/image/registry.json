@@ -25,7 +25,7 @@
         "is_eol": false,
         "manifest": {
           "scripts": {
-            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+            "configuration": "service.endpoints = { \"http\": { \"scheme\": \"http\", \"port\": 9222, \"default\": true } };"
           },
           "endpoints": {
             "http": {
@@ -51,7 +51,7 @@
         "is_eol": false,
         "manifest": {
           "scripts": {
-            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+            "configuration": "service.endpoints = { \"http\": { \"scheme\": \"http\", \"port\": 9222, \"default\": true } };"
           },
           "endpoints": {
             "http": {
@@ -77,7 +77,7 @@
         "is_eol": true,
         "manifest": {
           "scripts": {
-            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+            "configuration": "service.endpoints = { \"http\": { \"scheme\": \"http\", \"port\": 9222, \"default\": true } };"
           },
           "endpoints": {
             "http": {
@@ -103,7 +103,7 @@
         "is_eol": true,
         "manifest": {
           "scripts": {
-            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+            "configuration": "service.endpoints = { \"http\": { \"scheme\": \"http\", \"port\": 9222, \"default\": true } };"
           },
           "endpoints": {
             "http": {
@@ -129,7 +129,7 @@
         "is_eol": true,
         "manifest": {
           "scripts": {
-            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+            "configuration": "service.endpoints = { \"http\": { \"scheme\": \"http\", \"port\": 9222, \"default\": true } };"
           },
           "endpoints": {
             "http": {
@@ -154,7 +154,7 @@
         "is_eol": true,
         "manifest": {
           "scripts": {
-            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+            "configuration": "service.endpoints = { \"http\": { \"scheme\": \"http\", \"port\": 9222, \"default\": true } };"
           },
           "endpoints": {
             "http": {
@@ -179,7 +179,7 @@
         "is_eol": true,
         "manifest": {
           "scripts": {
-            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+            "configuration": "service.endpoints = { \"http\": { \"scheme\": \"http\", \"port\": 9222, \"default\": true } };"
           },
           "endpoints": {
             "http": {
@@ -204,7 +204,7 @@
         "is_eol": true,
         "manifest": {
           "scripts": {
-            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+            "configuration": "service.endpoints = { \"http\": { \"scheme\": \"http\", \"port\": 9222, \"default\": true } };"
           },
           "endpoints": {
             "http": {
@@ -229,7 +229,7 @@
         "is_eol": true,
         "manifest": {
           "scripts": {
-            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+            "configuration": "service.endpoints = { \"http\": { \"scheme\": \"http\", \"port\": 9222, \"default\": true } };"
           },
           "endpoints": {
             "http": {
@@ -254,7 +254,7 @@
         "is_eol": true,
         "manifest": {
           "scripts": {
-            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+            "configuration": "service.endpoints = { \"http\": { \"scheme\": \"http\", \"port\": 9222, \"default\": true } };"
           },
           "endpoints": {
             "http": {
@@ -6510,7 +6510,7 @@
         "is_eol": false,
         "manifest": {
           "scripts": {
-            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 3000,\n            \"default\": true\n        }\n    };\n"
+            "configuration": "service.endpoints = { \"http\": { \"scheme\": \"http\", \"port\": 3000, \"default\": true } };"
           },
           "endpoints": {
             "http": {
