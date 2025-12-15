@@ -24,49 +24,20 @@
         "is_eoas": false,
         "is_eol": false,
         "manifest": {
-          "name": "chrome-headless",
-          "type": "debian",
-          "runtime": {
-            "platformsh": {
-              "scripts": {
-                "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
-              },
-              "endpoints": {
-                "http": {
-                  "port": 9222,
-                  "scheme": "http"
-                }
-              },
-              "supports_ha": true,
-              "min_cpu_size": 0.1,
-              "min_mem_size": 64,
-              "characteristic": "HIGH_CPU",
-              "supports_horizontal_scaling": true
+          "scripts": {
+            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+          },
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
             }
           },
-          "version": "120",
-          "packages": {
-            "locales": ">=0",
-            "fonts-noto": ">= 0",
-            "fonts-liberation": ">= 0",
-            "fontconfig-config": ">= 0",
-            "fonts-noto-color-emoji": ">= 0~0",
-            "platformsh-chromium-headless": ">= 120, << 121",
-            "platformsh-service-agent-chrome-headless": ">= 0"
-          },
-          "repositories": {
-            "debian": "debian:bookworm",
-            "release-archive": {
-              "url": "s3://release-archive.platform.sh.s3.amazonaws.com/",
-              "components": [
-                "main"
-              ],
-              "distribution": "bookworm",
-              "trusted_keys": [
-                "2BF1 DFBA 97CF C3A7 05F8  E56A 3282 46B0 878C F90F"
-              ]
-            }
-          }
+          "supports_ha": true,
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "characteristic": "HIGH_CPU",
+          "supports_horizontal_scaling": true
         }
       },
       {
@@ -79,48 +50,20 @@
         "is_eoas": false,
         "is_eol": false,
         "manifest": {
-          "name": "chrome-headless",
-          "type": "debian",
-          "runtime": {
-            "platformsh": {
-              "scripts": {
-                "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
-              },
-              "endpoints": {
-                "http": {
-                  "port": 9222,
-                  "scheme": "http"
-                }
-              },
-              "supports_ha": true,
-              "min_cpu_size": 0.1,
-              "min_mem_size": 64,
-              "characteristic": "HIGH_CPU",
-              "supports_horizontal_scaling": true
+          "scripts": {
+            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+          },
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
             }
           },
-          "version": "113",
-          "packages": {
-            "fonts-noto": ">= 0",
-            "fonts-liberation": ">= 0",
-            "fontconfig-config": ">= 0",
-            "fonts-noto-color-emoji": ">= 0~0",
-            "platformsh-chromium-headless": ">= 113, << 114",
-            "platformsh-service-agent-chrome-headless": ">= 0"
-          },
-          "repositories": {
-            "debian": "debian:bullseye",
-            "release-archive": {
-              "url": "s3://release-archive.platform.sh.s3.amazonaws.com/",
-              "components": [
-                "main"
-              ],
-              "distribution": "bullseye",
-              "trusted_keys": [
-                "2BF1 DFBA 97CF C3A7 05F8  E56A 3282 46B0 878C F90F"
-              ]
-            }
-          }
+          "supports_ha": true,
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "characteristic": "HIGH_CPU",
+          "supports_horizontal_scaling": true
         }
       },
       {
@@ -133,48 +76,20 @@
         "is_eoas": true,
         "is_eol": true,
         "manifest": {
-          "name": "chrome-headless",
-          "type": "debian",
-          "runtime": {
-            "platformsh": {
-              "scripts": {
-                "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
-              },
-              "endpoints": {
-                "http": {
-                  "port": 9222,
-                  "scheme": "http"
-                }
-              },
-              "supports_ha": true,
-              "min_cpu_size": 0.1,
-              "min_mem_size": 64,
-              "characteristic": "HIGH_CPU",
-              "supports_horizontal_scaling": true
+          "scripts": {
+            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+          },
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
             }
           },
-          "version": "95",
-          "packages": {
-            "fonts-noto": ">= 0",
-            "fonts-liberation": ">= 0",
-            "fontconfig-config": ">= 0",
-            "fonts-noto-color-emoji": ">= 0~0",
-            "platformsh-chromium-headless": ">= 95, << 96",
-            "platformsh-service-agent-chrome-headless": ">= 0"
-          },
-          "repositories": {
-            "debian": "debian:buster",
-            "release-archive": {
-              "url": "s3://release-archive.platform.sh.s3.amazonaws.com/",
-              "components": [
-                "main"
-              ],
-              "distribution": "buster",
-              "trusted_keys": [
-                "2BF1 DFBA 97CF C3A7 05F8  E56A 3282 46B0 878C F90F"
-              ]
-            }
-          }
+          "supports_ha": true,
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "characteristic": "HIGH_CPU",
+          "supports_horizontal_scaling": true
         }
       },
       {
@@ -187,48 +102,20 @@
         "is_eoas": true,
         "is_eol": true,
         "manifest": {
-          "name": "chrome-headless",
-          "type": "debian",
-          "runtime": {
-            "platformsh": {
-              "scripts": {
-                "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
-              },
-              "endpoints": {
-                "http": {
-                  "port": 9222,
-                  "scheme": "http"
-                }
-              },
-              "supports_ha": true,
-              "min_cpu_size": 0.1,
-              "min_mem_size": 64,
-              "characteristic": "HIGH_CPU",
-              "supports_horizontal_scaling": true
+          "scripts": {
+            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+          },
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
             }
           },
-          "version": "91",
-          "packages": {
-            "fonts-noto": ">= 0",
-            "fonts-liberation": ">= 0",
-            "fontconfig-config": ">= 0",
-            "fonts-noto-color-emoji": ">= 0~0",
-            "platformsh-chromium-headless": ">= 91, << 92",
-            "platformsh-service-agent-chrome-headless": ">= 0"
-          },
-          "repositories": {
-            "debian": "debian:buster",
-            "release-archive": {
-              "url": "s3://release-archive.platform.sh.s3.amazonaws.com/",
-              "components": [
-                "main"
-              ],
-              "distribution": "buster",
-              "trusted_keys": [
-                "2BF1 DFBA 97CF C3A7 05F8  E56A 3282 46B0 878C F90F"
-              ]
-            }
-          }
+          "supports_ha": true,
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "characteristic": "HIGH_CPU",
+          "supports_horizontal_scaling": true
         }
       },
       {
@@ -241,46 +128,19 @@
         "is_eoas": true,
         "is_eol": true,
         "manifest": {
-          "name": "chrome-headless",
-          "type": "debian",
-          "runtime": {
-            "platformsh": {
-              "scripts": {
-                "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
-              },
-              "endpoints": {
-                "http": {
-                  "port": 9222,
-                  "scheme": "http"
-                }
-              },
-              "supports_ha": true,
-              "min_cpu_size": 0.1,
-              "min_mem_size": 64,
-              "characteristic": "HIGH_CPU"
+          "scripts": {
+            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+          },
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
             }
           },
-          "version": "86",
-          "packages": {
-            "fonts-noto": ">= 0",
-            "fonts-liberation": ">= 0",
-            "platformsh-agent": ">= 5~, << 6",
-            "fontconfig-config": ">= 0",
-            "platformsh-chromium-headless": ">= 86, << 87"
-          },
-          "repositories": {
-            "debian": "debian:stretch",
-            "release-archive": {
-              "url": "s3://release-archive.platform.sh.s3.amazonaws.com/",
-              "components": [
-                "main"
-              ],
-              "distribution": "stretch",
-              "trusted_keys": [
-                "2BF1 DFBA 97CF C3A7 05F8  E56A 3282 46B0 878C F90F"
-              ]
-            }
-          }
+          "supports_ha": true,
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "characteristic": "HIGH_CPU"
         }
       },
       {
@@ -293,46 +153,19 @@
         "is_eoas": true,
         "is_eol": true,
         "manifest": {
-          "name": "chrome-headless",
-          "type": "debian",
-          "runtime": {
-            "platformsh": {
-              "scripts": {
-                "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
-              },
-              "endpoints": {
-                "http": {
-                  "port": 9222,
-                  "scheme": "http"
-                }
-              },
-              "supports_ha": true,
-              "min_cpu_size": 0.1,
-              "min_mem_size": 64,
-              "characteristic": "HIGH_CPU"
+          "scripts": {
+            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+          },
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
             }
           },
-          "version": "84",
-          "packages": {
-            "fonts-noto": ">= 0",
-            "fonts-liberation": ">= 0",
-            "platformsh-agent": ">= 5~, << 6",
-            "fontconfig-config": ">= 0",
-            "platformsh-chromium-headless": ">= 84, << 85"
-          },
-          "repositories": {
-            "debian": "debian:stretch",
-            "release-archive": {
-              "url": "s3://release-archive.platform.sh.s3.amazonaws.com/",
-              "components": [
-                "main"
-              ],
-              "distribution": "stretch",
-              "trusted_keys": [
-                "2BF1 DFBA 97CF C3A7 05F8  E56A 3282 46B0 878C F90F"
-              ]
-            }
-          }
+          "supports_ha": true,
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "characteristic": "HIGH_CPU"
         }
       },
       {
@@ -345,46 +178,19 @@
         "is_eoas": true,
         "is_eol": true,
         "manifest": {
-          "name": "chrome-headless",
-          "type": "debian",
-          "runtime": {
-            "platformsh": {
-              "scripts": {
-                "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
-              },
-              "endpoints": {
-                "http": {
-                  "port": 9222,
-                  "scheme": "http"
-                }
-              },
-              "supports_ha": true,
-              "min_cpu_size": 0.1,
-              "min_mem_size": 64,
-              "characteristic": "HIGH_CPU"
+          "scripts": {
+            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+          },
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
             }
           },
-          "version": "83",
-          "packages": {
-            "fonts-noto": ">= 0",
-            "fonts-liberation": ">= 0",
-            "platformsh-agent": ">= 5~, << 6",
-            "fontconfig-config": ">= 0",
-            "platformsh-chromium-headless": ">= 83, << 84"
-          },
-          "repositories": {
-            "debian": "debian:stretch",
-            "release-archive": {
-              "url": "s3://release-archive.platform.sh.s3.amazonaws.com/",
-              "components": [
-                "main"
-              ],
-              "distribution": "stretch",
-              "trusted_keys": [
-                "2BF1 DFBA 97CF C3A7 05F8  E56A 3282 46B0 878C F90F"
-              ]
-            }
-          }
+          "supports_ha": true,
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "characteristic": "HIGH_CPU"
         }
       },
       {
@@ -397,46 +203,19 @@
         "is_eoas": true,
         "is_eol": true,
         "manifest": {
-          "name": "chrome-headless",
-          "type": "debian",
-          "runtime": {
-            "platformsh": {
-              "scripts": {
-                "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
-              },
-              "endpoints": {
-                "http": {
-                  "port": 9222,
-                  "scheme": "http"
-                }
-              },
-              "supports_ha": true,
-              "min_cpu_size": 0.1,
-              "min_mem_size": 64,
-              "characteristic": "HIGH_CPU"
+          "scripts": {
+            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+          },
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
             }
           },
-          "version": "81",
-          "packages": {
-            "fonts-noto": ">= 0",
-            "fonts-liberation": ">= 0",
-            "platformsh-agent": ">= 5~, << 6",
-            "fontconfig-config": ">= 0",
-            "platformsh-chromium-headless": ">= 81, << 82"
-          },
-          "repositories": {
-            "debian": "debian:stretch",
-            "release-archive": {
-              "url": "s3://release-archive.platform.sh.s3.amazonaws.com/",
-              "components": [
-                "main"
-              ],
-              "distribution": "stretch",
-              "trusted_keys": [
-                "2BF1 DFBA 97CF C3A7 05F8  E56A 3282 46B0 878C F90F"
-              ]
-            }
-          }
+          "supports_ha": true,
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "characteristic": "HIGH_CPU"
         }
       },
       {
@@ -449,46 +228,19 @@
         "is_eoas": true,
         "is_eol": true,
         "manifest": {
-          "name": "chrome-headless",
-          "type": "debian",
-          "runtime": {
-            "platformsh": {
-              "scripts": {
-                "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
-              },
-              "endpoints": {
-                "http": {
-                  "port": 9222,
-                  "scheme": "http"
-                }
-              },
-              "supports_ha": true,
-              "min_cpu_size": 0.1,
-              "min_mem_size": 64,
-              "characteristic": "HIGH_CPU"
+          "scripts": {
+            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+          },
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
             }
           },
-          "version": "80",
-          "packages": {
-            "fonts-noto": ">= 0",
-            "fonts-liberation": ">= 0",
-            "platformsh-agent": ">= 5~, << 6",
-            "fontconfig-config": ">= 0",
-            "platformsh-chromium-headless": ">= 80, << 81"
-          },
-          "repositories": {
-            "debian": "debian:stretch",
-            "release-archive": {
-              "url": "s3://release-archive.platform.sh.s3.amazonaws.com/",
-              "components": [
-                "main"
-              ],
-              "distribution": "stretch",
-              "trusted_keys": [
-                "2BF1 DFBA 97CF C3A7 05F8  E56A 3282 46B0 878C F90F"
-              ]
-            }
-          }
+          "supports_ha": true,
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "characteristic": "HIGH_CPU"
         }
       },
       {
@@ -501,46 +253,19 @@
         "is_eoas": true,
         "is_eol": true,
         "manifest": {
-          "name": "chrome-headless",
-          "type": "debian",
-          "runtime": {
-            "platformsh": {
-              "scripts": {
-                "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
-              },
-              "endpoints": {
-                "http": {
-                  "port": 9222,
-                  "scheme": "http"
-                }
-              },
-              "supports_ha": true,
-              "min_cpu_size": 0.1,
-              "min_mem_size": 64,
-              "characteristic": "HIGH_CPU"
+          "scripts": {
+            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 9222,\n            \"default\": true\n        }\n    };\n"
+          },
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
             }
           },
-          "version": "73",
-          "packages": {
-            "fonts-noto": ">= 0",
-            "fonts-liberation": ">= 0",
-            "platformsh-agent": ">= 5~, << 6",
-            "fontconfig-config": ">= 0",
-            "platformsh-chromium-headless": ">= 73, << 74"
-          },
-          "repositories": {
-            "debian": "debian:stretch",
-            "release-archive": {
-              "url": "s3://release-archive.platform.sh.s3.amazonaws.com/",
-              "components": [
-                "main"
-              ],
-              "distribution": "stretch",
-              "trusted_keys": [
-                "2BF1 DFBA 97CF C3A7 05F8  E56A 3282 46B0 878C F90F"
-              ]
-            }
-          }
+          "supports_ha": true,
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "characteristic": "HIGH_CPU"
         }
       }
     ],
@@ -581,82 +306,75 @@
         "is_eoas": false,
         "is_eol": false,
         "manifest": {
-          "name": "clickhouse",
-          "type": "debian",
-          "runtime": {
-            "platformsh": {
-              "endpoints": {
-                "clickhouse": {
-                  "port": 9000,
-                  "schema": "clickhouse"
-                },
-                "clickhouse-http": {
-                  "port": 8123,
-                  "schema": "http"
+          "endpoints": {
+            "clickhouse": {
+              "port": 9000,
+              "schema": "clickhouse"
+            },
+            "clickhouse-http": {
+              "port": 8123,
+              "schema": "http"
+            }
+          },
+          "supports_ha": true,
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "characteristic": "HIGH_MEMORY",
+          "supports_state": true,
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "configuration_schema": {
+            "type": "object",
+            "properties": {
+              "users_d": {
+                "type": "string"
+              },
+              "config_d": {
+                "type": "string"
+              },
+              "databases": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[0-9a-z_]+$",
+                  "maxLength": 63
                 }
               },
-              "supports_ha": true,
-              "min_cpu_size": 0.1,
-              "min_mem_size": 448,
-              "min_disk_size": 256,
-              "allow_scale_up": true,
-              "characteristic": "HIGH_MEMORY",
-              "supports_state": true,
-              "allow_scale_down": true,
-              "storage_mount_point": "/mnt",
-              "configuration_schema": {
+              "endpoints": {
                 "type": "object",
-                "properties": {
-                  "users_d": {
-                    "type": "string"
-                  },
-                  "config_d": {
-                    "type": "string"
-                  },
-                  "databases": {
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "pattern": "^[0-9a-z_]+$",
-                      "maxLength": 63
-                    }
-                  },
-                  "endpoints": {
+                "patternProperties": {
+                  "^[0-9a-z_]+(?:-replica)?$": {
                     "type": "object",
-                    "patternProperties": {
-                      "^[0-9a-z_]+(?:-replica)?$": {
+                    "required": [
+                      "privileges"
+                    ],
+                    "properties": {
+                      "port": {
+                        "enum": [
+                          8123,
+                          9000
+                        ]
+                      },
+                      "privileges": {
                         "type": "object",
-                        "required": [
-                          "privileges"
-                        ],
-                        "properties": {
-                          "port": {
+                        "patternProperties": {
+                          "^[0-9a-z_]+$": {
                             "enum": [
-                              8123,
-                              9000
-                            ]
-                          },
-                          "privileges": {
-                            "type": "object",
-                            "patternProperties": {
-                              "^[0-9a-z_]+$": {
-                                "enum": [
-                                  "ro",
-                                  "rw",
-                                  "admin"
-                                ],
-                                "type": "string"
-                              }
-                            },
-                            "additionalProperties": false
-                          },
-                          "default_database": {
-                            "type": "string",
-                            "pattern": "^[0-9a-z_]+$",
-                            "maxLength": 63
+                              "ro",
+                              "rw",
+                              "admin"
+                            ],
+                            "type": "string"
                           }
                         },
                         "additionalProperties": false
+                      },
+                      "default_database": {
+                        "type": "string",
+                        "pattern": "^[0-9a-z_]+$",
+                        "maxLength": 63
                       }
                     },
                     "additionalProperties": false
@@ -664,20 +382,8 @@
                 },
                 "additionalProperties": false
               }
-            }
-          },
-          "version": "25.8",
-          "packages": {
-            "platformsh-agent": ">= 5, << 6",
-            "clickhouse-client": ">= 25.8, << 25.9",
-            "clickhouse-server": ">= 25.8, << 25.9",
-            "clickhouse-common-static": ">= 25.8, << 25.9",
-            "platformsh-service-agent-clickhouse": ">= 0.0.5"
-          },
-          "repositories": {
-            "debian": "debian:trixie",
-            "clickhouse": "clickhouse:stable",
-            "release-archive": "release-archive:trixie"
+            },
+            "additionalProperties": false
           }
         }
       },
@@ -691,82 +397,75 @@
         "is_eoas": false,
         "is_eol": false,
         "manifest": {
-          "name": "clickhouse",
-          "type": "debian",
-          "runtime": {
-            "platformsh": {
-              "endpoints": {
-                "clickhouse": {
-                  "port": 9000,
-                  "schema": "clickhouse"
-                },
-                "clickhouse-http": {
-                  "port": 8123,
-                  "schema": "http"
+          "endpoints": {
+            "clickhouse": {
+              "port": 9000,
+              "schema": "clickhouse"
+            },
+            "clickhouse-http": {
+              "port": 8123,
+              "schema": "http"
+            }
+          },
+          "supports_ha": true,
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "characteristic": "HIGH_MEMORY",
+          "supports_state": true,
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "configuration_schema": {
+            "type": "object",
+            "properties": {
+              "users_d": {
+                "type": "string"
+              },
+              "config_d": {
+                "type": "string"
+              },
+              "databases": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[0-9a-z_]+$",
+                  "maxLength": 63
                 }
               },
-              "supports_ha": true,
-              "min_cpu_size": 0.1,
-              "min_mem_size": 448,
-              "min_disk_size": 256,
-              "allow_scale_up": true,
-              "characteristic": "HIGH_MEMORY",
-              "supports_state": true,
-              "allow_scale_down": true,
-              "storage_mount_point": "/mnt",
-              "configuration_schema": {
+              "endpoints": {
                 "type": "object",
-                "properties": {
-                  "users_d": {
-                    "type": "string"
-                  },
-                  "config_d": {
-                    "type": "string"
-                  },
-                  "databases": {
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "pattern": "^[0-9a-z_]+$",
-                      "maxLength": 63
-                    }
-                  },
-                  "endpoints": {
+                "patternProperties": {
+                  "^[0-9a-z_]+(?:-replica)?$": {
                     "type": "object",
-                    "patternProperties": {
-                      "^[0-9a-z_]+(?:-replica)?$": {
+                    "required": [
+                      "privileges"
+                    ],
+                    "properties": {
+                      "port": {
+                        "enum": [
+                          8123,
+                          9000
+                        ]
+                      },
+                      "privileges": {
                         "type": "object",
-                        "required": [
-                          "privileges"
-                        ],
-                        "properties": {
-                          "port": {
+                        "patternProperties": {
+                          "^[0-9a-z_]+$": {
                             "enum": [
-                              8123,
-                              9000
-                            ]
-                          },
-                          "privileges": {
-                            "type": "object",
-                            "patternProperties": {
-                              "^[0-9a-z_]+$": {
-                                "enum": [
-                                  "ro",
-                                  "rw",
-                                  "admin"
-                                ],
-                                "type": "string"
-                              }
-                            },
-                            "additionalProperties": false
-                          },
-                          "default_database": {
-                            "type": "string",
-                            "pattern": "^[0-9a-z_]+$",
-                            "maxLength": 63
+                              "ro",
+                              "rw",
+                              "admin"
+                            ],
+                            "type": "string"
                           }
                         },
                         "additionalProperties": false
+                      },
+                      "default_database": {
+                        "type": "string",
+                        "pattern": "^[0-9a-z_]+$",
+                        "maxLength": 63
                       }
                     },
                     "additionalProperties": false
@@ -774,20 +473,8 @@
                 },
                 "additionalProperties": false
               }
-            }
-          },
-          "version": "25.3",
-          "packages": {
-            "platformsh-agent": ">= 5, << 6",
-            "clickhouse-client": ">= 25.3, << 25.4",
-            "clickhouse-server": ">= 25.3, << 25.4",
-            "clickhouse-common-static": ">= 25.3, << 25.4",
-            "platformsh-service-agent-clickhouse": ">= 0.0.5"
-          },
-          "repositories": {
-            "debian": "debian:bookworm",
-            "clickhouse": "clickhouse:stable",
-            "release-archive": "release-archive:bookworm"
+            },
+            "additionalProperties": false
           }
         }
       },
@@ -801,82 +488,75 @@
         "is_eoas": true,
         "is_eol": false,
         "manifest": {
-          "name": "clickhouse",
-          "type": "debian",
-          "runtime": {
-            "platformsh": {
-              "endpoints": {
-                "clickhouse": {
-                  "port": 9000,
-                  "schema": "clickhouse"
-                },
-                "clickhouse-http": {
-                  "port": 8123,
-                  "schema": "http"
+          "endpoints": {
+            "clickhouse": {
+              "port": 9000,
+              "schema": "clickhouse"
+            },
+            "clickhouse-http": {
+              "port": 8123,
+              "schema": "http"
+            }
+          },
+          "supports_ha": true,
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "characteristic": "HIGH_MEMORY",
+          "supports_state": true,
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "configuration_schema": {
+            "type": "object",
+            "properties": {
+              "users_d": {
+                "type": "string"
+              },
+              "config_d": {
+                "type": "string"
+              },
+              "databases": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[0-9a-z_]+$",
+                  "maxLength": 63
                 }
               },
-              "supports_ha": true,
-              "min_cpu_size": 0.1,
-              "min_mem_size": 448,
-              "min_disk_size": 256,
-              "allow_scale_up": true,
-              "characteristic": "HIGH_MEMORY",
-              "supports_state": true,
-              "allow_scale_down": true,
-              "storage_mount_point": "/mnt",
-              "configuration_schema": {
+              "endpoints": {
                 "type": "object",
-                "properties": {
-                  "users_d": {
-                    "type": "string"
-                  },
-                  "config_d": {
-                    "type": "string"
-                  },
-                  "databases": {
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "pattern": "^[0-9a-z_]+$",
-                      "maxLength": 63
-                    }
-                  },
-                  "endpoints": {
+                "patternProperties": {
+                  "^[0-9a-z_]+(?:-replica)?$": {
                     "type": "object",
-                    "patternProperties": {
-                      "^[0-9a-z_]+(?:-replica)?$": {
+                    "required": [
+                      "privileges"
+                    ],
+                    "properties": {
+                      "port": {
+                        "enum": [
+                          8123,
+                          9000
+                        ]
+                      },
+                      "privileges": {
                         "type": "object",
-                        "required": [
-                          "privileges"
-                        ],
-                        "properties": {
-                          "port": {
+                        "patternProperties": {
+                          "^[0-9a-z_]+$": {
                             "enum": [
-                              8123,
-                              9000
-                            ]
-                          },
-                          "privileges": {
-                            "type": "object",
-                            "patternProperties": {
-                              "^[0-9a-z_]+$": {
-                                "enum": [
-                                  "ro",
-                                  "rw",
-                                  "admin"
-                                ],
-                                "type": "string"
-                              }
-                            },
-                            "additionalProperties": false
-                          },
-                          "default_database": {
-                            "type": "string",
-                            "pattern": "^[0-9a-z_]+$",
-                            "maxLength": 63
+                              "ro",
+                              "rw",
+                              "admin"
+                            ],
+                            "type": "string"
                           }
                         },
                         "additionalProperties": false
+                      },
+                      "default_database": {
+                        "type": "string",
+                        "pattern": "^[0-9a-z_]+$",
+                        "maxLength": 63
                       }
                     },
                     "additionalProperties": false
@@ -884,20 +564,8 @@
                 },
                 "additionalProperties": false
               }
-            }
-          },
-          "version": "24.3",
-          "packages": {
-            "platformsh-agent": ">= 5, << 6",
-            "clickhouse-client": ">= 24.3, << 24.4",
-            "clickhouse-server": ">= 24.3, << 24.4",
-            "clickhouse-common-static": ">= 24.3, << 24.4",
-            "platformsh-service-agent-clickhouse": ">= 0.0.5"
-          },
-          "repositories": {
-            "debian": "debian:bookworm",
-            "clickhouse": "clickhouse:stable",
-            "release-archive": "release-archive:bookworm"
+            },
+            "additionalProperties": false
           }
         }
       },
@@ -911,82 +579,75 @@
         "is_eoas": true,
         "is_eol": false,
         "manifest": {
-          "name": "clickhouse",
-          "type": "debian",
-          "runtime": {
-            "platformsh": {
-              "endpoints": {
-                "clickhouse": {
-                  "port": 9000,
-                  "schema": "clickhouse"
-                },
-                "clickhouse-http": {
-                  "port": 8123,
-                  "schema": "http"
+          "endpoints": {
+            "clickhouse": {
+              "port": 9000,
+              "schema": "clickhouse"
+            },
+            "clickhouse-http": {
+              "port": 8123,
+              "schema": "http"
+            }
+          },
+          "supports_ha": true,
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "characteristic": "HIGH_MEMORY",
+          "supports_state": true,
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "configuration_schema": {
+            "type": "object",
+            "properties": {
+              "users_d": {
+                "type": "string"
+              },
+              "config_d": {
+                "type": "string"
+              },
+              "databases": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[0-9a-z_]+$",
+                  "maxLength": 63
                 }
               },
-              "supports_ha": true,
-              "min_cpu_size": 0.1,
-              "min_mem_size": 448,
-              "min_disk_size": 256,
-              "allow_scale_up": true,
-              "characteristic": "HIGH_MEMORY",
-              "supports_state": true,
-              "allow_scale_down": true,
-              "storage_mount_point": "/mnt",
-              "configuration_schema": {
+              "endpoints": {
                 "type": "object",
-                "properties": {
-                  "users_d": {
-                    "type": "string"
-                  },
-                  "config_d": {
-                    "type": "string"
-                  },
-                  "databases": {
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "pattern": "^[0-9a-z_]+$",
-                      "maxLength": 63
-                    }
-                  },
-                  "endpoints": {
+                "patternProperties": {
+                  "^[0-9a-z_]+(?:-replica)?$": {
                     "type": "object",
-                    "patternProperties": {
-                      "^[0-9a-z_]+(?:-replica)?$": {
+                    "required": [
+                      "privileges"
+                    ],
+                    "properties": {
+                      "port": {
+                        "enum": [
+                          8123,
+                          9000
+                        ]
+                      },
+                      "privileges": {
                         "type": "object",
-                        "required": [
-                          "privileges"
-                        ],
-                        "properties": {
-                          "port": {
+                        "patternProperties": {
+                          "^[0-9a-z_]+$": {
                             "enum": [
-                              8123,
-                              9000
-                            ]
-                          },
-                          "privileges": {
-                            "type": "object",
-                            "patternProperties": {
-                              "^[0-9a-z_]+$": {
-                                "enum": [
-                                  "ro",
-                                  "rw",
-                                  "admin"
-                                ],
-                                "type": "string"
-                              }
-                            },
-                            "additionalProperties": false
-                          },
-                          "default_database": {
-                            "type": "string",
-                            "pattern": "^[0-9a-z_]+$",
-                            "maxLength": 63
+                              "ro",
+                              "rw",
+                              "admin"
+                            ],
+                            "type": "string"
                           }
                         },
                         "additionalProperties": false
+                      },
+                      "default_database": {
+                        "type": "string",
+                        "pattern": "^[0-9a-z_]+$",
+                        "maxLength": 63
                       }
                     },
                     "additionalProperties": false
@@ -994,20 +655,8 @@
                 },
                 "additionalProperties": false
               }
-            }
-          },
-          "version": "23.8",
-          "packages": {
-            "platformsh-agent": ">= 5, << 6",
-            "clickhouse-client": ">= 23.8, << 23.9",
-            "clickhouse-server": ">= 23.8, << 23.9",
-            "clickhouse-common-static": ">= 23.8, << 23.9",
-            "platformsh-service-agent-clickhouse": ">= 0.0.5"
-          },
-          "repositories": {
-            "debian": "debian:bookworm",
-            "clickhouse": "clickhouse:stable",
-            "release-archive": "release-archive:bookworm"
+            },
+            "additionalProperties": false
           }
         }
       }
@@ -6860,85 +6509,20 @@
         "is_eoas": false,
         "is_eol": false,
         "manifest": {
-          "name": "gotenberg",
-          "type": "debian",
-          "runtime": {
-            "platformsh": {
-              "scripts": {
-                "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 3000,\n            \"default\": true\n        }\n    };\n"
-              },
-              "endpoints": {
-                "http": {
-                  "port": 3000,
-                  "scheme": "http"
-                }
-              },
-              "supports_ha": true,
-              "min_cpu_size": 0.2,
-              "min_mem_size": 512,
-              "characteristic": "HIGH_MEMORY",
-              "supports_horizontal_scaling": true
+          "scripts": {
+            "configuration": "service.endpoints = {\n        \"http\": {\n            \"scheme\": \"http\",\n            \"port\": 3000,\n            \"default\": true\n        }\n    };\n"
+          },
+          "endpoints": {
+            "http": {
+              "port": 3000,
+              "scheme": "http"
             }
           },
-          "version": "8",
-          "packages": {
-            "qpdf": ">=0",
-            "gnupg": ">=0",
-            "culmus": ">=0",
-            "python3": ">=0",
-            "chromium": ">=0",
-            "gotenberg": ">= 8.25.0, << 9",
-            "fonts-beng": ">=0",
-            "fonts-telu": ">=0",
-            "fonts-sarai": ">=0",
-            "libreoffice": ">= 0",
-            "fonts-dejavu": ">=0",
-            "fonts-texgyre": ">=0",
-            "fonts-noto-cjk": ">=0",
-            "fonts-noto-core": ">=0",
-            "fonts-noto-mono": ">=0",
-            "fonts-thai-tlwg": ">=0",
-            "fonts-liberation": ">=0",
-            "fonts-lohit-guru": ">=0",
-            "fonts-lohit-knda": ">=0",
-            "fonts-sil-padauk": ">=0",
-            "fonts-wqy-zenhei": ">=0",
-            "platformsh-agent": ">= 5, << 6",
-            "python3-requests": ">=0",
-            "fonts-arphic-ukai": ">=0",
-            "fonts-hosny-amiri": ">=0",
-            "fonts-liberation2": ">=0",
-            "fonts-samyak-gujr": ">=0",
-            "fonts-samyak-mlym": ">=0",
-            "fonts-samyak-taml": ">=0",
-            "fonts-sil-gentium": ">=0",
-            "fonts-arphic-uming": ">=0",
-            "fonts-dejavu-extra": ">=0",
-            "fonts-noto-ui-core": ">=0",
-            "fonts-unfonts-core": ">=0",
-            "fonts-lklug-sinhala": ">=0",
-            "default-jre-headless": ">=0",
-            "fonts-ipafont-gothic": ">=0",
-            "fonts-ipafont-mincho": ">=0",
-            "fonts-linuxlibertine": ">=0",
-            "fonts-sil-abyssinica": ">=0",
-            "fonts-crosextra-caladea": ">=0",
-            "fonts-crosextra-carlito": ">=0",
-            "fonts-sil-gentium-basic": ">=0"
-          },
-          "repositories": {
-            "debian": "debian:bookworm",
-            "release-archive": {
-              "url": "s3://release-archive.platform.sh.s3.amazonaws.com/",
-              "components": [
-                "main"
-              ],
-              "distribution": "bookworm",
-              "trusted_keys": [
-                "2BF1 DFBA 97CF C3A7 05F8  E56A 3282 46B0 878C F90F"
-              ]
-            }
-          }
+          "supports_ha": true,
+          "min_cpu_size": 0.2,
+          "min_mem_size": 512,
+          "characteristic": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
         }
       }
     ],
