@@ -16,7 +16,9 @@
     "versions": {
       "supported": [
         "120",
-        "113",
+        "113"
+      ],
+      "deprecated": [
         "95",
         "91",
         "86",
@@ -25,8 +27,7 @@
         "81",
         "80",
         "73"
-      ],
-      "deprecated": []
+      ]
     },
     "versions-dedicated-gen-3": {
       "deprecated": [],
@@ -39,7 +40,8 @@
         "120",
         "113"
       ],
-      "deprecated": [
+      "deprecated": [],
+      "retired": [
         "95",
         "91",
         "86",
@@ -48,8 +50,7 @@
         "81",
         "80",
         "73"
-      ],
-      "retired": []
+      ]
     }
   },
   "clickhouse": {
