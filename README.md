@@ -34,7 +34,7 @@ A comprehensive interactive API documentation is automatically generated and acc
 - Detailed data schemas
 - Built-in testing tool to explore the API
 
-To access it, start the server and visit `http://localhost:3000/api-docs`.
+To access it, simply start the server and visit the documentation at the indicated address.
 
 ## 🔍 Usage Examples
 
