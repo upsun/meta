@@ -114,7 +114,7 @@ The result is a JSON Schema snippet:
         const versions = Array.isArray((value as any).versions) ? (value as any).versions : [];
 
         versions.forEach((v: any) => {
-          if (!v || typeof v.name !== 'string' || !v.name) {
+          if (!v || v.is_end_of_life || typeof v.name !== 'string' || !v.name) {
             return;
           }
 
@@ -191,7 +191,7 @@ for example: \`["php:7.2", "php:7.3", "nodejs:24"]\`.
         const versions = Array.isArray((value as any).versions) ? (value as any).versions : [];
 
         versions.forEach((v: any) => {
-          if (!v || typeof v.name !== 'string' || !v.name) {
+          if (!v || v.is_end_of_life || typeof v.name !== 'string' || !v.name) {
             return;
           }
 
