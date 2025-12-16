@@ -72,7 +72,7 @@ validationRouter.route({
   path: '/schema/service-versions',
   summary: 'Get list of service versions',
   description: `
-Returns the list of all serivce images and
+Returns the list of all service images and
 their possible versions, derived from \`/image\`.
 
 The result is a JSON Schema snippet:
