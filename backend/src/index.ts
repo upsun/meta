@@ -1,5 +1,6 @@
 import express, { Express, Request, Response } from 'express';
 import path from 'path';
+import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { apiReference } from '@scalar/express-api-reference';
 import { logger } from './utils/index.js';
@@ -11,6 +12,7 @@ import { config } from './config/env.config.js';
 import { imageRouter } from './routes/image.routes.js';
 import { regionRouter } from './routes/region.routes.js';
 import { extensionRouter } from './routes/extension.routes.js';
+import { validationRouter } from './routes/validation.routes.js';
 
 // ESM equivalent of __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -19,6 +21,19 @@ const __dirname = path.dirname(__filename);
 // Create dedicated server logger
 const serverLogger = logger.child({ component: 'Server' });
 
+// Read application version from package.json
+const packageJsonPath = path.join(__dirname, '../package.json');
+let appVersion = '1.0.0';
+try {
+  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
+  if (packageJson.version && typeof packageJson.version === 'string') {
+    appVersion = packageJson.version;
+  }
+} catch {
+  // Fallback: keep default appVersion
+  console.log('Could not read version from package.json, using default 1.0.0');
+}
+console.log(`Starting Upsun Registry API - Version ${appVersion}`);
 // Initialize Express app
 const app: Express = express();
 const PORT = config.server.PORT;
@@ -39,6 +54,7 @@ app.use(express.json());
 imageRouter.registerToExpress(app);
 regionRouter.registerToExpress(app);
 extensionRouter.registerToExpress(app);
+validationRouter.registerToExpress(app);
 
 // ========================================
 // AUTO-GENERATE OPENAPI SPEC
@@ -46,7 +62,7 @@ extensionRouter.registerToExpress(app);
 // ========================================
 const imageSpec = imageRouter.generateOpenApiSpec({
   title: 'Trust-Registry - Upsun Image & Region Registry API',
-  version: '1.0.0',
+  version: appVersion,
   description: `
 # Upsun Image & Region Registry API
 
@@ -93,12 +109,17 @@ REST API to access Upsun image and region information from the official registry
 
 const regionSpec = regionRouter.generateOpenApiSpec({
   title: 'Regions',
-  version: '1.0.0'
+  version: appVersion
 });
 
 const extensionSpec = extensionRouter.generateOpenApiSpec({
   title: 'Extensions',
-  version: '1.0.0'
+  version: appVersion
+});
+
+const validationSpec = validationRouter.generateOpenApiSpec({
+  title: 'Validation',
+  version: appVersion
 });
 
 // Merge paths from both specs
@@ -107,13 +128,15 @@ const openApiSpec = {
   paths: {
     ...imageSpec.paths,
     ...regionSpec.paths,
-    ...extensionSpec.paths
+    ...extensionSpec.paths,
+    ...validationSpec.paths
   },
   components: {
     schemas: {
       ...(imageSpec.components?.schemas || {}),
       ...(regionSpec.components?.schemas || {}),
-      ...(extensionSpec.components?.schemas || {})
+      ...(extensionSpec.components?.schemas || {}),
+      ...(validationSpec.components?.schemas || {})
     }
   }
 };
@@ -160,7 +183,7 @@ app.get('/', (req: Request, res: Response) => {
   });
 
   // Generate and send HTML with BASE_URL
-  const html = generateHomePage(endpoints, config.server.BASE_URL);
+  const html = generateHomePage(endpoints, config.server.BASE_URL, appVersion);
   res.send(html);
 });
 

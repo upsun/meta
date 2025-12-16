@@ -5,7 +5,7 @@ interface Endpoint {
   example: string;
 }
 
-export function generateHomePage(endpoints: Endpoint[], baseUrl: string): string {
+export function generateHomePage(endpoints: Endpoint[], baseUrl: string, version: string): string {
   const endpointListHTML = endpoints.map(endpoint => `
                 <div class="endpoint">
                     <div>
@@ -258,7 +258,7 @@ export function generateHomePage(endpoints: Endpoint[], baseUrl: string): string
             <div class="logo">🚀</div>
             <h1>Upsun Trust-Registry</h1>
             <p class="subtitle">Upsun Service Registry API</p>
-            <span class="version">v1.0.0</span>
+            <span class="version">v${version}</span>
         </div>
 
         <a href="/api-docs" class="main-link">
