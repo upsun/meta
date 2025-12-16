@@ -12,6 +12,7 @@ import { config } from './config/env.config.js';
 import { imageRouter } from './routes/image.routes.js';
 import { regionRouter } from './routes/region.routes.js';
 import { extensionRouter } from './routes/extension.routes.js';
+import { validationRouter } from './routes/validation.routes.js';
 
 // ESM equivalent of __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -53,6 +54,7 @@ app.use(express.json());
 imageRouter.registerToExpress(app);
 regionRouter.registerToExpress(app);
 extensionRouter.registerToExpress(app);
+validationRouter.registerToExpress(app);
 
 // ========================================
 // AUTO-GENERATE OPENAPI SPEC
@@ -115,19 +117,26 @@ const extensionSpec = extensionRouter.generateOpenApiSpec({
   version: appVersion
 });
 
+const validationSpec = validationRouter.generateOpenApiSpec({
+  title: 'Validation',
+  version: appVersion
+});
+
 // Merge paths from both specs
 const openApiSpec = {
   ...imageSpec,
   paths: {
     ...imageSpec.paths,
     ...regionSpec.paths,
-    ...extensionSpec.paths
+    ...extensionSpec.paths,
+    ...validationSpec.paths
   },
   components: {
     schemas: {
       ...(imageSpec.components?.schemas || {}),
       ...(regionSpec.components?.schemas || {}),
-      ...(extensionSpec.components?.schemas || {})
+      ...(extensionSpec.components?.schemas || {}),
+      ...(validationSpec.components?.schemas || {})
     }
   }
 };
