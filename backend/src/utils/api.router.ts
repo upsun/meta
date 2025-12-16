@@ -22,6 +22,7 @@ export interface ApiRoute {
     [statusCode: number]: {
       description: string;
       schema: z.ZodSchema;
+      contentTypes?: string[];
     };
   };
   handler: RequestHandler;
@@ -150,12 +151,17 @@ export class ApiRouter {
       // Add response schemas
       if (responses) {
         Object.entries(responses).forEach(([statusCode, { description: desc, schema }]) => {
+          const contentTypes = responses[Number(statusCode)].contentTypes || ['application/json'];
+
           routeConfig.responses[statusCode] = {
             description: desc,
             content: {
-              'application/json': {
-                schema
-              }
+              ...Object.fromEntries(
+                contentTypes.map((contentType) => [
+                  contentType,
+                  { schema }
+                ])
+              )
             }
           };
         });

@@ -58,10 +58,29 @@ GET /region
 GET /region/{regionId}
 ```
 
+### Get all PHP extensions (raw YAML content)
+```bash
+GET /extension/php
+```
+
+### Get extensions grouped for grid view
+Returns entries shaped as `{ runtime, service, version, extensions[] }`.
+```bash
+GET /extension/php/grid
+```
+
+### Get extensions for a specific service
+Example for `dedicated` service:
+```bash
+GET /extension/php/grid/dedicated
+```
+If the service does not exist, returns `404` with `availableServices`.
+
 ## 🏗️ Project Structure
 
 - **backend/**: Express API server with TypeScript
 - **resources/**: Source data (image registries, region configuration)
+	- `extension/php_extensions.yaml`: List of PHP extensions per service and version
 
 ## 🔐 Source of Trust
 
