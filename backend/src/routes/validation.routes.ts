@@ -29,11 +29,11 @@ const compareSemver = (a: string, b: string): number => {
 export const validationRouter = new ApiRouter();
 
 // ========================================
-// GET /validation-schema/upsun.json - Get Upsun validation schema
+// GET /validation-schema/upsun - Get Upsun validation schema
 // ========================================
 validationRouter.route({
   method: 'get',
-  path: '/schema/upsun.json',
+  path: '/schema/upsun',
   summary: 'Get Upsun validation JSON schema',
   description: `
 Returns the Upsun validation JSON schema file used by the validator.
@@ -65,7 +65,7 @@ Source file (local mode): \`resources/config/validator/schema/upsun.json\`
 });
 
 // ========================================
-// GET /schema/service-versions.json - Get service (non-runtime) versions list
+// GET /schema/service-versions - Get service versions list
 // ========================================
 validationRouter.route({
   method: 'get',
@@ -148,7 +148,7 @@ The result is a JSON Schema snippet:
 });
 
 // ========================================
-// GET /schema/runtime-versions.json - Get runtime versions list
+// GET /schema/runtime-versions - Get runtime versions list
 // ========================================
 validationRouter.route({
   method: 'get',
