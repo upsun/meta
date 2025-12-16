@@ -13,25 +13,238 @@
     "repo_name": "chrome-headless",
     "runtime": false,
     "type": "chrome-headless",
-    "versions": {
-      "deprecated": [
-        "73",
-        "80",
-        "81",
-        "83",
-        "84",
-        "86"
-      ],
-      "supported": [
-        "120",
-        "113",
-        "95",
-        "91"
-      ],
-      "legacy": [
-
-      ]
-    },
+    "versions": [
+      {
+        "name": "120",
+        "status": "supported",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "113",
+        "status": "supported",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "95",
+        "status": "retired",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "91",
+        "status": "retired",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "86",
+        "status": "retired",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "84",
+        "status": "retired",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "83",
+        "status": "retired",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "81",
+        "status": "retired",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "80",
+        "status": "retired",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "73",
+        "status": "retired",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ],
     "versions-dedicated-gen-3": {
       "deprecated": [],
       "supported": [
@@ -53,16 +266,116 @@
     "repo_name": "clickhouse",
     "runtime": false,
     "type": "clickhouse",
-    "versions": {
-      "deprecated": [],
-      "supported": [
-        "25.8",
-        "25.3",
-        "24.3",
-        "23.8"
-      ],
-      "legacy": []
-    }
+    "versions": [
+      {
+        "name": "25.8",
+        "status": "supported",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "clickhouse": {
+              "port": 9000,
+              "schema": "clickhouse"
+            },
+            "clickhouse-http": {
+              "port": 8123,
+              "schema": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "25.3",
+        "status": "supported",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "clickhouse": {
+              "port": 9000,
+              "schema": "clickhouse"
+            },
+            "clickhouse-http": {
+              "port": 8123,
+              "schema": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "24.3",
+        "status": "deprecated",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": true,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "clickhouse": {
+              "port": 9000,
+              "schema": "clickhouse"
+            },
+            "clickhouse-http": {
+              "port": 8123,
+              "schema": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "23.8",
+        "status": "deprecated",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": true,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "clickhouse": {
+              "port": 9000,
+              "schema": "clickhouse"
+            },
+            "clickhouse-http": {
+              "port": 8123,
+              "schema": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
   },
   "dotnet": {
     "description": "ASP.NET 5 application container.",
@@ -97,26 +410,192 @@
     "name": "C#/.Net Core",
     "runtime": true,
     "type": "dotnet",
-    "versions": {
-      "deprecated": [
-        "5.0",
-        "3.1",
-        "2.2",
-        "2.1",
-        "2.0"
-      ],
-      "supported": [
-        "7.0",
-        "6.0",
-        "8.0"
-      ],
-      "legacy": [
-        "3.1",
-        "2.2",
-        "2.1",
-        "2.0"
-      ]
-    }
+    "versions": [
+      {
+        "name": "8.0 (LTS)",
+        "status": "supported",
+        "release_date": "2023-11-13T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2026-11-09T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "7.0",
+        "status": "retired",
+        "release_date": "2022-11-07T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-05-13T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "6.0 (LTS)",
+        "status": "retired",
+        "release_date": "2021-11-07T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-11-11T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "5.0",
+        "status": "retired",
+        "release_date": "2020-11-09T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-05-09T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.1 (LTS)",
+        "status": "retired",
+        "release_date": "2019-12-02T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-12-12T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.2",
+        "status": "retired",
+        "release_date": "2018-12-03T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2019-12-22T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.1 (LTS)",
+        "status": "retired",
+        "release_date": "2018-05-29T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2021-08-20T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.0",
+        "status": "retired",
+        "release_date": "2017-08-13T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2018-09-30T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
   },
   "elasticsearch": {
     "description": "A manufacture service for Elasticsearch",
@@ -132,26 +611,344 @@
     "repo_name": "elasticsearch",
     "runtime": false,
     "type": "elasticsearch",
-    "versions": {
-      "deprecated": [
-        "7.10",
-        "7.9",
-        "7.7",
-        "7.5",
-        "7.2",
-        "6.8",
-        "6.5",
-        "5.4",
-        "5.2",
-        "2.4",
-        "1.7",
-        "1.4"
-      ],
-      "supported": [
-        "8.5",
-        "7.17"
-      ]
-    },
+    "versions": [
+      {
+        "name": "7.12",
+        "status": "supported",
+        "release_date": "2019-04-09T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2026-01-14T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "7.10",
+        "status": "supported",
+        "release_date": "2019-04-09T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2026-01-14T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "7.9",
+        "status": "supported",
+        "release_date": "2019-04-09T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2026-01-14T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "7.7",
+        "status": "supported",
+        "release_date": "2019-04-09T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2026-01-14T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "7.6",
+        "status": "supported",
+        "release_date": "2019-04-09T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2026-01-14T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "7.5",
+        "status": "supported",
+        "release_date": "2019-04-09T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2026-01-14T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "7.2",
+        "status": "supported",
+        "release_date": "2019-04-09T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2026-01-14T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "6.8",
+        "status": "retired",
+        "release_date": "2017-11-13T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-02-09T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "6.5",
+        "status": "retired",
+        "release_date": "2017-11-13T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-02-09T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "5.4",
+        "status": "retired",
+        "release_date": "2017-11-13T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-02-09T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "5.2",
+        "status": "retired",
+        "release_date": "2017-11-13T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-02-09T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.4",
+        "status": "retired",
+        "release_date": "2017-11-13T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-02-09T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.7",
+        "status": "retired",
+        "release_date": "2017-11-13T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-02-09T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.4",
+        "status": "retired",
+        "release_date": "2017-11-13T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-02-09T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "0.90",
+        "status": "retired",
+        "release_date": "2017-11-13T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-02-09T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ],
     "versions-dedicated-gen-2": {
       "supported": [
         "7.2",
@@ -220,24 +1017,192 @@
     "name": "Elixir",
     "runtime": true,
     "type": "elixir",
-    "versions": {
-      "deprecated": [
-        "1.13",
-        "1.12",
-        "1.11",
-        "1.10",
-        "1.9"
-      ],
-      "supported": [
-        "1.18",
-        "1.15",
-        "1.14"
-      ],
-      "legacy": [
-        "1.10",
-        "1.9"
-      ]
-    }
+    "versions": [
+      {
+        "name": "1.18",
+        "status": "supported",
+        "release_date": "2024-12-18T23:00:00.000Z",
+        "eoas_date": "2025-10-15T22:00:00.000Z",
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "1.15",
+        "status": "deprecated",
+        "release_date": "2023-06-18T22:00:00.000Z",
+        "eoas_date": "2023-12-21T23:00:00.000Z",
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": true,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "1.14",
+        "status": "retired",
+        "release_date": "2022-08-31T22:00:00.000Z",
+        "eoas_date": "2023-06-18T22:00:00.000Z",
+        "eol_date": "2025-10-15T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "1.13",
+        "status": "retired",
+        "release_date": "2021-12-02T23:00:00.000Z",
+        "eoas_date": "2022-08-31T22:00:00.000Z",
+        "eol_date": "2024-12-18T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.12",
+        "status": "retired",
+        "release_date": "2021-05-18T22:00:00.000Z",
+        "eoas_date": "2021-12-02T23:00:00.000Z",
+        "eol_date": "2024-06-11T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.11",
+        "status": "retired",
+        "release_date": "2020-10-05T22:00:00.000Z",
+        "eoas_date": "2021-05-18T22:00:00.000Z",
+        "eol_date": "2023-12-21T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.10",
+        "status": "retired",
+        "release_date": "2020-01-26T23:00:00.000Z",
+        "eoas_date": "2020-10-05T22:00:00.000Z",
+        "eol_date": "2023-06-18T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.9",
+        "status": "retired",
+        "release_date": "2019-06-23T22:00:00.000Z",
+        "eoas_date": "2020-01-26T23:00:00.000Z",
+        "eol_date": "2022-08-31T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
   },
   "golang": {
     "description": "",
@@ -273,30 +1238,422 @@
     "repo_name": "golang",
     "runtime": true,
     "type": "golang",
-    "versions": {
-      "deprecated": [
-        "1.19",
-        "1.18",
-        "1.17",
-        "1.16",
-        "1.15",
-        "1.14",
-        "1.13",
-        "1.12",
-        "1.11",
-        "1.10",
-        "1.9",
-        "1.8"
-      ],
-      "supported": [
-        "1.25",
-        "1.24",
-        "1.23",
-        "1.22",
-        "1.21",
-        "1.20"
-      ]
-    }
+    "versions": [
+      {
+        "name": "1.25",
+        "status": "supported",
+        "release_date": "2025-08-11T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "1.24",
+        "status": "supported",
+        "release_date": "2025-02-10T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "1.23",
+        "status": "retired",
+        "release_date": "2024-08-12T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2025-08-11T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "1.22",
+        "status": "retired",
+        "release_date": "2024-02-05T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2025-02-10T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "1.21",
+        "status": "retired",
+        "release_date": "2023-08-07T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-08-12T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "1.20",
+        "status": "retired",
+        "release_date": "2023-01-31T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-02-05T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "1.19",
+        "status": "retired",
+        "release_date": "2022-08-01T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2023-09-05T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "1.18",
+        "status": "retired",
+        "release_date": "2022-03-14T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2023-01-31T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "1.17",
+        "status": "retired",
+        "release_date": "2021-08-15T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-08-01T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "1.16",
+        "status": "retired",
+        "release_date": "2021-02-15T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-03-14T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.15",
+        "status": "retired",
+        "release_date": "2020-08-10T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2021-08-15T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "1.14",
+        "status": "retired",
+        "release_date": "2020-02-24T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2021-02-15T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "1.13",
+        "status": "retired",
+        "release_date": "2019-09-02T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2020-08-10T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.12",
+        "status": "retired",
+        "release_date": "2019-02-24T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2020-02-24T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.11",
+        "status": "retired",
+        "release_date": "2018-08-23T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2019-09-02T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.10",
+        "status": "retired",
+        "release_date": "2018-02-15T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2019-02-24T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.9",
+        "status": "retired",
+        "release_date": "2018-02-15T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2019-02-24T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.8",
+        "status": "retired",
+        "release_date": "2018-02-15T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2019-02-24T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
   },
   "influxdb": {
     "description": "",
@@ -312,19 +1669,196 @@
     "repo_name": "influxdb",
     "runtime": false,
     "type": "influxdb",
-    "versions": {
-      "deprecated": [
-        "2.2",
-        "1.8",
-        "1.7",
-        "1.3",
-        "1.2"
-      ],
-      "supported": [
-        "2.7",
-        "2.3"
-      ]
-    }
+    "versions": [
+      {
+        "name": "2.7",
+        "status": "supported",
+        "release_date": "2020-11-08T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "influxdb": {
+              "port": 8086,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.3",
+        "status": "supported",
+        "release_date": "2020-11-08T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "influxdb": {
+              "port": 8086,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.2",
+        "status": "retired",
+        "release_date": "2020-11-08T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.1",
+        "status": "retired",
+        "release_date": "2020-11-08T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.0",
+        "status": "retired",
+        "release_date": "2020-11-08T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.8",
+        "status": "supported",
+        "release_date": "2016-09-06T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "influxdb": {
+              "port": 8086,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.7",
+        "status": "retired",
+        "release_date": "2016-09-06T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "influxdb": {
+              "port": 8086,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.3",
+        "status": "retired",
+        "release_date": "2016-09-06T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "influxdb": {
+              "port": 8086,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.2",
+        "status": "retired",
+        "release_date": "2016-09-06T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
   },
   "gotenberg": {
     "description": "",
@@ -340,12 +1874,31 @@
     "repo_name": "gotenberg",
     "runtime": false,
     "type": "gotenberg",
-    "versions": {
-      "deprecated": [],
-      "supported": [
-        "8"
-      ]
-    }
+    "versions": [
+      {
+        "name": "8",
+        "status": "supported",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 3000,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.2,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      }
+    ]
   },
   "java": {
     "description": "",
@@ -370,21 +1923,215 @@
     "repo_name": "java",
     "runtime": true,
     "type": "java",
-    "versions": {
-      "deprecated": [
-        "14",
-        "13",
-        "12"
-      ],
-      "supported": [
-        "21",
-        "19",
-        "18",
-        "17",
-        "11",
-        "8"
-      ]
-    },
+    "versions": [
+      {
+        "name": "21 (LTS)",
+        "status": "supported",
+        "release_date": "2023-09-18T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2028-09-29T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "19",
+        "status": "retired",
+        "release_date": "2022-09-19T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2023-03-20T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "18",
+        "status": "retired",
+        "release_date": "2022-03-21T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-09-19T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "17 (LTS)",
+        "status": "supported",
+        "release_date": "2021-09-13T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2026-09-29T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "14",
+        "status": "retired",
+        "release_date": "2020-03-16T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2020-09-15T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "13",
+        "status": "retired",
+        "release_date": "2019-09-16T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2020-03-16T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "12",
+        "status": "retired",
+        "release_date": "2019-03-18T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2019-09-16T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "11 (LTS)",
+        "status": "retired",
+        "release_date": "2018-09-24T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2023-09-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "8 (LTS)",
+        "status": "retired",
+        "release_date": "2014-03-17T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-03-30T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      }
+    ],
     "versions-dedicated-gen-2": {
       "supported": [
         "17",
@@ -412,31 +2159,226 @@
     "repo_name": "kafka",
     "runtime": false,
     "type": "kafka",
-    "versions": {
-      "deprecated": [
-        "2.7",
-        "2.6",
-        "2.5",
-        "2.4",
-        "2.3",
-        "2.2",
-        "2.1"
-      ],
-      "supported": [
-        "3.7",
-        "3.6",
-        "3.4",
-        "3.2"
-      ],
-      "legacy": [
-        "2.6",
-        "2.5",
-        "2.4",
-        "2.3",
-        "2.2",
-        "2.1"
-      ]
-    }
+    "versions": [
+      {
+        "name": "3.7",
+        "status": "supported",
+        "release_date": "2024-02-25T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-07-25T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "kafka": {
+              "port": 9092,
+              "scheme": "kafka"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.6",
+        "status": "retired",
+        "release_date": "2023-10-02T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-02-26T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "kafka": {
+              "port": 9092,
+              "scheme": "kafka"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.4",
+        "status": "retired",
+        "release_date": "2023-02-05T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2023-06-12T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "kafka": {
+              "port": 9092,
+              "scheme": "kafka"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.2",
+        "status": "retired",
+        "release_date": "2022-05-08T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-09-27T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "kafka": {
+              "port": 9092,
+              "scheme": "kafka"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.7",
+        "status": "retired",
+        "release_date": "2020-12-18T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2021-11-14T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.6",
+        "status": "retired",
+        "release_date": "2020-08-02T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2021-11-14T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.5",
+        "status": "retired",
+        "release_date": "2020-04-13T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2020-08-09T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.4",
+        "status": "retired",
+        "release_date": "2019-12-13T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2020-04-14T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.3",
+        "status": "retired",
+        "release_date": "2019-06-23T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2019-12-15T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.2",
+        "status": "retired",
+        "release_date": "2019-03-21T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2019-11-30T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.1",
+        "status": "retired",
+        "release_date": "2018-11-19T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2019-03-21T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
   },
   "mariadb": {
     "description": "A manufacture-based container for MariaDB",
@@ -452,25 +2394,358 @@
     "name": "MariaDB/MySQL",
     "runtime": false,
     "type": "mariadb",
-    "versions": {
-      "deprecated": [
-        "11.2",
-        "11.0",
-        "10.5",
-        "10.4",
-        "10.3",
-        "10.2",
-        "10.1",
-        "10.0",
-        "5.5"
-      ],
-      "supported": [
-        "11.8",
-        "11.4",
-        "10.11",
-        "10.6"
-      ]
-    },
+    "versions": [
+      {
+        "name": "11.8 (LTS)",
+        "status": "supported",
+        "release_date": "2025-06-03T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2028-06-03T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "11.4 (LTS)",
+        "status": "supported",
+        "release_date": "2024-05-28T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2029-05-28T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "11.3",
+        "status": "retired",
+        "release_date": "2024-02-15T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-05-28T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "11.2",
+        "status": "retired",
+        "release_date": "2023-11-20T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-11-20T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "11.0",
+        "status": "retired",
+        "release_date": "2023-06-05T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-06-05T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "10.11 (LTS)",
+        "status": "supported",
+        "release_date": "2023-02-15T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2028-02-15T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "10.6 (LTS)",
+        "status": "supported",
+        "release_date": "2021-07-05T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2026-07-05T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "10.5 (LTS)",
+        "status": "retired",
+        "release_date": "2020-06-23T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2025-06-23T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "10.4 (LTS)",
+        "status": "retired",
+        "release_date": "2019-06-17T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-06-17T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "10.3",
+        "status": "retired",
+        "release_date": "2018-05-24T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2023-05-24T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "10.2",
+        "status": "retired",
+        "release_date": "2017-05-22T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-05-22T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "10.1",
+        "status": "retired",
+        "release_date": "2015-10-16T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2020-10-16T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "10.0",
+        "status": "retired",
+        "release_date": "2014-03-30T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2019-03-30T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "5.5 (LTS)",
+        "status": "retired",
+        "release_date": "2012-04-10T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2020-04-10T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ],
     "versions-dedicated-gen-2": {
       "supported": [
         "11.4 Galera",
@@ -578,14 +2853,80 @@
     "name": "Memcached",
     "runtime": false,
     "type": "memcached",
-    "versions": {
-      "deprecated": [],
-      "supported": [
-        "1.6",
-        "1.5",
-        "1.4"
-      ]
-    },
+    "versions": [
+      {
+        "name": "1.6",
+        "status": "supported",
+        "release_date": "2020-03-07T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "memcached": {
+              "port": 11211,
+              "scheme": "memcached",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.5",
+        "status": "retired",
+        "release_date": "2017-07-20T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2020-03-08T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "memcached": {
+              "port": 11211,
+              "scheme": "memcached",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.4",
+        "status": "retired",
+        "release_date": "2009-07-08T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2017-07-20T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "memcached": {
+              "port": 11211,
+              "scheme": "memcached",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ],
     "versions-dedicated-gen-2": {
       "supported": [
         "1.5",
@@ -607,16 +2948,153 @@
     "name": "MongoDB",
     "runtime": false,
     "type": "mongodb",
-    "versions": {
-      "deprecated": [
-        "4.0.3",
-        "3.6",
-        "3.4",
-        "3.2",
-        "3.0"
-      ],
-      "supported": []
-    }
+    "versions": [
+      {
+        "name": "4.0",
+        "status": "supported",
+        "release_date": "2018-06-29T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-04-29T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mongodb": {
+              "path": "main",
+              "port": 27017,
+              "query": {
+                "is_master": true
+              },
+              "scheme": "mongodb",
+              "password": "main",
+              "username": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.6",
+        "status": "retired",
+        "release_date": "2017-11-29T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2021-04-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mongodb": {
+              "path": "main",
+              "port": 27017,
+              "query": {
+                "is_master": true
+              },
+              "scheme": "mongodb",
+              "password": "main",
+              "username": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.4",
+        "status": "retired",
+        "release_date": "2016-11-29T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2020-01-30T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mongodb": {
+              "path": "main",
+              "port": 27017,
+              "query": {
+                "is_master": true
+              },
+              "scheme": "mongodb",
+              "password": "main",
+              "username": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.2",
+        "status": "retired",
+        "release_date": "2015-12-30T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2018-09-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mongodb": {
+              "path": "main",
+              "port": 27017,
+              "query": {
+                "is_master": true
+              },
+              "scheme": "mongodb",
+              "password": "main",
+              "username": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.0",
+        "status": "retired",
+        "release_date": "2015-03-30T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2018-02-27T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mongodb": {
+              "path": "main",
+              "port": 27017,
+              "query": {
+                "is_master": true
+              },
+              "scheme": "mongodb",
+              "password": "main",
+              "username": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
   },
   "mongodb-enterprise": {
     "description": "Support for the enterprise edition of MongoDB",
@@ -633,18 +3111,152 @@
     "runtime": false,
     "type": "mongodb-enterprise",
     "premium": true,
-    "versions": {
-      "supported": [
-        "7.0",
-        "6.0",
-        "5.0",
-        "4.4"
-      ],
-      "deprecated": [
-        "4.2",
-        "4.0"
-      ]
-    },
+    "versions": [
+      {
+        "name": "7.0",
+        "status": "supported",
+        "release_date": "2023-08-30T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2027-08-30T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mongodb": {
+              "port": 27017,
+              "schema": "mongodb",
+              "scheme": "mongodb"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "6.0",
+        "status": "retired",
+        "release_date": "2022-07-30T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2025-07-30T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mongodb": {
+              "port": 27017,
+              "schema": "mongodb",
+              "scheme": "mongodb"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "5.0",
+        "status": "retired",
+        "release_date": "2021-07-30T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-10-30T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mongodb": {
+              "port": 27017,
+              "schema": "mongodb",
+              "scheme": "mongodb"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "4.4",
+        "status": "retired",
+        "release_date": "2020-07-30T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-02-28T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mongodb": {
+              "port": 27017,
+              "schema": "mongodb",
+              "scheme": "mongodb"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "4.2",
+        "status": "retired",
+        "release_date": "2019-08-30T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2023-04-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mongodb": {
+              "port": 27017,
+              "schema": "mongodb",
+              "scheme": "mongodb"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "4.0",
+        "status": "retired",
+        "release_date": "2018-06-29T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-04-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "mongodb": {
+              "port": 27017,
+              "schema": "mongodb",
+              "scheme": "mongodb"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ],
     "versions-dedicated-gen-2": {
       "supported": [
         "7.0",
@@ -706,25 +3318,445 @@
     "name": "JavaScript/Node.js",
     "runtime": true,
     "type": "nodejs",
-    "versions": {
-      "deprecated": [
-        "18",
-        "16",
-        "14",
-        "12",
-        "10",
-        "8",
-        "6",
-        "4.8",
-        "4.7",
-        "0.12"
-      ],
-      "supported": [
-        "24",
-        "22",
-        "20"
-      ]
-    },
+    "versions": [
+      {
+        "name": "24 (LTS)",
+        "status": "supported",
+        "release_date": "2025-05-05T22:00:00.000Z",
+        "eoas_date": "2026-10-19T22:00:00.000Z",
+        "eol_date": "2028-04-29T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "22 (LTS)",
+        "status": "deprecated",
+        "release_date": "2024-04-23T22:00:00.000Z",
+        "eoas_date": "2025-10-20T22:00:00.000Z",
+        "eol_date": "2027-04-29T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": true,
+        "is_eol": false,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "20 (LTS)",
+        "status": "deprecated",
+        "release_date": "2023-04-17T22:00:00.000Z",
+        "eoas_date": "2024-10-21T22:00:00.000Z",
+        "eol_date": "2026-04-29T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": true,
+        "is_eol": false,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "18 (LTS)",
+        "status": "retired",
+        "release_date": "2022-04-18T22:00:00.000Z",
+        "eoas_date": "2023-10-17T22:00:00.000Z",
+        "eol_date": "2025-04-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "16 (LTS)",
+        "status": "retired",
+        "release_date": "2021-04-19T22:00:00.000Z",
+        "eoas_date": "2022-10-17T22:00:00.000Z",
+        "eol_date": "2023-09-10T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "8.9 (LTS)",
+        "status": "retired",
+        "release_date": "2017-05-29T22:00:00.000Z",
+        "eoas_date": "2018-12-31T23:00:00.000Z",
+        "eol_date": "2019-12-30T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": null,
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "6.10 (LTS)",
+        "status": "retired",
+        "release_date": "2016-04-25T22:00:00.000Z",
+        "eoas_date": "2018-04-29T22:00:00.000Z",
+        "eol_date": "2019-04-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": null,
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "6.9 (LTS)",
+        "status": "retired",
+        "release_date": "2016-04-25T22:00:00.000Z",
+        "eoas_date": "2018-04-29T22:00:00.000Z",
+        "eol_date": "2019-04-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": null,
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "6.8 (LTS)",
+        "status": "retired",
+        "release_date": "2016-04-25T22:00:00.000Z",
+        "eoas_date": "2018-04-29T22:00:00.000Z",
+        "eol_date": "2019-04-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": null,
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "6.6 (LTS)",
+        "status": "retired",
+        "release_date": "2016-04-25T22:00:00.000Z",
+        "eoas_date": "2018-04-29T22:00:00.000Z",
+        "eol_date": "2019-04-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": null,
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "6.3 (LTS)",
+        "status": "retired",
+        "release_date": "2016-04-25T22:00:00.000Z",
+        "eoas_date": "2018-04-29T22:00:00.000Z",
+        "eol_date": "2019-04-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": null,
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "6.2 (LTS)",
+        "status": "retired",
+        "release_date": "2016-04-25T22:00:00.000Z",
+        "eoas_date": "2018-04-29T22:00:00.000Z",
+        "eol_date": "2019-04-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": null,
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "4.7 (LTS)",
+        "status": "retired",
+        "release_date": "2015-09-08T22:00:00.000Z",
+        "eoas_date": "2017-03-31T22:00:00.000Z",
+        "eol_date": "2018-04-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": null,
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "4.6 (LTS)",
+        "status": "retired",
+        "release_date": "2015-09-08T22:00:00.000Z",
+        "eoas_date": "2017-03-31T22:00:00.000Z",
+        "eol_date": "2018-04-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": null,
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "4.5 (LTS)",
+        "status": "retired",
+        "release_date": "2015-09-08T22:00:00.000Z",
+        "eoas_date": "2017-03-31T22:00:00.000Z",
+        "eol_date": "2018-04-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": null,
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "4.4 (LTS)",
+        "status": "retired",
+        "release_date": "2015-09-08T22:00:00.000Z",
+        "eoas_date": "2017-03-31T22:00:00.000Z",
+        "eol_date": "2018-04-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": null,
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "4.3 (LTS)",
+        "status": "retired",
+        "release_date": "2015-09-08T22:00:00.000Z",
+        "eoas_date": "2017-03-31T22:00:00.000Z",
+        "eol_date": "2018-04-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": null,
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "4.2 (LTS)",
+        "status": "retired",
+        "release_date": "2015-09-08T22:00:00.000Z",
+        "eoas_date": "2017-03-31T22:00:00.000Z",
+        "eol_date": "2018-04-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": null,
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "0.12",
+        "status": "retired",
+        "release_date": "2015-01-19T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ],
     "versions-dedicated-gen-2": {
       "supported": [
         "22",
@@ -755,20 +3787,128 @@
     "repo_name": "opensearch",
     "runtime": false,
     "type": "opensearch",
-    "versions": {
-      "deprecated": [
-        "1.3",
-        "1.2",
-        "1.1"
-      ],
-      "supported": [
-        "3",
-        "2"
-      ],
-      "legacy": [
-        "1.1"
-      ]
-    },
+    "versions": [
+      {
+        "name": "3",
+        "status": "supported",
+        "release_date": "2025-05-05T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "opensearch": {
+              "port": 9200,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2",
+        "status": "deprecated",
+        "release_date": "2022-05-25T22:00:00.000Z",
+        "eoas_date": "2025-05-05T22:00:00.000Z",
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": true,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "opensearch": {
+              "port": 9200,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.2",
+        "status": "retired",
+        "release_date": "2021-07-11T22:00:00.000Z",
+        "eoas_date": "2022-05-25T22:00:00.000Z",
+        "eol_date": "2025-05-05T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "opensearch": {
+              "port": 9200,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.1",
+        "status": "retired",
+        "release_date": "2021-07-11T22:00:00.000Z",
+        "eoas_date": "2022-05-25T22:00:00.000Z",
+        "eol_date": "2025-05-05T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "opensearch": {
+              "port": 9200,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1",
+        "status": "retired",
+        "release_date": "2021-07-11T22:00:00.000Z",
+        "eoas_date": "2022-05-25T22:00:00.000Z",
+        "eol_date": "2025-05-05T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "opensearch": {
+              "port": 9200,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ],
     "versions-dedicated-gen-2": {
       "deprecated": [],
       "supported": [
@@ -803,13 +3943,62 @@
     "name": "Oracle MySQL",
     "runtime": false,
     "type": "oracle-mysql",
-    "versions": {
-      "deprecated": [],
-      "supported": [
-        "8.0",
-        "5.7"
-      ]
-    }
+    "versions": [
+      {
+        "name": "8.4",
+        "status": "supported",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "8.0",
+        "status": "deprecated",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": true,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "5.7",
+        "status": "deprecated",
+        "release_date": null,
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": true,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
   },
   "php": {
     "description": "PHP service for Upsun Fixed.",
@@ -863,26 +4052,386 @@
         "7.0"
       ]
     },
-    "versions": {
-      "deprecated": [
-        "8.0",
-        "7.4",
-        "7.3",
-        "7.2",
-        "7.1",
-        "7.0",
-        "5.6",
-        "5.5",
-        "5.4"
-      ],
-      "supported": [
-        "8.5",
-        "8.4",
-        "8.3",
-        "8.2",
-        "8.1"
-      ]
-    }
+    "versions": [
+      {
+        "name": "8.5",
+        "status": "supported",
+        "release_date": "2025-11-19T23:00:00.000Z",
+        "eoas_date": "2027-12-30T23:00:00.000Z",
+        "eol_date": "2029-12-30T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "php": {
+              "port": 80,
+              "scheme": "http"
+            },
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "8.4",
+        "status": "supported",
+        "release_date": "2024-11-20T23:00:00.000Z",
+        "eoas_date": "2026-12-30T23:00:00.000Z",
+        "eol_date": "2028-12-30T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "php": {
+              "port": 80,
+              "scheme": "http"
+            },
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "8.3",
+        "status": "supported",
+        "release_date": "2023-11-22T23:00:00.000Z",
+        "eoas_date": "2025-12-30T23:00:00.000Z",
+        "eol_date": "2027-12-30T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "php": {
+              "port": 80,
+              "scheme": "http"
+            },
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "8.2",
+        "status": "deprecated",
+        "release_date": "2022-12-07T23:00:00.000Z",
+        "eoas_date": "2024-12-30T23:00:00.000Z",
+        "eol_date": "2026-12-30T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": true,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "php": {
+              "port": 80,
+              "scheme": "http"
+            },
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "8.1",
+        "status": "deprecated",
+        "release_date": "2021-11-24T23:00:00.000Z",
+        "eoas_date": "2023-11-24T23:00:00.000Z",
+        "eol_date": "2025-12-30T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": true,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "php": {
+              "port": 80,
+              "scheme": "http"
+            },
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "8.0",
+        "status": "retired",
+        "release_date": "2020-11-25T23:00:00.000Z",
+        "eoas_date": "2022-11-25T23:00:00.000Z",
+        "eol_date": "2023-11-25T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "php": {
+              "port": 80,
+              "scheme": "http"
+            },
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "7.4",
+        "status": "retired",
+        "release_date": "2019-11-27T23:00:00.000Z",
+        "eoas_date": "2021-11-27T23:00:00.000Z",
+        "eol_date": "2022-11-27T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "php": {
+              "port": 80,
+              "scheme": "http"
+            },
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "7.3",
+        "status": "retired",
+        "release_date": "2018-12-05T23:00:00.000Z",
+        "eoas_date": "2020-12-05T23:00:00.000Z",
+        "eol_date": "2021-12-05T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "php": {
+              "port": 80,
+              "scheme": "http"
+            },
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "7.2",
+        "status": "retired",
+        "release_date": "2017-11-29T23:00:00.000Z",
+        "eoas_date": "2019-11-29T23:00:00.000Z",
+        "eol_date": "2020-11-29T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "php": {
+              "port": 80,
+              "scheme": "http"
+            },
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "7.1",
+        "status": "retired",
+        "release_date": "2016-11-30T23:00:00.000Z",
+        "eoas_date": "2018-11-30T23:00:00.000Z",
+        "eol_date": "2019-11-30T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "php": {
+              "port": 80,
+              "scheme": "http"
+            },
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "7.0",
+        "status": "retired",
+        "release_date": "2015-12-02T23:00:00.000Z",
+        "eoas_date": "2018-01-03T23:00:00.000Z",
+        "eol_date": "2019-01-09T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "php": {
+              "port": 80,
+              "scheme": "http"
+            },
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "5.6",
+        "status": "retired",
+        "release_date": "2014-08-27T22:00:00.000Z",
+        "eoas_date": "2017-01-18T23:00:00.000Z",
+        "eol_date": "2018-12-30T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "php": {
+              "port": 80,
+              "scheme": "http"
+            },
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "5.5",
+        "status": "retired",
+        "release_date": "2013-06-19T22:00:00.000Z",
+        "eoas_date": "2015-07-09T22:00:00.000Z",
+        "eol_date": "2016-07-20T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "php": {
+              "port": 80,
+              "scheme": "http"
+            },
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "5.4",
+        "status": "retired",
+        "release_date": "2012-02-29T23:00:00.000Z",
+        "eoas_date": "2014-09-13T22:00:00.000Z",
+        "eol_date": "2015-09-13T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "php": {
+              "port": 80,
+              "scheme": "http"
+            },
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
   },
   "postgresql": {
     "description": "PostgreSQL service for Upsun Fixed.",
@@ -898,25 +4447,320 @@
     "name": "PostgreSQL",
     "runtime": false,
     "type": "postgresql",
-    "versions": {
-      "deprecated": [
-        "11",
-        "10",
-        "9.6",
-        "9.5",
-        "9.4",
-        "9.3"
-      ],
-      "supported": [
-        "18",
-        "17",
-        "16",
-        "15",
-        "14",
-        "13",
-        "12"
-      ]
-    },
+    "versions": [
+      {
+        "name": "18",
+        "status": "supported",
+        "release_date": "2025-09-24T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2030-11-13T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "port": 5432,
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            },
+            "postgresql-replica": {
+              "port": 5432,
+              "privileges": {
+                "main": "ro"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "17",
+        "status": "supported",
+        "release_date": "2024-09-25T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2029-11-07T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "16",
+        "status": "supported",
+        "release_date": "2023-09-13T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2028-11-08T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "15",
+        "status": "supported",
+        "release_date": "2022-10-12T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2027-11-10T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "14",
+        "status": "supported",
+        "release_date": "2021-09-29T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2026-11-11T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "13",
+        "status": "retired",
+        "release_date": "2020-09-23T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2025-11-12T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "12",
+        "status": "retired",
+        "release_date": "2019-10-02T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-11-20T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "11",
+        "status": "retired",
+        "release_date": "2018-10-17T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2023-11-08T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "10",
+        "status": "retired",
+        "release_date": "2017-10-04T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-11-09T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "9.6",
+        "status": "retired",
+        "release_date": "2016-09-28T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2021-11-10T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "9.5",
+        "status": "retired",
+        "release_date": "2016-01-06T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2021-02-10T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "9.3",
+        "status": "retired",
+        "release_date": "2013-09-08T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2018-11-07T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ],
     "versions-dedicated-gen-2": {
       "deprecated": [
         "11*",
@@ -972,22 +4816,238 @@
     "name": "Python",
     "runtime": true,
     "type": "python",
-    "versions": {
-      "deprecated": [
-        "3.7",
-        "3.6",
-        "3.5",
-        "2.7*"
-      ],
-      "supported": [
-        "3.13",
-        "3.12",
-        "3.11",
-        "3.10",
-        "3.9",
-        "3.8"
-      ]
-    }
+    "versions": [
+      {
+        "name": "3.13",
+        "status": "supported",
+        "release_date": "2024-10-06T22:00:00.000Z",
+        "eoas_date": "2026-09-30T22:00:00.000Z",
+        "eol_date": "2029-10-30T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "3.12",
+        "status": "deprecated",
+        "release_date": "2023-10-01T22:00:00.000Z",
+        "eoas_date": "2025-04-01T22:00:00.000Z",
+        "eol_date": "2028-10-30T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": true,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "3.11",
+        "status": "deprecated",
+        "release_date": "2022-10-23T22:00:00.000Z",
+        "eoas_date": "2024-03-31T22:00:00.000Z",
+        "eol_date": "2027-10-30T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": true,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "3.10",
+        "status": "deprecated",
+        "release_date": "2021-10-03T22:00:00.000Z",
+        "eoas_date": "2023-04-04T22:00:00.000Z",
+        "eol_date": "2026-10-30T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": true,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "3.9",
+        "status": "retired",
+        "release_date": "2020-10-04T22:00:00.000Z",
+        "eoas_date": "2022-05-16T22:00:00.000Z",
+        "eol_date": "2025-10-30T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "3.8",
+        "status": "retired",
+        "release_date": "2019-10-13T22:00:00.000Z",
+        "eoas_date": "2021-05-02T22:00:00.000Z",
+        "eol_date": "2024-10-06T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "3.7",
+        "status": "retired",
+        "release_date": "2018-06-26T22:00:00.000Z",
+        "eoas_date": "2020-06-26T22:00:00.000Z",
+        "eol_date": "2023-06-26T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "3.6",
+        "status": "retired",
+        "release_date": "2016-12-22T23:00:00.000Z",
+        "eoas_date": "2018-12-23T23:00:00.000Z",
+        "eol_date": "2021-12-22T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.5",
+        "status": "retired",
+        "release_date": "2015-09-12T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2020-09-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.7",
+        "status": "retired",
+        "release_date": "2010-07-02T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2019-12-31T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
   },
   "rabbitmq": {
     "description": "A manufacture-based container for RabbitMQ",
@@ -1003,29 +5063,305 @@
     "name": "RabbitMQ",
     "runtime": false,
     "type": "rabbitmq",
-    "versions": {
-      "deprecated": [
-        "3.11",
-        "3.10",
-        "3.9",
-        "3.8",
-        "3.7",
-        "3.6",
-        "3.5"
-      ],
-      "supported": [
-        "4.1",
-        "4.0",
-        "3.13",
-        "3.12"
-      ],
-      "legacy": [
-        "3.8",
-        "3.7",
-        "3.6",
-        "3.5"
-      ]
-    },
+    "versions": [
+      {
+        "name": "4.1",
+        "status": "supported",
+        "release_date": "2025-04-14T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2026-01-29T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "rabbitmq": {
+              "path": "main",
+              "port": 5672,
+              "scheme": "amqp",
+              "default": true,
+              "password": "guest",
+              "username": "guest"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "4.0",
+        "status": "retired",
+        "release_date": "2024-09-17T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2025-04-14T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "rabbitmq": {
+              "path": "main",
+              "port": 5672,
+              "scheme": "amqp",
+              "default": true,
+              "password": "guest",
+              "username": "guest"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.13",
+        "status": "retired",
+        "release_date": "2024-02-21T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-09-16T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "rabbitmq": {
+              "path": "main",
+              "port": 5672,
+              "scheme": "amqp",
+              "default": true,
+              "password": "guest",
+              "username": "guest"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.12",
+        "status": "retired",
+        "release_date": "2023-05-31T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-02-20T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "rabbitmq": {
+              "path": "main",
+              "port": 5672,
+              "scheme": "amqp",
+              "default": true,
+              "password": "guest",
+              "username": "guest"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.11",
+        "status": "retired",
+        "release_date": "2022-09-25T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2023-05-31T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "rabbitmq": {
+              "path": "main",
+              "port": 5672,
+              "scheme": "amqp",
+              "default": true,
+              "password": "guest",
+              "username": "guest"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.10",
+        "status": "retired",
+        "release_date": "2022-05-02T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-09-27T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "rabbitmq": {
+              "path": "main",
+              "port": 5672,
+              "scheme": "amqp",
+              "default": true,
+              "password": "guest",
+              "username": "guest"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.9",
+        "status": "retired",
+        "release_date": "2021-07-22T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2023-01-30T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "rabbitmq": {
+              "path": "main",
+              "port": 5672,
+              "scheme": "amqp",
+              "default": true,
+              "password": "guest",
+              "username": "guest"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.8",
+        "status": "retired",
+        "release_date": "2019-09-30T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-07-30T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "rabbitmq": {
+              "path": "main",
+              "port": 5672,
+              "scheme": "amqp",
+              "default": true,
+              "password": "guest",
+              "username": "guest"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.7",
+        "status": "retired",
+        "release_date": "2017-11-27T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2020-09-29T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "rabbitmq": {
+              "path": "main",
+              "port": 5672,
+              "scheme": "amqp",
+              "default": true,
+              "password": "guest",
+              "username": "guest"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.6",
+        "status": "retired",
+        "release_date": "2015-12-21T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2018-05-30T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "rabbitmq": {
+              "path": "main",
+              "port": 5672,
+              "scheme": "amqp",
+              "default": true,
+              "password": "guest",
+              "username": "guest"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.5",
+        "status": "retired",
+        "release_date": "2015-03-10T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2016-10-30T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "rabbitmq": {
+              "path": "main",
+              "port": 5672,
+              "scheme": "amqp",
+              "default": true,
+              "password": "guest",
+              "username": "guest"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ],
     "versions-dedicated-gen-2": {
       "supported": [
         "4.1",
@@ -1067,25 +5403,251 @@
     "name": "Redis",
     "runtime": false,
     "type": "redis",
-    "versions": {
-      "deprecated": [
-        "7.0",
-        "6.2",
-        "6.0",
-        "5.0",
-        "4.0",
-        "3.2",
-        "3.0",
-        "2.8"
-      ],
-      "supported": [
-        "8.0",
-        "7.2"
-      ],
-      "legacy": [
-        "6.0"
-      ]
-    },
+    "versions": [
+      {
+        "name": "8.0",
+        "status": "supported",
+        "release_date": "2025-05-01T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "redis": {
+              "port": 6379,
+              "schema": "redis",
+              "scheme": "redis",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "7.2",
+        "status": "deprecated",
+        "release_date": "2023-08-14T22:00:00.000Z",
+        "eoas_date": "2024-07-28T22:00:00.000Z",
+        "eol_date": "2026-02-27T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": true,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "redis": {
+              "port": 6379,
+              "schema": "redis",
+              "scheme": "redis",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "7.0",
+        "status": "retired",
+        "release_date": "2022-04-26T22:00:00.000Z",
+        "eoas_date": "2023-08-14T22:00:00.000Z",
+        "eol_date": "2024-07-28T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "redis": {
+              "port": 6379,
+              "schema": "redis",
+              "scheme": "redis",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "6.2",
+        "status": "retired",
+        "release_date": "2021-02-21T23:00:00.000Z",
+        "eoas_date": "2022-04-26T22:00:00.000Z",
+        "eol_date": "2025-02-27T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "redis": {
+              "port": 6379,
+              "schema": "redis",
+              "scheme": "redis",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "6.0",
+        "status": "retired",
+        "release_date": "2020-04-29T22:00:00.000Z",
+        "eoas_date": "2021-02-21T23:00:00.000Z",
+        "eol_date": "2022-05-30T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "redis": {
+              "port": 6379,
+              "schema": "redis",
+              "scheme": "redis",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "5.0",
+        "status": "retired",
+        "release_date": "2018-10-16T22:00:00.000Z",
+        "eoas_date": "2020-04-29T22:00:00.000Z",
+        "eol_date": "2022-04-26T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "redis": {
+              "port": 6379,
+              "schema": "redis",
+              "scheme": "redis",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "4.0",
+        "status": "retired",
+        "release_date": "2018-10-16T22:00:00.000Z",
+        "eoas_date": "2020-04-29T22:00:00.000Z",
+        "eol_date": "2022-04-26T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "redis": {
+              "port": 6379,
+              "schema": "redis",
+              "scheme": "redis",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.2",
+        "status": "retired",
+        "release_date": "2018-10-16T22:00:00.000Z",
+        "eoas_date": "2020-04-29T22:00:00.000Z",
+        "eol_date": "2022-04-26T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "redis": {
+              "port": 6379,
+              "schema": "redis",
+              "scheme": "redis",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.0",
+        "status": "retired",
+        "release_date": "2018-10-16T22:00:00.000Z",
+        "eoas_date": "2020-04-29T22:00:00.000Z",
+        "eol_date": "2022-04-26T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "redis": {
+              "port": 6379,
+              "schema": "redis",
+              "scheme": "redis",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.8",
+        "status": "retired",
+        "release_date": "2018-10-16T22:00:00.000Z",
+        "eoas_date": "2020-04-29T22:00:00.000Z",
+        "eol_date": "2022-04-26T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ],
     "versions-dedicated-gen-2": {
       "supported": [
         "8.0",
@@ -1157,29 +5719,238 @@
     "name": "Ruby",
     "runtime": true,
     "type": "ruby",
-    "versions": {
-      "deprecated": [
-        "2.7",
-        "2.6",
-        "2.5",
-        "2.4",
-        "2.3"
-      ],
-      "supported": [
-        "3.4",
-        "3.3",
-        "3.2",
-        "3.1",
-        "3.0"
-      ],
-      "legacy": [
-        "2.7",
-        "2.6",
-        "2.5",
-        "2.4",
-        "2.3"
-      ]
-    },
+    "versions": [
+      {
+        "name": "3.4",
+        "status": "supported",
+        "release_date": "2024-12-23T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2028-03-30T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "3.3",
+        "status": "supported",
+        "release_date": "2023-12-24T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2027-03-30T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "3.2",
+        "status": "supported",
+        "release_date": "2022-12-24T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2026-03-30T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "3.1",
+        "status": "retired",
+        "release_date": "2021-12-24T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2025-03-30T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "3.0",
+        "status": "retired",
+        "release_date": "2020-12-24T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-04-22T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "2.7",
+        "status": "retired",
+        "release_date": "2019-12-24T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2023-03-30T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.6",
+        "status": "retired",
+        "release_date": "2018-12-24T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-03-30T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.5",
+        "status": "retired",
+        "release_date": "2017-12-24T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2021-03-30T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.4",
+        "status": "retired",
+        "release_date": "2016-12-22T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2020-03-30T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "2.3",
+        "status": "retired",
+        "release_date": "2015-12-23T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2019-03-30T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ],
     "versions-dedicated-gen-3": {
       "deprecated": [
         "2.7",
@@ -1222,12 +5993,31 @@
     "name": "Rust",
     "runtime": true,
     "type": "rust",
-    "versions": {
-      "deprecated": [],
-      "supported": [
-        "1"
-      ]
-    }
+    "versions": [
+      {
+        "name": "1",
+        "status": "supported",
+        "release_date": "2018-09-12T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2018-10-25T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      }
+    ]
   },
   "solr": {
     "description": "",
@@ -1243,27 +6033,410 @@
     "name": "Solr",
     "runtime": false,
     "type": "solr",
-    "versions": {
-      "deprecated": [
-        "8.11",
-        "8.6",
-        "8.4",
-        "8.0",
-        "7.7",
-        "7.6",
-        "6.6",
-        "6.3",
-        "4.10",
-        "3.6"
-      ],
-      "supported": [
-        "9.9",
-        "9.6",
-        "9.4",
-        "9.2",
-        "9.1"
-      ]
-    },
+    "versions": [
+      {
+        "name": "9.9",
+        "status": "supported",
+        "release_date": "2022-05-10T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "solr": {
+              "port": 8080,
+              "scheme": "solr",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "9.7",
+        "status": "retired",
+        "release_date": "2022-05-10T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "solr": {
+              "port": 8080,
+              "scheme": "solr",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "9.6",
+        "status": "supported",
+        "release_date": "2022-05-10T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "solr": {
+              "port": 8080,
+              "scheme": "solr",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "9.4",
+        "status": "supported",
+        "release_date": "2022-05-10T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "solr": {
+              "port": 8080,
+              "scheme": "solr",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "9.2",
+        "status": "supported",
+        "release_date": "2022-05-10T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "solr": {
+              "port": 8080,
+              "scheme": "solr",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "9.1",
+        "status": "supported",
+        "release_date": "2022-05-10T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "solr": {
+              "port": 8080,
+              "scheme": "solr",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "9.0",
+        "status": "retired",
+        "release_date": "2022-05-10T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": null,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "8.11",
+        "status": "retired",
+        "release_date": "2019-03-12T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-10-24T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "solr": {
+              "port": 8080,
+              "scheme": "solr",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "8.6",
+        "status": "retired",
+        "release_date": "2019-03-12T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-10-24T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "solr": {
+              "port": 8080,
+              "scheme": "solr",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "8.4",
+        "status": "retired",
+        "release_date": "2019-03-12T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-10-24T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "solr": {
+              "port": 8080,
+              "scheme": "solr",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "8.0",
+        "status": "retired",
+        "release_date": "2019-03-12T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-10-24T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "solr": {
+              "port": 8080,
+              "scheme": "solr",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "7.7",
+        "status": "retired",
+        "release_date": "2017-09-17T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-05-10T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "solr": {
+              "port": 8080,
+              "scheme": "solr",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "7.6",
+        "status": "retired",
+        "release_date": "2017-09-17T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-05-10T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "solr": {
+              "port": 8080,
+              "scheme": "solr",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "6.6",
+        "status": "retired",
+        "release_date": "2016-04-06T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2019-03-12T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "solr": {
+              "port": 8080,
+              "scheme": "solr",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "6.3",
+        "status": "retired",
+        "release_date": "2016-04-06T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2019-03-12T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "solr": {
+              "port": 8080,
+              "scheme": "solr",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "4.10",
+        "status": "retired",
+        "release_date": "2012-10-10T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "solr": {
+              "port": 8080,
+              "scheme": "solr",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "3.6",
+        "status": "retired",
+        "release_date": "2011-03-29T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "solr": {
+              "port": 8080,
+              "scheme": "solr",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ],
     "versions-dedicated-gen-2": {
       "supported": [
         "9.9",
@@ -1290,7 +6463,6 @@
         "9.4",
         "9.2",
         "9.1"
-
       ],
       "deprecated": [
         "8.11"
@@ -1313,13 +6485,58 @@
     "name": "Valkey",
     "runtime": false,
     "type": "valkey",
-    "versions": {
-      "supported": [
-        "8.1",
-        "8.0"
-      ],
-      "deprecated": []
-    },
+    "versions": [
+      {
+        "name": "8.1",
+        "status": "supported",
+        "release_date": "2025-03-30T22:00:00.000Z",
+        "eoas_date": "2028-03-30T22:00:00.000Z",
+        "eol_date": "2030-03-30T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "valkey": {
+              "port": 6379,
+              "schema": "valkey",
+              "scheme": "valkey",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "8.0",
+        "status": "supported",
+        "release_date": "2024-09-14T22:00:00.000Z",
+        "eoas_date": "2027-09-14T22:00:00.000Z",
+        "eol_date": "2027-09-14T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "valkey": {
+              "port": 6379,
+              "schema": "valkey",
+              "scheme": "valkey",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ],
     "versions-dedicated-gen-2": {
       "supported": [
         "8.1",
@@ -1344,21 +6561,230 @@
     "name": "Varnish",
     "runtime": false,
     "type": "varnish",
-    "versions": {
-      "deprecated": [
-        "5.1",
-        "5.2",
-        "6.3",
-        "6.4",
-        "7.1"
-      ],
-      "supported": [
-        "7.6",
-        "7.3",
-        "7.2",
-        "6.0"
-      ]
-    }
+    "versions": [
+      {
+        "name": "7.6",
+        "status": "supported",
+        "release_date": "2024-09-12T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2025-09-14T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 8080,
+              "scheme": "http",
+              "default": true
+            },
+            "http+stats": {
+              "port": 8081,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": false,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "7.3",
+        "status": "retired",
+        "release_date": "2023-03-14T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2024-03-14T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 8080,
+              "scheme": "http",
+              "default": true
+            },
+            "http+stats": {
+              "port": 8081,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": false,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "7.2",
+        "status": "retired",
+        "release_date": "2022-09-14T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2023-09-14T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 8080,
+              "scheme": "http",
+              "default": true
+            },
+            "http+stats": {
+              "port": 8081,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": false,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "7.1",
+        "status": "retired",
+        "release_date": "2022-03-14T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2023-03-14T23:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 8080,
+              "scheme": "http",
+              "default": true
+            },
+            "http+stats": {
+              "port": 8081,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": false,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "6.3 (LTS)",
+        "status": "supported",
+        "release_date": "2018-03-14T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 8080,
+              "scheme": "http",
+              "default": true
+            },
+            "http+stats": {
+              "port": 8081,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": false,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "6.0 (LTS)",
+        "status": "supported",
+        "release_date": "2018-03-14T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 8080,
+              "scheme": "http",
+              "default": true
+            },
+            "http+stats": {
+              "port": 8081,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": false,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
+        "name": "5.2 (LTS)",
+        "status": "retired",
+        "release_date": "2018-03-14T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 8080,
+              "scheme": "http"
+            },
+            "http+stats": {
+              "port": 8081,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": false,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "5.1 (LTS)",
+        "status": "retired",
+        "release_date": "2018-03-14T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": null,
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": true,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 8080,
+              "scheme": "http"
+            },
+            "http+stats": {
+              "port": 8081,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": null,
+          "is_persistent": false,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
   },
   "vault-kms": {
     "description": "",
@@ -1401,5 +6827,149 @@
         "1.6"
       ]
     }
+  },
+  "activemq-artemis": {
+    "versions": [
+      {
+        "name": "2.42",
+        "status": "supported",
+        "release_date": "2025-07-13T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2025-10-12T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": null
+      },
+      {
+        "name": "2",
+        "status": "retired",
+        "release_date": "2015-05-20T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2015-09-14T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
+  },
+  "elasticsearch-enterprise": {
+    "versions": [
+      {
+        "name": "8.5",
+        "status": "supported",
+        "release_date": "2017-11-13T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-02-09T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "schema": "http",
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "7.17",
+        "status": "supported",
+        "release_date": "2019-04-09T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2026-01-14T23:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "schema": "http",
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
+  },
+  "vault": {
+    "versions": [
+      {
+        "name": "1.12",
+        "status": "supported",
+        "release_date": "2022-10-09T22:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2023-09-26T22:00:00.000Z",
+        "is_maintained": true,
+        "is_eoas": false,
+        "is_eol": false,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.8",
+        "status": "retired",
+        "release_date": "2021-11-15T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-10-09T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "1.6",
+        "status": "retired",
+        "release_date": "2021-11-15T23:00:00.000Z",
+        "eoas_date": null,
+        "eol_date": "2022-10-09T22:00:00.000Z",
+        "is_maintained": false,
+        "is_eoas": true,
+        "is_eol": true,
+        "is_lts": false,
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": 0.1,
+          "is_persistent": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
   }
 }
