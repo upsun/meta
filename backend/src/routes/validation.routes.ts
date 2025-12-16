@@ -69,7 +69,7 @@ Source file (local mode): \`resources/config/validator/schema/upsun.json\`
 // ========================================
 validationRouter.route({
   method: 'get',
-  path: '/schema/service-versions.json',
+  path: '/schema/service-versions',
   summary: 'Get list of service versions',
   description: `
 Returns the list of all serivce images and
@@ -152,7 +152,7 @@ The result is a JSON Schema snippet:
 // ========================================
 validationRouter.route({
   method: 'get',
-  path: '/schema/runtime-versions.json',
+  path: '/schema/runtime-versions',
   summary: 'Get list of runtime versions',
   description: `
 Returns the list of all runtime images and
