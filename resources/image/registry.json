@@ -1,18 +1,15 @@
 {
   "chrome-headless": {
     "description": "",
-    "disk": false,
     "docs": {
       "relationship_name": "chrome-headless",
       "service_name": "chrome-headless",
-      "url": "/add-services/headless-chrome.html"
+      "url": "https://docs.upsun.com/add-services/chrome-headless.html"
     },
-    "endpoint": "http",
     "min_disk_size": null,
     "name": "Headless Chrome",
     "repo_name": "chrome-headless",
     "runtime": false,
-    "type": "chrome-headless",
     "versions": [
       {
         "name": "120",
@@ -300,22 +297,20 @@
       "supported": [
         "95"
       ]
-    }
+    },
+    "need_disk": false
   },
   "clickhouse": {
     "description": "",
-    "disk": false,
     "docs": {
       "relationship_name": "clickhouse",
       "service_name": "clickhouse",
-      "url": "/add-services/clickhouse.html"
+      "url": "https://docs.upsun.com/add-services/clickhouse.html"
     },
-    "endpoint": "clickhouse",
     "min_disk_size": null,
     "name": "ClickHouse",
     "repo_name": "clickhouse",
     "runtime": false,
-    "type": "clickhouse",
     "versions": [
       {
         "name": "25.8",
@@ -445,41 +440,20 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    ],
+    "need_disk": false
   },
   "dotnet": {
     "description": "ASP.NET 5 application container.",
     "repo_name": "dotnet",
-    "disk": false,
     "docs": {
-      "relationship_name": null,
-      "service_name": null,
-      "url": "/languages/dotnet.html",
-      "web": {
-        "commands": {
-          "start": "dotnet application.dll"
-        },
-        "locations": {
-          "/": {
-            "root": "wwwroot",
-            "allow": true,
-            "passthru": true
-          }
-        }
-      },
-      "hooks": {
-        "build": [
-          "|",
-          "set -e",
-          "dotnet publish --output \"$PLATFORM_OUTPUT_DIR\" -p:UseRazorBuildServer=false -p:UseSharedCompilation=false"
-        ]
-      }
+      "relationship_name": "dotnet",
+      "service_name": "dotnet",
+      "url": "https://docs.upsun.com/languages/dotnet.html"
     },
-    "endpoint": null,
     "min_disk_size": null,
     "name": "C#/.Net Core",
     "runtime": true,
-    "type": "dotnet",
     "versions": [
       {
         "name": "8.0 (LTS)",
@@ -705,22 +679,20 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    ],
+    "need_disk": false
   },
   "elasticsearch": {
     "description": "A manufacture service for Elasticsearch",
-    "disk": true,
     "docs": {
       "relationship_name": "elasticsearch",
       "service_name": "elasticsearch",
-      "url": "/add-services/elasticsearch.html"
+      "url": "https://docs.upsun.com/add-services/elasticsearch.html"
     },
-    "endpoint": "elasticsearch",
     "min_disk_size": 256,
     "name": "Elasticsearch",
     "repo_name": "elasticsearch",
     "runtime": false,
-    "type": "elasticsearch",
     "versions": [
       {
         "name": "7.12",
@@ -1166,42 +1138,20 @@
         "6.5"
       ],
       "supported": []
-    }
+    },
+    "need_disk": true
   },
   "elixir": {
     "description": "",
     "repo_name": "elixir",
-    "disk": false,
     "docs": {
-      "relationship_name": null,
-      "service_name": null,
-      "url": "/languages/elixir.html",
-      "web": {
-        "commands": {
-          "start": "mix run --no-halt"
-        },
-        "locations": {
-          "/": {
-            "allow": false,
-            "root": "web",
-            "passthru": true
-          }
-        }
-      },
-      "hooks": {
-        "build": [
-          "|",
-          "mix local.hex --force",
-          "mix local.rebar --force",
-          "mix do deps.get --only prod, deps.compile, compile"
-        ]
-      }
+      "relationship_name": "elixir",
+      "service_name": "elixir",
+      "url": "https://docs.upsun.com/languages/elixir.html"
     },
-    "endpoint": null,
     "min_disk_size": null,
     "name": "Elixir",
     "runtime": true,
-    "type": "elixir",
     "versions": [
       {
         "name": "1.18",
@@ -1427,42 +1377,20 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    ],
+    "need_disk": false
   },
   "golang": {
     "description": "",
-    "disk": false,
     "docs": {
-      "relationship_name": null,
-      "service_name": null,
-      "url": "/languages/go.html",
-      "web": {
-        "upstream": {
-          "socket_family": "tcp",
-          "protocol": "http"
-        },
-        "commands": {
-          "start": "./bin/app"
-        },
-        "locations": {
-          "/": {
-            "allow": false,
-            "passthru": true
-          }
-        }
-      },
-      "hooks": {
-        "build": [
-          "go build -o bin/app"
-        ]
-      }
+      "relationship_name": "golang",
+      "service_name": "golang",
+      "url": "https://docs.upsun.com/languages/golang.html"
     },
-    "endpoint": null,
     "min_disk_size": null,
     "name": "Go",
     "repo_name": "golang",
     "runtime": true,
-    "type": "golang",
     "versions": [
       {
         "name": "1.25",
@@ -1968,22 +1896,20 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    ],
+    "need_disk": false
   },
   "influxdb": {
     "description": "",
-    "disk": true,
     "docs": {
       "relationship_name": "influxdb",
       "service_name": "influxdb",
-      "url": "/add-services/influxdb.html"
+      "url": "https://docs.upsun.com/add-services/influxdb.html"
     },
-    "endpoint": "influxdb",
     "min_disk_size": null,
     "name": "InfluxDB",
     "repo_name": "influxdb",
     "runtime": false,
-    "type": "influxdb",
     "versions": [
       {
         "name": "2.7",
@@ -2218,22 +2144,20 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    ],
+    "need_disk": true
   },
   "gotenberg": {
     "description": "",
-    "disk": true,
     "docs": {
       "relationship_name": "gotenberg",
       "service_name": "gotenberg",
-      "url": "/add-services/gotenberg.html"
+      "url": "https://docs.upsun.com/add-services/gotenberg.html"
     },
-    "endpoint": "gotenberg",
     "min_disk_size": null,
     "name": "Gotenberg",
     "repo_name": "gotenberg",
     "runtime": false,
-    "type": "gotenberg",
     "versions": [
       {
         "name": "8",
@@ -2263,31 +2187,20 @@
           "supports_horizontal_scaling": true
         }
       }
-    ]
+    ],
+    "need_disk": true
   },
   "java": {
     "description": "",
     "docs": {
-      "relationship_name": null,
-      "service_name": null,
-      "url": "/languages/java.html",
-      "web": {
-        "commands": {
-          "start": "java -jar target/application.jar --server.port=$PORT"
-        }
-      },
-      "hooks": {
-        "build": [
-          "mvn clean install"
-        ]
-      }
+      "relationship_name": "java",
+      "service_name": "java",
+      "url": "https://docs.upsun.com/languages/java.html"
     },
-    "endpoint": null,
     "min_disk_size": null,
     "name": "Java",
     "repo_name": "java",
     "runtime": true,
-    "type": "java",
     "versions": [
       {
         "name": "21 (LTS)",
@@ -2557,18 +2470,15 @@
   },
   "kafka": {
     "description": "",
-    "disk": true,
     "docs": {
       "relationship_name": "kafka",
       "service_name": "kafka",
-      "url": "/add-services/kafka.html"
+      "url": "https://docs.upsun.com/add-services/kafka.html"
     },
-    "endpoint": "kafka",
     "min_disk_size": 512,
     "name": "Kafka",
     "repo_name": "kafka",
     "runtime": false,
-    "type": "kafka",
     "versions": [
       {
         "name": "3.7",
@@ -2843,22 +2753,20 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    ],
+    "need_disk": true
   },
   "mariadb": {
     "description": "A manufacture-based container for MariaDB",
     "repo_name": "mariadb",
-    "disk": true,
     "docs": {
       "relationship_name": "mariadb",
       "service_name": "mariadb",
-      "url": "/add-services/mysql.html"
+      "url": "https://docs.upsun.com/add-services/mariadb.html"
     },
-    "endpoint": "mysql",
     "min_disk_size": 256,
     "name": "MariaDB/MySQL",
     "runtime": false,
-    "type": "mariadb",
     "versions": [
       {
         "name": "11.8 (LTS)",
@@ -3309,7 +3217,8 @@
         "10.2 Galera",
         "10.1 Galera"
       ]
-    }
+    },
+    "need_disk": true
   },
   "mysql": {
     "description": "A manufacture-based container for MariaDB",
@@ -3377,17 +3286,14 @@
   "memcached": {
     "description": "Memcached service.",
     "repo_name": "memcached",
-    "disk": false,
     "docs": {
       "relationship_name": "memcached",
       "service_name": "memcached",
-      "url": "/add-services/memcached.html"
+      "url": "https://docs.upsun.com/add-services/memcached.html"
     },
-    "endpoint": "memcached",
     "min_disk_size": null,
     "name": "Memcached",
     "runtime": false,
-    "type": "memcached",
     "versions": [
       {
         "name": "1.6",
@@ -3482,22 +3388,20 @@
         "1.5",
         "1.4"
       ]
-    }
+    },
+    "need_disk": false
   },
   "mongodb": {
     "description": "Experimental MongoDB support on Upsun Fixed",
     "repo_name": "mongodb",
-    "disk": true,
     "docs": {
       "relationship_name": "mongodb",
       "service_name": "mongodb",
-      "url": "/add-services/mongodb.html"
+      "url": "https://docs.upsun.com/add-services/mongodb.html"
     },
-    "endpoint": "mongodb",
     "min_disk_size": 512,
     "name": "MongoDB",
     "runtime": false,
-    "type": "mongodb",
     "versions": [
       {
         "name": "4.0",
@@ -3669,22 +3573,20 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    ],
+    "need_disk": true
   },
   "mongodb-enterprise": {
     "description": "Support for the enterprise edition of MongoDB",
     "repo_name": "mongodb",
-    "disk": true,
     "docs": {
       "relationship_name": "mongodb-enterprise",
       "service_name": "mongodb-enterprise",
-      "url": "/add-services/mongodb.html"
+      "url": "https://docs.upsun.com/add-services/mongodb-enterprise.html"
     },
-    "endpoint": "mongodb",
     "min_disk_size": 512,
     "name": "MongoDB",
     "runtime": false,
-    "type": "mongodb-enterprise",
     "premium": true,
     "versions": [
       {
@@ -3873,7 +3775,8 @@
         "4.2",
         "4.0"
       ]
-    }
+    },
+    "need_disk": true
   },
   "network-storage": {
     "description": "",
@@ -3907,22 +3810,14 @@
   "nodejs": {
     "description": "NodeJS service for Upsun Fixed",
     "repo_name": "nodejs",
-    "disk": false,
     "docs": {
-      "relationship_name": null,
-      "service_name": null,
-      "url": "/languages/nodejs.html",
-      "web": {
-        "commands": {
-          "start": "node index.js"
-        }
-      }
+      "relationship_name": "nodejs",
+      "service_name": "nodejs",
+      "url": "https://docs.upsun.com/languages/nodejs.html"
     },
-    "endpoint": null,
     "min_disk_size": null,
     "name": "JavaScript/Node.js",
     "runtime": true,
-    "type": "nodejs",
     "versions": [
       {
         "name": "24 (LTS)",
@@ -4471,22 +4366,20 @@
         "10",
         "9.8"
       ]
-    }
+    },
+    "need_disk": false
   },
   "opensearch": {
     "description": "A manufacture service for OpenSearch",
-    "disk": true,
     "docs": {
       "relationship_name": "opensearch",
       "service_name": "opensearch",
-      "url": "/add-services/opensearch.html"
+      "url": "https://docs.upsun.com/add-services/opensearch.html"
     },
-    "endpoint": "opensearch",
     "min_disk_size": 256,
     "name": "OpenSearch",
     "repo_name": "opensearch",
     "runtime": false,
-    "type": "opensearch",
     "versions": [
       {
         "name": "3",
@@ -4652,22 +4545,20 @@
       "supported": [
         "2"
       ]
-    }
+    },
+    "need_disk": true
   },
   "oracle-mysql": {
     "description": "Images using MySQL from Oracle instead of MariaDB still providing mysql endpoints",
     "repo_name": "oracle-mysql",
-    "disk": true,
     "docs": {
       "relationship_name": "oracle-mysql",
       "service_name": "oracle-mysql",
-      "url": "/add-services/mysql.html"
+      "url": "https://docs.upsun.com/add-services/oracle-mysql.html"
     },
-    "endpoint": "mysql",
     "min_disk_size": 256,
     "name": "Oracle MySQL",
     "runtime": false,
-    "type": "oracle-mysql",
     "versions": [
       {
         "name": "8.4",
@@ -4738,43 +4629,20 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    ],
+    "need_disk": true
   },
   "php": {
     "description": "PHP service for Upsun Fixed.",
     "repo_name": "php",
-    "disk": false,
     "docs": {
-      "relationship_name": null,
-      "service_name": null,
-      "url": "/languages/php.html",
-      "web": {
-        "locations": {
-          "/": {
-            "root": "web",
-            "passthru": "/index.php"
-          }
-        }
-      },
-      "hooks": {
-        "build": [
-          "|",
-          "set -e"
-        ],
-        "deploy": [
-          "|",
-          "set -e"
-        ]
-      },
-      "build": {
-        "flavor": "composer"
-      }
+      "relationship_name": "php",
+      "service_name": "php",
+      "url": "https://docs.upsun.com/languages/php.html"
     },
-    "endpoint": null,
     "min_disk_size": null,
     "name": "PHP",
     "runtime": true,
-    "type": "php",
     "versions-dedicated-gen-2": {
       "supported": [
         "8.5",
@@ -5241,22 +5109,20 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    ],
+    "need_disk": false
   },
   "postgresql": {
     "description": "PostgreSQL service for Upsun Fixed.",
     "repo_name": "postgresql",
-    "disk": true,
     "docs": {
       "relationship_name": "postgresql",
       "service_name": "postgresql",
-      "url": "/add-services/postgresql.html"
+      "url": "https://docs.upsun.com/add-services/postgresql.html"
     },
-    "endpoint": "postgresql",
     "min_disk_size": null,
     "name": "PostgreSQL",
     "runtime": false,
-    "type": "postgresql",
     "versions": [
       {
         "name": "18",
@@ -5654,38 +5520,20 @@
         "13",
         "12"
       ]
-    }
+    },
+    "need_disk": true
   },
   "python": {
     "description": "",
     "repo_name": "python",
-    "disk": false,
     "docs": {
-      "relationship_name": null,
-      "service_name": null,
-      "url": "/languages/python.html",
-      "web": {
-        "commands": {
-          "start": "python server.py"
-        }
-      },
-      "hooks": {
-        "build": [
-          "|",
-          "pipenv install --system --deploy"
-        ]
-      },
-      "dependencies": {
-        "python3": {
-          "pipenv": "2018.10.13"
-        }
-      }
+      "relationship_name": "python",
+      "service_name": "python",
+      "url": "https://docs.upsun.com/languages/python.html"
     },
-    "endpoint": null,
     "min_disk_size": null,
     "name": "Python",
     "runtime": true,
-    "type": "python",
     "versions": [
       {
         "name": "3.13",
@@ -5967,22 +5815,20 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    ],
+    "need_disk": false
   },
   "rabbitmq": {
     "description": "A manufacture-based container for RabbitMQ",
     "repo_name": "rabbitmq",
-    "disk": true,
     "docs": {
       "relationship_name": "rabbitmq",
       "service_name": "rabbitmq",
-      "url": "/add-services/rabbitmq.html"
+      "url": "https://docs.upsun.com/add-services/rabbitmq.html"
     },
-    "endpoint": "rabbitmq",
     "min_disk_size": 512,
     "name": "RabbitMQ",
     "runtime": false,
-    "type": "rabbitmq",
     "versions": [
       {
         "name": "4.1",
@@ -6362,22 +6208,20 @@
         "3.13",
         "3.12"
       ]
-    }
+    },
+    "need_disk": true
   },
   "redis": {
     "description": "A manufacture-based Redis container ",
     "repo_name": "redis",
-    "disk": false,
     "docs": {
       "relationship_name": "redis",
       "service_name": "redis",
-      "url": "/add-services/redis.html"
+      "url": "https://docs.upsun.com/add-services/redis.html"
     },
-    "endpoint": "redis",
     "min_disk_size": null,
     "name": "Redis",
     "runtime": false,
-    "type": "redis",
     "versions": [
       {
         "name": "8.0",
@@ -6702,48 +6546,20 @@
         "8.0",
         "7.2"
       ]
-    }
+    },
+    "need_disk": false
   },
   "ruby": {
     "description": "",
     "repo_name": "ruby",
-    "disk": false,
     "docs": {
-      "relationship_name": null,
-      "service_name": null,
-      "url": "/languages/ruby.html",
-      "web": {
-        "upstream": {
-          "socket_family": "unix"
-        },
-        "commands": {
-          "start": "unicorn -l $SOCKET -E production config.ru"
-        },
-        "locations": {
-          "/": {
-            "root": "public",
-            "passthru": true,
-            "expires": "1h",
-            "allow": true
-          }
-        }
-      },
-      "hooks": {
-        "build": [
-          "|",
-          "bundle install --without development test"
-        ],
-        "deploy": [
-          "|",
-          "RACK_ENV=production bundle exec rake db:migrate"
-        ]
-      }
+      "relationship_name": "ruby",
+      "service_name": "ruby",
+      "url": "https://docs.upsun.com/languages/ruby.html"
     },
-    "endpoint": null,
     "min_disk_size": null,
     "name": "Ruby",
     "runtime": true,
-    "type": "ruby",
     "versions": [
       {
         "name": "3.4",
@@ -7047,27 +6863,20 @@
         "2.4",
         "2.3"
       ]
-    }
+    },
+    "need_disk": false
   },
   "rust": {
     "description": "",
     "repo_name": "rust",
-    "disk": true,
     "docs": {
-      "relationship_name": null,
-      "service_name": null,
-      "url": "/languages/rust.html",
-      "web": {
-        "commands": {
-          "start": "./target/debug/hello"
-        }
-      }
+      "relationship_name": "rust",
+      "service_name": "rust",
+      "url": "https://docs.upsun.com/languages/rust.html"
     },
-    "endpoint": null,
     "min_disk_size": null,
     "name": "Rust",
     "runtime": true,
-    "type": "rust",
     "versions": [
       {
         "name": "1",
@@ -7097,22 +6906,20 @@
           "supports_horizontal_scaling": true
         }
       }
-    ]
+    ],
+    "need_disk": true
   },
   "solr": {
     "description": "",
     "repo_name": "solr",
-    "disk": true,
     "docs": {
       "relationship_name": "solr",
       "service_name": "solr",
-      "url": "/add-services/solr.html"
+      "url": "https://docs.upsun.com/add-services/solr.html"
     },
-    "endpoint": "solr",
     "min_disk_size": 256,
     "name": "Solr",
     "runtime": false,
-    "type": "solr",
     "versions": [
       {
         "name": "9.9",
@@ -7632,24 +7439,22 @@
       "deprecated": [
         "8.11"
       ]
-    }
+    },
+    "need_disk": true
   },
   "valkey": {
     "description": "",
     "repo_name": "valkey",
-    "disk": false,
     "docs": {
       "relationship_name": "valkey",
       "service_name": "valkey",
-      "url": "/add-services/valkey.html"
+      "url": "https://docs.upsun.com/add-services/valkey.html"
     },
-    "endpoint": "http+stats",
     "min_disk_size": null,
     "configuration": "    configuration:\n        vcl: !include\n            type: string\n            path: config.vcl",
     "service_relationships": "application: 'app:http'",
     "name": "Valkey",
     "runtime": false,
-    "type": "valkey",
     "versions": [
       {
         "name": "8.1",
@@ -7718,24 +7523,22 @@
         "8.0"
       ],
       "deprecated": []
-    }
+    },
+    "need_disk": false
   },
   "varnish": {
     "description": "",
     "repo_name": "varnish",
-    "disk": false,
     "docs": {
       "relationship_name": "varnish",
       "service_name": "varnish",
-      "url": "/add-services/varnish.html"
+      "url": "https://docs.upsun.com/add-services/varnish.html"
     },
-    "endpoint": "http+stats",
     "min_disk_size": null,
     "configuration": "    configuration:\n        vcl: !include\n            type: string\n            path: config.vcl",
     "service_relationships": "application: 'app:http'",
     "name": "Varnish",
     "runtime": false,
-    "type": "varnish",
     "versions": [
       {
         "name": "7.6",
@@ -7999,23 +7802,21 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    ],
+    "need_disk": false
   },
   "vault-kms": {
     "description": "",
-    "disk": true,
     "docs": {
       "relationship_name": "vault-kms",
       "service_name": "vault-kms",
-      "url": "/add-services/vault.html"
+      "url": "https://docs.upsun.com/add-services/vault-kms.html"
     },
-    "endpoint": "manage_keys",
     "min_disk_size": 512,
     "configuration": "    configuration:\n        endpoints:\n            <ENDPOINT_ID>:\n                - policy: <POLICY>\n                  key: <KEY_NAME>\n                  type: <ENDPOINT_TYPE>",
     "name": "Vault KMS",
     "repo_name": "vault-kms",
     "runtime": false,
-    "type": "vault-kms",
     "versions": [
       {
         "name": "1.12",
@@ -8100,7 +7901,8 @@
         "1.8",
         "1.6"
       ]
-    }
+    },
+    "need_disk": true
   },
   "activemq-artemis": {
     "versions": [
@@ -8127,7 +7929,12 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    ],
+    "docs": {
+      "relationship_name": "activemq-artemis",
+      "service_name": "activemq-artemis",
+      "url": "https://docs.upsun.com/add-services/activemq-artemis.html"
+    }
   },
   "elasticsearch-enterprise": {
     "versions": [
@@ -8189,7 +7996,12 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    ],
+    "docs": {
+      "relationship_name": "elasticsearch-enterprise",
+      "service_name": "elasticsearch-enterprise",
+      "url": "https://docs.upsun.com/add-services/elasticsearch-enterprise.html"
+    }
   },
   "vault": {
     "versions": [
