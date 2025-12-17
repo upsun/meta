@@ -287,6 +287,12 @@ GET /image/php/8.5?items=name,manifest
         imageData = filteredData;
       }
 
+      // Always include the image name in the version DTO
+      imageData = {
+        image: name,
+        ...imageData
+      };
+
       res.json(imageData);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read registry file');
