@@ -15,11 +15,12 @@
     "type": "chrome-headless",
     "versions": [
       {
+        "image": "chrome-headless",
         "name": "120",
         "status": "supported",
-        "release_date": "2023-12-05T00:00:00.000Z",
+        "release_date": "2023-12-04T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-01-23T00:00:00.000Z",
+        "end_of_life_date": "2024-01-22T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -38,11 +39,12 @@
         }
       },
       {
+        "image": "chrome-headless",
         "name": "113",
         "status": "retired",
-        "release_date": "2023-05-02T00:00:00.000Z",
+        "release_date": "2023-05-01T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2023-05-30T00:00:00.000Z",
+        "end_of_life_date": "2023-05-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -61,11 +63,12 @@
         }
       },
       {
+        "image": "chrome-headless",
         "name": "95",
         "status": "retired",
-        "release_date": "2021-10-19T00:00:00.000Z",
+        "release_date": "2021-10-18T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2021-11-16T00:00:00.000Z",
+        "end_of_life_date": "2021-11-15T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -84,11 +87,12 @@
         }
       },
       {
+        "image": "chrome-headless",
         "name": "91",
         "status": "retired",
-        "release_date": "2021-05-25T00:00:00.000Z",
+        "release_date": "2021-05-24T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2021-07-20T00:00:00.000Z",
+        "end_of_life_date": "2021-07-19T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -107,11 +111,12 @@
         }
       },
       {
+        "image": "chrome-headless",
         "name": "86",
         "status": "retired",
-        "release_date": "2020-10-06T00:00:00.000Z",
+        "release_date": "2020-10-05T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-11-17T00:00:00.000Z",
+        "end_of_life_date": "2020-11-16T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -130,11 +135,12 @@
         }
       },
       {
+        "image": "chrome-headless",
         "name": "84",
         "status": "retired",
-        "release_date": "2020-07-14T00:00:00.000Z",
+        "release_date": "2020-07-13T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-08-25T00:00:00.000Z",
+        "end_of_life_date": "2020-08-24T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -153,11 +159,12 @@
         }
       },
       {
+        "image": "chrome-headless",
         "name": "83",
         "status": "retired",
-        "release_date": "2020-05-19T00:00:00.000Z",
+        "release_date": "2020-05-18T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-07-14T00:00:00.000Z",
+        "end_of_life_date": "2020-07-13T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -176,11 +183,12 @@
         }
       },
       {
+        "image": "chrome-headless",
         "name": "81",
         "status": "retired",
-        "release_date": "2020-04-07T00:00:00.000Z",
+        "release_date": "2020-04-06T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-05-19T00:00:00.000Z",
+        "end_of_life_date": "2020-05-18T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -199,11 +207,12 @@
         }
       },
       {
+        "image": "chrome-headless",
         "name": "80",
         "status": "retired",
-        "release_date": "2020-02-04T00:00:00.000Z",
+        "release_date": "2020-02-03T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-04-07T00:00:00.000Z",
+        "end_of_life_date": "2020-04-06T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -222,11 +231,12 @@
         }
       },
       {
+        "image": "chrome-headless",
         "name": "73",
         "status": "retired",
-        "release_date": "2019-03-12T00:00:00.000Z",
+        "release_date": "2019-03-11T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2019-04-23T00:00:00.000Z",
+        "end_of_life_date": "2019-04-22T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -268,6 +278,7 @@
     "type": "clickhouse",
     "versions": [
       {
+        "image": "clickhouse",
         "name": "25.8",
         "status": "supported",
         "release_date": null,
@@ -295,6 +306,7 @@
         }
       },
       {
+        "image": "clickhouse",
         "name": "25.3",
         "status": "supported",
         "release_date": null,
@@ -322,6 +334,7 @@
         }
       },
       {
+        "image": "clickhouse",
         "name": "24.3",
         "status": "deprecated",
         "release_date": null,
@@ -349,6 +362,7 @@
         }
       },
       {
+        "image": "clickhouse",
         "name": "23.8",
         "status": "deprecated",
         "release_date": null,
@@ -412,11 +426,12 @@
     "type": "dotnet",
     "versions": [
       {
+        "image": "dotnet",
         "name": "8.0 (LTS)",
         "status": "supported",
-        "release_date": "2023-11-14T00:00:00.000Z",
+        "release_date": "2023-11-13T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2026-11-10T00:00:00.000Z",
+        "end_of_life_date": "2026-11-09T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -435,11 +450,12 @@
         }
       },
       {
+        "image": "dotnet",
         "name": "7.0",
         "status": "retired",
-        "release_date": "2022-11-08T00:00:00.000Z",
+        "release_date": "2022-11-07T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-05-14T00:00:00.000Z",
+        "end_of_life_date": "2024-05-13T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -458,11 +474,12 @@
         }
       },
       {
+        "image": "dotnet",
         "name": "6.0",
         "status": "retired",
-        "release_date": "2021-11-08T00:00:00.000Z",
+        "release_date": "2021-11-07T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-11-12T00:00:00.000Z",
+        "end_of_life_date": "2024-11-11T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -481,11 +498,12 @@
         }
       },
       {
+        "image": "dotnet",
         "name": "5.0",
         "status": "retired",
-        "release_date": "2020-11-10T00:00:00.000Z",
+        "release_date": "2020-11-09T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-05-10T00:00:00.000Z",
+        "end_of_life_date": "2022-05-09T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -504,11 +522,12 @@
         }
       },
       {
+        "image": "dotnet",
         "name": "3.1",
         "status": "retired",
-        "release_date": "2019-12-03T00:00:00.000Z",
+        "release_date": "2019-12-02T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-12-13T00:00:00.000Z",
+        "end_of_life_date": "2022-12-12T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -527,11 +546,12 @@
         }
       },
       {
+        "image": "dotnet",
         "name": "2.2",
         "status": "retired",
-        "release_date": "2018-12-04T00:00:00.000Z",
+        "release_date": "2018-12-03T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2019-12-23T00:00:00.000Z",
+        "end_of_life_date": "2019-12-22T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -550,11 +570,12 @@
         }
       },
       {
+        "image": "dotnet",
         "name": "2.1",
         "status": "retired",
-        "release_date": "2018-05-30T00:00:00.000Z",
+        "release_date": "2018-05-29T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2021-08-21T00:00:00.000Z",
+        "end_of_life_date": "2021-08-20T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -573,11 +594,12 @@
         }
       },
       {
+        "image": "dotnet",
         "name": "2.0",
         "status": "retired",
-        "release_date": "2017-08-14T00:00:00.000Z",
+        "release_date": "2017-08-13T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2018-10-01T00:00:00.000Z",
+        "end_of_life_date": "2018-09-30T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -613,11 +635,12 @@
     "type": "elasticsearch",
     "versions": [
       {
+        "image": "elasticsearch",
         "name": "7.12",
         "status": "supported",
-        "release_date": "2019-04-10T00:00:00.000Z",
+        "release_date": "2019-04-09T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2026-01-15T00:00:00.000Z",
+        "end_of_life_date": "2026-01-14T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -631,11 +654,12 @@
         }
       },
       {
+        "image": "elasticsearch",
         "name": "7.10",
         "status": "supported",
-        "release_date": "2019-04-10T00:00:00.000Z",
+        "release_date": "2019-04-09T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2026-01-15T00:00:00.000Z",
+        "end_of_life_date": "2026-01-14T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -655,11 +679,12 @@
         }
       },
       {
+        "image": "elasticsearch",
         "name": "7.9",
         "status": "supported",
-        "release_date": "2019-04-10T00:00:00.000Z",
+        "release_date": "2019-04-09T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2026-01-15T00:00:00.000Z",
+        "end_of_life_date": "2026-01-14T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -679,11 +704,12 @@
         }
       },
       {
+        "image": "elasticsearch",
         "name": "7.7",
         "status": "supported",
-        "release_date": "2019-04-10T00:00:00.000Z",
+        "release_date": "2019-04-09T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2026-01-15T00:00:00.000Z",
+        "end_of_life_date": "2026-01-14T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -703,11 +729,12 @@
         }
       },
       {
+        "image": "elasticsearch",
         "name": "7.6",
         "status": "supported",
-        "release_date": "2019-04-10T00:00:00.000Z",
+        "release_date": "2019-04-09T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2026-01-15T00:00:00.000Z",
+        "end_of_life_date": "2026-01-14T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -727,11 +754,12 @@
         }
       },
       {
+        "image": "elasticsearch",
         "name": "7.5",
         "status": "supported",
-        "release_date": "2019-04-10T00:00:00.000Z",
+        "release_date": "2019-04-09T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2026-01-15T00:00:00.000Z",
+        "end_of_life_date": "2026-01-14T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -751,11 +779,12 @@
         }
       },
       {
+        "image": "elasticsearch",
         "name": "7.2",
         "status": "supported",
-        "release_date": "2019-04-10T00:00:00.000Z",
+        "release_date": "2019-04-09T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2026-01-15T00:00:00.000Z",
+        "end_of_life_date": "2026-01-14T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -775,11 +804,12 @@
         }
       },
       {
+        "image": "elasticsearch",
         "name": "6.8",
         "status": "retired",
-        "release_date": "2017-11-14T00:00:00.000Z",
+        "release_date": "2017-11-13T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-02-10T00:00:00.000Z",
+        "end_of_life_date": "2022-02-09T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -799,11 +829,12 @@
         }
       },
       {
+        "image": "elasticsearch",
         "name": "6.5",
         "status": "retired",
-        "release_date": "2017-11-14T00:00:00.000Z",
+        "release_date": "2017-11-13T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-02-10T00:00:00.000Z",
+        "end_of_life_date": "2022-02-09T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -823,11 +854,12 @@
         }
       },
       {
+        "image": "elasticsearch",
         "name": "5.4",
         "status": "retired",
-        "release_date": "2017-11-14T00:00:00.000Z",
+        "release_date": "2017-11-13T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-02-10T00:00:00.000Z",
+        "end_of_life_date": "2022-02-09T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -847,11 +879,12 @@
         }
       },
       {
+        "image": "elasticsearch",
         "name": "5.2",
         "status": "retired",
-        "release_date": "2017-11-14T00:00:00.000Z",
+        "release_date": "2017-11-13T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-02-10T00:00:00.000Z",
+        "end_of_life_date": "2022-02-09T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -871,11 +904,12 @@
         }
       },
       {
+        "image": "elasticsearch",
         "name": "2.4",
         "status": "retired",
-        "release_date": "2017-11-14T00:00:00.000Z",
+        "release_date": "2017-11-13T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-02-10T00:00:00.000Z",
+        "end_of_life_date": "2022-02-09T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -895,11 +929,12 @@
         }
       },
       {
+        "image": "elasticsearch",
         "name": "1.7",
         "status": "retired",
-        "release_date": "2017-11-14T00:00:00.000Z",
+        "release_date": "2017-11-13T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-02-10T00:00:00.000Z",
+        "end_of_life_date": "2022-02-09T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -913,11 +948,12 @@
         }
       },
       {
+        "image": "elasticsearch",
         "name": "1.4",
         "status": "retired",
-        "release_date": "2017-11-14T00:00:00.000Z",
+        "release_date": "2017-11-13T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-02-10T00:00:00.000Z",
+        "end_of_life_date": "2022-02-09T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -931,11 +967,12 @@
         }
       },
       {
+        "image": "elasticsearch",
         "name": "0.90",
         "status": "retired",
-        "release_date": "2017-11-14T00:00:00.000Z",
+        "release_date": "2017-11-13T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-02-10T00:00:00.000Z",
+        "end_of_life_date": "2022-02-09T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1019,10 +1056,11 @@
     "type": "elixir",
     "versions": [
       {
+        "image": "elixir",
         "name": "1.18",
         "status": "supported",
-        "release_date": "2024-12-19T00:00:00.000Z",
-        "end_of_active_support_date": "2025-10-16T00:00:00.000Z",
+        "release_date": "2024-12-18T23:00:00.000Z",
+        "end_of_active_support_date": "2025-10-15T22:00:00.000Z",
         "end_of_life_date": null,
         "is_maintained": true,
         "is_end_of_active_support": false,
@@ -1042,10 +1080,11 @@
         }
       },
       {
+        "image": "elixir",
         "name": "1.15",
         "status": "deprecated",
-        "release_date": "2023-06-19T00:00:00.000Z",
-        "end_of_active_support_date": "2023-12-22T00:00:00.000Z",
+        "release_date": "2023-06-18T22:00:00.000Z",
+        "end_of_active_support_date": "2023-12-21T23:00:00.000Z",
         "end_of_life_date": null,
         "is_maintained": true,
         "is_end_of_active_support": true,
@@ -1065,11 +1104,12 @@
         }
       },
       {
+        "image": "elixir",
         "name": "1.14",
         "status": "retired",
-        "release_date": "2022-09-01T00:00:00.000Z",
-        "end_of_active_support_date": "2023-06-19T00:00:00.000Z",
-        "end_of_life_date": "2025-10-16T00:00:00.000Z",
+        "release_date": "2022-08-31T22:00:00.000Z",
+        "end_of_active_support_date": "2023-06-18T22:00:00.000Z",
+        "end_of_life_date": "2025-10-15T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1088,11 +1128,12 @@
         }
       },
       {
+        "image": "elixir",
         "name": "1.13",
         "status": "retired",
-        "release_date": "2021-12-03T00:00:00.000Z",
-        "end_of_active_support_date": "2022-09-01T00:00:00.000Z",
-        "end_of_life_date": "2024-12-19T00:00:00.000Z",
+        "release_date": "2021-12-02T23:00:00.000Z",
+        "end_of_active_support_date": "2022-08-31T22:00:00.000Z",
+        "end_of_life_date": "2024-12-18T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1111,11 +1152,12 @@
         }
       },
       {
+        "image": "elixir",
         "name": "1.12",
         "status": "retired",
-        "release_date": "2021-05-19T00:00:00.000Z",
-        "end_of_active_support_date": "2021-12-03T00:00:00.000Z",
-        "end_of_life_date": "2024-06-12T00:00:00.000Z",
+        "release_date": "2021-05-18T22:00:00.000Z",
+        "end_of_active_support_date": "2021-12-02T23:00:00.000Z",
+        "end_of_life_date": "2024-06-11T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1134,11 +1176,12 @@
         }
       },
       {
+        "image": "elixir",
         "name": "1.11",
         "status": "retired",
-        "release_date": "2020-10-06T00:00:00.000Z",
-        "end_of_active_support_date": "2021-05-19T00:00:00.000Z",
-        "end_of_life_date": "2023-12-22T00:00:00.000Z",
+        "release_date": "2020-10-05T22:00:00.000Z",
+        "end_of_active_support_date": "2021-05-18T22:00:00.000Z",
+        "end_of_life_date": "2023-12-21T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1157,11 +1200,12 @@
         }
       },
       {
+        "image": "elixir",
         "name": "1.10",
         "status": "retired",
-        "release_date": "2020-01-27T00:00:00.000Z",
-        "end_of_active_support_date": "2020-10-06T00:00:00.000Z",
-        "end_of_life_date": "2023-06-19T00:00:00.000Z",
+        "release_date": "2020-01-26T23:00:00.000Z",
+        "end_of_active_support_date": "2020-10-05T22:00:00.000Z",
+        "end_of_life_date": "2023-06-18T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1180,11 +1224,12 @@
         }
       },
       {
+        "image": "elixir",
         "name": "1.9",
         "status": "retired",
-        "release_date": "2019-06-24T00:00:00.000Z",
-        "end_of_active_support_date": "2020-01-27T00:00:00.000Z",
-        "end_of_life_date": "2022-09-01T00:00:00.000Z",
+        "release_date": "2019-06-23T22:00:00.000Z",
+        "end_of_active_support_date": "2020-01-26T23:00:00.000Z",
+        "end_of_life_date": "2022-08-31T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1240,9 +1285,10 @@
     "type": "golang",
     "versions": [
       {
+        "image": "golang",
         "name": "1.25",
         "status": "supported",
-        "release_date": "2025-08-12T00:00:00.000Z",
+        "release_date": "2025-08-11T22:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": true,
@@ -1263,9 +1309,10 @@
         }
       },
       {
+        "image": "golang",
         "name": "1.24",
         "status": "supported",
-        "release_date": "2025-02-11T00:00:00.000Z",
+        "release_date": "2025-02-10T23:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": true,
@@ -1286,11 +1333,12 @@
         }
       },
       {
+        "image": "golang",
         "name": "1.23",
         "status": "retired",
-        "release_date": "2024-08-13T00:00:00.000Z",
+        "release_date": "2024-08-12T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2025-08-12T00:00:00.000Z",
+        "end_of_life_date": "2025-08-11T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1309,11 +1357,12 @@
         }
       },
       {
+        "image": "golang",
         "name": "1.22",
         "status": "retired",
-        "release_date": "2024-02-06T00:00:00.000Z",
+        "release_date": "2024-02-05T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2025-02-11T00:00:00.000Z",
+        "end_of_life_date": "2025-02-10T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1332,11 +1381,12 @@
         }
       },
       {
+        "image": "golang",
         "name": "1.21",
         "status": "retired",
-        "release_date": "2023-08-08T00:00:00.000Z",
+        "release_date": "2023-08-07T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-08-13T00:00:00.000Z",
+        "end_of_life_date": "2024-08-12T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1355,11 +1405,12 @@
         }
       },
       {
+        "image": "golang",
         "name": "1.20",
         "status": "retired",
-        "release_date": "2023-02-01T00:00:00.000Z",
+        "release_date": "2023-01-31T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-02-06T00:00:00.000Z",
+        "end_of_life_date": "2024-02-05T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1378,11 +1429,12 @@
         }
       },
       {
+        "image": "golang",
         "name": "1.19",
         "status": "retired",
-        "release_date": "2022-08-02T00:00:00.000Z",
+        "release_date": "2022-08-01T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2023-09-06T00:00:00.000Z",
+        "end_of_life_date": "2023-09-05T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1401,11 +1453,12 @@
         }
       },
       {
+        "image": "golang",
         "name": "1.18",
         "status": "retired",
-        "release_date": "2022-03-15T00:00:00.000Z",
+        "release_date": "2022-03-14T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2023-02-01T00:00:00.000Z",
+        "end_of_life_date": "2023-01-31T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1424,11 +1477,12 @@
         }
       },
       {
+        "image": "golang",
         "name": "1.17",
         "status": "retired",
-        "release_date": "2021-08-16T00:00:00.000Z",
+        "release_date": "2021-08-15T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-08-02T00:00:00.000Z",
+        "end_of_life_date": "2022-08-01T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1447,11 +1501,12 @@
         }
       },
       {
+        "image": "golang",
         "name": "1.16",
         "status": "retired",
-        "release_date": "2021-02-16T00:00:00.000Z",
+        "release_date": "2021-02-15T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-03-15T00:00:00.000Z",
+        "end_of_life_date": "2022-03-14T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1470,11 +1525,12 @@
         }
       },
       {
+        "image": "golang",
         "name": "1.15",
         "status": "retired",
-        "release_date": "2020-08-11T00:00:00.000Z",
+        "release_date": "2020-08-10T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2021-08-16T00:00:00.000Z",
+        "end_of_life_date": "2021-08-15T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1493,11 +1549,12 @@
         }
       },
       {
+        "image": "golang",
         "name": "1.14",
         "status": "retired",
-        "release_date": "2020-02-25T00:00:00.000Z",
+        "release_date": "2020-02-24T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2021-02-16T00:00:00.000Z",
+        "end_of_life_date": "2021-02-15T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1516,11 +1573,12 @@
         }
       },
       {
+        "image": "golang",
         "name": "1.13",
         "status": "retired",
-        "release_date": "2019-09-03T00:00:00.000Z",
+        "release_date": "2019-09-02T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-08-11T00:00:00.000Z",
+        "end_of_life_date": "2020-08-10T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1539,11 +1597,12 @@
         }
       },
       {
+        "image": "golang",
         "name": "1.12",
         "status": "retired",
-        "release_date": "2019-02-25T00:00:00.000Z",
+        "release_date": "2019-02-24T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-02-25T00:00:00.000Z",
+        "end_of_life_date": "2020-02-24T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1562,11 +1621,12 @@
         }
       },
       {
+        "image": "golang",
         "name": "1.11",
         "status": "retired",
-        "release_date": "2018-08-24T00:00:00.000Z",
+        "release_date": "2018-08-23T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2019-09-03T00:00:00.000Z",
+        "end_of_life_date": "2019-09-02T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1585,11 +1645,12 @@
         }
       },
       {
+        "image": "golang",
         "name": "1.10",
         "status": "retired",
-        "release_date": "2018-02-16T00:00:00.000Z",
+        "release_date": "2018-02-15T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2019-02-25T00:00:00.000Z",
+        "end_of_life_date": "2019-02-24T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1608,11 +1669,12 @@
         }
       },
       {
+        "image": "golang",
         "name": "1.9",
         "status": "retired",
-        "release_date": "2018-02-16T00:00:00.000Z",
+        "release_date": "2018-02-15T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2019-02-25T00:00:00.000Z",
+        "end_of_life_date": "2019-02-24T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1631,11 +1693,12 @@
         }
       },
       {
+        "image": "golang",
         "name": "1.8",
         "status": "retired",
-        "release_date": "2018-02-16T00:00:00.000Z",
+        "release_date": "2018-02-15T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2019-02-25T00:00:00.000Z",
+        "end_of_life_date": "2019-02-24T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1671,9 +1734,10 @@
     "type": "influxdb",
     "versions": [
       {
+        "image": "influxdb",
         "name": "2.7",
         "status": "supported",
-        "release_date": "2020-11-09T00:00:00.000Z",
+        "release_date": "2020-11-08T23:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": true,
@@ -1694,9 +1758,10 @@
         }
       },
       {
+        "image": "influxdb",
         "name": "2.3",
         "status": "supported",
-        "release_date": "2020-11-09T00:00:00.000Z",
+        "release_date": "2020-11-08T23:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": true,
@@ -1717,9 +1782,10 @@
         }
       },
       {
+        "image": "influxdb",
         "name": "2.2",
         "status": "retired",
-        "release_date": "2020-11-09T00:00:00.000Z",
+        "release_date": "2020-11-08T23:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": false,
@@ -1735,9 +1801,10 @@
         }
       },
       {
+        "image": "influxdb",
         "name": "2.1",
         "status": "retired",
-        "release_date": "2020-11-09T00:00:00.000Z",
+        "release_date": "2020-11-08T23:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": false,
@@ -1753,9 +1820,10 @@
         }
       },
       {
+        "image": "influxdb",
         "name": "2.0",
         "status": "retired",
-        "release_date": "2020-11-09T00:00:00.000Z",
+        "release_date": "2020-11-08T23:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": false,
@@ -1771,9 +1839,10 @@
         }
       },
       {
+        "image": "influxdb",
         "name": "1.8",
         "status": "supported",
-        "release_date": "2016-09-07T00:00:00.000Z",
+        "release_date": "2016-09-06T22:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": true,
@@ -1794,9 +1863,10 @@
         }
       },
       {
+        "image": "influxdb",
         "name": "1.7",
         "status": "retired",
-        "release_date": "2016-09-07T00:00:00.000Z",
+        "release_date": "2016-09-06T22:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": false,
@@ -1817,9 +1887,10 @@
         }
       },
       {
+        "image": "influxdb",
         "name": "1.3",
         "status": "retired",
-        "release_date": "2016-09-07T00:00:00.000Z",
+        "release_date": "2016-09-06T22:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": false,
@@ -1841,9 +1912,10 @@
         }
       },
       {
+        "image": "influxdb",
         "name": "1.2",
         "status": "retired",
-        "release_date": "2016-09-07T00:00:00.000Z",
+        "release_date": "2016-09-06T22:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": false,
@@ -1876,6 +1948,7 @@
     "type": "gotenberg",
     "versions": [
       {
+        "image": "gotenberg",
         "name": "8",
         "status": "supported",
         "release_date": null,
@@ -1925,11 +1998,12 @@
     "type": "java",
     "versions": [
       {
+        "image": "java",
         "name": "21 (LTS)",
         "status": "supported",
-        "release_date": "2023-09-19T00:00:00.000Z",
+        "release_date": "2023-09-18T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2028-09-30T00:00:00.000Z",
+        "end_of_life_date": "2028-09-29T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -1948,11 +2022,12 @@
         }
       },
       {
+        "image": "java",
         "name": "19",
         "status": "retired",
-        "release_date": "2022-09-20T00:00:00.000Z",
+        "release_date": "2022-09-19T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2023-03-21T00:00:00.000Z",
+        "end_of_life_date": "2023-03-20T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1971,11 +2046,12 @@
         }
       },
       {
+        "image": "java",
         "name": "18",
         "status": "retired",
-        "release_date": "2022-03-22T00:00:00.000Z",
+        "release_date": "2022-03-21T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-09-20T00:00:00.000Z",
+        "end_of_life_date": "2022-09-19T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -1994,11 +2070,12 @@
         }
       },
       {
+        "image": "java",
         "name": "17 (LTS)",
         "status": "supported",
-        "release_date": "2021-09-14T00:00:00.000Z",
+        "release_date": "2021-09-13T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2026-09-30T00:00:00.000Z",
+        "end_of_life_date": "2026-09-29T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -2017,11 +2094,12 @@
         }
       },
       {
+        "image": "java",
         "name": "14",
         "status": "retired",
-        "release_date": "2020-03-17T00:00:00.000Z",
+        "release_date": "2020-03-16T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-09-16T00:00:00.000Z",
+        "end_of_life_date": "2020-09-15T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2040,11 +2118,12 @@
         }
       },
       {
+        "image": "java",
         "name": "13",
         "status": "retired",
-        "release_date": "2019-09-17T00:00:00.000Z",
+        "release_date": "2019-09-16T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-03-17T00:00:00.000Z",
+        "end_of_life_date": "2020-03-16T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2063,11 +2142,12 @@
         }
       },
       {
+        "image": "java",
         "name": "12",
         "status": "retired",
-        "release_date": "2019-03-19T00:00:00.000Z",
+        "release_date": "2019-03-18T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2019-09-17T00:00:00.000Z",
+        "end_of_life_date": "2019-09-16T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2086,11 +2166,12 @@
         }
       },
       {
+        "image": "java",
         "name": "11",
         "status": "retired",
-        "release_date": "2018-09-25T00:00:00.000Z",
+        "release_date": "2018-09-24T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2023-09-30T00:00:00.000Z",
+        "end_of_life_date": "2023-09-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2109,11 +2190,12 @@
         }
       },
       {
+        "image": "java",
         "name": "8",
         "status": "retired",
-        "release_date": "2014-03-18T00:00:00.000Z",
+        "release_date": "2014-03-17T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-03-31T00:00:00.000Z",
+        "end_of_life_date": "2022-03-30T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2161,11 +2243,12 @@
     "type": "kafka",
     "versions": [
       {
+        "image": "kafka",
         "name": "3.7",
         "status": "supported",
-        "release_date": "2024-02-26T00:00:00.000Z",
+        "release_date": "2024-02-25T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-07-26T00:00:00.000Z",
+        "end_of_life_date": "2024-07-25T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -2184,11 +2267,12 @@
         }
       },
       {
+        "image": "kafka",
         "name": "3.6",
         "status": "retired",
-        "release_date": "2023-10-03T00:00:00.000Z",
+        "release_date": "2023-10-02T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-02-27T00:00:00.000Z",
+        "end_of_life_date": "2024-02-26T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2207,11 +2291,12 @@
         }
       },
       {
+        "image": "kafka",
         "name": "3.4",
         "status": "retired",
-        "release_date": "2023-02-06T00:00:00.000Z",
+        "release_date": "2023-02-05T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2023-06-13T00:00:00.000Z",
+        "end_of_life_date": "2023-06-12T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2230,11 +2315,12 @@
         }
       },
       {
+        "image": "kafka",
         "name": "3.2",
         "status": "retired",
-        "release_date": "2022-05-09T00:00:00.000Z",
+        "release_date": "2022-05-08T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-09-28T00:00:00.000Z",
+        "end_of_life_date": "2022-09-27T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2253,11 +2339,12 @@
         }
       },
       {
+        "image": "kafka",
         "name": "2.7",
         "status": "retired",
-        "release_date": "2020-12-19T00:00:00.000Z",
+        "release_date": "2020-12-18T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2021-11-15T00:00:00.000Z",
+        "end_of_life_date": "2021-11-14T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2271,11 +2358,12 @@
         }
       },
       {
+        "image": "kafka",
         "name": "2.6",
         "status": "retired",
-        "release_date": "2020-08-03T00:00:00.000Z",
+        "release_date": "2020-08-02T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2021-11-15T00:00:00.000Z",
+        "end_of_life_date": "2021-11-14T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2289,11 +2377,12 @@
         }
       },
       {
+        "image": "kafka",
         "name": "2.5",
         "status": "retired",
-        "release_date": "2020-04-14T00:00:00.000Z",
+        "release_date": "2020-04-13T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-08-10T00:00:00.000Z",
+        "end_of_life_date": "2020-08-09T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2307,11 +2396,12 @@
         }
       },
       {
+        "image": "kafka",
         "name": "2.4",
         "status": "retired",
-        "release_date": "2019-12-14T00:00:00.000Z",
+        "release_date": "2019-12-13T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-04-15T00:00:00.000Z",
+        "end_of_life_date": "2020-04-14T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2325,11 +2415,12 @@
         }
       },
       {
+        "image": "kafka",
         "name": "2.3",
         "status": "retired",
-        "release_date": "2019-06-24T00:00:00.000Z",
+        "release_date": "2019-06-23T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2019-12-16T00:00:00.000Z",
+        "end_of_life_date": "2019-12-15T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2343,11 +2434,12 @@
         }
       },
       {
+        "image": "kafka",
         "name": "2.2",
         "status": "retired",
-        "release_date": "2019-03-22T00:00:00.000Z",
+        "release_date": "2019-03-21T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2019-12-01T00:00:00.000Z",
+        "end_of_life_date": "2019-11-30T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2361,11 +2453,12 @@
         }
       },
       {
+        "image": "kafka",
         "name": "2.1",
         "status": "retired",
-        "release_date": "2018-11-20T00:00:00.000Z",
+        "release_date": "2018-11-19T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2019-03-22T00:00:00.000Z",
+        "end_of_life_date": "2019-03-21T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2396,11 +2489,12 @@
     "type": "mariadb",
     "versions": [
       {
+        "image": "mariadb",
         "name": "11.8 (LTS)",
         "status": "supported",
-        "release_date": "2025-06-04T00:00:00.000Z",
+        "release_date": "2025-06-03T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2028-06-04T00:00:00.000Z",
+        "end_of_life_date": "2028-06-03T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -2421,11 +2515,12 @@
         }
       },
       {
+        "image": "mariadb",
         "name": "11.4 (LTS)",
         "status": "supported",
-        "release_date": "2024-05-29T00:00:00.000Z",
+        "release_date": "2024-05-28T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2029-05-29T00:00:00.000Z",
+        "end_of_life_date": "2029-05-28T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -2446,11 +2541,12 @@
         }
       },
       {
+        "image": "mariadb",
         "name": "11.3",
         "status": "retired",
-        "release_date": "2024-02-16T00:00:00.000Z",
+        "release_date": "2024-02-15T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-05-29T00:00:00.000Z",
+        "end_of_life_date": "2024-05-28T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2471,11 +2567,12 @@
         }
       },
       {
+        "image": "mariadb",
         "name": "11.2",
         "status": "retired",
-        "release_date": "2023-11-21T00:00:00.000Z",
+        "release_date": "2023-11-20T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-11-21T00:00:00.000Z",
+        "end_of_life_date": "2024-11-20T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2496,11 +2593,12 @@
         }
       },
       {
+        "image": "mariadb",
         "name": "11.0",
         "status": "retired",
-        "release_date": "2023-06-06T00:00:00.000Z",
+        "release_date": "2023-06-05T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-06-06T00:00:00.000Z",
+        "end_of_life_date": "2024-06-05T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2521,11 +2619,12 @@
         }
       },
       {
+        "image": "mariadb",
         "name": "10.11 (LTS)",
         "status": "supported",
-        "release_date": "2023-02-16T00:00:00.000Z",
+        "release_date": "2023-02-15T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2028-02-16T00:00:00.000Z",
+        "end_of_life_date": "2028-02-15T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -2546,11 +2645,12 @@
         }
       },
       {
+        "image": "mariadb",
         "name": "10.6 (LTS)",
         "status": "supported",
-        "release_date": "2021-07-06T00:00:00.000Z",
+        "release_date": "2021-07-05T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2026-07-06T00:00:00.000Z",
+        "end_of_life_date": "2026-07-05T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -2571,11 +2671,12 @@
         }
       },
       {
+        "image": "mariadb",
         "name": "10.5",
         "status": "retired",
-        "release_date": "2020-06-24T00:00:00.000Z",
+        "release_date": "2020-06-23T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2025-06-24T00:00:00.000Z",
+        "end_of_life_date": "2025-06-23T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2596,11 +2697,12 @@
         }
       },
       {
+        "image": "mariadb",
         "name": "10.4",
         "status": "retired",
-        "release_date": "2019-06-18T00:00:00.000Z",
+        "release_date": "2019-06-17T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-06-18T00:00:00.000Z",
+        "end_of_life_date": "2024-06-17T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2621,11 +2723,12 @@
         }
       },
       {
+        "image": "mariadb",
         "name": "10.3",
         "status": "retired",
-        "release_date": "2018-05-25T00:00:00.000Z",
+        "release_date": "2018-05-24T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2023-05-25T00:00:00.000Z",
+        "end_of_life_date": "2023-05-24T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2646,11 +2749,12 @@
         }
       },
       {
+        "image": "mariadb",
         "name": "10.2",
         "status": "retired",
-        "release_date": "2017-05-23T00:00:00.000Z",
+        "release_date": "2017-05-22T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-05-23T00:00:00.000Z",
+        "end_of_life_date": "2022-05-22T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2671,11 +2775,12 @@
         }
       },
       {
+        "image": "mariadb",
         "name": "10.1",
         "status": "retired",
-        "release_date": "2015-10-17T00:00:00.000Z",
+        "release_date": "2015-10-16T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-10-17T00:00:00.000Z",
+        "end_of_life_date": "2020-10-16T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2696,11 +2801,12 @@
         }
       },
       {
+        "image": "mariadb",
         "name": "10.0",
         "status": "retired",
-        "release_date": "2014-03-31T00:00:00.000Z",
+        "release_date": "2014-03-30T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2019-03-31T00:00:00.000Z",
+        "end_of_life_date": "2019-03-30T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2721,11 +2827,12 @@
         }
       },
       {
+        "image": "mariadb",
         "name": "5.5",
         "status": "retired",
-        "release_date": "2012-04-11T00:00:00.000Z",
+        "release_date": "2012-04-10T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-04-11T00:00:00.000Z",
+        "end_of_life_date": "2020-04-10T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2855,9 +2962,10 @@
     "type": "memcached",
     "versions": [
       {
+        "image": "memcached",
         "name": "1.6",
         "status": "supported",
-        "release_date": "2020-03-08T00:00:00.000Z",
+        "release_date": "2020-03-07T23:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": true,
@@ -2879,11 +2987,12 @@
         }
       },
       {
+        "image": "memcached",
         "name": "1.5",
         "status": "retired",
-        "release_date": "2017-07-21T00:00:00.000Z",
+        "release_date": "2017-07-20T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-03-09T00:00:00.000Z",
+        "end_of_life_date": "2020-03-08T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2903,11 +3012,12 @@
         }
       },
       {
+        "image": "memcached",
         "name": "1.4",
         "status": "retired",
-        "release_date": "2009-07-09T00:00:00.000Z",
+        "release_date": "2009-07-08T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2017-07-21T00:00:00.000Z",
+        "end_of_life_date": "2017-07-20T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -2950,11 +3060,12 @@
     "type": "mongodb",
     "versions": [
       {
+        "image": "mongodb",
         "name": "4.0",
         "status": "supported",
-        "release_date": "2018-06-30T00:00:00.000Z",
+        "release_date": "2018-06-29T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-04-30T00:00:00.000Z",
+        "end_of_life_date": "2022-04-29T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -2979,11 +3090,12 @@
         }
       },
       {
+        "image": "mongodb",
         "name": "3.6",
         "status": "retired",
-        "release_date": "2017-11-30T00:00:00.000Z",
+        "release_date": "2017-11-29T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2021-04-30T00:00:00.000Z",
+        "end_of_life_date": "2021-04-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3008,11 +3120,12 @@
         }
       },
       {
+        "image": "mongodb",
         "name": "3.4",
         "status": "retired",
-        "release_date": "2016-11-30T00:00:00.000Z",
+        "release_date": "2016-11-29T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-01-31T00:00:00.000Z",
+        "end_of_life_date": "2020-01-30T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3037,11 +3150,12 @@
         }
       },
       {
+        "image": "mongodb",
         "name": "3.2",
         "status": "retired",
-        "release_date": "2015-12-31T00:00:00.000Z",
+        "release_date": "2015-12-30T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2018-09-30T00:00:00.000Z",
+        "end_of_life_date": "2018-09-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3066,11 +3180,12 @@
         }
       },
       {
+        "image": "mongodb",
         "name": "3.0",
         "status": "retired",
-        "release_date": "2015-03-31T00:00:00.000Z",
+        "release_date": "2015-03-30T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2018-02-28T00:00:00.000Z",
+        "end_of_life_date": "2018-02-27T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3113,11 +3228,12 @@
     "premium": true,
     "versions": [
       {
+        "image": "mongodb-enterprise",
         "name": "7.0",
         "status": "supported",
-        "release_date": "2023-08-31T00:00:00.000Z",
+        "release_date": "2023-08-30T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2027-08-31T00:00:00.000Z",
+        "end_of_life_date": "2027-08-30T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -3137,11 +3253,12 @@
         }
       },
       {
+        "image": "mongodb-enterprise",
         "name": "6.0",
         "status": "retired",
-        "release_date": "2022-07-31T00:00:00.000Z",
+        "release_date": "2022-07-30T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2025-07-31T00:00:00.000Z",
+        "end_of_life_date": "2025-07-30T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3161,11 +3278,12 @@
         }
       },
       {
+        "image": "mongodb-enterprise",
         "name": "5.0",
         "status": "retired",
-        "release_date": "2021-07-31T00:00:00.000Z",
+        "release_date": "2021-07-30T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-10-31T00:00:00.000Z",
+        "end_of_life_date": "2024-10-30T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3185,11 +3303,12 @@
         }
       },
       {
+        "image": "mongodb-enterprise",
         "name": "4.4",
         "status": "retired",
-        "release_date": "2020-07-31T00:00:00.000Z",
+        "release_date": "2020-07-30T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-02-29T00:00:00.000Z",
+        "end_of_life_date": "2024-02-28T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3209,11 +3328,12 @@
         }
       },
       {
+        "image": "mongodb-enterprise",
         "name": "4.2",
         "status": "retired",
-        "release_date": "2019-08-31T00:00:00.000Z",
+        "release_date": "2019-08-30T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2023-04-30T00:00:00.000Z",
+        "end_of_life_date": "2023-04-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3233,11 +3353,12 @@
         }
       },
       {
+        "image": "mongodb-enterprise",
         "name": "4.0",
         "status": "retired",
-        "release_date": "2018-06-30T00:00:00.000Z",
+        "release_date": "2018-06-29T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-04-30T00:00:00.000Z",
+        "end_of_life_date": "2022-04-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3320,11 +3441,12 @@
     "type": "nodejs",
     "versions": [
       {
+        "image": "nodejs",
         "name": "24 (LTS)",
         "status": "supported",
-        "release_date": "2025-05-06T00:00:00.000Z",
-        "end_of_active_support_date": "2026-10-20T00:00:00.000Z",
-        "end_of_life_date": "2028-04-30T00:00:00.000Z",
+        "release_date": "2025-05-05T22:00:00.000Z",
+        "end_of_active_support_date": "2026-10-19T22:00:00.000Z",
+        "end_of_life_date": "2028-04-29T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -3343,11 +3465,12 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "22 (LTS)",
         "status": "deprecated",
-        "release_date": "2024-04-24T00:00:00.000Z",
-        "end_of_active_support_date": "2025-10-21T00:00:00.000Z",
-        "end_of_life_date": "2027-04-30T00:00:00.000Z",
+        "release_date": "2024-04-23T22:00:00.000Z",
+        "end_of_active_support_date": "2025-10-20T22:00:00.000Z",
+        "end_of_life_date": "2027-04-29T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": true,
         "is_end_of_life": false,
@@ -3366,11 +3489,12 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "20 (LTS)",
         "status": "deprecated",
-        "release_date": "2023-04-18T00:00:00.000Z",
-        "end_of_active_support_date": "2024-10-22T00:00:00.000Z",
-        "end_of_life_date": "2026-04-30T00:00:00.000Z",
+        "release_date": "2023-04-17T22:00:00.000Z",
+        "end_of_active_support_date": "2024-10-21T22:00:00.000Z",
+        "end_of_life_date": "2026-04-29T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": true,
         "is_end_of_life": false,
@@ -3389,11 +3513,12 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "18",
         "status": "retired",
-        "release_date": "2022-04-19T00:00:00.000Z",
-        "end_of_active_support_date": "2023-10-18T00:00:00.000Z",
-        "end_of_life_date": "2025-04-30T00:00:00.000Z",
+        "release_date": "2022-04-18T22:00:00.000Z",
+        "end_of_active_support_date": "2023-10-17T22:00:00.000Z",
+        "end_of_life_date": "2025-04-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3412,11 +3537,12 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "16",
         "status": "retired",
-        "release_date": "2021-04-20T00:00:00.000Z",
-        "end_of_active_support_date": "2022-10-18T00:00:00.000Z",
-        "end_of_life_date": "2023-09-11T00:00:00.000Z",
+        "release_date": "2021-04-19T22:00:00.000Z",
+        "end_of_active_support_date": "2022-10-17T22:00:00.000Z",
+        "end_of_life_date": "2023-09-10T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3435,11 +3561,12 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "8.9",
         "status": "retired",
-        "release_date": "2017-05-30T00:00:00.000Z",
-        "end_of_active_support_date": "2019-01-01T00:00:00.000Z",
-        "end_of_life_date": "2019-12-31T00:00:00.000Z",
+        "release_date": "2017-05-29T22:00:00.000Z",
+        "end_of_active_support_date": "2018-12-31T23:00:00.000Z",
+        "end_of_life_date": "2019-12-30T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3458,11 +3585,12 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "6.10",
         "status": "retired",
-        "release_date": "2016-04-26T00:00:00.000Z",
-        "end_of_active_support_date": "2018-04-30T00:00:00.000Z",
-        "end_of_life_date": "2019-04-30T00:00:00.000Z",
+        "release_date": "2016-04-25T22:00:00.000Z",
+        "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
+        "end_of_life_date": "2019-04-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3481,11 +3609,12 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "6.9",
         "status": "retired",
-        "release_date": "2016-04-26T00:00:00.000Z",
-        "end_of_active_support_date": "2018-04-30T00:00:00.000Z",
-        "end_of_life_date": "2019-04-30T00:00:00.000Z",
+        "release_date": "2016-04-25T22:00:00.000Z",
+        "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
+        "end_of_life_date": "2019-04-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3504,11 +3633,12 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "6.8",
         "status": "retired",
-        "release_date": "2016-04-26T00:00:00.000Z",
-        "end_of_active_support_date": "2018-04-30T00:00:00.000Z",
-        "end_of_life_date": "2019-04-30T00:00:00.000Z",
+        "release_date": "2016-04-25T22:00:00.000Z",
+        "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
+        "end_of_life_date": "2019-04-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3527,11 +3657,12 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "6.6",
         "status": "retired",
-        "release_date": "2016-04-26T00:00:00.000Z",
-        "end_of_active_support_date": "2018-04-30T00:00:00.000Z",
-        "end_of_life_date": "2019-04-30T00:00:00.000Z",
+        "release_date": "2016-04-25T22:00:00.000Z",
+        "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
+        "end_of_life_date": "2019-04-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3550,11 +3681,12 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "6.3",
         "status": "retired",
-        "release_date": "2016-04-26T00:00:00.000Z",
-        "end_of_active_support_date": "2018-04-30T00:00:00.000Z",
-        "end_of_life_date": "2019-04-30T00:00:00.000Z",
+        "release_date": "2016-04-25T22:00:00.000Z",
+        "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
+        "end_of_life_date": "2019-04-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3573,11 +3705,12 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "6.2",
         "status": "retired",
-        "release_date": "2016-04-26T00:00:00.000Z",
-        "end_of_active_support_date": "2018-04-30T00:00:00.000Z",
-        "end_of_life_date": "2019-04-30T00:00:00.000Z",
+        "release_date": "2016-04-25T22:00:00.000Z",
+        "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
+        "end_of_life_date": "2019-04-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3596,11 +3729,12 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "4.7",
         "status": "retired",
-        "release_date": "2015-09-09T00:00:00.000Z",
-        "end_of_active_support_date": "2017-04-01T00:00:00.000Z",
-        "end_of_life_date": "2018-04-30T00:00:00.000Z",
+        "release_date": "2015-09-08T22:00:00.000Z",
+        "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
+        "end_of_life_date": "2018-04-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3619,11 +3753,12 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "4.6",
         "status": "retired",
-        "release_date": "2015-09-09T00:00:00.000Z",
-        "end_of_active_support_date": "2017-04-01T00:00:00.000Z",
-        "end_of_life_date": "2018-04-30T00:00:00.000Z",
+        "release_date": "2015-09-08T22:00:00.000Z",
+        "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
+        "end_of_life_date": "2018-04-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3642,11 +3777,12 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "4.5",
         "status": "retired",
-        "release_date": "2015-09-09T00:00:00.000Z",
-        "end_of_active_support_date": "2017-04-01T00:00:00.000Z",
-        "end_of_life_date": "2018-04-30T00:00:00.000Z",
+        "release_date": "2015-09-08T22:00:00.000Z",
+        "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
+        "end_of_life_date": "2018-04-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3665,11 +3801,12 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "4.4",
         "status": "retired",
-        "release_date": "2015-09-09T00:00:00.000Z",
-        "end_of_active_support_date": "2017-04-01T00:00:00.000Z",
-        "end_of_life_date": "2018-04-30T00:00:00.000Z",
+        "release_date": "2015-09-08T22:00:00.000Z",
+        "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
+        "end_of_life_date": "2018-04-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3688,11 +3825,12 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "4.3",
         "status": "retired",
-        "release_date": "2015-09-09T00:00:00.000Z",
-        "end_of_active_support_date": "2017-04-01T00:00:00.000Z",
-        "end_of_life_date": "2018-04-30T00:00:00.000Z",
+        "release_date": "2015-09-08T22:00:00.000Z",
+        "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
+        "end_of_life_date": "2018-04-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3711,11 +3849,12 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "4.2",
         "status": "retired",
-        "release_date": "2015-09-09T00:00:00.000Z",
-        "end_of_active_support_date": "2017-04-01T00:00:00.000Z",
-        "end_of_life_date": "2018-04-30T00:00:00.000Z",
+        "release_date": "2015-09-08T22:00:00.000Z",
+        "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
+        "end_of_life_date": "2018-04-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3734,9 +3873,10 @@
         }
       },
       {
+        "image": "nodejs",
         "name": "0.12",
         "status": "retired",
-        "release_date": "2015-01-20T00:00:00.000Z",
+        "release_date": "2015-01-19T23:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": false,
@@ -3789,9 +3929,10 @@
     "type": "opensearch",
     "versions": [
       {
+        "image": "opensearch",
         "name": "3",
         "status": "supported",
-        "release_date": "2025-05-06T00:00:00.000Z",
+        "release_date": "2025-05-05T22:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": true,
@@ -3813,10 +3954,11 @@
         }
       },
       {
+        "image": "opensearch",
         "name": "2",
         "status": "deprecated",
-        "release_date": "2022-05-26T00:00:00.000Z",
-        "end_of_active_support_date": "2025-05-06T00:00:00.000Z",
+        "release_date": "2022-05-25T22:00:00.000Z",
+        "end_of_active_support_date": "2025-05-05T22:00:00.000Z",
         "end_of_life_date": null,
         "is_maintained": true,
         "is_end_of_active_support": true,
@@ -3837,11 +3979,12 @@
         }
       },
       {
+        "image": "opensearch",
         "name": "1.2",
         "status": "retired",
-        "release_date": "2021-07-12T00:00:00.000Z",
-        "end_of_active_support_date": "2022-05-26T00:00:00.000Z",
-        "end_of_life_date": "2025-05-06T00:00:00.000Z",
+        "release_date": "2021-07-11T22:00:00.000Z",
+        "end_of_active_support_date": "2022-05-25T22:00:00.000Z",
+        "end_of_life_date": "2025-05-05T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3861,11 +4004,12 @@
         }
       },
       {
+        "image": "opensearch",
         "name": "1.1",
         "status": "retired",
-        "release_date": "2021-07-12T00:00:00.000Z",
-        "end_of_active_support_date": "2022-05-26T00:00:00.000Z",
-        "end_of_life_date": "2025-05-06T00:00:00.000Z",
+        "release_date": "2021-07-11T22:00:00.000Z",
+        "end_of_active_support_date": "2022-05-25T22:00:00.000Z",
+        "end_of_life_date": "2025-05-05T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3885,11 +4029,12 @@
         }
       },
       {
+        "image": "opensearch",
         "name": "1",
         "status": "retired",
-        "release_date": "2021-07-12T00:00:00.000Z",
-        "end_of_active_support_date": "2022-05-26T00:00:00.000Z",
-        "end_of_life_date": "2025-05-06T00:00:00.000Z",
+        "release_date": "2021-07-11T22:00:00.000Z",
+        "end_of_active_support_date": "2022-05-25T22:00:00.000Z",
+        "end_of_life_date": "2025-05-05T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -3945,6 +4090,7 @@
     "type": "oracle-mysql",
     "versions": [
       {
+        "image": "oracle-mysql",
         "name": "8.4",
         "status": "supported",
         "release_date": null,
@@ -3963,6 +4109,7 @@
         }
       },
       {
+        "image": "oracle-mysql",
         "name": "8.0",
         "status": "deprecated",
         "release_date": null,
@@ -3981,6 +4128,7 @@
         }
       },
       {
+        "image": "oracle-mysql",
         "name": "5.7",
         "status": "deprecated",
         "release_date": null,
@@ -4054,11 +4202,12 @@
     },
     "versions": [
       {
+        "image": "php",
         "name": "8.5",
         "status": "supported",
-        "release_date": "2025-11-20T00:00:00.000Z",
-        "end_of_active_support_date": "2027-12-31T00:00:00.000Z",
-        "end_of_life_date": "2029-12-31T00:00:00.000Z",
+        "release_date": "2025-11-19T23:00:00.000Z",
+        "end_of_active_support_date": "2027-12-30T23:00:00.000Z",
+        "end_of_life_date": "2029-12-30T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -4081,11 +4230,12 @@
         }
       },
       {
+        "image": "php",
         "name": "8.4",
         "status": "supported",
-        "release_date": "2024-11-21T00:00:00.000Z",
-        "end_of_active_support_date": "2026-12-31T00:00:00.000Z",
-        "end_of_life_date": "2028-12-31T00:00:00.000Z",
+        "release_date": "2024-11-20T23:00:00.000Z",
+        "end_of_active_support_date": "2026-12-30T23:00:00.000Z",
+        "end_of_life_date": "2028-12-30T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -4108,11 +4258,12 @@
         }
       },
       {
+        "image": "php",
         "name": "8.3",
         "status": "supported",
-        "release_date": "2023-11-23T00:00:00.000Z",
-        "end_of_active_support_date": "2025-12-31T00:00:00.000Z",
-        "end_of_life_date": "2027-12-31T00:00:00.000Z",
+        "release_date": "2023-11-22T23:00:00.000Z",
+        "end_of_active_support_date": "2025-12-30T23:00:00.000Z",
+        "end_of_life_date": "2027-12-30T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -4135,11 +4286,12 @@
         }
       },
       {
+        "image": "php",
         "name": "8.2",
         "status": "deprecated",
-        "release_date": "2022-12-08T00:00:00.000Z",
-        "end_of_active_support_date": "2024-12-31T00:00:00.000Z",
-        "end_of_life_date": "2026-12-31T00:00:00.000Z",
+        "release_date": "2022-12-07T23:00:00.000Z",
+        "end_of_active_support_date": "2024-12-30T23:00:00.000Z",
+        "end_of_life_date": "2026-12-30T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": true,
         "is_end_of_life": false,
@@ -4162,11 +4314,12 @@
         }
       },
       {
+        "image": "php",
         "name": "8.1",
         "status": "deprecated",
-        "release_date": "2021-11-25T00:00:00.000Z",
-        "end_of_active_support_date": "2023-11-25T00:00:00.000Z",
-        "end_of_life_date": "2025-12-31T00:00:00.000Z",
+        "release_date": "2021-11-24T23:00:00.000Z",
+        "end_of_active_support_date": "2023-11-24T23:00:00.000Z",
+        "end_of_life_date": "2025-12-30T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": true,
         "is_end_of_life": false,
@@ -4189,11 +4342,12 @@
         }
       },
       {
+        "image": "php",
         "name": "8.0",
         "status": "retired",
-        "release_date": "2020-11-26T00:00:00.000Z",
-        "end_of_active_support_date": "2022-11-26T00:00:00.000Z",
-        "end_of_life_date": "2023-11-26T00:00:00.000Z",
+        "release_date": "2020-11-25T23:00:00.000Z",
+        "end_of_active_support_date": "2022-11-25T23:00:00.000Z",
+        "end_of_life_date": "2023-11-25T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4216,11 +4370,12 @@
         }
       },
       {
+        "image": "php",
         "name": "7.4",
         "status": "retired",
-        "release_date": "2019-11-28T00:00:00.000Z",
-        "end_of_active_support_date": "2021-11-28T00:00:00.000Z",
-        "end_of_life_date": "2022-11-28T00:00:00.000Z",
+        "release_date": "2019-11-27T23:00:00.000Z",
+        "end_of_active_support_date": "2021-11-27T23:00:00.000Z",
+        "end_of_life_date": "2022-11-27T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4243,11 +4398,12 @@
         }
       },
       {
+        "image": "php",
         "name": "7.3",
         "status": "retired",
-        "release_date": "2018-12-06T00:00:00.000Z",
-        "end_of_active_support_date": "2020-12-06T00:00:00.000Z",
-        "end_of_life_date": "2021-12-06T00:00:00.000Z",
+        "release_date": "2018-12-05T23:00:00.000Z",
+        "end_of_active_support_date": "2020-12-05T23:00:00.000Z",
+        "end_of_life_date": "2021-12-05T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4270,11 +4426,12 @@
         }
       },
       {
+        "image": "php",
         "name": "7.2",
         "status": "retired",
-        "release_date": "2017-11-30T00:00:00.000Z",
-        "end_of_active_support_date": "2019-11-30T00:00:00.000Z",
-        "end_of_life_date": "2020-11-30T00:00:00.000Z",
+        "release_date": "2017-11-29T23:00:00.000Z",
+        "end_of_active_support_date": "2019-11-29T23:00:00.000Z",
+        "end_of_life_date": "2020-11-29T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4297,11 +4454,12 @@
         }
       },
       {
+        "image": "php",
         "name": "7.1",
         "status": "retired",
-        "release_date": "2016-12-01T00:00:00.000Z",
-        "end_of_active_support_date": "2018-12-01T00:00:00.000Z",
-        "end_of_life_date": "2019-12-01T00:00:00.000Z",
+        "release_date": "2016-11-30T23:00:00.000Z",
+        "end_of_active_support_date": "2018-11-30T23:00:00.000Z",
+        "end_of_life_date": "2019-11-30T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4324,11 +4482,12 @@
         }
       },
       {
+        "image": "php",
         "name": "7.0",
         "status": "retired",
-        "release_date": "2015-12-03T00:00:00.000Z",
-        "end_of_active_support_date": "2018-01-04T00:00:00.000Z",
-        "end_of_life_date": "2019-01-10T00:00:00.000Z",
+        "release_date": "2015-12-02T23:00:00.000Z",
+        "end_of_active_support_date": "2018-01-03T23:00:00.000Z",
+        "end_of_life_date": "2019-01-09T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4351,11 +4510,12 @@
         }
       },
       {
+        "image": "php",
         "name": "5.6",
         "status": "retired",
-        "release_date": "2014-08-28T00:00:00.000Z",
-        "end_of_active_support_date": "2017-01-19T00:00:00.000Z",
-        "end_of_life_date": "2018-12-31T00:00:00.000Z",
+        "release_date": "2014-08-27T22:00:00.000Z",
+        "end_of_active_support_date": "2017-01-18T23:00:00.000Z",
+        "end_of_life_date": "2018-12-30T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4378,11 +4538,12 @@
         }
       },
       {
+        "image": "php",
         "name": "5.5",
         "status": "retired",
-        "release_date": "2013-06-20T00:00:00.000Z",
-        "end_of_active_support_date": "2015-07-10T00:00:00.000Z",
-        "end_of_life_date": "2016-07-21T00:00:00.000Z",
+        "release_date": "2013-06-19T22:00:00.000Z",
+        "end_of_active_support_date": "2015-07-09T22:00:00.000Z",
+        "end_of_life_date": "2016-07-20T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4405,11 +4566,12 @@
         }
       },
       {
+        "image": "php",
         "name": "5.4",
         "status": "retired",
-        "release_date": "2012-03-01T00:00:00.000Z",
-        "end_of_active_support_date": "2014-09-14T00:00:00.000Z",
-        "end_of_life_date": "2015-09-14T00:00:00.000Z",
+        "release_date": "2012-02-29T23:00:00.000Z",
+        "end_of_active_support_date": "2014-09-13T22:00:00.000Z",
+        "end_of_life_date": "2015-09-13T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4449,11 +4611,12 @@
     "type": "postgresql",
     "versions": [
       {
+        "image": "postgresql",
         "name": "18",
         "status": "supported",
-        "release_date": "2025-09-25T00:00:00.000Z",
+        "release_date": "2025-09-24T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2030-11-14T00:00:00.000Z",
+        "end_of_life_date": "2030-11-13T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -4483,11 +4646,12 @@
         }
       },
       {
+        "image": "postgresql",
         "name": "17",
         "status": "supported",
-        "release_date": "2024-09-26T00:00:00.000Z",
+        "release_date": "2024-09-25T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2029-11-08T00:00:00.000Z",
+        "end_of_life_date": "2029-11-07T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -4509,11 +4673,12 @@
         }
       },
       {
+        "image": "postgresql",
         "name": "16",
         "status": "supported",
-        "release_date": "2023-09-14T00:00:00.000Z",
+        "release_date": "2023-09-13T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2028-11-09T00:00:00.000Z",
+        "end_of_life_date": "2028-11-08T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -4535,11 +4700,12 @@
         }
       },
       {
+        "image": "postgresql",
         "name": "15",
         "status": "supported",
-        "release_date": "2022-10-13T00:00:00.000Z",
+        "release_date": "2022-10-12T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2027-11-11T00:00:00.000Z",
+        "end_of_life_date": "2027-11-10T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -4561,11 +4727,12 @@
         }
       },
       {
+        "image": "postgresql",
         "name": "14",
         "status": "supported",
-        "release_date": "2021-09-30T00:00:00.000Z",
+        "release_date": "2021-09-29T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2026-11-12T00:00:00.000Z",
+        "end_of_life_date": "2026-11-11T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -4587,11 +4754,12 @@
         }
       },
       {
+        "image": "postgresql",
         "name": "13",
         "status": "retired",
-        "release_date": "2020-09-24T00:00:00.000Z",
+        "release_date": "2020-09-23T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2025-11-13T00:00:00.000Z",
+        "end_of_life_date": "2025-11-12T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4613,11 +4781,12 @@
         }
       },
       {
+        "image": "postgresql",
         "name": "12",
         "status": "retired",
-        "release_date": "2019-10-03T00:00:00.000Z",
+        "release_date": "2019-10-02T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-11-21T00:00:00.000Z",
+        "end_of_life_date": "2024-11-20T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4639,11 +4808,12 @@
         }
       },
       {
+        "image": "postgresql",
         "name": "11",
         "status": "retired",
-        "release_date": "2018-10-18T00:00:00.000Z",
+        "release_date": "2018-10-17T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2023-11-09T00:00:00.000Z",
+        "end_of_life_date": "2023-11-08T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4665,11 +4835,12 @@
         }
       },
       {
+        "image": "postgresql",
         "name": "10",
         "status": "retired",
-        "release_date": "2017-10-05T00:00:00.000Z",
+        "release_date": "2017-10-04T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-11-10T00:00:00.000Z",
+        "end_of_life_date": "2022-11-09T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4691,11 +4862,12 @@
         }
       },
       {
+        "image": "postgresql",
         "name": "9.6",
         "status": "retired",
-        "release_date": "2016-09-29T00:00:00.000Z",
+        "release_date": "2016-09-28T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2021-11-11T00:00:00.000Z",
+        "end_of_life_date": "2021-11-10T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4717,11 +4889,12 @@
         }
       },
       {
+        "image": "postgresql",
         "name": "9.5",
         "status": "retired",
-        "release_date": "2016-01-07T00:00:00.000Z",
+        "release_date": "2016-01-06T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2021-02-11T00:00:00.000Z",
+        "end_of_life_date": "2021-02-10T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4735,11 +4908,12 @@
         }
       },
       {
+        "image": "postgresql",
         "name": "9.3",
         "status": "retired",
-        "release_date": "2013-09-09T00:00:00.000Z",
+        "release_date": "2013-09-08T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2018-11-08T00:00:00.000Z",
+        "end_of_life_date": "2018-11-07T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4818,11 +4992,12 @@
     "type": "python",
     "versions": [
       {
+        "image": "python",
         "name": "3.13",
         "status": "supported",
-        "release_date": "2024-10-07T00:00:00.000Z",
-        "end_of_active_support_date": "2026-10-01T00:00:00.000Z",
-        "end_of_life_date": "2029-10-31T00:00:00.000Z",
+        "release_date": "2024-10-06T22:00:00.000Z",
+        "end_of_active_support_date": "2026-09-30T22:00:00.000Z",
+        "end_of_life_date": "2029-10-30T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -4841,11 +5016,12 @@
         }
       },
       {
+        "image": "python",
         "name": "3.12",
         "status": "deprecated",
-        "release_date": "2023-10-02T00:00:00.000Z",
-        "end_of_active_support_date": "2025-04-02T00:00:00.000Z",
-        "end_of_life_date": "2028-10-31T00:00:00.000Z",
+        "release_date": "2023-10-01T22:00:00.000Z",
+        "end_of_active_support_date": "2025-04-01T22:00:00.000Z",
+        "end_of_life_date": "2028-10-30T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": true,
         "is_end_of_life": false,
@@ -4864,11 +5040,12 @@
         }
       },
       {
+        "image": "python",
         "name": "3.11",
         "status": "deprecated",
-        "release_date": "2022-10-24T00:00:00.000Z",
-        "end_of_active_support_date": "2024-04-01T00:00:00.000Z",
-        "end_of_life_date": "2027-10-31T00:00:00.000Z",
+        "release_date": "2022-10-23T22:00:00.000Z",
+        "end_of_active_support_date": "2024-03-31T22:00:00.000Z",
+        "end_of_life_date": "2027-10-30T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": true,
         "is_end_of_life": false,
@@ -4887,11 +5064,12 @@
         }
       },
       {
+        "image": "python",
         "name": "3.10",
         "status": "deprecated",
-        "release_date": "2021-10-04T00:00:00.000Z",
-        "end_of_active_support_date": "2023-04-05T00:00:00.000Z",
-        "end_of_life_date": "2026-10-31T00:00:00.000Z",
+        "release_date": "2021-10-03T22:00:00.000Z",
+        "end_of_active_support_date": "2023-04-04T22:00:00.000Z",
+        "end_of_life_date": "2026-10-30T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": true,
         "is_end_of_life": false,
@@ -4910,11 +5088,12 @@
         }
       },
       {
+        "image": "python",
         "name": "3.9",
         "status": "retired",
-        "release_date": "2020-10-05T00:00:00.000Z",
-        "end_of_active_support_date": "2022-05-17T00:00:00.000Z",
-        "end_of_life_date": "2025-10-31T00:00:00.000Z",
+        "release_date": "2020-10-04T22:00:00.000Z",
+        "end_of_active_support_date": "2022-05-16T22:00:00.000Z",
+        "end_of_life_date": "2025-10-30T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4933,11 +5112,12 @@
         }
       },
       {
+        "image": "python",
         "name": "3.8",
         "status": "retired",
-        "release_date": "2019-10-14T00:00:00.000Z",
-        "end_of_active_support_date": "2021-05-03T00:00:00.000Z",
-        "end_of_life_date": "2024-10-07T00:00:00.000Z",
+        "release_date": "2019-10-13T22:00:00.000Z",
+        "end_of_active_support_date": "2021-05-02T22:00:00.000Z",
+        "end_of_life_date": "2024-10-06T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4956,11 +5136,12 @@
         }
       },
       {
+        "image": "python",
         "name": "3.7",
         "status": "retired",
-        "release_date": "2018-06-27T00:00:00.000Z",
-        "end_of_active_support_date": "2020-06-27T00:00:00.000Z",
-        "end_of_life_date": "2023-06-27T00:00:00.000Z",
+        "release_date": "2018-06-26T22:00:00.000Z",
+        "end_of_active_support_date": "2020-06-26T22:00:00.000Z",
+        "end_of_life_date": "2023-06-26T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -4979,11 +5160,12 @@
         }
       },
       {
+        "image": "python",
         "name": "3.6",
         "status": "retired",
-        "release_date": "2016-12-23T00:00:00.000Z",
-        "end_of_active_support_date": "2018-12-24T00:00:00.000Z",
-        "end_of_life_date": "2021-12-23T00:00:00.000Z",
+        "release_date": "2016-12-22T23:00:00.000Z",
+        "end_of_active_support_date": "2018-12-23T23:00:00.000Z",
+        "end_of_life_date": "2021-12-22T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5002,11 +5184,12 @@
         }
       },
       {
+        "image": "python",
         "name": "3.5",
         "status": "retired",
-        "release_date": "2015-09-13T00:00:00.000Z",
+        "release_date": "2015-09-12T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-09-30T00:00:00.000Z",
+        "end_of_life_date": "2020-09-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5025,11 +5208,12 @@
         }
       },
       {
+        "image": "python",
         "name": "2.7",
         "status": "retired",
-        "release_date": "2010-07-03T00:00:00.000Z",
+        "release_date": "2010-07-02T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-01-01T00:00:00.000Z",
+        "end_of_life_date": "2019-12-31T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5065,11 +5249,12 @@
     "type": "rabbitmq",
     "versions": [
       {
+        "image": "rabbitmq",
         "name": "4.1",
         "status": "supported",
-        "release_date": "2025-04-15T00:00:00.000Z",
+        "release_date": "2025-04-14T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2026-01-30T00:00:00.000Z",
+        "end_of_life_date": "2026-01-29T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -5092,11 +5277,12 @@
         }
       },
       {
+        "image": "rabbitmq",
         "name": "4.0",
         "status": "retired",
-        "release_date": "2024-09-18T00:00:00.000Z",
+        "release_date": "2024-09-17T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2025-04-15T00:00:00.000Z",
+        "end_of_life_date": "2025-04-14T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5119,11 +5305,12 @@
         }
       },
       {
+        "image": "rabbitmq",
         "name": "3.13",
         "status": "retired",
-        "release_date": "2024-02-22T00:00:00.000Z",
+        "release_date": "2024-02-21T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-09-17T00:00:00.000Z",
+        "end_of_life_date": "2024-09-16T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5146,11 +5333,12 @@
         }
       },
       {
+        "image": "rabbitmq",
         "name": "3.12",
         "status": "retired",
-        "release_date": "2023-06-01T00:00:00.000Z",
+        "release_date": "2023-05-31T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-02-21T00:00:00.000Z",
+        "end_of_life_date": "2024-02-20T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5173,11 +5361,12 @@
         }
       },
       {
+        "image": "rabbitmq",
         "name": "3.11",
         "status": "retired",
-        "release_date": "2022-09-26T00:00:00.000Z",
+        "release_date": "2022-09-25T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2023-06-01T00:00:00.000Z",
+        "end_of_life_date": "2023-05-31T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5200,11 +5389,12 @@
         }
       },
       {
+        "image": "rabbitmq",
         "name": "3.10",
         "status": "retired",
-        "release_date": "2022-05-03T00:00:00.000Z",
+        "release_date": "2022-05-02T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-09-28T00:00:00.000Z",
+        "end_of_life_date": "2022-09-27T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5227,11 +5417,12 @@
         }
       },
       {
+        "image": "rabbitmq",
         "name": "3.9",
         "status": "retired",
-        "release_date": "2021-07-23T00:00:00.000Z",
+        "release_date": "2021-07-22T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2023-01-31T00:00:00.000Z",
+        "end_of_life_date": "2023-01-30T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5254,11 +5445,12 @@
         }
       },
       {
+        "image": "rabbitmq",
         "name": "3.8",
         "status": "retired",
-        "release_date": "2019-10-01T00:00:00.000Z",
+        "release_date": "2019-09-30T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-07-31T00:00:00.000Z",
+        "end_of_life_date": "2022-07-30T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5281,11 +5473,12 @@
         }
       },
       {
+        "image": "rabbitmq",
         "name": "3.7",
         "status": "retired",
-        "release_date": "2017-11-28T00:00:00.000Z",
+        "release_date": "2017-11-27T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-09-30T00:00:00.000Z",
+        "end_of_life_date": "2020-09-29T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5308,11 +5501,12 @@
         }
       },
       {
+        "image": "rabbitmq",
         "name": "3.6",
         "status": "retired",
-        "release_date": "2015-12-22T00:00:00.000Z",
+        "release_date": "2015-12-21T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2018-05-31T00:00:00.000Z",
+        "end_of_life_date": "2018-05-30T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5335,11 +5529,12 @@
         }
       },
       {
+        "image": "rabbitmq",
         "name": "3.5",
         "status": "retired",
-        "release_date": "2015-03-11T00:00:00.000Z",
+        "release_date": "2015-03-10T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2016-10-31T00:00:00.000Z",
+        "end_of_life_date": "2016-10-30T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5405,9 +5600,10 @@
     "type": "redis",
     "versions": [
       {
+        "image": "redis",
         "name": "8.0",
         "status": "supported",
-        "release_date": "2025-05-02T00:00:00.000Z",
+        "release_date": "2025-05-01T22:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": true,
@@ -5430,11 +5626,12 @@
         }
       },
       {
+        "image": "redis",
         "name": "7.2",
         "status": "deprecated",
-        "release_date": "2023-08-15T00:00:00.000Z",
-        "end_of_active_support_date": "2024-07-29T00:00:00.000Z",
-        "end_of_life_date": "2026-02-28T00:00:00.000Z",
+        "release_date": "2023-08-14T22:00:00.000Z",
+        "end_of_active_support_date": "2024-07-28T22:00:00.000Z",
+        "end_of_life_date": "2026-02-27T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": true,
         "is_end_of_life": false,
@@ -5455,11 +5652,12 @@
         }
       },
       {
+        "image": "redis",
         "name": "7.0",
         "status": "retired",
-        "release_date": "2022-04-27T00:00:00.000Z",
-        "end_of_active_support_date": "2023-08-15T00:00:00.000Z",
-        "end_of_life_date": "2024-07-29T00:00:00.000Z",
+        "release_date": "2022-04-26T22:00:00.000Z",
+        "end_of_active_support_date": "2023-08-14T22:00:00.000Z",
+        "end_of_life_date": "2024-07-28T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5480,11 +5678,12 @@
         }
       },
       {
+        "image": "redis",
         "name": "6.2",
         "status": "retired",
-        "release_date": "2021-02-22T00:00:00.000Z",
-        "end_of_active_support_date": "2022-04-27T00:00:00.000Z",
-        "end_of_life_date": "2025-02-28T00:00:00.000Z",
+        "release_date": "2021-02-21T23:00:00.000Z",
+        "end_of_active_support_date": "2022-04-26T22:00:00.000Z",
+        "end_of_life_date": "2025-02-27T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5505,11 +5704,12 @@
         }
       },
       {
+        "image": "redis",
         "name": "6.0",
         "status": "retired",
-        "release_date": "2020-04-30T00:00:00.000Z",
-        "end_of_active_support_date": "2021-02-22T00:00:00.000Z",
-        "end_of_life_date": "2022-05-31T00:00:00.000Z",
+        "release_date": "2020-04-29T22:00:00.000Z",
+        "end_of_active_support_date": "2021-02-21T23:00:00.000Z",
+        "end_of_life_date": "2022-05-30T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5530,11 +5730,12 @@
         }
       },
       {
+        "image": "redis",
         "name": "5.0",
         "status": "retired",
-        "release_date": "2018-10-17T00:00:00.000Z",
-        "end_of_active_support_date": "2020-04-30T00:00:00.000Z",
-        "end_of_life_date": "2022-04-27T00:00:00.000Z",
+        "release_date": "2018-10-16T22:00:00.000Z",
+        "end_of_active_support_date": "2020-04-29T22:00:00.000Z",
+        "end_of_life_date": "2022-04-26T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5555,11 +5756,12 @@
         }
       },
       {
+        "image": "redis",
         "name": "4.0",
         "status": "retired",
-        "release_date": "2018-10-17T00:00:00.000Z",
-        "end_of_active_support_date": "2020-04-30T00:00:00.000Z",
-        "end_of_life_date": "2022-04-27T00:00:00.000Z",
+        "release_date": "2018-10-16T22:00:00.000Z",
+        "end_of_active_support_date": "2020-04-29T22:00:00.000Z",
+        "end_of_life_date": "2022-04-26T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5580,11 +5782,12 @@
         }
       },
       {
+        "image": "redis",
         "name": "3.2",
         "status": "retired",
-        "release_date": "2018-10-17T00:00:00.000Z",
-        "end_of_active_support_date": "2020-04-30T00:00:00.000Z",
-        "end_of_life_date": "2022-04-27T00:00:00.000Z",
+        "release_date": "2018-10-16T22:00:00.000Z",
+        "end_of_active_support_date": "2020-04-29T22:00:00.000Z",
+        "end_of_life_date": "2022-04-26T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5605,11 +5808,12 @@
         }
       },
       {
+        "image": "redis",
         "name": "3.0",
         "status": "retired",
-        "release_date": "2018-10-17T00:00:00.000Z",
-        "end_of_active_support_date": "2020-04-30T00:00:00.000Z",
-        "end_of_life_date": "2022-04-27T00:00:00.000Z",
+        "release_date": "2018-10-16T22:00:00.000Z",
+        "end_of_active_support_date": "2020-04-29T22:00:00.000Z",
+        "end_of_life_date": "2022-04-26T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5630,11 +5834,12 @@
         }
       },
       {
+        "image": "redis",
         "name": "2.8",
         "status": "retired",
-        "release_date": "2018-10-17T00:00:00.000Z",
-        "end_of_active_support_date": "2020-04-30T00:00:00.000Z",
-        "end_of_life_date": "2022-04-27T00:00:00.000Z",
+        "release_date": "2018-10-16T22:00:00.000Z",
+        "end_of_active_support_date": "2020-04-29T22:00:00.000Z",
+        "end_of_life_date": "2022-04-26T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5721,11 +5926,12 @@
     "type": "ruby",
     "versions": [
       {
+        "image": "ruby",
         "name": "3.4",
         "status": "supported",
-        "release_date": "2024-12-24T00:00:00.000Z",
+        "release_date": "2024-12-23T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2028-03-31T00:00:00.000Z",
+        "end_of_life_date": "2028-03-30T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -5744,11 +5950,12 @@
         }
       },
       {
+        "image": "ruby",
         "name": "3.3",
         "status": "supported",
-        "release_date": "2023-12-25T00:00:00.000Z",
+        "release_date": "2023-12-24T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2027-03-31T00:00:00.000Z",
+        "end_of_life_date": "2027-03-30T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -5767,11 +5974,12 @@
         }
       },
       {
+        "image": "ruby",
         "name": "3.2",
         "status": "supported",
-        "release_date": "2022-12-25T00:00:00.000Z",
+        "release_date": "2022-12-24T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2026-03-31T00:00:00.000Z",
+        "end_of_life_date": "2026-03-30T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -5790,11 +5998,12 @@
         }
       },
       {
+        "image": "ruby",
         "name": "3.1",
         "status": "retired",
-        "release_date": "2021-12-25T00:00:00.000Z",
+        "release_date": "2021-12-24T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2025-03-31T00:00:00.000Z",
+        "end_of_life_date": "2025-03-30T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5813,11 +6022,12 @@
         }
       },
       {
+        "image": "ruby",
         "name": "3.0",
         "status": "retired",
-        "release_date": "2020-12-25T00:00:00.000Z",
+        "release_date": "2020-12-24T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-04-23T00:00:00.000Z",
+        "end_of_life_date": "2024-04-22T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5836,11 +6046,12 @@
         }
       },
       {
+        "image": "ruby",
         "name": "2.7",
         "status": "retired",
-        "release_date": "2019-12-25T00:00:00.000Z",
+        "release_date": "2019-12-24T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2023-03-31T00:00:00.000Z",
+        "end_of_life_date": "2023-03-30T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5859,11 +6070,12 @@
         }
       },
       {
+        "image": "ruby",
         "name": "2.6",
         "status": "retired",
-        "release_date": "2018-12-25T00:00:00.000Z",
+        "release_date": "2018-12-24T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-03-31T00:00:00.000Z",
+        "end_of_life_date": "2022-03-30T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5882,11 +6094,12 @@
         }
       },
       {
+        "image": "ruby",
         "name": "2.5",
         "status": "retired",
-        "release_date": "2017-12-25T00:00:00.000Z",
+        "release_date": "2017-12-24T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2021-03-31T00:00:00.000Z",
+        "end_of_life_date": "2021-03-30T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5905,11 +6118,12 @@
         }
       },
       {
+        "image": "ruby",
         "name": "2.4",
         "status": "retired",
-        "release_date": "2016-12-23T00:00:00.000Z",
+        "release_date": "2016-12-22T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2020-03-31T00:00:00.000Z",
+        "end_of_life_date": "2020-03-30T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5928,11 +6142,12 @@
         }
       },
       {
+        "image": "ruby",
         "name": "2.3",
         "status": "retired",
-        "release_date": "2015-12-24T00:00:00.000Z",
+        "release_date": "2015-12-23T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2019-03-31T00:00:00.000Z",
+        "end_of_life_date": "2019-03-30T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -5995,11 +6210,12 @@
     "type": "rust",
     "versions": [
       {
+        "image": "rust",
         "name": "1",
         "status": "supported",
-        "release_date": "2018-09-13T00:00:00.000Z",
+        "release_date": "2018-09-12T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2018-10-26T00:00:00.000Z",
+        "end_of_life_date": "2018-10-25T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -6035,9 +6251,10 @@
     "type": "solr",
     "versions": [
       {
+        "image": "solr",
         "name": "9.9",
         "status": "supported",
-        "release_date": "2022-05-11T00:00:00.000Z",
+        "release_date": "2022-05-10T22:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": true,
@@ -6059,9 +6276,10 @@
         }
       },
       {
+        "image": "solr",
         "name": "9.7",
         "status": "retired",
-        "release_date": "2022-05-11T00:00:00.000Z",
+        "release_date": "2022-05-10T22:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": false,
@@ -6083,9 +6301,10 @@
         }
       },
       {
+        "image": "solr",
         "name": "9.6",
         "status": "supported",
-        "release_date": "2022-05-11T00:00:00.000Z",
+        "release_date": "2022-05-10T22:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": true,
@@ -6107,9 +6326,10 @@
         }
       },
       {
+        "image": "solr",
         "name": "9.4",
         "status": "supported",
-        "release_date": "2022-05-11T00:00:00.000Z",
+        "release_date": "2022-05-10T22:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": true,
@@ -6131,9 +6351,10 @@
         }
       },
       {
+        "image": "solr",
         "name": "9.2",
         "status": "supported",
-        "release_date": "2022-05-11T00:00:00.000Z",
+        "release_date": "2022-05-10T22:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": true,
@@ -6155,9 +6376,10 @@
         }
       },
       {
+        "image": "solr",
         "name": "9.1",
         "status": "supported",
-        "release_date": "2022-05-11T00:00:00.000Z",
+        "release_date": "2022-05-10T22:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": true,
@@ -6179,9 +6401,10 @@
         }
       },
       {
+        "image": "solr",
         "name": "9.0",
         "status": "retired",
-        "release_date": "2022-05-11T00:00:00.000Z",
+        "release_date": "2022-05-10T22:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": false,
@@ -6197,11 +6420,12 @@
         }
       },
       {
+        "image": "solr",
         "name": "8.11",
         "status": "retired",
-        "release_date": "2019-03-13T00:00:00.000Z",
+        "release_date": "2019-03-12T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-10-25T00:00:00.000Z",
+        "end_of_life_date": "2024-10-24T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -6221,11 +6445,12 @@
         }
       },
       {
+        "image": "solr",
         "name": "8.6",
         "status": "retired",
-        "release_date": "2019-03-13T00:00:00.000Z",
+        "release_date": "2019-03-12T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-10-25T00:00:00.000Z",
+        "end_of_life_date": "2024-10-24T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -6245,11 +6470,12 @@
         }
       },
       {
+        "image": "solr",
         "name": "8.4",
         "status": "retired",
-        "release_date": "2019-03-13T00:00:00.000Z",
+        "release_date": "2019-03-12T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-10-25T00:00:00.000Z",
+        "end_of_life_date": "2024-10-24T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -6269,11 +6495,12 @@
         }
       },
       {
+        "image": "solr",
         "name": "8.0",
         "status": "retired",
-        "release_date": "2019-03-13T00:00:00.000Z",
+        "release_date": "2019-03-12T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-10-25T00:00:00.000Z",
+        "end_of_life_date": "2024-10-24T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -6293,11 +6520,12 @@
         }
       },
       {
+        "image": "solr",
         "name": "7.7",
         "status": "retired",
-        "release_date": "2017-09-18T00:00:00.000Z",
+        "release_date": "2017-09-17T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-05-11T00:00:00.000Z",
+        "end_of_life_date": "2022-05-10T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -6317,11 +6545,12 @@
         }
       },
       {
+        "image": "solr",
         "name": "7.6",
         "status": "retired",
-        "release_date": "2017-09-18T00:00:00.000Z",
+        "release_date": "2017-09-17T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-05-11T00:00:00.000Z",
+        "end_of_life_date": "2022-05-10T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -6341,11 +6570,12 @@
         }
       },
       {
+        "image": "solr",
         "name": "6.6",
         "status": "retired",
-        "release_date": "2016-04-07T00:00:00.000Z",
+        "release_date": "2016-04-06T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2019-03-13T00:00:00.000Z",
+        "end_of_life_date": "2019-03-12T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -6365,11 +6595,12 @@
         }
       },
       {
+        "image": "solr",
         "name": "6.3",
         "status": "retired",
-        "release_date": "2016-04-07T00:00:00.000Z",
+        "release_date": "2016-04-06T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2019-03-13T00:00:00.000Z",
+        "end_of_life_date": "2019-03-12T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -6389,9 +6620,10 @@
         }
       },
       {
+        "image": "solr",
         "name": "4.10",
         "status": "retired",
-        "release_date": "2012-10-11T00:00:00.000Z",
+        "release_date": "2012-10-10T22:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": false,
@@ -6413,9 +6645,10 @@
         }
       },
       {
+        "image": "solr",
         "name": "3.6",
         "status": "retired",
-        "release_date": "2011-03-30T00:00:00.000Z",
+        "release_date": "2011-03-29T22:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": false,
@@ -6487,11 +6720,12 @@
     "type": "valkey",
     "versions": [
       {
+        "image": "valkey",
         "name": "8.1",
         "status": "supported",
-        "release_date": "2025-03-31T00:00:00.000Z",
-        "end_of_active_support_date": "2028-03-31T00:00:00.000Z",
-        "end_of_life_date": "2030-03-31T00:00:00.000Z",
+        "release_date": "2025-03-30T22:00:00.000Z",
+        "end_of_active_support_date": "2028-03-30T22:00:00.000Z",
+        "end_of_life_date": "2030-03-30T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -6512,11 +6746,12 @@
         }
       },
       {
+        "image": "valkey",
         "name": "8.0",
         "status": "supported",
-        "release_date": "2024-09-15T00:00:00.000Z",
-        "end_of_active_support_date": "2027-09-15T00:00:00.000Z",
-        "end_of_life_date": "2027-09-15T00:00:00.000Z",
+        "release_date": "2024-09-14T22:00:00.000Z",
+        "end_of_active_support_date": "2027-09-14T22:00:00.000Z",
+        "end_of_life_date": "2027-09-14T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -6563,11 +6798,12 @@
     "type": "varnish",
     "versions": [
       {
+        "image": "varnish",
         "name": "7.6",
         "status": "supported",
-        "release_date": "2024-09-13T00:00:00.000Z",
+        "release_date": "2024-09-12T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2025-09-15T00:00:00.000Z",
+        "end_of_life_date": "2025-09-14T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -6591,11 +6827,12 @@
         }
       },
       {
+        "image": "varnish",
         "name": "7.3",
         "status": "retired",
-        "release_date": "2023-03-15T00:00:00.000Z",
+        "release_date": "2023-03-14T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2024-03-15T00:00:00.000Z",
+        "end_of_life_date": "2024-03-14T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -6619,11 +6856,12 @@
         }
       },
       {
+        "image": "varnish",
         "name": "7.2",
         "status": "retired",
-        "release_date": "2022-09-15T00:00:00.000Z",
+        "release_date": "2022-09-14T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2023-09-15T00:00:00.000Z",
+        "end_of_life_date": "2023-09-14T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -6647,11 +6885,12 @@
         }
       },
       {
+        "image": "varnish",
         "name": "7.1",
         "status": "retired",
-        "release_date": "2022-03-15T00:00:00.000Z",
+        "release_date": "2022-03-14T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2023-03-15T00:00:00.000Z",
+        "end_of_life_date": "2023-03-14T23:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -6675,9 +6914,10 @@
         }
       },
       {
+        "image": "varnish",
         "name": "6.3 (LTS)",
         "status": "supported",
-        "release_date": "2018-03-15T00:00:00.000Z",
+        "release_date": "2018-03-14T23:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": true,
@@ -6703,9 +6943,10 @@
         }
       },
       {
+        "image": "varnish",
         "name": "6.0 (LTS)",
         "status": "supported",
-        "release_date": "2018-03-15T00:00:00.000Z",
+        "release_date": "2018-03-14T23:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": true,
@@ -6731,9 +6972,10 @@
         }
       },
       {
+        "image": "varnish",
         "name": "5.2",
         "status": "retired",
-        "release_date": "2018-03-15T00:00:00.000Z",
+        "release_date": "2018-03-14T23:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": false,
@@ -6758,9 +7000,10 @@
         }
       },
       {
+        "image": "varnish",
         "name": "5.1",
         "status": "retired",
-        "release_date": "2018-03-15T00:00:00.000Z",
+        "release_date": "2018-03-14T23:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_maintained": false,
@@ -6831,11 +7074,12 @@
   "activemq-artemis": {
     "versions": [
       {
+        "image": "activemq-artemis",
         "name": "2.42",
         "status": "supported",
-        "release_date": "2025-07-14T00:00:00.000Z",
+        "release_date": "2025-07-13T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2025-10-13T00:00:00.000Z",
+        "end_of_life_date": "2025-10-12T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -6843,11 +7087,12 @@
         "manifest": null
       },
       {
+        "image": "activemq-artemis",
         "name": "2",
         "status": "retired",
-        "release_date": "2015-05-21T00:00:00.000Z",
+        "release_date": "2015-05-20T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2015-09-15T00:00:00.000Z",
+        "end_of_life_date": "2015-09-14T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -6865,11 +7110,12 @@
   "elasticsearch-enterprise": {
     "versions": [
       {
+        "image": "elasticsearch-enterprise",
         "name": "8.5",
         "status": "supported",
-        "release_date": "2017-11-14T00:00:00.000Z",
+        "release_date": "2017-11-13T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-02-10T00:00:00.000Z",
+        "end_of_life_date": "2022-02-09T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -6889,11 +7135,12 @@
         }
       },
       {
+        "image": "elasticsearch-enterprise",
         "name": "7.17",
         "status": "supported",
-        "release_date": "2019-04-10T00:00:00.000Z",
+        "release_date": "2019-04-09T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2026-01-15T00:00:00.000Z",
+        "end_of_life_date": "2026-01-14T23:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -6917,11 +7164,12 @@
   "vault": {
     "versions": [
       {
+        "image": "vault",
         "name": "1.12",
         "status": "supported",
-        "release_date": "2022-10-10T00:00:00.000Z",
+        "release_date": "2022-10-09T22:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2023-09-27T00:00:00.000Z",
+        "end_of_life_date": "2023-09-26T22:00:00.000Z",
         "is_maintained": true,
         "is_end_of_active_support": false,
         "is_end_of_life": false,
@@ -6935,11 +7183,12 @@
         }
       },
       {
+        "image": "vault",
         "name": "1.8",
         "status": "retired",
-        "release_date": "2021-11-16T00:00:00.000Z",
+        "release_date": "2021-11-15T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-10-10T00:00:00.000Z",
+        "end_of_life_date": "2022-10-09T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
@@ -6953,11 +7202,12 @@
         }
       },
       {
+        "image": "vault",
         "name": "1.6",
         "status": "retired",
-        "release_date": "2021-11-16T00:00:00.000Z",
+        "release_date": "2021-11-15T23:00:00.000Z",
         "end_of_active_support_date": null,
-        "end_of_life_date": "2022-10-10T00:00:00.000Z",
+        "end_of_life_date": "2022-10-09T22:00:00.000Z",
         "is_maintained": false,
         "is_end_of_active_support": true,
         "is_end_of_life": true,
