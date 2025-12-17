@@ -10,6 +10,7 @@
     "name": "Headless Chrome",
     "repo_name": "chrome-headless",
     "runtime": false,
+    "need_disk": false,
     "versions": [
       {
         "name": "120",
@@ -291,14 +292,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "versions-dedicated-gen-3": {
-      "deprecated": [],
-      "supported": [
-        "95"
-      ]
-    },
-    "need_disk": false
+    ]
   },
   "clickhouse": {
     "description": "",
@@ -311,6 +305,7 @@
     "name": "ClickHouse",
     "repo_name": "clickhouse",
     "runtime": false,
+    "need_disk": false,
     "versions": [
       {
         "name": "25.8",
@@ -440,8 +435,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "need_disk": false
+    ]
   },
   "dotnet": {
     "description": "ASP.NET 5 application container.",
@@ -454,6 +448,7 @@
     "min_disk_size": null,
     "name": "C#/.Net Core",
     "runtime": true,
+    "need_disk": false,
     "versions": [
       {
         "name": "8.0 (LTS)",
@@ -679,8 +674,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "need_disk": false
+    ]
   },
   "elasticsearch": {
     "description": "A manufacture service for Elasticsearch",
@@ -693,6 +687,28 @@
     "name": "Elasticsearch",
     "repo_name": "elasticsearch",
     "runtime": false,
+    "versions-dedicated-gen-2": {
+      "supported": [
+        "7.2",
+        "7.5",
+        "7.6",
+        "7.7",
+        "7.9",
+        "7.10",
+        "7.17",
+        "8.5",
+        "8.8"
+      ],
+      "deprecated": [
+        "6.8",
+        "6.5",
+        "5.6",
+        "5.2",
+        "2.4",
+        "1.7"
+      ]
+    },
+    "need_disk": true,
     "versions": [
       {
         "name": "7.12",
@@ -1105,41 +1121,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "versions-dedicated-gen-2": {
-      "supported": [
-        "7.2",
-        "7.5",
-        "7.6",
-        "7.7",
-        "7.9",
-        "7.10",
-        "7.17",
-        "8.5",
-        "8.8"
-      ],
-      "deprecated": [
-        "6.8",
-        "6.5",
-        "5.6",
-        "5.2",
-        "2.4",
-        "1.7"
-      ]
-    },
-    "versions-dedicated-gen-3": {
-      "deprecated": [
-        "7.10",
-        "7.9",
-        "7.7",
-        "7.5",
-        "7.2",
-        "6.8",
-        "6.5"
-      ],
-      "supported": []
-    },
-    "need_disk": true
+    ]
   },
   "elixir": {
     "description": "",
@@ -1152,6 +1134,7 @@
     "min_disk_size": null,
     "name": "Elixir",
     "runtime": true,
+    "need_disk": false,
     "versions": [
       {
         "name": "1.18",
@@ -1377,8 +1360,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "need_disk": false
+    ]
   },
   "golang": {
     "description": "",
@@ -1391,6 +1373,7 @@
     "name": "Go",
     "repo_name": "golang",
     "runtime": true,
+    "need_disk": false,
     "versions": [
       {
         "name": "1.25",
@@ -1896,8 +1879,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "need_disk": false
+    ]
   },
   "influxdb": {
     "description": "",
@@ -1910,6 +1892,7 @@
     "name": "InfluxDB",
     "repo_name": "influxdb",
     "runtime": false,
+    "need_disk": true,
     "versions": [
       {
         "name": "2.7",
@@ -2144,8 +2127,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "need_disk": true
+    ]
   },
   "gotenberg": {
     "description": "",
@@ -2158,6 +2140,7 @@
     "name": "Gotenberg",
     "repo_name": "gotenberg",
     "runtime": false,
+    "need_disk": true,
     "versions": [
       {
         "name": "8",
@@ -2187,8 +2170,7 @@
           "supports_horizontal_scaling": true
         }
       }
-    ],
-    "need_disk": true
+    ]
   },
   "java": {
     "description": "",
@@ -2201,6 +2183,18 @@
     "name": "Java",
     "repo_name": "java",
     "runtime": true,
+    "versions-dedicated-gen-2": {
+      "supported": [
+        "17",
+        "11",
+        "8"
+      ],
+      "deprecated": [
+        "15",
+        "13",
+        "7"
+      ]
+    },
     "versions": [
       {
         "name": "21 (LTS)",
@@ -2454,19 +2448,7 @@
           "supports_horizontal_scaling": true
         }
       }
-    ],
-    "versions-dedicated-gen-2": {
-      "supported": [
-        "17",
-        "11",
-        "8"
-      ],
-      "deprecated": [
-        "15",
-        "13",
-        "7"
-      ]
-    }
+    ]
   },
   "kafka": {
     "description": "",
@@ -2479,6 +2461,7 @@
     "name": "Kafka",
     "repo_name": "kafka",
     "runtime": false,
+    "need_disk": true,
     "versions": [
       {
         "name": "3.7",
@@ -2753,8 +2736,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "need_disk": true
+    ]
   },
   "mariadb": {
     "description": "A manufacture-based container for MariaDB",
@@ -2767,6 +2749,23 @@
     "min_disk_size": 256,
     "name": "MariaDB/MySQL",
     "runtime": false,
+    "versions-dedicated-gen-2": {
+      "supported": [
+        "11.4 Galera",
+        "10.11 Galera",
+        "10.6 Galera",
+        "10.5 Galera",
+        "10.4 Galera"
+      ],
+      "deprecated": [
+        "11.2 Galera",
+        "10.2 Galera",
+        "10.1 Galera",
+        "10.0 Galera",
+        "10.3 Galera"
+      ]
+    },
+    "need_disk": true,
     "versions": [
       {
         "name": "11.8 (LTS)",
@@ -3188,37 +3187,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "versions-dedicated-gen-2": {
-      "supported": [
-        "11.4 Galera",
-        "10.11 Galera",
-        "10.6 Galera",
-        "10.5 Galera",
-        "10.4 Galera"
-      ],
-      "deprecated": [
-        "11.2 Galera",
-        "10.2 Galera",
-        "10.1 Galera",
-        "10.0 Galera",
-        "10.3 Galera"
-      ]
-    },
-    "versions-dedicated-gen-3": {
-      "supported": [
-        "10.11 Galera",
-        "10.6 Galera",
-        "10.5 Galera",
-        "10.4 Galera",
-        "10.3 Galera"
-      ],
-      "deprecated": [
-        "10.2 Galera",
-        "10.1 Galera"
-      ]
-    },
-    "need_disk": true
+    ]
   },
   "mysql": {
     "description": "A manufacture-based container for MariaDB",
@@ -3294,6 +3263,13 @@
     "min_disk_size": null,
     "name": "Memcached",
     "runtime": false,
+    "versions-dedicated-gen-2": {
+      "supported": [
+        "1.5",
+        "1.4"
+      ]
+    },
+    "need_disk": false,
     "versions": [
       {
         "name": "1.6",
@@ -3382,14 +3358,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "versions-dedicated-gen-2": {
-      "supported": [
-        "1.5",
-        "1.4"
-      ]
-    },
-    "need_disk": false
+    ]
   },
   "mongodb": {
     "description": "Experimental MongoDB support on Upsun Fixed",
@@ -3402,6 +3371,7 @@
     "min_disk_size": 512,
     "name": "MongoDB",
     "runtime": false,
+    "need_disk": true,
     "versions": [
       {
         "name": "4.0",
@@ -3573,8 +3543,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "need_disk": true
+    ]
   },
   "mongodb-enterprise": {
     "description": "Support for the enterprise edition of MongoDB",
@@ -3588,6 +3557,19 @@
     "name": "MongoDB",
     "runtime": false,
     "premium": true,
+    "versions-dedicated-gen-2": {
+      "supported": [
+        "7.0",
+        "6.0",
+        "5.0",
+        "4.4"
+      ],
+      "deprecated": [
+        "4.2",
+        "4.0"
+      ]
+    },
+    "need_disk": true,
     "versions": [
       {
         "name": "7.0",
@@ -3763,20 +3745,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "versions-dedicated-gen-2": {
-      "supported": [
-        "7.0",
-        "6.0",
-        "5.0",
-        "4.4"
-      ],
-      "deprecated": [
-        "4.2",
-        "4.0"
-      ]
-    },
-    "need_disk": true
+    ]
   },
   "network-storage": {
     "description": "",
@@ -3818,6 +3787,22 @@
     "min_disk_size": null,
     "name": "JavaScript/Node.js",
     "runtime": true,
+    "versions-dedicated-gen-2": {
+      "supported": [
+        "22",
+        "20",
+        "19"
+      ],
+      "deprecated": [
+        "18",
+        "16",
+        "14",
+        "12",
+        "10",
+        "9.8"
+      ]
+    },
+    "need_disk": false,
     "versions": [
       {
         "name": "24 (LTS)",
@@ -4351,23 +4336,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "versions-dedicated-gen-2": {
-      "supported": [
-        "22",
-        "20",
-        "19"
-      ],
-      "deprecated": [
-        "18",
-        "16",
-        "14",
-        "12",
-        "10",
-        "9.8"
-      ]
-    },
-    "need_disk": false
+    ]
   },
   "opensearch": {
     "description": "A manufacture service for OpenSearch",
@@ -4380,6 +4349,20 @@
     "name": "OpenSearch",
     "repo_name": "opensearch",
     "runtime": false,
+    "versions-dedicated-gen-2": {
+      "deprecated": [],
+      "supported": [
+        "1.2",
+        "1.99",
+        "2.12",
+        "2.14",
+        "2.5",
+        "2.18",
+        "2.19",
+        "2.99"
+      ]
+    },
+    "need_disk": true,
     "versions": [
       {
         "name": "3",
@@ -4526,27 +4509,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "versions-dedicated-gen-2": {
-      "deprecated": [],
-      "supported": [
-        "1.2",
-        "1.99",
-        "2.12",
-        "2.14",
-        "2.5",
-        "2.18",
-        "2.19",
-        "2.99"
-      ]
-    },
-    "versions-dedicated-gen-3": {
-      "deprecated": [],
-      "supported": [
-        "2"
-      ]
-    },
-    "need_disk": true
+    ]
   },
   "oracle-mysql": {
     "description": "Images using MySQL from Oracle instead of MariaDB still providing mysql endpoints",
@@ -4559,6 +4522,7 @@
     "min_disk_size": 256,
     "name": "Oracle MySQL",
     "runtime": false,
+    "need_disk": true,
     "versions": [
       {
         "name": "8.4",
@@ -4629,8 +4593,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "need_disk": true
+    ]
   },
   "php": {
     "description": "PHP service for Upsun Fixed.",
@@ -4660,6 +4623,7 @@
         "7.0"
       ]
     },
+    "need_disk": false,
     "versions": [
       {
         "name": "8.5",
@@ -5109,8 +5073,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "need_disk": false
+    ]
   },
   "postgresql": {
     "description": "PostgreSQL service for Upsun Fixed.",
@@ -5123,6 +5086,17 @@
     "min_disk_size": null,
     "name": "PostgreSQL",
     "runtime": false,
+    "versions-dedicated-gen-2": {
+      "deprecated": [
+        "11*",
+        "9.6*",
+        "9.5",
+        "9.4",
+        "9.3"
+      ],
+      "supported": []
+    },
+    "need_disk": true,
     "versions": [
       {
         "name": "18",
@@ -5496,32 +5470,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "versions-dedicated-gen-2": {
-      "deprecated": [
-        "11*",
-        "9.6*",
-        "9.5",
-        "9.4",
-        "9.3"
-      ],
-      "supported": []
-    },
-    "versions-dedicated-gen-3": {
-      "deprecated": [
-        "11",
-        "10"
-      ],
-      "supported": [
-        "17",
-        "16",
-        "15",
-        "14",
-        "13",
-        "12"
-      ]
-    },
-    "need_disk": true
+    ]
   },
   "python": {
     "description": "",
@@ -5534,6 +5483,7 @@
     "min_disk_size": null,
     "name": "Python",
     "runtime": true,
+    "need_disk": false,
     "versions": [
       {
         "name": "3.13",
@@ -5815,8 +5765,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "need_disk": false
+    ]
   },
   "rabbitmq": {
     "description": "A manufacture-based container for RabbitMQ",
@@ -5829,6 +5778,22 @@
     "min_disk_size": 512,
     "name": "RabbitMQ",
     "runtime": false,
+    "versions-dedicated-gen-2": {
+      "supported": [
+        "4.1",
+        "4.0",
+        "3.13",
+        "3.12"
+      ],
+      "deprecated": [
+        "3.11",
+        "3.10",
+        "3.9",
+        "3.8",
+        "3.7"
+      ]
+    },
+    "need_disk": true,
     "versions": [
       {
         "name": "4.1",
@@ -6182,34 +6147,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "versions-dedicated-gen-2": {
-      "supported": [
-        "4.1",
-        "4.0",
-        "3.13",
-        "3.12"
-      ],
-      "deprecated": [
-        "3.11",
-        "3.10",
-        "3.9",
-        "3.8",
-        "3.7"
-      ]
-    },
-    "versions-dedicated-gen-3": {
-      "deprecated": [
-        "3.11",
-        "3.10",
-        "3.9"
-      ],
-      "supported": [
-        "3.13",
-        "3.12"
-      ]
-    },
-    "need_disk": true
+    ]
   },
   "redis": {
     "description": "A manufacture-based Redis container ",
@@ -6222,6 +6160,21 @@
     "min_disk_size": null,
     "name": "Redis",
     "runtime": false,
+    "versions-dedicated-gen-2": {
+      "supported": [
+        "8.0",
+        "7.4",
+        "7.2"
+      ],
+      "deprecated": [
+        "7.0",
+        "6.2",
+        "6.0",
+        "5.0",
+        "3.2"
+      ]
+    },
+    "need_disk": false,
     "versions": [
       {
         "name": "8.0",
@@ -6516,38 +6469,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "versions-dedicated-gen-2": {
-      "supported": [
-        "8.0",
-        "7.4",
-        "7.2"
-      ],
-      "deprecated": [
-        "7.0",
-        "6.2",
-        "6.0",
-        "5.0",
-        "3.2"
-      ]
-    },
-    "versions-dedicated-gen-3": {
-      "deprecated": [
-        "7.0",
-        "6.2",
-        "6.0",
-        "5.0",
-        "4.0",
-        "3.2",
-        "3.0",
-        "2.8"
-      ],
-      "supported": [
-        "8.0",
-        "7.2"
-      ]
-    },
-    "need_disk": false
+    ]
   },
   "ruby": {
     "description": "",
@@ -6560,6 +6482,7 @@
     "min_disk_size": null,
     "name": "Ruby",
     "runtime": true,
+    "need_disk": false,
     "versions": [
       {
         "name": "3.4",
@@ -6841,30 +6764,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "versions-dedicated-gen-3": {
-      "deprecated": [
-        "2.7",
-        "2.6",
-        "2.5",
-        "2.4",
-        "2.3"
-      ],
-      "supported": [
-        "3.3",
-        "3.2",
-        "3.1",
-        "3.0"
-      ],
-      "legacy": [
-        "2.7",
-        "2.6",
-        "2.5",
-        "2.4",
-        "2.3"
-      ]
-    },
-    "need_disk": false
+    ]
   },
   "rust": {
     "description": "",
@@ -6877,6 +6777,7 @@
     "min_disk_size": null,
     "name": "Rust",
     "runtime": true,
+    "need_disk": true,
     "versions": [
       {
         "name": "1",
@@ -6906,8 +6807,7 @@
           "supports_horizontal_scaling": true
         }
       }
-    ],
-    "need_disk": true
+    ]
   },
   "solr": {
     "description": "",
@@ -6920,6 +6820,27 @@
     "min_disk_size": 256,
     "name": "Solr",
     "runtime": false,
+    "versions-dedicated-gen-2": {
+      "supported": [
+        "9.9",
+        "9.7",
+        "9.6",
+        "9.4",
+        "9.2",
+        "9.1",
+        "9.0"
+      ],
+      "deprecated": [
+        "8.11",
+        "8.6",
+        "8.0",
+        "7.7",
+        "6.6",
+        "6.3",
+        "4.10"
+      ]
+    },
+    "need_disk": true,
     "versions": [
       {
         "name": "9.9",
@@ -7408,39 +7329,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "versions-dedicated-gen-2": {
-      "supported": [
-        "9.9",
-        "9.7",
-        "9.6",
-        "9.4",
-        "9.2",
-        "9.1",
-        "9.0"
-      ],
-      "deprecated": [
-        "8.11",
-        "8.6",
-        "8.0",
-        "7.7",
-        "6.6",
-        "6.3",
-        "4.10"
-      ]
-    },
-    "versions-dedicated-gen-3": {
-      "supported": [
-        "9.6",
-        "9.4",
-        "9.2",
-        "9.1"
-      ],
-      "deprecated": [
-        "8.11"
-      ]
-    },
-    "need_disk": true
+    ]
   },
   "valkey": {
     "description": "",
@@ -7455,6 +7344,14 @@
     "service_relationships": "application: 'app:http'",
     "name": "Valkey",
     "runtime": false,
+    "versions-dedicated-gen-2": {
+      "supported": [
+        "8.1",
+        "8.0"
+      ],
+      "deprecated": []
+    },
+    "need_disk": false,
     "versions": [
       {
         "name": "8.1",
@@ -7516,15 +7413,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "versions-dedicated-gen-2": {
-      "supported": [
-        "8.1",
-        "8.0"
-      ],
-      "deprecated": []
-    },
-    "need_disk": false
+    ]
   },
   "varnish": {
     "description": "",
@@ -7539,6 +7428,7 @@
     "service_relationships": "application: 'app:http'",
     "name": "Varnish",
     "runtime": false,
+    "need_disk": false,
     "versions": [
       {
         "name": "7.6",
@@ -7802,8 +7692,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "need_disk": false
+    ]
   },
   "vault-kms": {
     "description": "",
@@ -7817,6 +7706,12 @@
     "name": "Vault KMS",
     "repo_name": "vault-kms",
     "runtime": false,
+    "versions-dedicated-gen-2": {
+      "supported": [
+        "1.6"
+      ]
+    },
+    "need_disk": true,
     "versions": [
       {
         "name": "1.12",
@@ -7887,24 +7782,14 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "versions-dedicated-gen-2": {
-      "supported": [
-        "1.6"
-      ]
-    },
-    "versions-dedicated-gen-3": {
-      "supported": [
-        "1.12"
-      ],
-      "deprecated": [
-        "1.8",
-        "1.6"
-      ]
-    },
-    "need_disk": true
+    ]
   },
   "activemq-artemis": {
+    "docs": {
+      "relationship_name": "activemq-artemis",
+      "service_name": "activemq-artemis",
+      "url": "/add-services/activemq-artemis.html"
+    },
     "versions": [
       {
         "name": "2",
@@ -7929,14 +7814,14 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "docs": {
-      "relationship_name": "activemq-artemis",
-      "service_name": "activemq-artemis",
-      "url": "/add-services/activemq-artemis.html"
-    }
+    ]
   },
   "elasticsearch-enterprise": {
+    "docs": {
+      "relationship_name": "elasticsearch-enterprise",
+      "service_name": "elasticsearch-enterprise",
+      "url": "/add-services/elasticsearch-enterprise.html"
+    },
     "versions": [
       {
         "name": "8.5",
@@ -7996,12 +7881,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ],
-    "docs": {
-      "relationship_name": "elasticsearch-enterprise",
-      "service_name": "elasticsearch-enterprise",
-      "url": "/add-services/elasticsearch-enterprise.html"
-    }
+    ]
   },
   "vault": {
     "versions": [
