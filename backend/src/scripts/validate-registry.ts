@@ -1,5 +1,6 @@
 import { promises as fs } from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { z } from 'zod';
 
 const VersionStatusSchema = z.enum(['supported', 'deprecated', 'retired']);
@@ -21,7 +22,7 @@ const VersionManifestSchema = z.object({
   allow_scale_up: z.boolean().nullable().optional(),
   allow_scale_down: z.boolean().nullable().optional(),
   storage_mount_point: z.string().nullable().optional(),
-  default_container_profile: z.string().optional(),
+  default_container_profile: z.string().nullable().optional(),
   supports_horizontal_scaling: z.boolean().nullable().optional()
 }).passthrough();
 
@@ -71,23 +72,26 @@ const ImageDocsSchema = z.object({
 const ImageRegistryEntrySchema = z.object({
   description: z.string().optional(),
   docs: ImageDocsSchema.optional(),
-  endpoint: z.string().nullable().optional(),
   min_disk_size: z.number().nullable().optional(),
-  name: z.string(),
+  name: z.string().optional(),
   repo_name: z.string().optional(),
   runtime: z.boolean().optional(),
-  type: z.string().optional(),
   need_disk: z.boolean().optional(),
-  disk: z.boolean().optional(),
-  versions: z.array(ImageVersionSchema),
-  'versions-dedicated-gen-2': DedicatedGenSchema.optional(),
+  premium: z.boolean().optional(),
+  configuration: z.string().optional(),
+  service_relationships: z.string().optional(),
+  versions: z.array(ImageVersionSchema).min(1),
+  // Accepted but intentionally not validated (shape varies / subject to change).
+  'versions-dedicated-gen-2': z.unknown().optional(),
   'versions-dedicated-gen-3': DedicatedGenSchema.optional()
 }).passthrough();
 
 const ImageRegistryRawSchema = z.record(z.string(), ImageRegistryEntrySchema);
 
 async function main() {
-  const registryPath = path.resolve(process.cwd(), '../resources/image/registry.json');
+  const scriptDir = path.dirname(fileURLToPath(import.meta.url));
+  const defaultRegistryPath = path.resolve(scriptDir, '../../../resources/image/registry.json');
+  const registryPath = process.argv[2] ? path.resolve(process.argv[2]) : defaultRegistryPath;
 
   let raw: string;
   try {
@@ -126,4 +130,3 @@ main().catch((error) => {
   console.error(error);
   process.exit(1);
 });
-

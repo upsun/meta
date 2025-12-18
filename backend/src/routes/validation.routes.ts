@@ -65,6 +65,42 @@ Source file (local mode): \`resources/config/validator/schema/upsun.json\`
 });
 
 // ========================================
+// GET /schema/image-registry - Get image registry validation schema
+// ========================================
+validationRouter.route({
+  method: 'get',
+  path: '/schema/image-registry',
+  summary: 'Get registry.json validation JSON schema',
+  description: `
+Returns the JSON Schema used to validate the image registry file.
+
+Source file (local mode): \`resources/image/registry.schema.json\`
+  `,
+  tags: ['Validation'],
+  responses: {
+    200: {
+      description: 'Image registry JSON Schema',
+      schema: z.any()
+    },
+    500: {
+      description: 'Internal server error',
+      schema: z.object({
+        error: z.string()
+      })
+    }
+  },
+  handler: async (req: Request, res: Response) => {
+    try {
+      const schema = await resourceManager.getResource('image/registry.schema.json');
+      res.json(schema);
+    } catch (error: any) {
+      apiLogger.error({ error: error.message }, 'Failed to read image registry validation schema');
+      res.status(500).json({ error: error.message || 'Unable to read image registry validation schema' });
+    }
+  }
+});
+
+// ========================================
 // GET /schema/service-versions - Get service versions list
 // ========================================
 validationRouter.route({
