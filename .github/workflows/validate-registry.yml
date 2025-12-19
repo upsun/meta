@@ -1,0 +1,42 @@
+name: Validate image registry
+
+on:
+  pull_request:
+    paths:
+      - 'resources/image/registry.json'
+      - 'resources/image/registry.schema.json'
+      - 'backend/src/scripts/validate-registry.ts'
+      - 'backend/package.json'
+      - 'backend/package-lock.json'
+  push:
+    paths:
+      - 'resources/image/registry.json'
+      - 'resources/image/registry.schema.json'
+      - 'backend/src/scripts/validate-registry.ts'
+      - 'backend/package.json'
+      - 'backend/package-lock.json'
+
+jobs:
+  validate-registry:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./backend
+
+      - name: Build backend
+        run: npm run build
+        working-directory: ./backend
+
+      - name: Validate image registry
+        run: npm run validate:registry
+        working-directory: ./backend

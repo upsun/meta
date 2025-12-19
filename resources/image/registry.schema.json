@@ -1,0 +1,405 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/upsun-image-registry.json",
+  "title": "Upsun Image Registry",
+  "description": "Schema for Upsun image registry files such as resources/image/registry.json.",
+  "type": "object",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^[a-z0-9-]+$": {
+      "$ref": "#/$defs/ImageRegistryEntry"
+    }
+  },
+  "$defs": {
+    "VersionStatus": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "deprecated",
+        "retired"
+      ],
+      "description": "Lifecycle status of the image version."
+    },
+    "VersionEndpoint": {
+      "type": "object",
+      "description": "Single service endpoint definition for a version.",
+      "properties": {
+        "port": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "scheme": {
+          "type": "string"
+        },
+        "default": {
+          "type": "boolean",
+          "description": "Whether this endpoint is the default for the service."
+        },
+        "privileges": {
+          "type": "object",
+          "description": "Map of database (or similar resource) name to privilege level.",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "default_database": {
+          "type": "string",
+          "description": "Default database name, when applicable."
+        }
+      },
+      "additionalProperties": true
+    },
+    "VersionManifest": {
+      "type": "object",
+      "description": "Technical manifest for a specific image version.",
+      "properties": {
+        "endpoints": {
+          "description": "Map of endpoint name to endpoint definition.",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/VersionEndpoint"
+              }
+            }
+          ]
+        },
+        "min_cpu_size": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "min_mem_size": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "is_persistent": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "min_disk_size": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "allow_scale_up": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "allow_scale_down": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "storage_mount_point": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "default_container_profile": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "supports_horizontal_scaling": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "ImageVersion": {
+      "type": "object",
+      "description": "Single version entry for an image.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Human-readable version label (e.g. 8.3, 24, 8.0 (LTS))."
+        },
+        "status": {
+          "$ref": "#/$defs/VersionStatus"
+        },
+        "release_date": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "end_of_active_support_date": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "end_of_life_date": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "is_maintained": {
+          "type": "boolean"
+        },
+        "is_end_of_active_support": {
+          "type": "boolean"
+        },
+        "is_end_of_life": {
+          "type": "boolean"
+        },
+        "is_long_time_support": {
+          "type": "boolean"
+        },
+        "manifest": {
+          "$ref": "#/$defs/VersionManifest"
+        }
+      },
+      "required": [
+        "name",
+        "status",
+        "is_maintained",
+        "is_end_of_active_support",
+        "is_end_of_life",
+        "is_long_time_support",
+        "manifest"
+      ],
+      "additionalProperties": true
+    },
+    "DedicatedGen": {
+      "type": "object",
+      "description": "Lists of version identifiers per generation (supported/deprecated).",
+      "properties": {
+        "supported": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "deprecated": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "ImageDocsWebLocation": {
+      "type": "object",
+      "properties": {
+        "root": {
+          "type": "string"
+        },
+        "allow": {
+          "type": "boolean"
+        },
+        "passthru": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "ImageDocsWeb": {
+      "type": "object",
+      "properties": {
+        "commands": {
+          "type": "object",
+          "properties": {
+            "start": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
+        },
+        "locations": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/ImageDocsWebLocation"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "ImageDocsHooks": {
+      "type": "object",
+      "properties": {
+        "build": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "ImageDocs": {
+      "type": "object",
+      "description": "Documentation metadata for the image.",
+      "properties": {
+        "relationship_name": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "service_name": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "url": {
+          "type": "string"
+        },
+        "web": {
+          "$ref": "#/$defs/ImageDocsWeb"
+        },
+        "hooks": {
+          "$ref": "#/$defs/ImageDocsHooks"
+        }
+      },
+      "additionalProperties": true
+    },
+    "ImageRegistryEntry": {
+      "type": "object",
+      "description": "Single image entry in the registry.",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "docs": {
+          "$ref": "#/$defs/ImageDocs"
+        },
+        "min_disk_size": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "Human-readable image name."
+        },
+        "repo_name": {
+          "type": "string",
+          "description": "Repository name for the image source."
+        },
+        "runtime": {
+          "type": "boolean",
+          "description": "Whether this image is a runtime (language) image."
+        },
+        "need_disk": {
+          "type": "boolean",
+          "description": "Whether this image requires disk."
+        },
+        "premium": {
+          "type": "boolean",
+          "description": "Whether this service is premium-only."
+        },
+        "configuration": {
+          "type": "string",
+          "description": "YAML configuration snippet to include in user configuration examples."
+        },
+        "service_relationships": {
+          "type": "string",
+          "description": "Relationships snippet (YAML) to include in user configuration examples."
+        },
+        "versions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ImageVersion"
+          },
+          "minItems": 1
+        },
+        "versions-dedicated-gen-2": {
+          "description": "Dedicated Gen 2 versions map (accepted but intentionally not validated in detail)."
+        },
+        "versions-dedicated-gen-3": {
+          "$ref": "#/$defs/DedicatedGen"
+        }
+      },
+      "required": [
+        "versions"
+      ],
+      "additionalProperties": true
+    }
+  }
+}

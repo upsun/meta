@@ -1,0 +1,11 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "resources/image/registry.json"
+      ],
+      "url": "./resources/image/registry.schema.json"
+    }
+  ]
+}
+
