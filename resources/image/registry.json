@@ -1247,14 +1247,14 @@
       },
       {
         "name": "1.15",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2023-06-19T00:00:00.000Z",
         "end_of_active_support_date": "2023-12-22T00:00:00.000Z",
         "end_of_life_date": null,
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
         "manifest": {
           "endpoints": {
@@ -1276,14 +1276,14 @@
       },
       {
         "name": "1.14",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2022-09-01T00:00:00.000Z",
         "end_of_active_support_date": "2023-06-19T00:00:00.000Z",
         "end_of_life_date": "2025-10-16T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
         "manifest": {
           "endpoints": {
@@ -4284,14 +4284,14 @@
       },
       {
         "name": "4.2",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2019-08-31T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2023-04-30T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
         "manifest": {
           "endpoints": {
@@ -4314,14 +4314,14 @@
       },
       {
         "name": "4.0",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2018-06-30T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2022-04-30T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
         "manifest": {
           "endpoints": {
