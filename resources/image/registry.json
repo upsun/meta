@@ -7292,6 +7292,35 @@
     "need_disk": false,
     "versions": [
       {
+        "name": "4.0",
+        "status": "supported",
+        "release_date": "2025-12-25T00:00:00.000Z",
+        "end_of_active_support_date": null,
+        "end_of_life_date": "2029-03-31T00:00:00.000Z",
+        "is_lts": false,
+        "is_maintained": true,
+        "is_end_of_active_support": false,
+        "is_end_of_life": false,
+        "is_long_time_support": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
         "name": "3.4",
         "status": "supported",
         "release_date": "2024-12-24T00:00:00.000Z",
