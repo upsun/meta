@@ -5401,13 +5401,13 @@
       },
       {
         "name": "8.3",
-        "status": "supported",
+        "status": "deprecated",
         "release_date": "2023-11-23T00:00:00.000Z",
         "end_of_active_support_date": "2025-12-31T00:00:00.000Z",
         "end_of_life_date": "2027-12-31T00:00:00.000Z",
         "is_lts": false,
         "is_maintained": true,
-        "is_end_of_active_support": false,
+        "is_end_of_active_support": true,
         "is_end_of_life": false,
         "is_long_time_support": false,
         "manifest": {
@@ -5467,14 +5467,14 @@
       },
       {
         "name": "8.1",
-        "status": "deprecated",
+        "status": "retired",
         "release_date": "2021-11-25T00:00:00.000Z",
         "end_of_active_support_date": "2023-11-25T00:00:00.000Z",
         "end_of_life_date": "2025-12-31T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
+        "is_maintained": false,
         "is_end_of_active_support": true,
-        "is_end_of_life": false,
+        "is_end_of_life": true,
         "is_long_time_support": false,
         "manifest": {
           "endpoints": {
