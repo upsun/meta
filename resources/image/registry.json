@@ -2547,14 +2547,14 @@
       },
       {
         "name": "11",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2018-09-25T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2023-09-30T00:00:00.000Z",
         "is_lts": true,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": true,
         "manifest": {
           "endpoints": {
@@ -2576,14 +2576,14 @@
       },
       {
         "name": "8",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2014-03-18T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2022-03-31T00:00:00.000Z",
         "is_lts": true,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": true,
         "manifest": {
           "endpoints": {
@@ -6235,6 +6235,35 @@
     "runtime": true,
     "need_disk": false,
     "versions": [
+      {
+        "name": "3.14",
+        "status": "supported",
+        "release_date": "2025-10-07T00:00:00.000Z",
+        "end_of_active_support_date": "2027-10-01T00:00:00.000Z",
+        "end_of_life_date": "2030-10-31T00:00:00.000Z",
+        "is_lts": false,
+        "is_maintained": true,
+        "is_end_of_active_support": false,
+        "is_end_of_life": false,
+        "is_long_time_support": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
       {
         "name": "3.13",
         "status": "supported",
