@@ -7958,66 +7958,6 @@
         }
       },
       {
-        "name": "8.6",
-        "status": "retired",
-        "release_date": "2019-03-13T00:00:00.000Z",
-        "end_of_active_support_date": null,
-        "end_of_life_date": "2024-10-25T00:00:00.000Z",
-        "is_lts": false,
-        "is_maintained": false,
-        "is_end_of_active_support": true,
-        "is_end_of_life": true,
-        "is_long_time_support": false,
-        "manifest": {
-          "endpoints": {
-            "solr": {
-              "port": 8080,
-              "scheme": "solr",
-              "default": true
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "8.4",
-        "status": "retired",
-        "release_date": "2019-03-13T00:00:00.000Z",
-        "end_of_active_support_date": null,
-        "end_of_life_date": "2024-10-25T00:00:00.000Z",
-        "is_lts": false,
-        "is_maintained": false,
-        "is_end_of_active_support": true,
-        "is_end_of_life": true,
-        "is_long_time_support": false,
-        "manifest": {
-          "endpoints": {
-            "solr": {
-              "port": 8080,
-              "scheme": "solr",
-              "default": true
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
         "name": "8.0",
         "status": "retired",
         "release_date": "2019-03-13T00:00:00.000Z",
