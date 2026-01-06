@@ -1,4 +1,4 @@
-# Trust-Registry - Resources Configuration
+# Meta Registry - Resources Configuration
 
 This project supports two resource loading modes: **local** and **GitHub**.
 

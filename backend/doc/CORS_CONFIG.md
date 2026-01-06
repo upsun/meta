@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Trust-Registry uses CORS (Cross-Origin Resource Sharing) to control which domains can access the API.
+The Meta Registry uses CORS (Cross-Origin Resource Sharing) to control which domains can access the API.
 
 ## 🔧 Configuration
 

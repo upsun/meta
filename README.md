@@ -1,8 +1,8 @@
-# Trust-Registry - Source of Trust for Upsun
+# Meta Registry - Source of Reference for Upsun
 
 ## 📋 Description
 
-Trust-Registry is the central registry that provides reliable and up-to-date information about Upsun resources. This repository serves as the **Single Source of Trust** for all data related to container images and regions available on the Upsun platform.
+Meta Registry is the central registry that provides reliable and up-to-date information about Upsun resources. This repository serves as the **Single Source of Reference** for all data related to container images and regions available on the Upsun platform.
 
 The API will be accessible at https://meta.upsun.com/
 
@@ -13,7 +13,7 @@ This project centralizes and exposes essential information through a REST API, s
 - **Available Images**: complete list of container images, their versions, endpoints, and metadata
 - **Upsun Regions**: geographic data, availability, and characteristics of cloud regions
 
-As the single source of trust, this API ensures data consistency across all tools and services that depend on it.
+As the single source of reference, this API ensures data consistency across all tools and services that depend on it.
 
 ## 🚀 Quick Start
 
@@ -82,6 +82,6 @@ If the service does not exist, returns `404` with `availableServices`.
 - **resources/**: Source data (image registries, region configuration)
 	- `extension/php_extensions.yaml`: List of PHP extensions per service and version
 
-## 🔐 Source of Trust
+## 🔐 Source of Reference
 
 This project is designed to be the single, reliable reference for all Upsun resource information. Any modification to the source data in this repository automatically propagates through the API, ensuring consistency and accuracy of information.

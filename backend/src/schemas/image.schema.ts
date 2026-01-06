@@ -85,7 +85,7 @@ export const ErrorSchema = z.object({
  */
 export const ApiInfoSchema = z.object({
   message: z.string().openapi({
-    example: 'Trust-Registry Backend Server'
+    example: 'Meta Registry Backend Server'
   }),
   version: z.string().openapi({
     example: '1.0.0'
