@@ -61,7 +61,7 @@ validationRouter.registerToExpress(app);
 // Same source as Express routes!
 // ========================================
 const imageSpec = imageRouter.generateOpenApiSpec({
-  title: 'Trust-Registry - Upsun Image & Region Registry API',
+  title: 'Meta Registry - Upsun Image & Region Registry API',
   version: appVersion,
   description: `
 # Upsun Image & Region Registry API

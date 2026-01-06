@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Trust-Registry uses rate limiting to protect against abuse and denial of service (DoS) attacks.
+The Meta Registry uses rate limiting to protect against abuse and denial of service (DoS) attacks.
 
 ## Configuration
 

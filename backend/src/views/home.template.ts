@@ -30,7 +30,7 @@ export function generateHomePage(endpoints: Endpoint[], baseUrl: string, version
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upsun Trust-Registry</title>
+    <title>Upsun Meta Registry</title>
     <style>
         * {
             margin: 0;
@@ -256,7 +256,7 @@ export function generateHomePage(endpoints: Endpoint[], baseUrl: string, version
     <div class="container">
         <div class="header">
             <div class="logo">🚀</div>
-            <h1>Upsun Trust-Registry</h1>
+            <h1>Upsun Meta Registry</h1>
             <p class="subtitle">Upsun Service Registry API</p>
             <span class="version">v${version}</span>
         </div>
