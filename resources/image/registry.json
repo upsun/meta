@@ -1247,14 +1247,14 @@
       },
       {
         "name": "1.15",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2023-06-19T00:00:00.000Z",
         "end_of_active_support_date": "2023-12-22T00:00:00.000Z",
         "end_of_life_date": null,
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
         "manifest": {
           "endpoints": {
@@ -1276,14 +1276,14 @@
       },
       {
         "name": "1.14",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2022-09-01T00:00:00.000Z",
         "end_of_active_support_date": "2023-06-19T00:00:00.000Z",
         "end_of_life_date": "2025-10-16T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
         "manifest": {
           "endpoints": {
@@ -2547,14 +2547,14 @@
       },
       {
         "name": "11",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2018-09-25T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2023-09-30T00:00:00.000Z",
         "is_lts": true,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": true,
         "manifest": {
           "endpoints": {
@@ -2576,14 +2576,14 @@
       },
       {
         "name": "8",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2014-03-18T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2022-03-31T00:00:00.000Z",
         "is_lts": true,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": true,
         "manifest": {
           "endpoints": {
@@ -4284,14 +4284,14 @@
       },
       {
         "name": "4.2",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2019-08-31T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2023-04-30T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
         "manifest": {
           "endpoints": {
@@ -4314,14 +4314,14 @@
       },
       {
         "name": "4.0",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2018-06-30T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2022-04-30T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
         "manifest": {
           "endpoints": {
@@ -5401,13 +5401,13 @@
       },
       {
         "name": "8.3",
-        "status": "supported",
+        "status": "deprecated",
         "release_date": "2023-11-23T00:00:00.000Z",
         "end_of_active_support_date": "2025-12-31T00:00:00.000Z",
         "end_of_life_date": "2027-12-31T00:00:00.000Z",
         "is_lts": false,
         "is_maintained": true,
-        "is_end_of_active_support": false,
+        "is_end_of_active_support": true,
         "is_end_of_life": false,
         "is_long_time_support": false,
         "manifest": {
@@ -5467,14 +5467,14 @@
       },
       {
         "name": "8.1",
-        "status": "deprecated",
+        "status": "retired",
         "release_date": "2021-11-25T00:00:00.000Z",
         "end_of_active_support_date": "2023-11-25T00:00:00.000Z",
         "end_of_life_date": "2025-12-31T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
+        "is_maintained": false,
         "is_end_of_active_support": true,
-        "is_end_of_life": false,
+        "is_end_of_life": true,
         "is_long_time_support": false,
         "manifest": {
           "endpoints": {
@@ -6235,6 +6235,35 @@
     "runtime": true,
     "need_disk": false,
     "versions": [
+      {
+        "name": "3.14",
+        "status": "supported",
+        "release_date": "2025-10-07T00:00:00.000Z",
+        "end_of_active_support_date": "2027-10-01T00:00:00.000Z",
+        "end_of_life_date": "2030-10-31T00:00:00.000Z",
+        "is_lts": false,
+        "is_maintained": true,
+        "is_end_of_active_support": false,
+        "is_end_of_life": false,
+        "is_long_time_support": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
       {
         "name": "3.13",
         "status": "supported",
@@ -7292,6 +7321,35 @@
     "need_disk": false,
     "versions": [
       {
+        "name": "4.0",
+        "status": "supported",
+        "release_date": "2025-12-25T00:00:00.000Z",
+        "end_of_active_support_date": null,
+        "end_of_life_date": "2029-03-31T00:00:00.000Z",
+        "is_lts": false,
+        "is_maintained": true,
+        "is_end_of_active_support": false,
+        "is_end_of_life": false,
+        "is_long_time_support": false,
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
         "name": "3.4",
         "status": "supported",
         "release_date": "2024-12-24T00:00:00.000Z",
@@ -7871,66 +7929,6 @@
       },
       {
         "name": "8.11",
-        "status": "retired",
-        "release_date": "2019-03-13T00:00:00.000Z",
-        "end_of_active_support_date": null,
-        "end_of_life_date": "2024-10-25T00:00:00.000Z",
-        "is_lts": false,
-        "is_maintained": false,
-        "is_end_of_active_support": true,
-        "is_end_of_life": true,
-        "is_long_time_support": false,
-        "manifest": {
-          "endpoints": {
-            "solr": {
-              "port": 8080,
-              "scheme": "solr",
-              "default": true
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "8.6",
-        "status": "retired",
-        "release_date": "2019-03-13T00:00:00.000Z",
-        "end_of_active_support_date": null,
-        "end_of_life_date": "2024-10-25T00:00:00.000Z",
-        "is_lts": false,
-        "is_maintained": false,
-        "is_end_of_active_support": true,
-        "is_end_of_life": true,
-        "is_long_time_support": false,
-        "manifest": {
-          "endpoints": {
-            "solr": {
-              "port": 8080,
-              "scheme": "solr",
-              "default": true
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "8.4",
         "status": "retired",
         "release_date": "2019-03-13T00:00:00.000Z",
         "end_of_active_support_date": null,
