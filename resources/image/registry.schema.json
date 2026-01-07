@@ -260,7 +260,10 @@
           "type": "boolean"
         },
         "passthru": {
-          "type": "boolean"
+          "type": [
+            "boolean",
+            "string"
+          ]
         }
       },
       "additionalProperties": true

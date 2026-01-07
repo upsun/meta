@@ -47,7 +47,7 @@ const DedicatedGenSchema = z.object({
 const ImageDocsWebLocationSchema = z.object({
   root: z.string().optional(),
   allow: z.boolean().optional(),
-  passthru: z.boolean().optional()
+  passthru: z.union([z.boolean(), z.string()]).optional()
 }).passthrough();
 
 const ImageDocsWebSchema = z.object({
