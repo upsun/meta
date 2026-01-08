@@ -14,7 +14,7 @@
     "versions": [
       {
         "name": "120",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2023-12-05T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2024-01-23T00:00:00.000Z",
@@ -23,6 +23,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -43,15 +44,16 @@
       },
       {
         "name": "113",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2023-05-02T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2023-05-30T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -81,6 +83,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -110,6 +113,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -139,6 +143,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -168,6 +173,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -197,6 +203,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -226,6 +233,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -255,6 +263,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -284,6 +293,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -332,6 +342,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "clickhouse": {
@@ -365,6 +376,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "clickhouse": {
@@ -398,6 +410,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "clickhouse": {
@@ -431,6 +444,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "clickhouse": {
@@ -498,6 +512,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -518,15 +533,16 @@
       },
       {
         "name": "7.0",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2022-11-08T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2024-05-14T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -547,15 +563,16 @@
       },
       {
         "name": "6.0",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2021-11-08T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2024-11-12T00:00:00.000Z",
         "is_lts": true,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -585,6 +602,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -614,6 +632,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -643,6 +662,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -672,6 +692,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -701,6 +722,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -766,6 +788,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "elasticsearch": {
@@ -796,6 +819,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "elasticsearch": {
@@ -826,6 +850,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "elasticsearch": {
@@ -856,6 +881,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "elasticsearch": {
@@ -886,6 +912,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "elasticsearch": {
@@ -916,6 +943,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "elasticsearch": {
@@ -946,6 +974,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "elasticsearch": {
@@ -976,6 +1005,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "elasticsearch": {
@@ -1006,6 +1036,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "elasticsearch": {
@@ -1036,6 +1067,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "elasticsearch": {
@@ -1066,6 +1098,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "elasticsearch": {
@@ -1096,6 +1129,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -1120,6 +1154,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -1144,6 +1179,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -1194,7 +1230,7 @@
     "versions": [
       {
         "name": "1.18",
-        "status": "supported",
+        "status": "deprecated",
         "release_date": "2024-12-19T00:00:00.000Z",
         "end_of_active_support_date": "2025-10-16T00:00:00.000Z",
         "end_of_life_date": null,
@@ -1203,6 +1239,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1223,15 +1260,16 @@
       },
       {
         "name": "1.15",
-        "status": "retired",
+        "status": "deprecated",
         "release_date": "2023-06-19T00:00:00.000Z",
         "end_of_active_support_date": "2023-12-22T00:00:00.000Z",
         "end_of_life_date": null,
         "is_lts": false,
-        "is_maintained": false,
+        "is_maintained": true,
         "is_end_of_active_support": true,
-        "is_end_of_life": true,
+        "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1261,6 +1299,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1290,6 +1329,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1319,6 +1359,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1348,6 +1389,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1377,6 +1419,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1406,6 +1449,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1470,6 +1514,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1499,6 +1544,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1519,15 +1565,16 @@
       },
       {
         "name": "1.23",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2024-08-13T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2025-08-12T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1548,15 +1595,16 @@
       },
       {
         "name": "1.22",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2024-02-06T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2025-02-11T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1577,15 +1625,16 @@
       },
       {
         "name": "1.21",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2023-08-08T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2024-08-13T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1606,15 +1655,16 @@
       },
       {
         "name": "1.20",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2023-02-01T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2024-02-06T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1644,6 +1694,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1673,6 +1724,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1702,6 +1754,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1731,6 +1784,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1760,6 +1814,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1789,6 +1844,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1818,6 +1874,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1847,6 +1904,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1876,6 +1934,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1905,6 +1964,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1934,6 +1994,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -1963,6 +2024,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -2007,6 +2069,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "influxdb": {
@@ -2036,6 +2099,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "influxdb": {
@@ -2056,15 +2120,16 @@
       },
       {
         "name": "2.2",
-        "status": "retired",
+        "status": "supported",
         "release_date": "2020-11-09T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_lts": false,
-        "is_maintained": false,
-        "is_end_of_active_support": true,
-        "is_end_of_life": true,
+        "is_maintained": true,
+        "is_end_of_active_support": false,
+        "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -2080,15 +2145,16 @@
       },
       {
         "name": "2.1",
-        "status": "retired",
+        "status": "supported",
         "release_date": "2020-11-09T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_lts": false,
-        "is_maintained": false,
-        "is_end_of_active_support": true,
-        "is_end_of_life": true,
+        "is_maintained": true,
+        "is_end_of_active_support": false,
+        "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -2104,15 +2170,16 @@
       },
       {
         "name": "2.0",
-        "status": "retired",
+        "status": "supported",
         "release_date": "2020-11-09T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_lts": false,
-        "is_maintained": false,
-        "is_end_of_active_support": true,
-        "is_end_of_life": true,
+        "is_maintained": true,
+        "is_end_of_active_support": false,
+        "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -2137,6 +2204,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "influxdb": {
@@ -2157,15 +2225,16 @@
       },
       {
         "name": "1.7",
-        "status": "retired",
+        "status": "supported",
         "release_date": "2016-09-07T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_lts": false,
-        "is_maintained": false,
-        "is_end_of_active_support": true,
-        "is_end_of_life": true,
+        "is_maintained": true,
+        "is_end_of_active_support": false,
+        "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "influxdb": {
@@ -2186,15 +2255,16 @@
       },
       {
         "name": "1.3",
-        "status": "retired",
+        "status": "supported",
         "release_date": "2016-09-07T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_lts": false,
-        "is_maintained": false,
-        "is_end_of_active_support": true,
-        "is_end_of_life": true,
+        "is_maintained": true,
+        "is_end_of_active_support": false,
+        "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "influxdb": {
@@ -2216,15 +2286,16 @@
       },
       {
         "name": "1.2",
-        "status": "retired",
+        "status": "supported",
         "release_date": "2016-09-07T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_lts": false,
-        "is_maintained": false,
-        "is_end_of_active_support": true,
-        "is_end_of_life": true,
+        "is_maintained": true,
+        "is_end_of_active_support": false,
+        "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -2264,6 +2335,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -2329,6 +2401,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -2349,15 +2422,16 @@
       },
       {
         "name": "19",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2022-09-20T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2023-03-21T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -2378,15 +2452,16 @@
       },
       {
         "name": "18",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2022-03-22T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2022-09-20T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -2416,6 +2491,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -2445,6 +2521,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -2474,6 +2551,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -2503,6 +2581,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -2532,6 +2611,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -2561,6 +2641,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -2596,7 +2677,7 @@
     "versions": [
       {
         "name": "3.7",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2024-02-26T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2024-07-26T00:00:00.000Z",
@@ -2605,6 +2686,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "kafka": {
@@ -2625,15 +2707,16 @@
       },
       {
         "name": "3.6",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2023-10-03T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2024-02-27T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "kafka": {
@@ -2654,15 +2737,16 @@
       },
       {
         "name": "3.4",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2023-02-06T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2023-06-13T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "kafka": {
@@ -2683,15 +2767,16 @@
       },
       {
         "name": "3.2",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2022-05-09T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2022-09-28T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "kafka": {
@@ -2721,6 +2806,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -2745,6 +2831,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -2769,6 +2856,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -2793,6 +2881,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -2817,6 +2906,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -2841,6 +2931,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -2865,6 +2956,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -2920,6 +3012,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -2951,6 +3044,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -2982,6 +3076,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3013,6 +3108,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3044,6 +3140,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3075,6 +3172,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3106,6 +3204,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3137,6 +3236,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3168,6 +3268,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3199,6 +3300,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3230,6 +3332,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3261,6 +3364,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3292,6 +3396,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3355,6 +3460,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3386,6 +3492,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3417,6 +3524,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3448,6 +3556,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3479,6 +3588,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3510,6 +3620,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3541,6 +3652,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3572,6 +3684,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3603,6 +3716,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3634,6 +3748,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3665,6 +3780,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3696,6 +3812,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3727,6 +3844,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mysql": {
@@ -3779,6 +3897,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "memcached": {
@@ -3800,15 +3919,16 @@
       },
       {
         "name": "1.5",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2017-07-21T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2020-03-09T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "memcached": {
@@ -3830,15 +3950,16 @@
       },
       {
         "name": "1.4",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2009-07-09T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2017-07-21T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "memcached": {
@@ -3875,7 +3996,7 @@
     "versions": [
       {
         "name": "4.0",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2018-06-30T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2022-04-30T00:00:00.000Z",
@@ -3884,6 +4005,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "mongodb": {
@@ -3919,6 +4041,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mongodb": {
@@ -3954,6 +4077,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mongodb": {
@@ -3989,6 +4113,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mongodb": {
@@ -4024,6 +4149,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mongodb": {
@@ -4087,6 +4213,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "mongodb": {
@@ -4108,15 +4235,16 @@
       },
       {
         "name": "6.0",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2022-07-31T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2025-07-31T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "mongodb": {
@@ -4138,15 +4266,16 @@
       },
       {
         "name": "5.0",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2021-07-31T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2024-10-31T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "mongodb": {
@@ -4168,15 +4297,16 @@
       },
       {
         "name": "4.4",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2020-07-31T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2024-02-29T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "mongodb": {
@@ -4207,6 +4337,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mongodb": {
@@ -4237,6 +4368,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "mongodb": {
@@ -4282,6 +4414,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": 0.1,
@@ -4306,6 +4439,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": 0.1,
@@ -4330,6 +4464,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -4389,6 +4524,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4409,15 +4545,16 @@
       },
       {
         "name": "22",
-        "status": "supported",
+        "status": "deprecated",
         "release_date": "2024-04-24T00:00:00.000Z",
         "end_of_active_support_date": "2025-10-21T00:00:00.000Z",
         "end_of_life_date": "2027-04-30T00:00:00.000Z",
         "is_lts": true,
         "is_maintained": true,
-        "is_end_of_active_support": false,
+        "is_end_of_active_support": true,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4438,15 +4575,16 @@
       },
       {
         "name": "20",
-        "status": "supported",
+        "status": "deprecated",
         "release_date": "2023-04-18T00:00:00.000Z",
         "end_of_active_support_date": "2024-10-22T00:00:00.000Z",
         "end_of_life_date": "2026-04-30T00:00:00.000Z",
         "is_lts": true,
         "is_maintained": true,
-        "is_end_of_active_support": false,
+        "is_end_of_active_support": true,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4467,15 +4605,16 @@
       },
       {
         "name": "18",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2022-04-19T00:00:00.000Z",
         "end_of_active_support_date": "2023-10-18T00:00:00.000Z",
         "end_of_life_date": "2025-04-30T00:00:00.000Z",
         "is_lts": true,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4496,15 +4635,16 @@
       },
       {
         "name": "16",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2021-04-20T00:00:00.000Z",
         "end_of_active_support_date": "2022-10-18T00:00:00.000Z",
         "end_of_life_date": "2023-09-11T00:00:00.000Z",
         "is_lts": true,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4534,6 +4674,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4563,6 +4704,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4592,6 +4734,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4621,6 +4764,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4650,6 +4794,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4679,6 +4824,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4708,6 +4854,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4737,6 +4884,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4766,6 +4914,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4795,6 +4944,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4824,6 +4974,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4853,6 +5004,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4882,6 +5034,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4911,6 +5064,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -4968,6 +5122,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "opensearch": {
@@ -4989,15 +5144,16 @@
       },
       {
         "name": "2",
-        "status": "supported",
+        "status": "deprecated",
         "release_date": "2022-05-26T00:00:00.000Z",
         "end_of_active_support_date": "2025-05-06T00:00:00.000Z",
         "end_of_life_date": null,
         "is_lts": false,
         "is_maintained": true,
-        "is_end_of_active_support": false,
+        "is_end_of_active_support": true,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "opensearch": {
@@ -5028,6 +5184,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "opensearch": {
@@ -5058,6 +5215,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "opensearch": {
@@ -5088,6 +5246,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "opensearch": {
@@ -5133,6 +5292,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": 0.1,
@@ -5148,15 +5308,16 @@
       },
       {
         "name": "8.0",
-        "status": "supported",
+        "status": "deprecated",
         "release_date": "2018-04-08T00:00:00.000Z",
         "end_of_active_support_date": "2025-04-30T00:00:00.000Z",
         "end_of_life_date": "2026-04-30T00:00:00.000Z",
         "is_lts": true,
         "is_maintained": true,
-        "is_end_of_active_support": false,
+        "is_end_of_active_support": true,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": 0.1,
@@ -5181,6 +5342,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": 0.1,
@@ -5258,6 +5420,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "php": {
@@ -5291,6 +5454,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "php": {
@@ -5315,15 +5479,16 @@
       },
       {
         "name": "8.3",
-        "status": "supported",
+        "status": "deprecated",
         "release_date": "2023-11-23T00:00:00.000Z",
         "end_of_active_support_date": "2025-12-31T00:00:00.000Z",
         "end_of_life_date": "2027-12-31T00:00:00.000Z",
         "is_lts": false,
         "is_maintained": true,
-        "is_end_of_active_support": false,
+        "is_end_of_active_support": true,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "php": {
@@ -5348,15 +5513,16 @@
       },
       {
         "name": "8.2",
-        "status": "supported",
+        "status": "deprecated",
         "release_date": "2022-12-08T00:00:00.000Z",
         "end_of_active_support_date": "2024-12-31T00:00:00.000Z",
         "end_of_life_date": "2026-12-31T00:00:00.000Z",
         "is_lts": false,
         "is_maintained": true,
-        "is_end_of_active_support": false,
+        "is_end_of_active_support": true,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "php": {
@@ -5381,15 +5547,16 @@
       },
       {
         "name": "8.1",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2021-11-25T00:00:00.000Z",
         "end_of_active_support_date": "2023-11-25T00:00:00.000Z",
         "end_of_life_date": "2025-12-31T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "php": {
@@ -5414,15 +5581,16 @@
       },
       {
         "name": "8.0",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2020-11-26T00:00:00.000Z",
         "end_of_active_support_date": "2022-11-26T00:00:00.000Z",
         "end_of_life_date": "2023-11-26T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "php": {
@@ -5456,6 +5624,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "php": {
@@ -5489,6 +5658,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "php": {
@@ -5522,6 +5692,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "php": {
@@ -5555,6 +5726,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "php": {
@@ -5588,6 +5760,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "php": {
@@ -5621,6 +5794,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "php": {
@@ -5654,6 +5828,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "php": {
@@ -5687,6 +5862,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "php": {
@@ -5745,6 +5921,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "postgresql": {
@@ -5785,6 +5962,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "postgresql": {
@@ -5817,6 +5995,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "postgresql": {
@@ -5849,6 +6028,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "postgresql": {
@@ -5881,6 +6061,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "postgresql": {
@@ -5904,15 +6085,16 @@
       },
       {
         "name": "13",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2020-09-24T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2025-11-13T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "postgresql": {
@@ -5936,15 +6118,16 @@
       },
       {
         "name": "12",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2019-10-03T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2024-11-21T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "postgresql": {
@@ -5977,6 +6160,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "postgresql": {
@@ -6009,6 +6193,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "postgresql": {
@@ -6041,6 +6226,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "postgresql": {
@@ -6073,6 +6259,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -6097,6 +6284,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "postgresql": {
@@ -6160,6 +6348,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -6189,6 +6378,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -6209,15 +6399,16 @@
       },
       {
         "name": "3.12",
-        "status": "supported",
+        "status": "deprecated",
         "release_date": "2023-10-02T00:00:00.000Z",
         "end_of_active_support_date": "2025-04-02T00:00:00.000Z",
         "end_of_life_date": "2028-10-31T00:00:00.000Z",
         "is_lts": false,
         "is_maintained": true,
-        "is_end_of_active_support": false,
+        "is_end_of_active_support": true,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -6238,15 +6429,16 @@
       },
       {
         "name": "3.11",
-        "status": "supported",
+        "status": "deprecated",
         "release_date": "2022-10-24T00:00:00.000Z",
         "end_of_active_support_date": "2024-04-01T00:00:00.000Z",
         "end_of_life_date": "2027-10-31T00:00:00.000Z",
         "is_lts": false,
         "is_maintained": true,
-        "is_end_of_active_support": false,
+        "is_end_of_active_support": true,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -6267,15 +6459,16 @@
       },
       {
         "name": "3.10",
-        "status": "supported",
+        "status": "deprecated",
         "release_date": "2021-10-04T00:00:00.000Z",
         "end_of_active_support_date": "2023-04-05T00:00:00.000Z",
         "end_of_life_date": "2026-10-31T00:00:00.000Z",
         "is_lts": false,
         "is_maintained": true,
-        "is_end_of_active_support": false,
+        "is_end_of_active_support": true,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -6296,15 +6489,16 @@
       },
       {
         "name": "3.9",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2020-10-05T00:00:00.000Z",
         "end_of_active_support_date": "2022-05-17T00:00:00.000Z",
         "end_of_life_date": "2025-10-31T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -6334,6 +6528,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -6363,6 +6558,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -6392,6 +6588,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -6421,6 +6618,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -6450,6 +6648,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -6509,6 +6708,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "rabbitmq": {
@@ -6533,15 +6733,16 @@
       },
       {
         "name": "4.0",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2024-09-18T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2025-04-15T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "rabbitmq": {
@@ -6566,15 +6767,16 @@
       },
       {
         "name": "3.13",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2024-02-22T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2024-09-17T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "rabbitmq": {
@@ -6599,15 +6801,16 @@
       },
       {
         "name": "3.12",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2023-06-01T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2024-02-21T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "rabbitmq": {
@@ -6641,6 +6844,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "rabbitmq": {
@@ -6674,6 +6878,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "rabbitmq": {
@@ -6707,6 +6912,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "rabbitmq": {
@@ -6740,6 +6946,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "rabbitmq": {
@@ -6773,6 +6980,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "rabbitmq": {
@@ -6806,6 +7014,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "rabbitmq": {
@@ -6839,6 +7048,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "rabbitmq": {
@@ -6901,6 +7111,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "redis": {
@@ -6923,15 +7134,16 @@
       },
       {
         "name": "7.2",
-        "status": "supported",
+        "status": "deprecated",
         "release_date": "2023-08-15T00:00:00.000Z",
         "end_of_active_support_date": "2024-07-29T00:00:00.000Z",
         "end_of_life_date": "2026-02-28T00:00:00.000Z",
         "is_lts": false,
         "is_maintained": true,
-        "is_end_of_active_support": false,
+        "is_end_of_active_support": true,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "redis": {
@@ -6954,15 +7166,16 @@
       },
       {
         "name": "7.0",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2022-04-27T00:00:00.000Z",
         "end_of_active_support_date": "2023-08-15T00:00:00.000Z",
         "end_of_life_date": "2024-07-29T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "redis": {
@@ -6985,15 +7198,16 @@
       },
       {
         "name": "6.2",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2021-02-22T00:00:00.000Z",
         "end_of_active_support_date": "2022-04-27T00:00:00.000Z",
         "end_of_life_date": "2025-02-28T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "redis": {
@@ -7025,6 +7239,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "redis": {
@@ -7056,6 +7271,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "redis": {
@@ -7087,6 +7303,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "redis": {
@@ -7118,6 +7335,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "redis": {
@@ -7149,6 +7367,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "redis": {
@@ -7180,6 +7399,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -7245,6 +7465,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -7274,6 +7495,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -7303,6 +7525,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -7332,6 +7555,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -7361,6 +7585,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -7390,6 +7615,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -7419,6 +7645,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -7448,6 +7675,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -7477,6 +7705,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -7506,6 +7735,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -7535,6 +7765,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -7575,7 +7806,7 @@
     "versions": [
       {
         "name": "1",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2018-09-13T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2018-10-26T00:00:00.000Z",
@@ -7584,6 +7815,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -7648,6 +7880,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "solr": {
@@ -7669,15 +7902,16 @@
       },
       {
         "name": "9.7",
-        "status": "retired",
+        "status": "supported",
         "release_date": "2022-05-11T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_lts": false,
-        "is_maintained": false,
-        "is_end_of_active_support": true,
-        "is_end_of_life": true,
+        "is_maintained": true,
+        "is_end_of_active_support": false,
+        "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "solr": {
@@ -7708,6 +7942,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "solr": {
@@ -7738,6 +7973,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "solr": {
@@ -7768,6 +8004,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "solr": {
@@ -7798,6 +8035,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "solr": {
@@ -7819,15 +8057,16 @@
       },
       {
         "name": "9.0",
-        "status": "retired",
+        "status": "supported",
         "release_date": "2022-05-11T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_lts": false,
-        "is_maintained": false,
-        "is_end_of_active_support": true,
-        "is_end_of_life": true,
+        "is_maintained": true,
+        "is_end_of_active_support": false,
+        "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": null,
@@ -7852,6 +8091,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "solr": {
@@ -7882,6 +8122,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "solr": {
@@ -7912,6 +8153,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "solr": {
@@ -7942,6 +8184,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "solr": {
@@ -7972,6 +8215,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "solr": {
@@ -8002,6 +8246,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "solr": {
@@ -8032,6 +8277,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "solr": {
@@ -8062,6 +8308,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "solr": {
@@ -8116,6 +8363,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "valkey": {
@@ -8147,6 +8395,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "valkey": {
@@ -8186,7 +8435,7 @@
     "versions": [
       {
         "name": "7.6",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2024-09-13T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2025-09-15T00:00:00.000Z",
@@ -8195,6 +8444,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -8220,15 +8470,16 @@
       },
       {
         "name": "7.3",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2023-03-15T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2024-03-15T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -8254,15 +8505,16 @@
       },
       {
         "name": "7.2",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2022-09-15T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2023-09-15T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -8288,15 +8540,16 @@
       },
       {
         "name": "7.1",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2022-03-15T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2023-03-15T00:00:00.000Z",
         "is_lts": false,
-        "is_maintained": true,
-        "is_end_of_active_support": false,
-        "is_end_of_life": false,
+        "is_maintained": false,
+        "is_end_of_active_support": true,
+        "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -8331,6 +8584,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -8365,6 +8619,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "http": {
@@ -8390,15 +8645,16 @@
       },
       {
         "name": "5.2",
-        "status": "retired",
+        "status": "supported",
         "release_date": "2018-03-15T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_lts": true,
-        "is_maintained": false,
-        "is_end_of_active_support": true,
-        "is_end_of_life": true,
+        "is_maintained": true,
+        "is_end_of_active_support": false,
+        "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -8423,15 +8679,16 @@
       },
       {
         "name": "5.1",
-        "status": "retired",
+        "status": "supported",
         "release_date": "2018-03-15T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": null,
         "is_lts": true,
-        "is_maintained": false,
-        "is_end_of_active_support": true,
-        "is_end_of_life": true,
+        "is_maintained": true,
+        "is_end_of_active_support": false,
+        "is_end_of_life": false,
         "is_long_time_support": true,
+        "is_protected": false,
         "manifest": {
           "endpoints": {
             "http": {
@@ -8477,7 +8734,7 @@
     "versions": [
       {
         "name": "1.12",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2022-10-10T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2023-09-27T00:00:00.000Z",
@@ -8486,6 +8743,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": 0.1,
@@ -8510,6 +8768,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": 0.1,
@@ -8534,6 +8793,7 @@
         "is_end_of_active_support": true,
         "is_end_of_life": true,
         "is_long_time_support": false,
+        "is_protected": false,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": 0.1,
@@ -8558,7 +8818,7 @@
     "versions": [
       {
         "name": "2",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2015-05-21T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2015-09-15T00:00:00.000Z",
@@ -8567,6 +8827,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": null,
           "min_cpu_size": 0.1,
@@ -8591,7 +8852,7 @@
     "versions": [
       {
         "name": "8.5",
-        "status": "supported",
+        "status": "retired",
         "release_date": "2017-11-14T00:00:00.000Z",
         "end_of_active_support_date": null,
         "end_of_life_date": "2022-02-10T00:00:00.000Z",
@@ -8600,6 +8861,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "elasticsearch": {
@@ -8630,6 +8892,7 @@
         "is_end_of_active_support": false,
         "is_end_of_life": false,
         "is_long_time_support": false,
+        "is_protected": true,
         "manifest": {
           "endpoints": {
             "elasticsearch": {
