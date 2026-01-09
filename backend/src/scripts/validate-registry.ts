@@ -40,7 +40,7 @@ const UpstreamVersionSchema = z.object({
   is_maintained: z.boolean(),
   is_end_of_active_support: z.boolean(),
   is_end_of_life: z.boolean(),
-  is_long_time_support: z.boolean()
+  is_long_term_support: z.boolean()
 });
 
 const ImageVersionSchema = z.object({

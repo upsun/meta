@@ -212,12 +212,12 @@
           "type": "boolean",
           "description": "Whether the version is end-of-life."
         },
-        "is_long_time_support": {
+        "is_long_term_support": {
           "type": "boolean",
           "description": "Whether the version benefits from long-term support."
         }
       },
-      "required": ["status", "is_lts", "is_maintained", "is_end_of_active_support", "is_end_of_life", "is_long_time_support"],
+      "required": ["status", "is_lts", "is_maintained", "is_end_of_active_support", "is_end_of_life", "is_long_term_support"],
       "additionalProperties": false
     },
     "ImageVersion": {
