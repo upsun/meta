@@ -1,0 +1,30 @@
+{
+    "name": "upsun/meta",
+    "type": "library",
+    "description": "The Meta tool",
+    "keywords": [
+        "upsun",
+        "meta",
+        "reference files",
+        "api"        
+    ],
+    "homepage": "https://github.com/upsun/meta",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Florent HUCK",
+            "email": "florent.huck@upsun.com"
+        },
+        {
+            "name": "Mickael GAILLARD",
+            "email": "mickael.gaillard@upsun.com"
+        },
+        {
+            "name": "Upsun Advocacy Team",
+            "homepage": "https://www.upsun.com"
+        }
+    ],
+    "scripts": {
+        "spec:patch": "php ./scripts/pre-processing/preprocess-schema.php ./resources/openapi/openapispec-upsun.json ./resources/openapi/openapispec-upsun-sdks.json"
+    }
+}
