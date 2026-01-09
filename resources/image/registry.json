@@ -2441,7 +2441,7 @@
       {
         "name": "2.2",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -2450,9 +2450,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -2471,7 +2471,7 @@
       {
         "name": "2.1",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -2480,9 +2480,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -2501,7 +2501,7 @@
       {
         "name": "2.0",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -2510,9 +2510,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -2531,7 +2531,7 @@
       {
         "name": "1.8",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -2540,9 +2540,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -2566,7 +2566,7 @@
       {
         "name": "1.7",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -2575,9 +2575,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -2601,7 +2601,7 @@
       {
         "name": "1.3",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -2610,9 +2610,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -2637,7 +2637,7 @@
       {
         "name": "1.2",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -2646,9 +2646,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -9068,7 +9068,7 @@
       {
         "name": "9.7",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -9077,9 +9077,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -9248,7 +9248,7 @@
       {
         "name": "9.0",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -9257,9 +9257,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
