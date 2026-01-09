@@ -1,0 +1,70 @@
+name: Get and Patch OpenAPI Spec for SDKs
+
+on:
+  schedule:
+    - cron: "5 3 * * *"
+  workflow_dispatch: ~
+
+permissions:
+  contents: write
+
+env:
+  DEFAULT_BRANCH: "master"
+
+jobs:
+  check-and-update:
+    runs-on: ubuntu-latest
+    if: ${{ github.repository_owner == 'upsun' }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Download openapispec-upsun.json from upstream
+        env:
+          GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
+          GIT_URL_BASE: ${{ secrets.GIT_URL_BASE }}
+
+        run: |
+          PROJECT_PATH="devrel/docs/api-site"
+          REF="main"
+
+          # URL-encode path to the project (replace `/` by `%2F`)
+          PROJECT_ENCODED=$(echo "$PROJECT_PATH" | sed 's/\//%2F/g')
+
+          # Download openapispec-upsun.(json|yaml) into resources/openapi using the Git API
+          curl --header "PRIVATE-TOKEN: $GIT_TOKEN" \
+            --output resources/openapi/openapispec-upsun.json \
+            "${GIT_URL_BASE}/${PROJECT_ENCODED}/repository/files/$(python3 -c "import urllib.parse; print(urllib.parse.quote('web/openapispec-upsun.json',safe=''))")/raw?ref=${REF}"
+          curl --header "PRIVATE-TOKEN: $GIT_TOKEN" \
+            --output resources/openapi/openapispec-upsun.yaml \
+            "${GIT_URL_BASE}/${PROJECT_ENCODED}/repository/files/$(python3 -c "import urllib.parse; print(urllib.parse.quote('web/openapispec-upsun.yaml',safe=''))")/raw?ref=${REF}"
+          
+      - name: Patch OpenAPI specs (json) for SDK generation 
+        run: composer run spec:patch
+
+      - name: Create Pull Request if changes
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.OPENAPI_WORKFLOW_TOKEN }}
+          commit-message: "Generate OpenAPI spec for SDKs"
+          body: |
+            This PR updates the OpenAPI spec from upstream and applies formatting changes to generate the SDK version.
+
+          author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+          draft: false
+          delete-branch: false
+          branch: update-openapi-spec
+          title: "[API-BOT] Get and Patch OpenAPI spec for SDKs"
+          base: master
+          labels: |
+            automated pr
+          add-paths: |
+            resources/openapi/openapispec-upsun.json
+            resources/openapi/openapispec-upsun.yaml
+            resources/openapi/openapispec-upsun-sdks.json

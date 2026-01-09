@@ -63,12 +63,13 @@ export class ResourceManager {
    * Read resource from local file system
    */
   private getLocalResource(filePath: string): any {
-    const fullPath = path.join(__dirname, this.config.localPath!, filePath);
+    // Go up three levels from backend/src/utils to the project root
+    const projectRoot = path.resolve(__dirname, '../../..');
+    const fullPath = path.join(projectRoot, 'resources', filePath);
 
     resourceLogger.debug({
       mode: this.config.mode,
       dirname: __dirname,
-      localPath: this.config.localPath,
       filePath,
       fullPath
     }, 'Reading local resource');

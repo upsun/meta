@@ -301,6 +301,8 @@ ${endpointListHTML}
             <p>
                 Powered by <strong>Express</strong> + <strong>Zod</strong> + <strong>Scalar</strong>
                 <br>
+                Upsun © ${new Date().getFullYear()} All rights reserved.
+                <br>
                 <a href="https://docs.upsun.com" target="_blank">Upsun Docs</a>
             </p>
         </div>
