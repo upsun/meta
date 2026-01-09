@@ -26,16 +26,27 @@ const VersionManifestSchema = z.object({
   supports_horizontal_scaling: z.boolean().nullable().optional()
 }).passthrough();
 
-const ImageVersionSchema = z.object({
-  name: z.string(),
+const UpsunVersionSchema = z.object({
+  status: VersionStatusSchema,
+  internal_support: z.boolean()
+});
+
+const UpstreamVersionSchema = z.object({
   status: VersionStatusSchema,
   release_date: z.string().nullable().optional(),
   end_of_active_support_date: z.string().nullable().optional(),
   end_of_life_date: z.string().nullable().optional(),
+  is_lts: z.boolean(),
   is_maintained: z.boolean(),
   is_end_of_active_support: z.boolean(),
   is_end_of_life: z.boolean(),
-  is_long_time_support: z.boolean(),
+  is_long_time_support: z.boolean()
+});
+
+const ImageVersionSchema = z.object({
+  name: z.string(),
+  upsun: UpsunVersionSchema,
+  upstream: UpstreamVersionSchema,
   manifest: VersionManifestSchema
 }).passthrough();
 
@@ -100,7 +111,6 @@ async function main() {
     console.error(`Failed to read registry file at ${registryPath}`);
     console.error(error);
     process.exit(1);
-    return;
   }
 
   let data: unknown;
@@ -110,7 +120,6 @@ async function main() {
     console.error('registry.json is not valid JSON');
     console.error(error);
     process.exit(1);
-    return;
   }
 
   const result = ImageRegistryRawSchema.safeParse(data);
@@ -119,7 +128,6 @@ async function main() {
     console.error('registry.json does not match the expected schema');
     console.error(JSON.stringify(result.error.format(), null, 2));
     process.exit(1);
-    return;
   }
 
   console.log('registry.json is valid.');

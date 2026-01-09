@@ -160,75 +160,88 @@
       },
       "additionalProperties": true
     },
+    "UpsunVersion": {
+      "type": "object",
+      "description": "Upsun-specific information for this version.",
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/VersionStatus",
+          "description": "Status of the version in Upsun (supported, deprecated, retired)."
+        },
+        "internal_support": {
+          "type": "boolean",
+          "description": "Whether this version is internally supported by Upsun, even if not officially maintained (is the image branch protected or not)."
+        }
+      },
+      "required": ["status", "internal_support"],
+      "additionalProperties": false
+    },
+    "UpstreamVersion": {
+      "type": "object",
+      "description": "Upstream provider information for this version.",
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/VersionStatus",
+          "description": "Status of the version according to the upstream provider."
+        },
+        "release_date": {
+          "oneOf": [ { "type": "string", "format": "date-time" }, { "type": "null" } ],
+          "description": "Release date of the version (ISO 8601 format)."
+        },
+        "end_of_active_support_date": {
+          "oneOf": [ { "type": "string", "format": "date-time" }, { "type": "null" } ],
+          "description": "End of active support date (ISO 8601 format)."
+        },
+        "end_of_life_date": {
+          "oneOf": [ { "type": "string", "format": "date-time" }, { "type": "null" } ],
+          "description": "End of life date for the version (ISO 8601 format)."
+        },
+        "is_lts": {
+          "type": "boolean",
+          "description": "Whether the version is a long-term support (LTS) release."
+        },
+        "is_maintained": {
+          "type": "boolean",
+          "description": "Whether the version is currently maintained by the upstream provider."
+        },
+        "is_end_of_active_support": {
+          "type": "boolean",
+          "description": "Whether the version has reached end of active support."
+        },
+        "is_end_of_life": {
+          "type": "boolean",
+          "description": "Whether the version is end-of-life."
+        },
+        "is_long_time_support": {
+          "type": "boolean",
+          "description": "Whether the version benefits from long-term support."
+        }
+      },
+      "required": ["status", "is_lts", "is_maintained", "is_end_of_active_support", "is_end_of_life", "is_long_time_support"],
+      "additionalProperties": false
+    },
     "ImageVersion": {
       "type": "object",
-      "description": "Single version entry for an image.",
+      "description": "Single image version entry, including Upsun, upstream and technical manifest information.",
       "properties": {
         "name": {
           "type": "string",
-          "description": "Human-readable version label (e.g. 8.3, 24, 8.0 (LTS))."
+          "description": "Human-readable version name or number (e.g. 8.3, 24, 8.0 (LTS))."
         },
-        "status": {
-          "$ref": "#/$defs/VersionStatus"
+        "upsun": {
+          "$ref": "#/$defs/UpsunVersion",
+          "description": "Upsun-specific information block for this version."
         },
-        "release_date": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "date-time"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "end_of_active_support_date": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "date-time"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "end_of_life_date": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "date-time"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "is_maintained": {
-          "type": "boolean"
-        },
-        "is_end_of_active_support": {
-          "type": "boolean"
-        },
-        "is_end_of_life": {
-          "type": "boolean"
-        },
-        "is_long_time_support": {
-          "type": "boolean"
+        "upstream": {
+          "$ref": "#/$defs/UpstreamVersion",
+          "description": "Upstream provider information block for this version."
         },
         "manifest": {
-          "$ref": "#/$defs/VersionManifest"
+          "$ref": "#/$defs/VersionManifest",
+          "description": "Technical manifest describing endpoints, minimum resources, etc. for this version."
         }
       },
-      "required": [
-        "name",
-        "status",
-        "is_maintained",
-        "is_end_of_active_support",
-        "is_end_of_life",
-        "is_long_time_support",
-        "manifest"
-      ],
+      "required": ["name", "upsun", "upstream", "manifest"],
       "additionalProperties": true
     },
     "DedicatedGen": {
@@ -342,40 +355,39 @@
       "description": "Single image entry in the registry.",
       "properties": {
         "description": {
-          "type": "string"
+          "type": "string",
+          "description": "Short description of the image/service."
         },
         "docs": {
-          "$ref": "#/$defs/ImageDocs"
+          "$ref": "#/$defs/ImageDocs",
+          "description": "Documentation metadata for the image (links, web, hooks, etc.)."
         },
         "min_disk_size": {
           "oneOf": [
-            {
-              "type": "number"
-            },
-            {
-              "type": "null"
-            }
-          ]
+            { "type": "number" },
+            { "type": "null" }
+          ],
+          "description": "Minimum disk size required for this image (in MB or GB, depending on context)."
         },
         "name": {
           "type": "string",
-          "description": "Human-readable image name."
+          "description": "Human-readable image name (e.g. 'PHP', 'Node.js', 'Chrome Headless')."
         },
         "repo_name": {
           "type": "string",
-          "description": "Repository name for the image source."
+          "description": "Repository name for the image source (e.g. GitHub repo name)."
         },
         "runtime": {
           "type": "boolean",
-          "description": "Whether this image is a runtime (language) image."
+          "description": "True if this image is a runtime (language) image, false for services."
         },
         "need_disk": {
           "type": "boolean",
-          "description": "Whether this image requires disk."
+          "description": "True if this image requires a disk to operate."
         },
         "premium": {
           "type": "boolean",
-          "description": "Whether this service is premium-only."
+          "description": "True if this service is available only for premium plans."
         },
         "configuration": {
           "type": "string",
@@ -383,25 +395,23 @@
         },
         "service_relationships": {
           "type": "string",
-          "description": "Relationships snippet (YAML) to include in user configuration examples."
+          "description": "YAML relationships snippet to include in user configuration examples."
         },
         "versions": {
           "type": "array",
-          "items": {
-            "$ref": "#/$defs/ImageVersion"
-          },
-          "minItems": 1
+          "items": { "$ref": "#/$defs/ImageVersion" },
+          "minItems": 1,
+          "description": "List of all available versions for this image."
         },
         "versions-dedicated-gen-2": {
           "description": "Dedicated Gen 2 versions map (accepted but intentionally not validated in detail)."
         },
         "versions-dedicated-gen-3": {
-          "$ref": "#/$defs/DedicatedGen"
+          "$ref": "#/$defs/DedicatedGen",
+          "description": "Dedicated Gen 3 versions (supported/deprecated lists)."
         }
       },
-      "required": [
-        "versions"
-      ],
+      "required": ["versions"],
       "additionalProperties": true
     }
   }
