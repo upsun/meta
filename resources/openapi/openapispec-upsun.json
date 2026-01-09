@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Upsun.com Rest API initial version",
+    "title": "Upsun.com Rest API",
     "version": "1.0",
     "contact": {
       "name": "Support",
