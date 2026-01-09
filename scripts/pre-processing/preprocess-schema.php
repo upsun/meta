@@ -1009,8 +1009,8 @@ class OpenApiPreprocessor
                             '$ref' => '#/components/schemas/AcceptedResponse',
                         ];
 
-                        echo "🔄 Replaced empty \$ref $refName with AcceptedResponse
-                        for {$httpMethod} {$path} [$statusCode]\n";
+                        echo "🔄 Replaced empty \$ref $refName with AcceptedResponse" 
+                        ." for {$httpMethod} {$path} [$statusCode]\n";
                     }
                 }
             }
@@ -1024,7 +1024,7 @@ class OpenApiPreprocessor
     public function normalizeSchemaNamesToPascalCase(): void
     {
         if (!isset($this->schema['components']['schemas'])) {
-            echo "⚠️ No schemas founded in components.schemas\n";
+            echo "⚠️ No schemas found in components.schemas\n";
             return;
         }
 
