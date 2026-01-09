@@ -35,12 +35,15 @@ jobs:
           # URL-encode path to the project (replace `/` by `%2F`)
           PROJECT_ENCODED=$(echo "$PROJECT_PATH" | sed 's/\//%2F/g')
 
-          # Download into shared data using the GitLab API
+          # Download openapispec-upsun.(json|yaml) into resources/openapi using the GitLab API
           curl --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
             --output resources/openapi/openapispec-upsun.json \
             "https://lab.plat.farm/api/v4/projects/${PROJECT_ENCODED}/repository/files/$(python3 -c "import urllib.parse; print(urllib.parse.quote('web/openapispec-upsun.json',safe=''))")/raw?ref=${REF}"
+          curl --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+            --output resources/openapi/openapispec-upsun.yaml \
+            "https://lab.plat.farm/api/v4/projects/${PROJECT_ENCODED}/repository/files/$(python3 -c "import urllib.parse; print(urllib.parse.quote('web/openapispec-upsun.yaml',safe=''))")/raw?ref=${REF}"
           
-      - name: Pre-process OpenApi specs
+      - name: Patch OpenApi specs (json) for SDK generation 
         run: composer run spec:patch
 
       - name: Create Pull Request if changes
