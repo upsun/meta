@@ -2532,7 +2532,7 @@
         "name": "1.8",
         "upsun": {
           "status": "supported",
-          "internal_support": true
+          "internal_support": false
         },
         "upstream": {
           "status": "supported",
