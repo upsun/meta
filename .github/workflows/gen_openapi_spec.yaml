@@ -45,7 +45,7 @@ jobs:
             --output resources/openapi/openapispec-upsun.yaml \
             "${GIT_URL_BASE}/${PROJECT_ENCODED}/repository/files/$(python3 -c "import urllib.parse; print(urllib.parse.quote('web/openapispec-upsun.yaml',safe=''))")/raw?ref=${REF}"
           
-      - name: Patch OpenApi specs (json) for SDK generation 
+      - name: Patch OpenAPI specs (json) for SDK generation 
         run: composer run spec:patch
 
       - name: Create Pull Request if changes

@@ -63,7 +63,7 @@ export class ResourceManager {
    * Read resource from local file system
    */
   private getLocalResource(filePath: string): any {
-    // Go up to the project root (3 levels up from backend/src/utils)
+    // Go up three levels from backend/src/utils to the project root
     const projectRoot = path.resolve(__dirname, '../../..');
     const fullPath = path.join(projectRoot, 'resources', filePath);
 
