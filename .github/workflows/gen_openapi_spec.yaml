@@ -25,9 +25,11 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Download openapispec-upsun.json from GitLab
+      - name: Download openapispec-upsun.json from upstream
         env:
-          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+          GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
+          GIT_URL_BASE: ${{ secrets.GIT_URL_BASE }}
+
         run: |
           PROJECT_PATH="devrel/docs/api-site"
           REF="main"
@@ -35,13 +37,13 @@ jobs:
           # URL-encode path to the project (replace `/` by `%2F`)
           PROJECT_ENCODED=$(echo "$PROJECT_PATH" | sed 's/\//%2F/g')
 
-          # Download openapispec-upsun.(json|yaml) into resources/openapi using the GitLab API
-          curl --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+          # Download openapispec-upsun.(json|yaml) into resources/openapi using the Git API
+          curl --header "PRIVATE-TOKEN: $GIT_TOKEN" \
             --output resources/openapi/openapispec-upsun.json \
-            "https://lab.plat.farm/api/v4/projects/${PROJECT_ENCODED}/repository/files/$(python3 -c "import urllib.parse; print(urllib.parse.quote('web/openapispec-upsun.json',safe=''))")/raw?ref=${REF}"
-          curl --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+            "${GIT_URL_BASE}/${PROJECT_ENCODED}/repository/files/$(python3 -c "import urllib.parse; print(urllib.parse.quote('web/openapispec-upsun.json',safe=''))")/raw?ref=${REF}"
+          curl --header "PRIVATE-TOKEN: $GIT_TOKEN" \
             --output resources/openapi/openapispec-upsun.yaml \
-            "https://lab.plat.farm/api/v4/projects/${PROJECT_ENCODED}/repository/files/$(python3 -c "import urllib.parse; print(urllib.parse.quote('web/openapispec-upsun.yaml',safe=''))")/raw?ref=${REF}"
+            "${GIT_URL_BASE}/${PROJECT_ENCODED}/repository/files/$(python3 -c "import urllib.parse; print(urllib.parse.quote('web/openapispec-upsun.yaml',safe=''))")/raw?ref=${REF}"
           
       - name: Patch OpenApi specs (json) for SDK generation 
         run: composer run spec:patch
@@ -52,7 +54,7 @@ jobs:
           token: ${{ secrets.OPENAPI_WORKFLOW_TOKEN }}
           commit-message: "Generate OpenAPI spec for SDKs"
           body: |
-            This PR updates the OpenAPI spec from GitLab and applies formatting changes to generate the SDK version.
+            This PR updates the OpenAPI spec from upstream and applies formatting changes to generate the SDK version.
 
           author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
           draft: false
@@ -64,4 +66,5 @@ jobs:
             automated pr
           add-paths: |
             resources/openapi/openapispec-upsun.json
+            resources/openapi/openapispec-upsun.yaml
             resources/openapi/openapispec-upsun-sdks.json

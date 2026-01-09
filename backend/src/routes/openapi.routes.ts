@@ -15,15 +15,15 @@ export const openapiRouter = new ApiRouter();
 const resourceManager = new ResourceManager();
 
 // ========================================
-// GET /openapi-spec - Get OpenAPI spec (JSON or YAML)
+// GET /openapi-spec - Get Upsun OpenAPI spec (JSON or YAML)
 // ========================================
 import { z } from 'zod';
 
 openapiRouter.route({
   method: 'get',
   path: '/openapi-spec',
-  summary: 'Get OpenAPI specification',
-  description: 'Returns the OpenAPI specification file in JSON or YAML format.',
+  summary: 'Get Upsun OpenAPI specification',
+  description: 'Returns the Upsun OpenAPI specification file of API in JSON or YAML format.',
   tags: ['OpenAPI'],
   query: z.object({
     format: z.enum(['json', 'yaml']).optional().describe('Format of the spec file (json or yaml)'),
@@ -31,11 +31,11 @@ openapiRouter.route({
   }),
   responses: {
     200: {
-      description: 'OpenAPI specification',
+      description: 'Upsun OpenAPI specification',
       schema: z.any()
     },
     404: {
-      description: 'Spec file not found',
+      description: 'Upsun OpenAPI spec file not found',
       schema: z.object({ error: z.string() })
     },
     500: {
@@ -65,8 +65,8 @@ openapiRouter.route({
         res.status(404).json({ error: 'Spec file not found' });
       }
     } catch (error: any) {
-      apiLogger.error({ error: error.message }, 'Failed to read OpenAPI spec');
-      res.status(500).json({ error: error.message || 'Unable to read OpenAPI spec' });
+      apiLogger.error({ error: error.message }, 'Failed to read Upsun OpenAPI spec');
+      res.status(500).json({ error: error.message || 'Unable to read Upsun OpenAPI spec' });
     }
   }
 });
