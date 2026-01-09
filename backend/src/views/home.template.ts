@@ -259,6 +259,7 @@ export function generateHomePage(endpoints: Endpoint[], baseUrl: string, version
             <h1>Upsun Meta Registry</h1>
             <p class="subtitle">Upsun Service Registry API</p>
             <span class="version">v${version}</span>
+            <p><strong>Disclaimer:</strong> This tool is in a BETA version. While we strive for accuracy, data may not be complete or up-to-date. Use at your own discretion.</p>
         </div>
 
         <a href="/api-docs" class="main-link">

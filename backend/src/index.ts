@@ -68,6 +68,8 @@ const imageSpec = imageRouter.generateOpenApiSpec({
 
 REST API to access Upsun image and region information from the official registry.
 
+> **Disclaimer:** This tool is in a BETA version. While we strive for accuracy, data may not be complete or up-to-date. Use at your own discretion.
+
 ## Features
 
 - 📋 **Complete lists**: Retrieval of all available images and regions
