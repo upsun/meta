@@ -106,10 +106,10 @@ Source file (local mode): \`resources/image/registry.schema.json\`
 validationRouter.route({
   method: 'get',
   path: '/schema/service-versions',
-  summary: 'Get list of service versions',
+  summary: 'Get enum of service versions included in validation schema',
   description: `
-Returns the list of all service images and
-their possible versions, derived from \`/image\`.
+Returns the enum list of all service images and
+their possible versions, derived from \`/image\` and this is called from the upsun.json service.type param.
 
 The result is a JSON Schema snippet:
 
@@ -189,10 +189,10 @@ The result is a JSON Schema snippet:
 validationRouter.route({
   method: 'get',
   path: '/schema/runtime-versions',
-  summary: 'Get list of runtime versions',
+  summary: 'Get enum of runtime versions included in validation schema',
   description: `
-Returns the list of all runtime images and
-their possible versions, derived from \`/image\`.
+Returns the enum list of all runtime images and
+their possible versions, derived from \`/image\` and this is called from the upsun.json runtime.type param.
 
 The result is an array of strings formatted as \`"<imageKey>:<version>"\`,
 for example: \`["php:7.2", "php:7.3", "nodejs:24"]\`.
