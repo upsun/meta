@@ -10124,9 +10124,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": null,
+          "release_date": "2015-05-21T00:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": null,
+          "end_of_life_date": "2015-09-15T00:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
