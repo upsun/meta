@@ -572,6 +572,41 @@
     "need_disk": false,
     "versions": [
       {
+        "name": "10.0",
+        "upsun": {
+          "status": "retired",
+          "internal_support": false
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": "2025-11-11T00:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2028-11-14T00:00:00.000Z",
+          "is_lts": true,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": true
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
         "name": "8.0",
         "upsun": {
           "status": "supported",
@@ -2749,6 +2784,7 @@
         "7"
       ]
     },
+    "need_disk": false,
     "versions": [
       {
         "name": "21",
@@ -10154,6 +10190,11 @@
       "service_name": "elasticsearch-enterprise",
       "url": "/add-services/elasticsearch-enterprise.html"
     },
+    "description": "",
+    "name": "",
+    "repo_name": "",
+    "runtime": false,
+    "need_disk": false,
     "versions": [
       {
         "name": "8.5",
