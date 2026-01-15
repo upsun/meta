@@ -920,7 +920,7 @@
         "1.7"
       ]
     },
-    "need_disk": false,
+    "need_disk": true,
     "versions": [
       {
         "name": "7.10",
@@ -2401,7 +2401,7 @@
     "name": "InfluxDB",
     "repo_name": "influxdb",
     "runtime": false,
-    "need_disk": false,
+    "need_disk": true,
     "versions": [
       {
         "name": "2.7",
@@ -3114,7 +3114,7 @@
     "name": "Kafka",
     "repo_name": "kafka",
     "runtime": false,
-    "need_disk": false,
+    "need_disk": true,
     "versions": [
       {
         "name": "3.7",
@@ -3495,7 +3495,7 @@
         "10.3 Galera"
       ]
     },
-    "need_disk": false,
+    "need_disk": true,
     "versions": [
       {
         "name": "11.8",
@@ -4008,7 +4008,7 @@
         "10.0 Galera"
       ]
     },
-    "need_disk": false,
+    "need_disk": true,
     "versions": [
       {
         "name": "11.8",
@@ -4633,7 +4633,7 @@
     "min_disk_size": 512,
     "name": "MongoDB",
     "runtime": false,
-    "need_disk": false,
+    "need_disk": true,
     "versions": [
       {
         "name": "4.0",
@@ -4866,7 +4866,7 @@
         "4.0"
       ]
     },
-    "need_disk": false,
+    "need_disk": true,
     "versions": [
       {
         "name": "7.0",
@@ -6110,7 +6110,7 @@
     "min_disk_size": 256,
     "name": "Oracle MySQL",
     "runtime": false,
-    "need_disk": false,
+    "need_disk": true,
     "versions": [
       {
         "name": "8.4",
@@ -7726,7 +7726,7 @@
         "3.7"
       ]
     },
-    "need_disk": false,
+    "need_disk": true,
     "versions": [
       {
         "name": "4.1",
@@ -10051,7 +10051,7 @@
         "1.6"
       ]
     },
-    "need_disk": false,
+    "need_disk": true,
     "versions": [
       {
         "name": "1.12",
@@ -10194,7 +10194,7 @@
     "name": "elasticsearch-enterprise",
     "repo_name": "elasticsearch-enterprise",
     "runtime": false,
-    "need_disk": false,
+    "need_disk": true,
     "versions": [
       {
         "name": "8.5",
