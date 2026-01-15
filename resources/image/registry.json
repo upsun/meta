@@ -10181,6 +10181,12 @@
       "service_name": "activemq-artemis",
       "url": "/add-services/activemq-artemis.html"
     },
+    "description": "",
+    "type": "activemq-artemis",
+    "name": "activemq-artemis",
+    "repo_name": "activemq-artemis",
+    "runtime": false,
+    "need_disk": true,
     "versions": [
       {
         "name": "2",
@@ -10190,9 +10196,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-05-21T00:00:00.000Z",
+          "release_date": null,
           "end_of_active_support_date": null,
-          "end_of_life_date": "2015-09-15T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
