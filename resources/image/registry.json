@@ -894,7 +894,7 @@
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2019-04-10T00:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": "2026-01-15T00:00:00.000Z",
@@ -930,7 +930,7 @@
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2019-04-10T00:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": "2026-01-15T00:00:00.000Z",
@@ -966,7 +966,7 @@
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2019-04-10T00:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": "2026-01-15T00:00:00.000Z",
@@ -1002,7 +1002,7 @@
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2019-04-10T00:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": "2026-01-15T00:00:00.000Z",
@@ -1038,7 +1038,7 @@
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2019-04-10T00:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": "2026-01-15T00:00:00.000Z",
@@ -1074,7 +1074,7 @@
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2019-04-10T00:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": "2026-01-15T00:00:00.000Z",
@@ -10198,7 +10198,7 @@
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2019-04-10T00:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": "2026-01-15T00:00:00.000Z",
