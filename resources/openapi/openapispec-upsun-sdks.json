@@ -38064,6 +38064,10 @@
                 },
                 "x-description": [
                     "Project add-on. Uses discriminator on `type` to select field shape."
+                ],
+                "x-uniqueDiscriminatorModels": [
+                    "ProjectAddonWithSkuFields",
+                    "ProjectAddonWithQuantityFields"
                 ]
             },
             "ProjectAddonBase": {
