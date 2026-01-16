@@ -1109,6 +1109,20 @@ class OpenApiPreprocessor
         $name = str_replace(['VPN'], 'Vpn', $name);
         return $name;
     }
+
+    public function addUniqueDiscriminatorModels(): void
+    {
+        foreach ($this->schema['components']['schemas'] as $schemaName => &$schema) {
+            if (isset($schema['discriminator']['mapping'])) {
+                $mapping = $schema['discriminator']['mapping'];
+                $uniqueModels = array_unique(array_map(function ($ref) {
+                    return basename($ref);
+                }, $mapping));
+                $schema['x-uniqueDiscriminatorModels'] = array_values($uniqueModels);
+                echo "→ Add x-uniqueDiscriminatorModels on $schemaName : " . implode(', ', $uniqueModels) . "\n";
+            }
+        }
+    }
 }
 
 # Main script
@@ -1170,6 +1184,9 @@ try {
 
     // wordwrap description
     $preprocessor->wordwrapDescription();
+
+    // Fix discriminator unique models
+    $preprocessor->addUniqueDiscriminatorModels();
 
     // Save
     $preprocessor->save($outputPath);
