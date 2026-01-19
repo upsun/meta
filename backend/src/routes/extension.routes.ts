@@ -18,13 +18,13 @@ const PhpExtensionsSchema = z.record(
     z.array(z.string())
   )
 ).openapi('PhpExtensions', {
-  description: 'Map of service => version => extensions[] (mirrors php_extensions.yaml)',
+  description: 'Map of service => version => extensions[]',
   example: {
-    dedicated: {
+    shared: {
       '8.2': ['amqp', 'apcu', 'bcmath', 'bz2', 'cli', 'curl', 'fpm'],
       '8.3': ['amqp', 'apcu', 'bcmath', 'bz2', 'cli', 'curl', 'fpm']
     },
-    'shared-grid': {
+    'cloud': {
       '8.2': ['apcu', 'bcmath', 'cli', 'curl', 'gd', 'intl'],
       '8.3': ['apcu', 'bcmath', 'cli', 'curl', 'gd', 'intl']
     }
@@ -37,11 +37,15 @@ export const extensionRouter = new ApiRouter();
 extensionRouter.route({
   method: 'get',
   path: '/extension/php',
-  summary: 'Get all PHP extensions (YAML)',
+  summary: 'Get all PHP extensions',
   description: `
-Returns the full content of the PHP extensions registry YAML.
+Returns the list of PHP extensions by version.
 
-Source file: \`resources/extension/php_extensions.yaml\`
+**Supported formats:**
+- \`application/json\` (default)
+- \`application/x-yaml\`
+
+Use the \`Accept\` header to specify your preferred format.
 
 Example:
 
@@ -49,11 +53,11 @@ Example:
 GET /extension/php
 \`\`\`
 
-Example response (truncated):
+Example response :
 
 \`\`\`json
 {
-  "dedicated": {
+  "shared": {
     "8.2": ["amqp", "apcu", "bcmath", "bz2", "cli", "curl", "fpm"],
     "8.3": ["amqp", "apcu", "bcmath", "bz2", "cli", "curl", "fpm"]
   }
@@ -62,13 +66,12 @@ Example response (truncated):
 
 Supports content negotiation:
 - Default response is **JSON**
-- Use \`format=yaml\` or \`Accept: application/x-yaml\` to get the raw YAML (shown as plain text in Scalar)
 - The response body is the raw YAML file when requesting YAML; syntax highlighting depends on the client
 
-YAML example (truncated):
+YAML example response :
 \`\`\`yaml
-dedicated:
-  "5.x":
+shared:
+  "8.2":
     - amqp
     - apcu
     - bcmath

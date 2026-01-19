@@ -2,9 +2,10 @@ import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
 import { ResourceManager, logger } from '../utils/index.js';
+import { sendFormatted } from '../utils/responseFormat.js';
 import {
-  RegionSchema,
-  RegionsListSchema,
+  HostRegionSchema,
+  HostRegionsListSchema,
   RegionCountSchema,
   RegionErrorSchema
 } from '../schemas/region.schema.js';
@@ -21,17 +22,28 @@ const resourceManager = new ResourceManager();
 export const regionRouter = new ApiRouter();
 
 // ========================================
-// GET /region - Get all regions or count
+// GET /region - Get all regions with optional filters
 // ========================================
 regionRouter.route({
   method: 'get',
   path: '/region',
   summary: 'Get all regions',
   description: `
-Returns the complete list of available regions with their information.
+Returns the complete list of available regions with optional filtering.
 
-**Without query parameter**: Returns full list of all regions
-**With \`count=true\`**: Returns only the total number of regions
+**Supported formats:**
+- \`application/json\` (default)
+- \`application/x-yaml\`
+
+Use the \`Accept\` header to specify your preferred format.
+
+### Query Parameters
+
+- \`count\`: Set to "true" to return only the count of regions (after filtering)
+- \`name\`: Filter by region name (e.g., "us-2.platform.sh", "eu.platform.sh")
+- \`provider\`: Filter by cloud provider name (e.g., "AWS", "Azure", "Google", "OVH")
+- \`zone\`: Filter by geographic zone (e.g., "North America", "Europe", "Australia")
+- \`country_code\`: Filter by ISO country code (e.g., "US", "IE", "AU")
 
 ### Usage Examples
 
@@ -41,282 +53,152 @@ GET /region
 
 # Only count
 GET /region?count=true
+
+# Filter by name
+GET /region?name=au.platform.sh
+
+# Filter by provider
+GET /region?provider=AWS
+
+# Filter by zone
+GET /region?zone=Europe
+
+# Filter by country code
+GET /region?country_code=US
+
+# Combine filters
+GET /region?provider=AWS&zone=North America
+
+# Count filtered results
+GET /region?provider=Google&count=true
 \`\`\`
   `,
   tags: ['Regions'],
   query: z.object({
     count: z.string()
       .optional()
-      .describe('Set to "true" to return only the count of regions')
+      .describe('Set to "true" to return only the count of regions'),
+    name: z.string()
+      .optional()
+      .describe('Filter by region name (exact match)'),
+    provider: z.string()
+      .optional()
+      .describe('Filter by cloud provider name (case-insensitive)'),
+    zone: z.string()
+      .optional()
+      .describe('Filter by geographic zone (case-insensitive)'),
+    country_code: z.string()
+      .optional()
+      .describe('Filter by ISO country code (case-insensitive)')
   }),
   responses: {
     200: {
-      description: 'Complete list of regions or count',
-      schema: z.union([RegionsListSchema, RegionCountSchema])
+      description: 'Complete list of regions, filtered regions, or count',
+      schema: z.union([HostRegionsListSchema, RegionCountSchema, HostRegionSchema]),
+      contentTypes: ['application/json', 'application/x-yaml']
+    },
+    404: {
+      description: 'No regions found matching the filters',
+      schema: RegionErrorSchema,
+      contentTypes: ['application/json', 'application/x-yaml']
     },
     500: {
       description: 'Internal server error',
-      schema: RegionErrorSchema
+      schema: RegionErrorSchema,
+      contentTypes: ['application/json', 'application/x-yaml']
     }
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const { count } = req.query as { count?: string };
-      const regions = await resourceManager.getResource('host/regions_location.json');
+      const { count, name, provider, zone, country_code } = req.query as {
+        count?: string;
+        name?: string;
+        provider?: string;
+        zone?: string;
+        country_code?: string;
+      };
 
+      // Get regions list
+      let regions = await resourceManager.getResource('host/regions.json');
+
+      // Apply filters
+      if (name) {
+        const region = regions.find((r: any) => r.name === name);
+        if (!region) {
+          const availableRegions = regions.map((r: any) => r.name);
+          apiLogger.warn({ region: name }, 'Region not found');
+          return sendFormatted(res, {
+            error: `Region '${name}' not found`,
+            availableRegions
+          }, 404);
+        }
+        // If filtering by name, return single region (unless count is requested)
+        if (count === 'true') {
+          return sendFormatted(res, { count: 1 });
+        }
+        return sendFormatted(res, region);
+      }
+
+      if (provider) {
+        regions = regions.filter(
+          (r: any) => r.provider?.name?.toLowerCase() === provider.toLowerCase()
+        );
+        if (regions.length === 0) {
+          const availableProviders = [...new Set(
+            (await resourceManager.getResource('host/regions.json'))
+              .map((r: any) => r.provider?.name)
+              .filter(Boolean)
+          )];
+          return sendFormatted(res, {
+            error: `No regions found for provider '${provider}'`,
+            availableProviders
+          }, 404);
+        }
+      }
+
+      if (zone) {
+        regions = regions.filter(
+          (r: any) => r.zone && r.zone.toLowerCase() === zone.toLowerCase()
+        );
+        if (regions.length === 0) {
+          const availableZones = [...new Set(
+            (await resourceManager.getResource('host/regions.json'))
+              .map((r: any) => r.zone)
+              .filter((z: string) => z)
+          )];
+          return sendFormatted(res, {
+            error: `No regions found for zone '${zone}'`,
+            availableZones
+          }, 404);
+        }
+      }
+
+      if (country_code) {
+        regions = regions.filter(
+          (r: any) => r.environmental_impact?.country_code?.toLowerCase() === country_code.toLowerCase()
+        );
+        if (regions.length === 0) {
+          const availableCountryCodes = [...new Set(
+            (await resourceManager.getResource('host/regions.json'))
+              .map((r: any) => r.environmental_impact?.country_code)
+              .filter(Boolean)
+          )];
+          return sendFormatted(res, {
+            error: `No regions found for country code '${country_code}'`,
+            availableCountryCodes
+          }, 404);
+        }
+      }
+
+      // Return count or full list
       if (count === 'true') {
-        res.json({ count: regions.length });
+        sendFormatted(res, { count: regions.length });
       } else {
-        res.json(regions);
+        sendFormatted(res, regions);
       }
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read regions');
-      res.status(500).json({ error: error.message || 'Unable to read regions' });
-    }
-  }
-});
-
-// ========================================
-// GET /region/:name - Get region by name
-// ========================================
-regionRouter.route({
-  method: 'get',
-  path: '/region/:name',
-  summary: 'Get region by name',
-  description: `
-Returns information for a specific region.
-
-**Without query parameter**: Returns all region information
-**With \`items\` parameter**: Filters returned properties
-
-### Usage Examples
-
-\`\`\`bash
-# All information
-GET /region/us-2.platform.sh
-
-# Only provider
-GET /region/us-2.platform.sh?items=provider
-
-# Multiple properties
-GET /region/eu.platform.sh?items=provider,zone,timezone
-\`\`\`
-  `,
-  tags: ['Regions'],
-  params: z.object({
-    name: z.string().describe('Region name (e.g., us-2.platform.sh, eu.platform.sh)')
-  }),
-  query: z.object({
-    items: z.string()
-      .optional()
-      .describe('Comma-separated list of properties to return (e.g., "provider,zone")')
-  }),
-  responses: {
-    200: {
-      description: 'Region found and returned',
-      schema: RegionSchema
-    },
-    400: {
-      description: 'Invalid query parameter',
-      schema: RegionErrorSchema
-    },
-    404: {
-      description: 'Region not found',
-      schema: RegionErrorSchema
-    },
-    500: {
-      description: 'Internal server error',
-      schema: RegionErrorSchema
-    }
-  },
-  handler: async (req: Request, res: Response) => {
-    try {
-      const { name } = req.params;
-      const { items } = req.query as { items?: string };
-
-      // Get regions list
-      const regions = await resourceManager.getResource('host/regions_location.json');
-
-      // Find region by name
-      const region = regions.find((r: any) => r.name === name);
-
-      // Check if region exists
-      if (!region) {
-        const availableRegions = regions.map((r: any) => r.name);
-        apiLogger.warn({ region: name }, 'Region not found');
-
-        return res.status(404).json({
-          error: `Region '${name}' not found`,
-          availableRegions
-        });
-      }
-
-      let regionData = region;
-
-      // Filter properties if items parameter is provided
-      if (items) {
-        const requestedFields = items.split(',').map(f => f.trim());
-        const filteredData: any = {};
-
-        requestedFields.forEach(field => {
-          if (field in regionData) {
-            filteredData[field] = regionData[field];
-          }
-        });
-
-        // Check if at least one valid field was found
-        if (Object.keys(filteredData).length === 0) {
-          return res.status(404).json({
-            error: `No valid properties found in '${items}'`,
-            availableProperties: Object.keys(regionData)
-          });
-        }
-
-        regionData = filteredData;
-      }
-
-      res.json(regionData);
-    } catch (error: any) {
-      apiLogger.error({ error: error.message }, 'Failed to read regions file');
-      res.status(500).json({ error: error.message || 'Unable to read regions file' });
-    }
-  }
-});
-
-// ========================================
-// GET /region/provider/:provider - Get regions by provider
-// ========================================
-regionRouter.route({
-  method: 'get',
-  path: '/region/provider/:provider',
-  summary: 'Get regions by cloud provider',
-  description: `
-Returns all regions for a specific cloud provider.
-
-### Usage Examples
-
-\`\`\`bash
-# All AWS regions
-GET /region/provider/AWS
-
-# All Azure regions
-GET /region/provider/Azure
-
-# All Google regions
-GET /region/provider/Google
-\`\`\`
-  `,
-  tags: ['Regions'],
-  params: z.object({
-    provider: z.string().describe('Cloud provider name (e.g., AWS, Azure, Google, OVH)')
-  }),
-  responses: {
-    200: {
-      description: 'Regions filtered by provider',
-      schema: RegionsListSchema
-    },
-    404: {
-      description: 'No regions found for this provider',
-      schema: RegionErrorSchema
-    },
-    500: {
-      description: 'Internal server error',
-      schema: RegionErrorSchema
-    }
-  },
-  handler: async (req: Request, res: Response) => {
-    try {
-      const { provider } = req.params;
-
-      // Get regions list
-      const regions = await resourceManager.getResource('host/regions_location.json');
-
-      // Filter by provider (case-insensitive)
-      const filteredRegions = regions.filter(
-        (r: any) => r.provider.toLowerCase() === provider.toLowerCase()
-      );
-
-      if (filteredRegions.length === 0) {
-        const availableProviders = [...new Set(regions.map((r: any) => r.provider))];
-        return res.status(404).json({
-          error: `No regions found for provider '${provider}'`,
-          availableRegions: availableProviders
-        });
-      }
-
-      res.json(filteredRegions);
-    } catch (error: any) {
-      apiLogger.error({ error: error.message }, 'Failed to read regions file');
-      res.status(500).json({ error: error.message || 'Unable to read regions file' });
-    }
-  }
-});
-
-// ========================================
-// GET /region/zone/:zone - Get regions by zone
-// ========================================
-regionRouter.route({
-  method: 'get',
-  path: '/region/zone/:zone',
-  summary: 'Get regions by geographic zone',
-  description: `
-Returns all regions in a specific geographic zone.
-
-### Usage Examples
-
-\`\`\`bash
-# All North American regions
-GET /region/zone/North America
-
-# All European regions
-GET /region/zone/Europe
-
-# All Australian regions
-GET /region/zone/Australia
-\`\`\`
-  `,
-  tags: ['Regions'],
-  params: z.object({
-    zone: z.string().describe('Geographic zone (e.g., "North America", "Europe", "Australia")')
-  }),
-  responses: {
-    200: {
-      description: 'Regions filtered by zone',
-      schema: RegionsListSchema
-    },
-    404: {
-      description: 'No regions found for this zone',
-      schema: RegionErrorSchema
-    },
-    500: {
-      description: 'Internal server error',
-      schema: RegionErrorSchema
-    }
-  },
-  handler: async (req: Request, res: Response) => {
-    try {
-      const { zone } = req.params;
-
-      // Get regions list
-      const regions = await resourceManager.getResource('host/regions_location.json');
-
-      // Filter by zone (case-insensitive)
-      const filteredRegions = regions.filter(
-        (r: any) => r.zone.toLowerCase() === zone.toLowerCase()
-      );
-
-      if (filteredRegions.length === 0) {
-        const availableZones = [...new Set(regions.map((r: any) => r.zone).filter((z: string) => z))];
-        return res.status(404).json({
-          error: `No regions found for zone '${zone}'`,
-          availableRegions: availableZones
-        });
-      }
-
-      res.json(filteredRegions);
-    } catch (error: any) {
-      apiLogger.error({ error: error.message }, 'Failed to read regions file');
-      res.status(500).json({ error: error.message || 'Unable to read regions file' });
+      sendFormatted(res, { error: error.message || 'Unable to read regions' }, 500);
     }
   }
 });

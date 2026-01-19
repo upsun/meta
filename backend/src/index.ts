@@ -68,25 +68,18 @@ const imageSpec = imageRouter.generateOpenApiSpec({
   description: `
 # Upsun Image & Region Registry API
 
-REST API to access Upsun image and region information from the official registry.
+REST API to access Upsun reference information from the official registry.
 
 > **Disclaimer:** This tool is in a BETA version. While we strive for accuracy, data may not be complete or up-to-date. Use at your own discretion.
 
 ## Features
 
-- 📋 **Complete lists**: Retrieval of all available images and regions
+- 📋 **Complete lists**: Retrieval of all available images, PHP extensions and regions
 - 🔍 **Search by name**: Access to specific image or region information
-- 🌍 **Filter by provider/zone**: Find regions by cloud provider or geographic zone
-- 🎯 **Flexible filtering**: Select properties to return via query parameters
 - ✅ **Zod validation**: Automatic data schema validation
 - 📊 **Rate limiting**: Protection against abuse
 - 🌐 **CORS configured**: Cross-origin request support
 - 📝 **Structured logs**: Logging with Pino for monitoring
-
-### 📦 Supported Data Sources
-
-- **Images**: \`/resources/image/registry.json\` (local) or GitHub
-- **Regions**: \`/resources/host/regions_location.json\` (local) or GitHub
 
 ---
 
@@ -97,7 +90,7 @@ REST API to access Upsun image and region information from the official registry
   `,
   contact: {
     name: 'API Support',
-    url: 'https://github.com/upsun/upsun-docs'
+    url: 'https://github.com/upsun/meta/issues',
   },
   license: {
     name: 'MIT',

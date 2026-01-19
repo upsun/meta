@@ -45,8 +45,14 @@ openapiRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const format = (req.query.format as string)?.toLowerCase() || 'json';
+      // Detect requested format
+      const queryFormat = (req.query.format as string)?.toLowerCase();
+      const acceptHeader = (req.headers.accept || '').toLowerCase();
       const sdks = req.query.sdks === 'true';
+      let format: 'json' | 'yaml' = 'json';
+      if (queryFormat === 'yaml' || acceptHeader.includes('yaml')) {
+        format = 'yaml';
+      }
       let fileName;
       if (sdks) {
         fileName = 'openapispec-upsun-sdks.json';
@@ -54,11 +60,12 @@ openapiRouter.route({
         fileName = format === 'yaml' ? 'openapispec-upsun.yaml' : 'openapispec-upsun.json';
       }
       try {
-        const data = await resourceManager.getResource(`openapi/${fileName}`);
+        // On sert le fichier brut selon le format
+        const data = await resourceManager.getResourceRaw(`openapi/${fileName}`);
         if (format === 'yaml' && !sdks) {
-          res.type('yaml').send(data);
+          res.type('text/plain; charset=utf-8').send(data);
         } else {
-          res.type('json').send(data);
+          res.type('application/json').send(data);
         }
       } catch (err: any) {
         apiLogger.error({ error: err.message }, 'Spec file not found');

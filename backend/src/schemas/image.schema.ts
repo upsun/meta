@@ -16,6 +16,8 @@ export const ImageSchema = z.object({
     description: 'Image endpoint URL',
     example: 'https://api.upsun.com/v1/images/nodejs'
   }),
+  description: z.string().optional().openapi({
+  }),
   versions: z.array(z.string()).optional().openapi({
     description: 'List of available versions',
     example: ['18', '20', '22']
@@ -33,17 +35,41 @@ export const ImageRegistrySchema = z.record(z.string(), ImageSchema).openapi('Im
   description: 'Complete registry containing all available images',
   example: {
     'nodejs': {
-      name: 'nodejs',
+      name: "JavaScript/Node.js",
       endpoint: 'https://api.upsun.com/v1/images/nodejs',
-      versions: ['18', '20', '22'],
-      type: 'runtime'
+      type: 'runtime',
+      description: "NodeJS service for Upsun Flex",
+      repo_name: "nodejs",
+      docs: {
+        "relationship_name": "nodejs",
+        "service_name": "nodejs",
+        "url": "/languages/nodejs.html",
+        "web": {
+          "commands": {
+            "start": "node index.js"
+          }
+        }
+      },
+      min_disk_size: null,
+      runtime: true,
+      need_disk: false,
+      versions: [
+        {
+          "name": "24",
+          "upsun": {"status": "supported", "internal_support": true},
+          "upstream": {"status": "supported","release_date": "2025-05-06T00:00:00.000Z","end_of_active_support_date": "2026-10-20T00:00:00.000Z","end_of_life_date": "2028-04-30T00:00:00.000Z","is_lts": true,"is_maintained": true,"is_end_of_active_support": false,"is_end_of_life": false,"is_long_term_support": true},
+          "manifest": {"endpoints": {"http": {"port": 80,"scheme": "http"}},"min_cpu_size": 0.1,"min_mem_size": 64,"is_persistent": null,"min_disk_size": null,"allow_scale_up": true,"allow_scale_down": true,"storage_mount_point": "/mnt","default_container_profile": "HIGH_CPU","supports_horizontal_scaling": true}
+        },
+        {
+          "name": "22",
+          "upsun": {"status": "deprecated","internal_support": true},
+          "upstream": {"status": "deprecated","release_date": "2024-04-24T00:00:00.000Z","end_of_active_support_date": "2025-10-21T00:00:00.000Z","end_of_life_date": "2027-04-30T00:00:00.000Z","is_lts": true,"is_maintained": true,"is_end_of_active_support": true,"is_end_of_life": false,"is_long_term_support": true},
+          "manifest": {"endpoints": {"http": {"port": 80,"scheme": "http"}},"min_cpu_size": 0.1,"min_mem_size": 64,"is_persistent": null,"min_disk_size": null,"allow_scale_up": true,"allow_scale_down": true,"storage_mount_point": "/mnt","default_container_profile": "HIGH_CPU","supports_horizontal_scaling": true}
+        },
+        // ... more versions
+      ]
     },
-    'php': {
-      name: 'php',
-      endpoint: 'https://api.upsun.com/v1/images/php',
-      versions: ['8.1', '8.2', '8.3'],
-      type: 'runtime'
-    }
+    // ... more images
   }
 });
 
@@ -53,9 +79,39 @@ export const ImageRegistrySchema = z.record(z.string(), ImageSchema).openapi('Im
 export const FilteredImageSchema = z.record(z.string(), z.any()).openapi('FilteredImage', {
   description: 'Filtered properties of an image',
   example: {
-    versions: ['18', '20', '22'],
-    endpoint: 'https://api.upsun.com/v1/images/nodejs'
-  }
+      name: "JavaScript/Node.js",
+      endpoint: 'https://api.upsun.com/v1/images/nodejs',
+      type: 'runtime',
+      description: "NodeJS service for Upsun Flex",
+      repo_name: "nodejs",
+      docs: {
+        "relationship_name": "nodejs",
+        "service_name": "nodejs",
+        "url": "/languages/nodejs.html",
+        "web": {
+          "commands": {
+            "start": "node index.js"
+          }
+        }
+      },
+      min_disk_size: null,
+      runtime: true,
+      need_disk: false,
+      versions: [
+        {
+          "name": "24",
+          "upsun": {"status": "supported", "internal_support": true},
+          "upstream": {"status": "supported","release_date": "2025-05-06T00:00:00.000Z","end_of_active_support_date": "2026-10-20T00:00:00.000Z","end_of_life_date": "2028-04-30T00:00:00.000Z","is_lts": true,"is_maintained": true,"is_end_of_active_support": false,"is_end_of_life": false,"is_long_term_support": true},
+          "manifest": {"endpoints": {"http": {"port": 80,"scheme": "http"}},"min_cpu_size": 0.1,"min_mem_size": 64,"is_persistent": null,"min_disk_size": null,"allow_scale_up": true,"allow_scale_down": true,"storage_mount_point": "/mnt","default_container_profile": "HIGH_CPU","supports_horizontal_scaling": true}
+        },
+        {
+          "name": "22","upsun": {"status": "deprecated","internal_support": true},
+          "upstream": {"status": "deprecated","release_date": "2024-04-24T00:00:00.000Z","end_of_active_support_date": "2025-10-21T00:00:00.000Z","end_of_life_date": "2027-04-30T00:00:00.000Z","is_lts": true,"is_maintained": true,"is_end_of_active_support": true,"is_end_of_life": false,"is_long_term_support": true},
+          "manifest": {"endpoints": {"http": {"port": 80,"scheme": "http"}},"min_cpu_size": 0.1,"min_mem_size": 64,"is_persistent": null,"min_disk_size": null,"allow_scale_up": true,"allow_scale_down": true,"storage_mount_point": "/mnt","default_container_profile": "HIGH_CPU","supports_horizontal_scaling": true}
+        },
+        // ... more versions
+      ]
+    },
 });
 
 /**
@@ -73,10 +129,6 @@ export const ErrorSchema = z.object({
   availableItems: z.array(z.string()).optional().openapi({
     description: 'List of available properties (for 404 items error)',
     example: ['name', 'endpoint', 'versions', 'type']
-  }),
-  requestedItems: z.array(z.string()).optional().openapi({
-    description: 'List of requested properties',
-    example: ['versions', 'endpoint']
   })
 }).openapi('Error');
 
@@ -128,20 +180,9 @@ export const ApiInfoSchema = z.object({
   })
 }).openapi('ApiInfo');
 
-/**
- * Schema for query parameters
- */
-export const ImageQuerySchema = z.object({
-  items: z.string().optional().openapi({
-    description: 'List of properties to return, separated by commas',
-    example: 'versions,endpoint'
-  })
-});
-
 // Type exports for TypeScript
 export type Image = z.infer<typeof ImageSchema>;
 export type ImageRegistry = z.infer<typeof ImageRegistrySchema>;
 export type FilteredImage = z.infer<typeof FilteredImageSchema>;
 export type ErrorResponse = z.infer<typeof ErrorSchema>;
 export type ApiInfo = z.infer<typeof ApiInfoSchema>;
-export type ImageQuery = z.infer<typeof ImageQuerySchema>;
