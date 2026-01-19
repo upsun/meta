@@ -374,7 +374,9 @@
       "url": "https://docs.upsun.comhttps://docs.upsun.com/add-services/clickhouse.html"
     },
     "configuration": "applications:\n  <APP_NAME>:\n    relationships:\n      <SERVICE_NAME>:",
-    "repo_name": "clickhouse",
+    "internal": {
+      "repo_name": "clickhouse"
+    },
     "runtime": false,
     "exclude_from": [
       "platformsh"
@@ -541,7 +543,9 @@
   },
   "dotnet": {
     "description": "ASP.NET 5 application container.",
-    "repo_name": "dotnet",
+    "internal": {
+      "repo_name": "dotnet"
+    },
     "docs": {
       "relationship_name": "dotnet",
       "service_name": "dotnet",
@@ -866,7 +870,9 @@
       "url": "https://docs.upsun.comhttps://docs.upsun.com/add-services/elasticsearch.html"
     },
     "name": "Elasticsearch",
-    "repo_name": "elasticsearch",
+    "internal": {
+      "repo_name": "elasticsearch"
+    },
     "runtime": false,
     "need_disk": true,
     "versions": [
@@ -1360,7 +1366,9 @@
   },
   "elixir": {
     "description": "",
-    "repo_name": "elixir",
+    "internal": {
+      "repo_name": "elixir"
+    },
     "docs": {
       "relationship_name": "elixir",
       "service_name": "elixir",
@@ -1700,7 +1708,9 @@
       }
     },
     "name": "Go",
-    "repo_name": "golang",
+    "internal": {
+      "repo_name": "golang"
+    },
     "runtime": true,
     "need_disk": false,
     "versions": [
@@ -2344,7 +2354,9 @@
       "url": "https://docs.upsun.comhttps://docs.upsun.com/add-services/influxdb.html"
     },
     "name": "InfluxDB",
-    "repo_name": "influxdb",
+    "internal": {
+      "repo_name": "influxdb"
+    },
     "runtime": false,
     "need_disk": true,
     "versions": [
@@ -2654,7 +2666,9 @@
       "url": "https://docs.upsun.comhttps://docs.upsun.com/add-services/gotenberg.html"
     },
     "name": "Gotenberg",
-    "repo_name": "gotenberg",
+    "internal": {
+      "repo_name": "gotenberg"
+    },
     "runtime": false,
     "need_disk": true,
     "versions": [
@@ -2713,7 +2727,9 @@
       }
     },
     "name": "Java",
-    "repo_name": "java",
+    "internal": {
+      "repo_name": "java"
+    },
     "runtime": true,
     "versions": [
       {
@@ -3041,7 +3057,9 @@
       "url": "https://docs.upsun.com/add-services/kafka.html"
     },
     "name": "Kafka",
-    "repo_name": "kafka",
+    "internal": {
+      "repo_name": "kafka"
+    },
     "runtime": false,
     "need_disk": true,
     "versions": [
@@ -3399,7 +3417,9 @@
   },
   "mariadb": {
     "description": "A manufacture-based container for MariaDB",
-    "repo_name": "mariadb",
+    "internal": {
+      "repo_name": "mariadb"
+    },
     "docs": {
       "relationship_name": "mariadb",
       "service_name": "mariadb",
@@ -3894,7 +3914,9 @@
   },
   "mysql": {
     "description": "A manufacture-based container for MariaDB",
-    "repo_name": "mariadb",
+    "internal": {
+      "repo_name": "mariadb"
+    },
     "docs": {
       "relationship_name": "mysql",
       "service_name": "mysql",
@@ -4389,7 +4411,9 @@
   },
   "memcached": {
     "description": "Memcached service.",
-    "repo_name": "memcached",
+    "internal": {
+      "repo_name": "memcached"
+    },
     "docs": {
       "relationship_name": "memcached",
       "service_name": "memcached",
@@ -4511,7 +4535,9 @@
   },
   "mongodb": {
     "description": "Experimental MongoDB support on Upsun Flex",
-    "repo_name": "mongodb",
+   "internal": {
+      "repo_name": "mongodb"
+    },
     "docs": {
       "relationship_name": "mongodb",
       "service_name": "mongodb",
@@ -4730,7 +4756,9 @@
   },
   "mongodb-enterprise": {
     "description": "Support for the enterprise edition of MongoDB",
-    "repo_name": "mongodb",
+    "internal": {
+      "repo_name": "mongodb"
+    },
     "docs": {
       "relationship_name": "mongodb-enterprise",
       "service_name": "mongodb-enterprise",
@@ -4961,7 +4989,9 @@
   },
   "network-storage": {
     "description": "",
-    "repo_name": "network-storage",
+    "internal": {
+      "repo_name": "network-storage"
+    },
     "docs": {
       "relationship_name": "network-storage",
       "service_name": "network-storage",
@@ -5065,7 +5095,9 @@
   },
   "nodejs": {
     "description": "NodeJS service for Upsun ",
-    "repo_name": "nodejs",
+    "internal": {
+      "repo_name": "nodejs"
+    },
     "docs": {
       "relationship_name": "nodejs",
       "service_name": "nodejs",
@@ -5755,7 +5787,9 @@
       "url": "https://docs.upsun.com/add-services/opensearch.html"
     },
     "name": "OpenSearch",
-    "repo_name": "opensearch",
+    "internal": {
+      "repo_name": "opensearch"
+    },
     "runtime": false,
     "need_disk": true,
     "versions": [
@@ -5943,7 +5977,9 @@
   },
   "oracle-mysql": {
     "description": "Images using MySQL from Oracle instead of MariaDB still providing mysql endpoints",
-    "repo_name": "oracle-mysql",
+    "internal": {
+      "repo_name": "oracle-mysql"
+    },
     "docs": {
       "relationship_name": "oracle-mysql",
       "service_name": "oracle-mysql",
@@ -6047,7 +6083,9 @@
   },
   "php": {
     "description": "PHP service for Upsun .",
-    "repo_name": "php",
+    "internal": {
+      "repo_name": "php"
+    },
     "docs": {
       "relationship_name": "php",
       "service_name": "php",
@@ -6628,7 +6666,9 @@
   },
   "postgresql": {
     "description": "PostgreSQL service for Upsun .",
-    "repo_name": "postgresql",
+    "internal": {
+      "repo_name": "postgresql"
+    },
     "docs": {
       "relationship_name": "postgresql",
       "service_name": "postgresql",
@@ -7098,7 +7138,9 @@
   },
   "python": {
     "description": "",
-    "repo_name": "python",
+    "internal": {
+      "repo_name": "python"
+    },
     "docs": {
       "relationship_name": "python",
       "service_name": "python",
@@ -7513,7 +7555,9 @@
   },
   "rabbitmq": {
     "description": "A manufacture-based container for RabbitMQ",
-    "repo_name": "rabbitmq",
+    "internal": {
+      "repo_name": "rabbitmq"
+    },
     "docs": {
       "relationship_name": "rabbitmq",
       "service_name": "rabbitmq",
@@ -7956,7 +8000,9 @@
   },
   "redis": {
     "description": "A manufacture-based Redis container ",
-    "repo_name": "redis",
+    "internal": {
+      "repo_name": "redis"
+    },
     "docs": {
       "relationship_name": "redis",
       "service_name": "redis",
@@ -8333,7 +8379,9 @@
   },
   "ruby": {
     "description": "",
-    "repo_name": "ruby",
+    "internal": {
+      "repo_name": "ruby"
+    },
     "docs": {
       "relationship_name": "ruby",
       "service_name": "ruby",
@@ -8758,7 +8806,9 @@
   },
   "rust": {
     "description": "",
-    "repo_name": "rust",
+    "internal": {
+      "repo_name": "rust"
+    },
     "docs": {
       "relationship_name": "rust",
       "service_name": "rust",
@@ -8812,7 +8862,9 @@
   },
   "solr": {
     "description": "",
-    "repo_name": "solr",
+    "internal": {
+      "repo_name": "solr"
+    },
     "docs": {
       "relationship_name": "solr",
       "service_name": "solr",
@@ -9360,7 +9412,9 @@
   },
   "valkey": {
     "description": "",
-    "repo_name": "valkey",
+    "internal": {
+      "repo_name": "valkey"
+    },
     "docs": {
       "relationship_name": "valkey",
       "service_name": "valkey",
@@ -9450,7 +9504,9 @@
   },
   "varnish": {
     "description": "",
-    "repo_name": "varnish",
+    "internal": {
+      "repo_name": "varnish"
+    },
     "docs": {
       "relationship_name": "varnish",
       "service_name": "varnish",
@@ -9791,7 +9847,9 @@
     },
     "configuration": "    configuration:\n        endpoints:\n            <ENDPOINT_ID>:\n                - policy: <POLICY>\n                  key: <KEY_NAME>\n                  type: <ENDPOINT_TYPE>",
     "name": "Vault KMS",
-    "repo_name": "vault-kms",
+    "internal": {
+      "repo_name": "vault-kms"
+    },
     "runtime": false,
     "need_disk": true,
     "versions": [
@@ -9893,6 +9951,9 @@
       "service_name": "activemq-artemis",
       "url": "https://docs.upsun.com/add-services/activemq-artemis.html"
     },
+    "internal": {
+      "repo_name": "activemq-artemis"
+    },
     "versions": [
       {
         "name": "2",
@@ -9931,6 +9992,9 @@
       "relationship_name": "elasticsearch-enterprise",
       "service_name": "elasticsearch-enterprise",
       "url": "https://docs.upsun.com/add-services/elasticsearch-enterprise.html"
+    },
+    "internal": {
+      "repo_name": "elasticsearch-enterprise"
     },
     "versions": [
       {
