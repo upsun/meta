@@ -4,10 +4,10 @@ import { ApiRouter } from '../utils/api.router.js';
 import { ResourceManager, logger } from '../utils/index.js';
 import { sendFormatted } from '../utils/responseFormat.js';
 import {
+  ImagesRegistry,
+  ImagesSchema,
+  ImageRegistry,
   ImageSchema,
-  ImageRegistrySchema,
-  FilteredImage,
-  FilteredImageSchema,
   ErrorSchema
 } from '../schemas/image.schema.js';
 
@@ -41,7 +41,7 @@ imageRouter.route({
   responses: {
     200: {
       description: 'Complete image registry',
-      schema: ImageRegistrySchema,
+      schema: ImagesSchema,
       contentTypes: ['application/json', 'application/x-yaml'],
     },
     500: {
@@ -53,10 +53,10 @@ imageRouter.route({
   handler: async (req: Request, res: Response) => {
     try {
       const registry = await resourceManager.getResource('image/registry.json');
-      sendFormatted(res, registry);
+      sendFormatted<ImagesRegistry>(res, registry);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read registry');
-      sendFormatted(res, { error: error.message || 'Unable to read registry' }, 500);
+      sendFormatted<ImagesRegistry>(res, { error: error.message || 'Unable to read registry' }, 500);
     }
   }
 });
@@ -83,7 +83,7 @@ imageRouter.route({
   responses: {
     200: {
       description: 'Image found and returned',
-      schema: FilteredImageSchema,
+      schema: ImageSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     },
     400: {
@@ -115,9 +115,22 @@ imageRouter.route({
         }, 404);
       }
 
-      let imageData = registry[id];
+      const imageData = registry[id];
 
-      sendFormatted(res, imageData);
+      const imageDataParsed = ImageSchema.safeParse(imageData);
+      if (imageDataParsed.success) {
+        sendFormatted<ImageRegistry>(res, imageDataParsed.data);
+      } else {
+        let error = imageDataParsed.error;
+        // Si error est une string JSON, on la parse
+        let errorObj;
+        try {
+          errorObj = typeof error === "string" ? JSON.parse(error) : error;
+        } catch {
+          errorObj = error;
+        }
+        sendFormatted(res, { error: errorObj }, 400);
+      }
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read registry file');
       sendFormatted(res, { error: error.message || 'Unable to read registry file' }, 500);
