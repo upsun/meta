@@ -202,3 +202,74 @@ GET /region?provider=Google&count=true
     }
   }
 });
+
+regionRouter.route({
+  method: 'get',
+  path: '/region/:id',
+  summary: 'Get region by ID',
+  description: `
+Returns region by ID.
+
+**Supported formats:**
+- \`application/json\` (default)
+- \`application/x-yaml\`
+
+Use the \`Accept\` header to specify your preferred format.
+
+### Usage Examples
+
+\`\`\`bash
+# Get region by ID
+GET /region/us-2
+\`\`\`
+  `,
+  tags: ['Regions'],
+  params: z.object({
+    id: z.string().describe('Region Id (e.g., us-2, eu-1, asia-3)')
+  }),
+  query: z.object({}),
+  responses: {
+    200: {
+      description: 'Region, filtered regions, or count',
+      schema: HostRegionSchema,
+      contentTypes: ['application/json', 'application/x-yaml']
+    },
+    404: {
+      description: 'No regions found matching the filters',
+      schema: RegionErrorSchema,
+      contentTypes: ['application/json', 'application/x-yaml']
+    },
+    500: {
+      description: 'Internal server error',
+      schema: RegionErrorSchema,
+      contentTypes: ['application/json', 'application/x-yaml']
+    }
+  },
+  handler: async (req: Request, res: Response) => {
+    try {
+      const { id } = req.params;
+      // Get regions list
+      let regions = await resourceManager.getResource('host/regions.json');
+
+      // Apply filters
+      if (id) {
+        const region = regions.find((r: any) => r.id === id);
+        if (!region) {
+          const availableRegions = regions.map((r: any) => r.id);
+          apiLogger.warn({ region: id }, 'Region not found');
+          return sendFormatted(res, {
+            error: `Region '${id}' not found`,
+            availableRegions
+          }, 404);
+        }
+        return sendFormatted(res, region);
+      } else {
+        return sendFormatted(res, { error: 'Region ID is required' }, 400);
+      }
+
+    } catch (error: any) {
+      apiLogger.error({ error: error.message }, 'Failed to read regions');
+      sendFormatted(res, { error: error.message || 'Unable to read regions' }, 500);
+    }
+  }
+});

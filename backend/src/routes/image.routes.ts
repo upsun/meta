@@ -62,7 +62,7 @@ imageRouter.route({
 });
 
 // ========================================
-// GET /image/:name - Get image by name
+// GET /image/:name - Get image by id
 // ========================================
 imageRouter.route({
   method: 'get',
