@@ -5,13 +5,14 @@
     "docs": {
       "relationship_name": "chrome-headless",
       "service_name": "chrome-headless",
-      "url": "https://docs.upsun.comhttps://docs.upsun.com/add-services/headless-chrome.html"
+      "url": "https://docs.upsun.com/add-services/headless-chrome.html"
     },
     "internal": {
       "repo_name": "chrome-headless"
     },
     "runtime": false,
     "service": true,
+    "need_disk": false,
     "versions": [
       {
         "name": "120",
@@ -371,7 +372,7 @@
     "docs": {
       "relationship_name": "clickhouse",
       "service_name": "clickhouse",
-      "url": "https://docs.upsun.comhttps://docs.upsun.com/add-services/clickhouse.html"
+      "url": "https://docs.upsun.com/add-services/clickhouse.html"
     },
     "configuration": "applications:\n  <APP_NAME>:\n    relationships:\n      <SERVICE_NAME>:",
     "internal": {
@@ -550,7 +551,7 @@
     "docs": {
       "relationship_name": "dotnet",
       "service_name": "dotnet",
-      "url": "https://docs.upsun.comhttps://docs.upsun.com/languages/dotnet.html",
+      "url": "https://docs.upsun.com/languages/dotnet.html",
       "web": {
         "commands": {
           "start": "dotnet application.dll"
@@ -869,7 +870,7 @@
     "docs": {
       "relationship_name": "elasticsearch",
       "service_name": "elasticsearch",
-      "url": "https://docs.upsun.comhttps://docs.upsun.com/add-services/elasticsearch.html"
+      "url": "https://docs.upsun.com/add-services/elasticsearch.html"
     },
     "name": "Elasticsearch",
     "internal": {
@@ -1375,7 +1376,7 @@
     "docs": {
       "relationship_name": "elixir",
       "service_name": "elixir",
-      "url": "https://docs.upsun.comhttps://docs.upsun.com/languages/elixir.html",
+      "url": "https://docs.upsun.com/languages/elixir.html",
       "web": {
         "commands": {
           "start": "mix run --no-halt"
@@ -1689,7 +1690,7 @@
     "docs": {
       "relationship_name": "golang",
       "service_name": "golang",
-      "url": "https://docs.upsun.comhttps://docs.upsun.com/languages/go.html",
+      "url": "https://docs.upsun.com/languages/go.html",
       "web": {
         "upstream": {
           "socket_family": "tcp",
@@ -2356,7 +2357,7 @@
     "docs": {
       "relationship_name": "influxdb",
       "service_name": "influxdb",
-      "url": "https://docs.upsun.comhttps://docs.upsun.com/add-services/influxdb.html"
+      "url": "https://docs.upsun.com/add-services/influxdb.html"
     },
     "name": "InfluxDB",
     "internal": {
@@ -2669,7 +2670,7 @@
     "docs": {
       "relationship_name": "gotenberg",
       "service_name": "gotenberg",
-      "url": "https://docs.upsun.comhttps://docs.upsun.com/add-services/gotenberg.html"
+      "url": "https://docs.upsun.com/add-services/gotenberg.html"
     },
     "name": "Gotenberg",
     "internal": {
@@ -9976,6 +9977,7 @@
     ]
   },
   "activemq-artemis": {
+    "name": "Apache Artemis",
     "docs": {
       "relationship_name": "activemq-artemis",
       "service_name": "activemq-artemis",
@@ -10021,6 +10023,8 @@
     ]
   },
   "elasticsearch-enterprise": {
+    "name": "Elasticsearch",
+    "description": "A manufacture service for Elasticsearch",
     "docs": {
       "relationship_name": "elasticsearch-enterprise",
       "service_name": "elasticsearch-enterprise",

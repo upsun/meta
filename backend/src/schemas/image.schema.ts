@@ -4,9 +4,6 @@ import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
 // Extend Zod with OpenAPI
 extendZodWithOpenApi(z);
 
-
-
-
 /**
  * Schema for Images Registry  
  */
@@ -42,7 +39,6 @@ export const ImageVersionSchema = z.object({
   upstream: z.object({
       status: ImageVersionStatusSchema,
       release_date: z.coerce.date()
-  
         .nullable()
         .openapi({
           description: 'Official release date of the version',
@@ -75,19 +71,19 @@ export const ImageVersionSchema = z.object({
           example: true
         }
       ),
-      is_end_of_active_support: z.boolean()
+      is_end_of_active_support: z.boolean().nullable()
         .openapi({
           description: 'Indicates if the version has reached end of active support',
           example: false
         }
       ),
-      is_end_of_life: z.boolean()
+      is_end_of_life: z.boolean().nullable()
         .openapi({
           description: 'Indicates if the version has reached end of life',
           example: false
         }
       ),
-      is_long_term_support: z.boolean()
+      is_long_term_support: z.boolean().nullable()
         .openapi({
           description: 'Indicates if the version is designated as long term support',
           example: true
@@ -156,6 +152,7 @@ export const ImageVersionSchema = z.object({
         example: '/mnt'
       }),
     default_container_profile: z.enum(["HIGH_CPU","BALANCED","HIGH_MEMORY","HIGHER_MEMORY"])
+      .nullable() // TODO remove nullable when all images are updated
       .openapi({
         description: 'Default container profile for resource allocation',
         example: 'HIGH_CPU'
@@ -192,7 +189,7 @@ export const ImageVersionSchema = z.object({
  */
 export const ImageSchema = z.object({
   name: z.string()
-    .min(3)
+    .min(2)
     .max(256)
     .trim()
     .openapi({
@@ -209,6 +206,22 @@ export const ImageSchema = z.object({
       example: 'NodeJS service for Upsun'
     }
   ),
+  need_disk: z.boolean()
+    .openapi({
+      description: 'Indicates if the image needs a disk storage',
+      example: true
+    }
+  ),
+  premium: z.boolean()
+    .optional()
+    .openapi({
+      description: 'Indicates if the image is a premium service',
+      example: false
+  }),
+  configuration: z.string().optional().openapi({
+    description: 'Configuration details for the image',
+    example: 'Default configuration for NodeJS image'
+  }),
   docs: z.object(
     {
       relationship_name: z.string()
@@ -236,12 +249,25 @@ export const ImageSchema = z.object({
           example: 'https://docs.upsun.com/languages/nodejs'
         }
       ),
-      web: z.string().optional().openapi({
-        description: 'Web documentation details for this image',
-        example: "        locations: {\n          \"/\": {\n            root: 'wwwroot',\n            allow: true,\n            passthru: true\n          }\n        },\n "
+      web: z.object({}).optional().openapi({
+        description: 'Web configuration for this image',
+        example: {
+          commands: {
+            start: './target/debug/hello'
+          },
+          locations: {
+            '/': {
+              root: 'wwwroot',
+              allow: true,
+              passthru: true
+            }
+          }
+        }
       }),
-      hooks: z.string().optional().openapi({
-        description: 'Hook scripts documentation details for this image',
+      hooks: z.object({
+        build: z.array(z.string()).optional()
+      }).optional().openapi({
+        description: 'Hook scripts for this image',
         example: {
           build: ['npm install', 'npm run build']
         }
@@ -283,7 +309,7 @@ export const ImageSchema = z.object({
       example: true
     }
   ),
-    versions: z.array(ImageVersionSchema).min(1),
+  versions: z.array(ImageVersionSchema).min(1),
   
 
 }).openapi('Image'); // passthrough to allow additional properties
