@@ -5,10 +5,11 @@ import { ResourceManager, logger } from '../utils/index.js';
 import { sendFormatted } from '../utils/responseFormat.js';
 import {
   HostRegionSchema,
+  HostRegion,
   HostRegionsListSchema,
-  RegionCountSchema,
-  RegionErrorSchema
+  HostRegionsList
 } from '../schemas/region.schema.js';
+import { ErrorDetailsSchema } from '../schemas/api.schema.js';
 
 // Create dedicated API logger
 const apiLogger = logger.child({ component: 'API' });
@@ -39,7 +40,6 @@ Use the \`Accept\` header to specify your preferred format.
 
 ### Query Parameters
 
-- \`count\`: Set to "true" to return only the count of regions (after filtering)
 - \`name\`: Filter by region name (e.g., "us-2.platform.sh", "eu.platform.sh")
 - \`provider\`: Filter by cloud provider name (e.g., "AWS", "Azure", "Google", "OVH")
 - \`zone\`: Filter by geographic zone (e.g., "North America", "Europe", "Australia")
@@ -50,9 +50,6 @@ Use the \`Accept\` header to specify your preferred format.
 \`\`\`bash
 # All regions
 GET /region
-
-# Only count
-GET /region?count=true
 
 # Filter by name
 GET /region?name=au.platform.sh
@@ -75,9 +72,6 @@ GET /region?provider=Google&count=true
   `,
   tags: ['Regions'],
   query: z.object({
-    count: z.string()
-      .optional()
-      .describe('Set to "true" to return only the count of regions'),
     name: z.string()
       .optional()
       .describe('Filter by region name (exact match)'),
@@ -94,24 +88,23 @@ GET /region?provider=Google&count=true
   responses: {
     200: {
       description: 'Complete list of regions, filtered regions, or count',
-      schema: z.union([HostRegionsListSchema, RegionCountSchema, HostRegionSchema]),
+      schema: HostRegionsListSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     },
     404: {
       description: 'No regions found matching the filters',
-      schema: RegionErrorSchema,
+      schema: ErrorDetailsSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     },
     500: {
       description: 'Internal server error',
-      schema: RegionErrorSchema,
+      schema: ErrorDetailsSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     }
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const { count, name, provider, zone, country_code } = req.query as {
-        count?: string;
+      const { name, provider, zone, country_code } = req.query as {
         name?: string;
         provider?: string;
         zone?: string;
@@ -132,10 +125,7 @@ GET /region?provider=Google&count=true
             availableRegions
           }, 404);
         }
-        // If filtering by name, return single region (unless count is requested)
-        if (count === 'true') {
-          return sendFormatted(res, { count: 1 });
-        }
+
         return sendFormatted(res, region);
       }
 
@@ -191,11 +181,8 @@ GET /region?provider=Google&count=true
       }
 
       // Return count or full list
-      if (count === 'true') {
-        sendFormatted(res, { count: regions.length });
-      } else {
-        sendFormatted(res, regions);
-      }
+      const regionSafe = HostRegionsListSchema.parse(regions);
+      sendFormatted<HostRegionsList>(res, regionSafe);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read regions');
       sendFormatted(res, { error: error.message || 'Unable to read regions' }, 500);
@@ -236,12 +223,12 @@ GET /region/us-2
     },
     404: {
       description: 'No regions found matching the filters',
-      schema: RegionErrorSchema,
+      schema: ErrorDetailsSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     },
     500: {
       description: 'Internal server error',
-      schema: RegionErrorSchema,
+      schema: ErrorDetailsSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     }
   },
@@ -262,7 +249,8 @@ GET /region/us-2
             availableRegions
           }, 404);
         }
-        return sendFormatted(res, region);
+
+        return sendFormatted<HostRegion>(res, region);
       } else {
         return sendFormatted(res, { error: 'Region ID is required' }, 400);
       }

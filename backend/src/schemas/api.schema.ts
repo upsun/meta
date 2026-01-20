@@ -49,5 +49,19 @@ export const ApiInfoSchema = z.object({
   })
 }).openapi('ApiInfo');
 
+export const ErrorDetailsSchema = z
+  .object({
+    type: z.string().optional().default("about:blank"),
+    title: z.string().optional(),
+    status: z.number().int().optional(),
+    detail: z.string().optional(),
+    instance: z.string().optional(),
+  })
+  .loose().openapi('ErrorDetails', {
+    description: 'Detailed error information conforming to RFC 7807'
+  }); // ✅ autorise des champs additionnels (“extensions”)
+
+
 export type ApiInfo = z.infer<typeof ApiInfoSchema>;
+export type ErrorDetails = z.infer<typeof ErrorDetailsSchema>;
 
