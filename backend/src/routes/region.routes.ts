@@ -156,8 +156,8 @@ regionRouter.route({
 regionRouter.route({
   method: 'get',
   path: '/region/:id',
-  summary: 'Get region by ID',
-  description: `Returns region by ID.  `,
+  summary: 'Get region by Id',
+  description: `Returns region by Id.  `,
   tags: [TAG],
   params: z.object({
     id: z.string().describe('Region Id (e.g., us-2, eu-1, asia-3)')

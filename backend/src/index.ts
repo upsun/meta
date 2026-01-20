@@ -81,6 +81,7 @@ REST API to access Upsun reference information from the official registry.
 - 🌐 **CORS configured**: Cross-origin request support
 - 📝 **Structured logs**: Logging with Pino for monitoring
 
+---
 
 ## Accepted Formats
 
@@ -91,7 +92,7 @@ Use the \`Accept\` header to specify your preferred format.
 
 ---
 
-### Rate Limiting
+## Rate Limiting
 
 - **General**: 100 requests per 15 minutes
 - **Strict**: 10 requests per minute (if configured)
