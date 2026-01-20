@@ -10,7 +10,9 @@
     "repo_name": "chrome-headless",
     "runtime": false,
     "need_disk": false,
-    "type": "chrome-headless",
+    "internal": {
+      "repo_name": "chrome-headless"
+    },
     "versions": [
       {
         "name": "120",
@@ -409,7 +411,9 @@
       "platformsh"
     ],
     "need_disk": true,
-    "type": "clickhouse",
+    "internal": {
+      "repo_name": "clickhouse"
+    },
     "versions": [
       {
         "name": "25.8",
@@ -611,7 +615,9 @@
     "name": "C#/.Net Core",
     "runtime": true,
     "need_disk": false,
-    "type": "dotnet",
+    "internal": {
+      "repo_name": "dotnet"
+    },
     "versions": [
       {
         "name": "10.0",
@@ -968,7 +974,9 @@
     "repo_name": "elasticsearch",
     "runtime": false,
     "need_disk": true,
-    "type": "elasticsearch",
+    "internal": {
+      "repo_name": "elasticsearch"
+    },
     "versions": [
       {
         "name": "7.10",
@@ -1531,7 +1539,9 @@
     "name": "Elixir",
     "runtime": true,
     "need_disk": false,
-    "type": "elixir",
+    "internal": {
+      "repo_name": "elixir"
+    },
     "versions": [
       {
         "name": "1.18",
@@ -1870,7 +1880,9 @@
     "repo_name": "golang",
     "runtime": true,
     "need_disk": false,
-    "type": "golang",
+    "internal": {
+      "repo_name": "golang"
+    },
     "versions": [
       {
         "name": "1.25",
@@ -2569,7 +2581,9 @@
     "repo_name": "influxdb",
     "runtime": false,
     "need_disk": true,
-    "type": "influxdb",
+    "internal": {
+      "repo_name": "influxdb"
+    },
     "versions": [
       {
         "name": "2.7",
@@ -2907,7 +2921,9 @@
     "repo_name": "gotenberg",
     "runtime": false,
     "need_disk": false,
-    "type": "gotenberg",
+    "internal": {
+      "repo_name": "gotenberg"
+    },
     "versions": [
       {
         "name": "8",
@@ -2969,7 +2985,9 @@
     "name": "Java",
     "repo_name": "java",
     "runtime": true,
-    "type": "java",
+    "internal": {
+      "repo_name": "java"
+    },
     "need_disk": false,
     "versions": [
       {
@@ -3327,7 +3345,9 @@
     "repo_name": "kafka",
     "runtime": false,
     "need_disk": true,
-    "type": "kafka",
+    "internal": {
+      "repo_name": "kafka"
+    },
     "versions": [
       {
         "name": "3.7",
@@ -3725,7 +3745,9 @@
     "name": "MariaDB/MySQL",
     "runtime": false,
     "need_disk": true,
-    "type": "mariadb",
+    "internal": {
+      "repo_name": "mariadb"
+    },
     "versions": [
       {
         "name": "11.8",
@@ -4260,7 +4282,9 @@
     "name": "MariaDB/MySQL",
     "runtime": false,
     "need_disk": true,
-    "type": "mysql",
+    "internal": {
+      "repo_name": "mysql"
+    },
     "versions": [
       {
         "name": "11.8",
@@ -4795,7 +4819,9 @@
     "name": "Memcached",
     "runtime": false,
     "need_disk": false,
-    "type": "memcached",
+    "internal": {
+      "repo_name": "memcached"
+    },
     "versions": [
       {
         "name": "1.6",
@@ -5148,7 +5174,9 @@
     "runtime": false,
     "premium": true,
     "need_disk": true,
-    "type": "mongodb-enterprise",
+    "internal": {
+      "repo_name": "mongodb-enterprise"
+    },
     "versions": [
       {
         "name": "7.0",
@@ -5397,7 +5425,9 @@
     "name": "Network Storage",
     "runtime": false,
     "need_disk": true,
-    "type": "network-storage",
+    "internal": {
+      "repo_name": "network-storage"
+    },
     "versions": [
       {
         "name": "2.0",
@@ -5516,7 +5546,9 @@
     "name": "JavaScript/Node.js",
     "runtime": true,
     "need_disk": false,
-    "type": "nodejs",
+    "internal": {
+      "repo_name": "nodejs"
+    },
     "versions": [
       {
         "name": "24",
@@ -6253,7 +6285,9 @@
     "repo_name": "opensearch",
     "runtime": false,
     "need_disk": true,
-    "type": "opensearch",
+    "internal": {
+      "repo_name": "opensearch"
+    },
     "versions": [
       {
         "name": "3",
@@ -6463,7 +6497,9 @@
     "name": "Oracle MySQL",
     "runtime": false,
     "need_disk": true,
-    "type": "oracle-mysql",
+    "internal": {
+      "repo_name": "oracle-mysql"
+    },
     "versions": [
       {
         "name": "8.4",
@@ -6598,7 +6634,9 @@
     "name": "PHP",
     "runtime": true,
     "need_disk": false,
-    "type": "php",
+    "internal": {
+      "repo_name": "php"
+    },
     "versions": [
       {
         "name": "8.5",
@@ -7201,7 +7239,9 @@
     "name": "PostgreSQL",
     "runtime": false,
     "need_disk": true,
-    "type": "postgresql",
+    "internal": {
+      "repo_name": "postgresql"
+    },
     "versions": [
       {
         "name": "18",
@@ -7724,7 +7764,9 @@
     "name": "Python",
     "runtime": true,
     "need_disk": false,
-    "type": "python",
+    "internal": {
+      "repo_name": "python"
+    },
     "versions": [
       {
         "name": "3.14",
@@ -8157,7 +8199,9 @@
     "name": "RabbitMQ",
     "runtime": false,
     "need_disk": true,
-    "type": "rabbitmq",
+    "internal": {
+      "repo_name": "rabbitmq"
+    },
     "versions": [
       {
         "name": "4.1",
@@ -8634,7 +8678,9 @@
     "name": "Redis",
     "runtime": false,
     "need_disk": false,
-    "type": "redis",
+    "internal": {
+      "repo_name": "redis"
+    },
     "versions": [
       {
         "name": "8.0",
@@ -9068,7 +9114,9 @@
     "name": "Ruby",
     "runtime": true,
     "need_disk": false,
-    "type": "ruby",
+    "internal": {
+      "repo_name": "ruby"
+    },
     "versions": [
       {
         "name": "4.0",
@@ -9506,7 +9554,9 @@
     "name": "Rust",
     "runtime": true,
     "need_disk": false,
-    "type": "rust",
+    "internal": {
+      "repo_name": "rust"
+    },
     "versions": [
       {
         "name": "1",
@@ -9559,7 +9609,9 @@
     "name": "Solr",
     "runtime": false,
     "need_disk": true,
-    "type": "solr",
+    "internal": {
+      "repo_name": "solr"
+    },
     "versions": [
       {
         "name": "9.9",
@@ -10155,7 +10207,9 @@
     "name": "Valkey",
     "runtime": false,
     "need_disk": false,
-    "type": "valkey",
+    "internal": {
+      "repo_name": "valkey"
+    },
     "versions": [
       {
         "name": "8.1",
@@ -10252,7 +10306,9 @@
     "name": "Varnish",
     "runtime": false,
     "need_disk": false,
-    "type": "varnish",
+    "internal": {
+      "repo_name": "varnish"
+    },
     "versions": [
       {
         "name": "7.6",
@@ -10610,7 +10666,9 @@
     "repo_name": "vault-kms",
     "runtime": false,
     "need_disk": true,
-    "type": "vault-kms",
+    "internal": {
+      "repo_name": "vault-kms"
+    },
     "versions": [
       {
         "name": "1.12",
@@ -10720,9 +10778,10 @@
       "url": "https://docs.upsun.com//add-services/activemq-artemis.html"
     },
     "description": "",
-    "type": "activemq-artemis",
     "name": "activemq-artemis",
-    "repo_name": "activemq-artemis",
+    "internal": {
+      "repo_name": "activemq-artemis"
+    },
     "runtime": false,
     "need_disk": true,
     "versions": [
@@ -10768,9 +10827,10 @@
       "url": "https://docs.upsun.com//add-services/elasticsearch-enterprise.html"
     },
     "description": "",
-    "type": "elasticsearch-enterprise",
     "name": "elasticsearch-enterprise",
-    "repo_name": "elasticsearch-enterprise",
+    "internal": {
+      "repo_name": "elasticsearch-enterprise"
+    },
     "runtime": false,
     "need_disk": true,
     "versions": [
