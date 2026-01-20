@@ -81,6 +81,14 @@ REST API to access Upsun reference information from the official registry.
 - 🌐 **CORS configured**: Cross-origin request support
 - 📝 **Structured logs**: Logging with Pino for monitoring
 
+
+## Accepted Formats
+
+- \`application/json\` (default)
+- \`application/x-yaml\`
+
+Use the \`Accept\` header to specify your preferred format.
+
 ---
 
 ### Rate Limiting

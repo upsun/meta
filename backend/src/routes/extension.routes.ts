@@ -38,46 +38,7 @@ extensionRouter.route({
   method: 'get',
   path: '/extension/php',
   summary: 'Get all PHP extensions',
-  description: `
-Returns the list of PHP extensions by version.
-
-**Supported formats:**
-- \`application/json\` (default)
-- \`application/x-yaml\`
-
-Use the \`Accept\` header to specify your preferred format.
-
-Example:
-
-\`\`\`bash
-GET /extension/php
-\`\`\`
-
-Example response :
-
-\`\`\`json
-{
-  "shared": {
-    "8.2": ["amqp", "apcu", "bcmath", "bz2", "cli", "curl", "fpm"],
-    "8.3": ["amqp", "apcu", "bcmath", "bz2", "cli", "curl", "fpm"]
-  }
-}
-\`\`\`
-
-Supports content negotiation:
-- Default response is **JSON**
-- The response body is the raw YAML file when requesting YAML; syntax highlighting depends on the client
-
-YAML example response :
-\`\`\`yaml
-shared:
-  "8.2":
-    - amqp
-    - apcu
-    - bcmath
-    - bz2
-\`\`\`
-  `,
+  description: `Returns the list of PHP extensions by version.`,
   tags: ['Extensions'],
   query: z.object({
     format: z.enum(['json', 'yaml'])
@@ -149,28 +110,7 @@ extensionRouter.route({
   method: 'get',
   path: '/extension/php/grid',
   summary: 'Get extensions grouped for grid view',
-  description: `
-Returns the raw \`grid\` node from \`php_extensions.yaml\` (preserves nested structure).
-
-Example:
-
-\`\`\`bash
-GET /extension/php/grid
-\`\`\`
-
-Supports content negotiation:
-- Default response is **JSON**
-- Use \`format=yaml\` or \`Accept: application/x-yaml\` to get YAML (shown as plain text in Scalar)
-
-Example YAML response (truncated):
-
-\`\`\`yaml
-grid:
-  "5.4":
-    available: [apc, apcu, blackfire]
-    default: [curl, gd, intl]
-\`\`\`
-  `,
+  description: `Returns the raw \`grid\` node from \`php_extensions.yaml\` (preserves nested structure).`,
   tags: ['Extensions'],
   query: z.object({
     format: z.enum(['json', 'yaml'])
@@ -236,32 +176,7 @@ extensionRouter.route({
   description: `
 Filter grid results by version key (e.g., \`8.2\`).
 Data is read from the \`grid\` root node in \`php_extensions.yaml\`.
-
-Example:
-
-\`\`\`bash
-GET /extension/php/grid/8.2
-\`\`\`
-
-Supports content negotiation:
-- Default response is **JSON**
-- Use \`format=yaml\` or \`Accept: application/x-yaml\` to get YAML (shown as plain text in Scalar)
-
-Returns 404 if the version is unknown.
-
-Example response (truncated):
-
-\`\`\`json
-[
-  {
-    "runtime": "php",
-    "service": "dedicated",
-    "version": "8.2",
-    "extensions": ["amqp", "apcu", "bcmath", "bz2", "cli", "curl", "fpm"]
-  }
-]
-\`\`\`
-  `,
+`,
   tags: ['Extensions'],
   params: z.object({ version: z.string().describe('Version key, e.g. 8.2') }),
   query: z.object({
@@ -341,25 +256,7 @@ extensionRouter.route({
   description: `
 Filter grid results by version **and** group type (\`available\`, \`default\`, \`built-in\`, \`with-webp\`).
 Data is read from the \`grid\` root node in \`php_extensions.yaml\`.
-
-Example:
-
-\`\`\`bash
-GET /extension/php/grid/8.2/available
-\`\`\`
-
-Supports content negotiation:
-- Default response is **JSON**
-- Use \`format=yaml\` or \`Accept: application/x-yaml\` to get YAML (shown as plain text in Scalar)
-
-Returns 404 if the version or type is unknown.
-
-Example response (truncated):
-
-\`\`\`json
-["amqp", "apcu", "bcmath", "bz2"]
-\`\`\`
-  `,
+ `,
   tags: ['Extensions'],
   params: z.object({
     version: z.string().describe('Version key, e.g. 8.2'),

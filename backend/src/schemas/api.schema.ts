@@ -49,6 +49,13 @@ export const ApiInfoSchema = z.object({
   })
 }).openapi('ApiInfo');
 
+export const HeaderAcceptSchema = z
+  .object({
+    accept: z.enum(['application/json', 'application/x-yaml'])
+      .optional()
+      .describe('Response format (application/json or application/x-yaml)')
+  })
+
 export const ErrorDetailsSchema = z
   .object({
     type: z.string().optional().default("about:blank"),

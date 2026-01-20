@@ -9,7 +9,9 @@ import {
   ImageRegistry,
   ImageSchema
 } from '../schemas/image.schema.js';
-import { ErrorDetailsSchema } from '../schemas/api.schema.js';
+import { HeaderAcceptSchema, ErrorDetailsSchema } from '../schemas/api.schema.js';
+
+const TAG = 'Images';
 
 // Create dedicated API logger
 const apiLogger = logger.child({ component: 'API' });
@@ -29,20 +31,9 @@ imageRouter.route({
   method: 'get',
   path: '/image',
   summary: 'Get all images',
-  description: `Returns the complete list of available images with all their information (name, endpoint, versions, etc.).
-
-  **Supported formats:**
-  - \`application/json\` (default)
-  - \`application/x-yaml\`
-
-  Use the \`Accept\` header to specify your preferred format.`,
-  tags: ['Images'],
-  headers: z.object({
-    accept: z.enum(['application/json', 'application/x-yaml'])
-      .optional()
-      .describe('Response format (application/json or application/x-yaml)')
-  }),
-  
+  description: `Returns the complete list of available images with all their information (name, endpoint, versions, etc.).`,
+  tags: [TAG],
+  headers: HeaderAcceptSchema,
   responses: {
     200: {
       description: 'Complete image registry',
@@ -73,23 +64,13 @@ imageRouter.route({
   method: 'get',
   path: '/image/:id',
   summary: 'Get image by Id',
-  description: `Returns information for a specific image.
+  description: `Returns information for a specific image.`,
 
-  **Supported formats:**
-  - \`application/json\` (default)
-  - \`application/x-yaml\`
-
-  Use the \`Accept\` header to specify your preferred format.`,
-    
-  tags: ['Images'],
+  tags: [TAG],
   params: z.object({
     id: z.string().describe('Image Id (e.g., nodejs, php, chrome-headless)')
   }),
-  headers: z.object({
-    accept: z.enum(['application/json', 'application/x-yaml'])
-      .optional()
-      .describe('Response format (application/json or application/x-yaml)')
-  }),
+  headers: HeaderAcceptSchema,
   responses: {
     200: {
       description: 'Image found and returned',

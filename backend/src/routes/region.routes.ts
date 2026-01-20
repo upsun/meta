@@ -9,7 +9,9 @@ import {
   HostRegionsListSchema,
   HostRegionsList
 } from '../schemas/region.schema.js';
-import { ErrorDetailsSchema } from '../schemas/api.schema.js';
+import { HeaderAcceptSchema, ErrorDetailsSchema } from '../schemas/api.schema.js';
+
+const TAG = 'Regions';
 
 // Create dedicated API logger
 const apiLogger = logger.child({ component: 'API' });
@@ -29,41 +31,8 @@ regionRouter.route({
   method: 'get',
   path: '/region',
   summary: 'Get all regions',
-  description: `
-Returns the complete list of available regions with optional filtering.
-
-**Supported formats:**
-- \`application/json\` (default)
-- \`application/x-yaml\`
-
-Use the \`Accept\` header to specify your preferred format.
-
-### Usage Examples
-
-\`\`\`bash
-# All regions
-GET /region
-
-# Filter by name
-GET /region?name=au.platform.sh
-
-# Filter by provider
-GET /region?provider=AWS
-
-# Filter by zone
-GET /region?zone=Europe
-
-# Filter by country code
-GET /region?country_code=US
-
-# Combine filters
-GET /region?provider=AWS&zone=North America
-
-# Count filtered results
-GET /region?provider=Google&count=true
-\`\`\`
-  `,
-  tags: ['Regions'],
+  description: `Returns the complete list of available regions with optional filtering.`,
+  tags: [TAG],
   query: z.object({
     name: z.string()
       .optional()
@@ -78,11 +47,7 @@ GET /region?provider=Google&count=true
       .optional()
       .describe('Filter by ISO country code [case-insensitive] (e.g., "US", "IE", "AU")')
   }),
-  headers: z.object({
-    accept: z.enum(['application/json', 'application/x-yaml'])
-      .optional()
-      .describe('Response format (application/json or application/x-yaml)')
-  }),
+  headers: HeaderAcceptSchema,
   responses: {
     200: {
       description: 'Complete list of regions, filtered regions, or count',
@@ -192,32 +157,13 @@ regionRouter.route({
   method: 'get',
   path: '/region/:id',
   summary: 'Get region by ID',
-  description: `
-Returns region by ID.
-
-**Supported formats:**
-- \`application/json\` (default)
-- \`application/x-yaml\`
-
-Use the \`Accept\` header to specify your preferred format.
-
-### Usage Examples
-
-\`\`\`bash
-# Get region by ID
-GET /region/us-2
-\`\`\`
-  `,
-  tags: ['Regions'],
+  description: `Returns region by ID.  `,
+  tags: [TAG],
   params: z.object({
     id: z.string().describe('Region Id (e.g., us-2, eu-1, asia-3)')
   }),
   query: z.object({}),
-  headers: z.object({
-    accept: z.enum(['application/json', 'application/x-yaml'])
-      .optional()
-      .describe('Response format (application/json or application/x-yaml)')
-  }),
+  headers: HeaderAcceptSchema,
   responses: {
     200: {
       description: 'Region, filtered regions, or count',
