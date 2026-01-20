@@ -5,13 +5,13 @@ import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
 extendZodWithOpenApi(z);
 
 /**
- * Schema for Images Registry  
+ * Schema for Images Registry
  */
 export const ImageVersionStatusSchema = z.enum(['supported', 'deprecated', 'retired'])
-  .openapi({  
+  .openapi({
     description: 'Status of the image version, following official lifecycle.', //TODO add description for each possible status
     example: 'supported'
-  }) 
+  })
 ;
 
 /**
@@ -115,7 +115,7 @@ export const ImageVersionSchema = z.object({
             scheme: 'http'
           }
         }
-      }), 
+      }),
     min_cpu_size: z.number().nullable()
       .openapi({
         description: 'Minimum required CPU size in cores',
@@ -160,7 +160,7 @@ export const ImageVersionSchema = z.object({
     supports_horizontal_scaling: z.boolean().nullable()
       .openapi({
         description: 'Indicates if the image version supports horizontal scaling',
-        example: true 
+        example: true
       })
   }).openapi({
     description: 'Manifest details for the image version from Upsun registry',
@@ -180,7 +180,7 @@ export const ImageVersionSchema = z.object({
       storage_mount_point: '/mnt',
       default_container_profile: 'HIGH_CPU',
       supports_horizontal_scaling: true
-    } 
+    }
   }) // manifest
 }).openapi('VersionImage');
 
@@ -322,7 +322,7 @@ export const ImageSchema = z.object({
     }
   ),
   versions: z.array(ImageVersionSchema).min(1),
-  
+
 
 }).openapi('Image'); // passthrough to allow additional properties
 
@@ -331,6 +331,7 @@ export const ImageSchema = z.object({
  */
 export const ImagesSchema = z.record(z.string(), ImageSchema).openapi('Images', {
   description: 'Registry containing all available images',
+  "x-internal": true,
   example: {
     'nodejs': {
       name: "JavaScript/Node.js",
@@ -362,7 +363,7 @@ export const ImagesSchema = z.record(z.string(), ImageSchema).openapi('Images', 
           "name": "22",
           "upsun": {"status": "deprecated","internal_support": true},
           "upstream": {"status": "deprecated","release_date": "2024-04-24T00:00:00.000Z","end_of_active_support_date": "2025-10-21T00:00:00.000Z","end_of_life_date": "2027-04-30T00:00:00.000Z","is_lts": true,"is_maintained": true,"is_end_of_active_support": true,"is_end_of_life": false,"is_long_term_support": true},
-          "manifest": {"endpoints": {"http": {"port": 80,"scheme": "http"}},"min_cpu_size": 0.1,"min_mem_size": 64,"is_persistent": null,"min_disk_size": null,"allow_scale_up": true,"allow_scale_down": true,"storage_mount_point": "/mnt","default_container_profile": "HIGH_CPU","supports_horizontal_scaling": true} 
+          "manifest": {"endpoints": {"http": {"port": 80,"scheme": "http"}},"min_cpu_size": 0.1,"min_mem_size": 64,"is_persistent": null,"min_disk_size": null,"allow_scale_up": true,"allow_scale_down": true,"storage_mount_point": "/mnt","default_container_profile": "HIGH_CPU","supports_horizontal_scaling": true}
         }
       ]
     }
