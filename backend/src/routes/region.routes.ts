@@ -12,6 +12,7 @@ import {
 import { HeaderAcceptSchema, ErrorDetailsSchema } from '../schemas/api.schema.js';
 
 const TAG = 'Regions';
+const PATH = '/regions';
 
 // Create dedicated API logger
 const apiLogger = logger.child({ component: 'API' });
@@ -25,11 +26,11 @@ const resourceManager = new ResourceManager();
 export const regionRouter = new ApiRouter();
 
 // ========================================
-// GET /region - Get all regions with optional filters
+// GET /regions - Get all regions with optional filters
 // ========================================
 regionRouter.route({
   method: 'get',
-  path: '/region',
+  path: `${PATH}`,
   summary: 'Get all regions',
   description: `Returns the complete list of available regions with optional filtering.`,
   tags: [TAG],
@@ -56,11 +57,6 @@ regionRouter.route({
     },
     404: {
       description: 'No regions found matching the filters',
-      schema: ErrorDetailsSchema,
-      contentTypes: ['application/json', 'application/x-yaml']
-    },
-    500: {
-      description: 'Internal server error',
       schema: ErrorDetailsSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     }
@@ -153,9 +149,12 @@ regionRouter.route({
   }
 });
 
+// ========================================
+// GET /regions/:id - Get region by id
+// ========================================
 regionRouter.route({
   method: 'get',
-  path: '/region/:id',
+  path: `${PATH}/:id`,
   summary: 'Get region by Id',
   description: `Returns region by Id.  `,
   tags: [TAG],

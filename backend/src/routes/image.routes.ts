@@ -12,6 +12,7 @@ import {
 import { HeaderAcceptSchema, ErrorDetailsSchema } from '../schemas/api.schema.js';
 
 const TAG = 'Images';
+const PATH = '/images';
 
 // Create dedicated API logger
 const apiLogger = logger.child({ component: 'API' });
@@ -25,11 +26,11 @@ const resourceManager = new ResourceManager();
 export const imageRouter = new ApiRouter();
 
 // ========================================
-// GET /image - Get all images
+// GET /images - Get all images
 // ========================================
 imageRouter.route({
   method: 'get',
-  path: '/image',
+  path: `${PATH}`,
   summary: 'Get all images',
   description: `Returns the complete list of available images with all their information (name, endpoint, versions, etc.).`,
   tags: [TAG],
@@ -58,11 +59,11 @@ imageRouter.route({
 });
 
 // ========================================
-// GET /image/:name - Get image by id
+// GET /images/:id - Get image by id
 // ========================================
 imageRouter.route({
   method: 'get',
-  path: '/image/:id',
+  path: `${PATH}/:id`,
   summary: 'Get image by Id',
   description: `Returns information for a specific image.`,
 
