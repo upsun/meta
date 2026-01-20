@@ -89,11 +89,16 @@ shared:
         default: 'json'
       })
   }),
+  headers: z.object({
+    accept: z.enum(['application/json', 'application/x-yaml'])
+      .optional()
+      .describe('Response format')
+  }),
   responses: {
     200: {
       description: 'Full content of php_extensions.yaml',
       schema: PhpExtensionsSchema,
-      contentTypes: ['application/json', 'application/x-yaml', 'application/yaml', 'text/yaml', 'text/plain']
+      contentTypes: ['application/json', 'application/x-yaml']
     },
     500: {
       description: 'Internal server error',
@@ -177,6 +182,11 @@ grid:
         default: 'json'
       })
   }),
+  headers: z.object({
+    accept: z.enum(['application/json', 'application/x-yaml'])
+      .optional()
+      .describe('Response format')
+  }),
   responses: {
     200: {
       description: 'Raw grid node from php_extensions.yaml',
@@ -187,7 +197,7 @@ grid:
           z.array(z.string())
         )
       ).describe('grid => version => (available|default) => extensions[]'),
-      contentTypes: ['application/json', 'application/x-yaml', 'application/yaml', 'text/yaml', 'text/plain']
+      contentTypes: ['application/json', 'application/x-yaml']
     },
     500: {
       description: 'Internal server error',
@@ -264,6 +274,11 @@ Example response (truncated):
         default: 'json'
       })
   }),
+  headers: z.object({
+    accept: z.enum(['application/json', 'application/x-yaml'])
+      .optional()
+      .describe('Response format')
+  }),
   responses: {
     200: {
       description: 'Map of available/default extensions for the version',
@@ -271,7 +286,7 @@ Example response (truncated):
         z.string(),
         z.array(z.string())
       ).describe('Map of extension groups (available/default) => extensions[]'),
-      contentTypes: ['application/json', 'application/x-yaml', 'application/yaml', 'text/yaml', 'text/plain']
+      contentTypes: ['application/json', 'application/x-yaml']
     },
     404: {
       description: 'Version not found',
@@ -285,13 +300,14 @@ Example response (truncated):
   handler: async (req: Request, res: Response) => {
     try {
       const { version } = req.params;
+      const versionKey = version as string;
       const data = await resourceManager.getResource('extension/php_extensions.yaml');
       const gridSource = (data && data.grid) || {};
       const availableVersions = Object.keys(gridSource || {});
 
-      if (!gridSource[version]) {
+      if (!gridSource[versionKey]) {
         return res.status(404).json({
-          error: `Version '${version}' not found`,
+          error: `Version '${versionKey}' not found`,
           availableVersions
         });
       }
@@ -301,7 +317,7 @@ Example response (truncated):
       const acceptHeader = (req.headers.accept || '').toLowerCase();
       const format = requestedFormat ?? (acceptHeader.includes('yaml') ? 'yaml' : 'json');
       const wantsYaml = format === 'yaml';
-      const grid = gridSource[version];
+      const grid = gridSource[versionKey];
 
       if (wantsYaml) {
         res
@@ -359,11 +375,16 @@ Example response (truncated):
         default: 'json'
       })
   }),
+  headers: z.object({
+    accept: z.enum(['application/json', 'application/x-yaml'])
+      .optional()
+      .describe('Response format')
+  }),
   responses: {
     200: {
       description: 'List of extensions for the version and group',
       schema: z.array(z.string()).describe('extensions[]'),
-      contentTypes: ['application/json', 'application/x-yaml', 'application/yaml', 'text/yaml', 'text/plain']
+      contentTypes: ['application/json', 'application/x-yaml']
     },
     404: {
       description: 'Version or type not found',

@@ -18,6 +18,7 @@ export interface ApiRoute {
   query?: z.ZodSchema;
   params?: z.ZodSchema;
   body?: z.ZodSchema;
+  headers?: z.ZodSchema;
   responses?: {
     [statusCode: number]: {
       description: string;
@@ -51,7 +52,7 @@ export class ApiRouter {
    * Register all routes to Express app with automatic validation
    */
   registerToExpress(app: Express): void {
-    this.routes.forEach(({ method, path, query, params, body, handler }) => {
+    this.routes.forEach(({ method, path, query, params, body, headers, handler }) => {
       // Create validation middleware
       const validationMiddleware: RequestHandler = (req, res, next) => {
         try {
@@ -92,6 +93,18 @@ export class ApiRouter {
             (req as any).validatedBody = result.data;
           }
 
+          // Validate headers
+          if (headers) {
+            const result = headers.safeParse(req.headers);
+            if (!result.success) {
+              return res.status(400).json({
+                error: 'Invalid headers',
+                details: result.error.issues
+              });
+            }
+            (req as any).validatedHeaders = result.data;
+          }
+
           next();
         } catch (error) {
           next(error);
@@ -116,7 +129,7 @@ export class ApiRouter {
     license?: { name: string; url: string };
   }) {
     // Register each route in OpenAPI registry
-    this.routes.forEach(({ method, path, summary, description, tags, query, params, body, responses }) => {
+    this.routes.forEach(({ method, path, summary, description, tags, query, params, body, headers, responses }) => {
       const routeConfig: RouteConfig = {
         method,
         path: path.replace(/:(\w+)/g, '{$1}'), // Convert :param to {param}
@@ -135,6 +148,11 @@ export class ApiRouter {
       // Add params schema
       if (params) {
         (routeConfig.request as any).params = params;
+      }
+
+      // Add headers schema
+      if (headers) {
+        (routeConfig.request as any).headers = headers;
       }
 
       // Add body schema

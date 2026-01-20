@@ -37,6 +37,11 @@ imageRouter.route({
 
   Use the \`Accept\` header to specify your preferred format.`,
   tags: ['Images'],
+  headers: z.object({
+    accept: z.enum(['application/json', 'application/x-yaml'])
+      .optional()
+      .describe('Response format (application/json or application/x-yaml)')
+  }),
   
   responses: {
     200: {
@@ -80,6 +85,11 @@ imageRouter.route({
   params: z.object({
     id: z.string().describe('Image Id (e.g., nodejs, php, chrome-headless)')
   }),
+  headers: z.object({
+    accept: z.enum(['application/json', 'application/x-yaml'])
+      .optional()
+      .describe('Response format (application/json or application/x-yaml)')
+  }),
   responses: {
     200: {
       description: 'Image found and returned',
@@ -100,22 +110,23 @@ imageRouter.route({
   handler: async (req: Request, res: Response) => {
     try {
       const { id } = req.params;
+      const imageId = id as string;
 
       // Get registry
       const registry = await resourceManager.getResource('image/registry.json');
 
       // Check if image exists
-      if (!registry[id]) {
+      if (!registry[imageId]) {
         const availableImages = Object.keys(registry);
-        apiLogger.warn({ image: id }, 'Image not found');
+        apiLogger.warn({ image: imageId }, 'Image not found');
 
         return sendFormatted(res, {
-          error: `Image '${id}' not found`,
+          error: `Image '${imageId}' not found`,
           availableImages
         }, 404);
       }
 
-      const imageData = registry[id];
+      const imageData = registry[imageId];
 
       const imageDataParsed = ImageSchema.safeParse(imageData);
       if (imageDataParsed.success) {

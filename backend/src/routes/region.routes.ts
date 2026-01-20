@@ -38,13 +38,6 @@ Returns the complete list of available regions with optional filtering.
 
 Use the \`Accept\` header to specify your preferred format.
 
-### Query Parameters
-
-- \`name\`: Filter by region name (e.g., "us-2.platform.sh", "eu.platform.sh")
-- \`provider\`: Filter by cloud provider name (e.g., "AWS", "Azure", "Google", "OVH")
-- \`zone\`: Filter by geographic zone (e.g., "North America", "Europe", "Australia")
-- \`country_code\`: Filter by ISO country code (e.g., "US", "IE", "AU")
-
 ### Usage Examples
 
 \`\`\`bash
@@ -74,16 +67,21 @@ GET /region?provider=Google&count=true
   query: z.object({
     name: z.string()
       .optional()
-      .describe('Filter by region name (exact match)'),
+      .describe('Filter by region name [exact match] (e.g., "us-2.platform.sh", "eu.platform.sh")'),
     provider: z.string()
       .optional()
-      .describe('Filter by cloud provider name (case-insensitive)'),
+      .describe('Filter by cloud provider name [case-insensitive] (e.g., "AWS", "Azure", "Google", "OVH")'),
     zone: z.string()
       .optional()
-      .describe('Filter by geographic zone (case-insensitive)'),
+      .describe('Filter by geographic zone [case-insensitive] (e.g., "North America", "Europe", "Australia")'),
     country_code: z.string()
       .optional()
-      .describe('Filter by ISO country code (case-insensitive)')
+      .describe('Filter by ISO country code [case-insensitive] (e.g., "US", "IE", "AU")')
+  }),
+  headers: z.object({
+    accept: z.enum(['application/json', 'application/x-yaml'])
+      .optional()
+      .describe('Response format (application/json or application/x-yaml)')
   }),
   responses: {
     200: {
@@ -215,6 +213,11 @@ GET /region/us-2
     id: z.string().describe('Region Id (e.g., us-2, eu-1, asia-3)')
   }),
   query: z.object({}),
+  headers: z.object({
+    accept: z.enum(['application/json', 'application/x-yaml'])
+      .optional()
+      .describe('Response format (application/json or application/x-yaml)')
+  }),
   responses: {
     200: {
       description: 'Region, filtered regions, or count',
