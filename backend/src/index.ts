@@ -129,11 +129,12 @@ app.use(
   })
 );
 
+// For testing purposes
 // OpenAPI Specification endpoint (JSON)
-app.get('/openapi.json', (req: Request, res: Response) => {
-  res.setHeader('Content-Type', 'application/json');
-  res.json(openApiSpec);
-});
+// app.get('/openapi.json', (req: Request, res: Response) => {
+//   res.setHeader('Content-Type', 'application/json');
+//   res.json(openApiSpec);
+// });
 
 // ========================================
 // HOME PAGE - DYNAMICALLY GENERATED FROM OPENAPI SPEC

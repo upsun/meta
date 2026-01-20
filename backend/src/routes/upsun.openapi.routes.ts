@@ -1,26 +1,32 @@
 import { Request, Response } from 'express';
+import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
 import { ResourceManager, logger } from '../utils/index.js';
 import { HeaderAcceptSchema, ErrorDetailsSchema } from '../schemas/api.schema.js';
 
-const apiLogger = logger.child({ component: 'API' });
-export const openapiRouter = new ApiRouter();
+const TAG = 'OpenAPI Specification';
+const PATH = '/openapi-spec';
 
+// Create dedicated API logger
+const apiLogger = logger.child({ component: 'API' });
 
 // Initialize Resource Manager
 const resourceManager = new ResourceManager();
 
 // ========================================
+// OPENAPI ROUTES - SINGLE SOURCE OF TRUTH
+// ========================================
+export const openapiRouter = new ApiRouter();
+
+// ========================================
 // GET /openapi-spec - Get Upsun OpenAPI spec (JSON or YAML)
 // ========================================
-import { z } from 'zod';
-
 openapiRouter.route({
   method: 'get',
-  path: '/openapi-spec',
+  path: `${PATH}`,
   summary: 'Get Upsun OpenAPI specification',
   description: 'Returns the Upsun OpenAPI specification file of API in JSON or YAML format.',
-  tags: ['OpenAPI'],
+  tags: [TAG],
   headers: HeaderAcceptSchema,
   query: z.object({
     sdks: z.string().optional().describe('If true, returns the SDKs specific patched version')
