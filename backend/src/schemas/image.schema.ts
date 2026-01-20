@@ -218,12 +218,16 @@ export const ImageSchema = z.object({
       description: 'Indicates if the image is a premium service',
       example: false
   }),
-  configuration: z.string().optional().openapi({
-    description: 'Configuration details for the image',
-    example: 'Default configuration for NodeJS image'
-  }),
   docs: z.object(
     {
+      configuration: z.string().optional().openapi({
+        description: 'Configuration details for the image',
+        example: "    configuration:\n        vcl: !include\n            type: string\n            path: config.vcl"
+      }),
+      service_relationship: z.string().optional().openapi({
+        description: 'Configuration details for the service relationship definition of the image',
+        example: "application: \'app:http\'"
+      }),
       relationship_name: z.string()
         .min(3)
         .max(36)
@@ -265,13 +269,21 @@ export const ImageSchema = z.object({
         }
       }),
       hooks: z.object({
-        build: z.array(z.string()).optional()
+        build: z.array(z.string()).optional(),
+        deploy: z.array(z.string()).optional(),
+        post_deploy: z.array(z.string()).optional(),
       }).optional().openapi({
         description: 'Hook scripts for this image',
         example: {
           build: ['npm install', 'npm run build']
         }
-      })  
+      }),
+      build: z.object({}).optional().openapi({
+        description: 'Build configuration for this image',
+        example: {
+          flavor: 'composer'
+        }
+      })
     })
     .openapi({
       description: 'Image documentation details',

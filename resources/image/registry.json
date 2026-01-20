@@ -372,9 +372,9 @@
     "docs": {
       "relationship_name": "clickhouse",
       "service_name": "clickhouse",
-      "url": "https://docs.upsun.com/add-services/clickhouse.html"
+      "url": "https://docs.upsun.com/add-services/clickhouse.html",
+      "configuration": "applications:\n  <APP_NAME>:\n    relationships:\n      <SERVICE_NAME>:"
     },
-    "configuration": "applications:\n  <APP_NAME>:\n    relationships:\n      <SERVICE_NAME>:",
     "internal": {
       "repo_name": "clickhouse"
     },
@@ -558,12 +558,6 @@
         },
         "locations": {
           "/": {
-            "root": "wwwroot",
-            "allow": true,
-            "passthru": true
-          }
-          ,
-          "/admin": {
             "root": "wwwroot",
             "allow": true,
             "passthru": true
@@ -9446,10 +9440,10 @@
     "docs": {
       "relationship_name": "valkey",
       "service_name": "valkey",
-      "url": "https://docs.upsun.com/add-services/valkey.html"
+      "url": "https://docs.upsun.com/add-services/valkey.html",
+      "configuration": "    configuration:\n        vcl: !include\n            type: string\n            path: config.vcl",
+      "service_relationships": "application: 'app:http'"
     },
-    "configuration": "    configuration:\n        vcl: !include\n            type: string\n            path: config.vcl",
-    "service_relationships": "application: 'app:http'",
     "name": "Valkey",
     "runtime": false,
     "service": true,
@@ -9539,10 +9533,10 @@
     "docs": {
       "relationship_name": "varnish",
       "service_name": "varnish",
-      "url": "https://docs.upsun.com/add-services/varnish.html"
+      "url": "https://docs.upsun.com/add-services/varnish.html",
+      "service_relationships": "application: 'app:http'",
+      "configuration": "    configuration:\n        vcl: !include\n            type: string\n            path: config.vcl"
     },
-    "configuration": "    configuration:\n        vcl: !include\n            type: string\n            path: config.vcl",
-    "service_relationships": "application: 'app:http'",
     "name": "Varnish",
     "runtime": false,
     "service": true,
@@ -9873,9 +9867,9 @@
     "docs": {
       "relationship_name": "vault-kms",
       "service_name": "vault-kms",
-      "url": "https://docs.upsun.com/add-services/vault.html"
+      "url": "https://docs.upsun.com/add-services/vault.html",
+      "configuration": "    configuration:\n        endpoints:\n            <ENDPOINT_ID>:\n                - policy: <POLICY>\n                  key: <KEY_NAME>\n                  type: <ENDPOINT_TYPE>"
     },
-    "configuration": "    configuration:\n        endpoints:\n            <ENDPOINT_ID>:\n                - policy: <POLICY>\n                  key: <KEY_NAME>\n                  type: <ENDPOINT_TYPE>",
     "name": "Vault KMS",
     "internal": {
       "repo_name": "vault-kms"

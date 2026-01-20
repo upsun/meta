@@ -265,54 +265,69 @@
     },
     "ImageDocsWebLocation": {
       "type": "object",
+      "description": "Location configuration for web service.",
       "properties": {
         "root": {
-          "type": "string"
+          "type": "string",
+          "description": "Root directory for the location."
         },
         "allow": {
-          "type": "boolean"
+          "type": "boolean",
+          "description": "Whether this location is allowed."
         },
         "passthru": {
-          "type": [
-            "boolean",
-            "string"
-          ]
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "Pass-through configuration."
         }
       },
-      "additionalProperties": true
+      "required": ["root", "allow", "passthru"],
+      "additionalProperties": false
     },
     "ImageDocsWeb": {
       "type": "object",
+      "description": "Web configuration for the image.",
       "properties": {
         "commands": {
           "type": "object",
+          "description": "Web commands (e.g., start command).",
           "properties": {
             "start": {
-              "type": "string"
+              "type": "string",
+              "description": "Start command for the web service."
             }
           },
-          "additionalProperties": true
+          "additionalProperties": false
         },
         "locations": {
           "type": "object",
+          "description": "Web locations configuration.",
           "additionalProperties": {
             "$ref": "#/$defs/ImageDocsWebLocation"
           }
         }
       },
-      "additionalProperties": true
+      "additionalProperties": false
     },
     "ImageDocsHooks": {
       "type": "object",
+      "description": "Hook scripts for the image.",
       "properties": {
         "build": {
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "description": "Build hook scripts."
         }
       },
-      "additionalProperties": true
+      "additionalProperties": false
     },
     "ImageDocs": {
       "type": "object",
@@ -321,12 +336,15 @@
         "relationship_name": {
           "oneOf": [
             {
-              "type": "string"
+              "type": "string",
+              "minLength": 3,
+              "maxLength": 36
             },
             {
               "type": "null"
             }
-          ]
+          ],
+          "description": "Relationship name for documentation."
         },
         "service_name": {
           "oneOf": [
@@ -336,10 +354,14 @@
             {
               "type": "null"
             }
-          ]
+          ],
+          "description": "Service name for documentation."
         },
         "url": {
-          "type": "string"
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://docs\\.upsun\\.com/",
+          "description": "Documentation URL."
         },
         "web": {
           "$ref": "#/$defs/ImageDocsWeb"
@@ -348,7 +370,8 @@
           "$ref": "#/$defs/ImageDocsHooks"
         }
       },
-      "additionalProperties": true
+      "required": ["url"],
+      "additionalProperties": false
     },
     "ImageRegistryEntry": {
       "type": "object",

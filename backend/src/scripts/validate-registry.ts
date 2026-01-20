@@ -29,20 +29,6 @@ async function main() {
 
   const result = ImagesSchema.safeParse(data);
 
-/*   if (!result.success && result.error.issues) {
-    for (const err of result.error.issues) {
-      if (Array.isArray(err.path) && err.path.includes('status')) {
-        let obj: any = data;
-        for (const key of err.path.slice(0, -1)) {
-          if (obj && typeof obj === 'object') obj = obj[key as string | number];
-        }
-        const lastKey = err.path[err.path.length-1] as string | number;
-        const statusValue = obj ? obj[lastKey] : undefined;
-        console.error('Valeur status problématique:', statusValue, 'à la position', err.path);
-      }
-    }
-  } */
-
   if (!result.success) {
     console.error('registry.json does not match the expected schema');
     console.error(JSON.stringify(result.error.format(), null, 2));
