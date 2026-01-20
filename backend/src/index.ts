@@ -63,14 +63,16 @@ openapiRouter.registerToExpress(app);
 // Same source as Express routes!
 // ========================================
 const imageSpec = imageRouter.generateOpenApiSpec({
-  title: 'Meta Registry - Upsun Image & Region Registry API',
+  title: 'Upsun Meta Registry API',
   version: appVersion,
   description: `
-# Upsun Image & Region Registry API
+## Description
 
 REST API to access Upsun reference information from the official registry.
 
 > **Disclaimer:** This tool is in a BETA version. While we strive for accuracy, data may not be complete or up-to-date. Use at your own discretion.
+
+---
 
 ## Features
 

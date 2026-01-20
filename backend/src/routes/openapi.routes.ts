@@ -1,11 +1,7 @@
 import { Request, Response } from 'express';
 import { ApiRouter } from '../utils/api.router.js';
 import { ResourceManager, logger } from '../utils/index.js';
-
-import path from 'path';
-import fs from 'fs/promises';
-import { fileURLToPath } from 'url';
-
+import { HeaderAcceptSchema, ErrorDetailsSchema } from '../schemas/api.schema.js';
 
 const apiLogger = logger.child({ component: 'API' });
 export const openapiRouter = new ApiRouter();
@@ -25,8 +21,8 @@ openapiRouter.route({
   summary: 'Get Upsun OpenAPI specification',
   description: 'Returns the Upsun OpenAPI specification file of API in JSON or YAML format.',
   tags: ['OpenAPI'],
+  headers: HeaderAcceptSchema,
   query: z.object({
-    format: z.enum(['json', 'yaml']).optional().describe('Format of the spec file (json or yaml)'),
     sdks: z.string().optional().describe('If true, returns the SDKs specific patched version')
   }),
   responses: {
@@ -36,21 +32,21 @@ openapiRouter.route({
     },
     404: {
       description: 'Upsun OpenAPI spec file not found',
-      schema: z.object({ error: z.string() })
+      schema: ErrorDetailsSchema
     },
     500: {
       description: 'Internal server error',
-      schema: z.object({ error: z.string() })
+      schema: ErrorDetailsSchema
     }
   },
   handler: async (req: Request, res: Response) => {
     try {
       // Detect requested format
-      const queryFormat = (req.query.format as string)?.toLowerCase();
       const acceptHeader = (req.headers.accept || '').toLowerCase();
       const sdks = req.query.sdks === 'true';
+
       let format: 'json' | 'yaml' = 'json';
-      if (queryFormat === 'yaml' || acceptHeader.includes('yaml')) {
+      if (acceptHeader.includes('yaml')) {
         format = 'yaml';
       }
       let fileName;
