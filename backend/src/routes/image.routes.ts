@@ -7,9 +7,9 @@ import {
   ImagesRegistry,
   ImagesSchema,
   ImageRegistry,
-  ImageSchema,
-  ErrorSchema
+  ImageSchema
 } from '../schemas/image.schema.js';
+import { ErrorDetailsSchema } from '../schemas/api.schema.js';
 
 // Create dedicated API logger
 const apiLogger = logger.child({ component: 'API' });
@@ -46,7 +46,7 @@ imageRouter.route({
     },
     500: {
       description: 'Internal server error',
-      schema: ErrorSchema,
+      schema: ErrorDetailsSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     }
   },
@@ -88,12 +88,12 @@ imageRouter.route({
     },
     400: {
       description: 'Invalid query parameter',
-      schema: ErrorSchema,
+      schema: ErrorDetailsSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     },
     404: {
       description: 'Image not found',
-      schema: ErrorSchema,
+      schema: ErrorDetailsSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     }
   },

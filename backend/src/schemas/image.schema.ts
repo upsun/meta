@@ -182,7 +182,7 @@ export const ImageVersionSchema = z.object({
       supports_horizontal_scaling: true
     } 
   }) // manifest
-}).openapi('ImageVersion');
+}).openapi('VersionImage');
 
 /**
  * Schema for a single image in the registry
@@ -367,28 +367,9 @@ export const ImagesSchema = z.record(z.string(), ImageSchema).openapi('Images', 
       ]
     }
   }
-}).openapi('List of Images Registry');
-
-/**
- * Schema for error responses
- */
-export const ErrorSchema = z.object({
-  error: z.string().openapi({
-    description: 'Error message',
-    example: 'Image not found'
-  }),
-  availableImages: z.array(z.string()).optional().openapi({
-    description: 'List of available images (for 404 image error)',
-    example: ['nodejs', 'php', 'chrome-headless']
-  }),
-  availableItems: z.array(z.string()).optional().openapi({
-    description: 'List of available properties (for 404 items error)',
-    example: ['name', 'endpoint', 'versions', 'type']
-  })
-}).openapi('Error');
+});
 
 
 // Type exports for TypeScript
 export type ImagesRegistry = z.infer<typeof ImagesSchema>;
 export type ImageRegistry = z.infer<typeof ImageSchema>;
-export type ErrorResponse = z.infer<typeof ErrorSchema>;
