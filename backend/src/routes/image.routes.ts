@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
 import { ResourceManager, logger } from '../utils/index.js';
-import { sendFormatted } from '../utils/responseFormat.js';
+import { sendFormatted } from '../utils/response.format.js';
 import {
   ImagesRegistry,
   ImagesSchema,

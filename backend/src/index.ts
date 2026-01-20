@@ -13,8 +13,8 @@ import { imageRouter } from './routes/image.routes.js';
 import { regionRouter } from './routes/region.routes.js';
 import { extensionRouter } from './routes/extension.routes.js';
 import { validationRouter } from './routes/validation.routes.js';
-import { openapiRouter } from './routes/upsun.openapi.routes.js';
-import { BaseSpec } from './routes/meta.openapi.routes.js';
+import { openapiRouter } from './routes/openapi.upsun.routes.js';
+import { BaseSpec } from './routes/openapi.meta.routes.js';
 
 // ESM equivalent of __dirname
 const __filename = fileURLToPath(import.meta.url);
