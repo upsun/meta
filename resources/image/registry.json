@@ -577,8 +577,8 @@
       {
         "name": "10.0",
         "upsun": {
-          "status": "retired",
-          "internal_support": false
+          "status": "supported",
+          "internal_support": true
         },
         "upstream": {
           "status": "supported",
@@ -586,9 +586,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": "2028-11-13T23:00:00.000Z",
           "is_lts": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
           "is_long_term_support": true
         },
         "manifest": {
@@ -648,7 +648,7 @@
         "name": "7.0",
         "upsun": {
           "status": "retired",
-          "internal_support": true
+          "internal_support": false
         },
         "upstream": {
           "status": "retired",
@@ -683,7 +683,7 @@
         "name": "6.0",
         "upsun": {
           "status": "retired",
-          "internal_support": true
+          "internal_support": false
         },
         "upstream": {
           "status": "retired",
