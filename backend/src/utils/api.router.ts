@@ -1,6 +1,6 @@
 import { Express, RequestHandler } from 'express';
 import { z } from 'zod';
-import { OpenAPIRegistry, OpenApiGeneratorV3, RouteConfig } from '@asteasolutions/zod-to-openapi';
+import { OpenAPIRegistry, OpenApiGeneratorV31, RouteConfig } from '@asteasolutions/zod-to-openapi';
 import { logger } from './logger.js';
 
 // Create a dedicated child logger for API Router
@@ -189,10 +189,10 @@ export class ApiRouter {
     });
 
     // Generate OpenAPI document
-    const generator = new OpenApiGeneratorV3(this.registry.definitions);
+    const generator = new OpenApiGeneratorV31(this.registry.definitions);
 
     return generator.generateDocument({
-      openapi: '3.0.0',
+      openapi: '3.1.0',
       info: {
         title: config.title,
         version: config.version,
