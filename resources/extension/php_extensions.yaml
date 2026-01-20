@@ -1,4 +1,4 @@
-dedicated:
+shared:
   5.x:
     - amqp
     - apcu
@@ -526,7 +526,7 @@ dedicated:
     - xml
     - xsl
     - zip
-grid:
+cloud:
   "5.4":
     available:
       - apc
