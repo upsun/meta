@@ -51,10 +51,20 @@ export const ApiInfoSchema = z.object({
 
 export const HeaderAcceptSchema = z
   .object({
-    accept: z.enum(['application/json', 'application/x-yaml'])
+    Accept: z.enum(['application/json', 'application/x-yaml'])
       .optional()
-      .describe('Response format (application/json or application/x-yaml)')
-  })
+      .default('application/json')
+      .describe('Response format. Defaults to application/json.')
+      .openapi({
+        param: {
+          name: 'Accept',
+          in: 'header',
+          description: 'Response format. Defaults to application/json.',
+          example: 'application/json',
+          required: false
+        }
+      })
+  });
 
 export const ErrorDetailsSchema = z
   .object({
@@ -66,7 +76,7 @@ export const ErrorDetailsSchema = z
   })
   .loose().openapi('ErrorDetails', {
     description: 'Detailed error information conforming to RFC 7807'
-  }); // ✅ autorise des champs additionnels (“extensions”)
+  }); // Allow additional fields (“extensions”)
 
 
 export type ApiInfo = z.infer<typeof ApiInfoSchema>;
