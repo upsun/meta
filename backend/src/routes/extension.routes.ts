@@ -134,8 +134,9 @@ extensionRouter.route({
       if (!extensionEntry) {
         sendErrorFormatted(res, { 
           title: 'Extension not found', 
-          detail: `Extension "${imageId}" not found`,
-          status: 404
+          detail: `Extension "${imageId}" not found. See extra.availableExtensions for a list of valid extension IDs.`,
+          status: 404,
+          extra: { availableExtensions: Object.keys(data?.cloud || {}) }
         });
       }
       sendFormatted<ExtensionVersion>(res, extensionEntry);

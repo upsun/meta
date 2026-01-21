@@ -18,8 +18,8 @@
       "label": "AWS Asia Pacific Sydney",
       "location": "Sydney, Australia"
     },
+    "country_code": "AU",
     "environmental_impact": {
-      "country_code": "AU",
       "carbon_intensity": 545,
       "green": false
     },
@@ -60,8 +60,8 @@
       "label": "Azure Australia East Sydney",
       "location": "Sydney, Australia"
     },
+    "country_code": "AU",
     "environmental_impact": {
-      "country_code": "AU",
       "carbon_intensity": 545,
       "green": false
     },
@@ -84,40 +84,6 @@
     "eol_date": null
   },
   {
-    "id": "bnpp-1",
-    "label": "bnpp-1.platform.sh",
-    "name": "bnpp-1.platform.sh",
-    "zone": "",
-    "timezone": "UTC",
-    "location_guarantee": false,
-    "available": true,
-    "private": false,
-    "note": null,
-    "provider": {
-      "name": "none",
-      "logo": "PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjY0cHgiIHdpZHRoPSI2NHB4IiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyLjAwMSA1MTIuMDAxIiB4bWw6c3BhY2U9InByZXNlcnZlIj48ZyBpZD0iU1ZHUmVwb19iZ0NhcnJpZXIiIHN0cm9rZS13aWR0aD0iMCI+PC9nPjxnIGlkPSJTVkdSZXBvX3RyYWNlckNhcnJpZXIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PC9nPjxnIGlkPSJTVkdSZXBvX2ljb25DYXJyaWVyIj4gPGc+IDxnPiA8cGF0aCBkPSJNMzQ0LjM4MSwxNDMuNzcxQzI1NC43NjUsNTYuMDE3LDEwMi4zNywxMDMuNzc2LDc5LjgyNSwyMjcuN2MtMzEuODQ5LDQuNTk4LTU5LjEzOCwyNS40NDUtNzIuMDE4LDU1LjA3NiBjLTAuMDE2LDAuMDM1LTAuMDMyLDAuMDctMC4wNDcsMC4xMDdjLTI2LjY4Nyw2MS42MDIsMTguNzg0LDEzMC4yMzIsODUuNTEsMTMwLjIzMmgyODIuMjY3IGM3NS4yNDYsMCwxMzYuNDYzLTYxLjIxNiwxMzYuNDYzLTEzNi40NjJDNTEyLDE4OS4yNDEsNDMwLjMxNCwxMjMuNjgyLDM0NC4zODEsMTQzLjc3MXogTTM3NS41MzcsMzgxLjEySDkzLjI3MSBjLTY5LjI0NiwwLTg0LjUzNC05OC4yNjMtMTguNzE0LTExOS40NTZjMTQuNzUzLTQuNjUsNDMuMDEtNy4zNDgsNzQuMzgsMjEuODkyYzYuNDY0LDYuMDI0LDE2LjU4Niw1LjY2NywyMi42MS0wLjc5NCBjNi4wMjQtNi40NjQsNS42NjgtMTYuNTg2LTAuNzk0LTIyLjYxYy0xNy45My0xNi43MTItMzguMDcxLTI3LjMzLTU4LjQ4NC0zMS40NTNjMjIuMDM0LTk5LjA3NywxNDcuMzc0LTEzMS44NTEsMjE1LjI0Ny01Ni4zMDUgYzQuMTg5LDQuNjYxLDEwLjcxNCw2LjQ1MSwxNi42OTMsNC41N2M2Ny4yNzItMjEuMTE3LDEzNS43OTUsMjkuMzc0LDEzNS43OTUsOTkuNjkgQzQ4MC4wMDUsMzM0LjI1Niw0MzMuMTQxLDM4MS4xMiwzNzUuNTM3LDM4MS4xMnoiPjwvcGF0aD4gPC9nPiA8L2c+IDwvZz48L3N2Zz4="
-    },
-    "datacenter": {
-      "name": "none",
-      "label": "none",
-      "location": "none"
-    },
-    "environmental_impact": {
-      "country_code": "none",
-      "carbon_intensity": 0,
-      "green": false
-    },
-    "outbound_ips": [],
-    "inbound_ips": [],
-    "inbound_location": null,
-    "compliance": {
-      "hipaa": false
-    },
-    "create_date": "2025-09-26T09:00:32.516Z",
-    "update_date": "2025-09-26T12:43:36.590Z",
-    "eol_date": null
-  },
-  {
     "id": "ca-1",
     "label": "Canada (ca-1)",
     "name": "ca-1.platform.sh",
@@ -136,8 +102,8 @@
       "label": "AWS Canada Central",
       "location": "Montreal, Canada"
     },
+    "country_code": "CA",
     "environmental_impact": {
-      "country_code": "CA",
       "carbon_intensity": 31,
       "green": true
     },
@@ -178,8 +144,8 @@
       "label": "GCP Zurich",
       "location": "Zurich, Switzerland"
     },
+    "country_code": "CH",
     "environmental_impact": {
-      "country_code": "CH",
       "carbon_intensity": 91,
       "green": true
     },
@@ -220,8 +186,8 @@
       "label": "GCP Frankfurt",
       "location": "Frankfurt, Germany"
     },
+    "country_code": "DE",
     "environmental_impact": {
-      "country_code": "DE",
       "carbon_intensity": 416,
       "green": false
     },
@@ -262,8 +228,8 @@
       "label": "AWS Europe West Ireland",
       "location": "Dublin, Ireland"
     },
+    "country_code": "IE",
     "environmental_impact": {
-      "country_code": "IE",
       "carbon_intensity": 386,
       "green": false
     },
@@ -304,8 +270,8 @@
       "label": "AWS Europe North Stockholm",
       "location": "Stockholm, Sweden"
     },
+    "country_code": "SE",
     "environmental_impact": {
-      "country_code": "SE",
       "carbon_intensity": 23,
       "green": true
     },
@@ -344,8 +310,8 @@
       "label": "OVHcloud Gravelines sept",
       "location": "Gravelines, France"
     },
+    "country_code": "FR",
     "environmental_impact": {
-      "country_code": "FR",
       "carbon_intensity": 59,
       "green": true
     },
@@ -384,8 +350,8 @@
       "label": "Azure France Central Paris",
       "location": "Paris, France"
     },
+    "country_code": "FR",
     "environmental_impact": {
-      "country_code": "FR",
       "carbon_intensity": 59,
       "green": true
     },
@@ -426,8 +392,8 @@
       "label": "GCP London",
       "location": "London, United Kingdom"
     },
+    "country_code": "GB",
     "environmental_impact": {
-      "country_code": "GB",
       "carbon_intensity": 200,
       "green": false
     },
@@ -469,8 +435,8 @@
       "label": "AWS US East Northern Virginia",
       "location": "Washington, United States"
     },
+    "country_code": "US",
     "environmental_impact": {
-      "country_code": "US",
       "carbon_intensity": 396,
       "green": false
     },
@@ -511,8 +477,8 @@
       "label": "AWS US East Northern Virginia",
       "location": "Washington, United States"
     },
+    "country_code": "US",
     "environmental_impact": {
-      "country_code": "US",
       "carbon_intensity": 396,
       "green": false
     },
@@ -553,8 +519,8 @@
       "label": "Azure West US 2 Quincy",
       "location": "Moses Lake, United States"
     },
+    "country_code": "US",
     "environmental_impact": {
-      "country_code": "US",
       "carbon_intensity": 56,
       "green": true
     },
@@ -595,8 +561,8 @@
       "label": "GCP South Carolina",
       "location": "Charleston, United States"
     },
+    "country_code": "US",
     "environmental_impact": {
-      "country_code": "US",
       "carbon_intensity": 647,
       "green": false
     },

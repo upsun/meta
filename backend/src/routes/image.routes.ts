@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
 import { ResourceManager, logger } from '../utils/index.js';
-import { sendFormatted } from '../utils/response.format.js';
+import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import {
   ImagesRegistry,
   ImagesSchema,
@@ -53,7 +53,11 @@ imageRouter.route({
       sendFormatted<ImagesRegistry>(res, registry);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read registry');
-      sendFormatted<ImagesRegistry>(res, { error: error.message || 'Unable to read registry' }, 500);
+      sendErrorFormatted(res, { 
+        title: 'Unable to read registry', 
+        detail: error.message || 'An unexpected error occurred while reading PHP Cloud extensions',
+        status: 500
+      });
     }
   }
 });
@@ -66,7 +70,6 @@ imageRouter.route({
   path: `${PATH}/:id`,
   summary: 'Get image by Id',
   description: `Returns information for a specific image.`,
-
   tags: [TAG],
   params: z.object({
     id: z.string().describe('Image Id (e.g., nodejs, php, chrome-headless)')
@@ -102,10 +105,12 @@ imageRouter.route({
         const availableImages = Object.keys(registry);
         apiLogger.warn({ image: imageId }, 'Image not found');
 
-        return sendFormatted(res, {
-          error: `Image '${imageId}' not found`,
-          availableImages
-        }, 404);
+        return sendErrorFormatted(res, { 
+          title: 'Image not found', 
+          detail: `Image '${imageId}' not found in the existing images. See extra.availableImages for a list of valid image IDs.`,
+          status: 404,
+          extra: { availableImages }
+        });
       }
 
       const imageData = registry[imageId];
@@ -115,18 +120,26 @@ imageRouter.route({
         sendFormatted<ImageRegistry>(res, imageDataParsed.data);
       } else {
         let error = imageDataParsed.error;
-        // Si error est une string JSON, on la parse
+        // If error is a stringified JSON, parse it
         let errorObj;
         try {
           errorObj = typeof error === "string" ? JSON.parse(error) : error;
         } catch {
           errorObj = error;
         }
-        sendFormatted(res, { error: errorObj }, 400);
+        sendErrorFormatted(res, { 
+          title: 'An error occured', 
+          detail: errorObj.message || 'An unexpected error occurred while parsing image data',
+          status: 400
+        });
       }
     } catch (error: any) {
-      apiLogger.error({ error: error.message }, 'Failed to read registry file');
-      sendFormatted(res, { error: error.message || 'Unable to read registry file' }, 500);
+      apiLogger.error({ error: error.message }, 'Failed to read registry');
+      sendErrorFormatted(res, { 
+        title: 'An error occured', 
+        detail: error.message || 'Unable to read registry',
+        status: 500
+      });
     }
   }
 });

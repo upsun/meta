@@ -18,13 +18,13 @@ export function sendFormatted<T>(res: Response, data: T, status = 200) {
   }
 }
 
-export function sendErrorFormatted(res: Response, error: { type?: string; title?: string; status?: number; detail?: string; instance?: string; }, status?: number) {
+export function sendErrorFormatted(res: Response, error: { type?: string; title?: string; status?: number; detail?: string; instance?: string; extra?: Record<string, any>;}, status?: number) {
   const accept = res.req?.headers['accept'] || '';
   if (accept.includes('application/x-yaml')) {
     res.set('Content-Type', 'text/plain; charset=utf-8');
     res.status(status || error.status || 500).send(YAML.stringify(error));
   } else {
     res.set('Content-Type', 'application/json');
-    res.status(status || error.status || 500).json(error);
+    res.status(status || error.status || 500).json({ ...error });
   }
 }
