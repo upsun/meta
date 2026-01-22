@@ -7,12 +7,12 @@
       "service_name": "chrome-headless",
       "url": "https://docs.upsun.com/add-services/headless-chrome.html"
     },
-    "internal": {
-      "repo_name": "chrome-headless"
-    },
     "runtime": false,
     "service": true,
     "need_disk": false,
+    "internal": {
+      "repo_name": "chrome-headless"
+    },
     "versions": [
       {
         "name": "120",
@@ -375,15 +375,15 @@
       "url": "https://docs.upsun.com/add-services/clickhouse.html",
       "configuration": "applications:\n  <APP_NAME>:\n    relationships:\n      <SERVICE_NAME>:"
     },
-    "internal": {
-      "repo_name": "clickhouse"
-    },
     "runtime": false,
     "service": true,
     "exclude_from": [
       "platformsh"
     ],
     "need_disk": true,
+    "internal": {
+      "repo_name": "clickhouse"
+    },
     "versions": [
       {
         "name": "25.8",
@@ -545,9 +545,6 @@
   },
   "dotnet": {
     "description": "ASP.NET 5 application container.",
-    "internal": {
-      "repo_name": "dotnet"
-    },
     "docs": {
       "relationship_name": "dotnet",
       "service_name": "dotnet",
@@ -576,7 +573,45 @@
     "runtime": true,
     "service": false,
     "need_disk": false,
+    "internal": {
+      "repo_name": "dotnet"
+    },
     "versions": [
+      {
+        "name": "10.0",
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": "2025-11-11T00:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2028-11-14T00:00:00.000Z",
+          "is_lts": true,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
+          "is_long_term_support": true
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
       {
         "name": "8.0",
         "upsun": {
@@ -616,7 +651,7 @@
         "name": "7.0",
         "upsun": {
           "status": "retired",
-          "internal_support": true
+          "internal_support": false
         },
         "upstream": {
           "status": "retired",
@@ -651,7 +686,7 @@
         "name": "6.0",
         "upsun": {
           "status": "retired",
-          "internal_support": true
+          "internal_support": false
         },
         "upstream": {
           "status": "retired",
@@ -867,12 +902,12 @@
       "url": "https://docs.upsun.com/add-services/elasticsearch.html"
     },
     "name": "Elasticsearch",
-    "internal": {
-      "repo_name": "elasticsearch"
-    },
     "runtime": false,
     "service": true,
     "need_disk": true,
+    "internal": {
+      "repo_name": "elasticsearch"
+    },
     "versions": [
       {
         "name": "7.10",
@@ -881,7 +916,7 @@
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2019-04-10T00:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": "2026-01-15T00:00:00.000Z",
@@ -913,18 +948,18 @@
       {
         "name": "7.9",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2019-04-10T00:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": "2026-01-15T00:00:00.000Z",
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -949,18 +984,18 @@
       {
         "name": "7.7",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2019-04-10T00:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": "2026-01-15T00:00:00.000Z",
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -985,18 +1020,18 @@
       {
         "name": "7.6",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2019-04-10T00:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": "2026-01-15T00:00:00.000Z",
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -1021,18 +1056,18 @@
       {
         "name": "7.5",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2019-04-10T00:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": "2026-01-15T00:00:00.000Z",
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -1057,18 +1092,18 @@
       {
         "name": "7.2",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2019-04-10T00:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": "2026-01-15T00:00:00.000Z",
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -1170,9 +1205,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-11-14T00:00:00.000Z",
+          "release_date": null,
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-02-10T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1206,9 +1241,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-11-14T00:00:00.000Z",
+          "release_date": null,
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-02-10T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1242,9 +1277,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-11-14T00:00:00.000Z",
+          "release_date": null,
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-02-10T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1278,9 +1313,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-11-14T00:00:00.000Z",
+          "release_date": null,
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-02-10T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1308,9 +1343,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-11-14T00:00:00.000Z",
+          "release_date": null,
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-02-10T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1338,9 +1373,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-11-14T00:00:00.000Z",
+          "release_date": null,
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-02-10T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1364,9 +1399,6 @@
   },
   "elixir": {
     "description": "",
-    "internal": {
-      "repo_name": "elixir"
-    },
     "docs": {
       "relationship_name": "elixir",
       "service_name": "elixir",
@@ -1396,6 +1428,9 @@
     "runtime": true,
     "service": false,
     "need_disk": false,
+    "internal": {
+      "repo_name": "elixir"
+    },
     "versions": [
       {
         "name": "1.18",
@@ -1707,12 +1742,12 @@
       }
     },
     "name": "Go",
-    "internal": {
-      "repo_name": "golang"
-    },
     "runtime": true,
     "service": false,
     "need_disk": false,
+    "internal": {
+      "repo_name": "golang"
+    },
     "versions": [
       {
         "name": "1.25",
@@ -2282,9 +2317,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-02-16T00:00:00.000Z",
+          "release_date": null,
           "end_of_active_support_date": null,
-          "end_of_life_date": "2019-02-25T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -2317,9 +2352,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-02-16T00:00:00.000Z",
+          "release_date": null,
           "end_of_active_support_date": null,
-          "end_of_life_date": "2019-02-25T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -2354,12 +2389,12 @@
       "url": "https://docs.upsun.com/add-services/influxdb.html"
     },
     "name": "InfluxDB",
-    "internal": {
-      "repo_name": "influxdb"
-    },
     "runtime": false,
     "service": true,
     "need_disk": true,
+    "internal": {
+      "repo_name": "influxdb"
+    },
     "versions": [
       {
         "name": "2.7",
@@ -2434,7 +2469,7 @@
       {
         "name": "2.2",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -2443,9 +2478,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -2464,7 +2499,7 @@
       {
         "name": "2.1",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -2473,9 +2508,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -2494,7 +2529,7 @@
       {
         "name": "2.0",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -2503,9 +2538,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -2524,7 +2559,7 @@
       {
         "name": "1.8",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -2533,9 +2568,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -2559,7 +2594,7 @@
       {
         "name": "1.7",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -2568,9 +2603,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -2594,7 +2629,7 @@
       {
         "name": "1.3",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -2603,9 +2638,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -2630,7 +2665,7 @@
       {
         "name": "1.2",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -2639,9 +2674,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -3061,12 +3096,12 @@
       "url": "https://docs.upsun.com/add-services/kafka.html"
     },
     "name": "Kafka",
-    "internal": {
-      "repo_name": "kafka"
-    },
     "runtime": false,
     "service": true,
     "need_disk": true,
+    "internal": {
+      "repo_name": "kafka"
+    },
     "versions": [
       {
         "name": "3.7",
@@ -3422,9 +3457,6 @@
   },
   "mariadb": {
     "description": "A manufacture-based container for MariaDB",
-    "internal": {
-      "repo_name": "mariadb"
-    },
     "docs": {
       "relationship_name": "mariadb",
       "service_name": "mariadb",
@@ -3434,6 +3466,9 @@
     "runtime": false,
     "service": true,
     "need_disk": true,
+    "internal": {
+      "repo_name": "mariadb"
+    },
     "versions": [
       {
         "name": "11.8",
@@ -3920,9 +3955,6 @@
   },
   "mysql": {
     "description": "A manufacture-based container for MariaDB",
-    "internal": {
-      "repo_name": "mariadb"
-    },
     "docs": {
       "relationship_name": "mysql",
       "service_name": "mysql",
@@ -3932,6 +3964,9 @@
     "runtime": false,
     "service": true,
     "need_disk": true,
+    "internal": {
+      "repo_name": "mysql"
+    },
     "versions": [
       {
         "name": "11.8",
@@ -4418,9 +4453,6 @@
   },
   "memcached": {
     "description": "Memcached service.",
-    "internal": {
-      "repo_name": "memcached"
-    },
     "docs": {
       "relationship_name": "memcached",
       "service_name": "memcached",
@@ -4430,6 +4462,9 @@
     "runtime": false,
     "service": true,
     "need_disk": false,
+    "internal": {
+      "repo_name": "memcached"
+    },
     "versions": [
       {
         "name": "1.6",
@@ -4542,10 +4577,7 @@
     ]
   },
   "mongodb": {
-    "description": "Experimental MongoDB support on Upsun Flex",
-   "internal": {
-      "repo_name": "mongodb"
-    },
+    "description": "Experimental MongoDB support on Upsun Fixed",
     "docs": {
       "relationship_name": "mongodb",
       "service_name": "mongodb",
@@ -4555,6 +4587,9 @@
     "runtime": false,
     "service": true,
     "need_disk": true,
+    "internal": {
+      "repo_name": "mongodb"
+    },
     "versions": [
       {
         "name": "4.0",
@@ -4765,9 +4800,6 @@
   },
   "mongodb-enterprise": {
     "description": "Support for the enterprise edition of MongoDB",
-    "internal": {
-      "repo_name": "mongodb"
-    },
     "docs": {
       "relationship_name": "mongodb-enterprise",
       "service_name": "mongodb-enterprise",
@@ -4778,6 +4810,9 @@
     "service": true,
     "premium": true,
     "need_disk": true,
+    "internal": {
+      "repo_name": "mongodb-enterprise"
+    },
     "versions": [
       {
         "name": "7.0",
@@ -4999,9 +5034,6 @@
   },
   "network-storage": {
     "description": "",
-    "internal": {
-      "repo_name": "network-storage"
-    },
     "docs": {
       "relationship_name": "network-storage",
       "service_name": "network-storage",
@@ -5011,6 +5043,9 @@
     "runtime": false,
     "service": true,
     "need_disk": true,
+    "internal": {
+      "repo_name": "network-storage"
+    },
     "versions": [
       {
         "name": "2.0",
@@ -5071,44 +5106,11 @@
           "default_container_profile": "HIGH_MEMORY",
           "supports_horizontal_scaling": null
         }
-      },
-      {
-        "name": "0.2",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": null,
-          "min_cpu_size": null,
-          "min_mem_size": null,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": null,
-          "allow_scale_down": null,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
       }
     ]
   },
   "nodejs": {
-    "description": "NodeJS service for Upsun ",
-    "internal": {
-      "repo_name": "nodejs"
-    },
+    "description": "NodeJS service for Upsun Fixed",
     "docs": {
       "relationship_name": "nodejs",
       "service_name": "nodejs",
@@ -5123,6 +5125,9 @@
     "runtime": true,
     "service": false,
     "need_disk": false,
+    "internal": {
+      "repo_name": "nodejs"
+    },
     "versions": [
       {
         "name": "24",
@@ -5762,7 +5767,7 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-01-20T00:00:00.000Z",
+          "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
@@ -5799,12 +5804,12 @@
       "url": "https://docs.upsun.com/add-services/opensearch.html"
     },
     "name": "OpenSearch",
-    "internal": {
-      "repo_name": "opensearch"
-    },
     "runtime": false,
     "service": true,
     "need_disk": true,
+    "internal": {
+      "repo_name": "opensearch"
+    },
     "versions": [
       {
         "name": "3",
@@ -5990,9 +5995,6 @@
   },
   "oracle-mysql": {
     "description": "Images using MySQL from Oracle instead of MariaDB still providing mysql endpoints",
-    "internal": {
-      "repo_name": "oracle-mysql"
-    },
     "docs": {
       "relationship_name": "oracle-mysql",
       "service_name": "oracle-mysql",
@@ -6002,6 +6004,9 @@
     "runtime": false,
     "service": true,
     "need_disk": true,
+    "internal": {
+      "repo_name": "oracle-mysql"
+    },
     "versions": [
       {
         "name": "8.4",
@@ -6096,10 +6101,7 @@
     ]
   },
   "php": {
-    "description": "PHP service for Upsun .",
-    "internal": {
-      "repo_name": "php"
-    },
+    "description": "PHP service for Upsun Fixed.",
     "docs": {
       "relationship_name": "php",
       "service_name": "php",
@@ -6130,6 +6132,9 @@
     "runtime": true,
     "service": false,
     "need_disk": false,
+    "internal": {
+      "repo_name": "php"
+    },
     "versions": [
       {
         "name": "8.5",
@@ -6680,10 +6685,7 @@
     ]
   },
   "postgresql": {
-    "description": "PostgreSQL service for Upsun .",
-    "internal": {
-      "repo_name": "postgresql"
-    },
+    "description": "PostgreSQL service for Upsun Fixed.",
     "docs": {
       "relationship_name": "postgresql",
       "service_name": "postgresql",
@@ -6693,6 +6695,9 @@
     "runtime": false,
     "service": true,
     "need_disk": true,
+    "internal": {
+      "repo_name": "postgresql"
+    },
     "versions": [
       {
         "name": "18",
@@ -7154,9 +7159,6 @@
   },
   "python": {
     "description": "",
-    "internal": {
-      "repo_name": "python"
-    },
     "docs": {
       "relationship_name": "python",
       "service_name": "python",
@@ -7182,6 +7184,9 @@
     "runtime": true,
     "service": false,
     "need_disk": false,
+    "internal": {
+      "repo_name": "python"
+    },
     "versions": [
       {
         "name": "3.14",
@@ -7572,9 +7577,6 @@
   },
   "rabbitmq": {
     "description": "A manufacture-based container for RabbitMQ",
-    "internal": {
-      "repo_name": "rabbitmq"
-    },
     "docs": {
       "relationship_name": "rabbitmq",
       "service_name": "rabbitmq",
@@ -7584,6 +7586,9 @@
     "runtime": false,
     "service": true,
     "need_disk": true,
+    "internal": {
+      "repo_name": "rabbitmq"
+    },
     "versions": [
       {
         "name": "4.1",
@@ -8018,9 +8023,6 @@
   },
   "redis": {
     "description": "A manufacture-based Redis container ",
-    "internal": {
-      "repo_name": "redis"
-    },
     "docs": {
       "relationship_name": "redis",
       "service_name": "redis",
@@ -8030,6 +8032,9 @@
     "runtime": false,
     "service": true,
     "need_disk": false,
+    "internal": {
+      "repo_name": "redis"
+    },
     "versions": [
       {
         "name": "8.0",
@@ -8261,9 +8266,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-10-17T00:00:00.000Z",
-          "end_of_active_support_date": "2020-04-30T00:00:00.000Z",
-          "end_of_life_date": "2022-04-27T00:00:00.000Z",
+          "release_date": null,
+          "end_of_active_support_date": null,
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8298,9 +8303,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-10-17T00:00:00.000Z",
-          "end_of_active_support_date": "2020-04-30T00:00:00.000Z",
-          "end_of_life_date": "2022-04-27T00:00:00.000Z",
+          "release_date": null,
+          "end_of_active_support_date": null,
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8335,9 +8340,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-10-17T00:00:00.000Z",
-          "end_of_active_support_date": "2020-04-30T00:00:00.000Z",
-          "end_of_life_date": "2022-04-27T00:00:00.000Z",
+          "release_date": null,
+          "end_of_active_support_date": null,
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8372,9 +8377,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-10-17T00:00:00.000Z",
-          "end_of_active_support_date": "2020-04-30T00:00:00.000Z",
-          "end_of_life_date": "2022-04-27T00:00:00.000Z",
+          "release_date": null,
+          "end_of_active_support_date": null,
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8398,9 +8403,6 @@
   },
   "ruby": {
     "description": "",
-    "internal": {
-      "repo_name": "ruby"
-    },
     "docs": {
       "relationship_name": "ruby",
       "service_name": "ruby",
@@ -8436,6 +8438,9 @@
     "runtime": true,
     "service": false,
     "need_disk": false,
+    "internal": {
+      "repo_name": "ruby"
+    },
     "versions": [
       {
         "name": "4.0",
@@ -8826,9 +8831,6 @@
   },
   "rust": {
     "description": "",
-    "internal": {
-      "repo_name": "rust"
-    },
     "docs": {
       "relationship_name": "rust",
       "service_name": "rust",
@@ -8842,7 +8844,10 @@
     "name": "Rust",
     "runtime": true,
     "service": false,
-    "need_disk": true,
+    "need_disk": false,
+    "internal": {
+      "repo_name": "rust"
+    },
     "versions": [
       {
         "name": "1",
@@ -8852,9 +8857,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-09-13T00:00:00.000Z",
+          "release_date": null,
           "end_of_active_support_date": null,
-          "end_of_life_date": "2018-10-26T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -8883,9 +8888,6 @@
   },
   "solr": {
     "description": "",
-    "internal": {
-      "repo_name": "solr"
-    },
     "docs": {
       "relationship_name": "solr",
       "service_name": "solr",
@@ -8895,6 +8897,9 @@
     "runtime": false,
     "service": true,
     "need_disk": true,
+    "internal": {
+      "repo_name": "solr"
+    },
     "versions": [
       {
         "name": "9.9",
@@ -8935,7 +8940,7 @@
       {
         "name": "9.7",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -8944,9 +8949,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -9115,7 +9120,7 @@
       {
         "name": "9.0",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
@@ -9124,9 +9129,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -9434,9 +9439,6 @@
   },
   "valkey": {
     "description": "",
-    "internal": {
-      "repo_name": "valkey"
-    },
     "docs": {
       "relationship_name": "valkey",
       "service_name": "valkey",
@@ -9448,6 +9450,9 @@
     "runtime": false,
     "service": true,
     "need_disk": false,
+    "internal": {
+      "repo_name": "valkey"
+    },
     "versions": [
       {
         "name": "8.1",
@@ -9527,9 +9532,6 @@
   },
   "varnish": {
     "description": "",
-    "internal": {
-      "repo_name": "varnish"
-    },
     "docs": {
       "relationship_name": "varnish",
       "service_name": "varnish",
@@ -9541,6 +9543,9 @@
     "runtime": false,
     "service": true,
     "need_disk": false,
+    "internal": {
+      "repo_name": "varnish"
+    },
     "versions": [
       {
         "name": "7.6",
@@ -9705,19 +9710,19 @@
       {
         "name": "6.3",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
-          "release_date": "2018-03-15T00:00:00.000Z",
+          "status": "retired",
+          "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
-          "is_lts": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
-          "is_long_term_support": true
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
         },
         "manifest": {
           "endpoints": {
@@ -9785,19 +9790,19 @@
       {
         "name": "5.2",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "supported",
-          "release_date": "2018-03-15T00:00:00.000Z",
+          "status": "retired",
+          "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
-          "is_lts": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
-          "is_long_term_support": true
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
         },
         "manifest": {
           "endpoints": {
@@ -9824,19 +9829,19 @@
       {
         "name": "5.1",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "supported",
-          "release_date": "2018-03-15T00:00:00.000Z",
+          "status": "retired",
+          "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
-          "is_lts": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
-          "is_long_term_support": true
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
         },
         "manifest": {
           "endpoints": {
@@ -9871,12 +9876,12 @@
       "configuration": "    configuration:\n        endpoints:\n            <ENDPOINT_ID>:\n                - policy: <POLICY>\n                  key: <KEY_NAME>\n                  type: <ENDPOINT_TYPE>"
     },
     "name": "Vault KMS",
-    "internal": {
-      "repo_name": "vault-kms"
-    },
     "runtime": false,
     "service": true,
     "need_disk": true,
+    "internal": {
+      "repo_name": "vault-kms"
+    },
     "versions": [
       {
         "name": "1.12",
@@ -9916,9 +9921,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-11-16T00:00:00.000Z",
+          "release_date": null,
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-10-10T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -9946,9 +9951,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-11-16T00:00:00.000Z",
+          "release_date": null,
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-10-10T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -9992,9 +9997,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-05-21T00:00:00.000Z",
+          "release_date": null,
           "end_of_active_support_date": null,
-          "end_of_life_date": "2015-09-15T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -10033,20 +10038,56 @@
     "premium": true,
     "versions": [
       {
+        "name": "8.19",
+        "upsun": {
+          "status": "retired",
+          "internal_support": false
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": "2025-07-23T00:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2027-07-15T00:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "schema": "http",
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": null,
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
         "name": "8.5",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-11-14T00:00:00.000Z",
+          "release_date": null,
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-02-10T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -10071,18 +10112,18 @@
       {
         "name": "7.17",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2019-04-10T00:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": "2026-01-15T00:00:00.000Z",
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -10101,6 +10142,58 @@
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
+  },
+  "mercure": {
+    "description": "",
+    "name": "mercure",
+    "internal": {
+      "repo_name": "mercure"
+    },
+    "runtime": false,
+    "need_disk": true,
+    "docs": {
+      "relationship_name": "mercure",
+      "service_name": "mercure",
+      "url": "https://docs.upsun.com/add-services/mercure.html"
+    },
+    "versions": [
+      {
+        "name": "0",
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": null,
+          "end_of_active_support_date": null,
+          "end_of_life_date": null,
+          "is_lts": false,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "mercure": {
+              "port": 3000,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "BALANCED",
           "supports_horizontal_scaling": null
         }
       }
