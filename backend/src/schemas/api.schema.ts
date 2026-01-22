@@ -73,6 +73,7 @@ export const ErrorDetailsSchema = z
     status: z.number().int().optional(),
     detail: z.string().optional(),
     instance: z.string().optional(),
+    extra: z.any().optional(),
   })
   .loose().openapi('ErrorDetails', {
     description: 'Detailed error information conforming to RFC 7807'

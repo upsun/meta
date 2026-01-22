@@ -2,6 +2,9 @@ import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
 import { ResourceManager, logger } from '../utils/index.js';
+import { ErrorDetailsSchema } from '../schemas/api.schema.js';
+import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
+import { Validation, ValidationSchema } from '../schemas/validation.schema.js';
 
 // Create dedicated API logger
 const apiLogger = logger.child({ component: 'API' });
@@ -37,29 +40,30 @@ validationRouter.route({
   summary: 'Get Upsun validation JSON schema',
   description: `
 Returns the Upsun validation JSON schema file used by the validator.
-
-Source file (local mode): \`resources/config/validator/schema/upsun.json\`
+This file is used to validate Upsun configuration files .upsun/config.yaml.
   `,
   tags: ['Validation'],
   responses: {
     200: {
       description: 'Upsun validation JSON schema',
-      schema: z.any()
+      schema: ValidationSchema
     },
     500: {
       description: 'Internal server error',
-      schema: z.object({
-        error: z.string()
-      })
+      schema: ErrorDetailsSchema
     }
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const schema = await resourceManager.getResource('config/validator/schema/upsun.json');
-      res.json(schema);
+      const schema = await resourceManager.getResource('validation/upsun.json');
+      sendFormatted<Validation>(res, schema);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read Upsun validation schema');
-      res.status(500).json({ error: error.message || 'Unable to read Upsun validation schema' });
+      sendErrorFormatted(res, { 
+        title: 'Unable to read Upsun validation schema', 
+        detail: error.message || 'An unexpected error occurred while reading Upsun validation schema',
+        status: 500
+      });
     }
   }
 });
@@ -70,12 +74,10 @@ Source file (local mode): \`resources/config/validator/schema/upsun.json\`
 validationRouter.route({
   method: 'get',
   path: '/schema/image-registry',
-  summary: 'Get registry.json validation JSON schema',
+  summary: 'Get Registry validation JSON schema',
   description: `
 Returns the JSON Schema used to validate the image registry file.
-
-Source file (local mode): \`resources/image/registry.schema.json\`
-  `,
+`,
   tags: ['Validation'],
   responses: {
     200: {
@@ -84,18 +86,20 @@ Source file (local mode): \`resources/image/registry.schema.json\`
     },
     500: {
       description: 'Internal server error',
-      schema: z.object({
-        error: z.string()
-      })
+      schema: ErrorDetailsSchema
     }
   },
   handler: async (req: Request, res: Response) => {
     try {
       const schema = await resourceManager.getResource('image/registry.schema.json');
-      res.json(schema);
+      sendFormatted(res, schema);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read image registry validation schema');
-      res.status(500).json({ error: error.message || 'Unable to read image registry validation schema' });
+      sendErrorFormatted(res, { 
+        title: 'Unable to read image registry validation schema', 
+        detail: error.message || 'An unexpected error occurred while reading image registry validation schema',
+        status: 500
+      });
     }
   }
 });
@@ -106,10 +110,11 @@ Source file (local mode): \`resources/image/registry.schema.json\`
 validationRouter.route({
   method: 'get',
   path: '/schema/service-versions',
+  'x-internal': true,
   summary: 'Get enum of service versions included in validation schema',
   description: `
 Returns the enum list of all service images and
-their possible versions, derived from \`/image\` and this is called from the upsun.json service.type param.
+their possible versions, derived from \`/image\` and this is called from the upsun.json validation schema ("service.type" param).
 
 The result is a JSON Schema snippet:
 
@@ -131,9 +136,7 @@ The result is a JSON Schema snippet:
     },
     500: {
       description: 'Internal server error',
-      schema: z.object({
-        error: z.string()
-      })
+      schema: ErrorDetailsSchema
     }
   },
   handler: async (req: Request, res: Response) => {
@@ -189,6 +192,7 @@ The result is a JSON Schema snippet:
 validationRouter.route({
   method: 'get',
   path: '/schema/runtime-versions',
+  'x-internal': true,
   summary: 'Get enum of runtime versions included in validation schema',
   description: `
 Returns the enum list of all runtime images and
@@ -208,9 +212,7 @@ for example: \`["php:7.2", "php:7.3", "nodejs:24"]\`.
     },
     500: {
       description: 'Internal server error',
-      schema: z.object({
-        error: z.string()
-      })
+      schema: ErrorDetailsSchema
     }
   },
   handler: async (req: Request, res: Response) => {

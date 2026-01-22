@@ -15,6 +15,7 @@ export interface ApiRoute {
   summary?: string;
   description?: string;
   tags?: string[];
+  'x-internal'?: boolean;
   query?: z.ZodSchema;
   params?: z.ZodSchema;
   body?: z.ZodSchema;
@@ -129,7 +130,7 @@ export class ApiRouter {
     license?: { name: string; url: string };
   }) {
     // Register each route in OpenAPI registry
-    this.routes.forEach(({ method, path, summary, description, tags, query, params, body, headers, responses }) => {
+    this.routes.forEach(({ method, path, summary, description, tags, query, params, body, headers, responses, 'x-internal': xInternal }) => {
       const routeConfig: RouteConfig = {
         method,
         path: path.replace(/:(\w+)/g, '{$1}'), // Convert :param to {param}
@@ -155,6 +156,11 @@ export class ApiRouter {
         (routeConfig.request as any).headers = headers;
       }
 
+      // Add x-internal if present
+      if (xInternal !== undefined) {
+        (routeConfig as any)['x-internal'] = xInternal;
+      }
+      
       // Add body schema
       if (body) {
         routeConfig.request!.body = {
