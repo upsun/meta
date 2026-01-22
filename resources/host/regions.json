@@ -84,40 +84,6 @@
     "eol_date": null
   },
   {
-    "id": "bnpp-1",
-    "label": "bnpp-1.platform.sh",
-    "name": "bnpp-1.platform.sh",
-    "zone": "",
-    "timezone": "UTC",
-    "location_guarantee": false,
-    "available": true,
-    "private": false,
-    "note": null,
-    "provider": {
-      "name": "none",
-      "logo": "PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjY0cHgiIHdpZHRoPSI2NHB4IiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyLjAwMSA1MTIuMDAxIiB4bWw6c3BhY2U9InByZXNlcnZlIj48ZyBpZD0iU1ZHUmVwb19iZ0NhcnJpZXIiIHN0cm9rZS13aWR0aD0iMCI+PC9nPjxnIGlkPSJTVkdSZXBvX3RyYWNlckNhcnJpZXIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PC9nPjxnIGlkPSJTVkdSZXBvX2ljb25DYXJyaWVyIj4gPGc+IDxnPiA8cGF0aCBkPSJNMzQ0LjM4MSwxNDMuNzcxQzI1NC43NjUsNTYuMDE3LDEwMi4zNywxMDMuNzc2LDc5LjgyNSwyMjcuN2MtMzEuODQ5LDQuNTk4LTU5LjEzOCwyNS40NDUtNzIuMDE4LDU1LjA3NiBjLTAuMDE2LDAuMDM1LTAuMDMyLDAuMDctMC4wNDcsMC4xMDdjLTI2LjY4Nyw2MS42MDIsMTguNzg0LDEzMC4yMzIsODUuNTEsMTMwLjIzMmgyODIuMjY3IGM3NS4yNDYsMCwxMzYuNDYzLTYxLjIxNiwxMzYuNDYzLTEzNi40NjJDNTEyLDE4OS4yNDEsNDMwLjMxNCwxMjMuNjgyLDM0NC4zODEsMTQzLjc3MXogTTM3NS41MzcsMzgxLjEySDkzLjI3MSBjLTY5LjI0NiwwLTg0LjUzNC05OC4yNjMtMTguNzE0LTExOS40NTZjMTQuNzUzLTQuNjUsNDMuMDEtNy4zNDgsNzQuMzgsMjEuODkyYzYuNDY0LDYuMDI0LDE2LjU4Niw1LjY2NywyMi42MS0wLjc5NCBjNi4wMjQtNi40NjQsNS42NjgtMTYuNTg2LTAuNzk0LTIyLjYxYy0xNy45My0xNi43MTItMzguMDcxLTI3LjMzLTU4LjQ4NC0zMS40NTNjMjIuMDM0LTk5LjA3NywxNDcuMzc0LTEzMS44NTEsMjE1LjI0Ny01Ni4zMDUgYzQuMTg5LDQuNjYxLDEwLjcxNCw2LjQ1MSwxNi42OTMsNC41N2M2Ny4yNzItMjEuMTE3LDEzNS43OTUsMjkuMzc0LDEzNS43OTUsOTkuNjkgQzQ4MC4wMDUsMzM0LjI1Niw0MzMuMTQxLDM4MS4xMiwzNzUuNTM3LDM4MS4xMnoiPjwvcGF0aD4gPC9nPiA8L2c+IDwvZz48L3N2Zz4="
-    },
-    "datacenter": {
-      "name": "none",
-      "label": "none",
-      "location": "none"
-    },
-    "country_code": "none",
-    "environmental_impact": {
-      "carbon_intensity": 0,
-      "green": false
-    },
-    "outbound_ips": [],
-    "inbound_ips": [],
-    "inbound_location": null,
-    "compliance": {
-      "hipaa": false
-    },
-    "create_date": "2025-09-26T09:00:32.516Z",
-    "update_date": "2025-09-26T12:43:36.590Z",
-    "eol_date": null
-  },
-  {
     "id": "ca-1",
     "label": "Canada (ca-1)",
     "name": "ca-1.platform.sh",
