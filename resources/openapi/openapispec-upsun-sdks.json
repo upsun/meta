@@ -13722,51 +13722,19 @@
                         }
                     },
                     {
-                        "in": "query",
-                        "name": "filter[updated_at]",
-                        "description": "Allows filtering by `updated_at` using one or more operators.",
-                        "style": "deepObject",
-                        "explode": true,
-                        "schema": {
-                            "$ref": "#/components/schemas/DateTimeFilter"
-                        }
+                        "$ref": "#/components/parameters/FilterUpdatedAt"
                     },
                     {
-                        "in": "query",
-                        "name": "filter[created_at]",
-                        "description": "Allows filtering by `created_at` using one or more operators.",
-                        "style": "deepObject",
-                        "explode": true,
-                        "schema": {
-                            "$ref": "#/components/schemas/DateTimeFilter"
-                        }
+                        "$ref": "#/components/parameters/FilterCreatedAt"
                     },
                     {
-                        "in": "query",
-                        "name": "page[size]",
-                        "description": "Determines the number of items to show.",
-                        "schema": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 100,
-                            "default": null
-                        }
+                        "$ref": "#/components/parameters/PageSize"
                     },
                     {
-                        "in": "query",
-                        "name": "page[before]",
-                        "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
-                        "schema": {
-                            "type": "string"
-                        }
+                        "$ref": "#/components/parameters/PageBefore"
                     },
                     {
-                        "in": "query",
-                        "name": "page[after]",
-                        "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
-                        "schema": {
-                            "type": "string"
-                        }
+                        "$ref": "#/components/parameters/PageAfter"
                     },
                     {
                         "in": "query",
@@ -14053,7 +14021,7 @@
                 ],
                 "responses": {
                     "204": {
-                        "description": "No Content"
+                        "$ref": "#/components/responses/NoContent"
                     },
                     "403": {
                         "$ref": "#/components/responses/Forbidden"
@@ -14089,13 +14057,13 @@
                         "$ref": "#/components/parameters/OrganizationID"
                     },
                     {
-                        "$ref": "#/components/parameters/from"
+                        "$ref": "#/components/parameters/TimeRangeFrom"
                     },
                     {
-                        "$ref": "#/components/parameters/to"
+                        "$ref": "#/components/parameters/TimeRangeTo"
                     },
                     {
-                        "$ref": "#/components/parameters/interval"
+                        "$ref": "#/components/parameters/TimeRangeInterval"
                     }
                 ],
                 "responses": {
@@ -14150,13 +14118,13 @@
                         "$ref": "#/components/parameters/ProjectID"
                     },
                     {
-                        "$ref": "#/components/parameters/from"
+                        "$ref": "#/components/parameters/TimeRangeFrom"
                     },
                     {
-                        "$ref": "#/components/parameters/to"
+                        "$ref": "#/components/parameters/TimeRangeTo"
                     },
                     {
-                        "$ref": "#/components/parameters/interval"
+                        "$ref": "#/components/parameters/TimeRangeInterval"
                     }
                 ],
                 "responses": {
@@ -14209,34 +14177,80 @@
                         "$ref": "#/components/parameters/OrganizationID"
                     },
                     {
-                        "$ref": "#/components/parameters/subscription_status"
+                        "name": "filter[status]",
+                        "in": "query",
+                        "description": "The status of the subscription. ",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "requested",
+                                "active",
+                                "failed",
+                                "suspended",
+                                "deleted"
+                            ]
+                        }
                     },
                     {
-                        "$ref": "#/components/parameters/id"
+                        "name": "filter[id]",
+                        "in": "query",
+                        "description": "Allows filtering by subscription `id` using one or more operators.",
+                        "style": "deepObject",
+                        "explode": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/StringFilter"
+                        }
                     },
                     {
-                        "$ref": "#/components/parameters/project_id"
+                        "name": "filter[project_id]",
+                        "in": "query",
+                        "description": "Allows filtering by `project_id` using one or more operators.",
+                        "style": "deepObject",
+                        "explode": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/StringFilter"
+                        }
                     },
                     {
-                        "$ref": "#/components/parameters/project_title"
+                        "name": "filter[project_title]",
+                        "in": "query",
+                        "description": "Allows filtering by `project_title` using one or more operators.",
+                        "style": "deepObject",
+                        "explode": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/StringFilter"
+                        }
                     },
                     {
-                        "$ref": "#/components/parameters/region"
+                        "name": "filter[region]",
+                        "in": "query",
+                        "description": "Allows filtering by `region` using one or more operators.",
+                        "style": "deepObject",
+                        "explode": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/StringFilter"
+                        }
                     },
                     {
-                        "$ref": "#/components/parameters/updated_at"
+                        "$ref": "#/components/parameters/FilterUpdatedAt"
                     },
                     {
-                        "$ref": "#/components/parameters/page_size"
+                        "$ref": "#/components/parameters/PageSize"
                     },
                     {
-                        "$ref": "#/components/parameters/page_before"
+                        "$ref": "#/components/parameters/PageBefore"
                     },
                     {
-                        "$ref": "#/components/parameters/page_after"
+                        "$ref": "#/components/parameters/PageAfter"
                     },
                     {
-                        "$ref": "#/components/parameters/subscription_sort"
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Allows sorting by a single field.<br>\nUse a dash (\"-\") to sort descending.<br>\nSupported fields: `region`, `project_title`, `type`, `plan`, `status`, `created_at`, `updated_at`.\n",
+                        "schema": {
+                            "type": "string",
+                            "example": "-updated_at"
+                        }
                     }
                 ],
                 "responses": {
@@ -14247,6 +14261,10 @@
                                 "schema": {
                                     "type": "object",
                                     "properties": {
+                                        "count": {
+                                            "type": "integer",
+                                            "description": "Total number of items across pages."
+                                        },
                                         "items": {
                                             "type": "array",
                                             "items": {
@@ -14256,7 +14274,8 @@
                                         "_links": {
                                             "$ref": "#/components/schemas/ListLinks"
                                         }
-                                    }
+                                    },
+                                    "additionalProperties": false
                                 }
                             }
                         }
@@ -14274,12 +14293,8 @@
                 "x-property-id-kebab": "list-org-subscriptions",
                 "x-tag-id-kebab": "Subscriptions",
                 "x-return-types-displayReturn": false,
-                "x-return-types": [
-                    "object"
-                ],
-                "x-phpdoc": {
-                    "return": "object"
-                },
+                "x-return-types": {},
+                "x-phpdoc": {},
                 "x-returnable": true,
                 "x-description": [
                     "Retrieves subscriptions for the specified organization."
@@ -14549,7 +14564,7 @@
                 ],
                 "responses": {
                     "204": {
-                        "description": "No Content"
+                        "$ref": "#/components/responses/NoContent"
                     },
                     "403": {
                         "$ref": "#/components/responses/Forbidden"
@@ -14612,31 +14627,13 @@
                         }
                     },
                     {
-                        "in": "query",
-                        "name": "page[size]",
-                        "description": "Determines the number of items to show.",
-                        "schema": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 100,
-                            "default": null
-                        }
+                        "$ref": "#/components/parameters/PageSize"
                     },
                     {
-                        "in": "query",
-                        "name": "page[before]",
-                        "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
-                        "schema": {
-                            "type": "string"
-                        }
+                        "$ref": "#/components/parameters/PageBefore"
                     },
                     {
-                        "in": "query",
-                        "name": "page[after]",
-                        "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
-                        "schema": {
-                            "type": "string"
-                        }
+                        "$ref": "#/components/parameters/PageAfter"
                     },
                     {
                         "in": "query",
@@ -14656,6 +14653,10 @@
                                 "schema": {
                                     "type": "object",
                                     "properties": {
+                                        "count": {
+                                            "type": "integer",
+                                            "description": "Total number of items across pages."
+                                        },
                                         "regions": {
                                             "type": "array",
                                             "items": {
@@ -14665,7 +14666,8 @@
                                         "_links": {
                                             "$ref": "#/components/schemas/ListLinks"
                                         }
-                                    }
+                                    },
+                                    "additionalProperties": false
                                 }
                             }
                         }
@@ -14683,12 +14685,8 @@
                 "x-property-id-kebab": "list-regions",
                 "x-tag-id-kebab": "Regions",
                 "x-return-types-displayReturn": false,
-                "x-return-types": [
-                    "object"
-                ],
-                "x-phpdoc": {
-                    "return": "object"
-                },
+                "x-return-types": {},
+                "x-phpdoc": {},
                 "x-returnable": true,
                 "x-description": [
                     "Retrieves a list of available regions."
@@ -14899,31 +14897,13 @@
                 ],
                 "parameters": [
                     {
-                        "in": "query",
-                        "name": "page[size]",
-                        "description": "Determines the number of items to show.",
-                        "schema": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 200,
-                            "default": null
-                        }
+                        "$ref": "#/components/parameters/PageSizeAccess"
                     },
                     {
-                        "in": "query",
-                        "name": "page[before]",
-                        "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
-                        "schema": {
-                            "type": "string"
-                        }
+                        "$ref": "#/components/parameters/PageBefore"
                     },
                     {
-                        "in": "query",
-                        "name": "page[after]",
-                        "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
-                        "schema": {
-                            "type": "string"
-                        }
+                        "$ref": "#/components/parameters/PageAfter"
                     },
                     {
                         "in": "query",
@@ -14952,7 +14932,8 @@
                                         "_links": {
                                             "$ref": "#/components/schemas/ListLinks"
                                         }
-                                    }
+                                    },
+                                    "additionalProperties": false
                                 }
                             }
                         }
@@ -14967,12 +14948,8 @@
                 "x-property-id-kebab": "list-project-team-access",
                 "x-tag-id-kebab": "Team-Access",
                 "x-return-types-displayReturn": false,
-                "x-return-types": [
-                    "object"
-                ],
-                "x-phpdoc": {
-                    "return": "object"
-                },
+                "x-return-types": {},
+                "x-phpdoc": {},
                 "x-returnable": true,
                 "x-description": [
                     "Returns a list of items representing the project access."
@@ -15009,7 +14986,7 @@
                 },
                 "responses": {
                     "204": {
-                        "description": "No Content"
+                        "$ref": "#/components/responses/NoContent"
                     },
                     "400": {
                         "$ref": "#/components/responses/BadRequest"
@@ -15093,7 +15070,7 @@
                 ],
                 "responses": {
                     "204": {
-                        "description": "No Content"
+                        "$ref": "#/components/responses/NoContent"
                     },
                     "400": {
                         "$ref": "#/components/responses/BadRequest"
@@ -15134,31 +15111,13 @@
                 ],
                 "parameters": [
                     {
-                        "in": "query",
-                        "name": "page[size]",
-                        "description": "Determines the number of items to show.",
-                        "schema": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 200,
-                            "default": null
-                        }
+                        "$ref": "#/components/parameters/PageSizeAccess"
                     },
                     {
-                        "in": "query",
-                        "name": "page[before]",
-                        "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
-                        "schema": {
-                            "type": "string"
-                        }
+                        "$ref": "#/components/parameters/PageBefore"
                     },
                     {
-                        "in": "query",
-                        "name": "page[after]",
-                        "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
-                        "schema": {
-                            "type": "string"
-                        }
+                        "$ref": "#/components/parameters/PageAfter"
                     },
                     {
                         "in": "query",
@@ -15187,7 +15146,8 @@
                                         "_links": {
                                             "$ref": "#/components/schemas/ListLinks"
                                         }
-                                    }
+                                    },
+                                    "additionalProperties": false
                                 }
                             }
                         }
@@ -15202,12 +15162,8 @@
                 "x-property-id-kebab": "list-project-user-access",
                 "x-tag-id-kebab": "User-Access",
                 "x-return-types-displayReturn": false,
-                "x-return-types": [
-                    "object"
-                ],
-                "x-phpdoc": {
-                    "return": "object"
-                },
+                "x-return-types": {},
+                "x-phpdoc": {},
                 "x-returnable": true,
                 "x-description": [
                     "Returns a list of items representing the project access."
@@ -15241,6 +15197,7 @@
                                             "description": "If the specified user is not a member of the project's organization, add it automatically."
                                         }
                                     },
+                                    "additionalProperties": false,
                                     "required": [
                                         "user_id",
                                         "permissions"
@@ -15252,7 +15209,7 @@
                 },
                 "responses": {
                     "204": {
-                        "description": "No Content"
+                        "$ref": "#/components/responses/NoContent"
                     },
                     "400": {
                         "$ref": "#/components/responses/BadRequest"
@@ -15353,7 +15310,7 @@
                 },
                 "responses": {
                     "204": {
-                        "description": "No Content"
+                        "$ref": "#/components/responses/NoContent"
                     },
                     "400": {
                         "$ref": "#/components/responses/BadRequest"
@@ -15387,7 +15344,7 @@
                 ],
                 "responses": {
                     "204": {
-                        "description": "No Content"
+                        "$ref": "#/components/responses/NoContent"
                     },
                     "400": {
                         "$ref": "#/components/responses/BadRequest"
@@ -15436,31 +15393,13 @@
                         }
                     },
                     {
-                        "in": "query",
-                        "name": "page[size]",
-                        "description": "Determines the number of items to show.",
-                        "schema": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 200,
-                            "default": null
-                        }
+                        "$ref": "#/components/parameters/PageSizeAccess"
                     },
                     {
-                        "in": "query",
-                        "name": "page[before]",
-                        "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
-                        "schema": {
-                            "type": "string"
-                        }
+                        "$ref": "#/components/parameters/PageBefore"
                     },
                     {
-                        "in": "query",
-                        "name": "page[after]",
-                        "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
-                        "schema": {
-                            "type": "string"
-                        }
+                        "$ref": "#/components/parameters/PageAfter"
                     },
                     {
                         "in": "query",
@@ -15489,7 +15428,8 @@
                                         "_links": {
                                             "$ref": "#/components/schemas/ListLinks"
                                         }
-                                    }
+                                    },
+                                    "additionalProperties": false
                                 }
                             }
                         }
@@ -15504,12 +15444,8 @@
                 "x-property-id-kebab": "list-user-project-access",
                 "x-tag-id-kebab": "User-Access",
                 "x-return-types-displayReturn": false,
-                "x-return-types": [
-                    "object"
-                ],
-                "x-phpdoc": {
-                    "return": "object"
-                },
+                "x-return-types": {},
+                "x-phpdoc": {},
                 "x-returnable": true,
                 "x-description": [
                     "Returns a list of items representing the user's project access."
@@ -15539,6 +15475,7 @@
                                             "$ref": "#/components/schemas/ProjectPermissions"
                                         }
                                     },
+                                    "additionalProperties": false,
                                     "required": [
                                         "project_id",
                                         "permissions"
@@ -15550,7 +15487,7 @@
                 },
                 "responses": {
                     "204": {
-                        "description": "No Content"
+                        "$ref": "#/components/responses/NoContent"
                     },
                     "400": {
                         "$ref": "#/components/responses/BadRequest"
@@ -15651,7 +15588,7 @@
                 },
                 "responses": {
                     "204": {
-                        "description": "No Content"
+                        "$ref": "#/components/responses/NoContent"
                     },
                     "400": {
                         "$ref": "#/components/responses/BadRequest"
@@ -15685,7 +15622,7 @@
                 ],
                 "responses": {
                     "204": {
-                        "description": "No Content"
+                        "$ref": "#/components/responses/NoContent"
                     },
                     "400": {
                         "$ref": "#/components/responses/BadRequest"
@@ -15726,31 +15663,13 @@
                 ],
                 "parameters": [
                     {
-                        "in": "query",
-                        "name": "page[size]",
-                        "description": "Determines the number of items to show.",
-                        "schema": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 200,
-                            "default": null
-                        }
+                        "$ref": "#/components/parameters/PageSizeAccess"
                     },
                     {
-                        "in": "query",
-                        "name": "page[before]",
-                        "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
-                        "schema": {
-                            "type": "string"
-                        }
+                        "$ref": "#/components/parameters/PageBefore"
                     },
                     {
-                        "in": "query",
-                        "name": "page[after]",
-                        "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
-                        "schema": {
-                            "type": "string"
-                        }
+                        "$ref": "#/components/parameters/PageAfter"
                     },
                     {
                         "in": "query",
@@ -15779,7 +15698,8 @@
                                         "_links": {
                                             "$ref": "#/components/schemas/ListLinks"
                                         }
-                                    }
+                                    },
+                                    "additionalProperties": false
                                 }
                             }
                         }
@@ -15797,12 +15717,8 @@
                 "x-property-id-kebab": "list-team-project-access",
                 "x-tag-id-kebab": "Team-Access",
                 "x-return-types-displayReturn": false,
-                "x-return-types": [
-                    "object"
-                ],
-                "x-phpdoc": {
-                    "return": "object"
-                },
+                "x-return-types": {},
+                "x-phpdoc": {},
                 "x-returnable": true,
                 "x-description": [
                     "Returns a list of items representing the team's project access."
@@ -15839,7 +15755,7 @@
                 },
                 "responses": {
                     "204": {
-                        "description": "No Content"
+                        "$ref": "#/components/responses/NoContent"
                     },
                     "400": {
                         "$ref": "#/components/responses/BadRequest"
@@ -15923,7 +15839,7 @@
                 ],
                 "responses": {
                     "204": {
-                        "description": "No Content"
+                        "$ref": "#/components/responses/NoContent"
                     },
                     "400": {
                         "$ref": "#/components/responses/BadRequest"
@@ -18223,6 +18139,22 @@
                     "The user object."
                 ]
             },
+            "Error": {
+                "type": "object",
+                "properties": {
+                    "error": {
+                        "type": "string",
+                        "description": "Error message",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "Error message"
+                        ]
+                    }
+                },
+                "required": [
+                    "error"
+                ]
+            },
             "OrganizationInvitation": {
                 "title": "OrganizationInvitation",
                 "type": "object",
@@ -18701,46 +18633,6 @@
                         "website": "https://platform.sh",
                         "consented_at": "2010-04-19T10:00:00Z",
                         "consent_method": "opt-in"
-                    }
-                }
-            },
-            "Error": {
-                "description": "",
-                "type": "object",
-                "properties": {
-                    "status": {
-                        "type": "string",
-                        "x-isDateTime": false
-                    },
-                    "message": {
-                        "type": "string",
-                        "x-isDateTime": false
-                    },
-                    "code": {
-                        "type": "number",
-                        "x-isDateTime": false
-                    },
-                    "detail": {
-                        "type": "object",
-                        "x-isDateTime": false
-                    },
-                    "title": {
-                        "type": "string",
-                        "x-isDateTime": false
-                    }
-                },
-                "title": "",
-                "x-examples": {
-                    "example-1": {
-                        "status": "Invalid input",
-                        "message": "This field is required.",
-                        "code": 400,
-                        "detail": {
-                            "field": [
-                                "This field is required."
-                            ]
-                        },
-                        "title": "Bad Request"
                     }
                 }
             },
@@ -38490,9 +38382,6 @@
                     "endpoint": {
                         "$ref": "#/components/schemas/RegionEndpoint"
                     },
-                    "code": {
-                        "$ref": "#/components/schemas/RegionCode"
-                    },
                     "provider": {
                         "$ref": "#/components/schemas/RegionProvider"
                     },
@@ -38733,16 +38622,28 @@
                     "Link to the region API endpoint."
                 ]
             },
-            "RegionCode": {
-                "type": "string",
-                "description": "The code of the region",
-                "x-description": [
-                    "The code of the region"
-                ]
-            },
             "RegionProvider": {
                 "type": "object",
                 "description": "Information about the region provider.",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the cloud provider.",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "The name of the cloud provider."
+                        ]
+                    },
+                    "logo": {
+                        "type": "string",
+                        "description": "The logo of the cloud provider (base64 encoded SVG).",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "The logo of the cloud provider (base64 encoded SVG)."
+                        ]
+                    }
+                },
+                "additionalProperties": false,
                 "x-description": [
                     "Information about the region provider."
                 ]
@@ -38750,6 +38651,33 @@
             "RegionDataCenter": {
                 "type": "object",
                 "description": "Information about the region provider data center.",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "The name/identifier of the data center.",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "The name/identifier of the data center."
+                        ]
+                    },
+                    "label": {
+                        "type": "string",
+                        "description": "The human-readable label of the data center.",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "The human-readable label of the data center."
+                        ]
+                    },
+                    "location": {
+                        "type": "string",
+                        "description": "The physical location of the data center.",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "The physical location of the data center."
+                        ]
+                    }
+                },
+                "additionalProperties": false,
                 "x-description": [
                     "Information about the region provider data center."
                 ]
@@ -38757,6 +38685,33 @@
             "RegionEnvImpact": {
                 "type": "object",
                 "description": "Information about the region provider's environmental impact.",
+                "properties": {
+                    "zone": {
+                        "type": "string",
+                        "description": "The geographical zone code for carbon intensity.",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "The geographical zone code for carbon intensity."
+                        ]
+                    },
+                    "carbon_intensity": {
+                        "type": "number",
+                        "description": "The carbon intensity value.",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "The carbon intensity value."
+                        ]
+                    },
+                    "green": {
+                        "type": "boolean",
+                        "description": "Indicator whether the data center uses green energy.",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "Indicator whether the data center uses green energy."
+                        ]
+                    }
+                },
+                "additionalProperties": false,
                 "x-description": [
                     "Information about the region provider's environmental impact."
                 ]
@@ -38764,6 +38719,17 @@
             "RegionCompliance": {
                 "type": "object",
                 "description": "Information about the region's compliance.",
+                "properties": {
+                    "hipaa": {
+                        "type": "boolean",
+                        "description": "Indicator whether or not this region is HIPAA compliant.",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "Indicator whether or not this region is HIPAA compliant."
+                        ]
+                    }
+                },
+                "additionalProperties": false,
                 "x-description": [
                     "Information about the region's compliance."
                 ]
@@ -38851,6 +38817,14 @@
                     "The date and time when the resource was last updated."
                 ]
             },
+            "GrantedAt": {
+                "type": "string",
+                "format": "date-time",
+                "description": "The date and time when the access was granted.",
+                "x-description": [
+                    "The date and time when the access was granted."
+                ]
+            },
             "TeamProjectAccess": {
                 "type": "object",
                 "properties": {
@@ -38889,22 +38863,10 @@
                         ]
                     },
                     "granted_at": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "The date and time when the access was granted.",
-                        "x-isDateTime": true,
-                        "x-description": [
-                            "The date and time when the access was granted."
-                        ]
+                        "$ref": "#/components/schemas/GrantedAt"
                     },
                     "updated_at": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "The date and time when the access was last updated.",
-                        "x-isDateTime": true,
-                        "x-description": [
-                            "The date and time when the access was last updated."
-                        ]
+                        "$ref": "#/components/schemas/UpdatedAt"
                     },
                     "_links": {
                         "type": "object",
@@ -39019,22 +38981,10 @@
                         "$ref": "#/components/schemas/ProjectPermissions"
                     },
                     "granted_at": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "The date and time when the access was granted.",
-                        "x-isDateTime": true,
-                        "x-description": [
-                            "The date and time when the access was granted."
-                        ]
+                        "$ref": "#/components/schemas/GrantedAt"
                     },
                     "updated_at": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "The date and time when the access was last updated.",
-                        "x-isDateTime": true,
-                        "x-description": [
-                            "The date and time when the access was last updated."
-                        ]
+                        "$ref": "#/components/schemas/UpdatedAt"
                     },
                     "_links": {
                         "type": "object",
@@ -39747,17 +39697,6 @@
                     "The ID of the organization discount"
                 ]
             },
-            "id": {
-                "name": "filter[id]",
-                "in": "query",
-                "description": "Machine name of the region.",
-                "schema": {
-                    "type": "string"
-                },
-                "x-description": [
-                    "Machine name of the region."
-                ]
-            },
             "subscription_id": {
                 "name": "subscriptionId",
                 "in": "path",
@@ -39780,24 +39719,6 @@
                 },
                 "x-description": [
                     "The ID of the subscription"
-                ]
-            },
-            "subscription_status": {
-                "name": "filter[status]",
-                "in": "query",
-                "description": "The status of the subscription. ",
-                "schema": {
-                    "type": "string",
-                    "enum": [
-                        "active",
-                        "provisioning",
-                        "provisioning failure",
-                        "suspended",
-                        "deleted"
-                    ]
-                },
-                "x-description": [
-                    "The status of the subscription."
                 ]
             },
             "subscription_plan": {
@@ -40171,73 +40092,7 @@
                     "The ID of the region."
                 ]
             },
-            "project_id": {
-                "name": "filter[project_id]",
-                "in": "query",
-                "description": "Allows filtering by `project_id` using one or more operators.",
-                "style": "deepObject",
-                "explode": true,
-                "schema": {
-                    "$ref": "#/components/schemas/StringFilter"
-                },
-                "x-description": [
-                    "Allows filtering by `project_id` using one or more operators."
-                ]
-            },
-            "project_title": {
-                "in": "query",
-                "name": "filter[project_title]",
-                "description": "Allows filtering by `project_title` using one or more operators.",
-                "style": "deepObject",
-                "explode": true,
-                "schema": {
-                    "$ref": "#/components/schemas/StringFilter"
-                },
-                "x-description": [
-                    "Allows filtering by `project_title` using one or more operators."
-                ]
-            },
-            "region": {
-                "in": "query",
-                "name": "filter[region]",
-                "description": "Allows filtering by `region` using one or more operators.",
-                "style": "deepObject",
-                "explode": true,
-                "schema": {
-                    "$ref": "#/components/schemas/StringFilter"
-                },
-                "x-description": [
-                    "Allows filtering by `region` using one or more operators."
-                ]
-            },
-            "updated_at": {
-                "in": "query",
-                "name": "filter[updated_at]",
-                "description": "Allows filtering by `updated_at` using one or more operators.",
-                "style": "deepObject",
-                "explode": true,
-                "schema": {
-                    "$ref": "#/components/schemas/DateTimeFilter"
-                },
-                "x-description": [
-                    "Allows filtering by `updated_at` using one or more operators."
-                ]
-            },
-            "subscription_sort": {
-                "in": "query",
-                "name": "sort",
-                "description": "Allows sorting by a single field.<br>\nUse a dash (\"-\") to sort descending.<br>\nSupported fields: `region`, `project_title`, `type`, `plan`, `status`, `created_at`, `updated_at`.\n",
-                "schema": {
-                    "type": "string",
-                    "example": "-updated_at"
-                },
-                "x-description": [
-                    "Allows sorting by a single field. Use a dash (\"-\") to sort descending. Supported",
-                    "fields: `region`, `project_title`, `type`, `plan`, `status`, `created_at`,",
-                    "`updated_at`."
-                ]
-            },
-            "page_size": {
+            "PageSize": {
                 "in": "query",
                 "name": "page[size]",
                 "description": "Determines the number of items to show.",
@@ -40251,7 +40106,7 @@
                     "Determines the number of items to show."
                 ]
             },
-            "page_before": {
+            "PageBefore": {
                 "in": "query",
                 "name": "page[before]",
                 "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
@@ -40263,7 +40118,7 @@
                     "HAL links (_links); it should not be constructed externally."
                 ]
             },
-            "page_after": {
+            "PageAfter": {
                 "in": "query",
                 "name": "page[after]",
                 "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
@@ -40275,7 +40130,21 @@
                     "HAL links (_links); it should not be constructed externally."
                 ]
             },
-            "from": {
+            "PageSizeAccess": {
+                "in": "query",
+                "name": "page[size]",
+                "description": "Determines the number of items to show.",
+                "schema": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 200,
+                    "default": null
+                },
+                "x-description": [
+                    "Determines the number of items to show."
+                ]
+            },
+            "TimeRangeFrom": {
                 "in": "query",
                 "name": "from",
                 "description": "The start of the time frame for the query. Inclusive.",
@@ -40286,7 +40155,7 @@
                     "The start of the time frame for the query. Inclusive."
                 ]
             },
-            "to": {
+            "TimeRangeTo": {
                 "in": "query",
                 "name": "to",
                 "description": "The end of the time frame for the query. Exclusive.",
@@ -40297,7 +40166,7 @@
                     "The end of the time frame for the query. Exclusive."
                 ]
             },
-            "interval": {
+            "TimeRangeInterval": {
                 "in": "query",
                 "name": "interval",
                 "description": "The interval by which the query groups the results. of the time frame for the query. Exclusive.",
@@ -40312,6 +40181,32 @@
                 "x-description": [
                     "The interval by which the query groups the results. of the time frame for the",
                     "query. Exclusive."
+                ]
+            },
+            "FilterUpdatedAt": {
+                "in": "query",
+                "name": "filter[updated_at]",
+                "description": "Allows filtering by `updated_at` using one or more operators.",
+                "style": "deepObject",
+                "explode": true,
+                "schema": {
+                    "$ref": "#/components/schemas/DateTimeFilter"
+                },
+                "x-description": [
+                    "Allows filtering by `updated_at` using one or more operators."
+                ]
+            },
+            "FilterCreatedAt": {
+                "in": "query",
+                "name": "filter[created_at]",
+                "description": "Allows filtering by `created_at` using one or more operators.",
+                "style": "deepObject",
+                "explode": true,
+                "schema": {
+                    "$ref": "#/components/schemas/DateTimeFilter"
+                },
+                "x-description": [
+                    "Allows filtering by `created_at` using one or more operators."
                 ]
             }
         },
@@ -40396,9 +40291,11 @@
                         }
                     }
                 }
+            },
+            "NoContent": {
+                "description": "No Content"
             }
-        },
-        "examples": {}
+        }
     },
     "x-tagGroups": [
         {
