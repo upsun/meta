@@ -1,3 +1,4 @@
+import { config } from '../config/env.config.js';
 import { Request, Response } from 'express';
 import { registry, z } from 'zod';
 import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
@@ -48,7 +49,15 @@ extensionRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-    const data = await resourceManager.getResource('extension/php_extensions.json');
+      const data = await resourceManager.getResource('extension/php_extensions.json');
+      const baseUrl = `${config.server.BASE_URL}`;
+
+      data.cloud = withSelfLink(data.cloud, (id) => `${baseUrl}${PATH}/cloud/${encodeURIComponent(id)}`);
+      data.cloud = {
+        ...data.cloud,
+        _links: { self: `${baseUrl}${PATH}/cloud` }
+      };
+
       sendFormatted<AllExtensions>(res, data);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read PHP extensions');
@@ -86,7 +95,7 @@ extensionRouter.route({
       const data = await resourceManager.getResource('extension/php_extensions.json');
       const cloudExtensions: CloudExtensions = data?.cloud || {};
 
-      const baseUrl = `${req.protocol}://${req.get('host')}`;
+      const baseUrl = `${config.server.BASE_URL}`;
       const cloudExtensionsWithLinks = withSelfLink(cloudExtensions, (id) => `${baseUrl}${PATH}/cloud/${encodeURIComponent(id)}`);
 
       sendFormatted<CloudExtensions>(res, cloudExtensionsWithLinks);

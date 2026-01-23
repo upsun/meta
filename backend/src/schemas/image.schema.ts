@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
+import { LinkSchema } from './links.schema.js';
 
 // Extend Zod with OpenAPI
 extendZodWithOpenApi(z);
@@ -322,12 +323,10 @@ export const ImageSchema = z.object({
     }
   ),
   versions: z.array(ImageVersionSchema).min(1),
-  _links: z.object({
-    self: z.string().describe('URL to fetch this image resource')
-  }).optional().openapi({
-    description: 'Hypermedia links related to the image',
+  _links: LinkSchema.optional().openapi({
+    description: 'Hypermedia links related to this image',
     example: {
-      self: 'https://meta.upsun.com/images/nodejs'
+      self: 'https://meta.upsun.com/image/nodejs'
     }
   })
 }).openapi('Image', {

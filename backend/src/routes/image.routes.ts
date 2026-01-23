@@ -1,3 +1,4 @@
+import { config } from '../config/env.config.js';
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
@@ -52,7 +53,7 @@ imageRouter.route({
     try {
       const registry = await resourceManager.getResource('image/registry.json');
       const registryParsed = ImageListSchema.parse(registry);
-      const baseUrl = `${req.protocol}://${req.get('host')}`;
+      const baseUrl = `${config.server.BASE_URL}`;
       const registryWithLinks = withSelfLink(registryParsed, (id) => `${baseUrl}${PATH}/${encodeURIComponent(id)}`);
 
       sendFormatted<ImageListRegistry>(res, registryWithLinks);

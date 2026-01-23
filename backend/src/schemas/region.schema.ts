@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
+import { LinkSchema } from './links.schema.js';
 
 // Extend Zod with OpenAPI
 extendZodWithOpenApi(z);
@@ -117,12 +118,10 @@ export const HostRegionSchema = z.object({
     description: 'End-of-life timestamp',
     example: null
   }),
-  _links: z.object({
-    self: z.string().describe('URL to fetch this region resource')
-  }).optional().openapi({
-    description: 'Hypermedia links related to the region',
+  _links: LinkSchema.optional().openapi({
+    description: 'Hypermedia links related to this region',
     example: {
-      self: 'https://meta.upsun.com/regions/us-2'
+      self: 'https://meta.upsun.com/region/us-2'
     }
   })
 }).openapi('HostRegion', {

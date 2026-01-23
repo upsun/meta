@@ -1,3 +1,4 @@
+import { config } from '../config/env.config.js';
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
@@ -155,7 +156,7 @@ regionRouter.route({
 
       // Return list
       const regionSafe = HostRegionsListSchema.parse(regions);
-      const baseUrl = `${req.protocol}://${req.get('host')}`;
+      const baseUrl = `${config.server.BASE_URL}`;
       const regionsWithLinks = withSelfLinkArray(regionSafe, (id) => `${baseUrl}${PATH}/${encodeURIComponent(id)}`);
 
       sendFormatted<HostRegionsList>(res, regionsWithLinks);

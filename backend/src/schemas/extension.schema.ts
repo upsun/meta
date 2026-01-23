@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
+import { LinkSchema } from './links.schema.js';
 
 // Extend Zod with OpenAPI
 extendZodWithOpenApi(z);
@@ -27,14 +28,7 @@ export const ExtensionVersionSchema = z.record(
 const VersionExtensionEntrySchema = z.object({
   versions: z.array(ExtensionVersionSchema)
     .describe('List of available versions for the extension'),
-  _links: z.object({
-    self: z.string().describe('URL to fetch this extension resource')
-  }).optional().openapi({
-    description: 'Hypermedia links related to the extension',
-    example: {
-      self: 'https://meta.upsun.com/extensions/imagick'
-    }
-  })
+  _links: LinkSchema.optional().describe('Hypermedia links related to the extension entry')
 }).openapi('VersionExtensionEntry', {
   description: 'Entry for a specific extension with its available versions',
   example: {
@@ -47,29 +41,20 @@ const VersionExtensionEntrySchema = z.object({
   }
 });
 
-export const CloudExtensionsSchema =  z.record(
-  z.string(), 
+const CloudExtensionsEntriesSchema = z.record(
+  z.string(),
   VersionExtensionEntrySchema
+);
+
+export const CloudExtensionsSchema = z.intersection(
+  CloudExtensionsEntriesSchema,
+  z.object({
+    _links: z.record(z.string(), LinkSchema).optional().openapi({
+      description: 'Hypermedia links related to the cloud extensions',
+    })
+  })
 ).openapi('CloudExtensions', {  
-  description: 'Mapping of Cloud extension IDs to their version entries',
-  example: {
-    "imagick": {
-      versions: [
-        {
-          "8.0": { status: "default", options: [] },
-          "8.1": { status: "available", options: ["webp"] }
-        }
-      ]
-    },
-    "gd": {
-      versions: [
-        {
-          "8.0": { status: "built-in", options: [] },
-          "8.1": { status: "built-in", options: [] }
-        }
-      ]
-    }
-  }
+  description: 'Mapping of Cloud extension IDs to their version entries, with optional links'
 });
 
 export const AllExtensionsSchema = z.object({
