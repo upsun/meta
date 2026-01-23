@@ -10,6 +10,7 @@ import {
   HostRegionsList
 } from '../schemas/region.schema.js';
 import { HeaderAcceptSchema, ErrorDetailsSchema } from '../schemas/api.schema.js';
+import { withSelfLinkArray } from '../utils/api.schema.js';
 
 const TAG = 'Regions';
 const PATH = '/regions';
@@ -154,7 +155,10 @@ regionRouter.route({
 
       // Return list
       const regionSafe = HostRegionsListSchema.parse(regions);
-      sendFormatted<HostRegionsList>(res, regionSafe);
+      const baseUrl = `${req.protocol}://${req.get('host')}`;
+      const regionsWithLinks = withSelfLinkArray(regionSafe, (id) => `${baseUrl}${PATH}/${encodeURIComponent(id)}`);
+
+      sendFormatted<HostRegionsList>(res, regionsWithLinks);
 
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read regions');

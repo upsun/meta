@@ -116,6 +116,14 @@ export const HostRegionSchema = z.object({
   eol_date: z.string().nullable().openapi({
     description: 'End-of-life timestamp',
     example: null
+  }),
+  _links: z.object({
+    self: z.string().describe('URL to fetch this region resource')
+  }).optional().openapi({
+    description: 'Hypermedia links related to the region',
+    example: {
+      self: 'https://meta.upsun.com/regions/us-2'
+    }
   })
 }).openapi('HostRegion', {
   description: 'Detailed host region metadata mirrored from resources/host/regions.json',
