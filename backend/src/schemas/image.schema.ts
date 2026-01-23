@@ -349,7 +349,6 @@ export const ImagesSchema = z.record(z.string(), ImageSchema).openapi('Images', 
           }
         }
       },
-      min_disk_size: null,
       runtime: true,
       need_disk: false,
       versions: [
