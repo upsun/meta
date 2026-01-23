@@ -5,23 +5,25 @@ interface Endpoint {
   example: string;
 }
 
+import { escapeHtml } from '../utils/index.js';
+
 export function generateHomePage(endpoints: Endpoint[], baseUrl: string, version: string): string {
   const endpointListHTML = endpoints.map(endpoint => `
                 <div class="endpoint">
                     <div>
-                        <span class="endpoint-method">${endpoint.method}</span>
-                        <span class="endpoint-path">${endpoint.path}</span>
+                        <span class="endpoint-method">${escapeHtml(endpoint.method)}</span>
+                        <span class="endpoint-path">${escapeHtml(endpoint.path)}</span>
                     </div>
                     <div class="endpoint-desc">
-                        ${endpoint.description}
+                        ${escapeHtml(endpoint.description)}
                     </div>
                     <div class="endpoint-example">
-                        curl ${baseUrl}${endpoint.path.replace(/\{[^}]+\}/g, match => {
+                        curl ${escapeHtml(baseUrl)}${escapeHtml(endpoint.path.replace(/\{[^}]+\}/g, match => {
                           // Replace {name} with example value
                           if (match === '{name}') return 'nodejs';
                           if (match === '{regionId}') return 'eu-5.platform';
                           return match;
-                        })}
+                        }))}
                     </div>
                 </div>`).join('\n');
 

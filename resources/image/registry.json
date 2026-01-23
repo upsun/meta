@@ -1,13 +1,14 @@
 {
   "chrome-headless": {
+    "name": "Headless Chrome",
     "description": "",
     "docs": {
       "relationship_name": "chrome-headless",
       "service_name": "chrome-headless",
       "url": "https://docs.upsun.com/add-services/headless-chrome.html"
     },
-    "name": "Headless Chrome",
     "runtime": false,
+    "service": true,
     "need_disk": false,
     "internal": {
       "repo_name": "chrome-headless"
@@ -366,15 +367,16 @@
     ]
   },
   "clickhouse": {
+    "name": "ClickHouse",
     "description": "ClickHouse is a high-performance column-oriented, distributed, OLAP (Online Analytical Processing) database.",
     "docs": {
       "relationship_name": "clickhouse",
       "service_name": "clickhouse",
-      "url": "https://docs.upsun.com/add-services/clickhouse.html"
+      "url": "https://docs.upsun.com/add-services/clickhouse.html",
+      "configuration": "applications:\n  <APP_NAME>:\n    relationships:\n      <SERVICE_NAME>:"
     },
-    "configuration": "applications:\n  <APP_NAME>:\n    relationships:\n      <SERVICE_NAME>:",
-    "name": "ClickHouse",
     "runtime": false,
+    "service": true,
     "exclude_from": [
       "platformsh"
     ],
@@ -569,6 +571,7 @@
     },
     "name": "C#/.Net Core",
     "runtime": true,
+    "service": false,
     "need_disk": false,
     "internal": {
       "repo_name": "dotnet"
@@ -900,6 +903,7 @@
     },
     "name": "Elasticsearch",
     "runtime": false,
+    "service": true,
     "need_disk": true,
     "internal": {
       "repo_name": "elasticsearch"
@@ -1422,6 +1426,7 @@
     },
     "name": "Elixir",
     "runtime": true,
+    "service": false,
     "need_disk": false,
     "internal": {
       "repo_name": "elixir"
@@ -1738,6 +1743,7 @@
     },
     "name": "Go",
     "runtime": true,
+    "service": false,
     "need_disk": false,
     "internal": {
       "repo_name": "golang"
@@ -2384,6 +2390,7 @@
     },
     "name": "InfluxDB",
     "runtime": false,
+    "service": true,
     "need_disk": true,
     "internal": {
       "repo_name": "influxdb"
@@ -2695,11 +2702,12 @@
       "url": "https://docs.upsun.com/add-services/gotenberg.html"
     },
     "name": "Gotenberg",
-    "runtime": false,
-    "need_disk": false,
     "internal": {
       "repo_name": "gotenberg"
     },
+    "runtime": false,
+    "service": true,
+    "need_disk": true,
     "versions": [
       {
         "name": "8",
@@ -2756,10 +2764,11 @@
       }
     },
     "name": "Java",
-    "runtime": true,
     "internal": {
       "repo_name": "java"
     },
+    "runtime": true,
+    "service": false,
     "need_disk": false,
     "versions": [
       {
@@ -3088,6 +3097,7 @@
     },
     "name": "Kafka",
     "runtime": false,
+    "service": true,
     "need_disk": true,
     "internal": {
       "repo_name": "kafka"
@@ -3454,6 +3464,7 @@
     },
     "name": "MariaDB/MySQL",
     "runtime": false,
+    "service": true,
     "need_disk": true,
     "internal": {
       "repo_name": "mariadb"
@@ -3951,6 +3962,7 @@
     },
     "name": "MariaDB/MySQL",
     "runtime": false,
+    "service": true,
     "need_disk": true,
     "internal": {
       "repo_name": "mysql"
@@ -4448,6 +4460,7 @@
     },
     "name": "Memcached",
     "runtime": false,
+    "service": true,
     "need_disk": false,
     "internal": {
       "repo_name": "memcached"
@@ -4572,6 +4585,7 @@
     },
     "name": "MongoDB",
     "runtime": false,
+    "service": true,
     "need_disk": true,
     "internal": {
       "repo_name": "mongodb"
@@ -4793,6 +4807,7 @@
     },
     "name": "MongoDB",
     "runtime": false,
+    "service": true,
     "premium": true,
     "need_disk": true,
     "internal": {
@@ -5026,6 +5041,7 @@
     },
     "name": "Network Storage",
     "runtime": false,
+    "service": true,
     "need_disk": true,
     "internal": {
       "repo_name": "network-storage"
@@ -5107,6 +5123,7 @@
     },
     "name": "JavaScript/Node.js",
     "runtime": true,
+    "service": false,
     "need_disk": false,
     "internal": {
       "repo_name": "nodejs"
@@ -5788,6 +5805,7 @@
     },
     "name": "OpenSearch",
     "runtime": false,
+    "service": true,
     "need_disk": true,
     "internal": {
       "repo_name": "opensearch"
@@ -5984,6 +6002,7 @@
     },
     "name": "Oracle MySQL",
     "runtime": false,
+    "service": true,
     "need_disk": true,
     "internal": {
       "repo_name": "oracle-mysql"
@@ -6111,6 +6130,7 @@
     },
     "name": "PHP",
     "runtime": true,
+    "service": false,
     "need_disk": false,
     "internal": {
       "repo_name": "php"
@@ -6673,6 +6693,7 @@
     },
     "name": "PostgreSQL",
     "runtime": false,
+    "service": true,
     "need_disk": true,
     "internal": {
       "repo_name": "postgresql"
@@ -7161,6 +7182,7 @@
     },
     "name": "Python",
     "runtime": true,
+    "service": false,
     "need_disk": false,
     "internal": {
       "repo_name": "python"
@@ -7562,6 +7584,7 @@
     },
     "name": "RabbitMQ",
     "runtime": false,
+    "service": true,
     "need_disk": true,
     "internal": {
       "repo_name": "rabbitmq"
@@ -8007,6 +8030,7 @@
     },
     "name": "Redis",
     "runtime": false,
+    "service": true,
     "need_disk": false,
     "internal": {
       "repo_name": "redis"
@@ -8412,6 +8436,7 @@
     },
     "name": "Ruby",
     "runtime": true,
+    "service": false,
     "need_disk": false,
     "internal": {
       "repo_name": "ruby"
@@ -8818,6 +8843,7 @@
     },
     "name": "Rust",
     "runtime": true,
+    "service": false,
     "need_disk": false,
     "internal": {
       "repo_name": "rust"
@@ -8869,6 +8895,7 @@
     },
     "name": "Solr",
     "runtime": false,
+    "service": true,
     "need_disk": true,
     "internal": {
       "repo_name": "solr"
@@ -9415,12 +9442,13 @@
     "docs": {
       "relationship_name": "valkey",
       "service_name": "valkey",
-      "url": "https://docs.upsun.com/add-services/valkey.html"
+      "url": "https://docs.upsun.com/add-services/valkey.html",
+      "configuration": "    configuration:\n        vcl: !include\n            type: string\n            path: config.vcl",
+      "service_relationships": "application: 'app:http'"
     },
-    "configuration": "    configuration:\n        vcl: !include\n            type: string\n            path: config.vcl",
-    "service_relationships": "application: 'app:http'",
     "name": "Valkey",
     "runtime": false,
+    "service": true,
     "need_disk": false,
     "internal": {
       "repo_name": "valkey"
@@ -9507,12 +9535,13 @@
     "docs": {
       "relationship_name": "varnish",
       "service_name": "varnish",
-      "url": "https://docs.upsun.com/add-services/varnish.html"
+      "url": "https://docs.upsun.com/add-services/varnish.html",
+      "service_relationships": "application: 'app:http'",
+      "configuration": "    configuration:\n        vcl: !include\n            type: string\n            path: config.vcl"
     },
-    "configuration": "    configuration:\n        vcl: !include\n            type: string\n            path: config.vcl",
-    "service_relationships": "application: 'app:http'",
     "name": "Varnish",
     "runtime": false,
+    "service": true,
     "need_disk": false,
     "internal": {
       "repo_name": "varnish"
@@ -9843,11 +9872,12 @@
     "docs": {
       "relationship_name": "vault-kms",
       "service_name": "vault-kms",
-      "url": "https://docs.upsun.com/add-services/vault.html"
+      "url": "https://docs.upsun.com/add-services/vault.html",
+      "configuration": "    configuration:\n        endpoints:\n            <ENDPOINT_ID>:\n                - policy: <POLICY>\n                  key: <KEY_NAME>\n                  type: <ENDPOINT_TYPE>"
     },
-    "configuration": "    configuration:\n        endpoints:\n            <ENDPOINT_ID>:\n                - policy: <POLICY>\n                  key: <KEY_NAME>\n                  type: <ENDPOINT_TYPE>",
     "name": "Vault KMS",
     "runtime": false,
+    "service": true,
     "need_disk": true,
     "internal": {
       "repo_name": "vault-kms"
@@ -9946,17 +9976,17 @@
     ]
   },
   "activemq-artemis": {
+    "name": "Apache Artemis",
     "docs": {
       "relationship_name": "activemq-artemis",
       "service_name": "activemq-artemis",
       "url": "https://docs.upsun.com/add-services/activemq-artemis.html"
     },
-    "description": "",
-    "name": "activemq-artemis",
     "internal": {
       "repo_name": "activemq-artemis"
     },
     "runtime": false,
+    "service": true,
     "need_disk": true,
     "versions": [
       {
@@ -9992,18 +10022,20 @@
     ]
   },
   "elasticsearch-enterprise": {
+    "name": "Elasticsearch",
+    "description": "A manufacture service for Elasticsearch",
     "docs": {
       "relationship_name": "elasticsearch-enterprise",
       "service_name": "elasticsearch-enterprise",
       "url": "https://docs.upsun.com/add-services/elasticsearch-enterprise.html"
     },
-    "description": "",
-    "name": "elasticsearch-enterprise",
     "internal": {
       "repo_name": "elasticsearch-enterprise"
-    },
+    },  
     "runtime": false,
+    "service": true,
     "need_disk": true,
+    "premium": true,
     "versions": [
       {
         "name": "8.19",
@@ -10122,6 +10154,7 @@
       "repo_name": "mercure"
     },
     "runtime": false,
+    "service": true,
     "need_disk": true,
     "docs": {
       "relationship_name": "mercure",

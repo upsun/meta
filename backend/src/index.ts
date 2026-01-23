@@ -13,7 +13,8 @@ import { imageRouter } from './routes/image.routes.js';
 import { regionRouter } from './routes/region.routes.js';
 import { extensionRouter } from './routes/extension.routes.js';
 import { validationRouter } from './routes/validation.routes.js';
-import { openapiRouter } from './routes/openapi.routes.js';
+import { openapiRouter } from './routes/openapi.upsun.routes.js';
+import { BaseSpec } from './routes/openapi.meta.routes.js';
 
 // ESM equivalent of __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -62,53 +63,11 @@ openapiRouter.registerToExpress(app);
 // AUTO-GENERATE OPENAPI SPEC
 // Same source as Express routes!
 // ========================================
+const baseSpec = BaseSpec(appVersion);
+
 const imageSpec = imageRouter.generateOpenApiSpec({
-  title: 'Meta Registry - Upsun Image & Region Registry API',
-  version: appVersion,
-  description: `
-# Upsun Image & Region Registry API
-
-REST API to access Upsun image and region information from the official registry.
-
-> **Disclaimer:** This tool is in a BETA version. While we strive for accuracy, data may not be complete or up-to-date. Use at your own discretion.
-
-## Features
-
-- 📋 **Complete lists**: Retrieval of all available images and regions
-- 🔍 **Search by name**: Access to specific image or region information
-- 🌍 **Filter by provider/zone**: Find regions by cloud provider or geographic zone
-- 🎯 **Flexible filtering**: Select properties to return via query parameters
-- ✅ **Zod validation**: Automatic data schema validation
-- 📊 **Rate limiting**: Protection against abuse
-- 🌐 **CORS configured**: Cross-origin request support
-- 📝 **Structured logs**: Logging with Pino for monitoring
-
-### 📦 Supported Data Sources
-
-- **Images**: \`/resources/image/registry.json\` (local) or GitHub
-- **Regions**: \`/resources/host/regions_location.json\` (local) or GitHub
-
----
-
-### Rate Limiting
-
-- **General**: 100 requests per 15 minutes
-- **Strict**: 10 requests per minute (if configured)
-  `,
-  contact: {
-    name: 'API Support',
-    url: 'https://github.com/upsun/upsun-docs'
-  },
-  license: {
-    name: 'MIT',
-    url: 'https://opensource.org/licenses/MIT'
-  },
-  servers: [
-    {
-      url: config.server.BASE_URL,
-      description: config.isDevelopment() ? 'Development server' : 'Production server'
-    }
-  ]
+  title: 'Images',
+  version: appVersion
 });
 
 const regionSpec = regionRouter.generateOpenApiSpec({
@@ -131,8 +90,9 @@ const openapiSpec = openapiRouter.generateOpenApiSpec({
   version: appVersion
 });
 
+// Merge all specs into one
 const openApiSpec = {
-  ...imageSpec,
+  ...baseSpec,
   paths: {
     ...imageSpec.paths,
     ...regionSpec.paths,
@@ -170,11 +130,12 @@ app.use(
   })
 );
 
+// For testing purposes
 // OpenAPI Specification endpoint (JSON)
-app.get('/openapi.json', (req: Request, res: Response) => {
-  res.setHeader('Content-Type', 'application/json');
-  res.json(openApiSpec);
-});
+// app.get('/openapi.json', (req: Request, res: Response) => {
+//   res.setHeader('Content-Type', 'application/json');
+//   res.json(openApiSpec);
+// });
 
 // ========================================
 // HOME PAGE - DYNAMICALLY GENERATED FROM OPENAPI SPEC

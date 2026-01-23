@@ -1,6 +1,6 @@
 import { Express, RequestHandler } from 'express';
 import { z } from 'zod';
-import { OpenAPIRegistry, OpenApiGeneratorV3, RouteConfig } from '@asteasolutions/zod-to-openapi';
+import { OpenAPIRegistry, OpenApiGeneratorV31, RouteConfig } from '@asteasolutions/zod-to-openapi';
 import { logger } from './logger.js';
 
 // Create a dedicated child logger for API Router
@@ -15,9 +15,11 @@ export interface ApiRoute {
   summary?: string;
   description?: string;
   tags?: string[];
+  'x-internal'?: boolean;
   query?: z.ZodSchema;
   params?: z.ZodSchema;
   body?: z.ZodSchema;
+  headers?: z.ZodSchema;
   responses?: {
     [statusCode: number]: {
       description: string;
@@ -51,7 +53,7 @@ export class ApiRouter {
    * Register all routes to Express app with automatic validation
    */
   registerToExpress(app: Express): void {
-    this.routes.forEach(({ method, path, query, params, body, handler }) => {
+    this.routes.forEach(({ method, path, query, params, body, headers, handler }) => {
       // Create validation middleware
       const validationMiddleware: RequestHandler = (req, res, next) => {
         try {
@@ -92,6 +94,18 @@ export class ApiRouter {
             (req as any).validatedBody = result.data;
           }
 
+          // Validate headers
+          if (headers) {
+            const result = headers.safeParse(req.headers);
+            if (!result.success) {
+              return res.status(400).json({
+                error: 'Invalid headers',
+                details: result.error.issues
+              });
+            }
+            (req as any).validatedHeaders = result.data;
+          }
+
           next();
         } catch (error) {
           next(error);
@@ -116,7 +130,7 @@ export class ApiRouter {
     license?: { name: string; url: string };
   }) {
     // Register each route in OpenAPI registry
-    this.routes.forEach(({ method, path, summary, description, tags, query, params, body, responses }) => {
+    this.routes.forEach(({ method, path, summary, description, tags, query, params, body, headers, responses, 'x-internal': xInternal }) => {
       const routeConfig: RouteConfig = {
         method,
         path: path.replace(/:(\w+)/g, '{$1}'), // Convert :param to {param}
@@ -137,6 +151,16 @@ export class ApiRouter {
         (routeConfig.request as any).params = params;
       }
 
+      // Add headers schema
+      if (headers) {
+        (routeConfig.request as any).headers = headers;
+      }
+
+      // Add x-internal if present
+      if (xInternal !== undefined) {
+        (routeConfig as any)['x-internal'] = xInternal;
+      }
+      
       // Add body schema
       if (body) {
         routeConfig.request!.body = {
@@ -171,10 +195,10 @@ export class ApiRouter {
     });
 
     // Generate OpenAPI document
-    const generator = new OpenApiGeneratorV3(this.registry.definitions);
+    const generator = new OpenApiGeneratorV31(this.registry.definitions);
 
     return generator.generateDocument({
-      openapi: '3.0.0',
+      openapi: '3.1.0',
       info: {
         title: config.title,
         version: config.version,
