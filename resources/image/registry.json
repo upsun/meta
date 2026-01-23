@@ -12,6 +12,7 @@
     "internal": {
       "repo_name": "chrome-headless"
     },
+    "service": false,
     "versions": [
       {
         "name": "120",
@@ -42,6 +43,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "120.0.6084.1-0psh1",
+            "normalized": "120.0.6084"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_CPU",
@@ -77,6 +82,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "113.0.5672.77-0psh1",
+            "normalized": "113.0.5672"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_CPU",
@@ -112,6 +121,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "95.0.4638.78-0psh1~bpo10+1",
+            "normalized": "95.0.4638"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_CPU",
@@ -147,6 +160,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "91.0.4472.163-0psh1",
+            "normalized": "91.0.4472"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_CPU",
@@ -182,6 +199,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "86.0.4240183-1~bpo9+1",
+            "normalized": "86.0.4240183"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_CPU",
@@ -217,6 +238,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "84.0.4147.89",
+            "normalized": "84.0.4147"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_CPU",
@@ -252,6 +277,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "83.0.4103.97",
+            "normalized": "83.0.4103"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_CPU",
@@ -287,6 +316,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "81.0.4044.138",
+            "normalized": "81.0.4044"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_CPU",
@@ -322,6 +355,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "80.0.3963.1",
+            "normalized": "80.0.3963"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_CPU",
@@ -357,6 +394,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "73.0.3683.103-2",
+            "normalized": "73.0.3683"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_CPU",
@@ -382,6 +423,7 @@
     "internal": {
       "repo_name": "clickhouse"
     },
+    "service": false,
     "versions": [
       {
         "name": "25.8",
@@ -573,6 +615,7 @@
     "internal": {
       "repo_name": "dotnet"
     },
+    "service": false,
     "versions": [
       {
         "name": "10.0",
@@ -603,6 +646,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "10.0.2",
+            "normalized": "10.0.2"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -638,6 +685,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "8.0.23-1",
+            "normalized": "8.0.23"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -673,6 +724,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "7.0.20-1",
+            "normalized": "7.0.20"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -708,6 +763,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "6.0.36-1",
+            "normalized": "6.0.36"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -743,6 +802,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "5.0.17-1",
+            "normalized": "5.0.17"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -778,6 +841,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "3.1.28-1",
+            "normalized": "3.1.28"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -813,6 +880,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "6.0.8-1",
+            "normalized": "6.0.8"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -848,6 +919,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "2.1.6-1",
+            "normalized": "2.1.6"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -883,6 +958,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "2.1.6-1",
+            "normalized": "2.1.6"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -904,6 +983,7 @@
     "internal": {
       "repo_name": "elasticsearch"
     },
+    "service": false,
     "versions": [
       {
         "name": "7.10",
@@ -935,6 +1015,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "7.10.2-0psh11",
+            "normalized": "7.10.2"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -971,6 +1055,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "7.9.3-0psh3",
+            "normalized": "7.9.3"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -1007,6 +1095,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "7.7.1-0psh9",
+            "normalized": "7.7.1"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -1043,6 +1135,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "7.7.1-0psh9",
+            "normalized": "7.7.1"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -1079,6 +1175,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "7.5.2-0psh12",
+            "normalized": "7.5.2"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -1115,6 +1215,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "7.2.2-0psh4",
+            "normalized": "7.2.2"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -1151,6 +1255,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "6.8.22-0psh3",
+            "normalized": "6.8.22"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -1187,6 +1295,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "6.5.4-02psh2",
+            "normalized": "6.5.4"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -1223,6 +1335,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "5.4.3",
+            "normalized": "5.4.3"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -1259,6 +1375,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "5.2.2",
+            "normalized": "5.2.2"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -1295,6 +1415,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.4.6",
+            "normalized": "2.4.6"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -1325,6 +1449,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.7.6",
+            "normalized": "1.7.6"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -1355,6 +1483,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.4.5",
+            "normalized": "1.4.5"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -1385,6 +1517,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "0.90.13",
+            "normalized": "0.90.13"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -1426,6 +1562,7 @@
     "internal": {
       "repo_name": "elixir"
     },
+    "service": false,
     "versions": [
       {
         "name": "1.18",
@@ -1456,6 +1593,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.18.4-0psh1",
+            "normalized": "1.18.4"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -1491,6 +1632,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.15.8-0psh1~bpo11+1",
+            "normalized": "1.15.8"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -1526,6 +1671,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.14.5-0psh1",
+            "normalized": "1.14.5"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -1561,6 +1710,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.13.0-1",
+            "normalized": "1.13.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -1596,6 +1749,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.12.2-1",
+            "normalized": "1.12.2"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -1631,6 +1788,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.11.2-1",
+            "normalized": "1.11.2"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -1666,6 +1827,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.10.4-1",
+            "normalized": "1.10.4"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -1701,6 +1866,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.9.4-1",
+            "normalized": "1.9.4"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -1742,6 +1911,7 @@
     "internal": {
       "repo_name": "golang"
     },
+    "service": false,
     "versions": [
       {
         "name": "1.25",
@@ -1772,6 +1942,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.25.6-0psh1",
+            "normalized": "1.25.6"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -1807,6 +1981,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.24.12-0psh1~bpo12+1",
+            "normalized": "1.24.12"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -1842,6 +2020,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.23.12-0psh2~bpo12+1",
+            "normalized": "1.23.12"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -1877,6 +2059,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.22.12-0psh2~bpo12+1",
+            "normalized": "1.22.12"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -1912,6 +2098,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.21.13-0psh2~bpo11+1",
+            "normalized": "1.21.13"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -1947,6 +2137,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.20.14-0psh1~bpo11+1",
+            "normalized": "1.20.14"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -1982,6 +2176,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.19.13-0psh2~bpo11+1",
+            "normalized": "1.19.13"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -2017,6 +2215,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.18.10-0psh1~bpo10+1",
+            "normalized": "1.18.10"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -2052,6 +2254,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.17.13-0psh1~bpo9+1",
+            "normalized": "1.17.13"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -2087,6 +2293,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.16.15-0psh1~bpo9+1",
+            "normalized": "1.16.15"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -2122,6 +2332,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.15.15-0psh2~bpo9+1",
+            "normalized": "1.15.15"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -2157,6 +2371,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.14.15-0psh3~bpo9+1",
+            "normalized": "1.14.15"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -2192,6 +2410,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.13.15-0psh2~bpo9+1",
+            "normalized": "1.13.15"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -2227,6 +2449,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.12.17-0psh2~bpo9+1",
+            "normalized": "1.12.17"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -2262,6 +2488,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.11.13-0psh3~bpo9+1",
+            "normalized": "1.11.13"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -2297,6 +2527,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.10-0psh2",
+            "normalized": "1.10.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -2332,6 +2566,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.9.2-0psh1",
+            "normalized": "1.9.2"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -2367,6 +2605,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.8.3-0psh2~bpo8+1",
+            "normalized": "1.8.3"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -2388,6 +2630,7 @@
     "internal": {
       "repo_name": "influxdb"
     },
+    "service": false,
     "versions": [
       {
         "name": "2.7",
@@ -2418,6 +2661,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.0.2-0psh~bpo11+1",
+            "normalized": "1.0.2"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -2453,6 +2700,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.0.2-0psh~bpo11+1",
+            "normalized": "1.0.2"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -2483,6 +2734,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.2.0",
+            "normalized": "2.2.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -2513,6 +2768,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.0.8",
+            "normalized": "2.0.8"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -2543,6 +2802,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.0.8",
+            "normalized": "2.0.8"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -2578,6 +2841,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.8.10-1",
+            "normalized": "1.8.10"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -2613,6 +2880,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.7.11-1",
+            "normalized": "1.7.11"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -2649,6 +2920,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.3.6-1",
+            "normalized": "1.3.6"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -2679,6 +2954,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.2.2-1",
+            "normalized": "1.2.2"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -2700,6 +2979,7 @@
     "internal": {
       "repo_name": "gotenberg"
     },
+    "service": false,
     "versions": [
       {
         "name": "8",
@@ -2761,6 +3041,7 @@
       "repo_name": "java"
     },
     "need_disk": false,
+    "service": false,
     "versions": [
       {
         "name": "21",
@@ -2791,6 +3072,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "20230710~deb12u1",
+            "normalized": "20230710.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -2826,6 +3111,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "20190405",
+            "normalized": "20190405.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -2861,6 +3150,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "20190405",
+            "normalized": "20190405.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -2896,6 +3189,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "20190405",
+            "normalized": "20190405.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -2931,6 +3228,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "20190405",
+            "normalized": "20190405.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -2966,6 +3267,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "20190405",
+            "normalized": "20190405.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3001,6 +3306,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "20190405",
+            "normalized": "20190405.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3036,6 +3345,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "20190405",
+            "normalized": "20190405.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3071,6 +3384,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "20170929~deb8u1",
+            "normalized": "20170929.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3092,6 +3409,7 @@
     "internal": {
       "repo_name": "kafka"
     },
+    "service": false,
     "versions": [
       {
         "name": "3.7",
@@ -3122,6 +3440,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "3.7.2-0psh1",
+            "normalized": "3.7.2"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3157,6 +3479,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "3.6.2-0psh2",
+            "normalized": "3.6.2"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3192,6 +3518,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "3.4.1-0psh4~bpo11+1",
+            "normalized": "3.4.1"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3227,6 +3557,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "3.2.3-0psh3~bpo11+1",
+            "normalized": "3.2.3"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3257,6 +3591,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.7.0-0psh1",
+            "normalized": "2.7.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3287,6 +3625,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.6.0-0psh2",
+            "normalized": "2.6.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3317,6 +3659,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.5.1-0psh2",
+            "normalized": "2.5.1"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3347,6 +3693,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.4.1-0psh1",
+            "normalized": "2.4.1"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3377,6 +3727,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.3.1-0psh1",
+            "normalized": "2.3.1"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3407,6 +3761,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.2.1-0psh1",
+            "normalized": "2.2.1"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3437,6 +3795,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.1.0-0psh2",
+            "normalized": "2.1.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3458,6 +3820,7 @@
     "internal": {
       "repo_name": "mariadb"
     },
+    "service": false,
     "versions": [
       {
         "name": "11.8",
@@ -3490,6 +3853,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:11.8.5+maria~deb12",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3527,6 +3894,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:11.4.9+maria~deb12",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3564,6 +3935,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:11.2.6+maria~deb12",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3601,6 +3976,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:11.0.6+maria~deb12",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3638,6 +4017,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:10.11.15+maria~deb12",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3675,6 +4058,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:10.6.24+maria~deb11",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3712,6 +4099,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:10.5.29+maria~deb11",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3749,6 +4140,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:10.4.34+maria~deb10",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3786,6 +4181,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:10.3.39+maria~deb10",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3823,6 +4222,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "10.2.44+maria~stretch",
+            "normalized": "10.2.44"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3860,6 +4263,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "10.1.48+maria-1~stretch",
+            "normalized": "10.1.48"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3897,6 +4304,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "10.0.38+maria-1~jessie",
+            "normalized": "10.0.38"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3934,6 +4345,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "5.5.61+maria-1~wheezy",
+            "normalized": "5.5.61"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3955,6 +4370,7 @@
     "internal": {
       "repo_name": "mysql"
     },
+    "service": false,
     "versions": [
       {
         "name": "11.8",
@@ -3987,6 +4403,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:11.8.5+maria~deb12",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4024,6 +4444,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:11.4.9+maria~deb12",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4061,6 +4485,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:11.2.6+maria~deb12",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4098,6 +4526,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:11.0.6+maria~deb12",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4135,6 +4567,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:10.11.15+maria~deb12",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4172,6 +4608,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:10.6.24+maria~deb11",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4209,6 +4649,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:10.5.29+maria~deb11",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4246,6 +4690,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:10.4.34+maria~deb10",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4283,6 +4731,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:10.3.39+maria~deb10",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4320,6 +4772,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "10.2.44+maria~stretch",
+            "normalized": "10.2.44"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4357,6 +4813,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "10.1.48+maria-1~stretch",
+            "normalized": "10.1.48"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4394,6 +4854,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "10.0.38+maria-1~jessie",
+            "normalized": "10.0.38"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4431,6 +4895,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "5.5.61+maria-1~wheezy",
+            "normalized": "5.5.61"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4452,6 +4920,7 @@
     "internal": {
       "repo_name": "memcached"
     },
+    "service": false,
     "versions": [
       {
         "name": "1.6",
@@ -4483,6 +4952,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.6.40-0psh1~bpo11+1",
+            "normalized": "1.6.40"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
@@ -4519,6 +4992,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.5.22-0psh2",
+            "normalized": "1.5.22"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
@@ -4555,6 +5032,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.4.39-0psh1",
+            "normalized": "1.4.39"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
@@ -4576,6 +5057,7 @@
     "internal": {
       "repo_name": "mongodb"
     },
+    "service": false,
     "versions": [
       {
         "name": "4.0",
@@ -4612,6 +5094,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "4.0.3",
+            "normalized": "4.0.3"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4653,6 +5139,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "3.6.23",
+            "normalized": "3.6.23"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4694,6 +5184,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "3.4.24",
+            "normalized": "3.4.24"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4735,6 +5229,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "3.2.22",
+            "normalized": "3.2.22"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4776,6 +5274,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "3.0.15",
+            "normalized": "3.0.15"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4798,6 +5300,7 @@
     "internal": {
       "repo_name": "mongodb-enterprise"
     },
+    "service": false,
     "versions": [
       {
         "name": "7.0",
@@ -4829,6 +5332,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "7.0.28",
+            "normalized": "7.0.28"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4865,6 +5372,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "6.0.27",
+            "normalized": "6.0.27"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4901,6 +5412,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "5.0.32",
+            "normalized": "5.0.32"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4937,6 +5452,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "4.4.30",
+            "normalized": "4.4.30"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -4973,6 +5492,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "4.2.25",
+            "normalized": "4.2.25"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -5009,6 +5532,10 @@
           "is_persistent": null,
           "min_disk_size": 512,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "4.0.28",
+            "normalized": "4.0.28"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -5030,6 +5557,7 @@
     "internal": {
       "repo_name": "network-storage"
     },
+    "service": false,
     "versions": [
       {
         "name": "2.0",
@@ -5111,6 +5639,7 @@
     "internal": {
       "repo_name": "nodejs"
     },
+    "service": false,
     "versions": [
       {
         "name": "24",
@@ -5141,6 +5670,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "24.13.0-1nodesource1",
+            "normalized": "24.13.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -5176,6 +5709,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "22.22.0-1nodesource1",
+            "normalized": "22.22.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -5211,6 +5748,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "20.20.0-1nodesource1",
+            "normalized": "20.20.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -5246,6 +5787,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "18.20.8-1nodesource1",
+            "normalized": "18.20.8"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -5281,6 +5826,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "16.20.2-1nodesource1",
+            "normalized": "16.20.2"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -5316,6 +5865,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "8.9.4-1nodesource1",
+            "normalized": "8.9.4"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": null,
@@ -5351,6 +5904,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "6.10.3-1nodesource1~jessie1",
+            "normalized": "6.10.3"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": null,
@@ -5386,6 +5943,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "6.9.2-1nodesource1~jessie1",
+            "normalized": "6.9.2"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": null,
@@ -5421,6 +5982,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "6.8.0-1nodesource1~jessie1",
+            "normalized": "6.8.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": null,
@@ -5456,6 +6021,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "6.6.0-1nodesource1~jessie1",
+            "normalized": "6.6.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": null,
@@ -5491,6 +6060,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "6.3.1-1nodesource1~jessie1",
+            "normalized": "6.3.1"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": null,
@@ -5526,6 +6099,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "6.2.1-1nodesource1~jessie1",
+            "normalized": "6.2.1"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": null,
@@ -5561,6 +6138,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "4.7.0-1nodesource1~jessie1",
+            "normalized": "4.7.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": null,
@@ -5596,6 +6177,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "4.6.2-1nodesource1~jessie1",
+            "normalized": "4.6.2"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": null,
@@ -5631,6 +6216,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "4.5.0-1nodesource1~jessie1",
+            "normalized": "4.5.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": null,
@@ -5666,6 +6255,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "4.4.5-1nodesource1~jessie1",
+            "normalized": "4.4.5"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": null,
@@ -5701,6 +6294,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "4.3.2-1nodesource1~jessie1",
+            "normalized": "4.3.2"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": null,
@@ -5736,6 +6333,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "4.2.4-1nodesource1~jessie1",
+            "normalized": "4.2.4"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": null,
@@ -5771,6 +6372,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "0.12.18-1nodesource1~jessie1",
+            "normalized": "0.12.18"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -5792,6 +6397,7 @@
     "internal": {
       "repo_name": "opensearch"
     },
+    "service": false,
     "versions": [
       {
         "name": "3",
@@ -5823,6 +6429,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "3.4.0~0psh1",
+            "normalized": "3.4.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -5859,6 +6469,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.19.4~0psh1",
+            "normalized": "2.19.4"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -5895,6 +6509,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.2.4-0psh8",
+            "normalized": "1.2.4"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -5931,6 +6549,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.1.0-0psh5",
+            "normalized": "1.1.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -5967,6 +6589,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.3.20-0psh1",
+            "normalized": "1.3.20"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -5988,6 +6614,7 @@
     "internal": {
       "repo_name": "oracle-mysql"
     },
+    "service": false,
     "versions": [
       {
         "name": "8.4",
@@ -6013,6 +6640,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "0.1.4-0psh~bpo12+1",
+            "normalized": "0.1.4"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -6043,6 +6674,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "0.1.4-0psh~bpo12+1",
+            "normalized": "0.1.4"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -6073,6 +6708,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "5.7.25-25.17+1debian9",
+            "normalized": "5.7.25"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -6115,6 +6754,7 @@
     "internal": {
       "repo_name": "php"
     },
+    "service": false,
     "versions": [
       {
         "name": "8.5",
@@ -6149,6 +6789,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.92.59",
+            "normalized": "1.92.59"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -6188,6 +6832,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.92.59",
+            "normalized": "1.92.59"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -6227,6 +6875,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.92.59",
+            "normalized": "1.92.59"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -6266,6 +6918,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.92.59",
+            "normalized": "1.92.59"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -6305,6 +6961,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.92.59",
+            "normalized": "1.92.59"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -6344,6 +7004,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.92.59",
+            "normalized": "1.92.59"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -6383,6 +7047,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.92.50",
+            "normalized": "1.92.50"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -6422,6 +7090,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.92.50",
+            "normalized": "1.92.50"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -6461,6 +7133,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.92.50",
+            "normalized": "1.92.50"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -6500,6 +7176,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.92.40",
+            "normalized": "1.92.40"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -6539,6 +7219,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.92.40",
+            "normalized": "1.92.40"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -6578,6 +7262,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.92.40",
+            "normalized": "1.92.40"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -6617,6 +7305,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.92.13",
+            "normalized": "1.92.13"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -6656,6 +7348,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.92.13",
+            "normalized": "1.92.13"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -6677,6 +7373,7 @@
     "internal": {
       "repo_name": "postgresql"
     },
+    "service": false,
     "versions": [
       {
         "name": "18",
@@ -6718,6 +7415,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "3.6.1+dfsg-1.pgdg13+1",
+            "normalized": "3.6.1"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -6756,6 +7457,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "3.2.3+dfsg-1.pgdg110+1",
+            "normalized": "3.2.3"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -6794,6 +7499,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "3.2.3+dfsg-1.pgdg110+1",
+            "normalized": "3.2.3"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -6832,6 +7541,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "3.2.3+dfsg-1.pgdg110+1",
+            "normalized": "3.2.3"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -6870,6 +7583,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "3.2.3+dfsg-1.pgdg110+1",
+            "normalized": "3.2.3"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -6908,6 +7625,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "3.3.4+dfsg-1.pgdg110+1",
+            "normalized": "3.3.4"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -6946,6 +7667,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "3.2.3+dfsg-1.pgdg110+1",
+            "normalized": "3.2.3"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -6984,6 +7709,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "2.5.5+dfsg-1.pgdg100+2",
+            "normalized": "2.5.5"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -7022,6 +7751,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "2.4.4+dfsg-4.pgdg90+1",
+            "normalized": "2.4.4"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -7060,6 +7793,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.3.3+dfsg-1.pgdg90+1",
+            "normalized": "2.3.3"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -7090,6 +7827,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.2.2+dfsg-7~137.gite11228b.pgdg80+1",
+            "normalized": "2.2.2"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -7128,6 +7869,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.3.3+dfsg-1.pgdg90+1",
+            "normalized": "2.3.3"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -7165,6 +7910,7 @@
     "internal": {
       "repo_name": "python"
     },
+    "service": false,
     "versions": [
       {
         "name": "3.14",
@@ -7195,6 +7941,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "0.1.13-0psh",
+            "normalized": "0.1.13"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -7230,6 +7980,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "0.1.13-0psh~bpo12+1",
+            "normalized": "0.1.13"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -7265,6 +8019,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "0.1.13-0psh~bpo12+1",
+            "normalized": "0.1.13"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -7300,6 +8058,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "0.1.13-0psh~bpo11+1",
+            "normalized": "0.1.13"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -7335,6 +8097,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "2.7.16-1",
+            "normalized": "2.7.16"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -7370,6 +8136,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "2.7.13-2",
+            "normalized": "2.7.13"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -7405,6 +8175,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "2.7.13-2",
+            "normalized": "2.7.13"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -7440,6 +8214,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "2.7.13-2",
+            "normalized": "2.7.13"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -7475,6 +8253,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "2.7.9-1",
+            "normalized": "2.7.9"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -7510,6 +8292,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "2.7.9-1",
+            "normalized": "2.7.9"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -7545,6 +8331,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "2.7.9-1",
+            "normalized": "2.7.9"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -7566,6 +8356,7 @@
     "internal": {
       "repo_name": "rabbitmq"
     },
+    "service": false,
     "versions": [
       {
         "name": "4.1",
@@ -7600,6 +8391,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.28-0psh~bpo12+1",
+            "normalized": "1.28.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -7639,6 +8434,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.28-0psh~bpo12+1",
+            "normalized": "1.28.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -7678,6 +8477,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.28-0psh~bpo12+1",
+            "normalized": "1.28.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -7717,6 +8520,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.28-0psh~bpo11+1",
+            "normalized": "1.28.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -7756,6 +8563,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.27-0psh~bpo11+1",
+            "normalized": "1.27.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -7795,6 +8606,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.27-0psh~bpo11+1",
+            "normalized": "1.27.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -7834,6 +8649,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.27-0psh~bpo11+1",
+            "normalized": "1.27.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -7873,6 +8692,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.27-0psh~bpo10+1",
+            "normalized": "1.27.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -7912,6 +8735,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "3.7.28-1",
+            "normalized": "3.7.28"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -7951,6 +8778,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "3.6.16-2",
+            "normalized": "3.6.16"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -7990,6 +8821,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "3.5.7-1",
+            "normalized": "3.5.7"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -8011,6 +8846,7 @@
     "internal": {
       "repo_name": "redis"
     },
+    "service": false,
     "versions": [
       {
         "name": "8.0",
@@ -8043,6 +8879,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "8.0.5-0psh2~bpo12+1",
+            "normalized": "8.0.5"
+          },
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
@@ -8080,6 +8920,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "7.2.12-0psh2~bpo12+1",
+            "normalized": "7.2.12"
+          },
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
@@ -8117,6 +8961,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "7.0.15-0psh2~bpo12+1",
+            "normalized": "7.0.15"
+          },
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
@@ -8154,6 +9002,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "6.2.21-0psh2~bpo11+1",
+            "normalized": "6.2.21"
+          },
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
@@ -8191,6 +9043,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "6.0.20-0psh2~bpo11+1",
+            "normalized": "6.0.20"
+          },
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
@@ -8228,6 +9084,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "5.0.14-0psh2",
+            "normalized": "5.0.14"
+          },
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
@@ -8265,6 +9125,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "4.0.14-0psh2",
+            "normalized": "4.0.14"
+          },
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
@@ -8302,6 +9166,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "3.2.13-0psh1",
+            "normalized": "3.2.13"
+          },
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
@@ -8339,6 +9207,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "0.1.6-0psh~bpo11+1",
+            "normalized": "0.1.6"
+          },
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
@@ -8369,6 +9241,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.10.5-0platform1",
+            "normalized": "2.10.5"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
@@ -8416,6 +9292,7 @@
     "internal": {
       "repo_name": "ruby"
     },
+    "service": false,
     "versions": [
       {
         "name": "4.0",
@@ -8446,6 +9323,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:3.3+b1",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -8481,6 +9362,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:3.1",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -8516,6 +9401,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:3.1",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -8551,6 +9440,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:2.7+2",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -8586,6 +9479,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:2.5.1",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -8621,6 +9518,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:2.5.1",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -8656,6 +9557,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:2.3.3",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -8691,6 +9596,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:2.3.3",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -8726,6 +9635,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:2.3.3",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -8761,6 +9674,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:2.1.5+deb8u2",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -8796,6 +9713,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:2.1.5+deb8u2",
+            "normalized": "1.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -8822,6 +9743,7 @@
     "internal": {
       "repo_name": "rust"
     },
+    "service": false,
     "versions": [
       {
         "name": "1",
@@ -8852,6 +9774,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.92.0-0psh1~bpo11+1",
+            "normalized": "1.92.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
@@ -8873,6 +9799,7 @@
     "internal": {
       "repo_name": "solr"
     },
+    "service": false,
     "versions": [
       {
         "name": "9.9",
@@ -8904,6 +9831,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "9.9.0-0psh2",
+            "normalized": "9.9.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -8940,6 +9871,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "9.4.0-0psh3~bpo11+1",
+            "normalized": "9.4.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -8976,6 +9911,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "9.6.1-0psh1",
+            "normalized": "9.6.1"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -9012,6 +9951,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "9.4.0-0psh4",
+            "normalized": "9.4.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -9048,6 +9991,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "9.2.0-0psh4",
+            "normalized": "9.2.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -9084,6 +10031,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "9.1.0-0psh3",
+            "normalized": "9.1.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -9114,6 +10065,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "9.0.0-0psh2",
+            "normalized": "9.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -9150,6 +10105,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "8.11.1-0psh4",
+            "normalized": "8.11.1"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -9186,6 +10145,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "8.0.0-0psh5",
+            "normalized": "8.0.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -9222,6 +10185,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "7.7.3-0psh6",
+            "normalized": "7.7.3"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -9258,6 +10225,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "7.6.0-2psh5",
+            "normalized": "7.6.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -9294,6 +10265,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "6.6.6-0psh3~bpo9+1",
+            "normalized": "6.6.6"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -9330,6 +10305,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "6.3.0-0psh7~bpo9+1",
+            "normalized": "6.3.0"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -9366,6 +10345,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "4.10.4--0psh2",
+            "normalized": "4.10.4"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -9402,6 +10385,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "3.6.2-0psh3",
+            "normalized": "3.6.2"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -9425,6 +10412,7 @@
     "internal": {
       "repo_name": "valkey"
     },
+    "service": false,
     "versions": [
       {
         "name": "8.1",
@@ -9457,6 +10445,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "8.1.5-0psh1~bpo12+1",
+            "normalized": "8.1.5"
+          },
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
@@ -9494,6 +10486,10 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "8.0.6-0psh3~bpo12+1",
+            "normalized": "8.0.6"
+          },
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
@@ -9517,6 +10513,7 @@
     "internal": {
       "repo_name": "varnish"
     },
+    "service": false,
     "versions": [
       {
         "name": "7.6",
@@ -9552,6 +10549,10 @@
           "is_persistent": false,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "7.6.1-1~bookworm",
+            "normalized": "7.6.1"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_MEMORY",
@@ -9592,6 +10593,10 @@
           "is_persistent": false,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "7.3.2-1~bullseye",
+            "normalized": "7.3.2"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_MEMORY",
@@ -9632,6 +10637,10 @@
           "is_persistent": false,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "7.2.1-1~bullseye",
+            "normalized": "7.2.1"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_MEMORY",
@@ -9672,6 +10681,10 @@
           "is_persistent": false,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "7.1.2-1~bullseye",
+            "normalized": "7.1.2"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_MEMORY",
@@ -9712,6 +10725,10 @@
           "is_persistent": false,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "6.3.2-1~stretch",
+            "normalized": "6.3.2"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_MEMORY",
@@ -9752,6 +10769,10 @@
           "is_persistent": false,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "6.0.13-1~bookworm",
+            "normalized": "6.0.13"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_MEMORY",
@@ -9791,6 +10812,10 @@
           "is_persistent": false,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "5.2.1-1~stretch",
+            "normalized": "5.2.1"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_MEMORY",
@@ -9830,6 +10855,10 @@
           "is_persistent": false,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "5.2.1-1~stretch",
+            "normalized": "5.2.1"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_MEMORY",
@@ -9852,6 +10881,7 @@
     "internal": {
       "repo_name": "vault-kms"
     },
+    "service": false,
     "versions": [
       {
         "name": "1.12",
@@ -9877,6 +10907,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.12.11-0psh1",
+            "normalized": "1.12.11"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -9907,6 +10941,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.8.12-1",
+            "normalized": "1.8.12"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -9937,6 +10975,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.6.7",
+            "normalized": "1.6.7"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -9958,6 +11000,7 @@
     },
     "runtime": false,
     "need_disk": true,
+    "service": false,
     "versions": [
       {
         "name": "2",
@@ -9983,6 +11026,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.44.0-0psh2~bpo12+1",
+            "normalized": "2.44.0"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -10004,6 +11051,7 @@
     },
     "runtime": false,
     "need_disk": true,
+    "service": false,
     "versions": [
       {
         "name": "8.19",
@@ -10035,6 +11083,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "8.5.3",
+            "normalized": "8.5.3"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -10071,6 +11123,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "8.5.3",
+            "normalized": "8.5.3"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -10107,6 +11163,10 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "7.17.29",
+            "normalized": "7.17.29"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -10128,6 +11188,7 @@
       "service_name": "mercure",
       "url": "https://docs.upsun.com/add-services/mercure.html"
     },
+    "service": false,
     "versions": [
       {
         "name": "0",
