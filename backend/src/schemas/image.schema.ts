@@ -324,14 +324,13 @@ export const ImageSchema = z.object({
   versions: z.array(ImageVersionSchema).min(1),
 
 
-}).openapi('Image'); // passthrough to allow additional properties
+}).openapi('Image');
 
 /**
  * Schema for Images Registry (list of images)
  */
 export const ImagesSchema = z.record(z.string(), ImageSchema).openapi('Images', {
   description: 'Registry containing all available images',
-  "x-internal": true,
   example: {
     'nodejs': {
       name: "JavaScript/Node.js",

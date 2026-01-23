@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
-import { ResourceManager, logger } from '../utils/index.js';
+import { ResourceManager, escapeHtml, logger } from '../utils/index.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import {
   HostRegionSchema,
@@ -69,29 +69,32 @@ regionRouter.route({
         zone?: string;
         country_code?: string;
       };
+      const safeName = name ? escapeHtml(name) : undefined;
+      const safeProvider = provider ? escapeHtml(provider) : undefined;
+      const safeZone = zone ? escapeHtml(zone) : undefined;
+      const safeCountryCode = country_code ? escapeHtml(country_code) : undefined;
 
       // Get regions list
       let regions = await resourceManager.getResource('host/regions.json');
 
       // Apply filters
-      if (name) {
-        const region = regions.find((r: any) => r.name === name);
+      if (safeName) {
+        const region = regions.find((r: any) => r.name === safeName);
         if (!region) {
           const availableRegions = regions.map((r: any) => r.name);
-          apiLogger.warn({ region: name }, 'Region not found');
-
+          apiLogger.warn({ region: safeName }, 'Region not found');
           return sendErrorFormatted(res, {
-            title: `Region '${name}' not found`,
-            detail: `Region '${name}' not found, see extra.availableRegions for a list of valid region names.`,
+            title: `Region '${safeName}' not found`,
+            detail: `Region '${safeName}' not found, see extra.availableRegions for a list of valid region names.`,
             status: 404,
             extra: { availableRegions }
           });
         }
       }
 
-      if (provider) {
+      if (safeProvider) {
         regions = regions.filter(
-          (r: any) => r.provider?.name?.toLowerCase() === provider.toLowerCase()
+          (r: any) => r.provider?.name?.toLowerCase() === safeProvider.toLowerCase()
         );
         if (regions.length === 0) {
           const availableProviders = [...new Set(
@@ -101,17 +104,17 @@ regionRouter.route({
           )];
 
           return sendErrorFormatted(res, {
-            title: `No regions found for provider '${provider}'`,
-            detail: `No regions found for provider '${provider}', see extra.availableProviders for a list of valid providers.`,
+            title: `No regions found for provider '${safeProvider}'`,
+            detail: `No regions found for provider '${safeProvider}', see extra.availableProviders for a list of valid providers.`,
             status: 404,
             extra: { availableProviders }
           });
         }
       }
 
-      if (zone) {
+      if (safeZone) {
         regions = regions.filter(
-          (r: any) => r.zone && r.zone.toLowerCase() === zone.toLowerCase()
+          (r: any) => r.zone && r.zone.toLowerCase() === safeZone.toLowerCase()
         );
         if (regions.length === 0) {
           const availableZones = [...new Set(
@@ -121,17 +124,17 @@ regionRouter.route({
           )];
 
           return sendErrorFormatted(res, {
-            title: `No regions found for zone '${zone}'`,
-            detail: `No regions found for zone '${zone}', see extra.availableZones for a list of valid zones.`,
+            title: `No regions found for zone '${safeZone}'`,
+            detail: `No regions found for zone '${safeZone}', see extra.availableZones for a list of valid zones.`,
             status: 404,
             extra: { availableZones }
           });
         }
       }
 
-      if (country_code) {
+      if (safeCountryCode) {
         regions = regions.filter(
-          (r: any) => r.country_code?.toLowerCase() === country_code.toLowerCase()
+          (r: any) => r.country_code?.toLowerCase() === safeCountryCode.toLowerCase()
         );
         if (regions.length === 0) {
           const availableCountryCodes = [...new Set(
@@ -141,8 +144,8 @@ regionRouter.route({
           )];
 
           return sendErrorFormatted(res, {
-            title: `No regions found for country code '${country_code}'`,
-            detail: `No regions found for country code '${country_code}', see extra.availableCountryCodes for a list of valid country codes.`,
+            title: `No regions found for country code '${safeCountryCode}'`,
+            detail: `No regions found for country code '${safeCountryCode}', see extra.availableCountryCodes for a list of valid country codes.`,
             status: 404,
             extra: { availableCountryCodes }
           });
@@ -194,18 +197,19 @@ regionRouter.route({
   handler: async (req: Request, res: Response) => {
     try {
       const { id } = req.params;
+      const safeId = escapeHtml(id as string);
       // Get regions list
       let regions = await resourceManager.getResource('host/regions.json');
 
       // Apply filters
-      if (id) {
-        const region = regions.find((r: any) => r.id === id);
+      if (safeId) {
+        const region = regions.find((r: any) => r.id === safeId);
         if (!region) {
           const availableRegions = regions.map((r: any) => r.id);
-          apiLogger.warn({ region: id }, 'Region not found');
+          apiLogger.warn({ region: safeId }, 'Region not found');
           return sendErrorFormatted(res, {
-            title: `Region '${id}' not found`,
-            detail: `Region '${id}' not found. see extra.availableRegions for a list of valid region IDs.`,
+            title: `Region '${safeId}' not found`,
+            detail: `Region '${safeId}' not found. see extra.availableRegions for a list of valid region IDs.`,
             status: 404,
             extra: { availableRegions }
           });

@@ -2,8 +2,7 @@ import { Request, Response } from 'express';
 import { z } from 'zod';
 import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
 import { ApiRouter } from '../utils/api.router.js';
-import { ResourceManager, logger } from '../utils/index.js';
-import YAML from 'yaml';
+import { ResourceManager, escapeHtml, logger } from '../utils/index.js';
 import { ErrorDetailsSchema, HeaderAcceptSchema } from '../schemas/api.schema.js';
 import { 
   AllExtensionsSchema, 
@@ -126,7 +125,7 @@ extensionRouter.route({
   handler: async (req: Request, res: Response) => {
     try {
       const { id } = req.params;
-      const imageId = id as string;
+      const imageId = escapeHtml(id as string);
       
       const data = await resourceManager.getResource('extension/php_extensions.json');
       const extensionEntry = data?.cloud?.[imageId];

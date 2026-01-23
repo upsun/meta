@@ -29,7 +29,6 @@ const VersionExtensionEntrySchema = z.object({
     .describe('List of available versions for the extension')
 }).openapi('VersionExtensionEntry', {
   description: 'Entry for a specific extension with its available versions',
-  "x-internal": true,
   example: {
     versions: [
       {

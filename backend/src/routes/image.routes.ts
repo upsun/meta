@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
-import { ResourceManager, logger } from '../utils/index.js';
+import { ResourceManager, escapeHtml, logger } from '../utils/index.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import {
   ImagesRegistry,
@@ -95,7 +95,7 @@ imageRouter.route({
   handler: async (req: Request, res: Response) => {
     try {
       const { id } = req.params;
-      const imageId = id as string;
+      const imageId = escapeHtml(id as string);
 
       // Get registry
       const registry = await resourceManager.getResource('image/registry.json');

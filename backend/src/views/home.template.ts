@@ -5,24 +5,7 @@ interface Endpoint {
   example: string;
 }
 
-function escapeHtml(unsafe: string): string {
-  return unsafe.replace(/[&<>"']/g, (char) => {
-    switch (char) {
-      case '&':
-        return '&amp;';
-      case '<':
-        return '&lt;';
-      case '>':
-        return '&gt;';
-      case '"':
-        return '&quot;';
-      case '\'':
-        return '&#39;';
-      default:
-        return char;
-    }
-  });
-}
+import { escapeHtml } from '../utils/index.js';
 
 export function generateHomePage(endpoints: Endpoint[], baseUrl: string, version: string): string {
   const endpointListHTML = endpoints.map(endpoint => `
