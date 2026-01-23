@@ -7,7 +7,7 @@ export { logger, configureLogger } from './logger.js';
 export { ResourceManager } from './resource.manager.js';
 
 export function escapeHtml(unsafe: string): string {
-  return unsafe.replace(/[&<>"']/g, (char) => {
+  return unsafe.replaceAll(/[&<>"']/g, (char) => {
     switch (char) {
       case '&':
         return '&amp;';

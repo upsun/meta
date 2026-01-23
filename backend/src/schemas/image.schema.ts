@@ -324,51 +324,19 @@ export const ImageSchema = z.object({
   versions: z.array(ImageVersionSchema).min(1),
 
 
-}).openapi('Image');
-
+}).openapi('Image', {
+  description: 'Schema representing a single image in the Upsun image registry.'
+});
 /**
  * Schema for Images Registry (list of images)
  */
-export const ImagesSchema = z.record(z.string(), ImageSchema).openapi('Images', {
-  description: 'Registry containing all available images (see [Image](#/components/schemas/Image) for the full structure).',
-  example: {
-    'nodejs': {
-      name: "JavaScript/Node.js",
-      endpoint: 'https://meta.upsun.com/image',
-      type: 'runtime',
-      description: "NodeJS service for Upsun",
-      repo_name: "nodejs",
-      docs: {
-        "relationship_name": "nodejs",
-        "service_name": "nodejs",
-        "url": "https://docs.upsun.com/languages/nodejs.html",
-        "web": {
-          "commands": {
-            "start": "node index.js"
-          }
-        }
-      },
-      runtime: true,
-      need_disk: false,
-      versions: [
-        {
-          "name": "24",
-          "upsun": {"status": "supported", "internal_support": true},
-          "upstream": {"status": "supported","release_date": "2025-05-06T00:00:00.000Z","end_of_active_support_date": "2026-10-20T00:00:00.000Z","end_of_life_date": "2028-04-30T00:00:00.000Z","is_lts": true,"is_maintained": true,"is_end_of_active_support": false,"is_end_of_life": false,"is_long_term_support": true},
-          "manifest": {"endpoints": {"http": {"port": 80,"scheme": "http"}},"min_cpu_size": 0.1,"min_mem_size": 64,"is_persistent": null,"min_disk_size": null,"allow_scale_up": true,"allow_scale_down": true,"storage_mount_point": "/mnt","default_container_profile": "HIGH_CPU","supports_horizontal_scaling": true}
-        },
-        {
-          "name": "22",
-          "upsun": {"status": "deprecated","internal_support": true},
-          "upstream": {"status": "deprecated","release_date": "2024-04-24T00:00:00.000Z","end_of_active_support_date": "2025-10-21T00:00:00.000Z","end_of_life_date": "2027-04-30T00:00:00.000Z","is_lts": true,"is_maintained": true,"is_end_of_active_support": true,"is_end_of_life": false,"is_long_term_support": true},
-          "manifest": {"endpoints": {"http": {"port": 80,"scheme": "http"}},"min_cpu_size": 0.1,"min_mem_size": 64,"is_persistent": null,"min_disk_size": null,"allow_scale_up": true,"allow_scale_down": true,"storage_mount_point": "/mnt","default_container_profile": "HIGH_CPU","supports_horizontal_scaling": true}
-        }
-      ]
-    }
-  }
+export const ImageListSchema = z.record(
+  z.string().openapi('imageId').describe('Unique identifier for an image (e.g., nodejs, php, python)'), 
+  ImageSchema
+).openapi('Images', {
+  description: 'Registry containing all available images (see [Image](#/model/Image) for the full structure).'
 });
 
-
 // Type exports for TypeScript
-export type ImagesRegistry = z.infer<typeof ImagesSchema>;
+export type ImageListRegistry = z.infer<typeof ImageListSchema>;
 export type ImageRegistry = z.infer<typeof ImageSchema>;

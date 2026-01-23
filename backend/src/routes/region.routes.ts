@@ -78,8 +78,8 @@ regionRouter.route({
       let regions = await resourceManager.getResource('host/regions.json');
 
       // Apply filters
-      if (safeName) {
-        const region = regions.find((r: any) => r.name === safeName);
+      if (name) {
+        const region = regions.find((r: any) => r.name === name);
         if (!region) {
           const availableRegions = regions.map((r: any) => r.name);
           apiLogger.warn({ region: safeName }, 'Region not found');
@@ -92,9 +92,9 @@ regionRouter.route({
         }
       }
 
-      if (safeProvider) {
+      if (provider) {
         regions = regions.filter(
-          (r: any) => r.provider?.name?.toLowerCase() === safeProvider.toLowerCase()
+          (r: any) => r.provider?.name?.toLowerCase() === provider.toLowerCase()
         );
         if (regions.length === 0) {
           const availableProviders = [...new Set(
@@ -112,9 +112,9 @@ regionRouter.route({
         }
       }
 
-      if (safeZone) {
+      if (zone) {
         regions = regions.filter(
-          (r: any) => r.zone && r.zone.toLowerCase() === safeZone.toLowerCase()
+          (r: any) => r.zone && r.zone.toLowerCase() === zone.toLowerCase()
         );
         if (regions.length === 0) {
           const availableZones = [...new Set(
@@ -132,9 +132,9 @@ regionRouter.route({
         }
       }
 
-      if (safeCountryCode) {
+      if (country_code) {
         regions = regions.filter(
-          (r: any) => r.country_code?.toLowerCase() === safeCountryCode.toLowerCase()
+          (r: any) => r.country_code?.toLowerCase() === country_code.toLowerCase()
         );
         if (regions.length === 0) {
           const availableCountryCodes = [...new Set(
@@ -196,14 +196,15 @@ regionRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const { id } = req.params;
-      const safeId = escapeHtml(id as string);
+      const { id } = req.params as { id: string };
+      const safeId = escapeHtml(id);
+      
       // Get regions list
       let regions = await resourceManager.getResource('host/regions.json');
 
       // Apply filters
-      if (safeId) {
-        const region = regions.find((r: any) => r.id === safeId);
+      if (id) {
+        const region = regions.find((r: any) => r.id === id);
         if (!region) {
           const availableRegions = regions.map((r: any) => r.id);
           apiLogger.warn({ region: safeId }, 'Region not found');

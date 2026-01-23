@@ -4,8 +4,8 @@ import { ApiRouter } from '../utils/api.router.js';
 import { ResourceManager, escapeHtml, logger } from '../utils/index.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import {
-  ImagesRegistry,
-  ImagesSchema,
+  ImageListRegistry,
+  ImageListSchema,
   ImageRegistry,
   ImageSchema
 } from '../schemas/image.schema.js';
@@ -38,7 +38,7 @@ imageRouter.route({
   responses: {
     200: {
       description: 'Complete image registry',
-      schema: ImagesSchema,
+      schema: ImageListSchema,
       contentTypes: ['application/json', 'application/x-yaml'],
     },
     500: {
@@ -50,7 +50,7 @@ imageRouter.route({
   handler: async (req: Request, res: Response) => {
     try {
       const registry = await resourceManager.getResource('image/registry.json');
-      sendFormatted<ImagesRegistry>(res, registry);
+      sendFormatted<ImageListRegistry>(res, registry);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read registry');
       sendErrorFormatted(res, { 
@@ -94,14 +94,14 @@ imageRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const { id } = req.params;
-      const imageId = escapeHtml(id as string);
+      const { id } = req.params as { id: string };
+      const imageId = escapeHtml(id);
 
       // Get registry
       const registry = await resourceManager.getResource('image/registry.json');
 
       // Check if image exists
-      if (!registry[imageId]) {
+      if (!registry[id]) {
         const availableImages = Object.keys(registry);
         apiLogger.warn({ image: imageId }, 'Image not found');
 
@@ -113,7 +113,7 @@ imageRouter.route({
         });
       }
 
-      const imageData = registry[imageId];
+      const imageData = registry[id];
 
       const imageDataParsed = ImageSchema.safeParse(imageData);
       if (imageDataParsed.success) {

@@ -124,14 +124,12 @@ export const HostRegionSchema = z.object({
 export const HostRegionsListSchema = z.array(HostRegionSchema)
   .openapi({
     description: 'Complete list of host region metadata entries'
-  })
-
+  });
 
 const providerFilterValues = ['AWS', 'Azure', 'Google', 'OVH', 'none'] as const;
 const zoneFilterValues = ['Australia', 'Europe', 'North America'] as const;
 const countryCodeFilterValues = ['AU', 'CA', 'CH', 'DE', 'FR', 'GB', 'IE', 'SE', 'US', 'none'] as const;
 const regionFilterFieldValues = ['name', 'provider', 'zone', 'country_code'] as const;
-
 
 export type HostRegion = z.infer<typeof HostRegionSchema>;
 export type HostRegionsList = z.infer<typeof HostRegionsListSchema>;

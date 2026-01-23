@@ -124,11 +124,11 @@ extensionRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const { id } = req.params;
-      const imageId = escapeHtml(id as string);
+      const { id } = req.params as { id: string };
+      const imageId = escapeHtml(id);
       
       const data = await resourceManager.getResource('extension/php_extensions.json');
-      const extensionEntry = data?.cloud?.[imageId];
+      const extensionEntry = data?.cloud?.[id];
 
       if (!extensionEntry) {
         sendErrorFormatted(res, { 
