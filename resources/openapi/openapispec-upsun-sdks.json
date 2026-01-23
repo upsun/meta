@@ -800,6 +800,53 @@
                 "x-returnable": true
             }
         },
+        "/subscriptions/{subscriptionId}/can-afford": {
+            "post": {
+                "tags": [
+                    "Subscriptions"
+                ],
+                "summary": "Checks if the user can afford the requested resources.",
+                "operationId": "can-afford-subscription",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/subscription_id"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "resources": {
+                                        "description": "A map of resource keys to quantities (both strings).",
+                                        "type": "object",
+                                        "additionalProperties": {}
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Proposed resource change is affordable."
+                    },
+                    "402": {
+                        "description": "Proposed change is not affordable."
+                    }
+                },
+                "x-property-id-kebab": "can-afford-subscription",
+                "x-tag-id-kebab": "Subscriptions",
+                "x-return-types-displayReturn": false,
+                "x-return-types": [
+                    "void"
+                ],
+                "x-return-types-union": "void",
+                "x-phpdoc": {},
+                "x-returnable": false
+            }
+        },
         "/profiles": {
             "get": {
                 "tags": [
@@ -35977,12 +36024,12 @@
                             "The vendor."
                         ]
                     },
-                    "billing_account_id": {
+                    "billing_profile_id": {
                         "type": "string",
-                        "description": "The Billing Account ID.",
+                        "description": "The Billing Profile ID.",
                         "x-isDateTime": false,
                         "x-description": [
-                            "The Billing Account ID."
+                            "The Billing Profile ID."
                         ]
                     },
                     "billing_legacy": {

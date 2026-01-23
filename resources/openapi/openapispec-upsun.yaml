@@ -734,6 +734,29 @@ paths:
                     description: Required action impeding project update.
                     type: object
                 type: object
+  /subscriptions/{subscriptionId}/can-afford:
+    post:
+      tags:
+        - Subscriptions
+      summary: Checks if the user can afford the requested resources.
+      operationId: can-afford-subscription
+      parameters:
+        - $ref: '#/components/parameters/subscription_id'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                resources:
+                  description: A map of resource keys to quantities (both strings).
+                  type: object
+                  additionalProperties: {}
+              type: object
+      responses:
+        '200':
+          description: Proposed resource change is affordable.
+        '402':
+          description: Proposed change is not affordable.
   /profiles:
     get:
       tags:
@@ -19776,9 +19799,9 @@ components:
         vendor:
           type: string
           description: The vendor.
-        billing_account_id:
+        billing_profile_id:
           type: string
-          description: The Billing Account ID.
+          description: The Billing Profile ID.
         billing_legacy:
           type: boolean
           description: Whether the account is billed with the legacy system.
