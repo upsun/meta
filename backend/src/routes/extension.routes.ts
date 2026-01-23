@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { z } from 'zod';
+import { registry, z } from 'zod';
 import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
 import { ApiRouter } from '../utils/api.router.js';
 import { ResourceManager, escapeHtml, logger } from '../utils/index.js';
@@ -13,11 +13,15 @@ import {
   ExtensionVersion 
 } from '../schemas/extension.schema.js';
 import { sendFormatted, sendErrorFormatted } from '../utils/response.format.js';
+import { withSelfLink } from '../utils/api.schema.js';
 
 extendZodWithOpenApi(z);
 
 const apiLogger = logger.child({ component: 'API' });
 const resourceManager = new ResourceManager();
+
+const PATH = '/extension/php';
+const TAG = 'Extensions';
 
 
 export const extensionRouter = new ApiRouter();
@@ -25,10 +29,10 @@ export const extensionRouter = new ApiRouter();
 // GET /extension/php - full YAML content
 extensionRouter.route({
   method: 'get',
-  path: '/extension/php',
+  path: `${PATH}`,
   summary: 'Get all PHP extensions',
   description: `Returns the list of PHP extensions and their available configuration by PHP versions, grouped by "dedicated" or "cloud" services.`,
-  tags: ['Extensions'],
+  tags: [TAG],
   query: z.object({}),
   headers: HeaderAcceptSchema,
   responses: {
@@ -60,10 +64,10 @@ extensionRouter.route({
 // GET /extension/php/cloud - grouped for cloud
 extensionRouter.route({
   method: 'get',
-  path: '/extension/php/cloud',
+  path: `${PATH}/cloud`,
   summary: 'Get list of PHP extensions for cloud services',
   description: `Returns the list of PHP extensions for \`cloud\` service.`,
-  tags: ['Extensions'],
+  tags: [TAG],
   query: z.object({}),
   headers: HeaderAcceptSchema,
   responses: {
@@ -81,7 +85,11 @@ extensionRouter.route({
     try {
       const data = await resourceManager.getResource('extension/php_extensions.json');
       const cloudExtensions: CloudExtensions = data?.cloud || {};
-      sendFormatted<CloudExtensions>(res, cloudExtensions);
+
+      const baseUrl = `${req.protocol}://${req.get('host')}`;
+      const cloudExtensionsWithLinks = withSelfLink(cloudExtensions, (id) => `${baseUrl}${PATH}/cloud/${encodeURIComponent(id)}`);
+
+      sendFormatted<CloudExtensions>(res, cloudExtensionsWithLinks);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read PHP Cloud extensions');
       sendErrorFormatted(res, { 
@@ -96,10 +104,10 @@ extensionRouter.route({
 // GET /extension/php/grid/:version - grid filtered by version
 extensionRouter.route({
   method: 'get',
-  path: '/extension/php/cloud/:id',
+  path: `${PATH}/cloud/:id`,
   summary: 'Get Cloud extension by Id',
   description: `Get a specific Cloud extension entry by its Id from the \`cloud\` root node.`,
-  tags: ['Extensions'],
+  tags: [TAG],
   params: z.object({
     id: z.string().describe('Extension Id (e.g., json, imagick, gd)')
   }),

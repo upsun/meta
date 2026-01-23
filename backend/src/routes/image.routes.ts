@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
+import { withSelfLink } from '../utils/api.schema.js';
 import { ResourceManager, escapeHtml, logger } from '../utils/index.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import {
@@ -50,7 +51,11 @@ imageRouter.route({
   handler: async (req: Request, res: Response) => {
     try {
       const registry = await resourceManager.getResource('image/registry.json');
-      sendFormatted<ImageListRegistry>(res, registry);
+      const registryParsed = ImageListSchema.parse(registry);
+      const baseUrl = `${req.protocol}://${req.get('host')}`;
+      const registryWithLinks = withSelfLink(registryParsed, (id) => `${baseUrl}${PATH}/${encodeURIComponent(id)}`);
+
+      sendFormatted<ImageListRegistry>(res, registryWithLinks);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read registry');
       sendErrorFormatted(res, { 

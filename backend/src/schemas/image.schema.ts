@@ -181,7 +181,7 @@ export const ImageVersionSchema = z.object({
       default_container_profile: 'HIGH_CPU',
       supports_horizontal_scaling: true
     }
-  }) // manifest
+  }), // manifest
 }).openapi('VersionImage');
 
 /**
@@ -322,8 +322,14 @@ export const ImageSchema = z.object({
     }
   ),
   versions: z.array(ImageVersionSchema).min(1),
-
-
+  _links: z.object({
+    self: z.string().describe('URL to fetch this image resource')
+  }).optional().openapi({
+    description: 'Hypermedia links related to the image',
+    example: {
+      self: 'https://meta.upsun.com/images/nodejs'
+    }
+  })
 }).openapi('Image', {
   description: 'Schema representing a single image in the Upsun image registry.'
 });
