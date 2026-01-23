@@ -69,7 +69,7 @@ regionRouter.route({
         zone?: string;
         country_code?: string;
       };
-      
+
       // Get regions list
       let regions = await resourceManager.getResource('host/regions.json');
 
@@ -79,15 +79,14 @@ regionRouter.route({
         if (!region) {
           const availableRegions = regions.map((r: any) => r.name);
           apiLogger.warn({ region: name }, 'Region not found');
+
           return sendErrorFormatted(res, {
             title: `Region '${name}' not found`,
             detail: `Region '${name}' not found, see extra.availableRegions for a list of valid region names.`,
             status: 404,
             extra: { availableRegions }
-          }); 
+          });
         }
-
-        return sendFormatted(res, region);
       }
 
       if (provider) {
@@ -100,6 +99,7 @@ regionRouter.route({
               .map((r: any) => r.provider?.name)
               .filter(Boolean)
           )];
+
           return sendErrorFormatted(res, {
             title: `No regions found for provider '${provider}'`,
             detail: `No regions found for provider '${provider}', see extra.availableProviders for a list of valid providers.`,
@@ -119,6 +119,7 @@ regionRouter.route({
               .map((r: any) => r.zone)
               .filter((z: string) => z)
           )];
+
           return sendErrorFormatted(res, {
             title: `No regions found for zone '${zone}'`,
             detail: `No regions found for zone '${zone}', see extra.availableZones for a list of valid zones.`,
@@ -138,6 +139,7 @@ regionRouter.route({
               .map((r: any) => r.country_code)
               .filter(Boolean)
           )];
+
           return sendErrorFormatted(res, {
             title: `No regions found for country code '${country_code}'`,
             detail: `No regions found for country code '${country_code}', see extra.availableCountryCodes for a list of valid country codes.`,
@@ -147,13 +149,15 @@ regionRouter.route({
         }
       }
 
-      // Return count or full list
+      // Return list
       const regionSafe = HostRegionsListSchema.parse(regions);
       sendFormatted<HostRegionsList>(res, regionSafe);
+
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read regions');
-      sendErrorFormatted(res, { 
-        title: 'An error occured', 
+
+      sendErrorFormatted(res, {
+        title: 'An error occured',
         detail: error.message || 'Unable to read regions',
         status: 500
       });
@@ -171,7 +175,7 @@ regionRouter.route({
   description: `Returns region by Id.  `,
   tags: [TAG],
   params: z.object({
-    id: z.string().describe('Region Id (e.g., us-2, eu-1, asia-3)')
+    id: z.string().trim().describe('Region Id (e.g., us-2, eu-1, asia-3)')
   }),
   query: z.object({}),
   headers: HeaderAcceptSchema,
@@ -183,11 +187,6 @@ regionRouter.route({
     },
     404: {
       description: 'No regions found matching the filters',
-      schema: ErrorDetailsSchema,
-      contentTypes: ['application/json', 'application/x-yaml']
-    },
-    500: {
-      description: 'Internal server error',
       schema: ErrorDetailsSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     }
@@ -216,8 +215,8 @@ regionRouter.route({
       }
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read regions');
-      sendErrorFormatted(res, { 
-        title: 'An error occured', 
+      sendErrorFormatted(res, {
+        title: 'An error occured',
         detail: error.message || 'Unable to read regions',
         status: 500
       });

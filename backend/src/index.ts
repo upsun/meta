@@ -90,6 +90,7 @@ const openapiSpec = openapiRouter.generateOpenApiSpec({
   version: appVersion
 });
 
+// Merge all specs into one
 const openApiSpec = {
   ...baseSpec,
   paths: {
