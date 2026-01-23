@@ -330,7 +330,7 @@ export const ImageSchema = z.object({
  * Schema for Images Registry (list of images)
  */
 export const ImagesSchema = z.record(z.string(), ImageSchema).openapi('Images', {
-  description: 'Registry containing all available images',
+  description: 'Registry containing all available images (see [Image](#/components/schemas/Image) for the full structure).',
   example: {
     'nodejs': {
       name: "JavaScript/Node.js",
