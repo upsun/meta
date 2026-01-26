@@ -497,18 +497,22 @@ class OpenApiPreprocessor
     }
 
     // Helper function: convert empty arrays to stdClass to preserve object types
-    private function forceEmptyObjects($data)
+    private function forceEmptyObjects($data, array $path = [])
     {
         if (is_array($data)) {
-            if (empty($data)) {
+            $isSecurityNode = !empty($path) && end($path) === 'BearerAuth';
+            if (empty($data) && !$isSecurityNode) {
                 return new stdClass();
             }
+            if (empty($data) && $isSecurityNode) {
+                return [];
+            } 
 
             $result = [];
             $isAssociative = array_keys($data) !== range(0, count($data) - 1);
 
             foreach ($data as $key => $value) {
-                $result[$key] = $this->forceEmptyObjects($value);
+                $result[$key] = $this->forceEmptyObjects($value, array_merge($path, [$key]));
             }
 
             return $isAssociative && empty($result) ? new stdClass() : $result;
