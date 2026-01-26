@@ -8,7 +8,7 @@ extendZodWithOpenApi(z);
 /**
  * Schema for Images Registry
  */
-export const ImageVersionStatusSchema = z.enum(['supported', 'deprecated', 'retired'])
+export const ImageVersionStatusSchema = z.enum(["supported", "deprecated", "retired", "decommissioned"])
   .openapi({
     description: 'Status of the image version, following official lifecycle.', //TODO add description for each possible status
     example: 'supported'
@@ -162,7 +162,31 @@ export const ImageVersionSchema = z.object({
       .openapi({
         description: 'Indicates if the image version supports horizontal scaling',
         example: true
-      })
+      }),
+    package_version: z.object({
+      raw: z.string()
+        .openapi({
+          description: 'the raw version string as provided by the package manager',
+          example: '14.17.6-beta+exp.sha.5114f85'
+        }),
+      majorMinor: z.string()
+        .openapi({
+          description: 'the major and minor version components',
+          example: '14.17'
+        }),
+      normalized: z.string()
+        .openapi({
+          description: 'the normalized version string according to semver rules',
+          example: '14.17.6'
+        })
+      }).openapi({
+        description: 'Package manager specific version information',
+        example: {
+          raw: '<major>.<minor>.<patch>-<prerelease>+<buildmetadata>',
+          majorMinor: '14.17',
+          normalized: '14.17.6'
+        }
+      }),
   }).openapi({
     description: 'Manifest details for the image version from Upsun registry',
     example: {
@@ -180,7 +204,12 @@ export const ImageVersionSchema = z.object({
       allow_scale_down: true,
       storage_mount_point: '/mnt',
       default_container_profile: 'HIGH_CPU',
-      supports_horizontal_scaling: true
+      supports_horizontal_scaling: true,
+      package_version: {
+        raw: '14.17.6-beta+exp.sha.5114f85',
+        majorMinor: '14.17',
+        normalized: '14.17.6'
+      }
     }
   }), // manifest
 }).openapi('VersionImage');
