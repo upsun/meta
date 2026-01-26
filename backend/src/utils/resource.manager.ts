@@ -65,7 +65,8 @@ export class ResourceManager {
   private getLocalResource(filePath: string): any {
     // Go up three levels from backend/src/utils to the project root
     const projectRoot = path.resolve(__dirname, '../../..');
-    const fullPath = path.join(projectRoot, 'resources', filePath);
+    const resourcesBase = path.resolve(projectRoot, 'resources');
+    const fullPath = this.resolveLocalPath(resourcesBase, filePath);
 
     resourceLogger.debug({
       mode: this.config.mode,
@@ -93,7 +94,8 @@ export class ResourceManager {
    * Read raw resource content from local file system
    */
   private getLocalResourceRaw(filePath: string): string {
-    const fullPath = path.join(__dirname, this.config.localPath!, filePath);
+    const localBase = path.resolve(__dirname, this.config.localPath!);
+    const fullPath = this.resolveLocalPath(localBase, filePath);
 
     resourceLogger.debug({
       mode: this.config.mode,
@@ -111,6 +113,25 @@ export class ResourceManager {
       resourceLogger.error({ filePath, fullPath, error: error.message }, 'Failed to read local raw resource');
       throw new Error(`Unable to read local raw resource: ${filePath} (Full path: ${fullPath})`);
     }
+  }
+
+  /**
+   * Normalize and validate a requested local resource path.
+   */
+  private resolveLocalPath(baseDir: string, filePath: string): string {
+    if (path.isAbsolute(filePath)) {
+      throw new Error(`Absolute paths are not allowed: ${filePath}`);
+    }
+
+    const normalizedPath = path.normalize(filePath);
+    const fullPath = path.resolve(baseDir, normalizedPath);
+    const relative = path.relative(baseDir, fullPath);
+
+    if (relative.startsWith('..') || path.isAbsolute(relative)) {
+      throw new Error(`Resource path escapes the allowed directory: ${filePath}`);
+    }
+
+    return fullPath;
   }
 
   /**
