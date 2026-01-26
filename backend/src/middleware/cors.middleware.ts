@@ -12,24 +12,32 @@ const corsLogger = logger.child({ component: 'CORS' });
  */
 export function configureCors() {
   const corsOrigins = config.cors.ORIGINS;
-  const allowedOrigins = corsOrigins === '*'
-    ? '*'
-    : corsOrigins.split(',').map(origin => origin.trim());
+  const allowedOrigins = corsOrigins
+    .split(',')
+    .map(origin => origin.trim())
+    .filter(origin => origin.length > 0);
+
+  const sanitizedOrigins = Array.from(new Set(allowedOrigins.filter(origin => origin !== '*')));
+
+  if (allowedOrigins.includes('*')) {
+    corsLogger.warn('Wildcard origins are ignored in production, define explicit domains in CORS_ORIGINS');
+  }
+
+  if (sanitizedOrigins.length === 0) {
+    throw new Error('CORS_ORIGINS must define at least one explicit origin');
+  }
+
+  const originSet = new Set(sanitizedOrigins);
 
   const corsOptions: cors.CorsOptions = {
     origin: (origin, callback) => {
-      // Allow requests with no origin (like mobile apps, Postman, curl)
+      // Allow requests with no origin (CLI tools, Postman, mobile apps)
       if (!origin) {
         corsLogger.debug({ origin: 'no-origin' }, 'Request with no origin - allowed');
         return callback(null, true);
       }
 
-      if (allowedOrigins === '*') {
-        corsLogger.debug({ origin }, 'Origin allowed (wildcard mode)');
-        return callback(null, true);
-      }
-
-      if (Array.isArray(allowedOrigins) && allowedOrigins.includes(origin)) {
+      if (originSet.has(origin)) {
         corsLogger.debug({ origin }, 'Origin allowed');
         return callback(null, true);
       }
@@ -37,12 +45,13 @@ export function configureCors() {
       corsLogger.warn({ origin }, 'Origin BLOCKED');
       callback(new Error('Not allowed by CORS'));
     },
-    credentials: true,
+    // Credentials are disabled to avoid reflecting sensitive cookies back to untrusted origins
+    credentials: false,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   };
 
-  corsLogger.info({ allowedOrigins: allowedOrigins === '*' ? 'ALL (*)' : allowedOrigins }, 'Configuration initialized');
+  corsLogger.info({ allowedOrigins: sanitizedOrigins }, 'Configuration initialized');
 
   return cors(corsOptions);
 }
