@@ -1,1 +1,2 @@
 export BASE_URL=$(echo $PLATFORM_ROUTES | base64 -d | jq -r 'to_entries[] | select(.value.id == "backend") | .key' | sed 's:/*$::')
+export CORS_ORIGINS=$(echo $PLATFORM_ROUTES | base64 -d | jq -r 'to_entries[] | select(.value.id == "backend") | .key' | sed 's:/*$::')

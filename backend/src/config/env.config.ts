@@ -63,7 +63,7 @@ class EnvironmentConfig {
 
     // CORS Configuration
     this.cors = {
-      ORIGINS: this.getString('CORS_ORIGINS', '*'),
+      ORIGINS: this.getString('CORS_ORIGINS', 'https://meta.upsun.com,http://meta.upsun.com'),
     };
 
     // Rate Limiting Configuration

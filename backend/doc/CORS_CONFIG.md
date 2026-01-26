@@ -8,18 +8,13 @@ The Meta Registry uses CORS (Cross-Origin Resource Sharing) to control which dom
 
 ### Environment Variable
 
-In the `.env` file, define `CORS_ORIGINS`:
+In the `.env` file, define `CORS_ORIGINS`. Wildcard entries (`*`) are ignored and the service requires at least one explicit domain, so always list the exact origins you want to expose to browsers.
 
 ```env
-# Allow all origins (development only)
-CORS_ORIGINS=*
-
-# Allow specific origins (recommended for production)
 CORS_ORIGINS=https://example.com,https://app.example.com,http://localhost:3000
-
-# Allow a single domain
-CORS_ORIGINS=https://my-app.com
 ```
+
+> The server enforces at least one explicit origin; if the trimmed list is empty the application will fail to start and requests will be rejected.
 
 ### Configuration Examples
 
@@ -30,12 +25,7 @@ CORS_ORIGINS=http://localhost:3000,http://localhost:5173,http://127.0.0.1:3000
 
 #### Production
 ```env
-CORS_ORIGINS=https://myapp.com,https://www.myapp.com,https://admin.myapp.com
-```
-
-#### Open to All (avoid in production)
-```env
-CORS_ORIGINS=*
+CORS_ORIGINS=https://meta.upsun.com
 ```
 
 ## Allowed HTTP Methods
@@ -54,7 +44,7 @@ By default, the following methods are allowed:
 
 ## Credentials
 
-The `credentials: true` option is enabled, allowing the sending of cookies and authentication headers.
+`Access-Control-Allow-Credentials` is disabled to prevent the browser from sending or reflecting cookies and other sensitive headers to origins outside the configured list.
 
 ## Testing CORS
 
