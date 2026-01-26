@@ -125,7 +125,7 @@ Example: 15 minutes = 15 × 60 × 1000 = 900000 ms
 ```bash
 # Make multiple requests quickly
 for i in {1..101}; do
-  curl http://localhost:3000/image/nodejs
+  curl http://localhost:3000/images/nodejs
   echo "Request $i"
 done
 ```
@@ -136,7 +136,7 @@ done
 // Test rate limit
 async function testRateLimit() {
   for (let i = 0; i < 101; i++) {
-    const response = await fetch('http://localhost:3000/image/nodejs');
+    const response = await fetch('http://localhost:3000/images/nodejs');
     console.log(`Request ${i + 1}: ${response.status}`);
     
     if (response.status === 429) {

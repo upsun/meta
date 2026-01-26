@@ -40,6 +40,9 @@ console.log(`Starting Upsun Registry API - Version ${appVersion}`);
 const app: Express = express();
 const PORT = config.server.PORT;
 
+// Trust proxy - important for rate limiting behind reverse proxy
+app.set('trust proxy', true);
+
 // Disable ETag to avoid 304 on dynamic content negotiation (e.g., YAML preview in docs)
 app.set('etag', false);
 

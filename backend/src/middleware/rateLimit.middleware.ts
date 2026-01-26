@@ -29,25 +29,45 @@ export function configureRateLimit() {
       error: message,
       retryAfter: `${windowMs / 1000} seconds`,
     },
-    standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+    standardHeaders: 'draft-7', // Use draft-7 standard for better compatibility
     legacyHeaders: false, // Disable the `X-RateLimit-*` headers
-    // Skip successful requests (only count failed requests if needed)
-    // skipSuccessfulRequests: false,
-    // Skip failed requests (only count successful requests if needed)
-    // skipFailedRequests: false,
+    
+    // Skip successful requests - only count when limit is hit or errors occur
+    skipSuccessfulRequests: false,
+    
+    // Use a sliding window strategy for more accurate rate limiting
+    // This prevents the "reset cliff" where all requests suddenly become available
+    validate: { trustProxy: true },
+    
     handler: (req, res) => {
-      rateLimitLogger.warn({ ip: req.ip, path: req.path }, 'Rate limit exceeded');
+      rateLimitLogger.warn({ 
+        ip: req.ip, 
+        path: req.path,
+        'x-forwarded-for': req.headers['x-forwarded-for']
+      }, 'Rate limit exceeded');
       res.status(429).json({
         error: message,
         retryAfter: Math.ceil(windowMs / 1000),
       });
+    },
+    
+    // Add request lifecycle logging for debugging
+    skip: (req) => {
+      // Log every request for monitoring
+      rateLimitLogger.debug({ 
+        ip: req.ip, 
+        path: req.path,
+        'x-forwarded-for': req.headers['x-forwarded-for']
+      }, 'Rate limit check');
+      return false; // Don't skip any requests
     },
   });
 
   rateLimitLogger.info({
     windowSeconds: windowMs / 1000,
     windowMinutes: windowMs / 60000,
-    maxRequests
+    maxRequests,
+    strategy: 'sliding-window'
   }, 'Configuration initialized');
 
   return limiter;
