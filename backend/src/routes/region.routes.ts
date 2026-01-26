@@ -53,7 +53,7 @@ regionRouter.route({
   headers: HeaderAcceptSchema,
   responses: {
     200: {
-      description: 'Complete list of regions, filtered regions, or count',
+      description: 'Complete list of regions, filtered regions',
       schema: HostRegionsListSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     },
@@ -203,7 +203,7 @@ regionRouter.route({
     try {
       const { id } = req.params as { id: string };
       const safeId = escapeHtml(id);
-      
+
       // Get regions list
       let regions = await resourceManager.getResource('host/regions.json');
 

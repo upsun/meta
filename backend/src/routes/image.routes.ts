@@ -6,10 +6,10 @@ import { withSelfLink } from '../utils/api.schema.js';
 import { ResourceManager, escapeHtml, logger } from '../utils/index.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import {
-  ImageListRegistry,
-  ImageListSchema,
-  ImageRegistry,
-  ImageSchema
+  DeployImageListRegistry,
+  DeployImageListSchema,
+  DeployImageRegistry,
+  DeployImageSchema
 } from '../schemas/image.schema.js';
 import { HeaderAcceptSchema, ErrorDetailsSchema } from '../schemas/api.schema.js';
 
@@ -40,7 +40,7 @@ imageRouter.route({
   responses: {
     200: {
       description: 'Complete image registry',
-      schema: ImageListSchema,
+      schema: DeployImageListSchema,
       contentTypes: ['application/json', 'application/x-yaml'],
     },
     500: {
@@ -52,15 +52,15 @@ imageRouter.route({
   handler: async (req: Request, res: Response) => {
     try {
       const registry = await resourceManager.getResource('image/registry.json');
-      const registryParsed = ImageListSchema.parse(registry);
+      const registryParsed = DeployImageListSchema.parse(registry);
       const baseUrl = `${config.server.BASE_URL}`;
       const registryWithLinks = withSelfLink(registryParsed, (id) => `${baseUrl}${PATH}/${encodeURIComponent(id)}`);
 
-      sendFormatted<ImageListRegistry>(res, registryWithLinks);
+      sendFormatted<DeployImageListRegistry>(res, registryWithLinks);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read registry');
-      sendErrorFormatted(res, { 
-        title: 'Unable to read registry', 
+      sendErrorFormatted(res, {
+        title: 'Unable to read registry',
         detail: error.message || 'An unexpected error occurred while reading PHP Cloud extensions',
         status: 500
       });
@@ -84,7 +84,7 @@ imageRouter.route({
   responses: {
     200: {
       description: 'Image found and returned',
-      schema: ImageSchema,
+      schema: DeployImageSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     },
     400: {
@@ -111,8 +111,8 @@ imageRouter.route({
         const availableImages = Object.keys(registry);
         apiLogger.warn({ image: imageId }, 'Image not found');
 
-        return sendErrorFormatted(res, { 
-          title: 'Image not found', 
+        return sendErrorFormatted(res, {
+          title: 'Image not found',
           detail: `Image '${imageId}' not found in the existing images. See extra.availableImages for a list of valid image IDs.`,
           status: 404,
           extra: { availableImages }
@@ -121,9 +121,9 @@ imageRouter.route({
 
       const imageData = registry[id];
 
-      const imageDataParsed = ImageSchema.safeParse(imageData);
+      const imageDataParsed = DeployImageSchema.safeParse(imageData);
       if (imageDataParsed.success) {
-        sendFormatted<ImageRegistry>(res, imageDataParsed.data);
+        sendFormatted<DeployImageRegistry>(res, imageDataParsed.data);
       } else {
         let error = imageDataParsed.error;
         // If error is a stringified JSON, parse it
@@ -133,16 +133,16 @@ imageRouter.route({
         } catch {
           errorObj = error;
         }
-        sendErrorFormatted(res, { 
-          title: 'An error occured', 
+        sendErrorFormatted(res, {
+          title: 'An error occured',
           detail: errorObj.message || 'An unexpected error occurred while parsing image data',
           status: 400
         });
       }
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read registry');
-      sendErrorFormatted(res, { 
-        title: 'An error occured', 
+      sendErrorFormatted(res, {
+        title: 'An error occured',
         detail: error.message || 'Unable to read registry',
         status: 500
       });

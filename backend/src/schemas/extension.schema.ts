@@ -5,8 +5,8 @@ import { LinkSchema } from './links.schema.js';
 // Extend Zod with OpenAPI
 extendZodWithOpenApi(z);
 
-export const ExtensionVersionSchema = z.record(
-  z.string(), 
+export const RuntimeExtensionVersionSchema = z.record(
+  z.string(),
   z.object({
     status: z.string()
       .describe('Status of the extension for the version (e.g., "available", "default", "built-in")'),
@@ -16,7 +16,7 @@ export const ExtensionVersionSchema = z.record(
         .describe('Additional options for the extension (e.g. "webp" for imagick')
     ).default([])
   })
-).openapi('ExtensionVersion', {
+).openapi('RuntimeExtensionVersion', {
   description: 'Mapping of PHP versions to their extension status and options',
   example: {
     "8.0": { status: "default", options: [] },
@@ -25,11 +25,11 @@ export const ExtensionVersionSchema = z.record(
   }
 });
 
-const VersionExtensionEntrySchema = z.object({
-  versions: z.array(ExtensionVersionSchema)
+const RuntimeExtensionSchema = z.object({
+  versions: z.array(RuntimeExtensionVersionSchema)
     .describe('List of available versions for the extension'),
   _links: LinkSchema.optional().describe('Hypermedia links related to the extension entry')
-}).openapi('VersionExtensionEntry', {
+}).openapi('RuntimeExtension', {
   description: 'Entry for a specific extension with its available versions',
   example: {
     versions: [
@@ -43,9 +43,10 @@ const VersionExtensionEntrySchema = z.object({
 
 const CloudExtensionsEntriesSchema = z.record(
   z.string(),
-  VersionExtensionEntrySchema
+  RuntimeExtensionSchema
 );
 
+//TODO: @flovntp: Remove this !!!
 export const CloudExtensionsSchema = z.intersection(
   CloudExtensionsEntriesSchema,
   z.object({
@@ -53,15 +54,15 @@ export const CloudExtensionsSchema = z.intersection(
       description: 'Hypermedia links related to the cloud extensions',
     })
   })
-).openapi('CloudExtensions', {  
+).openapi('CloudExtensions', {
   description: 'Mapping of Cloud extension IDs to their version entries, with optional links'
 });
 
-export const AllExtensionsSchema = z.object({
-  dedicated: z.record(z.string(), VersionExtensionEntrySchema),
+export const RuntimeExtensionListSchema = z.object({
+  dedicated: z.record(z.string(), RuntimeExtensionSchema),
   cloud: CloudExtensionsSchema
-}).openapi('AllExtensions');
+}).openapi('RuntimeExtensionList');
 
-export type AllExtensions = z.infer<typeof AllExtensionsSchema>;
-export type CloudExtensions = z.infer<typeof CloudExtensionsSchema>;
-export type ExtensionVersion = z.infer<typeof ExtensionVersionSchema>;
+export type RuntimeExtensionList = z.infer<typeof RuntimeExtensionListSchema>;
+export type CloudExtensions = z.infer<typeof CloudExtensionsSchema>; //TODO: @flovntp: Remove this !!!s
+export type RuntimeExtensionVersion = z.infer<typeof RuntimeExtensionVersionSchema>;

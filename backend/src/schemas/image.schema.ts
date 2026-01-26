@@ -8,7 +8,7 @@ extendZodWithOpenApi(z);
 /**
  * Schema for Images Registry
  */
-export const ImageVersionStatusSchema = z.enum(["supported", "deprecated", "retired", "decommissioned"])
+export const DeployImageVersionStatusSchema = z.enum(["supported", "deprecated", "retired", "decommissioned"])
   .openapi({
     description: 'Status of the image version, following official lifecycle.', //TODO add description for each possible status
     example: 'supported'
@@ -18,13 +18,13 @@ export const ImageVersionStatusSchema = z.enum(["supported", "deprecated", "reti
 /**
  * Schema for Image Version
  */
-export const ImageVersionSchema = z.object({
+export const DeployImageVersionSchema = z.object({
   name: z.string().min(1).openapi({
     description: 'Version name',
     example: '14'
   }),
   upsun: z.object({
-    status: ImageVersionStatusSchema,
+    status: DeployImageVersionStatusSchema,
     internal_support: z.boolean()
       .openapi({
         description: 'Indicates if the version has support from Upsun',
@@ -38,7 +38,7 @@ export const ImageVersionSchema = z.object({
     }
   }),
   upstream: z.object({
-      status: ImageVersionStatusSchema,
+      status: DeployImageVersionStatusSchema,
       release_date: z.coerce.date()
         .nullable()
         .openapi({
@@ -212,12 +212,12 @@ export const ImageVersionSchema = z.object({
       }
     }
   }), // manifest
-}).openapi('VersionImage');
+}).openapi('DeployImageVersion');
 
 /**
  * Schema for a single image in the registry
  */
-export const ImageSchema = z.object({
+export const DeployImageSchema = z.object({
   name: z.string()
     .min(2)
     .max(256)
@@ -351,26 +351,26 @@ export const ImageSchema = z.object({
       example: true
     }
   ),
-  versions: z.array(ImageVersionSchema).min(1),
+  versions: z.array(DeployImageVersionSchema).min(1),
   _links: LinkSchema.optional().openapi({
     description: 'Hypermedia links related to this image',
     example: {
       self: 'https://meta.upsun.com/image/nodejs'
     }
   })
-}).openapi('Image', {
+}).openapi('DeployImage', {
   description: 'Schema representing a single image in the Upsun image registry.'
 });
 /**
  * Schema for Images Registry (list of images)
  */
-export const ImageListSchema = z.record(
-  z.string().openapi('imageId').describe('Unique identifier for an image (e.g., nodejs, php, python)'), 
-  ImageSchema
-).openapi('Images', {
-  description: 'Registry containing all available images (see [Image](#/model/Image) for the full structure).'
+export const DeployImageListSchema = z.record(
+  z.string().openapi('imageId').describe('Unique identifier for an image (e.g., nodejs, php, python)'),
+  DeployImageSchema
+).openapi('DeployImageList', {
+  description: 'Registry containing all available images (see [DeployImage](#/model/DeployImage) for the full structure).'
 });
 
 // Type exports for TypeScript
-export type ImageListRegistry = z.infer<typeof ImageListSchema>;
-export type ImageRegistry = z.infer<typeof ImageSchema>;
+export type DeployImageListRegistry = z.infer<typeof DeployImageListSchema>;
+export type DeployImageRegistry = z.infer<typeof DeployImageSchema>;

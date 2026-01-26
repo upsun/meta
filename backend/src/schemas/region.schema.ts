@@ -129,7 +129,7 @@ export const HostRegionSchema = z.object({
 });
 
 export const HostRegionsListSchema = z.array(HostRegionSchema)
-  .openapi({
+  .openapi('HostRegionList', {
     description: 'Complete list of host region metadata entries'
   });
 

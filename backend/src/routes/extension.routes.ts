@@ -5,13 +5,13 @@ import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
 import { ApiRouter } from '../utils/api.router.js';
 import { ResourceManager, escapeHtml, logger } from '../utils/index.js';
 import { ErrorDetailsSchema, HeaderAcceptSchema } from '../schemas/api.schema.js';
-import { 
-  AllExtensionsSchema, 
-  AllExtensions, 
-  CloudExtensionsSchema, 
+import {
+  RuntimeExtensionListSchema,
+  RuntimeExtensionList,
+  CloudExtensionsSchema,
   CloudExtensions,
-  ExtensionVersionSchema, 
-  ExtensionVersion 
+  RuntimeExtensionVersionSchema,
+  RuntimeExtensionVersion
 } from '../schemas/extension.schema.js';
 import { sendFormatted, sendErrorFormatted } from '../utils/response.format.js';
 import { withSelfLink } from '../utils/api.schema.js';
@@ -39,7 +39,7 @@ extensionRouter.route({
   responses: {
     200: {
       description: 'Full list of PHP extensions',
-      schema: AllExtensionsSchema,
+      schema: RuntimeExtensionListSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     },
     500: {
@@ -58,16 +58,16 @@ extensionRouter.route({
         _links: { self: `${baseUrl}${PATH}/cloud` }
       };
 
-      sendFormatted<AllExtensions>(res, data);
+      sendFormatted<RuntimeExtensionList>(res, data);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read PHP extensions');
-      sendErrorFormatted(res, { 
-        title: 'Unable to read PHP extensions', 
+      sendErrorFormatted(res, {
+        title: 'Unable to read PHP extensions',
         detail: error.message || 'An unexpected error occurred while reading PHP extensions',
         status: 500
       });
     }
-  }  
+  }
 });
 
 // GET /extension/php/cloud - grouped for cloud
@@ -101,13 +101,13 @@ extensionRouter.route({
       sendFormatted<CloudExtensions>(res, cloudExtensionsWithLinks);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read PHP Cloud extensions');
-      sendErrorFormatted(res, { 
-        title: 'Unable to read PHP Cloud extensions', 
+      sendErrorFormatted(res, {
+        title: 'Unable to read PHP Cloud extensions',
         detail: error.message || 'An unexpected error occurred while reading PHP Cloud extensions',
         status: 500
       });
     }
-  } 
+  }
 });
 
 // GET /extension/php/grid/:version - grid filtered by version
@@ -125,7 +125,7 @@ extensionRouter.route({
   responses: {
     200: {
       description: 'Map all PHP versions allowing usage of this extension, with their status (e.g. "default", "built-in" or "available") and possible options (e.g. "wepb" for imagick)',
-      schema: ExtensionVersionSchema,
+      schema: RuntimeExtensionVersionSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     },
     404: {
@@ -143,23 +143,23 @@ extensionRouter.route({
     try {
       const { id } = req.params as { id: string };
       const imageId = escapeHtml(id);
-      
+
       const data = await resourceManager.getResource('extension/php_extensions.json');
       const extensionEntry = data?.cloud?.[id];
 
       if (!extensionEntry) {
-        sendErrorFormatted(res, { 
-          title: 'Extension not found', 
+        sendErrorFormatted(res, {
+          title: 'Extension not found',
           detail: `Extension "${imageId}" not found. See extra.availableExtensions for a list of valid extension IDs.`,
           status: 404,
           extra: { availableExtensions: Object.keys(data?.cloud || {}) }
         });
       }
-      sendFormatted<ExtensionVersion>(res, extensionEntry);
+      sendFormatted<RuntimeExtensionVersion>(res, extensionEntry);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read PHP Cloud extensions');
-      sendErrorFormatted(res, { 
-        title: 'Unable to read PHP Cloud extensions', 
+      sendErrorFormatted(res, {
+        title: 'Unable to read PHP Cloud extensions',
         detail: error.message || 'An unexpected error occurred while reading PHP Cloud extensions',
         status: 500
       });

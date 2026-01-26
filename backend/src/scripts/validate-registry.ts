@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { ImageListSchema } from '../schemas/image.schema.js';
+import { DeployImageListSchema } from '../schemas/image.schema.js';
 import { z } from 'zod';
 
 async function main() {
@@ -27,7 +27,7 @@ async function main() {
     process.exit(1);
   }
 
-  const result = ImageListSchema.safeParse(data);
+  const result = DeployImageListSchema.safeParse(data);
 
   if (!result.success) {
     console.error('registry.json does not match the expected schema');
