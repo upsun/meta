@@ -28,7 +28,7 @@
     ],
     "security": [
         {
-            "BearerAuth": {}
+            "BearerAuth": []
         }
     ],
     "tags": [
