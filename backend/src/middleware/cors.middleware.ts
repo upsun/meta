@@ -17,14 +17,14 @@ export function configureCors() {
     .map(origin => origin.trim())
     .filter(origin => origin.length > 0);
 
-  const sanitizedOrigins = Array.from(new Set(allowedOrigins.filter(origin => origin !== '*')));
+  const sanitizedOrigins = [...new Set(allowedOrigins.filter(origin => origin !== '*'))];
 
   if (allowedOrigins.includes('*')) {
     corsLogger.warn('Wildcard origins are ignored in production, define explicit domains in CORS_ORIGINS');
   }
 
   if (sanitizedOrigins.length === 0) {
-    throw new Error('CORS_ORIGINS must define at least one explicit origin');
+    throw new Error('CORS_ORIGINS must define at least one explicit origin. Configure it in your .env file (e.g., CORS_ORIGINS=https://example.com)');
   }
 
   const originSet = new Set(sanitizedOrigins);
