@@ -5735,6 +5735,11 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.0.5-1",
+            "majorMinor": "2.0",
+            "normalized": "2.0.5"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -5765,6 +5770,11 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.0.8-6",
+            "majorMinor": "1.0",
+            "normalized": "1.0.8"
+          },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -11435,6 +11445,11 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "0.21.5-0psh1~bpo12+1",
+            "majorMinor": "0.21",
+            "normalized": "0.21.5"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "BALANCED",
