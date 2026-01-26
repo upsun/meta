@@ -467,6 +467,11 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "25.8.15.35",
+            "majorMinor": "25.8",
+            "normalized": "25.8.15"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -506,6 +511,11 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "25.3.13.19",
+            "majorMinor": "25.3",
+            "normalized": "25.3.13"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -545,6 +555,11 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "24.3.18.7",
+            "majorMinor": "24.3",
+            "normalized": "24.3.18"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -584,6 +599,11 @@
           "is_persistent": null,
           "min_disk_size": 256,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "23.8.16.40",
+            "majorMinor": "23.8",
+            "normalized": "23.8.16"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
@@ -3049,7 +3069,7 @@
     "need_disk": false,
     "versions": [
       {
-        "name": "8",
+        "name": "8.25",
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -3077,6 +3097,11 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": null,
+          "package_version": {
+            "raw": "8.25.1-0psh1~bpo12+1",
+            "majorMinor": "8.25",
+            "normalized": "8.25.1"
+          },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_MEMORY",
@@ -10059,47 +10084,6 @@
             "raw": "9.9.0-0psh2",
             "majorMinor": "9.9",
             "normalized": "9.9.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "9.7",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "supported",
-          "release_date": "2022-05-11T00:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "solr": {
-              "port": 8080,
-              "scheme": "solr",
-              "default": true
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "9.4.0-0psh3~bpo11+1",
-            "majorMinor": "9.4",
-            "normalized": "9.4.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
