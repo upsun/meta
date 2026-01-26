@@ -86,7 +86,7 @@ export class ResourceManager {
       return JSON.parse(content);
     } catch (error: any) {
       resourceLogger.error({ filePath, fullPath, error: error.message }, 'Failed to read local resource');
-      throw new Error(`Unable to read local resource: ${filePath} (Full path: ${fullPath})`);
+      throw new Error(`Unable to read local resource: ${filePath}`);
     }
   }
 
@@ -111,7 +111,7 @@ export class ResourceManager {
       return content;
     } catch (error: any) {
       resourceLogger.error({ filePath, fullPath, error: error.message }, 'Failed to read local raw resource');
-      throw new Error(`Unable to read local raw resource: ${filePath} (Full path: ${fullPath})`);
+      throw new Error(`Unable to read local raw resource: ${filePath}`);
     }
   }
 
