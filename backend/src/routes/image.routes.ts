@@ -99,11 +99,6 @@ imageRouter.route({
       schema: ErrorDetailsSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     },
-    404: {
-      description: 'Image not found',
-      schema: ErrorDetailsSchema,
-      contentTypes: ['application/json', 'application/x-yaml']
-    }
   },
   handler: async (req: Request, res: Response) => {
     try {
