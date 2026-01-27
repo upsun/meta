@@ -22,7 +22,6 @@ const resourceManager = new ResourceManager();
 const PATH = '/extension/php';
 const TAG = 'Extensions';
 
-
 export const extensionRouter = new ApiRouter();
 
 // GET /extension/php - full YAML content
@@ -35,6 +34,7 @@ extensionRouter.route({
   query: z.object({
     service: z.enum(['all', 'cloud', 'dedicated'])
       .optional()
+      .default('all')
       .describe('Filter by service name (e.g., "dedicated", "cloud")'),
   }),
   headers: HeaderAcceptSchema,
@@ -60,34 +60,41 @@ extensionRouter.route({
       };
       const safeService = service ? escapeHtml(service) : undefined;
 
-      let extensions = await resourceManager.getResource('extension/php_extensions.json');
-      
-      if (service && service !== 'all') {
-        let extensionsFiltered = {};
-        extensionsFiltered = { [service]: extensions?.[service] };
-        if (Object.keys(extensionsFiltered).length === 0) {      
-          return sendErrorFormatted(res, {
-            title: `No extensions found for service '${safeService}'`,
-            detail: `No extensions found for service '${safeService}', "service" should be one of "dedicated" or "cloud".`,
-            status: 404
-          } as ErrorDetails);
-        }
-        extensions = extensionsFiltered;
+      const extensions = await resourceManager.getResource('extension/php_extensions.json');
+      const serviceTypes = service && service !== 'all'
+        ? [service]
+        : Object.keys(extensions);
+
+      if (service && service !== 'all' && Object.keys(extensions?.[service]).length === 0) {      
+        return sendErrorFormatted(res, {
+          title: `No extensions found for service '${safeService}'`,
+          detail: `No extensions found for service '${safeService}', "service" should be one of "dedicated" or "cloud".`,
+          status: 404
+        } as ErrorDetails);
       }
       
       const baseUrl = `${config.server.BASE_URL}`;
 
-      // set _links for each service
-      for (const service of Object.keys(extensions)) {
-        extensions[service] = withSelfLink(extensions[service], (id) => `${baseUrl}${PATH}/${encodeURIComponent(service)}/${encodeURIComponent(id)}`);
-        extensions[service] = {
-          ...extensions[service],
-          _links: { self: `${baseUrl}${PATH}/?service=${service}` }
-        };
-      }
+      const extensionsFiltered = serviceTypes.reduce<RuntimeExtensionList>((acc, serviceType) => {
+        const serviceEntries = extensions[serviceType];
+        if (!serviceEntries) {
+          return acc;
+        }
+        const entriesWithLinks = withSelfLink(serviceEntries, (id) =>
+          `${baseUrl}${PATH}/${encodeURIComponent(serviceType)}/${encodeURIComponent(id)}`
+        );
 
-      const extensionsSafe = RuntimeExtensionListSchema.parse(extensions);
-      sendFormatted<RuntimeExtensionList>(res, extensionsSafe);
+        return {
+          ...acc,
+          [serviceType]: {
+            data: entriesWithLinks,
+            _links: { self: `${baseUrl}${PATH}/?service=${serviceType}` }
+          }
+        };
+      }, {} as RuntimeExtensionList);
+      const extensionsSafe = RuntimeExtensionListSchema.safeParse(extensionsFiltered);
+
+      sendFormatted<RuntimeExtensionList>(res, extensionsSafe.data as RuntimeExtensionList);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read PHP extensions');
       sendErrorFormatted(res, {
@@ -136,9 +143,13 @@ extensionRouter.route({
       const safeService = escapeHtml(service);
 
       const extensions = await resourceManager.getResource('extension/php_extensions.json');
-
-      const extensionEntry = extensions?.[service]?.[id];
-      if (!extensionEntry) {
+      const extensionDefinition = extensions?.[service]?.[id];
+      const versions = extensionDefinition?.versions as RuntimeExtensionVersion[] | undefined;
+      const extensionEntry = versions?.reduce(
+        (acc, versionEntry) => Object.assign(acc, versionEntry),
+        {} as RuntimeExtensionVersion
+      );
+      if (!extensionDefinition || !extensionEntry || Object.keys(extensionEntry).length === 0) {
         return sendErrorFormatted(res, {
           title: 'Invalid path parameters',
           detail: `Extension id "${imageId == '{id}' ? undefined : imageId}" in Service "${safeService}" not found. See extra.availableExtensions for a list of valid extension ids for this service.`,
