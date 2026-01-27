@@ -18,7 +18,7 @@ export function sendFormatted<T>(res: Response, data: T, status = 200) {
   }
 }
 
-export function sendErrorFormatted(res: Response, error: { type?: string; title?: string; status?: number; detail?: string; instance?: string; extra?: Record<string, any>;}, status?: number) {
+export function sendErrorFormatted(res: Response, error: { type?: string; title?: string; status?: number; detail?: any; instance?: string; extra?: Record<string, any>;}, status?: number) {
   const accept = res.req?.headers['accept'] || '';
   if (accept.includes('application/x-yaml')) {
     res.set('Content-Type', 'text/plain; charset=utf-8');

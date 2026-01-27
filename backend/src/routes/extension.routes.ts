@@ -34,11 +34,15 @@ extensionRouter.route({
   summary: 'Get all PHP extensions',
   description: `Returns the list of PHP extensions and their available configuration by PHP versions, grouped by "dedicated" or "cloud" services.`,
   tags: [TAG],
-  query: z.object({}),
+  query: z.object({
+    service: z.enum(['all', 'cloud', 'dedicated'])
+      .optional()
+      .describe('Filter by service name (e.g., "dedicated", "cloud")'),
+  }),
   headers: HeaderAcceptSchema,
   responses: {
     200: {
-      description: 'Full list of PHP extensions',
+      description: 'Full list of PHP extensions with optional filtering by service',
       schema: RuntimeExtensionListSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     },
@@ -49,82 +53,65 @@ extensionRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const data = await resourceManager.getResource('extension/php_extensions.json');
+      const { service } = req.query as {
+        service?: 'all' | 'cloud' | 'dedicated';
+      };
+      const safeService = service ? escapeHtml(service) : undefined;
+
+      let data = await resourceManager.getResource('extension/php_extensions.json');
+      
+      if (service && service !== 'all') {
+        let dataFiltered = {};
+        dataFiltered = { [service]: data?.[service] };
+        if (Object.keys(dataFiltered).length === 0) {      
+          return sendErrorFormatted(res, {
+            title: `No extensions found for service '${safeService}'`,
+            detail: `No extensions found for service '${safeService}', "service" should be one of "dedicated" or "cloud".`,
+          });
+        }
+        data = dataFiltered;
+      }
+      
       const baseUrl = `${config.server.BASE_URL}`;
 
-      data.cloud = withSelfLink(data.cloud, (id) => `${baseUrl}${PATH}/cloud/${encodeURIComponent(id)}`);
-      data.cloud = {
-        ...data.cloud,
-        _links: { self: `${baseUrl}${PATH}/cloud` }
-      };
+      // set _links for each service
+      for (const service of Object.keys(data)) {
+        data[service] = withSelfLink(data[service], (id) => `${baseUrl}${PATH}/${encodeURIComponent(service)}/${encodeURIComponent(id)}`);
+        data[service] = {
+          ...data[service],
+          _links: { self: `${baseUrl}${PATH}/?service=${service}` }
+        };
+      }
 
       sendFormatted<RuntimeExtensionList>(res, data);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read PHP extensions');
       sendErrorFormatted(res, {
         title: 'Unable to read PHP extensions',
-        detail: error.message || 'An unexpected error occurred while reading PHP extensions',
-        status: 500
+        detail: {
+          'message': error.message || 'An unexpected error occurred while reading PHP extensions',
+        }
       });
     }
   }
 });
 
-// GET /extension/php/cloud - grouped for cloud
+// GET /extension/php/:service/:id - service filtered by id
 extensionRouter.route({
   method: 'get',
-  path: `${PATH}/cloud`,
-  summary: 'Get list of PHP extensions for cloud services',
-  description: `Returns the list of PHP extensions for \`cloud\` service.`,
-  tags: [TAG],
-  query: z.object({}),
-  headers: HeaderAcceptSchema,
-  responses: {
-    200: {
-      description: 'List of PHP extensions for cloud services',
-      schema: CloudExtensionsSchema,
-      contentTypes: ['application/json', 'application/x-yaml']
-    },
-    500: {
-      description: 'Internal server error',
-      schema: ErrorDetailsSchema
-    }
-  },
-  handler: async (req: Request, res: Response) => {
-    try {
-      const data = await resourceManager.getResource('extension/php_extensions.json');
-      const cloudExtensions: CloudExtensions = data?.cloud || {};
-
-      const baseUrl = `${config.server.BASE_URL}`;
-      const cloudExtensionsWithLinks = withSelfLink(cloudExtensions, (id) => `${baseUrl}${PATH}/cloud/${encodeURIComponent(id)}`);
-
-      sendFormatted<CloudExtensions>(res, cloudExtensionsWithLinks);
-    } catch (error: any) {
-      apiLogger.error({ error: error.message }, 'Failed to read PHP Cloud extensions');
-      sendErrorFormatted(res, {
-        title: 'Unable to read PHP Cloud extensions',
-        detail: error.message || 'An unexpected error occurred while reading PHP Cloud extensions',
-        status: 500
-      });
-    }
-  }
-});
-
-// GET /extension/php/grid/:version - grid filtered by version
-extensionRouter.route({
-  method: 'get',
-  path: `${PATH}/cloud/:id`,
-  summary: 'Get Cloud extension by Id',
-  description: `Get a specific Cloud extension entry by its Id from the \`cloud\` root node.`,
+  path: `${PATH}/:service/:id`,
+  summary: 'Get Service extension by Id',
+  description: `Get a specific Service extension entry by its \`id\` from the \`service\` root node.`,
   tags: [TAG],
   params: z.object({
+    service: z.enum(['cloud', 'dedicated']).describe('Service name (e.g., cloud, dedicated)'),
     id: z.string().describe('Extension Id (e.g., json, imagick, gd)')
   }),
   query: z.object({}),
   headers: HeaderAcceptSchema,
   responses: {
     200: {
-      description: 'Map all PHP versions allowing usage of this extension, with their status (e.g. "default", "built-in" or "available") and possible options (e.g. "wepb" for imagick)',
+      description: 'Map all PHP versions of the choosen service allowing usage of this extension, with their status (e.g. "default", "built-in" or "available") and possible options (e.g. "wepb" for imagick)',
       schema: RuntimeExtensionVersionSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     },
@@ -141,27 +128,32 @@ extensionRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const { id } = req.params as { id: string };
+      const { id, service } = req.params as { id: string; service: string };
       const imageId = escapeHtml(id);
+      const safeService = escapeHtml(service);
 
       const data = await resourceManager.getResource('extension/php_extensions.json');
-      const extensionEntry = data?.cloud?.[id];
 
+      const extensionEntry = data?.[service]?.[id];
       if (!extensionEntry) {
-        sendErrorFormatted(res, {
-          title: 'Extension not found',
-          detail: `Extension "${imageId}" not found. See extra.availableExtensions for a list of valid extension IDs.`,
-          status: 404,
-          extra: { availableExtensions: Object.keys(data?.cloud || {}) }
+        return sendErrorFormatted(res, {
+          title: 'Invalid path parameters',
+          detail: {
+            'status': 'invalid_value',
+            'values': Object.keys(data?.[service] || data),
+            'path': 'id',
+            'message': `Extension id "${imageId == '{id}' ? undefined : imageId}" in Service "${safeService}" not found.`,
+          },
         });
       }
       sendFormatted<RuntimeExtensionVersion>(res, extensionEntry);
     } catch (error: any) {
-      apiLogger.error({ error: error.message }, 'Failed to read PHP Cloud extensions');
+      apiLogger.error({ error: error.message }, 'Failed to read PHP Service extensions');
       sendErrorFormatted(res, {
-        title: 'Unable to read PHP Cloud extensions',
-        detail: error.message || 'An unexpected error occurred while reading PHP Cloud extensions',
-        status: 500
+        title: 'Unable to read PHP Service extensions',
+        detail: {
+          'message': error.message || 'An unexpected error occurred while reading PHP Service extensions',
+        },
       });
     }
   }
