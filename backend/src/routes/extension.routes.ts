@@ -4,12 +4,10 @@ import { registry, z } from 'zod';
 import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
 import { ApiRouter } from '../utils/api.router.js';
 import { ResourceManager, escapeHtml, logger } from '../utils/index.js';
-import { ErrorDetailsSchema, HeaderAcceptSchema } from '../schemas/api.schema.js';
+import { ErrorDetails, ErrorDetailsSchema, HeaderAcceptSchema } from '../schemas/api.schema.js';
 import {
   RuntimeExtensionListSchema,
   RuntimeExtensionList,
-  CloudExtensionsSchema,
-  CloudExtensions,
   RuntimeExtensionVersionSchema,
   RuntimeExtensionVersion
 } from '../schemas/extension.schema.js';
@@ -49,6 +47,10 @@ extensionRouter.route({
     500: {
       description: 'Internal server error',
       schema: ErrorDetailsSchema
+    },
+    400: {
+      description: 'Bad request',
+      schema: ErrorDetailsSchema
     }
   },
   handler: async (req: Request, res: Response) => {
@@ -58,40 +60,41 @@ extensionRouter.route({
       };
       const safeService = service ? escapeHtml(service) : undefined;
 
-      let data = await resourceManager.getResource('extension/php_extensions.json');
+      let extensions = await resourceManager.getResource('extension/php_extensions.json');
       
       if (service && service !== 'all') {
-        let dataFiltered = {};
-        dataFiltered = { [service]: data?.[service] };
-        if (Object.keys(dataFiltered).length === 0) {      
+        let extensionsFiltered = {};
+        extensionsFiltered = { [service]: extensions?.[service] };
+        if (Object.keys(extensionsFiltered).length === 0) {      
           return sendErrorFormatted(res, {
             title: `No extensions found for service '${safeService}'`,
             detail: `No extensions found for service '${safeService}', "service" should be one of "dedicated" or "cloud".`,
-          });
+            status: 404
+          } as ErrorDetails);
         }
-        data = dataFiltered;
+        extensions = extensionsFiltered;
       }
       
       const baseUrl = `${config.server.BASE_URL}`;
 
       // set _links for each service
-      for (const service of Object.keys(data)) {
-        data[service] = withSelfLink(data[service], (id) => `${baseUrl}${PATH}/${encodeURIComponent(service)}/${encodeURIComponent(id)}`);
-        data[service] = {
-          ...data[service],
+      for (const service of Object.keys(extensions)) {
+        extensions[service] = withSelfLink(extensions[service], (id) => `${baseUrl}${PATH}/${encodeURIComponent(service)}/${encodeURIComponent(id)}`);
+        extensions[service] = {
+          ...extensions[service],
           _links: { self: `${baseUrl}${PATH}/?service=${service}` }
         };
       }
 
-      sendFormatted<RuntimeExtensionList>(res, data);
+      const extensionsSafe = RuntimeExtensionListSchema.parse(extensions);
+      sendFormatted<RuntimeExtensionList>(res, extensionsSafe);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read PHP extensions');
       sendErrorFormatted(res, {
         title: 'Unable to read PHP extensions',
-        detail: {
-          'message': error.message || 'An unexpected error occurred while reading PHP extensions',
-        }
-      });
+        detail: error.message || 'An unexpected error occurred while reading PHP extensions',
+        status: 500
+      } as ErrorDetails);
     }
   }
 });
@@ -100,7 +103,7 @@ extensionRouter.route({
 extensionRouter.route({
   method: 'get',
   path: `${PATH}/:service/:id`,
-  summary: 'Get Service extension by Id',
+  summary: 'Get PHP extension by Service and Id',
   description: `Get a specific Service extension entry by its \`id\` from the \`service\` root node.`,
   tags: [TAG],
   params: z.object({
@@ -132,29 +135,28 @@ extensionRouter.route({
       const imageId = escapeHtml(id);
       const safeService = escapeHtml(service);
 
-      const data = await resourceManager.getResource('extension/php_extensions.json');
+      const extensions = await resourceManager.getResource('extension/php_extensions.json');
 
-      const extensionEntry = data?.[service]?.[id];
+      const extensionEntry = extensions?.[service]?.[id];
       if (!extensionEntry) {
         return sendErrorFormatted(res, {
           title: 'Invalid path parameters',
-          detail: {
-            'status': 'invalid_value',
-            'values': Object.keys(data?.[service] || data),
-            'path': 'id',
-            'message': `Extension id "${imageId == '{id}' ? undefined : imageId}" in Service "${safeService}" not found.`,
+          detail: `Extension id "${imageId == '{id}' ? undefined : imageId}" in Service "${safeService}" not found. See extra.availableExtensions for a list of valid extension ids for this service.`,
+          extra: {
+            availableExtensions: Object.keys(extensions?.[service] || extensions),
           },
-        });
+          status: 404,
+        } as ErrorDetails);
       }
-      sendFormatted<RuntimeExtensionVersion>(res, extensionEntry);
+      const extensionEntrySafe = RuntimeExtensionVersionSchema.parse(extensionEntry);
+      sendFormatted<RuntimeExtensionVersion>(res, extensionEntrySafe);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read PHP Service extensions');
       sendErrorFormatted(res, {
         title: 'Unable to read PHP Service extensions',
-        detail: {
-          'message': error.message || 'An unexpected error occurred while reading PHP Service extensions',
-        },
-      });
+        detail: error.message || 'An unexpected error occurred while reading PHP Service extensions',
+        status: 500
+      } as ErrorDetails);
     }
   }
 });
