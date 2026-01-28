@@ -438,7 +438,7 @@
         "name": "25.8",
         "upsun": {
           "status": "supported",
-          "internal_support": false
+          "internal_support": true
         },
         "upstream": {
           "status": "supported",
@@ -482,7 +482,7 @@
         "name": "25.3",
         "upsun": {
           "status": "supported",
-          "internal_support": false
+          "internal_support": true
         },
         "upstream": {
           "status": "supported",
@@ -526,7 +526,7 @@
         "name": "24.3",
         "upsun": {
           "status": "deprecated",
-          "internal_support": false
+          "internal_support": true
         },
         "upstream": {
           "status": "deprecated",
@@ -570,7 +570,7 @@
         "name": "23.8",
         "upsun": {
           "status": "deprecated",
-          "internal_support": false
+          "internal_support": true
         },
         "upstream": {
           "status": "deprecated",
@@ -3098,9 +3098,9 @@
           "min_disk_size": null,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "8.25.1-0psh1~bpo12+1",
-            "majorMinor": "8.25",
-            "normalized": "8.25.1"
+            "raw": "8.26.0-0psh1~bpo12+1",
+            "majorMinor": "8.26",
+            "normalized": "8.26.0"
           },
           "allow_scale_down": null,
           "storage_mount_point": null,
@@ -5479,9 +5479,9 @@
           "min_disk_size": 512,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "7.0.28",
+            "raw": "7.0.29",
             "majorMinor": "7.0",
-            "normalized": "7.0.28"
+            "normalized": "7.0.29"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -6827,9 +6827,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.4.7-1debian12",
+            "raw": "8.4.8-1debian12",
             "majorMinor": "8.4",
-            "normalized": "8.4.7"
+            "normalized": "8.4.8"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
