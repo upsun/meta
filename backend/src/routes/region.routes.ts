@@ -10,7 +10,7 @@ import {
   HostRegionsListSchema,
   HostRegionsList
 } from '../schemas/region.schema.js';
-import { HeaderAcceptSchema, ErrorDetailsSchema } from '../schemas/api.schema.js';
+import { HeaderAcceptSchema, ErrorDetailsSchema, ErrorDetails } from '../schemas/api.schema.js';
 import { withSelfLinkArray } from '../utils/api.schema.js';
 
 const TAG = 'Regions';
@@ -90,7 +90,7 @@ regionRouter.route({
             detail: `Region '${safeName}' not found, see extra.availableRegions for a list of valid region names.`,
             status: 404,
             extra: { availableRegions }
-          });
+          } as ErrorDetails);
         }
       }
 
@@ -110,7 +110,7 @@ regionRouter.route({
             detail: `No regions found for provider '${safeProvider}', see extra.availableProviders for a list of valid providers.`,
             status: 404,
             extra: { availableProviders }
-          });
+          } as ErrorDetails);
         }
       }
 
@@ -130,7 +130,7 @@ regionRouter.route({
             detail: `No regions found for zone '${safeZone}', see extra.availableZones for a list of valid zones.`,
             status: 404,
             extra: { availableZones }
-          });
+          } as ErrorDetails);
         }
       }
 
@@ -150,7 +150,7 @@ regionRouter.route({
             detail: `No regions found for country code '${safeCountryCode}', see extra.availableCountryCodes for a list of valid country codes.`,
             status: 404,
             extra: { availableCountryCodes }
-          });
+          } as ErrorDetails);
         }
       }
 
@@ -168,7 +168,7 @@ regionRouter.route({
         title: 'An error occured',
         detail: error.message || 'Unable to read regions',
         status: 500
-      });
+      } as ErrorDetails);
     }
   }
 });
@@ -218,10 +218,10 @@ regionRouter.route({
             detail: `Region '${safeId}' not found. see extra.availableRegions for a list of valid region IDs.`,
             status: 404,
             extra: { availableRegions }
-          });
+          } as ErrorDetails);
         }
-
-        return sendFormatted<HostRegion>(res, region);
+        const regionSafe = HostRegionSchema.parse(region);
+        return sendFormatted<HostRegion>(res, regionSafe);
       }
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read regions');
@@ -229,7 +229,7 @@ regionRouter.route({
         title: 'An error occured',
         detail: error.message || 'Unable to read regions',
         status: 500
-      });
+      } as ErrorDetails);
     }
   }
 });

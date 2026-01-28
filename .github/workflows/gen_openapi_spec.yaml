@@ -47,8 +47,19 @@ jobs:
           
       - name: Patch OpenAPI specs (json) for SDK generation 
         run: composer run spec:patch
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git add resources/openapi/
+          if git diff --cached --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
 
       - name: Create Pull Request if changes
+        if: steps.check_changes.outputs.has_changes == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.OPENAPI_WORKFLOW_TOKEN }}

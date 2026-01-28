@@ -335,10 +335,8 @@ export const DeployImageSchema = z.object({
     })
     .openapi({
       description: 'Internal properties for the image, used only by Upsun',
-      example: {
-        repo_name: 'nodejs'
-      }
-  }),
+      "x-internal": true
+    }),
   runtime: z.boolean()
     .openapi({
       description: 'Indicates if the image is a runtime image (true)',
@@ -361,13 +359,23 @@ export const DeployImageSchema = z.object({
 }).openapi('DeployImage', {
   description: 'Schema representing a single image in the Upsun image registry.'
 });
+
 /**
  * Schema for Images Registry (list of images)
  */
-export const DeployImageListSchema = z.record(
-  z.string().openapi('imageId').describe('Unique identifier for an image (e.g., nodejs, php, python)'),
-  DeployImageSchema
-).openapi('DeployImageList', {
+export const DeployImageListSchema = z
+  .record(
+    z.string().openapi('imageId').describe('Unique identifier for an image (e.g., nodejs, php, python)'),
+    DeployImageSchema
+  );
+
+// Schema for Public Images Registry (list of images without internal info)
+export const DeployImagePublicListSchema = z
+  .record(
+    z.string().openapi('imageId').describe('Unique identifier for an image (e.g., nodejs, php, python)'),
+    DeployImageSchema.omit({ internal: true })
+  )
+  .openapi('DeployImageList', {
   description: 'Registry containing all available images (see [DeployImage](#/model/DeployImage) for the full structure).'
 });
 

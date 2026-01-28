@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
 import { ResourceManager, logger } from '../utils/index.js';
-import { ErrorDetailsSchema } from '../schemas/api.schema.js';
+import { ErrorDetails, ErrorDetailsSchema } from '../schemas/api.schema.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import { Validation, ValidationSchema } from '../schemas/validation.schema.js';
 
@@ -66,7 +66,7 @@ This file is used to validate Upsun configuration files .upsun/config.yaml.
         title: 'Unable to read Upsun validation schema',
         detail: error.message || 'An unexpected error occurred while reading Upsun validation schema',
         status: 500
-      });
+      } as ErrorDetails);
     }
   }
 });
@@ -100,7 +100,7 @@ validationRouter.route({
         title: 'Unable to read image registry validation schema',
         detail: error.message || 'An unexpected error occurred while reading image registry validation schema',
         status: 500
-      });
+      } as ErrorDetails);
     }
   }
 });

@@ -2,6 +2,8 @@ import { Express, RequestHandler } from 'express';
 import { z } from 'zod';
 import { OpenAPIRegistry, OpenApiGeneratorV31, RouteConfig } from '@asteasolutions/zod-to-openapi';
 import { logger } from './logger.js';
+import { sendErrorFormatted } from './response.format.js';
+import { ErrorDetails } from '../schemas/api.schema.js';
 
 // Create a dedicated child logger for API Router
 const routerLogger = logger.child({ component: 'ApiRouter' });
@@ -56,15 +58,23 @@ export class ApiRouter {
     this.routes.forEach(({ method, path, query, params, body, headers, handler }) => {
       // Create validation middleware
       const validationMiddleware: RequestHandler = (req, res, next) => {
+        const respondValidationError = (title: string, issues: z.ZodIssue[]) => {
+          sendErrorFormatted(res, {
+            type: 'invalid_value',
+            title: title,
+            detail: 'Validation failed',
+            status: 400,
+            issues
+          } as ErrorDetails);
+        };
+
         try {
           // Validate query
           if (query) {
             const result = query.safeParse(req.query);
             if (!result.success) {
-              return res.status(400).json({
-                error: 'Invalid query parameters',
-                details: result.error.issues
-              });
+              respondValidationError('Invalid query parameters', result.error.issues);
+              return;
             }
             // Store validated data in a custom property
             (req as any).validatedQuery = result.data;
@@ -74,10 +84,8 @@ export class ApiRouter {
           if (params) {
             const result = params.safeParse(req.params);
             if (!result.success) {
-              return res.status(400).json({
-                error: 'Invalid path parameters',
-                details: result.error.issues
-              });
+              respondValidationError('Invalid path parameters', result.error.issues);
+              return;
             }
             (req as any).validatedParams = result.data;
           }
@@ -86,10 +94,8 @@ export class ApiRouter {
           if (body) {
             const result = body.safeParse(req.body);
             if (!result.success) {
-              return res.status(400).json({
-                error: 'Invalid request body',
-                details: result.error.issues
-              });
+              respondValidationError('Invalid request body', result.error.issues);
+              return;
             }
             (req as any).validatedBody = result.data;
           }
@@ -98,10 +104,8 @@ export class ApiRouter {
           if (headers) {
             const result = headers.safeParse(req.headers);
             if (!result.success) {
-              return res.status(400).json({
-                error: 'Invalid headers',
-                details: result.error.issues
-              });
+              respondValidationError('Invalid headers', result.error.issues);
+              return;
             }
             (req as any).validatedHeaders = result.data;
           }

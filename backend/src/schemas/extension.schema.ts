@@ -41,28 +41,23 @@ const RuntimeExtensionSchema = z.object({
   }
 });
 
-const CloudExtensionsEntriesSchema = z.record(
-  z.string(),
-  RuntimeExtensionSchema
-);
+const ExtensionEntriesSchema = z.record(z.string(), RuntimeExtensionSchema);
 
 //TODO: @flovntp: Remove this !!!
-export const CloudExtensionsSchema = z.intersection(
-  CloudExtensionsEntriesSchema,
-  z.object({
-    _links: z.record(z.string(), LinkSchema).optional().openapi({
-      description: 'Hypermedia links related to the cloud extensions',
-    })
+export const ServiceExtensionsSchema = z.object({
+  data: ExtensionEntriesSchema,
+  _links: LinkSchema.optional().openapi({
+    description: 'Hypermedia links related to the service extensions'
   })
-).openapi('CloudExtensions', {
-  description: 'Mapping of Cloud extension IDs to their version entries, with optional links'
+}).openapi('ServiceExtensions', {
+  description: 'Wrapped service extensions payload with optional links'
 });
 
 export const RuntimeExtensionListSchema = z.object({
-  dedicated: z.record(z.string(), RuntimeExtensionSchema),
-  cloud: CloudExtensionsSchema
+  dedicated: ServiceExtensionsSchema.optional(),
+  cloud: ServiceExtensionsSchema.optional(),
 }).openapi('RuntimeExtensionList');
 
 export type RuntimeExtensionList = z.infer<typeof RuntimeExtensionListSchema>;
-export type CloudExtensions = z.infer<typeof CloudExtensionsSchema>; //TODO: @flovntp: Remove this !!!s
+export type ServiceExtensions = z.infer<typeof ServiceExtensionsSchema>; //TODO: @flovntp: Remove this !!!s
 export type RuntimeExtensionVersion = z.infer<typeof RuntimeExtensionVersionSchema>;
