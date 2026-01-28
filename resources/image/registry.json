@@ -5927,7 +5927,7 @@
         "name": "18",
         "upsun": {
           "status": "retired",
-          "internal_support": true
+          "internal_support": false
         },
         "upstream": {
           "status": "retired",
@@ -5967,7 +5967,7 @@
         "name": "16",
         "upsun": {
           "status": "retired",
-          "internal_support": true
+          "internal_support": false
         },
         "upstream": {
           "status": "retired",
@@ -11281,6 +11281,58 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
+  },
+  "activemq-artemis": {
+    "description": "",
+    "name": "activemq-artemis",
+    "internal": {
+      "repo_name": "activemq-artemis"
+    },
+    "runtime": false,
+    "service": true,
+    "need_disk": true,
+    "docs": {
+      "relationship_name": "activemq-artemis",
+      "service_name": "activemq-artemis",
+      "url": "https://docs.upsun.com/add-services/activemq-artemis.html"
+    },
+    "versions": [
+      {
+        "name": "2",
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": "2025-10-29T00:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": null,
+          "is_lts": false,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.44.0-0psh2~bpo12+1",
+            "majorMinor": "2.44",
+            "normalized": "2.44.0"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
           "supports_horizontal_scaling": null
         }
       }
