@@ -5714,7 +5714,7 @@
       {
         "name": "2.0",
         "upsun": {
-          "status": "deprecated",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
@@ -5723,9 +5723,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
+          "is_maintained": false,
           "is_end_of_active_support": true,
-          "is_end_of_life": false,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
