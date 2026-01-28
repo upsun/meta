@@ -32,6 +32,7 @@ export function generateHomePage(endpoints: Endpoint[], baseUrl: string, version
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon-upsun.png" type="image/png">
     <title>Upsun Meta Registry</title>
     <style>
         * {
