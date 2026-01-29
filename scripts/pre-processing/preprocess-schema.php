@@ -499,7 +499,7 @@ class OpenApiPreprocessor
     // Helper function: convert empty arrays to stdClass to preserve object types
     private function forceEmptyObjects($data, array $path = [])
     {
-        if (is_array($data)) {
+        if (\is_array($data)) {
             $isSecurityNode = !empty($path) && end($path) === 'BearerAuth';
             if (empty($data) && !$isSecurityNode) {
                 return new stdClass();
@@ -573,14 +573,14 @@ class OpenApiPreprocessor
                                             'instance_count' => [
                                                 'type' => 'integer',
                                                 'nullable' => true,
-                                                'description' => 'Number of instances to run',
+                                                'description' => 'Number of instances to run for the webapp',
                                                 'example' => 2
                                             ],
                                             'disk' => [
                                                 'type' => 'integer',
                                                 'nullable' => true,
                                                 'title' => 'Disk Size',
-                                                'description' => 'Size of the disk in Bytes',
+                                                'description' => 'Size of the disk in Bytes for the webapp',
                                                 'example' => 1024
                                             ]
                                         ]
@@ -597,14 +597,14 @@ class OpenApiPreprocessor
                                             'instance_count' => [
                                                 'type' => 'integer',
                                                 'nullable' => true,
-                                                'description' => 'Number of instances to run',
+                                                'description' => 'Number of instances to run for the service',
                                                 'example' => 1
                                             ],
                                             'disk' => [
                                                 'type' => 'integer',
                                                 'nullable' => true,
                                                 'title' => 'Disk Size',
-                                                'description' => 'Size of the disk in Bytes',
+                                                'description' => 'Size of the disk in Bytes for the service',
                                                 'example' => 1024
                                             ]
                                         ]
@@ -621,14 +621,14 @@ class OpenApiPreprocessor
                                             'instance_count' => [
                                                 'type' => 'integer',
                                                 'nullable' => true,
-                                                'description' => 'Number of instances to run',
+                                                'description' => 'Number of instances to run for the worker',
                                                 'example' => 1
                                             ],
                                             'disk' => [
                                                 'type' => 'integer',
                                                 'nullable' => true,
                                                 'title' => 'Disk Size',
-                                                'description' => 'Size of the disk in Bytes',
+                                                'description' => 'Size of the disk in Bytes for the worker',
                                                 'example' => 1024
                                             ]
                                         ]
