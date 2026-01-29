@@ -35,11 +35,11 @@ const compareSemver = (a: string, b: string): number => {
 export const validationRouter = new ApiRouter();
 
 // ========================================
-// GET /schema/config - Get Upsun validation schema
+// GET /schema/upsun - Get Upsun validation schema
 // ========================================
 validationRouter.route({
   method: 'get',
-  path: `${PATH}/config`,
+  path: `${PATH}/upsun`,
   summary: 'Get Upsun validation JSON schema',
   description: `
 Returns the Upsun validation JSON schema file used by the validator.
