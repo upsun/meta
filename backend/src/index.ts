@@ -124,6 +124,7 @@ app.use(
     theme: 'purple',
     layout: 'modern',
     darkMode: false,
+    favicon: '/favicon-upsun.png',
     customCss: `
       .scalar-app {
         --scalar-font: 'Inter', system-ui, sans-serif;
