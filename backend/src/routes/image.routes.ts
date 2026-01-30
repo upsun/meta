@@ -8,10 +8,11 @@ import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import {
   DeployImageListRegistry,
   DeployImageListSchema,
+  DeployImagePublicListSchema,
   DeployImageRegistry,
   DeployImageSchema
 } from '../schemas/image.schema.js';
-import { HeaderAcceptSchema, ErrorDetailsSchema } from '../schemas/api.schema.js';
+import { HeaderAcceptSchema, ErrorDetailsSchema, ErrorDetails } from '../schemas/api.schema.js';
 
 const TAG = 'Images';
 const PATH = '/images';
@@ -40,7 +41,7 @@ imageRouter.route({
   responses: {
     200: {
       description: 'Complete image registry',
-      schema: DeployImageListSchema,
+      schema: DeployImagePublicListSchema,
       contentTypes: ['application/json', 'application/x-yaml'],
     },
     500: {
@@ -51,19 +52,25 @@ imageRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
+      const includeInternal = (req.headers['x-include-internal'] === 'true');
+
       const registry = await resourceManager.getResource('image/registry.json');
-      const registryParsed = DeployImageListSchema.parse(registry);
+
+      const registryParsed = includeInternal
+        ? DeployImageListSchema.parse(registry as DeployImageListRegistry)
+        : DeployImagePublicListSchema.parse(registry as DeployImageListRegistry);
+
       const baseUrl = `${config.server.BASE_URL}`;
       const registryWithLinks = withSelfLink(registryParsed, (id) => `${baseUrl}${PATH}/${encodeURIComponent(id)}`);
-
-      sendFormatted<DeployImageListRegistry>(res, registryWithLinks);
+    
+      return sendFormatted<DeployImageListRegistry>(res, registryWithLinks as DeployImageListRegistry);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read registry');
-      sendErrorFormatted(res, {
+      return sendErrorFormatted(res, {
         title: 'Unable to read registry',
         detail: error.message || 'An unexpected error occurred while reading PHP Cloud extensions',
         status: 500
-      });
+      } as ErrorDetails);
     }
   }
 });
@@ -84,7 +91,7 @@ imageRouter.route({
   responses: {
     200: {
       description: 'Image found and returned',
-      schema: DeployImageSchema,
+      schema: DeployImageSchema.omit({ internal: true }),
       contentTypes: ['application/json', 'application/x-yaml']
     },
     400: {
@@ -92,11 +99,6 @@ imageRouter.route({
       schema: ErrorDetailsSchema,
       contentTypes: ['application/json', 'application/x-yaml']
     },
-    404: {
-      description: 'Image not found',
-      schema: ErrorDetailsSchema,
-      contentTypes: ['application/json', 'application/x-yaml']
-    }
   },
   handler: async (req: Request, res: Response) => {
     try {
@@ -116,14 +118,15 @@ imageRouter.route({
           detail: `Image '${imageId}' not found in the existing images. See extra.availableImages for a list of valid image IDs.`,
           status: 404,
           extra: { availableImages }
-        });
+        } as ErrorDetails);
       }
 
       const imageData = registry[id];
 
       const imageDataParsed = DeployImageSchema.safeParse(imageData);
       if (imageDataParsed.success) {
-        sendFormatted<DeployImageRegistry>(res, imageDataParsed.data);
+        const { internal: internal, ...sanitizedImage } = imageDataParsed.data;
+        sendFormatted<DeployImageRegistry>(res, sanitizedImage as DeployImageRegistry);
       } else {
         let error = imageDataParsed.error;
         // If error is a stringified JSON, parse it
@@ -133,20 +136,19 @@ imageRouter.route({
         } catch {
           errorObj = error;
         }
-        sendErrorFormatted(res, {
+        return sendErrorFormatted(res, {
           title: 'An error occured',
           detail: errorObj.message || 'An unexpected error occurred while parsing image data',
           status: 400
-        });
+        } as ErrorDetails);
       }
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read registry');
-      sendErrorFormatted(res, {
+      return sendErrorFormatted(res, {
         title: 'An error occured',
         detail: error.message || 'Unable to read registry',
         status: 500
-      });
+      } as ErrorDetails);
     }
   }
 });
-
