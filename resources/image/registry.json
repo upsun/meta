@@ -11286,6 +11286,146 @@
       }
     ]
   },
+  "elasticsearch-enterprise": {
+    "description": "",
+    "name": "elasticsearch-enterprise",
+    "internal": {
+      "repo_name": "elasticsearch-enterprise"
+    },
+    "runtime": false,
+    "service": true,
+    "need_disk": true,
+    "docs": {
+      "relationship_name": "elasticsearch-enterprise",
+      "service_name": "elasticsearch-enterprise",
+      "url": "https://docs.upsun.com/add-services/elasticsearch.html"
+    },
+    "versions": [
+      {
+        "name": "8.19",
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": "2025-07-23T00:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2027-07-15T00:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "schema": "http",
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "8.19.10",
+            "majorMinor": "8.19",
+            "normalized": "8.19.10"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "8.5",
+        "upsun": {
+          "status": "retired",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": null,
+          "end_of_active_support_date": null,
+          "end_of_life_date": null,
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "schema": "http",
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "8.5.3",
+            "majorMinor": "8.5",
+            "normalized": "8.5.3"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
+        "name": "7.17",
+        "upsun": {
+          "status": "retired",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": "2019-04-10T00:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2026-01-15T00:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "schema": "http",
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "7.17.29",
+            "majorMinor": "7.17",
+            "normalized": "7.17.29"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
+  },
   "mariadb-replica": {
     "description": "",
     "name": "mariadb-replica",
@@ -11357,7 +11497,7 @@
     "docs": {
       "relationship_name": "postgresql-replica",
       "service_name": "postgresql-replica",
-      "url": "https://docs.upsun.com/add-services/postgresql/postgresql-readonly-replication.html.html"
+      "url": "https://docs.upsun.com/add-services/postgresql/postgresql-readonly-replication.html"
     },
     "versions": [
       {
