@@ -11285,5 +11285,124 @@
         }
       }
     ]
+  },
+  "mariadb-replica": {
+    "description": "",
+    "name": "mariadb-replica",
+    "internal": {
+      "repo_name": "mariadb-replica"
+    },
+    "runtime": false,
+    "service": true,
+    "need_disk": true,
+    "docs": {
+      "relationship_name": "mariadb-replica",
+      "service_name": "mariadb-replica",
+      "url": "https://docs.upsun.com/add-services/mysql/mysql-readonly-replication.html"
+    },
+    "versions": [
+      {
+        "name": "11.4",
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": null,
+          "end_of_active_support_date": null,
+          "end_of_life_date": null,
+          "is_lts": false,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:11.4.9+maria~deb12",
+            "majorMinor": "11.4",
+            "normalized": "11.4.9"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      }
+    ]
+  },
+  "postgresql-replica": {
+    "description": "",
+    "name": "postgresql-replica",
+    "internal": {
+      "repo_name": "postgresql-replica"
+    },
+    "runtime": false,
+    "service": true,
+    "need_disk": true,
+    "docs": {
+      "relationship_name": "postgresql-replica",
+      "service_name": "postgresql-replica",
+      "url": "https://docs.upsun.com/add-services/postgresql/postgresql-readonly-replication.html.html"
+    },
+    "versions": [
+      {
+        "name": "15",
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": null,
+          "end_of_active_support_date": null,
+          "end_of_life_date": null,
+          "is_lts": false,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "3.6.1+dfsg-1.pgdg12+1",
+            "majorMinor": "3.6",
+            "normalized": "3.6.1"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      }
+    ]
   }
 }
