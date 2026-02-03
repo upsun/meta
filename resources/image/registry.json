@@ -9215,7 +9215,7 @@
         "name": "6.2",
         "upsun": {
           "status": "retired",
-          "internal_support": true
+          "internal_support": false
         },
         "upstream": {
           "status": "retired",
