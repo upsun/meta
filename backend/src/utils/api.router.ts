@@ -125,6 +125,7 @@ export class ApiRouter {
     title: string;
     version: string;
     description?: string;
+    tagName?: string;
     servers?: Array<{ url: string; description: string }>;
     contact?: { name: string; url: string };
     license?: { name: string; url: string };
@@ -160,7 +161,7 @@ export class ApiRouter {
       if (xInternal !== undefined) {
         (routeConfig as any)['x-internal'] = xInternal;
       }
-      
+
       // Add body schema
       if (body) {
         routeConfig.request!.body = {
@@ -197,7 +198,7 @@ export class ApiRouter {
     // Generate OpenAPI document
     const generator = new OpenApiGeneratorV31(this.registry.definitions);
 
-    return generator.generateDocument({
+    const document = generator.generateDocument({
       openapi: '3.1.0',
       info: {
         title: config.title,
@@ -208,5 +209,17 @@ export class ApiRouter {
       },
       servers: config.servers || []
     });
+
+    // Add tag description if provided
+    if (config.tagName && config.description) {
+      document.tags = [
+        {
+          name: config.tagName,
+          description: config.description
+        }
+      ];
+    }
+
+    return document;
   }
 }

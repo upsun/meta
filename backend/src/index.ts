@@ -25,7 +25,7 @@ const serverLogger = logger.child({ component: 'Server' });
 
 // Read application version from package.json
 const packageJsonPath = path.join(__dirname, '../package.json');
-let appVersion = '1.0.0';
+let appVersion = 'dev';
 try {
   const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
   if (packageJson.version && typeof packageJson.version === 'string') {
@@ -33,7 +33,7 @@ try {
   }
 } catch {
   // Fallback: keep default appVersion
-  console.log('Could not read version from package.json, using default 1.0.0');
+  console.log('Could not read version from package.json, using default "dev".');
 }
 console.log(`Starting Upsun Registry API - Version ${appVersion}`);
 // Initialize Express app
@@ -70,32 +70,49 @@ const baseSpec = BaseSpec(appVersion);
 
 const imageSpec = imageRouter.generateOpenApiSpec({
   title: 'Images',
+  tagName: 'Images',
+  description: 'Access and manage container images. This section provides endpoints to retrieve information about available container images, including their versions, endpoints, and metadata.',
   version: appVersion
 });
 
 const regionSpec = regionRouter.generateOpenApiSpec({
   title: 'Regions',
+  tagName: 'Regions',
+  description: 'Manage geographical regions and hosting locations. This section provides endpoints to retrieve information about available regions, their locations, and characteristics.',
   version: appVersion
 });
 
 const extensionSpec = extensionRouter.generateOpenApiSpec({
   title: 'Extensions',
+  tagName: 'Extensions',
+  description: 'Manage PHP extensions and their configurations. This section provides endpoints to retrieve information about available PHP extensions and their compatibility.',
   version: appVersion
 });
 
 const validationSpec = validationRouter.generateOpenApiSpec({
-  title: 'Validation',
+  title: 'Validation Schema',
+  tagName: 'Validation Schema',
+  description: 'Access Upsun validation JSON schemas. This section provides endpoints to retrieve the JSON schema files used to validate Upsun configuration files.',
   version: appVersion
 });
 
 const openapiSpec = openapiRouter.generateOpenApiSpec({
-  title: 'OpenAPI Spec',
+  title: 'OpenAPI Specification',
+  tagName: 'OpenAPI Specification',
+  description: 'Access OpenAPI specifications. This section provides endpoints to retrieve the OpenAPI specification documents for Upsun APIs.',
   version: appVersion
 });
 
 // Merge all specs into one
 const openApiSpec = {
   ...baseSpec,
+  tags: [
+    ...(imageSpec.tags || []),
+    ...(regionSpec.tags || []),
+    ...(extensionSpec.tags || []),
+    ...(validationSpec.tags || []),
+    ...(openapiSpec.tags || [])
+  ],
   paths: {
     ...imageSpec.paths,
     ...regionSpec.paths,

@@ -71,14 +71,14 @@ resources/
 ### Available Endpoints
 
 1. **GET /** - API information and active resource mode
-2. **GET /image** - Complete registry list of all images
-3. **GET /image/:name** - Versions of a specific image (e.g., `/image/nodejs`)
+2. **GET /images** - Complete registry list of all images
+3. **GET /images/:name** - Versions of a specific image (e.g., `/images/nodejs`)
 
 ### Examples
 
 ```bash
 # Get all Node.js versions
-curl http://localhost:3000/image/nodejs
+curl http://localhost:3000/images/nodejs
 
 # Response:
 {
@@ -87,7 +87,7 @@ curl http://localhost:3000/image/nodejs
 }
 
 # Get all Chrome Headless versions
-curl http://localhost:3000/image/chrome-headless
+curl http://localhost:3000/images/chrome-headless
 
 # Response:
 {

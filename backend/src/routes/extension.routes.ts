@@ -21,13 +21,13 @@ extendZodWithOpenApi(z);
 const apiLogger = logger.child({ component: 'API' });
 const resourceManager = new ResourceManager();
 
-const PATH = '/extension/php';
+const PATH = '/extensions/php';
 const TAG = 'Extensions';
 
 
 export const extensionRouter = new ApiRouter();
 
-// GET /extension/php - full YAML content
+// GET /extensions/php - full YAML content
 extensionRouter.route({
   method: 'get',
   path: `${PATH}`,
@@ -70,7 +70,7 @@ extensionRouter.route({
   }
 });
 
-// GET /extension/php/cloud - grouped for cloud
+// GET /extensions/php/cloud - grouped for cloud
 extensionRouter.route({
   method: 'get',
   path: `${PATH}/cloud`,
@@ -110,7 +110,7 @@ extensionRouter.route({
   }
 });
 
-// GET /extension/php/grid/:version - grid filtered by version
+// GET /extensions/php/grid/:version - grid filtered by version
 extensionRouter.route({
   method: 'get',
   path: `${PATH}/cloud/:id`,
