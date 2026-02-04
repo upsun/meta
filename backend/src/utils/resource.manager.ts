@@ -119,7 +119,7 @@ export class ResourceManager {
    * Normalize and validate a requested local resource path.
    */
   private resolveLocalPath(baseDir: string, filePath: string): string {
-    if (path.isAbsolute(filePath)) {
+    if (this.config.mode !== 'local' && path.isAbsolute(filePath)) {
       throw new Error(`Absolute paths are not allowed: ${filePath}`);
     }
 

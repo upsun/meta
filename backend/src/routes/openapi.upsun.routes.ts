@@ -62,7 +62,7 @@ openapiRouter.route({
         fileName = format === 'yaml' ? 'openapispec-upsun.yaml' : 'openapispec-upsun.json';
       }
       try {
-        // On sert le fichier brut selon le format
+        // serving the raw file according to the format
         const data = await resourceManager.getResourceRaw(`openapi/${fileName}`);
         if (format === 'yaml' && !sdks) {
           res.type('text/plain; charset=utf-8').send(data);
