@@ -367,6 +367,15 @@ export const DeployImageSchema = z.object({
 export const DeployImageListSchema = z.record(
   z.string().openapi('imageId').describe('Unique identifier for an image (e.g., nodejs, php, python)'),
   DeployImageSchema
+    .omit({ docs: true, internal: true })
+    .extend({
+        versions: z.array(
+          DeployImageSchema.shape.versions.element.omit({
+            upstream: true,
+            manifest: true,
+          })
+        ),
+      })
 ).openapi('DeployImageList', {
   description: 'Registry containing all available images (see [DeployImage](#/model/DeployImage) for the full structure).'
 });

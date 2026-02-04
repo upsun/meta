@@ -19,9 +19,8 @@ export function generateHomePage(endpoints: Endpoint[], baseUrl: string, version
                     </div>
                     <div class="endpoint-example">
                         curl ${escapeHtml(baseUrl)}${escapeHtml(endpoint.path.replace(/\{[^}]+\}/g, match => {
-                          // Replace {name} with example value
-                          if (match === '{name}') return 'nodejs';
-                          if (match === '{regionId}') return 'eu-5.platform';
+                          if (match === 'images/{id}') return 'images/nodejs';
+                          if (match === 'regions/{id}') return 'regions/eu-5.platform';
                           return match;
                         }))}
                     </div>

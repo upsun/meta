@@ -128,7 +128,7 @@ export const HostRegionSchema = z.object({
   description: 'Detailed host region metadata mirrored from resources/host/regions.json',
 });
 
-export const HostRegionsListSchema = z.array(HostRegionSchema)
+export const HostRegionsListSchema = z.array(HostRegionSchema.omit({ private: true, note: true, datacenter: true }))
   .openapi('HostRegionList', {
     description: 'Complete list of host region metadata entries'
   });

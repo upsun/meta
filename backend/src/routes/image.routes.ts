@@ -53,6 +53,7 @@ imageRouter.route({
     try {
       const registry = await resourceManager.getResource('image/registry.json');
       const registryParsed = DeployImageListSchema.parse(registry);
+
       const baseUrl = `${config.server.BASE_URL}`;
       const registryWithLinks = withSelfLink(registryParsed, (id) => `${baseUrl}${PATH}/${encodeURIComponent(id)}`);
 
