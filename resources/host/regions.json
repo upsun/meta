@@ -20,7 +20,7 @@
     },
     "country_code": "AU",
     "environmental_impact": {
-      "carbon_intensity": 545,
+      "carbon_intensity": 718,
       "green": false
     },
     "outbound_ips": [
@@ -62,7 +62,7 @@
     },
     "country_code": "AU",
     "environmental_impact": {
-      "carbon_intensity": 545,
+      "carbon_intensity": 718,
       "green": false
     },
     "outbound_ips": [
@@ -104,7 +104,7 @@
     },
     "country_code": "CA",
     "environmental_impact": {
-      "carbon_intensity": 31,
+      "carbon_intensity": 41,
       "green": true
     },
     "outbound_ips": [
@@ -146,7 +146,7 @@
     },
     "country_code": "CH",
     "environmental_impact": {
-      "carbon_intensity": 91,
+      "carbon_intensity": 50,
       "green": true
     },
     "outbound_ips": [
@@ -188,7 +188,7 @@
     },
     "country_code": "DE",
     "environmental_impact": {
-      "carbon_intensity": 416,
+      "carbon_intensity": 394,
       "green": false
     },
     "outbound_ips": [
@@ -230,7 +230,7 @@
     },
     "country_code": "IE",
     "environmental_impact": {
-      "carbon_intensity": 386,
+      "carbon_intensity": 301,
       "green": false
     },
     "outbound_ips": [
@@ -272,7 +272,7 @@
     },
     "country_code": "SE",
     "environmental_impact": {
-      "carbon_intensity": 23,
+      "carbon_intensity": 26,
       "green": true
     },
     "outbound_ips": [
@@ -312,7 +312,7 @@
     },
     "country_code": "FR",
     "environmental_impact": {
-      "carbon_intensity": 59,
+      "carbon_intensity": 58,
       "green": true
     },
     "outbound_ips": [
@@ -352,7 +352,7 @@
     },
     "country_code": "FR",
     "environmental_impact": {
-      "carbon_intensity": 59,
+      "carbon_intensity": 58,
       "green": true
     },
     "outbound_ips": [
@@ -394,7 +394,7 @@
     },
     "country_code": "GB",
     "environmental_impact": {
-      "carbon_intensity": 200,
+      "carbon_intensity": 234,
       "green": false
     },
     "outbound_ips": [
@@ -437,7 +437,7 @@
     },
     "country_code": "US",
     "environmental_impact": {
-      "carbon_intensity": 396,
+      "carbon_intensity": 416,
       "green": false
     },
     "outbound_ips": [
@@ -479,7 +479,7 @@
     },
     "country_code": "US",
     "environmental_impact": {
-      "carbon_intensity": 396,
+      "carbon_intensity": 416,
       "green": false
     },
     "outbound_ips": [
@@ -521,7 +521,7 @@
     },
     "country_code": "US",
     "environmental_impact": {
-      "carbon_intensity": 56,
+      "carbon_intensity": 51,
       "green": true
     },
     "outbound_ips": [
@@ -563,7 +563,7 @@
     },
     "country_code": "US",
     "environmental_impact": {
-      "carbon_intensity": 647,
+      "carbon_intensity": 451,
       "green": false
     },
     "outbound_ips": [
