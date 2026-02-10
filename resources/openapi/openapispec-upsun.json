@@ -28750,7 +28750,7 @@
             "$ref": "#/components/schemas/RegionProvider"
           },
           "datacenter": {
-            "$ref": "#/components/schemas/RegionDataCenter"
+            "$ref": "#/components/schemas/RegionDatacenter"
           },
           "envimpact": {
             "$ref": "#/components/schemas/RegionEnvImpact"
@@ -28914,7 +28914,7 @@
         },
         "additionalProperties": false
       },
-      "RegionDataCenter": {
+      "RegionDatacenter": {
         "type": "object",
         "description": "Information about the region provider data center.",
         "properties": {
