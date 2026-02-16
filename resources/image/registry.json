@@ -1354,11 +1354,11 @@
       {
         "name": "5.4",
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -1395,11 +1395,11 @@
       {
         "name": "5.2",
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -1436,11 +1436,11 @@
       {
         "name": "2.4",
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -1477,11 +1477,11 @@
       {
         "name": "1.7",
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -1512,11 +1512,11 @@
       {
         "name": "1.4",
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -1547,11 +1547,11 @@
       {
         "name": "0.90",
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -2616,11 +2616,11 @@
       {
         "name": "1.9",
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -2656,11 +2656,11 @@
       {
         "name": "1.8",
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -11345,18 +11345,18 @@
       {
         "name": "8.5",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -11386,7 +11386,7 @@
       {
         "name": "7.17",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
@@ -11395,9 +11395,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": "2026-01-15T00:00:00.000Z",
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
