@@ -1354,11 +1354,11 @@
       {
         "name": "5.4",
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -1395,11 +1395,11 @@
       {
         "name": "5.2",
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -1436,11 +1436,11 @@
       {
         "name": "2.4",
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -1477,11 +1477,11 @@
       {
         "name": "1.7",
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -1512,11 +1512,11 @@
       {
         "name": "1.4",
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -1547,11 +1547,11 @@
       {
         "name": "0.90",
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -2616,11 +2616,11 @@
       {
         "name": "1.9",
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -2656,11 +2656,11 @@
       {
         "name": "1.8",
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -11345,11 +11345,11 @@
       {
         "name": "8.5",
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": true
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
