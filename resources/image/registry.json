@@ -9092,10 +9092,10 @@
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2025-05-02T00:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
+          "end_of_active_support_date": "2025-08-04T00:00:00.000Z",
+          "end_of_life_date": "2026-02-11T00:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -9214,18 +9214,18 @@
       {
         "name": "6.2",
         "upsun": {
-          "status": "retired",
+          "status": "deprecated",
           "internal_support": false
         },
         "upstream": {
-          "status": "retired",
+          "status": "deprecated",
           "release_date": "2021-02-22T00:00:00.000Z",
           "end_of_active_support_date": "2022-04-27T00:00:00.000Z",
           "end_of_life_date": "2025-02-28T00:00:00.000Z",
           "is_lts": false,
-          "is_maintained": false,
+          "is_maintained": true,
           "is_end_of_active_support": true,
-          "is_end_of_life": true,
+          "is_end_of_life": false,
           "is_long_term_support": false
         },
         "manifest": {
