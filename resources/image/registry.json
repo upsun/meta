@@ -1974,6 +1974,46 @@
     },
     "versions": [
       {
+        "name": "1.26",
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": "2026-02-11T00:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": null,
+          "is_lts": false,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.26.0-0psh2",
+            "majorMinor": "1.26",
+            "normalized": "1.26.0"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      {
         "name": "1.25",
         "upsun": {
           "status": "supported",
