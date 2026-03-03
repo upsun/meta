@@ -3553,9 +3553,49 @@
     },
     "versions": [
       {
+        "name": "4.1",
+        "upsun": {
+          "status": "retired",
+          "internal_support": false
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": "2025-09-02T00:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": null,
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "kafka": {
+              "port": 9092,
+              "scheme": "kafka"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 512,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "3.7.2-0psh1",
+            "majorMinor": "3.7",
+            "normalized": "3.7.2"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      {
         "name": "3.7",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
@@ -3564,9 +3604,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": "2024-07-26T00:00:00.000Z",
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
