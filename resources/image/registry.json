@@ -10147,10 +10147,10 @@
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2022-05-11T00:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": null,
+          "end_of_life_date": "2026-03-03T00:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -10184,18 +10184,18 @@
       {
         "name": "9.6",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2022-05-11T00:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": null,
+          "end_of_life_date": "2026-03-03T00:00:00.000Z",
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -10225,18 +10225,18 @@
       {
         "name": "9.4",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2022-05-11T00:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": null,
+          "end_of_life_date": "2026-03-03T00:00:00.000Z",
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -10266,18 +10266,18 @@
       {
         "name": "9.2",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2022-05-11T00:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": null,
+          "end_of_life_date": "2026-03-03T00:00:00.000Z",
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -10307,18 +10307,18 @@
       {
         "name": "9.1",
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2022-05-11T00:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": null,
+          "end_of_life_date": "2026-03-03T00:00:00.000Z",
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -10352,10 +10352,10 @@
           "internal_support": false
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2022-05-11T00:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": null,
+          "end_of_life_date": "2026-03-03T00:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
