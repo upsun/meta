@@ -10090,10 +10090,10 @@
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "release_date": "2026-01-22T00:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": null,
+          "end_of_life_date": "2026-03-06T00:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
