@@ -416,6 +416,7 @@
         "versions": {
           "type": "object",
           "description": "Map of version identifiers to version information for this image.",
+          "minProperties": 1,
           "additionalProperties": { "$ref": "#/$defs/ImageVersion" }
         },
         "versions-dedicated-gen-2": {

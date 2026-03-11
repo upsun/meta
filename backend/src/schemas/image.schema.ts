@@ -44,21 +44,21 @@ export const DeployImageVersionSchemaModel = z.object({
   }),
   upstream: z.object({
       status: DeployImageVersionStatusSchemaModel,
-      releaseDate: z.string()
+      releaseDate: z.coerce.date()
         .nullable()
         .openapi({
           description: 'Official release date of the version',
           example: '2023-10-10T00:00:00.000Z'
         }
       ),
-      eoasFrom: z.string()
+      eoasFrom: z.coerce.date()
         .nullable()
         .openapi({
           description: 'Date when this the version only receives security updates',
           example: '2024-10-10T00:00:00.000Z'
         }
       ),
-      eolFrom: z.string()
+      eolFrom: z.coerce.date()
         .nullable()
         .openapi({
           description: 'Date when the version reaches end of life (no more updates)',
