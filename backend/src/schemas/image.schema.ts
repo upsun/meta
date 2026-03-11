@@ -1,4 +1,4 @@
-import { int, z } from 'zod';
+import { z } from 'zod';
 import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
 import { LinkSchema } from './links.schema.js';
 
