@@ -30,8 +30,8 @@ export const HostRegionSchema = z.object({
     description: 'Timezone identifier',
     example: 'Australia/Sydney'
   }),
-  location_guarantee: z.boolean().openapi({
-    description: 'Whether the region carries a location guarantee',
+  guaranteed_resources: z.boolean().openapi({
+    description: 'Whether the region carries guaranteed resources or not',
     example: false
   }),
   available: z.boolean().openapi({
