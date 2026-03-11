@@ -1007,7 +1007,7 @@ class OpenApiPreprocessor
                         && empty($schemaDef['oneOf'])
                         && empty($schemaDef['allOf'])
                         && empty($schemaDef['anyOf'])
-                        && !$schemaDef['type'] === "array"
+                        && (($schemaDef['type'] ?? null) !== 'array')
                     ) {
                         $isEmpty = true; // existing empty schema
                     }
@@ -1183,7 +1183,7 @@ class OpenApiPreprocessor
                                     // Check if this is a date-time field
                                     $isDateTime = ($fieldType === 'string' && $format === 'date-time');
                                     
-                                    // Check if this is an object field
+                                    // Check if this is an object field that would mean returning an array of objects (e.g. for tags or similar)
                                     $isArray = ($fieldType === 'object');
                                     
                                     // Capitalize field name for display
