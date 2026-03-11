@@ -1183,7 +1183,7 @@ class OpenApiPreprocessor
                                     // Check if this is a date-time field
                                     $isDateTime = ($fieldType === 'string' && $format === 'date-time');
                                     
-                                    // Check if this is an object field that would mean returning an array of objects (e.g. for tags or similar)
+                                    // Check if this is an object field that should be treated as a collection of items (for x-isArray semantics, e.g. tags)
                                     $isArray = ($fieldType === 'object');
                                     
                                     // Capitalize field name for display
