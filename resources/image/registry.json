@@ -21,13 +21,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-03-11T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2019-04-22T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-03-11T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2019-04-22T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -59,13 +59,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-02-03T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-04-06T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-02-03T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-04-06T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -97,13 +97,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-04-06T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-05-18T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-04-06T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-05-18T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -135,13 +135,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-05-18T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-07-13T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-05-18T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-07-13T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -173,13 +173,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-07-13T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-08-24T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-07-13T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-08-24T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -211,13 +211,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-10-05T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-11-16T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-10-05T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-11-16T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -249,13 +249,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-05-24T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2021-07-19T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2021-05-24T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2021-07-19T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -287,13 +287,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-10-18T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2021-11-15T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2021-10-18T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2021-11-15T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -325,13 +325,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-05-01T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-05-29T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2023-05-01T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2023-05-29T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -363,13 +363,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-12-04T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-01-22T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2023-12-04T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-01-22T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -421,13 +421,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -463,13 +463,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -505,13 +505,13 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": true,
-          "is_end_of_life": false
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": true,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -547,13 +547,13 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": true,
-          "is_end_of_life": false
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": true,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -625,13 +625,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-11-10T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2028-11-13T23:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2025-11-10T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2028-11-13T23:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -663,13 +663,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2023-11-13T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2026-11-09T23:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2023-11-13T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2026-11-09T23:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -701,13 +701,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-11-07T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-05-13T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2022-11-07T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-05-13T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -739,13 +739,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-11-07T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-11-11T23:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2021-11-07T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-11-11T23:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -777,13 +777,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-11-09T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-05-09T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-11-09T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-05-09T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -815,13 +815,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-12-02T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-12-12T23:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-12-02T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-12-12T23:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -853,13 +853,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-12-03T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2019-12-22T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2018-12-03T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2019-12-22T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -891,13 +891,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-05-29T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2021-08-20T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2018-05-29T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2021-08-20T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -929,13 +929,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-08-13T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2018-09-30T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2017-08-13T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2018-09-30T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -984,13 +984,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-04-09T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2026-01-14T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2019-04-09T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2026-01-14T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -1023,13 +1023,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-04-09T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2026-01-14T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-04-09T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2026-01-14T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -1062,13 +1062,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-04-09T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2026-01-14T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-04-09T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2026-01-14T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -1101,13 +1101,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-04-09T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2026-01-14T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-04-09T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2026-01-14T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -1140,13 +1140,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-04-09T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2026-01-14T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-04-09T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2026-01-14T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -1179,13 +1179,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-04-09T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2026-01-14T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-04-09T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2026-01-14T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -1218,13 +1218,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-11-13T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-02-09T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2017-11-13T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-02-09T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -1257,13 +1257,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-11-13T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-02-09T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2017-11-13T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-02-09T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -1296,13 +1296,13 @@
         },
         "upstream": {
           "status": "decommissioned",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -1335,13 +1335,13 @@
         },
         "upstream": {
           "status": "decommissioned",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -1374,13 +1374,13 @@
         },
         "upstream": {
           "status": "decommissioned",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -1413,13 +1413,13 @@
         },
         "upstream": {
           "status": "decommissioned",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -1446,13 +1446,13 @@
         },
         "upstream": {
           "status": "decommissioned",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -1479,13 +1479,13 @@
         },
         "upstream": {
           "status": "decommissioned",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -1549,13 +1549,13 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2024-12-18T23:00:00.000Z",
-          "end_of_active_support_date": "2025-10-15T22:00:00.000Z",
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2024-12-18T23:00:00.000Z",
+          "eoasFrom": "2025-10-15T22:00:00.000Z",
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -1587,13 +1587,13 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2023-06-18T22:00:00.000Z",
-          "end_of_active_support_date": "2023-12-21T23:00:00.000Z",
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": true,
-          "is_end_of_life": false
+          "releaseDate": "2023-06-18T22:00:00.000Z",
+          "eoasFrom": "2023-12-21T23:00:00.000Z",
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": true,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -1625,13 +1625,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-08-31T22:00:00.000Z",
-          "end_of_active_support_date": "2023-06-18T22:00:00.000Z",
-          "end_of_life_date": "2025-10-15T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2022-08-31T22:00:00.000Z",
+          "eoasFrom": "2023-06-18T22:00:00.000Z",
+          "eolFrom": "2025-10-15T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -1663,13 +1663,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-12-02T23:00:00.000Z",
-          "end_of_active_support_date": "2022-08-31T22:00:00.000Z",
-          "end_of_life_date": "2024-12-18T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2021-12-02T23:00:00.000Z",
+          "eoasFrom": "2022-08-31T22:00:00.000Z",
+          "eolFrom": "2024-12-18T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -1701,13 +1701,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-05-18T22:00:00.000Z",
-          "end_of_active_support_date": "2021-12-02T23:00:00.000Z",
-          "end_of_life_date": "2024-06-11T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2021-05-18T22:00:00.000Z",
+          "eoasFrom": "2021-12-02T23:00:00.000Z",
+          "eolFrom": "2024-06-11T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -1739,13 +1739,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-10-05T22:00:00.000Z",
-          "end_of_active_support_date": "2021-05-18T22:00:00.000Z",
-          "end_of_life_date": "2023-12-21T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-10-05T22:00:00.000Z",
+          "eoasFrom": "2021-05-18T22:00:00.000Z",
+          "eolFrom": "2023-12-21T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -1777,13 +1777,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-01-26T23:00:00.000Z",
-          "end_of_active_support_date": "2020-10-05T22:00:00.000Z",
-          "end_of_life_date": "2023-06-18T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-01-26T23:00:00.000Z",
+          "eoasFrom": "2020-10-05T22:00:00.000Z",
+          "eolFrom": "2023-06-18T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -1815,13 +1815,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-06-23T22:00:00.000Z",
-          "end_of_active_support_date": "2020-01-26T23:00:00.000Z",
-          "end_of_life_date": "2022-08-31T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-06-23T22:00:00.000Z",
+          "eoasFrom": "2020-01-26T23:00:00.000Z",
+          "eolFrom": "2022-08-31T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -1890,13 +1890,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-08-11T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2025-08-11T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -1928,13 +1928,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-02-10T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2025-02-10T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -1966,13 +1966,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2024-08-12T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2025-08-11T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2024-08-12T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2025-08-11T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2004,13 +2004,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2024-02-05T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2025-02-10T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2024-02-05T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2025-02-10T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2042,13 +2042,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-08-07T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-08-12T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2023-08-07T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-08-12T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2080,13 +2080,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-01-31T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-02-05T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2023-01-31T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-02-05T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2118,13 +2118,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-08-01T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-09-05T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2022-08-01T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2023-09-05T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2156,13 +2156,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-03-14T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-01-31T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2022-03-14T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2023-01-31T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2194,13 +2194,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-08-15T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-08-01T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2021-08-15T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-08-01T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2232,13 +2232,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-02-15T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-03-14T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2021-02-15T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-03-14T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2270,13 +2270,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-08-10T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2021-08-15T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-08-10T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2021-08-15T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2308,13 +2308,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-02-24T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2021-02-15T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-02-24T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2021-02-15T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2346,13 +2346,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-09-02T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-08-10T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-09-02T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-08-10T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2384,13 +2384,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-02-24T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-02-24T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-02-24T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-02-24T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2422,13 +2422,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-08-23T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2019-09-02T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2018-08-23T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2019-09-02T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2460,13 +2460,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-02-15T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2019-02-24T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2018-02-15T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2019-02-24T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2498,13 +2498,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2536,13 +2536,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2591,13 +2591,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2020-11-08T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2020-11-08T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -2629,13 +2629,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2020-11-08T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2020-11-08T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -2667,13 +2667,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2020-11-08T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-11-08T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -2700,13 +2700,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2020-11-08T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-11-08T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -2733,13 +2733,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2020-11-08T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-11-08T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -2766,13 +2766,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2016-09-06T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2016-09-06T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2804,13 +2804,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2016-09-06T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2016-09-06T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2842,13 +2842,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2016-09-06T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2016-09-06T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2881,13 +2881,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2016-09-06T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2016-09-06T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -2931,13 +2931,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -2996,13 +2996,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2014-03-17T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-03-30T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2014-03-17T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-03-30T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -3034,13 +3034,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-09-24T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-09-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2018-09-24T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2023-09-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -3072,13 +3072,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-03-18T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2019-09-16T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-03-18T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2019-09-16T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -3110,13 +3110,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-09-16T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-03-16T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-09-16T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-03-16T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -3148,13 +3148,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-03-16T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-09-15T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-03-16T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-09-15T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -3186,13 +3186,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2021-09-13T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2026-09-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2021-09-13T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2026-09-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -3224,13 +3224,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-03-21T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-09-19T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2022-03-21T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-09-19T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -3262,13 +3262,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-09-19T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-03-20T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2022-09-19T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2023-03-20T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -3300,13 +3300,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2023-09-18T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2028-09-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2023-09-18T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2028-09-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -3355,13 +3355,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2024-02-25T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-07-25T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2024-02-25T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-07-25T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -3393,13 +3393,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-10-02T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-02-26T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2023-10-02T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-02-26T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -3431,13 +3431,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-02-05T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-06-12T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2023-02-05T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2023-06-12T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -3469,13 +3469,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-05-08T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-09-27T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2022-05-08T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-09-27T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -3507,13 +3507,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-12-18T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2021-11-14T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-12-18T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2021-11-14T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -3540,13 +3540,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-08-02T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2021-11-14T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-08-02T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2021-11-14T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -3573,13 +3573,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-04-13T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-08-09T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-04-13T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-08-09T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -3606,13 +3606,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-12-13T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-04-14T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-12-13T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-04-14T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -3639,13 +3639,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-06-23T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2019-12-15T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-06-23T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2019-12-15T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -3672,13 +3672,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-03-21T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2019-11-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-03-21T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2019-11-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -3705,13 +3705,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-11-19T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2019-03-21T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2018-11-19T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2019-03-21T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -3755,13 +3755,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-06-03T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2028-06-03T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2025-06-03T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2028-06-03T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -3795,13 +3795,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2024-05-28T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2029-05-28T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2024-05-28T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2029-05-28T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -3835,13 +3835,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-11-20T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-11-20T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2023-11-20T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-11-20T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -3875,13 +3875,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-06-05T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-06-05T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2023-06-05T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-06-05T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -3915,13 +3915,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2023-02-15T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2028-02-15T23:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2023-02-15T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2028-02-15T23:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -3955,13 +3955,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2021-07-05T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2026-07-05T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2021-07-05T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2026-07-05T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -3995,13 +3995,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-06-23T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2025-06-23T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-06-23T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2025-06-23T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4035,13 +4035,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-06-17T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-06-17T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-06-17T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-06-17T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4075,13 +4075,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-05-24T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-05-24T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2018-05-24T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2023-05-24T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4115,13 +4115,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-05-22T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-05-22T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2017-05-22T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-05-22T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4155,13 +4155,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-10-16T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-10-16T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2015-10-16T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-10-16T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4195,13 +4195,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2014-03-30T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2019-03-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2014-03-30T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2019-03-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4235,13 +4235,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2012-04-10T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-04-10T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2012-04-10T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-04-10T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4292,13 +4292,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-06-03T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2028-06-03T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2025-06-03T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2028-06-03T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -4332,13 +4332,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2024-05-28T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2029-05-28T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2024-05-28T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2029-05-28T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -4372,13 +4372,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-11-20T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-11-20T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2023-11-20T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-11-20T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4412,13 +4412,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-06-05T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-06-05T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2023-06-05T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-06-05T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4452,13 +4452,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2023-02-15T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2028-02-15T23:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2023-02-15T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2028-02-15T23:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -4492,13 +4492,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2021-07-05T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2026-07-05T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2021-07-05T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2026-07-05T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -4532,13 +4532,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-06-23T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2025-06-23T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-06-23T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2025-06-23T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4572,13 +4572,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-06-17T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-06-17T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-06-17T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-06-17T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4612,13 +4612,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-05-24T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-05-24T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2018-05-24T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2023-05-24T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4652,13 +4652,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-05-22T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-05-22T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2017-05-22T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-05-22T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4692,13 +4692,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-10-16T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-10-16T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2015-10-16T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-10-16T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4732,13 +4732,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2014-03-30T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2019-03-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2014-03-30T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2019-03-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4772,13 +4772,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2012-04-10T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-04-10T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2012-04-10T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-04-10T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4829,13 +4829,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2020-03-07T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2020-03-07T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -4868,13 +4868,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-07-20T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-03-08T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2017-07-20T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-03-08T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4907,13 +4907,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2009-07-08T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2017-07-20T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2009-07-08T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2017-07-20T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4964,13 +4964,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2023-08-30T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2027-08-30T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2023-08-30T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2027-08-30T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -5003,13 +5003,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-07-30T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2025-07-30T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2022-07-30T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2025-07-30T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5042,13 +5042,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-07-30T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-10-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2021-07-30T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-10-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5081,13 +5081,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-07-30T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-02-28T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-07-30T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-02-28T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5120,13 +5120,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-08-30T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-04-29T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-08-30T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2023-04-29T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5159,13 +5159,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-06-29T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-04-29T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2018-06-29T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-04-29T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5215,13 +5215,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": null,
@@ -5248,13 +5248,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": null,
@@ -5303,13 +5303,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-04-19T22:00:00.000Z",
-          "end_of_active_support_date": "2022-10-17T22:00:00.000Z",
-          "end_of_life_date": "2023-09-10T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2021-04-19T22:00:00.000Z",
+          "eoasFrom": "2022-10-17T22:00:00.000Z",
+          "eolFrom": "2023-09-10T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5341,13 +5341,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-04-18T22:00:00.000Z",
-          "end_of_active_support_date": "2023-10-17T22:00:00.000Z",
-          "end_of_life_date": "2025-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2022-04-18T22:00:00.000Z",
+          "eoasFrom": "2023-10-17T22:00:00.000Z",
+          "eolFrom": "2025-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5379,13 +5379,13 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2023-04-17T22:00:00.000Z",
-          "end_of_active_support_date": "2024-10-21T22:00:00.000Z",
-          "end_of_life_date": "2026-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": true,
-          "is_end_of_life": false
+          "releaseDate": "2023-04-17T22:00:00.000Z",
+          "eoasFrom": "2024-10-21T22:00:00.000Z",
+          "eolFrom": "2026-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": true,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -5417,13 +5417,13 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2024-04-23T22:00:00.000Z",
-          "end_of_active_support_date": "2025-10-20T22:00:00.000Z",
-          "end_of_life_date": "2027-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": true,
-          "is_end_of_life": false
+          "releaseDate": "2024-04-23T22:00:00.000Z",
+          "eoasFrom": "2025-10-20T22:00:00.000Z",
+          "eolFrom": "2027-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": true,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -5455,13 +5455,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-05-05T22:00:00.000Z",
-          "end_of_active_support_date": "2026-10-19T22:00:00.000Z",
-          "end_of_life_date": "2028-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2025-05-05T22:00:00.000Z",
+          "eoasFrom": "2026-10-19T22:00:00.000Z",
+          "eolFrom": "2028-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -5493,13 +5493,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-05-29T22:00:00.000Z",
-          "end_of_active_support_date": "2018-12-31T23:00:00.000Z",
-          "end_of_life_date": "2019-12-30T23:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2017-05-29T22:00:00.000Z",
+          "eoasFrom": "2018-12-31T23:00:00.000Z",
+          "eolFrom": "2019-12-30T23:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5531,13 +5531,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-04-25T22:00:00.000Z",
-          "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
-          "end_of_life_date": "2019-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2016-04-25T22:00:00.000Z",
+          "eoasFrom": "2018-04-29T22:00:00.000Z",
+          "eolFrom": "2019-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5569,13 +5569,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-04-25T22:00:00.000Z",
-          "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
-          "end_of_life_date": "2019-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2016-04-25T22:00:00.000Z",
+          "eoasFrom": "2018-04-29T22:00:00.000Z",
+          "eolFrom": "2019-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5607,13 +5607,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-04-25T22:00:00.000Z",
-          "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
-          "end_of_life_date": "2019-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2016-04-25T22:00:00.000Z",
+          "eoasFrom": "2018-04-29T22:00:00.000Z",
+          "eolFrom": "2019-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5645,13 +5645,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-04-25T22:00:00.000Z",
-          "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
-          "end_of_life_date": "2019-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2016-04-25T22:00:00.000Z",
+          "eoasFrom": "2018-04-29T22:00:00.000Z",
+          "eolFrom": "2019-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5683,13 +5683,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-04-25T22:00:00.000Z",
-          "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
-          "end_of_life_date": "2019-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2016-04-25T22:00:00.000Z",
+          "eoasFrom": "2018-04-29T22:00:00.000Z",
+          "eolFrom": "2019-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5721,13 +5721,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-04-25T22:00:00.000Z",
-          "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
-          "end_of_life_date": "2019-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2016-04-25T22:00:00.000Z",
+          "eoasFrom": "2018-04-29T22:00:00.000Z",
+          "eolFrom": "2019-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5759,13 +5759,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-09-08T22:00:00.000Z",
-          "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
-          "end_of_life_date": "2018-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2015-09-08T22:00:00.000Z",
+          "eoasFrom": "2017-03-31T22:00:00.000Z",
+          "eolFrom": "2018-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5797,13 +5797,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-09-08T22:00:00.000Z",
-          "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
-          "end_of_life_date": "2018-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2015-09-08T22:00:00.000Z",
+          "eoasFrom": "2017-03-31T22:00:00.000Z",
+          "eolFrom": "2018-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5835,13 +5835,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-09-08T22:00:00.000Z",
-          "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
-          "end_of_life_date": "2018-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2015-09-08T22:00:00.000Z",
+          "eoasFrom": "2017-03-31T22:00:00.000Z",
+          "eolFrom": "2018-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5873,13 +5873,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-09-08T22:00:00.000Z",
-          "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
-          "end_of_life_date": "2018-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2015-09-08T22:00:00.000Z",
+          "eoasFrom": "2017-03-31T22:00:00.000Z",
+          "eolFrom": "2018-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5911,13 +5911,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-09-08T22:00:00.000Z",
-          "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
-          "end_of_life_date": "2018-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2015-09-08T22:00:00.000Z",
+          "eoasFrom": "2017-03-31T22:00:00.000Z",
+          "eolFrom": "2018-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5949,13 +5949,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-09-08T22:00:00.000Z",
-          "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
-          "end_of_life_date": "2018-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2015-09-08T22:00:00.000Z",
+          "eoasFrom": "2017-03-31T22:00:00.000Z",
+          "eolFrom": "2018-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5987,13 +5987,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6042,13 +6042,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6081,13 +6081,13 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2022-05-25T22:00:00.000Z",
-          "end_of_active_support_date": "2025-05-05T22:00:00.000Z",
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": true,
-          "is_end_of_life": false
+          "releaseDate": "2022-05-25T22:00:00.000Z",
+          "eoasFrom": "2025-05-05T22:00:00.000Z",
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": true,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -6120,13 +6120,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-05-05T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2025-05-05T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -6159,13 +6159,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-07-11T22:00:00.000Z",
-          "end_of_active_support_date": "2022-05-25T22:00:00.000Z",
-          "end_of_life_date": "2025-05-05T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2021-07-11T22:00:00.000Z",
+          "eoasFrom": "2022-05-25T22:00:00.000Z",
+          "eolFrom": "2025-05-05T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6198,13 +6198,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-07-11T22:00:00.000Z",
-          "end_of_active_support_date": "2022-05-25T22:00:00.000Z",
-          "end_of_life_date": "2025-05-05T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2021-07-11T22:00:00.000Z",
+          "eoasFrom": "2022-05-25T22:00:00.000Z",
+          "eolFrom": "2025-05-05T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6254,13 +6254,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2024-04-09T22:00:00.000Z",
-          "end_of_active_support_date": "2029-04-29T22:00:00.000Z",
-          "end_of_life_date": "2032-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2024-04-09T22:00:00.000Z",
+          "eoasFrom": "2029-04-29T22:00:00.000Z",
+          "eolFrom": "2032-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": null,
@@ -6287,13 +6287,13 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2018-04-07T22:00:00.000Z",
-          "end_of_active_support_date": "2025-04-29T22:00:00.000Z",
-          "end_of_life_date": "2026-04-29T22:00:00.000Z",
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": true,
-          "is_end_of_life": false
+          "releaseDate": "2018-04-07T22:00:00.000Z",
+          "eoasFrom": "2025-04-29T22:00:00.000Z",
+          "eolFrom": "2026-04-29T22:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": true,
+          "isEol": false
         },
         "manifest": {
           "endpoints": null,
@@ -6320,13 +6320,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-10-08T22:00:00.000Z",
-          "end_of_active_support_date": "2020-10-30T23:00:00.000Z",
-          "end_of_life_date": "2023-10-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2015-10-08T22:00:00.000Z",
+          "eoasFrom": "2020-10-30T23:00:00.000Z",
+          "eolFrom": "2023-10-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -6391,13 +6391,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-11-19T23:00:00.000Z",
-          "end_of_active_support_date": "2027-12-30T23:00:00.000Z",
-          "end_of_life_date": "2029-12-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2025-11-19T23:00:00.000Z",
+          "eoasFrom": "2027-12-30T23:00:00.000Z",
+          "eolFrom": "2029-12-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -6433,13 +6433,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2024-11-20T23:00:00.000Z",
-          "end_of_active_support_date": "2026-12-30T23:00:00.000Z",
-          "end_of_life_date": "2028-12-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2024-11-20T23:00:00.000Z",
+          "eoasFrom": "2026-12-30T23:00:00.000Z",
+          "eolFrom": "2028-12-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -6475,13 +6475,13 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2023-11-22T23:00:00.000Z",
-          "end_of_active_support_date": "2025-12-30T23:00:00.000Z",
-          "end_of_life_date": "2027-12-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": true,
-          "is_end_of_life": false
+          "releaseDate": "2023-11-22T23:00:00.000Z",
+          "eoasFrom": "2025-12-30T23:00:00.000Z",
+          "eolFrom": "2027-12-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": true,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -6517,13 +6517,13 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2022-12-07T23:00:00.000Z",
-          "end_of_active_support_date": "2024-12-30T23:00:00.000Z",
-          "end_of_life_date": "2026-12-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": true,
-          "is_end_of_life": false
+          "releaseDate": "2022-12-07T23:00:00.000Z",
+          "eoasFrom": "2024-12-30T23:00:00.000Z",
+          "eolFrom": "2026-12-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": true,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -6559,13 +6559,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-11-24T23:00:00.000Z",
-          "end_of_active_support_date": "2023-11-24T23:00:00.000Z",
-          "end_of_life_date": "2025-12-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2021-11-24T23:00:00.000Z",
+          "eoasFrom": "2023-11-24T23:00:00.000Z",
+          "eolFrom": "2025-12-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6601,13 +6601,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-11-25T23:00:00.000Z",
-          "end_of_active_support_date": "2022-11-25T23:00:00.000Z",
-          "end_of_life_date": "2023-11-25T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-11-25T23:00:00.000Z",
+          "eoasFrom": "2022-11-25T23:00:00.000Z",
+          "eolFrom": "2023-11-25T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6643,13 +6643,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-11-27T23:00:00.000Z",
-          "end_of_active_support_date": "2021-11-27T23:00:00.000Z",
-          "end_of_life_date": "2022-11-27T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-11-27T23:00:00.000Z",
+          "eoasFrom": "2021-11-27T23:00:00.000Z",
+          "eolFrom": "2022-11-27T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6685,13 +6685,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-12-05T23:00:00.000Z",
-          "end_of_active_support_date": "2020-12-05T23:00:00.000Z",
-          "end_of_life_date": "2021-12-05T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2018-12-05T23:00:00.000Z",
+          "eoasFrom": "2020-12-05T23:00:00.000Z",
+          "eolFrom": "2021-12-05T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6727,13 +6727,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-11-29T23:00:00.000Z",
-          "end_of_active_support_date": "2019-11-29T23:00:00.000Z",
-          "end_of_life_date": "2020-11-29T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2017-11-29T23:00:00.000Z",
+          "eoasFrom": "2019-11-29T23:00:00.000Z",
+          "eolFrom": "2020-11-29T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6769,13 +6769,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-11-30T23:00:00.000Z",
-          "end_of_active_support_date": "2018-11-30T23:00:00.000Z",
-          "end_of_life_date": "2019-11-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2016-11-30T23:00:00.000Z",
+          "eoasFrom": "2018-11-30T23:00:00.000Z",
+          "eolFrom": "2019-11-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6811,13 +6811,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-12-02T23:00:00.000Z",
-          "end_of_active_support_date": "2018-01-03T23:00:00.000Z",
-          "end_of_life_date": "2019-01-09T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2015-12-02T23:00:00.000Z",
+          "eoasFrom": "2018-01-03T23:00:00.000Z",
+          "eolFrom": "2019-01-09T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6853,13 +6853,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2014-08-27T22:00:00.000Z",
-          "end_of_active_support_date": "2017-01-18T23:00:00.000Z",
-          "end_of_life_date": "2018-12-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2014-08-27T22:00:00.000Z",
+          "eoasFrom": "2017-01-18T23:00:00.000Z",
+          "eolFrom": "2018-12-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6895,13 +6895,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2013-06-19T22:00:00.000Z",
-          "end_of_active_support_date": "2015-07-09T22:00:00.000Z",
-          "end_of_life_date": "2016-07-20T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2013-06-19T22:00:00.000Z",
+          "eoasFrom": "2015-07-09T22:00:00.000Z",
+          "eolFrom": "2016-07-20T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6937,13 +6937,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2012-02-29T23:00:00.000Z",
-          "end_of_active_support_date": "2014-09-13T22:00:00.000Z",
-          "end_of_life_date": "2015-09-13T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2012-02-29T23:00:00.000Z",
+          "eoasFrom": "2014-09-13T22:00:00.000Z",
+          "eolFrom": "2015-09-13T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6996,13 +6996,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-10-04T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-11-09T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2017-10-04T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-11-09T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7037,13 +7037,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-10-17T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-11-08T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2018-10-17T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2023-11-08T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7078,13 +7078,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-10-02T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-11-20T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-10-02T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-11-20T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7119,13 +7119,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-09-23T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2025-11-12T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-09-23T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2025-11-12T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7160,13 +7160,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2021-09-29T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2026-11-11T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2021-09-29T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2026-11-11T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7201,13 +7201,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2022-10-12T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2027-11-10T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2022-10-12T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2027-11-10T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7242,13 +7242,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2023-09-13T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2028-11-08T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2023-09-13T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2028-11-08T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7283,13 +7283,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2024-09-25T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2029-11-07T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2024-09-25T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2029-11-07T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7324,13 +7324,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-09-24T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2030-11-13T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2025-09-24T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2030-11-13T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7373,13 +7373,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-09-28T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2021-11-10T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2016-09-28T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2021-11-10T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7414,13 +7414,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-01-06T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2021-02-10T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2016-01-06T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2021-02-10T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -7447,13 +7447,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2013-09-08T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2018-11-07T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2013-09-08T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2018-11-07T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7521,13 +7521,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-10-06T22:00:00.000Z",
-          "end_of_active_support_date": "2027-09-30T22:00:00.000Z",
-          "end_of_life_date": "2030-10-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2025-10-06T22:00:00.000Z",
+          "eoasFrom": "2027-09-30T22:00:00.000Z",
+          "eolFrom": "2030-10-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7559,13 +7559,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2024-10-06T22:00:00.000Z",
-          "end_of_active_support_date": "2026-09-30T22:00:00.000Z",
-          "end_of_life_date": "2029-10-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2024-10-06T22:00:00.000Z",
+          "eoasFrom": "2026-09-30T22:00:00.000Z",
+          "eolFrom": "2029-10-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7597,13 +7597,13 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2023-10-01T22:00:00.000Z",
-          "end_of_active_support_date": "2025-04-01T22:00:00.000Z",
-          "end_of_life_date": "2028-10-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": true,
-          "is_end_of_life": false
+          "releaseDate": "2023-10-01T22:00:00.000Z",
+          "eoasFrom": "2025-04-01T22:00:00.000Z",
+          "eolFrom": "2028-10-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": true,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7635,13 +7635,13 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2022-10-23T22:00:00.000Z",
-          "end_of_active_support_date": "2024-03-31T22:00:00.000Z",
-          "end_of_life_date": "2027-10-30T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": true,
-          "is_end_of_life": false
+          "releaseDate": "2022-10-23T22:00:00.000Z",
+          "eoasFrom": "2024-03-31T22:00:00.000Z",
+          "eolFrom": "2027-10-30T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": true,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7673,13 +7673,13 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2021-10-03T22:00:00.000Z",
-          "end_of_active_support_date": "2023-04-04T22:00:00.000Z",
-          "end_of_life_date": "2026-10-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": true,
-          "is_end_of_life": false
+          "releaseDate": "2021-10-03T22:00:00.000Z",
+          "eoasFrom": "2023-04-04T22:00:00.000Z",
+          "eolFrom": "2026-10-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": true,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7711,13 +7711,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-10-04T22:00:00.000Z",
-          "end_of_active_support_date": "2022-05-16T22:00:00.000Z",
-          "end_of_life_date": "2025-10-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-10-04T22:00:00.000Z",
+          "eoasFrom": "2022-05-16T22:00:00.000Z",
+          "eolFrom": "2025-10-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7749,13 +7749,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-10-13T22:00:00.000Z",
-          "end_of_active_support_date": "2021-05-02T22:00:00.000Z",
-          "end_of_life_date": "2024-10-06T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-10-13T22:00:00.000Z",
+          "eoasFrom": "2021-05-02T22:00:00.000Z",
+          "eolFrom": "2024-10-06T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7787,13 +7787,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-06-26T22:00:00.000Z",
-          "end_of_active_support_date": "2020-06-26T22:00:00.000Z",
-          "end_of_life_date": "2023-06-26T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2018-06-26T22:00:00.000Z",
+          "eoasFrom": "2020-06-26T22:00:00.000Z",
+          "eolFrom": "2023-06-26T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7825,13 +7825,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-12-22T23:00:00.000Z",
-          "end_of_active_support_date": "2018-12-23T23:00:00.000Z",
-          "end_of_life_date": "2021-12-22T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2016-12-22T23:00:00.000Z",
+          "eoasFrom": "2018-12-23T23:00:00.000Z",
+          "eolFrom": "2021-12-22T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7863,13 +7863,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-09-12T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-09-29T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2015-09-12T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-09-29T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7901,13 +7901,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2010-07-02T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2019-12-31T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2010-07-02T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2019-12-31T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7956,13 +7956,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-04-14T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2026-01-29T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2025-04-14T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2026-01-29T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7998,13 +7998,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2024-09-17T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2025-04-14T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2024-09-17T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2025-04-14T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8040,13 +8040,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2024-02-21T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-09-16T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2024-02-21T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-09-16T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8082,13 +8082,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-05-31T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-02-20T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2023-05-31T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-02-20T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8124,13 +8124,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-09-25T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-05-31T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2022-09-25T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2023-05-31T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8166,13 +8166,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-05-02T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-09-27T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2022-05-02T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-09-27T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8208,13 +8208,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-07-22T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-01-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2021-07-22T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2023-01-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8250,13 +8250,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-09-30T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-07-30T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-09-30T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-07-30T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8292,13 +8292,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-11-27T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-09-29T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2017-11-27T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-09-29T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8334,13 +8334,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-12-21T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2018-05-30T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2015-12-21T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2018-05-30T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8376,13 +8376,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-03-10T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2016-10-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2015-03-10T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2016-10-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8435,13 +8435,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-05-01T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2025-05-01T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -8475,13 +8475,13 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2023-08-14T22:00:00.000Z",
-          "end_of_active_support_date": "2024-07-28T22:00:00.000Z",
-          "end_of_life_date": "2026-02-27T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": true,
-          "is_end_of_life": false
+          "releaseDate": "2023-08-14T22:00:00.000Z",
+          "eoasFrom": "2024-07-28T22:00:00.000Z",
+          "eolFrom": "2026-02-27T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": true,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -8515,13 +8515,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-04-26T22:00:00.000Z",
-          "end_of_active_support_date": "2023-08-14T22:00:00.000Z",
-          "end_of_life_date": "2024-07-28T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2022-04-26T22:00:00.000Z",
+          "eoasFrom": "2023-08-14T22:00:00.000Z",
+          "eolFrom": "2024-07-28T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8555,13 +8555,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-02-21T23:00:00.000Z",
-          "end_of_active_support_date": "2022-04-26T22:00:00.000Z",
-          "end_of_life_date": "2025-02-27T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2021-02-21T23:00:00.000Z",
+          "eoasFrom": "2022-04-26T22:00:00.000Z",
+          "eolFrom": "2025-02-27T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8595,13 +8595,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-04-29T22:00:00.000Z",
-          "end_of_active_support_date": "2021-02-21T23:00:00.000Z",
-          "end_of_life_date": "2022-05-30T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-04-29T22:00:00.000Z",
+          "eoasFrom": "2021-02-21T23:00:00.000Z",
+          "eolFrom": "2022-05-30T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8635,13 +8635,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-10-16T22:00:00.000Z",
-          "end_of_active_support_date": "2020-04-29T22:00:00.000Z",
-          "end_of_life_date": "2022-04-26T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2018-10-16T22:00:00.000Z",
+          "eoasFrom": "2020-04-29T22:00:00.000Z",
+          "eolFrom": "2022-04-26T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8675,13 +8675,13 @@
         },
         "upstream": {
           "status": "decommissioned",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8715,13 +8715,13 @@
         },
         "upstream": {
           "status": "decommissioned",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8755,13 +8755,13 @@
         },
         "upstream": {
           "status": "decommissioned",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8795,13 +8795,13 @@
         },
         "upstream": {
           "status": "decommissioned",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -8871,13 +8871,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-12-24T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2029-03-30T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2025-12-24T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2029-03-30T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -8909,13 +8909,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2024-12-23T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2028-03-30T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2024-12-23T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2028-03-30T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -8947,13 +8947,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2023-12-24T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2027-03-30T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2023-12-24T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2027-03-30T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -8985,13 +8985,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2022-12-24T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2026-03-30T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2022-12-24T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2026-03-30T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -9023,13 +9023,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-12-24T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2025-03-30T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2021-12-24T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2025-03-30T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -9061,13 +9061,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-12-24T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-04-22T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2020-12-24T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-04-22T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -9099,13 +9099,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-12-24T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-03-30T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-12-24T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2023-03-30T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -9137,13 +9137,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-12-24T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-03-30T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2018-12-24T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-03-30T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -9175,13 +9175,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-12-24T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2021-03-30T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2017-12-24T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2021-03-30T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -9213,13 +9213,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-12-22T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-03-30T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2016-12-22T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2020-03-30T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -9251,13 +9251,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-12-23T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2019-03-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2015-12-23T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2019-03-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -9311,13 +9311,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2026-01-21T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2026-01-21T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -9366,13 +9366,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2022-05-10T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2022-05-10T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -9405,13 +9405,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2022-05-10T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2022-05-10T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -9444,13 +9444,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2022-05-10T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2022-05-10T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -9483,13 +9483,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2022-05-10T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2022-05-10T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -9522,13 +9522,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2022-05-10T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2022-05-10T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -9561,13 +9561,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2022-05-10T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2022-05-10T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -9594,13 +9594,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-03-12T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-10-24T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-03-12T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-10-24T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -9633,13 +9633,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-03-12T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-10-24T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-03-12T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-10-24T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -9672,13 +9672,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-09-17T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-05-10T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2017-09-17T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-05-10T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -9711,13 +9711,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-09-17T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-05-10T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2017-09-17T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2022-05-10T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -9750,13 +9750,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-04-06T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2019-03-12T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2016-04-06T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2019-03-12T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -9789,13 +9789,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-04-06T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2019-03-12T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2016-04-06T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2019-03-12T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -9828,13 +9828,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2012-10-10T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2012-10-10T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -9867,13 +9867,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2011-03-29T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2011-03-29T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -9923,13 +9923,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-03-30T22:00:00.000Z",
-          "end_of_active_support_date": "2028-03-30T22:00:00.000Z",
-          "end_of_life_date": "2030-03-30T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2025-03-30T22:00:00.000Z",
+          "eoasFrom": "2028-03-30T22:00:00.000Z",
+          "eolFrom": "2030-03-30T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -9963,13 +9963,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2024-09-14T22:00:00.000Z",
-          "end_of_active_support_date": "2027-09-14T22:00:00.000Z",
-          "end_of_life_date": "2027-09-14T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2024-09-14T22:00:00.000Z",
+          "eoasFrom": "2027-09-14T22:00:00.000Z",
+          "eolFrom": "2027-09-14T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -10020,13 +10020,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2024-09-12T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2025-09-14T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2024-09-12T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2025-09-14T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -10063,13 +10063,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-03-14T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-03-14T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2023-03-14T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2024-03-14T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -10106,13 +10106,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-09-14T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-09-14T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2022-09-14T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2023-09-14T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -10149,13 +10149,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-03-14T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-03-14T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2022-03-14T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2023-03-14T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -10192,13 +10192,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -10235,13 +10235,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2018-03-14T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2018-03-14T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -10278,13 +10278,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -10320,13 +10320,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -10379,13 +10379,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-10-09T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-09-26T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2022-10-09T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2023-09-26T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": null,
@@ -10412,13 +10412,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -10445,13 +10445,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
@@ -10495,13 +10495,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -10551,13 +10551,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-10-28T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2025-10-28T23:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": null,
@@ -10601,13 +10601,13 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-07-22T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2027-07-14T22:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false
+          "releaseDate": "2025-07-22T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2027-07-14T22:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -10640,13 +10640,13 @@
         },
         "upstream": {
           "status": "decommissioned",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -10679,13 +10679,13 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-04-09T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2026-01-14T23:00:00.000Z",
-          "is_long_term_support": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true
+          "releaseDate": "2019-04-09T22:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2026-01-14T23:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
