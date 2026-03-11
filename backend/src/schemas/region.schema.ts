@@ -30,8 +30,8 @@ export const HostRegionSchema = z.object({
     description: 'Timezone identifier',
     example: 'Australia/Sydney'
   }),
-  location_guarantee: z.boolean().openapi({
-    description: 'Whether the region carries a location guarantee',
+  guaranteed_resources: z.boolean().openapi({
+    description: 'Whether the region carries guaranteed resources or not',
     example: false
   }),
   available: z.boolean().openapi({
@@ -86,13 +86,13 @@ export const HostRegionSchema = z.object({
   }).openapi({
     description: 'Environmental impact metadata',
   }),
-  outbound_ips: z.array(z.ipv4()).openapi({
-    description: 'Public outbound IP addresses',
-    example: "8.8.8.8"
+  outbound_ips: z.array(z.union([z.ipv4(), z.ipv6()])).openapi({
+    description: 'Public outbound IP addresses (IPv4 or IPv6)',
+    example: ["8.8.8.8", "2001:4860:4860::8888"]
   }),
-  inbound_ips: z.array(z.ipv4()).openapi({
-    description: 'Public inbound IP addresses',
-    example: "8.8.4.4"
+  inbound_ips: z.array(z.union([z.ipv4(), z.ipv6()])).openapi({
+    description: 'Public inbound IP addresses (IPv4 or IPv6)',
+    example: ["8.8.4.4", "2001:4860:4860::8844"]
   }),
   inbound_location: z.string().nullable().openapi({
     description: 'Inbound gateway alias',
