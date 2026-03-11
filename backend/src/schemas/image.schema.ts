@@ -28,15 +28,11 @@ export const DeployImageVersionStatusSchemaModel = z.enum([
  * Schema for Image Version
  */
 export const DeployImageVersionSchemaModel = z.object({
-  name: z.string().min(1).openapi({
-    description: 'Version name',
-    example: '14'
-  }),
   upsun: z.object({
     status: DeployImageVersionStatusSchemaModel,
     internal_support: z.boolean()
       .openapi({
-        description: 'Indicates if the version has support from Upsun',
+        description: 'Indicates if the version has support from Upsun (Internal branch is protected)',
         example: true
       })
   }).openapi({
@@ -48,55 +44,49 @@ export const DeployImageVersionSchemaModel = z.object({
   }),
   upstream: z.object({
       status: DeployImageVersionStatusSchemaModel,
-      release_date: z.coerce.date()
+      releaseDate: z.string()
         .nullable()
         .openapi({
           description: 'Official release date of the version',
           example: '2023-10-10T00:00:00.000Z'
         }
       ),
-      end_of_active_support_date: z.coerce.date()
+      eoasFrom: z.string()
         .nullable()
         .openapi({
           description: 'Date when this the version only receives security updates',
           example: '2024-10-10T00:00:00.000Z'
         }
       ),
-      end_of_life_date: z.coerce.date()
+      eolFrom: z.string()
         .nullable()
         .openapi({
           description: 'Date when the version reaches end of life (no more updates)',
           example: '2025-10-10T00:00:00.000Z'
         }
       ),
-      is_lts: z.boolean()
+      isLts: z.boolean()
         .openapi({
           description: 'Indicates if the version is a Long Term Support (LTS) release',
           example: true
         }
       ),
-      is_maintained: z.boolean()
+      isMaintained: z.boolean()
         .openapi({
           description: 'Indicates if the version is still maintained upstream',
           example: true
         }
       ),
-      is_end_of_active_support: z.boolean().nullable()
+      isEoas: z.boolean().nullable()
         .openapi({
           description: 'Indicates if the version has reached end of active support',
           example: false
         }
       ),
-      is_end_of_life: z.boolean().nullable()
+      isEol: z.boolean().nullable()
         .openapi({
           description: 'Indicates if the version has reached end of life',
           example: false
-        }
-      ),
-      is_long_term_support: z.boolean().nullable()
-        .openapi({
-          description: 'Indicates if the version is designated as long term support',
-          example: true
         }
       )
     })
@@ -104,14 +94,13 @@ export const DeployImageVersionSchemaModel = z.object({
       description: 'Upstream version information',
       example: {
         status: 'supported',
-        release_date: '2023-10-10T00:00:00.000Z',
-        end_of_active_support_date: '2024-10-10T00:00:00.000Z',
-        end_of_life_date: '2025-10-10T00:00:00.000Z',
-        is_lts: true,
-        is_maintained: true,
-        is_end_of_active_support: false,
-        is_end_of_life: false,
-        is_long_term_support: true
+        releaseDate: '2023-10-10T00:00:00.000Z',
+        eoasFrom: '2024-10-10T00:00:00.000Z',
+        eolFrom: '2025-10-10T00:00:00.000Z',
+        isLts: true,
+        isMaintained: true,
+        isEoas: false,
+        isEol: false
       }
     }
   ), // upstream
@@ -122,7 +111,8 @@ export const DeployImageVersionSchemaModel = z.object({
         example: {
           http: {
             port: 80,
-            scheme: 'http'
+            scheme: 'http',
+            default: true
           }
         }
       }),
@@ -360,7 +350,10 @@ export const DeployImageSchemaModel = z.object({
       example: true
     }
   ),
-  versions: z.array(DeployImageVersionSchemaModel).min(1),
+  versions:z.record(
+    z.string().openapi('versionId').describe('Unique identifier for a version (e.g., 14, 16, 18)'),
+    DeployImageVersionSchemaModel
+  ),
   _links: LinkSchema.optional().openapi({
     description: 'Hypermedia links related to this image',
     example: {
@@ -402,14 +395,15 @@ export const DeployImageListSchemaDtoPublic = z.record(
   DeployImageSchemaModel
     .omit({ docs: true, internal: true, runtime:true })
     .extend({
-        versions: z.array(
-          DeployImageSchemaModel.shape.versions.element
+        versions: z.record(
+          z.string().openapi('versionId').describe('Unique identifier for a version (e.g., 14, 16, 18)'),
+          DeployImageVersionSchemaModel
             .omit({
               upstream: true,
               manifest: true,
             })
             .extend({
-              upsun: DeployImageSchemaModel.shape.versions.element.shape.upsun.omit({
+              upsun: DeployImageVersionSchemaModel.shape.upsun.omit({
                 internal_support: true
               })
             })
