@@ -8411,7 +8411,7 @@
         "name": "3.9",
         "upsun": {
           "status": "retired",
-          "internal_support": true
+          "internal_support": false
         },
         "upstream": {
           "status": "retired",
