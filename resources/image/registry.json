@@ -13,98 +13,17 @@
     "internal": {
       "repo_name": "chrome-headless"
     },
-    "versions": [
-      {
-        "name": "120",
-        "upsun": {
-          "status": "supported",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2023-12-04T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-01-22T23:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 9222,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 64,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "120.0.6084.1-0psh1",
-            "majorMinor": "120.0",
-            "normalized": "120.0.6084"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": null,
-          "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": true
-        }
-      },
-      {
-        "name": "113",
-        "upsun": {
-          "status": "retired",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2023-05-01T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-05-29T22:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 9222,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 64,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "113.0.5672.77-0psh1",
-            "majorMinor": "113.0",
-            "normalized": "113.0.5672"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": null,
-          "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": true
-        }
-      },
-      {
-        "name": "95",
+    "versions": {
+      "73": {
         "upsun": {
           "status": "retired",
           "internal_support": false
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-10-18T22:00:00.000Z",
+          "release_date": "2019-03-11T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2021-11-15T23:00:00.000Z",
+          "end_of_life_date": "2019-04-22T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -124,89 +43,9 @@
           "min_disk_size": null,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "95.0.4638.78-0psh1~bpo10+1",
-            "majorMinor": "95.0",
-            "normalized": "95.0.4638"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": null,
-          "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": true
-        }
-      },
-      {
-        "name": "91",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2021-05-24T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2021-07-19T22:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 9222,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 64,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "91.0.4472.163-0psh1",
-            "majorMinor": "91.0",
-            "normalized": "91.0.4472"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": null,
-          "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": true
-        }
-      },
-      {
-        "name": "86",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2020-10-05T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-11-16T23:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 9222,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 64,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "86.0.4240183-1~bpo9+1",
-            "majorMinor": "86.0",
-            "normalized": "86.0.4240183"
+            "raw": "73.0.3683.103-2",
+            "majorMinor": "73.0",
+            "normalized": "73.0.3683"
           },
           "allow_scale_down": null,
           "storage_mount_point": null,
@@ -214,128 +53,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "84",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2020-07-13T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-08-24T22:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 9222,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 64,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "84.0.4147.89",
-            "majorMinor": "84.0",
-            "normalized": "84.0.4147"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": null,
-          "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "83",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2020-05-18T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-07-13T22:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 9222,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 64,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "83.0.4103.97",
-            "majorMinor": "83.0",
-            "normalized": "83.0.4103"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": null,
-          "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "81",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2020-04-06T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-05-18T22:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 9222,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 64,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "81.0.4044.138",
-            "majorMinor": "81.0",
-            "normalized": "81.0.4044"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": null,
-          "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "80",
+      "80": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -374,17 +92,16 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "73",
+      "81": {
         "upsun": {
           "status": "retired",
           "internal_support": false
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-03-11T23:00:00.000Z",
+          "release_date": "2020-04-06T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2019-04-22T22:00:00.000Z",
+          "end_of_life_date": "2020-05-18T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -404,17 +121,290 @@
           "min_disk_size": null,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "73.0.3683.103-2",
-            "majorMinor": "73.0",
-            "normalized": "73.0.3683"
+            "raw": "81.0.4044.138",
+            "majorMinor": "81.0",
+            "normalized": "81.0.4044"
           },
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_CPU",
           "supports_horizontal_scaling": null
         }
+      },
+      "83": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": false
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": "2020-05-18T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2020-07-13T22:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "83.0.4103.97",
+            "majorMinor": "83.0",
+            "normalized": "83.0.4103"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      "84": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": false
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": "2020-07-13T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2020-08-24T22:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "84.0.4147.89",
+            "majorMinor": "84.0",
+            "normalized": "84.0.4147"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      "86": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": false
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": "2020-10-05T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2020-11-16T23:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "86.0.4240183-1~bpo9+1",
+            "majorMinor": "86.0",
+            "normalized": "86.0.4240183"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": null
+        }
+      },
+      "91": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": false
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": "2021-05-24T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2021-07-19T22:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "91.0.4472.163-0psh1",
+            "majorMinor": "91.0",
+            "normalized": "91.0.4472"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "95": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": false
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": "2021-10-18T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2021-11-15T23:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "95.0.4638.78-0psh1~bpo10+1",
+            "majorMinor": "95.0",
+            "normalized": "95.0.4638"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "113": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": "2023-05-01T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2023-05-29T22:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "113.0.5672.77-0psh1",
+            "majorMinor": "113.0",
+            "normalized": "113.0.5672"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "120": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": "2023-12-04T23:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2024-01-22T23:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 9222,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "120.0.6084.1-0psh1",
+            "majorMinor": "120.0",
+            "normalized": "120.0.6084"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": null,
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
       }
-    ]
+    }
   },
   "clickhouse": {
     "name": "ClickHouse",
@@ -433,9 +423,8 @@
     "internal": {
       "repo_name": "clickhouse"
     },
-    "versions": [
-      {
-        "name": "25.8",
+    "versions": {
+      "25.8": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -478,8 +467,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "25.3",
+      "25.3": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -522,8 +510,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "24.3",
+      "24.3": {
         "upsun": {
           "status": "deprecated",
           "internal_support": true
@@ -566,8 +553,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "23.8",
+      "23.8": {
         "upsun": {
           "status": "deprecated",
           "internal_support": true
@@ -610,7 +596,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "dotnet": {
     "description": "ASP.NET 5 application container.",
@@ -645,9 +631,8 @@
     "internal": {
       "repo_name": "dotnet"
     },
-    "versions": [
-      {
-        "name": "10.0",
+    "versions": {
+      "10.0": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -686,8 +671,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "8.0",
+      "8.0": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -726,8 +710,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "7.0",
+      "7.0": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -766,8 +749,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "6.0",
+      "6.0": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -806,8 +788,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "5.0",
+      "5.0": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -846,8 +827,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "3.1",
+      "3.1": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -886,8 +866,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.2",
+      "2.2": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -926,8 +905,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.1",
+      "2.1": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -966,8 +944,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.0",
+      "2.0": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -1006,7 +983,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "elasticsearch": {
     "description": "A manufacture service for Elasticsearch",
@@ -1022,9 +999,8 @@
     "internal": {
       "repo_name": "elasticsearch"
     },
-    "versions": [
-      {
-        "name": "7.10",
+    "versions": {
+      "7.10": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -1064,8 +1040,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "7.9",
+      "7.9": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -1105,8 +1080,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "7.7",
+      "7.7": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -1146,8 +1120,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "7.6",
+      "7.6": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -1187,8 +1160,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "7.5",
+      "7.5": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -1228,8 +1200,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "7.2",
+      "7.2": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -1269,8 +1240,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "6.8",
+      "6.8": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -1310,8 +1280,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "6.5",
+      "6.5": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -1351,8 +1320,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "5.4",
+      "5.4": {
         "upsun": {
           "status": "decommissioned",
           "internal_support": false
@@ -1392,8 +1360,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "5.2",
+      "5.2": {
         "upsun": {
           "status": "decommissioned",
           "internal_support": false
@@ -1433,8 +1400,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.4",
+      "2.4": {
         "upsun": {
           "status": "decommissioned",
           "internal_support": false
@@ -1474,8 +1440,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.7",
+      "1.7": {
         "upsun": {
           "status": "decommissioned",
           "internal_support": false
@@ -1509,8 +1474,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.4",
+      "1.4": {
         "upsun": {
           "status": "decommissioned",
           "internal_support": false
@@ -1544,8 +1508,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "0.90",
+      "0.90": {
         "upsun": {
           "status": "decommissioned",
           "internal_support": false
@@ -1579,7 +1542,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "elixir": {
     "description": "",
@@ -1615,9 +1578,8 @@
     "internal": {
       "repo_name": "elixir"
     },
-    "versions": [
-      {
-        "name": "1.18",
+    "versions": {
+      "1.18": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -1656,8 +1618,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "1.15",
+      "1.15": {
         "upsun": {
           "status": "deprecated",
           "internal_support": false
@@ -1696,8 +1657,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "1.14",
+      "1.14": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -1736,8 +1696,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "1.13",
+      "1.13": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -1776,8 +1735,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.12",
+      "1.12": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -1816,8 +1774,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.11",
+      "1.11": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -1856,8 +1813,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.10",
+      "1.10": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -1896,8 +1852,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.9",
+      "1.9": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -1936,7 +1891,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "golang": {
     "description": "",
@@ -1972,9 +1927,8 @@
     "internal": {
       "repo_name": "golang"
     },
-    "versions": [
-      {
-        "name": "1.25",
+    "versions": {
+      "1.25": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -2013,8 +1967,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "1.24",
+      "1.24": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -2053,8 +2006,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "1.23",
+      "1.23": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -2093,8 +2045,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "1.22",
+      "1.22": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -2133,8 +2084,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "1.21",
+      "1.21": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -2173,8 +2123,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "1.20",
+      "1.20": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -2213,8 +2162,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "1.19",
+      "1.19": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -2253,8 +2201,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "1.18",
+      "1.18": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -2293,8 +2240,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "1.17",
+      "1.17": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -2333,8 +2279,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "1.16",
+      "1.16": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -2373,8 +2318,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.15",
+      "1.15": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -2413,8 +2357,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "1.14",
+      "1.14": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -2453,8 +2396,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "1.13",
+      "1.13": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -2493,8 +2435,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.12",
+      "1.12": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -2533,8 +2474,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.11",
+      "1.11": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -2573,8 +2513,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.10",
+      "1.10": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -2613,8 +2552,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.9",
+      "1.9": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -2653,8 +2591,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.8",
+      "1.8": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -2693,7 +2630,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "influxdb": {
     "description": "",
@@ -2709,9 +2646,8 @@
     "internal": {
       "repo_name": "influxdb"
     },
-    "versions": [
-      {
-        "name": "2.7",
+    "versions": {
+      "2.7": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -2750,8 +2686,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.3",
+      "2.3": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -2790,8 +2725,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.2",
+      "2.2": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -2825,8 +2759,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.1",
+      "2.1": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -2860,8 +2793,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.0",
+      "2.0": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -2895,8 +2827,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.8",
+      "1.8": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -2935,8 +2866,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.7",
+      "1.7": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -2975,8 +2905,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.3",
+      "1.3": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -3016,8 +2945,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.2",
+      "1.2": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -3051,7 +2979,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "gotenberg": {
     "description": "",
@@ -3067,9 +2995,8 @@
     "runtime": false,
     "service": true,
     "need_disk": false,
-    "versions": [
-      {
-        "name": "8",
+    "versions": {
+      "8": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -3108,7 +3035,7 @@
           "supports_horizontal_scaling": true
         }
       }
-    ]
+    }
   },
   "java": {
     "description": "",
@@ -3134,22 +3061,21 @@
     "runtime": true,
     "service": false,
     "need_disk": false,
-    "versions": [
-      {
-        "name": "21",
+    "versions": {
+      "8": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true
+          "status": "retired",
+          "internal_support": false
         },
         "upstream": {
-          "status": "supported",
-          "release_date": "2023-09-18T22:00:00.000Z",
+          "status": "retired",
+          "release_date": "2014-03-17T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2028-09-29T22:00:00.000Z",
+          "end_of_life_date": "2022-03-30T22:00:00.000Z",
           "is_lts": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": true
         },
         "manifest": {
@@ -3165,9 +3091,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "21.0.10-1",
-            "majorMinor": "21.0",
-            "normalized": "21.0.10"
+            "raw": "8u452-ga-1~deb8u1",
+            "majorMinor": "8.0",
+            "normalized": "8.0.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -3175,248 +3101,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "19",
-        "upsun": {
-          "status": "retired",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2022-09-19T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-03-20T23:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 80,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "19.0.2-1",
-            "majorMinor": "19.0",
-            "normalized": "19.0.2"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
-        }
-      },
-      {
-        "name": "18",
-        "upsun": {
-          "status": "retired",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2022-03-21T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-09-19T22:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 80,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "18.0.2.1-1",
-            "majorMinor": "18.0",
-            "normalized": "18.0.2"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
-        }
-      },
-      {
-        "name": "17",
-        "upsun": {
-          "status": "supported",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "supported",
-          "release_date": "2021-09-13T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2026-09-29T22:00:00.000Z",
-          "is_lts": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
-          "is_long_term_support": true
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 80,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "17.0.18-1",
-            "majorMinor": "17.0",
-            "normalized": "17.0.18"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
-        }
-      },
-      {
-        "name": "14",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2020-03-16T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-09-15T22:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 80,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "14.0.1-0psh2~bpo9+1",
-            "majorMinor": "14.0",
-            "normalized": "14.0.1"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
-        }
-      },
-      {
-        "name": "13",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2019-09-16T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-03-16T23:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 80,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "13.32.0-0psh1",
-            "majorMinor": "13.32",
-            "normalized": "13.32.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
-        }
-      },
-      {
-        "name": "12",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2019-03-18T23:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2019-09-16T22:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 80,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "12.33.0-2psh1",
-            "majorMinor": "12.33",
-            "normalized": "12.33.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
-        }
-      },
-      {
-        "name": "11",
+      "11": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -3455,21 +3140,137 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "8",
+      "12": {
         "upsun": {
           "status": "retired",
           "internal_support": false
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2014-03-17T23:00:00.000Z",
+          "release_date": "2019-03-18T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-03-30T22:00:00.000Z",
-          "is_lts": true,
+          "end_of_life_date": "2019-09-16T22:00:00.000Z",
+          "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
           "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "12.33.0-2psh1",
+            "majorMinor": "12.33",
+            "normalized": "12.33.0"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "13": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": false
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": "2019-09-16T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2020-03-16T23:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "13.32.0-0psh1",
+            "majorMinor": "13.32",
+            "normalized": "13.32.0"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "14": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": false
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": "2020-03-16T23:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2020-09-15T22:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "14.0.1-0psh2~bpo9+1",
+            "majorMinor": "14.0",
+            "normalized": "14.0.1"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "17": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": "2021-09-13T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2026-09-29T22:00:00.000Z",
+          "is_lts": true,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
           "is_long_term_support": true
         },
         "manifest": {
@@ -3485,9 +3286,126 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8u452-ga-1~deb8u1",
-            "majorMinor": "8.0",
-            "normalized": "8.0.0"
+            "raw": "17.0.18-1",
+            "majorMinor": "17.0",
+            "normalized": "17.0.18"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "18": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": "2022-03-21T23:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2022-09-19T22:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "18.0.2.1-1",
+            "majorMinor": "18.0",
+            "normalized": "18.0.2"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "19": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": "2022-09-19T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2023-03-20T23:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "19.0.2-1",
+            "majorMinor": "19.0",
+            "normalized": "19.0.2"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "21": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": "2023-09-18T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2028-09-29T22:00:00.000Z",
+          "is_lts": true,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
+          "is_long_term_support": true
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "21.0.10-1",
+            "majorMinor": "21.0",
+            "normalized": "21.0.10"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -3495,7 +3413,7 @@
           "supports_horizontal_scaling": true
         }
       }
-    ]
+    }
   },
   "kafka": {
     "description": "",
@@ -3511,9 +3429,8 @@
     "internal": {
       "repo_name": "kafka"
     },
-    "versions": [
-      {
-        "name": "3.7",
+    "versions": {
+      "3.7": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -3552,8 +3469,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "3.6",
+      "3.6": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -3592,8 +3508,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "3.4",
+      "3.4": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -3632,8 +3547,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "3.2",
+      "3.2": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -3672,8 +3586,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.7",
+      "2.7": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -3707,8 +3620,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.6",
+      "2.6": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -3742,8 +3654,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.5",
+      "2.5": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -3777,8 +3688,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.4",
+      "2.4": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -3812,8 +3722,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.3",
+      "2.3": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -3847,8 +3756,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.2",
+      "2.2": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -3882,8 +3790,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.1",
+      "2.1": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -3917,7 +3824,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "mariadb": {
     "description": "A manufacture-based container for MariaDB",
@@ -3933,9 +3840,8 @@
     "internal": {
       "repo_name": "mariadb"
     },
-    "versions": [
-      {
-        "name": "11.8",
+    "versions": {
+      "11.8": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -3976,8 +3882,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "11.4",
+      "11.4": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -4018,8 +3923,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "11.2",
+      "11.2": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -4060,8 +3964,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "11.0",
+      "11.0": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -4102,8 +4005,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "10.11",
+      "10.11": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -4144,8 +4046,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "10.6",
+      "10.6": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -4186,8 +4087,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "10.5",
+      "10.5": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -4228,8 +4128,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "10.4",
+      "10.4": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -4270,8 +4169,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "10.3",
+      "10.3": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -4312,8 +4210,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "10.2",
+      "10.2": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -4354,8 +4251,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "10.1",
+      "10.1": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -4396,8 +4292,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "10.0",
+      "10.0": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -4438,8 +4333,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "5.5",
+      "5.5": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -4480,7 +4374,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "mysql": {
     "description": "A manufacture-based container for MariaDB",
@@ -4496,9 +4390,8 @@
     "internal": {
       "repo_name": "mysql"
     },
-    "versions": [
-      {
-        "name": "11.8",
+    "versions": {
+      "11.8": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -4539,8 +4432,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "11.4",
+      "11.4": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -4581,8 +4473,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "11.2",
+      "11.2": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -4623,8 +4514,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "11.0",
+      "11.0": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -4665,8 +4555,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "10.11",
+      "10.11": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -4707,8 +4596,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "10.6",
+      "10.6": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -4749,8 +4637,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "10.5",
+      "10.5": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -4791,8 +4678,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "10.4",
+      "10.4": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -4833,8 +4719,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "10.3",
+      "10.3": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -4875,8 +4760,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "10.2",
+      "10.2": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -4917,8 +4801,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "10.1",
+      "10.1": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -4959,8 +4842,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "10.0",
+      "10.0": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -5001,8 +4883,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "5.5",
+      "5.5": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -5043,7 +4924,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "memcached": {
     "description": "Memcached service.",
@@ -5059,9 +4940,8 @@
     "internal": {
       "repo_name": "memcached"
     },
-    "versions": [
-      {
-        "name": "1.6",
+    "versions": {
+      "1.6": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -5101,8 +4981,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.5",
+      "1.5": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -5142,8 +5021,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.4",
+      "1.4": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -5183,7 +5061,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "mongodb-enterprise": {
     "description": "Support for the enterprise edition of MongoDB",
@@ -5200,9 +5078,8 @@
     "internal": {
       "repo_name": "mongodb-enterprise"
     },
-    "versions": [
-      {
-        "name": "7.0",
+    "versions": {
+      "7.0": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -5242,8 +5119,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "6.0",
+      "6.0": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -5283,8 +5159,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "5.0",
+      "5.0": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -5324,8 +5199,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "4.4",
+      "4.4": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -5365,8 +5239,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "4.2",
+      "4.2": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -5406,8 +5279,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "4.0",
+      "4.0": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -5447,7 +5319,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "network-storage": {
     "description": "",
@@ -5463,9 +5335,8 @@
     "internal": {
       "repo_name": "network-storage"
     },
-    "versions": [
-      {
-        "name": "2.0",
+    "versions": {
+      "2.0": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -5499,8 +5370,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.0",
+      "1.0": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -5534,7 +5404,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "nodejs": {
     "description": "NodeJS service for Upsun Fixed",
@@ -5555,169 +5425,8 @@
     "internal": {
       "repo_name": "nodejs"
     },
-    "versions": [
-      {
-        "name": "24",
-        "upsun": {
-          "status": "supported",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "supported",
-          "release_date": "2025-05-05T22:00:00.000Z",
-          "end_of_active_support_date": "2026-10-19T22:00:00.000Z",
-          "end_of_life_date": "2028-04-29T22:00:00.000Z",
-          "is_lts": true,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
-          "is_long_term_support": true
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 80,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 64,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "24.13.0-1nodesource1",
-            "majorMinor": "24.13",
-            "normalized": "24.13.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": true
-        }
-      },
-      {
-        "name": "22",
-        "upsun": {
-          "status": "deprecated",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "deprecated",
-          "release_date": "2024-04-23T22:00:00.000Z",
-          "end_of_active_support_date": "2025-10-20T22:00:00.000Z",
-          "end_of_life_date": "2027-04-29T22:00:00.000Z",
-          "is_lts": true,
-          "is_maintained": true,
-          "is_end_of_active_support": true,
-          "is_end_of_life": false,
-          "is_long_term_support": true
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 80,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 64,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "22.22.0-1nodesource1",
-            "majorMinor": "22.22",
-            "normalized": "22.22.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": true
-        }
-      },
-      {
-        "name": "20",
-        "upsun": {
-          "status": "deprecated",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "deprecated",
-          "release_date": "2023-04-17T22:00:00.000Z",
-          "end_of_active_support_date": "2024-10-21T22:00:00.000Z",
-          "end_of_life_date": "2026-04-29T22:00:00.000Z",
-          "is_lts": true,
-          "is_maintained": true,
-          "is_end_of_active_support": true,
-          "is_end_of_life": false,
-          "is_long_term_support": true
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 80,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 64,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "20.20.0-1nodesource1",
-            "majorMinor": "20.20",
-            "normalized": "20.20.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": true
-        }
-      },
-      {
-        "name": "18",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2022-04-18T22:00:00.000Z",
-          "end_of_active_support_date": "2023-10-17T22:00:00.000Z",
-          "end_of_life_date": "2025-04-29T22:00:00.000Z",
-          "is_lts": true,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": true
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 80,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 64,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "18.20.8-1nodesource1",
-            "majorMinor": "18.20",
-            "normalized": "18.20.8"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": true
-        }
-      },
-      {
-        "name": "16",
+    "versions": {
+      "16": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -5756,8 +5465,163 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "8.9",
+      "18": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": false
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": "2022-04-18T22:00:00.000Z",
+          "end_of_active_support_date": "2023-10-17T22:00:00.000Z",
+          "end_of_life_date": "2025-04-29T22:00:00.000Z",
+          "is_lts": true,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": true
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "18.20.8-1nodesource1",
+            "majorMinor": "18.20",
+            "normalized": "18.20.8"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "20": {
+        "upsun": {
+          "status": "deprecated",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "deprecated",
+          "release_date": "2023-04-17T22:00:00.000Z",
+          "end_of_active_support_date": "2024-10-21T22:00:00.000Z",
+          "end_of_life_date": "2026-04-29T22:00:00.000Z",
+          "is_lts": true,
+          "is_maintained": true,
+          "is_end_of_active_support": true,
+          "is_end_of_life": false,
+          "is_long_term_support": true
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "20.20.0-1nodesource1",
+            "majorMinor": "20.20",
+            "normalized": "20.20.0"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "22": {
+        "upsun": {
+          "status": "deprecated",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "deprecated",
+          "release_date": "2024-04-23T22:00:00.000Z",
+          "end_of_active_support_date": "2025-10-20T22:00:00.000Z",
+          "end_of_life_date": "2027-04-29T22:00:00.000Z",
+          "is_lts": true,
+          "is_maintained": true,
+          "is_end_of_active_support": true,
+          "is_end_of_life": false,
+          "is_long_term_support": true
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "22.22.0-1nodesource1",
+            "majorMinor": "22.22",
+            "normalized": "22.22.0"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "24": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": "2025-05-05T22:00:00.000Z",
+          "end_of_active_support_date": "2026-10-19T22:00:00.000Z",
+          "end_of_life_date": "2028-04-29T22:00:00.000Z",
+          "is_lts": true,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
+          "is_long_term_support": true
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "24.13.0-1nodesource1",
+            "majorMinor": "24.13",
+            "normalized": "24.13.0"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "8.9": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -5796,8 +5660,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "6.10",
+      "6.10": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -5836,8 +5699,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "6.9",
+      "6.9": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -5876,8 +5738,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "6.8",
+      "6.8": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -5916,8 +5777,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "6.6",
+      "6.6": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -5956,8 +5816,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "6.3",
+      "6.3": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -5996,8 +5855,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "6.2",
+      "6.2": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -6036,8 +5894,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "4.7",
+      "4.7": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -6076,8 +5933,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "4.6",
+      "4.6": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -6116,8 +5972,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "4.5",
+      "4.5": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -6156,8 +6011,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "4.4",
+      "4.4": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -6196,8 +6050,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "4.3",
+      "4.3": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -6236,8 +6089,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "4.2",
+      "4.2": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -6276,8 +6128,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "0.12",
+      "0.12": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -6316,7 +6167,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "opensearch": {
     "description": "A manufacture service for OpenSearch",
@@ -6332,22 +6183,21 @@
     "internal": {
       "repo_name": "opensearch"
     },
-    "versions": [
-      {
-        "name": "3",
+    "versions": {
+      "1": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true
+          "status": "retired",
+          "internal_support": false
         },
         "upstream": {
-          "status": "supported",
-          "release_date": "2025-05-05T22:00:00.000Z",
+          "status": "retired",
+          "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -6364,9 +6214,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "3.4.0~0psh1",
-            "majorMinor": "3.4",
-            "normalized": "3.4.0"
+            "raw": "1.3.20-0psh1",
+            "majorMinor": "1.3",
+            "normalized": "1.3.20"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -6374,8 +6224,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2",
+      "2": {
         "upsun": {
           "status": "deprecated",
           "internal_support": true
@@ -6415,8 +6264,47 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.2",
+      "3": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": "2025-05-05T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": null,
+          "is_lts": false,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "opensearch": {
+              "port": 9200,
+              "scheme": "http",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "3.4.0~0psh1",
+            "majorMinor": "3.4",
+            "normalized": "3.4.0"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      "1.2": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -6456,8 +6344,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.1",
+      "1.1": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -6496,49 +6383,8 @@
           "default_container_profile": "HIGH_MEMORY",
           "supports_horizontal_scaling": null
         }
-      },
-      {
-        "name": "1",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "opensearch": {
-              "port": 9200,
-              "scheme": "http",
-              "default": true
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "1.3.20-0psh1",
-            "majorMinor": "1.3",
-            "normalized": "1.3.20"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
       }
-    ]
+    }
   },
   "oracle-mysql": {
     "description": "Images using MySQL from Oracle instead of MariaDB still providing mysql endpoints",
@@ -6554,9 +6400,8 @@
     "internal": {
       "repo_name": "oracle-mysql"
     },
-    "versions": [
-      {
-        "name": "8.4",
+    "versions": {
+      "8.4": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -6590,8 +6435,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "8.0",
+      "8.0": {
         "upsun": {
           "status": "deprecated",
           "internal_support": true
@@ -6625,8 +6469,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "5.7",
+      "5.7": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -6660,7 +6503,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "php": {
     "description": "PHP service for Upsun Fixed.",
@@ -6697,9 +6540,8 @@
     "internal": {
       "repo_name": "php"
     },
-    "versions": [
-      {
-        "name": "8.5",
+    "versions": {
+      "8.5": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -6742,8 +6584,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "8.4",
+      "8.4": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -6786,8 +6627,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "8.3",
+      "8.3": {
         "upsun": {
           "status": "deprecated",
           "internal_support": true
@@ -6830,8 +6670,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "8.2",
+      "8.2": {
         "upsun": {
           "status": "deprecated",
           "internal_support": true
@@ -6874,8 +6713,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "8.1",
+      "8.1": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -6918,8 +6756,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "8.0",
+      "8.0": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -6962,8 +6799,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "7.4",
+      "7.4": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -7006,8 +6842,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "7.3",
+      "7.3": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -7050,8 +6885,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "7.2",
+      "7.2": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -7094,8 +6928,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "7.1",
+      "7.1": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -7138,8 +6971,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "7.0",
+      "7.0": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -7182,8 +7014,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "5.6",
+      "5.6": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -7226,8 +7057,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "5.5",
+      "5.5": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -7270,8 +7100,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "5.4",
+      "5.4": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -7314,7 +7143,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "postgresql": {
     "description": "PostgreSQL service for Upsun Fixed.",
@@ -7330,9 +7159,344 @@
     "internal": {
       "repo_name": "postgresql"
     },
-    "versions": [
-      {
-        "name": "18",
+    "versions": {
+      "10": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": false
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": "2017-10-04T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2022-11-09T23:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "10.22-1.pgdg90+1",
+            "majorMinor": "10.22",
+            "normalized": "10.22.0"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      "11": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": false
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": "2018-10-17T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2023-11-08T23:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "11.22-4.pgdg100+1",
+            "majorMinor": "11.22",
+            "normalized": "11.22.0"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      "12": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": "2019-10-02T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2024-11-20T23:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "12.22-3.pgdg11+1",
+            "majorMinor": "12.22",
+            "normalized": "12.22.0"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      "13": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "retired",
+          "release_date": "2020-09-23T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2025-11-12T23:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": false,
+          "is_end_of_active_support": true,
+          "is_end_of_life": true,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "13.23-1.pgdg11+1",
+            "majorMinor": "13.23",
+            "normalized": "13.23.0"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      "14": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": "2021-09-29T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2026-11-11T23:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "14.20-1.pgdg11+1",
+            "majorMinor": "14.20",
+            "normalized": "14.20.0"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      "15": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": "2022-10-12T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2027-11-10T23:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "15.15-1.pgdg11+1",
+            "majorMinor": "15.15",
+            "normalized": "15.15.0"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      "16": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": "2023-09-13T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2028-11-08T23:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "16.11-1.pgdg11+1",
+            "majorMinor": "16.11",
+            "normalized": "16.11.0"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      "17": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": "2024-09-25T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": "2029-11-07T23:00:00.000Z",
+          "is_lts": false,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": {
+            "postgresql": {
+              "default": true,
+              "privileges": {
+                "main": "admin"
+              },
+              "default_database": "main"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "17.7-3.pgdg11+1",
+            "majorMinor": "17.7",
+            "normalized": "17.7.0"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
+      "18": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -7382,352 +7546,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "17",
-        "upsun": {
-          "status": "supported",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "supported",
-          "release_date": "2024-09-25T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2029-11-07T23:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "postgresql": {
-              "default": true,
-              "privileges": {
-                "main": "admin"
-              },
-              "default_database": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "17.7-3.pgdg11+1",
-            "majorMinor": "17.7",
-            "normalized": "17.7.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "16",
-        "upsun": {
-          "status": "supported",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "supported",
-          "release_date": "2023-09-13T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2028-11-08T23:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "postgresql": {
-              "default": true,
-              "privileges": {
-                "main": "admin"
-              },
-              "default_database": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "16.11-1.pgdg11+1",
-            "majorMinor": "16.11",
-            "normalized": "16.11.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "15",
-        "upsun": {
-          "status": "supported",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "supported",
-          "release_date": "2022-10-12T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2027-11-10T23:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "postgresql": {
-              "default": true,
-              "privileges": {
-                "main": "admin"
-              },
-              "default_database": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "15.15-1.pgdg11+1",
-            "majorMinor": "15.15",
-            "normalized": "15.15.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "14",
-        "upsun": {
-          "status": "supported",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "supported",
-          "release_date": "2021-09-29T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2026-11-11T23:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "postgresql": {
-              "default": true,
-              "privileges": {
-                "main": "admin"
-              },
-              "default_database": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "14.20-1.pgdg11+1",
-            "majorMinor": "14.20",
-            "normalized": "14.20.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "13",
-        "upsun": {
-          "status": "retired",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2020-09-23T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2025-11-12T23:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "postgresql": {
-              "default": true,
-              "privileges": {
-                "main": "admin"
-              },
-              "default_database": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "13.23-1.pgdg11+1",
-            "majorMinor": "13.23",
-            "normalized": "13.23.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "12",
-        "upsun": {
-          "status": "retired",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2019-10-02T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2024-11-20T23:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "postgresql": {
-              "default": true,
-              "privileges": {
-                "main": "admin"
-              },
-              "default_database": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "12.22-3.pgdg11+1",
-            "majorMinor": "12.22",
-            "normalized": "12.22.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "11",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2018-10-17T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2023-11-08T23:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "postgresql": {
-              "default": true,
-              "privileges": {
-                "main": "admin"
-              },
-              "default_database": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "11.22-4.pgdg100+1",
-            "majorMinor": "11.22",
-            "normalized": "11.22.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "10",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2017-10-04T22:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-11-09T23:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "postgresql": {
-              "default": true,
-              "privileges": {
-                "main": "admin"
-              },
-              "default_database": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "10.22-1.pgdg90+1",
-            "majorMinor": "10.22",
-            "normalized": "10.22.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "9.6",
+      "9.6": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -7769,8 +7588,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "9.5",
+      "9.5": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -7804,8 +7622,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "9.3",
+      "9.3": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -7847,7 +7664,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "python": {
     "description": "",
@@ -7879,9 +7696,8 @@
     "internal": {
       "repo_name": "python"
     },
-    "versions": [
-      {
-        "name": "3.14",
+    "versions": {
+      "3.14": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -7920,8 +7736,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "3.13",
+      "3.13": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -7960,8 +7775,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "3.12",
+      "3.12": {
         "upsun": {
           "status": "deprecated",
           "internal_support": true
@@ -8000,8 +7814,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "3.11",
+      "3.11": {
         "upsun": {
           "status": "deprecated",
           "internal_support": true
@@ -8040,8 +7853,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "3.10",
+      "3.10": {
         "upsun": {
           "status": "deprecated",
           "internal_support": true
@@ -8080,8 +7892,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "3.9",
+      "3.9": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -8120,8 +7931,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "3.8",
+      "3.8": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -8160,8 +7970,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "3.7",
+      "3.7": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -8200,8 +8009,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "3.6",
+      "3.6": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -8240,8 +8048,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "3.5",
+      "3.5": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -8280,8 +8087,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.7",
+      "2.7": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -8320,7 +8126,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "rabbitmq": {
     "description": "A manufacture-based container for RabbitMQ",
@@ -8336,9 +8142,8 @@
     "internal": {
       "repo_name": "rabbitmq"
     },
-    "versions": [
-      {
-        "name": "4.1",
+    "versions": {
+      "4.1": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -8381,8 +8186,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "4.0",
+      "4.0": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -8425,8 +8229,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "3.13",
+      "3.13": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -8469,8 +8272,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "3.12",
+      "3.12": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -8513,8 +8315,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "3.11",
+      "3.11": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -8557,8 +8358,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "3.10",
+      "3.10": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -8601,8 +8401,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "3.9",
+      "3.9": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -8645,8 +8444,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "3.8",
+      "3.8": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -8689,8 +8487,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "3.7",
+      "3.7": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -8733,8 +8530,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "3.6",
+      "3.6": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -8777,8 +8573,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "3.5",
+      "3.5": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -8821,7 +8616,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "redis": {
     "description": "A manufacture-based Redis container ",
@@ -8837,9 +8632,8 @@
     "internal": {
       "repo_name": "redis"
     },
-    "versions": [
-      {
-        "name": "8.0",
+    "versions": {
+      "8.0": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -8880,8 +8674,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "7.2",
+      "7.2": {
         "upsun": {
           "status": "deprecated",
           "internal_support": true
@@ -8922,8 +8715,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "7.0",
+      "7.0": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -8964,8 +8756,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "6.2",
+      "6.2": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -9006,8 +8797,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "6.0",
+      "6.0": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -9048,8 +8838,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "5.0",
+      "5.0": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -9090,8 +8879,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "4.0",
+      "4.0": {
         "upsun": {
           "status": "decommissioned",
           "internal_support": false
@@ -9132,8 +8920,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "3.2",
+      "3.2": {
         "upsun": {
           "status": "decommissioned",
           "internal_support": false
@@ -9174,8 +8961,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "3.0",
+      "3.0": {
         "upsun": {
           "status": "decommissioned",
           "internal_support": false
@@ -9216,8 +9002,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.8",
+      "2.8": {
         "upsun": {
           "status": "decommissioned",
           "internal_support": false
@@ -9251,7 +9036,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "ruby": {
     "description": "",
@@ -9293,9 +9078,8 @@
     "internal": {
       "repo_name": "ruby"
     },
-    "versions": [
-      {
-        "name": "4.0",
+    "versions": {
+      "4.0": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -9334,8 +9118,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "3.4",
+      "3.4": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -9374,8 +9157,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "3.3",
+      "3.3": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -9414,8 +9196,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "3.2",
+      "3.2": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -9454,8 +9235,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "3.1",
+      "3.1": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -9494,8 +9274,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "3.0",
+      "3.0": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -9534,8 +9313,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "2.7",
+      "2.7": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -9574,8 +9352,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.6",
+      "2.6": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -9614,8 +9391,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.5",
+      "2.5": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -9654,8 +9430,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.4",
+      "2.4": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -9694,8 +9469,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "2.3",
+      "2.3": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -9734,7 +9508,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "rust": {
     "description": "",
@@ -9755,9 +9529,8 @@
     "internal": {
       "repo_name": "rust"
     },
-    "versions": [
-      {
-        "name": "1",
+    "versions": {
+      "1": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -9796,7 +9569,7 @@
           "supports_horizontal_scaling": true
         }
       }
-    ]
+    }
   },
   "solr": {
     "description": "",
@@ -9812,9 +9585,8 @@
     "internal": {
       "repo_name": "solr"
     },
-    "versions": [
-      {
-        "name": "9.9",
+    "versions": {
+      "9.9": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -9854,8 +9626,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "9.6",
+      "9.6": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -9895,8 +9666,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "9.4",
+      "9.4": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -9936,8 +9706,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "9.2",
+      "9.2": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -9977,8 +9746,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "9.1",
+      "9.1": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -10018,8 +9786,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "9.0",
+      "9.0": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -10053,8 +9820,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "8.11",
+      "8.11": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -10094,8 +9860,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "8.0",
+      "8.0": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -10135,8 +9900,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "7.7",
+      "7.7": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -10176,8 +9940,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "7.6",
+      "7.6": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -10217,8 +9980,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "6.6",
+      "6.6": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -10258,8 +10020,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "6.3",
+      "6.3": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -10299,8 +10060,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "4.10",
+      "4.10": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -10340,8 +10100,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "3.6",
+      "3.6": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -10381,7 +10140,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "valkey": {
     "description": "",
@@ -10397,9 +10156,8 @@
     "internal": {
       "repo_name": "valkey"
     },
-    "versions": [
-      {
-        "name": "8.1",
+    "versions": {
+      "8.1": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -10440,8 +10198,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "8.0",
+      "8.0": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -10482,7 +10239,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "varnish": {
     "description": "",
@@ -10498,9 +10255,8 @@
     "internal": {
       "repo_name": "varnish"
     },
-    "versions": [
-      {
-        "name": "7.6",
+    "versions": {
+      "7.6": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -10544,8 +10300,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "7.3",
+      "7.3": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -10589,8 +10344,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "7.2",
+      "7.2": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -10634,8 +10388,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "7.1",
+      "7.1": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -10679,8 +10432,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "6.3",
+      "6.3": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -10724,8 +10476,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "6.0",
+      "6.0": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -10769,8 +10520,7 @@
           "supports_horizontal_scaling": true
         }
       },
-      {
-        "name": "5.2",
+      "5.2": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -10813,8 +10563,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "5.1",
+      "5.1": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -10857,7 +10606,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "vault-kms": {
     "description": "",
@@ -10873,9 +10622,8 @@
     "internal": {
       "repo_name": "vault-kms"
     },
-    "versions": [
-      {
-        "name": "1.12",
+    "versions": {
+      "1.12": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -10909,8 +10657,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.8",
+      "1.8": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -10944,8 +10691,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "1.6",
+      "1.6": {
         "upsun": {
           "status": "retired",
           "internal_support": false
@@ -10979,7 +10725,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "mercure": {
     "description": "",
@@ -10995,9 +10741,8 @@
       "service_name": "mercure",
       "url": "https://docs.upsun.com/add-services/mercure.html"
     },
-    "versions": [
-      {
-        "name": "0",
+    "versions": {
+      "0": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -11037,7 +10782,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "activemq-artemis": {
     "description": "",
@@ -11053,9 +10798,8 @@
       "service_name": "activemq-artemis",
       "url": "https://docs.upsun.com/add-services/activemq-artemis.html"
     },
-    "versions": [
-      {
-        "name": "2",
+    "versions": {
+      "2": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -11089,7 +10833,7 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   },
   "elasticsearch-enterprise": {
     "description": "",
@@ -11105,9 +10849,8 @@
       "service_name": "elasticsearch-enterprise",
       "url": "https://docs.upsun.com/add-services/elasticsearch-enterprise.html"
     },
-    "versions": [
-      {
-        "name": "8.19",
+    "versions": {
+      "8.19": {
         "upsun": {
           "status": "supported",
           "internal_support": true
@@ -11147,8 +10890,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "8.5",
+      "8.5": {
         "upsun": {
           "status": "decommissioned",
           "internal_support": true
@@ -11188,8 +10930,7 @@
           "supports_horizontal_scaling": null
         }
       },
-      {
-        "name": "7.17",
+      "7.17": {
         "upsun": {
           "status": "retired",
           "internal_support": true
@@ -11229,6 +10970,6 @@
           "supports_horizontal_scaling": null
         }
       }
-    ]
+    }
   }
 }
