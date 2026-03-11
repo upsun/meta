@@ -22,9 +22,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-12-05T00:00:00.000Z",
+          "release_date": "2023-12-04T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-01-23T00:00:00.000Z",
+          "end_of_life_date": "2024-01-22T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -62,9 +62,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-05-02T00:00:00.000Z",
+          "release_date": "2023-05-01T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2023-05-30T00:00:00.000Z",
+          "end_of_life_date": "2023-05-29T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -102,9 +102,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-10-19T00:00:00.000Z",
+          "release_date": "2021-10-18T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2021-11-16T00:00:00.000Z",
+          "end_of_life_date": "2021-11-15T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -142,9 +142,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-05-25T00:00:00.000Z",
+          "release_date": "2021-05-24T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2021-07-20T00:00:00.000Z",
+          "end_of_life_date": "2021-07-19T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -182,9 +182,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-10-06T00:00:00.000Z",
+          "release_date": "2020-10-05T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-11-17T00:00:00.000Z",
+          "end_of_life_date": "2020-11-16T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -222,9 +222,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-07-14T00:00:00.000Z",
+          "release_date": "2020-07-13T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-08-25T00:00:00.000Z",
+          "end_of_life_date": "2020-08-24T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -262,9 +262,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-05-19T00:00:00.000Z",
+          "release_date": "2020-05-18T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-07-14T00:00:00.000Z",
+          "end_of_life_date": "2020-07-13T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -302,9 +302,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-04-07T00:00:00.000Z",
+          "release_date": "2020-04-06T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-05-19T00:00:00.000Z",
+          "end_of_life_date": "2020-05-18T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -342,9 +342,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-02-04T00:00:00.000Z",
+          "release_date": "2020-02-03T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-04-07T00:00:00.000Z",
+          "end_of_life_date": "2020-04-06T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -382,9 +382,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-03-12T00:00:00.000Z",
+          "release_date": "2019-03-11T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2019-04-23T00:00:00.000Z",
+          "end_of_life_date": "2019-04-22T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -654,9 +654,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-11-11T00:00:00.000Z",
+          "release_date": "2025-11-10T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2028-11-14T00:00:00.000Z",
+          "end_of_life_date": "2028-11-13T23:00:00.000Z",
           "is_lts": true,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -694,9 +694,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2023-11-14T00:00:00.000Z",
+          "release_date": "2023-11-13T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-11-10T00:00:00.000Z",
+          "end_of_life_date": "2026-11-09T23:00:00.000Z",
           "is_lts": true,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -734,9 +734,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-11-08T00:00:00.000Z",
+          "release_date": "2022-11-07T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-05-14T00:00:00.000Z",
+          "end_of_life_date": "2024-05-13T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -774,9 +774,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-11-08T00:00:00.000Z",
+          "release_date": "2021-11-07T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-11-12T00:00:00.000Z",
+          "end_of_life_date": "2024-11-11T23:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -814,9 +814,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-11-10T00:00:00.000Z",
+          "release_date": "2020-11-09T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-05-10T00:00:00.000Z",
+          "end_of_life_date": "2022-05-09T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -854,9 +854,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-12-03T00:00:00.000Z",
+          "release_date": "2019-12-02T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-12-13T00:00:00.000Z",
+          "end_of_life_date": "2022-12-12T23:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -894,9 +894,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-12-04T00:00:00.000Z",
+          "release_date": "2018-12-03T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2019-12-23T00:00:00.000Z",
+          "end_of_life_date": "2019-12-22T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -934,9 +934,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-05-30T00:00:00.000Z",
+          "release_date": "2018-05-29T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2021-08-21T00:00:00.000Z",
+          "end_of_life_date": "2021-08-20T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -974,9 +974,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-08-14T00:00:00.000Z",
+          "release_date": "2017-08-13T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2018-10-01T00:00:00.000Z",
+          "end_of_life_date": "2018-09-30T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1031,9 +1031,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-04-10T00:00:00.000Z",
+          "release_date": "2019-04-09T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-01-15T00:00:00.000Z",
+          "end_of_life_date": "2026-01-14T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -1072,9 +1072,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-04-10T00:00:00.000Z",
+          "release_date": "2019-04-09T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-01-15T00:00:00.000Z",
+          "end_of_life_date": "2026-01-14T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1113,9 +1113,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-04-10T00:00:00.000Z",
+          "release_date": "2019-04-09T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-01-15T00:00:00.000Z",
+          "end_of_life_date": "2026-01-14T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1154,9 +1154,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-04-10T00:00:00.000Z",
+          "release_date": "2019-04-09T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-01-15T00:00:00.000Z",
+          "end_of_life_date": "2026-01-14T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1195,9 +1195,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-04-10T00:00:00.000Z",
+          "release_date": "2019-04-09T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-01-15T00:00:00.000Z",
+          "end_of_life_date": "2026-01-14T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1236,9 +1236,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-04-10T00:00:00.000Z",
+          "release_date": "2019-04-09T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-01-15T00:00:00.000Z",
+          "end_of_life_date": "2026-01-14T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1277,9 +1277,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-11-14T00:00:00.000Z",
+          "release_date": "2017-11-13T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-02-10T00:00:00.000Z",
+          "end_of_life_date": "2022-02-09T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1318,9 +1318,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-11-14T00:00:00.000Z",
+          "release_date": "2017-11-13T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-02-10T00:00:00.000Z",
+          "end_of_life_date": "2022-02-09T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1624,8 +1624,8 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2024-12-19T00:00:00.000Z",
-          "end_of_active_support_date": "2025-10-16T00:00:00.000Z",
+          "release_date": "2024-12-18T23:00:00.000Z",
+          "end_of_active_support_date": "2025-10-15T22:00:00.000Z",
           "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": true,
@@ -1664,8 +1664,8 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2023-06-19T00:00:00.000Z",
-          "end_of_active_support_date": "2023-12-22T00:00:00.000Z",
+          "release_date": "2023-06-18T22:00:00.000Z",
+          "end_of_active_support_date": "2023-12-21T23:00:00.000Z",
           "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": true,
@@ -1704,9 +1704,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-09-01T00:00:00.000Z",
-          "end_of_active_support_date": "2023-06-19T00:00:00.000Z",
-          "end_of_life_date": "2025-10-16T00:00:00.000Z",
+          "release_date": "2022-08-31T22:00:00.000Z",
+          "end_of_active_support_date": "2023-06-18T22:00:00.000Z",
+          "end_of_life_date": "2025-10-15T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1744,9 +1744,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-12-03T00:00:00.000Z",
-          "end_of_active_support_date": "2022-09-01T00:00:00.000Z",
-          "end_of_life_date": "2024-12-19T00:00:00.000Z",
+          "release_date": "2021-12-02T23:00:00.000Z",
+          "end_of_active_support_date": "2022-08-31T22:00:00.000Z",
+          "end_of_life_date": "2024-12-18T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1784,9 +1784,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-05-19T00:00:00.000Z",
-          "end_of_active_support_date": "2021-12-03T00:00:00.000Z",
-          "end_of_life_date": "2024-06-12T00:00:00.000Z",
+          "release_date": "2021-05-18T22:00:00.000Z",
+          "end_of_active_support_date": "2021-12-02T23:00:00.000Z",
+          "end_of_life_date": "2024-06-11T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1824,9 +1824,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-10-06T00:00:00.000Z",
-          "end_of_active_support_date": "2021-05-19T00:00:00.000Z",
-          "end_of_life_date": "2023-12-22T00:00:00.000Z",
+          "release_date": "2020-10-05T22:00:00.000Z",
+          "end_of_active_support_date": "2021-05-18T22:00:00.000Z",
+          "end_of_life_date": "2023-12-21T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1864,9 +1864,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-01-27T00:00:00.000Z",
-          "end_of_active_support_date": "2020-10-06T00:00:00.000Z",
-          "end_of_life_date": "2023-06-19T00:00:00.000Z",
+          "release_date": "2020-01-26T23:00:00.000Z",
+          "end_of_active_support_date": "2020-10-05T22:00:00.000Z",
+          "end_of_life_date": "2023-06-18T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1904,9 +1904,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-06-24T00:00:00.000Z",
-          "end_of_active_support_date": "2020-01-27T00:00:00.000Z",
-          "end_of_life_date": "2022-09-01T00:00:00.000Z",
+          "release_date": "2019-06-23T22:00:00.000Z",
+          "end_of_active_support_date": "2020-01-26T23:00:00.000Z",
+          "end_of_life_date": "2022-08-31T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -1974,46 +1974,6 @@
     },
     "versions": [
       {
-        "name": "1.26",
-        "upsun": {
-          "status": "supported",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "supported",
-          "release_date": "2026-02-11T00:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 80,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 64,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "1.26.0-0psh2",
-            "majorMinor": "1.26",
-            "normalized": "1.26.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": true
-        }
-      },
-      {
         "name": "1.25",
         "upsun": {
           "status": "supported",
@@ -2021,7 +1981,7 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-08-12T00:00:00.000Z",
+          "release_date": "2025-08-11T22:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
@@ -2056,18 +2016,18 @@
       {
         "name": "1.24",
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": true
         },
         "upstream": {
-          "status": "retired",
-          "release_date": "2025-02-11T00:00:00.000Z",
+          "status": "supported",
+          "release_date": "2025-02-10T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-02-11T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
           "is_long_term_support": false
         },
         "manifest": {
@@ -2101,9 +2061,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2024-08-13T00:00:00.000Z",
+          "release_date": "2024-08-12T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2025-08-12T00:00:00.000Z",
+          "end_of_life_date": "2025-08-11T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -2141,9 +2101,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2024-02-06T00:00:00.000Z",
+          "release_date": "2024-02-05T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2025-02-11T00:00:00.000Z",
+          "end_of_life_date": "2025-02-10T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -2181,9 +2141,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-08-08T00:00:00.000Z",
+          "release_date": "2023-08-07T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-08-13T00:00:00.000Z",
+          "end_of_life_date": "2024-08-12T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -2221,9 +2181,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-02-01T00:00:00.000Z",
+          "release_date": "2023-01-31T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-02-06T00:00:00.000Z",
+          "end_of_life_date": "2024-02-05T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -2261,9 +2221,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-08-02T00:00:00.000Z",
+          "release_date": "2022-08-01T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2023-09-06T00:00:00.000Z",
+          "end_of_life_date": "2023-09-05T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -2301,9 +2261,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-03-15T00:00:00.000Z",
+          "release_date": "2022-03-14T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2023-02-01T00:00:00.000Z",
+          "end_of_life_date": "2023-01-31T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -2341,9 +2301,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-08-16T00:00:00.000Z",
+          "release_date": "2021-08-15T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-08-02T00:00:00.000Z",
+          "end_of_life_date": "2022-08-01T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -2381,9 +2341,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-02-16T00:00:00.000Z",
+          "release_date": "2021-02-15T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-03-15T00:00:00.000Z",
+          "end_of_life_date": "2022-03-14T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -2421,9 +2381,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-08-11T00:00:00.000Z",
+          "release_date": "2020-08-10T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2021-08-16T00:00:00.000Z",
+          "end_of_life_date": "2021-08-15T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -2461,9 +2421,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-02-25T00:00:00.000Z",
+          "release_date": "2020-02-24T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2021-02-16T00:00:00.000Z",
+          "end_of_life_date": "2021-02-15T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -2501,9 +2461,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-09-03T00:00:00.000Z",
+          "release_date": "2019-09-02T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-08-11T00:00:00.000Z",
+          "end_of_life_date": "2020-08-10T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -2541,9 +2501,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-02-25T00:00:00.000Z",
+          "release_date": "2019-02-24T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-02-25T00:00:00.000Z",
+          "end_of_life_date": "2020-02-24T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -2581,9 +2541,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-08-24T00:00:00.000Z",
+          "release_date": "2018-08-23T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2019-09-03T00:00:00.000Z",
+          "end_of_life_date": "2019-09-02T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -2621,9 +2581,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-02-16T00:00:00.000Z",
+          "release_date": "2018-02-15T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2019-02-25T00:00:00.000Z",
+          "end_of_life_date": "2019-02-24T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -2656,11 +2616,11 @@
       {
         "name": "1.9",
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -2696,11 +2656,11 @@
       {
         "name": "1.8",
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -2758,7 +2718,7 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2020-11-09T00:00:00.000Z",
+          "release_date": "2020-11-08T23:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
@@ -2798,7 +2758,7 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2020-11-09T00:00:00.000Z",
+          "release_date": "2020-11-08T23:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
@@ -2838,7 +2798,7 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2020-11-09T00:00:00.000Z",
+          "release_date": "2020-11-08T23:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
@@ -2873,7 +2833,7 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2020-11-09T00:00:00.000Z",
+          "release_date": "2020-11-08T23:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
@@ -2908,7 +2868,7 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2020-11-09T00:00:00.000Z",
+          "release_date": "2020-11-08T23:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
@@ -2943,7 +2903,7 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2016-09-07T00:00:00.000Z",
+          "release_date": "2016-09-06T22:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
@@ -2983,7 +2943,7 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2016-09-07T00:00:00.000Z",
+          "release_date": "2016-09-06T22:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
@@ -3023,7 +2983,7 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2016-09-07T00:00:00.000Z",
+          "release_date": "2016-09-06T22:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
@@ -3064,7 +3024,7 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2016-09-07T00:00:00.000Z",
+          "release_date": "2016-09-06T22:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
@@ -3183,9 +3143,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2023-09-19T00:00:00.000Z",
+          "release_date": "2023-09-18T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2028-09-30T00:00:00.000Z",
+          "end_of_life_date": "2028-09-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -3223,9 +3183,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-09-20T00:00:00.000Z",
+          "release_date": "2022-09-19T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2023-03-21T00:00:00.000Z",
+          "end_of_life_date": "2023-03-20T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -3259,13 +3219,13 @@
         "name": "18",
         "upsun": {
           "status": "retired",
-          "internal_support": false
+          "internal_support": true
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-03-22T00:00:00.000Z",
+          "release_date": "2022-03-21T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-09-20T00:00:00.000Z",
+          "end_of_life_date": "2022-09-19T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -3303,9 +3263,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2021-09-14T00:00:00.000Z",
+          "release_date": "2021-09-13T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-09-30T00:00:00.000Z",
+          "end_of_life_date": "2026-09-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -3343,9 +3303,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-03-17T00:00:00.000Z",
+          "release_date": "2020-03-16T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-09-16T00:00:00.000Z",
+          "end_of_life_date": "2020-09-15T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -3383,9 +3343,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-09-17T00:00:00.000Z",
+          "release_date": "2019-09-16T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-03-17T00:00:00.000Z",
+          "end_of_life_date": "2020-03-16T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -3423,9 +3383,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-03-19T00:00:00.000Z",
+          "release_date": "2019-03-18T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2019-09-17T00:00:00.000Z",
+          "end_of_life_date": "2019-09-16T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -3463,9 +3423,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-09-25T00:00:00.000Z",
+          "release_date": "2018-09-24T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2023-09-30T00:00:00.000Z",
+          "end_of_life_date": "2023-09-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -3503,9 +3463,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2014-03-18T00:00:00.000Z",
+          "release_date": "2014-03-17T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-03-31T00:00:00.000Z",
+          "end_of_life_date": "2022-03-30T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -3553,60 +3513,20 @@
     },
     "versions": [
       {
-        "name": "4.1",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "supported",
-          "release_date": "2025-09-02T00:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "kafka": {
-              "port": 9092,
-              "scheme": "kafka"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 512,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "3.7.2-0psh1",
-            "majorMinor": "3.7",
-            "normalized": "3.7.2"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
         "name": "3.7",
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": true
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2024-02-26T00:00:00.000Z",
+          "release_date": "2024-02-25T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-07-26T00:00:00.000Z",
+          "end_of_life_date": "2024-07-25T22:00:00.000Z",
           "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
           "is_long_term_support": false
         },
         "manifest": {
@@ -3640,9 +3560,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-10-03T00:00:00.000Z",
+          "release_date": "2023-10-02T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-02-27T00:00:00.000Z",
+          "end_of_life_date": "2024-02-26T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -3676,13 +3596,13 @@
         "name": "3.4",
         "upsun": {
           "status": "retired",
-          "internal_support": false
+          "internal_support": true
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-02-06T00:00:00.000Z",
+          "release_date": "2023-02-05T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2023-06-13T00:00:00.000Z",
+          "end_of_life_date": "2023-06-12T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -3716,13 +3636,13 @@
         "name": "3.2",
         "upsun": {
           "status": "retired",
-          "internal_support": false
+          "internal_support": true
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-05-09T00:00:00.000Z",
+          "release_date": "2022-05-08T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-09-28T00:00:00.000Z",
+          "end_of_life_date": "2022-09-27T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -3760,9 +3680,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-12-19T00:00:00.000Z",
+          "release_date": "2020-12-18T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2021-11-15T00:00:00.000Z",
+          "end_of_life_date": "2021-11-14T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -3795,9 +3715,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-08-03T00:00:00.000Z",
+          "release_date": "2020-08-02T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2021-11-15T00:00:00.000Z",
+          "end_of_life_date": "2021-11-14T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -3830,9 +3750,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-04-14T00:00:00.000Z",
+          "release_date": "2020-04-13T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-08-10T00:00:00.000Z",
+          "end_of_life_date": "2020-08-09T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -3865,9 +3785,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-12-14T00:00:00.000Z",
+          "release_date": "2019-12-13T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-04-15T00:00:00.000Z",
+          "end_of_life_date": "2020-04-14T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -3900,9 +3820,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-06-24T00:00:00.000Z",
+          "release_date": "2019-06-23T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2019-12-16T00:00:00.000Z",
+          "end_of_life_date": "2019-12-15T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -3935,9 +3855,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-03-22T00:00:00.000Z",
+          "release_date": "2019-03-21T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2019-12-01T00:00:00.000Z",
+          "end_of_life_date": "2019-11-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -3970,9 +3890,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-11-20T00:00:00.000Z",
+          "release_date": "2018-11-19T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2019-03-22T00:00:00.000Z",
+          "end_of_life_date": "2019-03-21T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -4022,9 +3942,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-06-04T00:00:00.000Z",
+          "release_date": "2025-06-03T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2028-06-04T00:00:00.000Z",
+          "end_of_life_date": "2028-06-03T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -4064,9 +3984,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2024-05-29T00:00:00.000Z",
+          "release_date": "2024-05-28T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2029-05-29T00:00:00.000Z",
+          "end_of_life_date": "2029-05-28T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -4106,9 +4026,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-11-21T00:00:00.000Z",
+          "release_date": "2023-11-20T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-11-21T00:00:00.000Z",
+          "end_of_life_date": "2024-11-20T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -4148,9 +4068,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-06-06T00:00:00.000Z",
+          "release_date": "2023-06-05T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-06-06T00:00:00.000Z",
+          "end_of_life_date": "2024-06-05T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -4190,9 +4110,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2023-02-16T00:00:00.000Z",
+          "release_date": "2023-02-15T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2028-02-16T00:00:00.000Z",
+          "end_of_life_date": "2028-02-15T23:00:00.000Z",
           "is_lts": true,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -4232,9 +4152,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2021-07-06T00:00:00.000Z",
+          "release_date": "2021-07-05T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-07-06T00:00:00.000Z",
+          "end_of_life_date": "2026-07-05T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -4274,9 +4194,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-06-24T00:00:00.000Z",
+          "release_date": "2020-06-23T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2025-06-24T00:00:00.000Z",
+          "end_of_life_date": "2025-06-23T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -4316,9 +4236,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-06-18T00:00:00.000Z",
+          "release_date": "2019-06-17T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-06-18T00:00:00.000Z",
+          "end_of_life_date": "2024-06-17T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -4358,9 +4278,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-05-25T00:00:00.000Z",
+          "release_date": "2018-05-24T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2023-05-25T00:00:00.000Z",
+          "end_of_life_date": "2023-05-24T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -4400,9 +4320,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-05-23T00:00:00.000Z",
+          "release_date": "2017-05-22T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-05-23T00:00:00.000Z",
+          "end_of_life_date": "2022-05-22T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -4442,9 +4362,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-10-17T00:00:00.000Z",
+          "release_date": "2015-10-16T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-10-17T00:00:00.000Z",
+          "end_of_life_date": "2020-10-16T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -4484,9 +4404,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2014-03-31T00:00:00.000Z",
+          "release_date": "2014-03-30T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2019-03-31T00:00:00.000Z",
+          "end_of_life_date": "2019-03-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -4526,9 +4446,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2012-04-11T00:00:00.000Z",
+          "release_date": "2012-04-10T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-04-11T00:00:00.000Z",
+          "end_of_life_date": "2020-04-10T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -4585,9 +4505,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-06-04T00:00:00.000Z",
+          "release_date": "2025-06-03T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2028-06-04T00:00:00.000Z",
+          "end_of_life_date": "2028-06-03T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -4627,9 +4547,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2024-05-29T00:00:00.000Z",
+          "release_date": "2024-05-28T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2029-05-29T00:00:00.000Z",
+          "end_of_life_date": "2029-05-28T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -4669,9 +4589,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-11-21T00:00:00.000Z",
+          "release_date": "2023-11-20T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-11-21T00:00:00.000Z",
+          "end_of_life_date": "2024-11-20T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -4711,9 +4631,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-06-06T00:00:00.000Z",
+          "release_date": "2023-06-05T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-06-06T00:00:00.000Z",
+          "end_of_life_date": "2024-06-05T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -4753,9 +4673,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2023-02-16T00:00:00.000Z",
+          "release_date": "2023-02-15T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2028-02-16T00:00:00.000Z",
+          "end_of_life_date": "2028-02-15T23:00:00.000Z",
           "is_lts": true,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -4795,9 +4715,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2021-07-06T00:00:00.000Z",
+          "release_date": "2021-07-05T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-07-06T00:00:00.000Z",
+          "end_of_life_date": "2026-07-05T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -4837,9 +4757,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-06-24T00:00:00.000Z",
+          "release_date": "2020-06-23T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2025-06-24T00:00:00.000Z",
+          "end_of_life_date": "2025-06-23T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -4879,9 +4799,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-06-18T00:00:00.000Z",
+          "release_date": "2019-06-17T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-06-18T00:00:00.000Z",
+          "end_of_life_date": "2024-06-17T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -4921,9 +4841,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-05-25T00:00:00.000Z",
+          "release_date": "2018-05-24T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2023-05-25T00:00:00.000Z",
+          "end_of_life_date": "2023-05-24T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -4963,9 +4883,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-05-23T00:00:00.000Z",
+          "release_date": "2017-05-22T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-05-23T00:00:00.000Z",
+          "end_of_life_date": "2022-05-22T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -5005,9 +4925,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-10-17T00:00:00.000Z",
+          "release_date": "2015-10-16T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-10-17T00:00:00.000Z",
+          "end_of_life_date": "2020-10-16T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -5047,9 +4967,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2014-03-31T00:00:00.000Z",
+          "release_date": "2014-03-30T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2019-03-31T00:00:00.000Z",
+          "end_of_life_date": "2019-03-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -5089,9 +5009,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2012-04-11T00:00:00.000Z",
+          "release_date": "2012-04-10T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-04-11T00:00:00.000Z",
+          "end_of_life_date": "2020-04-10T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -5148,7 +5068,7 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2020-03-08T00:00:00.000Z",
+          "release_date": "2020-03-07T23:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
@@ -5189,9 +5109,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-07-21T00:00:00.000Z",
+          "release_date": "2017-07-20T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-03-09T00:00:00.000Z",
+          "end_of_life_date": "2020-03-08T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -5230,9 +5150,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2009-07-09T00:00:00.000Z",
+          "release_date": "2009-07-08T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2017-07-21T00:00:00.000Z",
+          "end_of_life_date": "2017-07-20T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -5265,253 +5185,6 @@
       }
     ]
   },
-  "mongodb": {
-    "description": "Experimental MongoDB support on Upsun Fixed",
-    "docs": {
-      "relationship_name": "mongodb",
-      "service_name": "mongodb",
-      "url": "https://docs.upsun.com/add-services/mongodb.html"
-    },
-    "name": "MongoDB",
-    "runtime": false,
-    "service": true,
-    "need_disk": true,
-    "internal": {
-      "repo_name": "mongodb"
-    },
-    "versions": [
-      {
-        "name": "4.0",
-        "upsun": {
-          "status": "supported",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2018-06-30T00:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2022-04-30T00:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "mongodb": {
-              "path": "main",
-              "port": 27017,
-              "query": {
-                "is_master": true
-              },
-              "scheme": "mongodb",
-              "password": "main",
-              "username": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 512,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "4.0.3",
-            "majorMinor": "4.0",
-            "normalized": "4.0.3"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "3.6",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2017-11-30T00:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2021-04-30T00:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "mongodb": {
-              "path": "main",
-              "port": 27017,
-              "query": {
-                "is_master": true
-              },
-              "scheme": "mongodb",
-              "password": "main",
-              "username": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "3.6.23",
-            "majorMinor": "3.6",
-            "normalized": "3.6.23"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "3.4",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2016-11-30T00:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2020-01-31T00:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "mongodb": {
-              "path": "main",
-              "port": 27017,
-              "query": {
-                "is_master": true
-              },
-              "scheme": "mongodb",
-              "password": "main",
-              "username": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "3.4.24",
-            "majorMinor": "3.4",
-            "normalized": "3.4.24"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "3.2",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2015-12-31T00:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2018-09-30T00:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "mongodb": {
-              "path": "main",
-              "port": 27017,
-              "query": {
-                "is_master": true
-              },
-              "scheme": "mongodb",
-              "password": "main",
-              "username": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "3.2.22",
-            "majorMinor": "3.2",
-            "normalized": "3.2.22"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      {
-        "name": "3.0",
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "release_date": "2015-03-31T00:00:00.000Z",
-          "end_of_active_support_date": null,
-          "end_of_life_date": "2018-02-28T00:00:00.000Z",
-          "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "mongodb": {
-              "path": "main",
-              "port": 27017,
-              "query": {
-                "is_master": true
-              },
-              "scheme": "mongodb",
-              "password": "main",
-              "username": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "3.0.15",
-            "majorMinor": "3.0",
-            "normalized": "3.0.15"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      }
-    ]
-  },
   "mongodb-enterprise": {
     "description": "Support for the enterprise edition of MongoDB",
     "docs": {
@@ -5536,9 +5209,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2023-08-31T00:00:00.000Z",
+          "release_date": "2023-08-30T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2027-08-31T00:00:00.000Z",
+          "end_of_life_date": "2027-08-30T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -5577,9 +5250,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-07-31T00:00:00.000Z",
+          "release_date": "2022-07-30T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2025-07-31T00:00:00.000Z",
+          "end_of_life_date": "2025-07-30T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -5618,9 +5291,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-07-31T00:00:00.000Z",
+          "release_date": "2021-07-30T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-10-31T00:00:00.000Z",
+          "end_of_life_date": "2024-10-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -5659,9 +5332,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-07-31T00:00:00.000Z",
+          "release_date": "2020-07-30T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-02-29T00:00:00.000Z",
+          "end_of_life_date": "2024-02-28T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -5700,9 +5373,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-08-31T00:00:00.000Z",
+          "release_date": "2019-08-30T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2023-04-30T00:00:00.000Z",
+          "end_of_life_date": "2023-04-29T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -5741,9 +5414,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-06-30T00:00:00.000Z",
+          "release_date": "2018-06-29T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-04-30T00:00:00.000Z",
+          "end_of_life_date": "2022-04-29T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -5794,7 +5467,7 @@
       {
         "name": "2.0",
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": true
         },
         "upstream": {
@@ -5803,9 +5476,9 @@
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
           "is_long_term_support": false
         },
         "manifest": {
@@ -5891,9 +5564,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-05-06T00:00:00.000Z",
-          "end_of_active_support_date": "2026-10-20T00:00:00.000Z",
-          "end_of_life_date": "2028-04-30T00:00:00.000Z",
+          "release_date": "2025-05-05T22:00:00.000Z",
+          "end_of_active_support_date": "2026-10-19T22:00:00.000Z",
+          "end_of_life_date": "2028-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -5931,9 +5604,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2024-04-24T00:00:00.000Z",
-          "end_of_active_support_date": "2025-10-21T00:00:00.000Z",
-          "end_of_life_date": "2027-04-30T00:00:00.000Z",
+          "release_date": "2024-04-23T22:00:00.000Z",
+          "end_of_active_support_date": "2025-10-20T22:00:00.000Z",
+          "end_of_life_date": "2027-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": true,
           "is_end_of_active_support": true,
@@ -5971,9 +5644,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2023-04-18T00:00:00.000Z",
-          "end_of_active_support_date": "2024-10-22T00:00:00.000Z",
-          "end_of_life_date": "2026-04-30T00:00:00.000Z",
+          "release_date": "2023-04-17T22:00:00.000Z",
+          "end_of_active_support_date": "2024-10-21T22:00:00.000Z",
+          "end_of_life_date": "2026-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": true,
           "is_end_of_active_support": true,
@@ -6011,9 +5684,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-04-19T00:00:00.000Z",
-          "end_of_active_support_date": "2023-10-18T00:00:00.000Z",
-          "end_of_life_date": "2025-04-30T00:00:00.000Z",
+          "release_date": "2022-04-18T22:00:00.000Z",
+          "end_of_active_support_date": "2023-10-17T22:00:00.000Z",
+          "end_of_life_date": "2025-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -6051,9 +5724,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-04-20T00:00:00.000Z",
-          "end_of_active_support_date": "2022-10-18T00:00:00.000Z",
-          "end_of_life_date": "2023-09-11T00:00:00.000Z",
+          "release_date": "2021-04-19T22:00:00.000Z",
+          "end_of_active_support_date": "2022-10-17T22:00:00.000Z",
+          "end_of_life_date": "2023-09-10T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -6091,9 +5764,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-05-30T00:00:00.000Z",
-          "end_of_active_support_date": "2019-01-01T00:00:00.000Z",
-          "end_of_life_date": "2019-12-31T00:00:00.000Z",
+          "release_date": "2017-05-29T22:00:00.000Z",
+          "end_of_active_support_date": "2018-12-31T23:00:00.000Z",
+          "end_of_life_date": "2019-12-30T23:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -6131,9 +5804,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-04-26T00:00:00.000Z",
-          "end_of_active_support_date": "2018-04-30T00:00:00.000Z",
-          "end_of_life_date": "2019-04-30T00:00:00.000Z",
+          "release_date": "2016-04-25T22:00:00.000Z",
+          "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
+          "end_of_life_date": "2019-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -6171,9 +5844,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-04-26T00:00:00.000Z",
-          "end_of_active_support_date": "2018-04-30T00:00:00.000Z",
-          "end_of_life_date": "2019-04-30T00:00:00.000Z",
+          "release_date": "2016-04-25T22:00:00.000Z",
+          "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
+          "end_of_life_date": "2019-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -6211,9 +5884,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-04-26T00:00:00.000Z",
-          "end_of_active_support_date": "2018-04-30T00:00:00.000Z",
-          "end_of_life_date": "2019-04-30T00:00:00.000Z",
+          "release_date": "2016-04-25T22:00:00.000Z",
+          "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
+          "end_of_life_date": "2019-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -6251,9 +5924,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-04-26T00:00:00.000Z",
-          "end_of_active_support_date": "2018-04-30T00:00:00.000Z",
-          "end_of_life_date": "2019-04-30T00:00:00.000Z",
+          "release_date": "2016-04-25T22:00:00.000Z",
+          "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
+          "end_of_life_date": "2019-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -6291,9 +5964,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-04-26T00:00:00.000Z",
-          "end_of_active_support_date": "2018-04-30T00:00:00.000Z",
-          "end_of_life_date": "2019-04-30T00:00:00.000Z",
+          "release_date": "2016-04-25T22:00:00.000Z",
+          "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
+          "end_of_life_date": "2019-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -6331,9 +6004,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-04-26T00:00:00.000Z",
-          "end_of_active_support_date": "2018-04-30T00:00:00.000Z",
-          "end_of_life_date": "2019-04-30T00:00:00.000Z",
+          "release_date": "2016-04-25T22:00:00.000Z",
+          "end_of_active_support_date": "2018-04-29T22:00:00.000Z",
+          "end_of_life_date": "2019-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -6371,9 +6044,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-09-09T00:00:00.000Z",
-          "end_of_active_support_date": "2017-04-01T00:00:00.000Z",
-          "end_of_life_date": "2018-04-30T00:00:00.000Z",
+          "release_date": "2015-09-08T22:00:00.000Z",
+          "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
+          "end_of_life_date": "2018-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -6411,9 +6084,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-09-09T00:00:00.000Z",
-          "end_of_active_support_date": "2017-04-01T00:00:00.000Z",
-          "end_of_life_date": "2018-04-30T00:00:00.000Z",
+          "release_date": "2015-09-08T22:00:00.000Z",
+          "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
+          "end_of_life_date": "2018-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -6451,9 +6124,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-09-09T00:00:00.000Z",
-          "end_of_active_support_date": "2017-04-01T00:00:00.000Z",
-          "end_of_life_date": "2018-04-30T00:00:00.000Z",
+          "release_date": "2015-09-08T22:00:00.000Z",
+          "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
+          "end_of_life_date": "2018-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -6491,9 +6164,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-09-09T00:00:00.000Z",
-          "end_of_active_support_date": "2017-04-01T00:00:00.000Z",
-          "end_of_life_date": "2018-04-30T00:00:00.000Z",
+          "release_date": "2015-09-08T22:00:00.000Z",
+          "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
+          "end_of_life_date": "2018-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -6531,9 +6204,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-09-09T00:00:00.000Z",
-          "end_of_active_support_date": "2017-04-01T00:00:00.000Z",
-          "end_of_life_date": "2018-04-30T00:00:00.000Z",
+          "release_date": "2015-09-08T22:00:00.000Z",
+          "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
+          "end_of_life_date": "2018-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -6571,9 +6244,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-09-09T00:00:00.000Z",
-          "end_of_active_support_date": "2017-04-01T00:00:00.000Z",
-          "end_of_life_date": "2018-04-30T00:00:00.000Z",
+          "release_date": "2015-09-08T22:00:00.000Z",
+          "end_of_active_support_date": "2017-03-31T22:00:00.000Z",
+          "end_of_life_date": "2018-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -6606,11 +6279,11 @@
       {
         "name": "0.12",
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -6668,7 +6341,7 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-05-06T00:00:00.000Z",
+          "release_date": "2025-05-05T22:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
@@ -6709,8 +6382,8 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2022-05-26T00:00:00.000Z",
-          "end_of_active_support_date": "2025-05-06T00:00:00.000Z",
+          "release_date": "2022-05-25T22:00:00.000Z",
+          "end_of_active_support_date": "2025-05-05T22:00:00.000Z",
           "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": true,
@@ -6750,9 +6423,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-07-12T00:00:00.000Z",
-          "end_of_active_support_date": "2022-05-26T00:00:00.000Z",
-          "end_of_life_date": "2025-05-06T00:00:00.000Z",
+          "release_date": "2021-07-11T22:00:00.000Z",
+          "end_of_active_support_date": "2022-05-25T22:00:00.000Z",
+          "end_of_life_date": "2025-05-05T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -6791,9 +6464,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-07-12T00:00:00.000Z",
-          "end_of_active_support_date": "2022-05-26T00:00:00.000Z",
-          "end_of_life_date": "2025-05-06T00:00:00.000Z",
+          "release_date": "2021-07-11T22:00:00.000Z",
+          "end_of_active_support_date": "2022-05-25T22:00:00.000Z",
+          "end_of_life_date": "2025-05-05T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -6827,11 +6500,11 @@
       {
         "name": "1",
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -6890,9 +6563,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2024-04-10T00:00:00.000Z",
-          "end_of_active_support_date": "2029-04-30T00:00:00.000Z",
-          "end_of_life_date": "2032-04-30T00:00:00.000Z",
+          "release_date": "2024-04-09T22:00:00.000Z",
+          "end_of_active_support_date": "2029-04-29T22:00:00.000Z",
+          "end_of_life_date": "2032-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -6925,9 +6598,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2018-04-08T00:00:00.000Z",
-          "end_of_active_support_date": "2025-04-30T00:00:00.000Z",
-          "end_of_life_date": "2026-04-30T00:00:00.000Z",
+          "release_date": "2018-04-07T22:00:00.000Z",
+          "end_of_active_support_date": "2025-04-29T22:00:00.000Z",
+          "end_of_life_date": "2026-04-29T22:00:00.000Z",
           "is_lts": true,
           "is_maintained": true,
           "is_end_of_active_support": true,
@@ -6960,9 +6633,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-10-09T00:00:00.000Z",
-          "end_of_active_support_date": "2020-10-31T00:00:00.000Z",
-          "end_of_life_date": "2023-10-31T00:00:00.000Z",
+          "release_date": "2015-10-08T22:00:00.000Z",
+          "end_of_active_support_date": "2020-10-30T23:00:00.000Z",
+          "end_of_life_date": "2023-10-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -7033,9 +6706,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-11-20T00:00:00.000Z",
-          "end_of_active_support_date": "2027-12-31T00:00:00.000Z",
-          "end_of_life_date": "2029-12-31T00:00:00.000Z",
+          "release_date": "2025-11-19T23:00:00.000Z",
+          "end_of_active_support_date": "2027-12-30T23:00:00.000Z",
+          "end_of_life_date": "2029-12-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -7077,9 +6750,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2024-11-21T00:00:00.000Z",
-          "end_of_active_support_date": "2026-12-31T00:00:00.000Z",
-          "end_of_life_date": "2028-12-31T00:00:00.000Z",
+          "release_date": "2024-11-20T23:00:00.000Z",
+          "end_of_active_support_date": "2026-12-30T23:00:00.000Z",
+          "end_of_life_date": "2028-12-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -7121,9 +6794,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2023-11-23T00:00:00.000Z",
-          "end_of_active_support_date": "2025-12-31T00:00:00.000Z",
-          "end_of_life_date": "2027-12-31T00:00:00.000Z",
+          "release_date": "2023-11-22T23:00:00.000Z",
+          "end_of_active_support_date": "2025-12-30T23:00:00.000Z",
+          "end_of_life_date": "2027-12-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": true,
@@ -7165,9 +6838,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2022-12-08T00:00:00.000Z",
-          "end_of_active_support_date": "2024-12-31T00:00:00.000Z",
-          "end_of_life_date": "2026-12-31T00:00:00.000Z",
+          "release_date": "2022-12-07T23:00:00.000Z",
+          "end_of_active_support_date": "2024-12-30T23:00:00.000Z",
+          "end_of_life_date": "2026-12-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": true,
@@ -7209,9 +6882,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-11-25T00:00:00.000Z",
-          "end_of_active_support_date": "2023-11-25T00:00:00.000Z",
-          "end_of_life_date": "2025-12-31T00:00:00.000Z",
+          "release_date": "2021-11-24T23:00:00.000Z",
+          "end_of_active_support_date": "2023-11-24T23:00:00.000Z",
+          "end_of_life_date": "2025-12-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -7253,9 +6926,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-11-26T00:00:00.000Z",
-          "end_of_active_support_date": "2022-11-26T00:00:00.000Z",
-          "end_of_life_date": "2023-11-26T00:00:00.000Z",
+          "release_date": "2020-11-25T23:00:00.000Z",
+          "end_of_active_support_date": "2022-11-25T23:00:00.000Z",
+          "end_of_life_date": "2023-11-25T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -7297,9 +6970,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-11-28T00:00:00.000Z",
-          "end_of_active_support_date": "2021-11-28T00:00:00.000Z",
-          "end_of_life_date": "2022-11-28T00:00:00.000Z",
+          "release_date": "2019-11-27T23:00:00.000Z",
+          "end_of_active_support_date": "2021-11-27T23:00:00.000Z",
+          "end_of_life_date": "2022-11-27T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -7341,9 +7014,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-12-06T00:00:00.000Z",
-          "end_of_active_support_date": "2020-12-06T00:00:00.000Z",
-          "end_of_life_date": "2021-12-06T00:00:00.000Z",
+          "release_date": "2018-12-05T23:00:00.000Z",
+          "end_of_active_support_date": "2020-12-05T23:00:00.000Z",
+          "end_of_life_date": "2021-12-05T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -7385,9 +7058,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-11-30T00:00:00.000Z",
-          "end_of_active_support_date": "2019-11-30T00:00:00.000Z",
-          "end_of_life_date": "2020-11-30T00:00:00.000Z",
+          "release_date": "2017-11-29T23:00:00.000Z",
+          "end_of_active_support_date": "2019-11-29T23:00:00.000Z",
+          "end_of_life_date": "2020-11-29T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -7429,9 +7102,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-12-01T00:00:00.000Z",
-          "end_of_active_support_date": "2018-12-01T00:00:00.000Z",
-          "end_of_life_date": "2019-12-01T00:00:00.000Z",
+          "release_date": "2016-11-30T23:00:00.000Z",
+          "end_of_active_support_date": "2018-11-30T23:00:00.000Z",
+          "end_of_life_date": "2019-11-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -7473,9 +7146,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-12-03T00:00:00.000Z",
-          "end_of_active_support_date": "2018-01-04T00:00:00.000Z",
-          "end_of_life_date": "2019-01-10T00:00:00.000Z",
+          "release_date": "2015-12-02T23:00:00.000Z",
+          "end_of_active_support_date": "2018-01-03T23:00:00.000Z",
+          "end_of_life_date": "2019-01-09T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -7517,9 +7190,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2014-08-28T00:00:00.000Z",
-          "end_of_active_support_date": "2017-01-19T00:00:00.000Z",
-          "end_of_life_date": "2018-12-31T00:00:00.000Z",
+          "release_date": "2014-08-27T22:00:00.000Z",
+          "end_of_active_support_date": "2017-01-18T23:00:00.000Z",
+          "end_of_life_date": "2018-12-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -7561,9 +7234,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2013-06-20T00:00:00.000Z",
-          "end_of_active_support_date": "2015-07-10T00:00:00.000Z",
-          "end_of_life_date": "2016-07-21T00:00:00.000Z",
+          "release_date": "2013-06-19T22:00:00.000Z",
+          "end_of_active_support_date": "2015-07-09T22:00:00.000Z",
+          "end_of_life_date": "2016-07-20T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -7605,9 +7278,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2012-03-01T00:00:00.000Z",
-          "end_of_active_support_date": "2014-09-14T00:00:00.000Z",
-          "end_of_life_date": "2015-09-14T00:00:00.000Z",
+          "release_date": "2012-02-29T23:00:00.000Z",
+          "end_of_active_support_date": "2014-09-13T22:00:00.000Z",
+          "end_of_life_date": "2015-09-13T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -7666,9 +7339,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-09-25T00:00:00.000Z",
+          "release_date": "2025-09-24T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2030-11-14T00:00:00.000Z",
+          "end_of_life_date": "2030-11-13T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -7717,9 +7390,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2024-09-26T00:00:00.000Z",
+          "release_date": "2024-09-25T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2029-11-08T00:00:00.000Z",
+          "end_of_life_date": "2029-11-07T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -7760,9 +7433,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2023-09-14T00:00:00.000Z",
+          "release_date": "2023-09-13T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2028-11-09T00:00:00.000Z",
+          "end_of_life_date": "2028-11-08T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -7803,9 +7476,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2022-10-13T00:00:00.000Z",
+          "release_date": "2022-10-12T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2027-11-11T00:00:00.000Z",
+          "end_of_life_date": "2027-11-10T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -7846,9 +7519,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2021-09-30T00:00:00.000Z",
+          "release_date": "2021-09-29T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-11-12T00:00:00.000Z",
+          "end_of_life_date": "2026-11-11T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -7889,9 +7562,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-09-24T00:00:00.000Z",
+          "release_date": "2020-09-23T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2025-11-13T00:00:00.000Z",
+          "end_of_life_date": "2025-11-12T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -7932,9 +7605,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-10-03T00:00:00.000Z",
+          "release_date": "2019-10-02T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-11-21T00:00:00.000Z",
+          "end_of_life_date": "2024-11-20T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -7975,9 +7648,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-10-18T00:00:00.000Z",
+          "release_date": "2018-10-17T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2023-11-09T00:00:00.000Z",
+          "end_of_life_date": "2023-11-08T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8018,9 +7691,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-10-05T00:00:00.000Z",
+          "release_date": "2017-10-04T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-11-10T00:00:00.000Z",
+          "end_of_life_date": "2022-11-09T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8061,9 +7734,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-09-29T00:00:00.000Z",
+          "release_date": "2016-09-28T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2021-11-11T00:00:00.000Z",
+          "end_of_life_date": "2021-11-10T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8104,9 +7777,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-01-07T00:00:00.000Z",
+          "release_date": "2016-01-06T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2021-02-11T00:00:00.000Z",
+          "end_of_life_date": "2021-02-10T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8139,9 +7812,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2013-09-09T00:00:00.000Z",
+          "release_date": "2013-09-08T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2018-11-08T00:00:00.000Z",
+          "end_of_life_date": "2018-11-07T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8215,9 +7888,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-10-07T00:00:00.000Z",
-          "end_of_active_support_date": "2027-10-01T00:00:00.000Z",
-          "end_of_life_date": "2030-10-31T00:00:00.000Z",
+          "release_date": "2025-10-06T22:00:00.000Z",
+          "end_of_active_support_date": "2027-09-30T22:00:00.000Z",
+          "end_of_life_date": "2030-10-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -8255,9 +7928,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2024-10-07T00:00:00.000Z",
-          "end_of_active_support_date": "2026-10-01T00:00:00.000Z",
-          "end_of_life_date": "2029-10-31T00:00:00.000Z",
+          "release_date": "2024-10-06T22:00:00.000Z",
+          "end_of_active_support_date": "2026-09-30T22:00:00.000Z",
+          "end_of_life_date": "2029-10-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -8295,9 +7968,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2023-10-02T00:00:00.000Z",
-          "end_of_active_support_date": "2025-04-02T00:00:00.000Z",
-          "end_of_life_date": "2028-10-31T00:00:00.000Z",
+          "release_date": "2023-10-01T22:00:00.000Z",
+          "end_of_active_support_date": "2025-04-01T22:00:00.000Z",
+          "end_of_life_date": "2028-10-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": true,
@@ -8335,9 +8008,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2022-10-24T00:00:00.000Z",
-          "end_of_active_support_date": "2024-04-01T00:00:00.000Z",
-          "end_of_life_date": "2027-10-31T00:00:00.000Z",
+          "release_date": "2022-10-23T22:00:00.000Z",
+          "end_of_active_support_date": "2024-03-31T22:00:00.000Z",
+          "end_of_life_date": "2027-10-30T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": true,
@@ -8375,9 +8048,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2021-10-04T00:00:00.000Z",
-          "end_of_active_support_date": "2023-04-05T00:00:00.000Z",
-          "end_of_life_date": "2026-10-31T00:00:00.000Z",
+          "release_date": "2021-10-03T22:00:00.000Z",
+          "end_of_active_support_date": "2023-04-04T22:00:00.000Z",
+          "end_of_life_date": "2026-10-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": true,
@@ -8411,13 +8084,13 @@
         "name": "3.9",
         "upsun": {
           "status": "retired",
-          "internal_support": false
+          "internal_support": true
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-10-05T00:00:00.000Z",
-          "end_of_active_support_date": "2022-05-17T00:00:00.000Z",
-          "end_of_life_date": "2025-10-31T00:00:00.000Z",
+          "release_date": "2020-10-04T22:00:00.000Z",
+          "end_of_active_support_date": "2022-05-16T22:00:00.000Z",
+          "end_of_life_date": "2025-10-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8455,9 +8128,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-10-14T00:00:00.000Z",
-          "end_of_active_support_date": "2021-05-03T00:00:00.000Z",
-          "end_of_life_date": "2024-10-07T00:00:00.000Z",
+          "release_date": "2019-10-13T22:00:00.000Z",
+          "end_of_active_support_date": "2021-05-02T22:00:00.000Z",
+          "end_of_life_date": "2024-10-06T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8495,9 +8168,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-06-27T00:00:00.000Z",
-          "end_of_active_support_date": "2020-06-27T00:00:00.000Z",
-          "end_of_life_date": "2023-06-27T00:00:00.000Z",
+          "release_date": "2018-06-26T22:00:00.000Z",
+          "end_of_active_support_date": "2020-06-26T22:00:00.000Z",
+          "end_of_life_date": "2023-06-26T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8535,9 +8208,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-12-23T00:00:00.000Z",
-          "end_of_active_support_date": "2018-12-24T00:00:00.000Z",
-          "end_of_life_date": "2021-12-23T00:00:00.000Z",
+          "release_date": "2016-12-22T23:00:00.000Z",
+          "end_of_active_support_date": "2018-12-23T23:00:00.000Z",
+          "end_of_life_date": "2021-12-22T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8575,9 +8248,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-09-13T00:00:00.000Z",
+          "release_date": "2015-09-12T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-09-30T00:00:00.000Z",
+          "end_of_life_date": "2020-09-29T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8615,9 +8288,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2010-07-03T00:00:00.000Z",
+          "release_date": "2010-07-02T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-01-01T00:00:00.000Z",
+          "end_of_life_date": "2019-12-31T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8671,10 +8344,10 @@
           "internal_support": true
         },
         "upstream": {
-          "status": "retired",
-          "release_date": "2025-04-15T00:00:00.000Z",
+          "status": "supported",
+          "release_date": "2025-04-14T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-01-30T00:00:00.000Z",
+          "end_of_life_date": "2026-01-29T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -8716,9 +8389,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2024-09-18T00:00:00.000Z",
+          "release_date": "2024-09-17T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2025-04-15T00:00:00.000Z",
+          "end_of_life_date": "2025-04-14T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8760,9 +8433,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2024-02-22T00:00:00.000Z",
+          "release_date": "2024-02-21T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-09-17T00:00:00.000Z",
+          "end_of_life_date": "2024-09-16T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8804,9 +8477,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-06-01T00:00:00.000Z",
+          "release_date": "2023-05-31T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-02-21T00:00:00.000Z",
+          "end_of_life_date": "2024-02-20T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8848,9 +8521,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-09-26T00:00:00.000Z",
+          "release_date": "2022-09-25T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2023-06-01T00:00:00.000Z",
+          "end_of_life_date": "2023-05-31T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8892,9 +8565,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-05-03T00:00:00.000Z",
+          "release_date": "2022-05-02T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-09-28T00:00:00.000Z",
+          "end_of_life_date": "2022-09-27T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8936,9 +8609,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-07-23T00:00:00.000Z",
+          "release_date": "2021-07-22T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2023-01-31T00:00:00.000Z",
+          "end_of_life_date": "2023-01-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -8980,9 +8653,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-10-01T00:00:00.000Z",
+          "release_date": "2019-09-30T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-07-31T00:00:00.000Z",
+          "end_of_life_date": "2022-07-30T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -9024,9 +8697,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-11-28T00:00:00.000Z",
+          "release_date": "2017-11-27T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-09-30T00:00:00.000Z",
+          "end_of_life_date": "2020-09-29T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -9068,9 +8741,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-12-22T00:00:00.000Z",
+          "release_date": "2015-12-21T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2018-05-31T00:00:00.000Z",
+          "end_of_life_date": "2018-05-30T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -9112,9 +8785,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-03-11T00:00:00.000Z",
+          "release_date": "2015-03-10T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2016-10-31T00:00:00.000Z",
+          "end_of_life_date": "2016-10-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -9172,10 +8845,10 @@
           "internal_support": true
         },
         "upstream": {
-          "status": "retired",
-          "release_date": "2025-05-02T00:00:00.000Z",
-          "end_of_active_support_date": "2025-08-04T00:00:00.000Z",
-          "end_of_life_date": "2026-02-11T00:00:00.000Z",
+          "status": "supported",
+          "release_date": "2025-05-01T22:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -9215,9 +8888,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "release_date": "2023-08-15T00:00:00.000Z",
-          "end_of_active_support_date": "2024-07-29T00:00:00.000Z",
-          "end_of_life_date": "2026-02-28T00:00:00.000Z",
+          "release_date": "2023-08-14T22:00:00.000Z",
+          "end_of_active_support_date": "2024-07-28T22:00:00.000Z",
+          "end_of_life_date": "2026-02-27T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": true,
@@ -9257,9 +8930,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-04-27T00:00:00.000Z",
-          "end_of_active_support_date": "2023-08-15T00:00:00.000Z",
-          "end_of_life_date": "2024-07-29T00:00:00.000Z",
+          "release_date": "2022-04-26T22:00:00.000Z",
+          "end_of_active_support_date": "2023-08-14T22:00:00.000Z",
+          "end_of_life_date": "2024-07-28T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -9294,18 +8967,18 @@
       {
         "name": "6.2",
         "upsun": {
-          "status": "deprecated",
-          "internal_support": false
+          "status": "retired",
+          "internal_support": true
         },
         "upstream": {
-          "status": "deprecated",
-          "release_date": "2021-02-22T00:00:00.000Z",
-          "end_of_active_support_date": "2022-04-27T00:00:00.000Z",
-          "end_of_life_date": "2025-02-28T00:00:00.000Z",
+          "status": "retired",
+          "release_date": "2021-02-21T23:00:00.000Z",
+          "end_of_active_support_date": "2022-04-26T22:00:00.000Z",
+          "end_of_life_date": "2025-02-27T23:00:00.000Z",
           "is_lts": false,
-          "is_maintained": true,
+          "is_maintained": false,
           "is_end_of_active_support": true,
-          "is_end_of_life": false,
+          "is_end_of_life": true,
           "is_long_term_support": false
         },
         "manifest": {
@@ -9341,9 +9014,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-04-30T00:00:00.000Z",
-          "end_of_active_support_date": "2021-02-22T00:00:00.000Z",
-          "end_of_life_date": "2022-05-31T00:00:00.000Z",
+          "release_date": "2020-04-29T22:00:00.000Z",
+          "end_of_active_support_date": "2021-02-21T23:00:00.000Z",
+          "end_of_life_date": "2022-05-30T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -9383,9 +9056,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-10-17T00:00:00.000Z",
-          "end_of_active_support_date": "2020-04-30T00:00:00.000Z",
-          "end_of_life_date": "2022-04-27T00:00:00.000Z",
+          "release_date": "2018-10-16T22:00:00.000Z",
+          "end_of_active_support_date": "2020-04-29T22:00:00.000Z",
+          "end_of_life_date": "2022-04-26T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -9629,9 +9302,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-12-25T00:00:00.000Z",
+          "release_date": "2025-12-24T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2029-03-31T00:00:00.000Z",
+          "end_of_life_date": "2029-03-30T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -9669,9 +9342,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2024-12-24T00:00:00.000Z",
+          "release_date": "2024-12-23T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2028-03-31T00:00:00.000Z",
+          "end_of_life_date": "2028-03-30T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -9709,9 +9382,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2023-12-25T00:00:00.000Z",
+          "release_date": "2023-12-24T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2027-03-31T00:00:00.000Z",
+          "end_of_life_date": "2027-03-30T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -9749,9 +9422,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2022-12-25T00:00:00.000Z",
+          "release_date": "2022-12-24T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-03-31T00:00:00.000Z",
+          "end_of_life_date": "2026-03-30T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -9789,9 +9462,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2021-12-25T00:00:00.000Z",
+          "release_date": "2021-12-24T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2025-03-31T00:00:00.000Z",
+          "end_of_life_date": "2025-03-30T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -9829,9 +9502,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2020-12-25T00:00:00.000Z",
+          "release_date": "2020-12-24T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-04-23T00:00:00.000Z",
+          "end_of_life_date": "2024-04-22T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -9869,9 +9542,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-12-25T00:00:00.000Z",
+          "release_date": "2019-12-24T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2023-03-31T00:00:00.000Z",
+          "end_of_life_date": "2023-03-30T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -9909,9 +9582,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2018-12-25T00:00:00.000Z",
+          "release_date": "2018-12-24T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-03-31T00:00:00.000Z",
+          "end_of_life_date": "2022-03-30T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -9949,9 +9622,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-12-25T00:00:00.000Z",
+          "release_date": "2017-12-24T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2021-03-31T00:00:00.000Z",
+          "end_of_life_date": "2021-03-30T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -9989,9 +9662,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-12-23T00:00:00.000Z",
+          "release_date": "2016-12-22T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2020-03-31T00:00:00.000Z",
+          "end_of_life_date": "2020-03-30T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -10029,9 +9702,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2015-12-24T00:00:00.000Z",
+          "release_date": "2015-12-23T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2019-03-31T00:00:00.000Z",
+          "end_of_life_date": "2019-03-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -10090,10 +9763,10 @@
           "internal_support": true
         },
         "upstream": {
-          "status": "retired",
-          "release_date": "2026-01-22T00:00:00.000Z",
+          "status": "supported",
+          "release_date": "2026-01-21T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-03-06T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -10147,10 +9820,10 @@
           "internal_support": true
         },
         "upstream": {
-          "status": "retired",
-          "release_date": "2022-05-11T00:00:00.000Z",
+          "status": "supported",
+          "release_date": "2022-05-10T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-03-03T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -10184,18 +9857,18 @@
       {
         "name": "9.6",
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": true
         },
         "upstream": {
-          "status": "retired",
-          "release_date": "2022-05-11T00:00:00.000Z",
+          "status": "supported",
+          "release_date": "2022-05-10T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-03-03T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
           "is_long_term_support": false
         },
         "manifest": {
@@ -10225,18 +9898,18 @@
       {
         "name": "9.4",
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": true
         },
         "upstream": {
-          "status": "retired",
-          "release_date": "2022-05-11T00:00:00.000Z",
+          "status": "supported",
+          "release_date": "2022-05-10T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-03-03T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
           "is_long_term_support": false
         },
         "manifest": {
@@ -10266,18 +9939,18 @@
       {
         "name": "9.2",
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": true
         },
         "upstream": {
-          "status": "retired",
-          "release_date": "2022-05-11T00:00:00.000Z",
+          "status": "supported",
+          "release_date": "2022-05-10T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-03-03T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
           "is_long_term_support": false
         },
         "manifest": {
@@ -10307,18 +9980,18 @@
       {
         "name": "9.1",
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": true
         },
         "upstream": {
-          "status": "retired",
-          "release_date": "2022-05-11T00:00:00.000Z",
+          "status": "supported",
+          "release_date": "2022-05-10T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-03-03T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
-          "is_maintained": false,
-          "is_end_of_active_support": true,
-          "is_end_of_life": true,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
           "is_long_term_support": false
         },
         "manifest": {
@@ -10352,10 +10025,10 @@
           "internal_support": false
         },
         "upstream": {
-          "status": "retired",
-          "release_date": "2022-05-11T00:00:00.000Z",
+          "status": "supported",
+          "release_date": "2022-05-10T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-03-03T00:00:00.000Z",
+          "end_of_life_date": null,
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -10388,9 +10061,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-03-13T00:00:00.000Z",
+          "release_date": "2019-03-12T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-10-25T00:00:00.000Z",
+          "end_of_life_date": "2024-10-24T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -10429,9 +10102,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-03-13T00:00:00.000Z",
+          "release_date": "2019-03-12T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-10-25T00:00:00.000Z",
+          "end_of_life_date": "2024-10-24T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -10470,9 +10143,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-09-18T00:00:00.000Z",
+          "release_date": "2017-09-17T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-05-11T00:00:00.000Z",
+          "end_of_life_date": "2022-05-10T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -10511,9 +10184,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2017-09-18T00:00:00.000Z",
+          "release_date": "2017-09-17T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2022-05-11T00:00:00.000Z",
+          "end_of_life_date": "2022-05-10T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -10552,9 +10225,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-04-07T00:00:00.000Z",
+          "release_date": "2016-04-06T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2019-03-13T00:00:00.000Z",
+          "end_of_life_date": "2019-03-12T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -10593,9 +10266,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2016-04-07T00:00:00.000Z",
+          "release_date": "2016-04-06T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2019-03-13T00:00:00.000Z",
+          "end_of_life_date": "2019-03-12T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -10634,7 +10307,7 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2012-10-11T00:00:00.000Z",
+          "release_date": "2012-10-10T22:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
@@ -10675,7 +10348,7 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2011-03-30T00:00:00.000Z",
+          "release_date": "2011-03-29T22:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": false,
@@ -10733,9 +10406,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-03-31T00:00:00.000Z",
-          "end_of_active_support_date": "2028-03-31T00:00:00.000Z",
-          "end_of_life_date": "2030-03-31T00:00:00.000Z",
+          "release_date": "2025-03-30T22:00:00.000Z",
+          "end_of_active_support_date": "2028-03-30T22:00:00.000Z",
+          "end_of_life_date": "2030-03-30T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -10775,9 +10448,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2024-09-15T00:00:00.000Z",
-          "end_of_active_support_date": "2027-09-15T00:00:00.000Z",
-          "end_of_life_date": "2027-09-15T00:00:00.000Z",
+          "release_date": "2024-09-14T22:00:00.000Z",
+          "end_of_active_support_date": "2027-09-14T22:00:00.000Z",
+          "end_of_life_date": "2027-09-14T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -10834,9 +10507,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2024-09-13T00:00:00.000Z",
+          "release_date": "2024-09-12T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2025-09-15T00:00:00.000Z",
+          "end_of_life_date": "2025-09-14T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -10879,9 +10552,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2023-03-15T00:00:00.000Z",
+          "release_date": "2023-03-14T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2024-03-15T00:00:00.000Z",
+          "end_of_life_date": "2024-03-14T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -10924,9 +10597,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-09-15T00:00:00.000Z",
+          "release_date": "2022-09-14T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2023-09-15T00:00:00.000Z",
+          "end_of_life_date": "2023-09-14T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -10969,9 +10642,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-03-15T00:00:00.000Z",
+          "release_date": "2022-03-14T23:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2023-03-15T00:00:00.000Z",
+          "end_of_life_date": "2023-03-14T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -11009,11 +10682,11 @@
       {
         "name": "6.3",
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -11059,7 +10732,7 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2018-03-15T00:00:00.000Z",
+          "release_date": "2018-03-14T23:00:00.000Z",
           "end_of_active_support_date": null,
           "end_of_life_date": null,
           "is_lts": true,
@@ -11099,11 +10772,11 @@
       {
         "name": "5.2",
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -11143,11 +10816,11 @@
       {
         "name": "5.1",
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -11209,9 +10882,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2022-10-10T00:00:00.000Z",
+          "release_date": "2022-10-09T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2023-09-27T00:00:00.000Z",
+          "end_of_life_date": "2023-09-26T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -11239,11 +10912,11 @@
       {
         "name": "1.8",
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -11274,11 +10947,11 @@
       {
         "name": "1.6",
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "release_date": null,
           "end_of_active_support_date": null,
           "end_of_life_date": null,
@@ -11366,6 +11039,58 @@
       }
     ]
   },
+  "activemq-artemis": {
+    "description": "",
+    "name": "activemq-artemis",
+    "internal": {
+      "repo_name": "activemq-artemis"
+    },
+    "runtime": false,
+    "service": true,
+    "need_disk": true,
+    "docs": {
+      "relationship_name": "activemq-artemis",
+      "service_name": "activemq-artemis",
+      "url": "https://docs.upsun.com/add-services/activemq-artemis.html"
+    },
+    "versions": [
+      {
+        "name": "2",
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "release_date": "2025-10-28T23:00:00.000Z",
+          "end_of_active_support_date": null,
+          "end_of_life_date": null,
+          "is_lts": false,
+          "is_maintained": true,
+          "is_end_of_active_support": false,
+          "is_end_of_life": false,
+          "is_long_term_support": false
+        },
+        "manifest": {
+          "endpoints": null,
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.44.0-0psh2~bpo12+1",
+            "majorMinor": "2.44",
+            "normalized": "2.44.0"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    ]
+  },
   "elasticsearch-enterprise": {
     "description": "",
     "name": "elasticsearch-enterprise",
@@ -11378,7 +11103,7 @@
     "docs": {
       "relationship_name": "elasticsearch-enterprise",
       "service_name": "elasticsearch-enterprise",
-      "url": "https://docs.upsun.com/add-services/elasticsearch.html"
+      "url": "https://docs.upsun.com/add-services/elasticsearch-enterprise.html"
     },
     "versions": [
       {
@@ -11389,9 +11114,9 @@
         },
         "upstream": {
           "status": "supported",
-          "release_date": "2025-07-23T00:00:00.000Z",
+          "release_date": "2025-07-22T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2027-07-15T00:00:00.000Z",
+          "end_of_life_date": "2027-07-14T22:00:00.000Z",
           "is_lts": false,
           "is_maintained": true,
           "is_end_of_active_support": false,
@@ -11471,9 +11196,9 @@
         },
         "upstream": {
           "status": "retired",
-          "release_date": "2019-04-10T00:00:00.000Z",
+          "release_date": "2019-04-09T22:00:00.000Z",
           "end_of_active_support_date": null,
-          "end_of_life_date": "2026-01-15T00:00:00.000Z",
+          "end_of_life_date": "2026-01-14T23:00:00.000Z",
           "is_lts": false,
           "is_maintained": false,
           "is_end_of_active_support": true,
@@ -11502,125 +11227,6 @@
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
           "supports_horizontal_scaling": null
-        }
-      }
-    ]
-  },
-  "mariadb-replica": {
-    "description": "",
-    "name": "mariadb-replica",
-    "internal": {
-      "repo_name": "mariadb-replica"
-    },
-    "runtime": false,
-    "service": true,
-    "need_disk": true,
-    "docs": {
-      "relationship_name": "mariadb-replica",
-      "service_name": "mariadb-replica",
-      "url": "https://docs.upsun.com/add-services/mysql/mysql-readonly-replication.html"
-    },
-    "versions": [
-      {
-        "name": "11.4",
-        "upsun": {
-          "status": "supported",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "supported",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "mysql": {
-              "port": 3306,
-              "schema": "mysql",
-              "scheme": "mysql",
-              "default": true
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "1:11.4.9+maria~deb12",
-            "majorMinor": "11.4",
-            "normalized": "11.4.9"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
-        }
-      }
-    ]
-  },
-  "postgresql-replica": {
-    "description": "",
-    "name": "postgresql-replica",
-    "internal": {
-      "repo_name": "postgresql-replica"
-    },
-    "runtime": false,
-    "service": true,
-    "need_disk": true,
-    "docs": {
-      "relationship_name": "postgresql-replica",
-      "service_name": "postgresql-replica",
-      "url": "https://docs.upsun.com/add-services/postgresql/postgresql-readonly-replication.html"
-    },
-    "versions": [
-      {
-        "name": "15",
-        "upsun": {
-          "status": "supported",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "supported",
-          "release_date": null,
-          "end_of_active_support_date": null,
-          "end_of_life_date": null,
-          "is_lts": false,
-          "is_maintained": true,
-          "is_end_of_active_support": false,
-          "is_end_of_life": false,
-          "is_long_term_support": false
-        },
-        "manifest": {
-          "endpoints": {
-            "postgresql": {
-              "default": true,
-              "privileges": {
-                "main": "admin"
-              },
-              "default_database": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "3.6.1+dfsg-1.pgdg12+1",
-            "majorMinor": "3.6",
-            "normalized": "3.6.1"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
         }
       }
     ]
