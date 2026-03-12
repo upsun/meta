@@ -16,9 +16,10 @@
       "enum": [
         "supported",
         "deprecated",
-        "retired"
+        "retired",
+        "decommissioned"
       ],
-      "description": "Lifecycle status of the image version."
+      "description": "Lifecycle status of the image version. Supported: officially maintained with regular updates. Deprecated: no longer recommended, may receive critical security updates. Retired: available but not maintained. Decommissioned: not available anymore."
     },
     "VersionEndpoint": {
       "type": "object",
@@ -184,50 +185,42 @@
           "$ref": "#/$defs/VersionStatus",
           "description": "Status of the version according to the upstream provider."
         },
-        "release_date": {
+        "releaseDate": {
           "oneOf": [ { "type": "string", "format": "date-time" }, { "type": "null" } ],
           "description": "Release date of the version (ISO 8601 format)."
         },
-        "end_of_active_support_date": {
+        "eoasFrom": {
           "oneOf": [ { "type": "string", "format": "date-time" }, { "type": "null" } ],
           "description": "End of active support date (ISO 8601 format)."
         },
-        "end_of_life_date": {
+        "eolFrom": {
           "oneOf": [ { "type": "string", "format": "date-time" }, { "type": "null" } ],
           "description": "End of life date for the version (ISO 8601 format)."
         },
-        "is_lts": {
+        "isLts": {
           "type": "boolean",
           "description": "Whether the version is a long-term support (LTS) release."
         },
-        "is_maintained": {
+        "isMaintained": {
           "type": "boolean",
           "description": "Whether the version is currently maintained by the upstream provider."
         },
-        "is_end_of_active_support": {
-          "type": "boolean",
+        "isEoas": {
+          "oneOf": [ { "type": "boolean" }, { "type": "null" } ],
           "description": "Whether the version has reached end of active support."
         },
-        "is_end_of_life": {
-          "type": "boolean",
+        "isEol": {
+          "oneOf": [ { "type": "boolean" }, { "type": "null" } ],
           "description": "Whether the version is end-of-life."
-        },
-        "is_long_term_support": {
-          "type": "boolean",
-          "description": "Whether the version benefits from long-term support."
         }
       },
-      "required": ["status", "is_lts", "is_maintained", "is_end_of_active_support", "is_end_of_life", "is_long_term_support"],
+      "required": ["status", "isLts", "isMaintained", "isEoas", "isEol", "releaseDate", "eoasFrom", "eolFrom"],
       "additionalProperties": false
     },
     "ImageVersion": {
       "type": "object",
       "description": "Single image version entry, including Upsun, upstream and technical manifest information.",
       "properties": {
-        "name": {
-          "type": "string",
-          "description": "Human-readable version name or number (e.g. 8.3, 24, 8.0 (LTS))."
-        },
         "upsun": {
           "$ref": "#/$defs/UpsunVersion",
           "description": "Upsun-specific information block for this version."
@@ -241,7 +234,7 @@
           "description": "Technical manifest describing endpoints, minimum resources, etc. for this version."
         }
       },
-      "required": ["name", "upsun", "upstream", "manifest"],
+      "required": ["upsun", "upstream", "manifest"],
       "additionalProperties": true
     },
     "DedicatedGen": {
@@ -421,10 +414,10 @@
           "description": "YAML relationships snippet to include in user configuration examples."
         },
         "versions": {
-          "type": "array",
-          "items": { "$ref": "#/$defs/ImageVersion" },
-          "minItems": 1,
-          "description": "List of all available versions for this image."
+          "type": "object",
+          "description": "Map of version identifiers to version information for this image.",
+          "minProperties": 1,
+          "additionalProperties": { "$ref": "#/$defs/ImageVersion" }
         },
         "versions-dedicated-gen-2": {
           "description": "Dedicated Gen 2 versions map (accepted but intentionally not validated in detail)."

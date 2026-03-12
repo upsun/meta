@@ -10,9 +10,28 @@ The Meta Registry uses CORS (Cross-Origin Resource Sharing) to control which dom
 
 In the `.env` file, define `CORS_ORIGINS`. Wildcard entries (`*`) are ignored and the service requires at least one explicit domain, so always list the exact origins you want to expose to browsers.
 
+#### Wildcard Pattern Support
+
+The configuration now supports wildcard patterns using `*` for subdomain matching:
+
 ```env
-CORS_ORIGINS=https://example.com,https://app.example.com,http://localhost:3000
+# Exact domains
+CORS_ORIGINS=https://example.com,https://app.example.com
+
+# Wildcard subdomain patterns
+CORS_ORIGINS=https://*.mintlify.app,https://*.example.com
+
+# Mixed exact and wildcard patterns
+CORS_ORIGINS=https://meta.upsun.com,https://*.mintlify.app,http://localhost:3000
 ```
+
+**Examples:**
+- `https://*.mintlify.app` will match:
+  - `https://upsun-c9761871-migrate-test-02.mintlify.app`
+  - `https://any-subdomain.mintlify.app`
+  - But NOT `https://mintlify.app` (requires at least one subdomain)
+  
+- `https://*mintlify.app` will match any subdomain including none
 
 > The server enforces at least one explicit origin; if the trimmed list is empty the application will fail to start and requests will be rejected.
 
@@ -21,6 +40,11 @@ CORS_ORIGINS=https://example.com,https://app.example.com,http://localhost:3000
 #### Local Development
 ```env
 CORS_ORIGINS=http://localhost:3000,http://localhost:5173,http://127.0.0.1:3000
+```
+
+#### Production with Wildcard Subdomains
+```env
+CORS_ORIGINS=https://meta.upsun.com,https://*.mintlify.app
 ```
 
 #### Production

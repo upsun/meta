@@ -6,10 +6,12 @@ import { withSelfLink } from '../utils/api.schema.js';
 import { ResourceManager, escapeHtml, logger } from '../utils/index.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import {
-  DeployImageListRegistry,
-  DeployImageListSchema,
-  DeployImageRegistry,
-  DeployImageSchema
+  DeployImageListDto,
+  DeployImageListSchemaDtoInternal,
+  DeployImageListSchemaDtoPublic,
+  DeployImageDto,
+  DeployImageSchemaDtoInternal,
+  DeployImageSchemaDtoPublic
 } from '../schemas/image.schema.js';
 import { HeaderAcceptSchema, ErrorDetailsSchema } from '../schemas/api.schema.js';
 
@@ -40,7 +42,7 @@ imageRouter.route({
   responses: {
     200: {
       description: 'Complete image registry',
-      schema: DeployImageListSchema,
+      schema: DeployImageListSchemaDtoPublic,
       contentTypes: ['application/json', 'application/x-yaml'],
     },
     500: {
@@ -51,14 +53,23 @@ imageRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const registry = await resourceManager.getResource('image/registry.json');
-      const registryParsed = DeployImageListSchema.parse(registry);
-      const baseUrl = `${config.server.BASE_URL}`;
-      const registryWithLinks = withSelfLink(registryParsed, (id) => `${baseUrl}${PATH}/${encodeURIComponent(id)}`);
+      // Load registry from resources
+      const registryRaw = await resourceManager.getResource('image/registry.json');
 
-      sendFormatted<DeployImageListRegistry>(res, registryWithLinks);
+      // Add self links to each image in the registry
+      const registryLink = withSelfLink(registryRaw, (id) => `${config.server.BASE_URL}${PATH}/${encodeURIComponent(id)}`);
+
+      // Validate and parse registry (depending public or internal)
+      const registryParsed = req.headers.internal === 'true'
+        ? DeployImageListSchemaDtoInternal.parse(registryLink)
+        : DeployImageListSchemaDtoPublic.parse(registryLink);
+
+      // Send formatted response
+      sendFormatted<DeployImageListDto>(res, registryParsed);
+
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read registry');
+
       sendErrorFormatted(res, {
         title: 'Unable to read registry',
         detail: error.message || 'An unexpected error occurred while reading PHP Cloud extensions',
@@ -84,7 +95,7 @@ imageRouter.route({
   responses: {
     200: {
       description: 'Image found and returned',
-      schema: DeployImageSchema,
+      schema: DeployImageSchemaDtoPublic,
       contentTypes: ['application/json', 'application/x-yaml']
     },
     400: {
@@ -103,12 +114,12 @@ imageRouter.route({
       const { id } = req.params as { id: string };
       const imageId = escapeHtml(id);
 
-      // Get registry
-      const registry = await resourceManager.getResource('image/registry.json');
+      // Load registry from resources
+      const registryRaw = await resourceManager.getResource('image/registry.json');
 
       // Check if image exists
-      if (!registry[id]) {
-        const availableImages = Object.keys(registry);
+      if (!registryRaw[id]) {
+        const availableImages = Object.keys(registryRaw);
         apiLogger.warn({ image: imageId }, 'Image not found');
 
         return sendErrorFormatted(res, {
@@ -118,29 +129,19 @@ imageRouter.route({
           extra: { availableImages }
         });
       }
+      const imageRaw = registryRaw[id];
 
-      const imageData = registry[id];
+      // Validate and parse registry (depending public or internal)
+      const imageParsed = req.headers.internal === 'true'
+        ? DeployImageSchemaDtoInternal.parse(imageRaw)
+        : DeployImageSchemaDtoPublic.parse(imageRaw);
 
-      const imageDataParsed = DeployImageSchema.safeParse(imageData);
-      if (imageDataParsed.success) {
-        sendFormatted<DeployImageRegistry>(res, imageDataParsed.data);
-      } else {
-        let error = imageDataParsed.error;
-        // If error is a stringified JSON, parse it
-        let errorObj;
-        try {
-          errorObj = typeof error === "string" ? JSON.parse(error) : error;
-        } catch {
-          errorObj = error;
-        }
-        sendErrorFormatted(res, {
-          title: 'An error occured',
-          detail: errorObj.message || 'An unexpected error occurred while parsing image data',
-          status: 400
-        });
-      }
+      // Send formatted response
+      sendFormatted<DeployImageDto>(res, imageParsed);
+
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read registry');
+
       sendErrorFormatted(res, {
         title: 'An error occured',
         detail: error.message || 'Unable to read registry',

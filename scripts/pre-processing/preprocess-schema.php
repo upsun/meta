@@ -499,15 +499,19 @@ class OpenApiPreprocessor
     // Helper function: convert empty arrays to stdClass to preserve object types
     private function forceEmptyObjects($data, array $path = [])
     {
-        if (is_array($data)) {
+        if (\is_array($data)) {
             $isSecurityNode = !empty($path) && end($path) === 'BearerAuth';
-            if (empty($data) && !$isSecurityNode) {
-                return new stdClass();
+            $isRequiredField = !empty($path) && end($path) === 'required';
+            
+            // Handle empty arrays (convert to objects except for specific fields)
+            if (empty($data)) {
+                if ($isSecurityNode || $isRequiredField) {
+                    return [];  // Keep as empty array
+                }
+                return new stdClass();  // Convert to empty object
             }
-            if (empty($data) && $isSecurityNode) {
-                return [];
-            } 
 
+            // Recursively process array elements
             $result = [];
             $isAssociative = array_keys($data) !== range(0, count($data) - 1);
 
@@ -573,14 +577,14 @@ class OpenApiPreprocessor
                                             'instance_count' => [
                                                 'type' => 'integer',
                                                 'nullable' => true,
-                                                'description' => 'Number of instances to run',
+                                                'description' => 'Number of instances to run for the webapp',
                                                 'example' => 2
                                             ],
                                             'disk' => [
                                                 'type' => 'integer',
                                                 'nullable' => true,
                                                 'title' => 'Disk Size',
-                                                'description' => 'Size of the disk in Bytes',
+                                                'description' => 'Size of the disk in Bytes for the webapp',
                                                 'example' => 1024
                                             ]
                                         ]
@@ -597,14 +601,14 @@ class OpenApiPreprocessor
                                             'instance_count' => [
                                                 'type' => 'integer',
                                                 'nullable' => true,
-                                                'description' => 'Number of instances to run',
+                                                'description' => 'Number of instances to run for the service',
                                                 'example' => 1
                                             ],
                                             'disk' => [
                                                 'type' => 'integer',
                                                 'nullable' => true,
                                                 'title' => 'Disk Size',
-                                                'description' => 'Size of the disk in Bytes',
+                                                'description' => 'Size of the disk in Bytes for the service',
                                                 'example' => 1024
                                             ]
                                         ]
@@ -621,14 +625,14 @@ class OpenApiPreprocessor
                                             'instance_count' => [
                                                 'type' => 'integer',
                                                 'nullable' => true,
-                                                'description' => 'Number of instances to run',
+                                                'description' => 'Number of instances to run for the worker',
                                                 'example' => 1
                                             ],
                                             'disk' => [
                                                 'type' => 'integer',
                                                 'nullable' => true,
                                                 'title' => 'Disk Size',
-                                                'description' => 'Size of the disk in Bytes',
+                                                'description' => 'Size of the disk in Bytes for the worker',
                                                 'example' => 1024
                                             ]
                                         ]
@@ -1003,6 +1007,7 @@ class OpenApiPreprocessor
                         && empty($schemaDef['oneOf'])
                         && empty($schemaDef['allOf'])
                         && empty($schemaDef['anyOf'])
+                        && (($schemaDef['type'] ?? null) !== 'array')
                     ) {
                         $isEmpty = true; // existing empty schema
                     }
@@ -1127,9 +1132,249 @@ class OpenApiPreprocessor
             }
         }
     }
-}
 
-# Main script
+    public function handleOneOfSchemas(): void
+    {
+        echo "\n🔀 Processing oneOf schemas...\n";
+        
+        if (!isset($this->schema['components']['schemas'])) {
+            echo "⚠️ No schemas found\n";
+            return;
+        }
+
+        $schemas = &$this->schema['components']['schemas'];
+        $oneOfCount = 0;
+        $propertyOneOfCount = 0;
+        $parentInterfaceCount = 0;
+
+        foreach ($schemas as $schemaName => &$schema) {
+            // Detect top-level schemas with oneOf
+            if (isset($schema['oneOf']) && is_array($schema['oneOf'])) {
+                $schema['x-isOneOf'] = true;
+                $oneOfCount++;
+                echo "  ✓ $schemaName\n";
+                
+                // Extract child schema names from oneOf
+                $childSchemaNames = [];
+                foreach ($schema['oneOf'] as $oneOfItem) {
+                    if (isset($oneOfItem['$ref'])) {
+                        $childSchemaName = str_replace('#/components/schemas/', '', $oneOfItem['$ref']);
+                        if (!in_array($childSchemaName, $childSchemaNames, true)) {
+                            $childSchemaNames[] = $childSchemaName;
+                        }
+                    }
+                }
+                
+                // Calculate shared required fields from all children
+                $sharedRequired = $this->calculateSharedRequiredFields($childSchemaNames, $schemas);
+                
+                // Build x-required as array of objects with name and type
+                $requiredArray = [];
+                if (!empty($sharedRequired)) {
+                    // Get types from first child schema's properties
+                    foreach ($childSchemaNames as $childName) {
+                        if (isset($schemas[$childName]['properties'])) {
+                            foreach ($sharedRequired as $fieldName) {
+                                if (isset($schemas[$childName]['properties'][$fieldName])) {
+                                    $property = $schemas[$childName]['properties'][$fieldName];
+                                    $fieldType = $property['type'] ?? 'mixed';
+                                    $format = $property['format'] ?? null;
+                                    
+                                    // Check if this is a date-time field
+                                    $isDateTime = ($fieldType === 'string' && $format === 'date-time');
+                                    
+                                    // Check if this is an object field that should be treated as a collection of items (for x-isArray semantics, e.g. tags)
+                                    $isArray = ($fieldType === 'object');
+                                    
+                                    // Capitalize field name for display
+                                    $displayName = $this->capitalizeFieldName($fieldName);
+                                    $requiredArray[] = [
+                                        'name' => $displayName,
+                                        'type' => $fieldType,
+                                        'x-isDateTime' => $isDateTime,
+                                        'x-isArray' => $isArray
+                                    ];
+                                }
+                            }
+                            break; // Only need types from one child
+                        }
+                    }
+                }
+                
+                if (!empty($requiredArray)) {
+                    $schema['x-required'] = $requiredArray;
+                    echo "      ✓ Required fields: " . implode(', ', array_column($requiredArray, 'name')) . "\n";
+                }
+                
+                // Add x-parentInterface to each child schema
+                foreach ($schema['oneOf'] as $oneOfItem) {
+                    if (isset($oneOfItem['$ref'])) {
+                        $childSchemaName = str_replace('#/components/schemas/', '', $oneOfItem['$ref']);
+                        if (isset($schemas[$childSchemaName])) {
+                            // Initialize x-parentInterface as array if not exists
+                            if (!isset($schemas[$childSchemaName]['x-parentInterface'])) {
+                                $schemas[$childSchemaName]['x-parentInterface'] = [];
+                            }
+                            // Add parent if not already present
+                            if (!in_array($schemaName, $schemas[$childSchemaName]['x-parentInterface'], true)) {
+                                $schemas[$childSchemaName]['x-parentInterface'][] = $schemaName;
+                                $parentInterfaceCount++;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Process oneOf within allOf at schema level
+            if (isset($schema['allOf']) && is_array($schema['allOf'])) {
+                foreach ($schema['allOf'] as &$allOfItem) {
+                    if (isset($allOfItem['oneOf']) && is_array($allOfItem['oneOf'])) {
+                        $allOfItem['x-isOneOf'] = true;
+                        $propertyOneOfCount++;
+                    }
+                    // Recurse into properties
+                    if (isset($allOfItem['properties']) && is_array($allOfItem['properties'])) {
+                        foreach ($allOfItem['properties'] as &$property) {
+                            if ($this->markOneOfInProperty($property)) {
+                                $propertyOneOfCount++;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Process oneOf within properties
+            if (isset($schema['properties']) && is_array($schema['properties'])) {
+                foreach ($schema['properties'] as &$property) {
+                    if ($this->markOneOfInProperty($property)) {
+                        $propertyOneOfCount++;
+                    }
+                }
+            }
+        }
+
+        echo "\n✅ Marked $oneOfCount root oneOf schema(s), $propertyOneOfCount nested oneOf(s), and $parentInterfaceCount parent interface(s)\n";
+    }
+
+    /**
+     * Capitalize field name for display (snake_case to PascalCase)
+     */
+    private function capitalizeFieldName(string $fieldName): string
+    {
+        // Replace underscores with nothing and capitalize each word (PascalCase)
+        $words = explode('_', $fieldName);
+        $capitalizedWords = array_map(fn($word) => ucfirst($word), $words);
+        return implode('', $capitalizedWords);
+    }
+
+    /**
+     * Calculate fields that are required in ALL types of a oneOf
+     */
+    private function calculateSharedRequiredFields(array $childSchemaNames, array &$allSchemas): array
+    {
+        if (empty($childSchemaNames)) {
+            return [];
+        }
+
+        $sharedRequired = null;
+
+        foreach ($childSchemaNames as $childName) {
+            // Get required fields for this child, excluding nullable properties
+            $childRequiredRaw = $allSchemas[$childName]['required'] ?? [];
+            $childProperties = $allSchemas[$childName]['properties'] ?? [];
+            $childRequired = array_values(array_filter(
+                $childRequiredRaw,
+                fn($fieldName) =>
+                    isset($childProperties[$fieldName])
+                    && !($childProperties[$fieldName]['nullable'] ?? false)
+            ));
+
+            if ($sharedRequired === null) {
+                // First child: initialize with its required fields
+                $sharedRequired = $childRequired;
+            } else {
+                // Intersection with previous required fields
+                $sharedRequired = array_intersect($sharedRequired, $childRequired);
+            }
+
+            if (empty($sharedRequired)) {
+                // Intersection is empty, stop checking
+                break;
+            }
+        }
+
+        return array_values($sharedRequired ?? []);
+    }
+
+    /**
+     * Recursively mark oneOf in property definitions
+     * Returns true if any oneOf was marked
+     */
+    private function markOneOfInProperty(&$property): bool
+    {
+        if (!is_array($property)) {
+            return false;
+        }
+
+        $found = false;
+
+        // Direct oneOf on property
+        if (isset($property['oneOf']) && is_array($property['oneOf'])) {
+            $property['x-isOneOf'] = true;
+            return true;
+        }
+
+        // oneOf in additionalProperties
+        if (isset($property['additionalProperties']) && is_array($property['additionalProperties'])) {
+            if (isset($property['additionalProperties']['oneOf'])) {
+                $property['additionalProperties']['x-isOneOf'] = true;
+                return true;
+            }
+            // Recurse into additionalProperties
+            if ($this->markOneOfInProperty($property['additionalProperties'])) {
+                $found = true;
+            }
+        }
+
+        // oneOf in items (for arrays)
+        if (isset($property['items']) && is_array($property['items'])) {
+            if (isset($property['items']['oneOf'])) {
+                $property['items']['x-isOneOf'] = true;
+                return true;
+            }
+            // Recurse into nested items
+            if ($this->markOneOfInProperty($property['items'])) {
+                $found = true;
+            }
+        }
+
+        // Recurse into anyOf
+        if (isset($property['anyOf']) && is_array($property['anyOf'])) {
+            foreach ($property['anyOf'] as &$anyOfItem) {
+                if ($this->markOneOfInProperty($anyOfItem)) {
+                    $found = true;
+                }
+            }
+        }
+
+        // Recurse into allOf - mark oneOf inside allOf items
+        if (isset($property['allOf']) && is_array($property['allOf'])) {
+            foreach ($property['allOf'] as &$allOfItem) {
+                // Check for direct oneOf in this allOf item
+                if (isset($allOfItem['oneOf']) && is_array($allOfItem['oneOf'])) {
+                    $allOfItem['x-isOneOf'] = true;
+                    $found = true;
+                }
+                // Recurse deeper
+                if ($this->markOneOfInProperty($allOfItem)) {
+                    $found = true;
+                }
+            }
+        }
+
+        return $found;
+    }
+}
 try {
     echo "Usage: php preprocess-schema.php <path-to-schema.json> [output-path]\n";
     echo "Example: php preprocess-schema.php ./openapi.json ./openapi-processed.json\n";
@@ -1188,6 +1433,9 @@ try {
 
     // wordwrap description
     $preprocessor->wordwrapDescription();
+
+    // Fix OneOf schemas with smart required/nullable handling
+    $preprocessor->handleOneOfSchemas();
 
     // Fix discriminator unique models
     $preprocessor->addUniqueDiscriminatorModels();

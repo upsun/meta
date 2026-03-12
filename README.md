@@ -40,39 +40,39 @@ To access it, simply start the server and visit the documentation at the indicat
 
 ### Get all available images
 ```bash
-GET /image
+GET /images
 ```
 
 ### Get a specific image
 ```bash
-GET /image/{imageName}
+GET /images/{imageName}
 ```
 
 ### List all regions
 ```bash
-GET /region
+GET /regions
 ```
 
 ### Get region details
 ```bash
-GET /region/{regionId}
+GET /regions/{regionId}
 ```
 
 ### Get all PHP extensions (raw YAML content)
 ```bash
-GET /extension/php
+GET /extensions/php
 ```
 
 ### Get extensions grouped for grid view
 Returns entries shaped as `{ runtime, service, version, extensions[] }`.
 ```bash
-GET /extension/php/grid
+GET /extensions/php/grid
 ```
 
 ### Get extensions for a specific service
 Example for `dedicated` service:
 ```bash
-GET /extension/php/grid/dedicated
+GET /extensions/php/grid/dedicated
 ```
 If the service does not exist, returns `404` with `availableServices`.
 

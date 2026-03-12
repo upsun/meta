@@ -38749,6 +38749,14 @@
                             "The carbon intensity value."
                         ]
                     },
+                    "carbon_intensity_source": {
+                        "type": "string",
+                        "description": "The source of the carbon intensity data.",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "The source of the carbon intensity data."
+                        ]
+                    },
                     "green": {
                         "type": "boolean",
                         "description": "Indicator whether the data center uses green energy.",

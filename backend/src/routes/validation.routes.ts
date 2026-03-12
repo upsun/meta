@@ -35,11 +35,11 @@ const compareSemver = (a: string, b: string): number => {
 export const validationRouter = new ApiRouter();
 
 // ========================================
-// GET /schema/config - Get Upsun validation schema
+// GET /schema/upsun - Get Upsun validation schema
 // ========================================
 validationRouter.route({
   method: 'get',
-  path: `${PATH}/config`,
+  path: `${PATH}/upsun`,
   summary: 'Get Upsun validation JSON schema',
   description: `
 Returns the Upsun validation JSON schema file used by the validator.
@@ -151,15 +151,15 @@ The result is a JSON Schema snippet:
           return;
         }
 
-        const versions = Array.isArray((value as any).versions) ? (value as any).versions : [];
+        const versions = (value as any).versions || {};
 
-        versions.forEach((v: any) => {
-          if (!v || typeof v.name !== 'string' || !v.name) {
+        Object.entries(versions).forEach(([versionId, versionData]: [string, any]) => {
+          if (!versionId || typeof versionId !== 'string') {
             return;
           }
 
           // Normalize version similar to runtime versions
-          const normalizedVersion = v.name.split(' ')[0];
+          const normalizedVersion = versionId.split(' ')[0];
           serviceSet.add(`${key}:${normalizedVersion}`);
         });
       });
@@ -227,16 +227,16 @@ for example: \`["php:7.2", "php:7.3", "nodejs:24"]\`.
           return;
         }
 
-        const versions = Array.isArray((value as any).versions) ? (value as any).versions : [];
+        const versions = (value as any).versions || {};
 
-        versions.forEach((v: any) => {
-          if (!v || typeof v.name !== 'string' || !v.name) {
+        Object.entries(versions).forEach(([versionId, versionData]: [string, any]) => {
+          if (!versionId || typeof versionId !== 'string') {
             return;
           }
 
           // Normalize version: keep the numeric part before any space
           // e.g. "8.0 (LTS)" -> "8.0"
-          const normalizedVersion = v.name.split(' ')[0];
+          const normalizedVersion = versionId.split(' ')[0];
           runtimeSet.add(`${key}:${normalizedVersion}`);
         });
       });

@@ -5,10 +5,19 @@ import { LinkSchema } from './links.schema.js';
 // Extend Zod with OpenAPI
 extendZodWithOpenApi(z);
 
+// ========================================
+// Full models
+// ========================================
+
 /**
  * Schema for Images Registry
  */
-export const DeployImageVersionStatusSchema = z.enum(["supported", "deprecated", "retired", "decommissioned"])
+export const DeployImageVersionStatusSchemaModel = z.enum([
+    "supported",      // Officially supported and maintained version, receiving regular updates and security patches.
+    "deprecated",     // No longer recommended for use, may still receive critical security updates but no new features or regular maintenance.
+    "retired",        // Available but not maintained
+    "decommissioned"  // Not available anymore
+  ])
   .openapi({
     description: 'Status of the image version, following official lifecycle.', //TODO add description for each possible status
     example: 'supported'
@@ -18,16 +27,12 @@ export const DeployImageVersionStatusSchema = z.enum(["supported", "deprecated",
 /**
  * Schema for Image Version
  */
-export const DeployImageVersionSchema = z.object({
-  name: z.string().min(1).openapi({
-    description: 'Version name',
-    example: '14'
-  }),
+export const DeployImageVersionSchemaModel = z.object({
   upsun: z.object({
-    status: DeployImageVersionStatusSchema,
+    status: DeployImageVersionStatusSchemaModel,
     internal_support: z.boolean()
       .openapi({
-        description: 'Indicates if the version has support from Upsun',
+        description: 'Indicates if the version has support from Upsun (Internal branch is protected)',
         example: true
       })
   }).openapi({
@@ -38,56 +43,50 @@ export const DeployImageVersionSchema = z.object({
     }
   }),
   upstream: z.object({
-      status: DeployImageVersionStatusSchema,
-      release_date: z.coerce.date()
+      status: DeployImageVersionStatusSchemaModel,
+      releaseDate: z.coerce.date()
         .nullable()
         .openapi({
           description: 'Official release date of the version',
           example: '2023-10-10T00:00:00.000Z'
         }
       ),
-      end_of_active_support_date: z.coerce.date()
+      eoasFrom: z.coerce.date()
         .nullable()
         .openapi({
           description: 'Date when this the version only receives security updates',
           example: '2024-10-10T00:00:00.000Z'
         }
       ),
-      end_of_life_date: z.coerce.date()
+      eolFrom: z.coerce.date()
         .nullable()
         .openapi({
           description: 'Date when the version reaches end of life (no more updates)',
           example: '2025-10-10T00:00:00.000Z'
         }
       ),
-      is_lts: z.boolean()
+      isLts: z.boolean()
         .openapi({
           description: 'Indicates if the version is a Long Term Support (LTS) release',
           example: true
         }
       ),
-      is_maintained: z.boolean()
+      isMaintained: z.boolean()
         .openapi({
           description: 'Indicates if the version is still maintained upstream',
           example: true
         }
       ),
-      is_end_of_active_support: z.boolean().nullable()
+      isEoas: z.boolean().nullable()
         .openapi({
           description: 'Indicates if the version has reached end of active support',
           example: false
         }
       ),
-      is_end_of_life: z.boolean().nullable()
+      isEol: z.boolean().nullable()
         .openapi({
           description: 'Indicates if the version has reached end of life',
           example: false
-        }
-      ),
-      is_long_term_support: z.boolean().nullable()
-        .openapi({
-          description: 'Indicates if the version is designated as long term support',
-          example: true
         }
       )
     })
@@ -95,14 +94,13 @@ export const DeployImageVersionSchema = z.object({
       description: 'Upstream version information',
       example: {
         status: 'supported',
-        release_date: '2023-10-10T00:00:00.000Z',
-        end_of_active_support_date: '2024-10-10T00:00:00.000Z',
-        end_of_life_date: '2025-10-10T00:00:00.000Z',
-        is_lts: true,
-        is_maintained: true,
-        is_end_of_active_support: false,
-        is_end_of_life: false,
-        is_long_term_support: true
+        releaseDate: '2023-10-10T00:00:00.000Z',
+        eoasFrom: '2024-10-10T00:00:00.000Z',
+        eolFrom: '2025-10-10T00:00:00.000Z',
+        isLts: true,
+        isMaintained: true,
+        isEoas: false,
+        isEol: false
       }
     }
   ), // upstream
@@ -113,7 +111,8 @@ export const DeployImageVersionSchema = z.object({
         example: {
           http: {
             port: 80,
-            scheme: 'http'
+            scheme: 'http',
+            default: true
           }
         }
       }),
@@ -212,12 +211,12 @@ export const DeployImageVersionSchema = z.object({
       }
     }
   }), // manifest
-}).openapi('DeployImageVersion');
+});
 
 /**
  * Schema for a single image in the registry
  */
-export const DeployImageSchema = z.object({
+export const DeployImageSchemaModel = z.object({
   name: z.string()
     .min(2)
     .max(256)
@@ -351,26 +350,80 @@ export const DeployImageSchema = z.object({
       example: true
     }
   ),
-  versions: z.array(DeployImageVersionSchema).min(1),
+  versions:z.record(
+    z.string().openapi('versionId').describe('Unique identifier for a version (e.g., 14, 16, 18)'),
+    DeployImageVersionSchemaModel
+  ),
   _links: LinkSchema.optional().openapi({
     description: 'Hypermedia links related to this image',
     example: {
       self: 'https://meta.upsun.com/image/nodejs'
     }
   })
-}).openapi('DeployImage', {
+}).openapi({
   description: 'Schema representing a single image in the Upsun image registry.'
 });
+
 /**
  * Schema for Images Registry (list of images)
  */
-export const DeployImageListSchema = z.record(
+export const DeployImageListSchemaModel = z.record(
   z.string().openapi('imageId').describe('Unique identifier for an image (e.g., nodejs, php, python)'),
-  DeployImageSchema
-).openapi('DeployImageList', {
+  DeployImageSchemaModel
+).openapi('DeployImageListModel', {
+  "x-internal": true, // Mark as internal to exclude from public API docs
   description: 'Registry containing all available images (see [DeployImage](#/model/DeployImage) for the full structure).'
 });
 
+
+// ========================================
+// DTOs
+// ========================================
+
+export const DeployImageSchemaDtoPublic =
+  DeployImageSchemaModel
+    .openapi('DeployImage', {"x-internal": false});
+
+
+export const DeployImageSchemaDtoInternal =
+  DeployImageSchemaModel
+    .openapi({"x-internal": true});
+
+
+export const DeployImageListSchemaDtoPublic = z.record(
+  z.string().openapi('imageId').describe('Unique identifier for an image (e.g., nodejs, php, python)'),
+  DeployImageSchemaModel
+    .omit({ docs: true, internal: true, runtime:true })
+    .extend({
+        versions: z.record(
+          z.string().openapi('versionId').describe('Unique identifier for a version (e.g., 14, 16, 18)'),
+          DeployImageVersionSchemaModel
+            .omit({
+              upstream: true,
+              manifest: true,
+            })
+            .extend({
+              upsun: DeployImageVersionSchemaModel.shape.upsun.omit({
+                internal_support: true
+              })
+            })
+        ),
+      })
+).openapi('DeployImageList', {
+  "x-internal": false,
+  description: 'Registry containing all available images (see [DeployImage](#/model/DeployImage) for the full structure).'
+});
+
+/**
+ * Schema for Images Registry (list of images)
+ */
+export const DeployImageListSchemaDtoInternal = z.record(
+  z.string().openapi('imageId').describe('Unique identifier for an image (e.g., nodejs, php, python)'),
+  DeployImageSchemaModel
+).openapi({
+  "x-internal": true, // Mark as internal to exclude from public API docs
+});
+
 // Type exports for TypeScript
-export type DeployImageListRegistry = z.infer<typeof DeployImageListSchema>;
-export type DeployImageRegistry = z.infer<typeof DeployImageSchema>;
+export type DeployImageListDto = z.infer<typeof DeployImageListSchemaDtoInternal> | z.infer<typeof DeployImageListSchemaDtoPublic>
+export type DeployImageDto = z.infer<typeof DeployImageSchemaDtoInternal> | z.infer<typeof DeployImageSchemaDtoPublic>;
