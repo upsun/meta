@@ -5687,7 +5687,7 @@
       },
       "20": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true
         },
         "upstream": {
@@ -5697,7 +5697,7 @@
           "eolFrom": "2026-04-30T00:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -5725,7 +5725,7 @@
       },
       "22": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true
         },
         "upstream": {
@@ -5735,7 +5735,7 @@
           "eolFrom": "2027-04-30T00:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -6389,7 +6389,7 @@
       },
       "2": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true
         },
         "upstream": {
@@ -6399,7 +6399,7 @@
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -6604,7 +6604,7 @@
       },
       "8.0": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true
         },
         "upstream": {
@@ -6614,7 +6614,7 @@
           "eolFrom": "2026-04-30T00:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -6801,7 +6801,7 @@
       },
       "8.3": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true
         },
         "upstream": {
@@ -6811,7 +6811,7 @@
           "eolFrom": "2027-12-31T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -6843,7 +6843,7 @@
       },
       "8.2": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true
         },
         "upstream": {
@@ -6853,7 +6853,7 @@
           "eolFrom": "2026-12-31T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -7939,7 +7939,7 @@
       },
       "3.12": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true
         },
         "upstream": {
@@ -7949,7 +7949,7 @@
           "eolFrom": "2028-10-31T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -7977,7 +7977,7 @@
       },
       "3.11": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true
         },
         "upstream": {
@@ -7987,7 +7987,7 @@
           "eolFrom": "2027-10-31T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -8015,7 +8015,7 @@
       },
       "3.10": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true
         },
         "upstream": {
@@ -8025,7 +8025,7 @@
           "eolFrom": "2026-10-31T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -8817,7 +8817,7 @@
       },
       "7.2": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true
         },
         "upstream": {
@@ -8827,7 +8827,7 @@
           "eolFrom": "2026-02-28T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -9277,9 +9277,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "3.4.8-0psh1~bpo12+1",
+            "raw": "3.4.9-0psh1~bpo12+1",
             "majorMinor": "3.4",
-            "normalized": "3.4.8"
+            "normalized": "3.4.9"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
