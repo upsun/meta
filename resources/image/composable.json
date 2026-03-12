@@ -18,148 +18,24 @@
         "upsun": {
           "status": "supported",
           "internal_support": true
-        },
-        "upstream": {
-          "status": "supported",
-          "releaseDate": null,
-          "eoasFrom": null,
-          "eolFrom": null,
-          "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
-        },
-        "manifest": {
-          "endpoints": {
-            "php": {
-              "port": 80,
-              "scheme": "http"
-            },
-            "http": {
-              "port": 80,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 64,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": true,
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": true
         }
       },
       "25.05": {
         "upsun": {
           "status": "retired",
           "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "releaseDate": null,
-          "eoasFrom": null,
-          "eolFrom": null,
-          "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
-        },
-        "manifest": {
-          "endpoints": {
-            "php": {
-              "port": 80,
-              "scheme": "http"
-            },
-            "http": {
-              "port": 80,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 64,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": true,
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": true
         }
       },
       "24.11": {
         "upsun": {
           "status": "retired",
           "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "releaseDate": null,
-          "eoasFrom": null,
-          "eolFrom": null,
-          "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
-        },
-        "manifest": {
-          "endpoints": {
-            "php": {
-              "port": 80,
-              "scheme": "http"
-            },
-            "http": {
-              "port": 80,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": null,
-          "min_mem_size": null,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": true,
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": null
         }
       },
       "24.05": {
         "upsun": {
           "status": "retired",
           "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "releaseDate": null,
-          "eoasFrom": null,
-          "eolFrom": null,
-          "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
-        },
-        "manifest": {
-          "endpoints": {
-            "php": {
-              "port": 80,
-              "scheme": "http"
-            },
-            "http": {
-              "port": 80,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": null,
-          "min_mem_size": null,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": true,
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": null
         }
       }
     }
