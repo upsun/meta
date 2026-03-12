@@ -1,3354 +1,2320 @@
 {
   "dedicated": {
     "amqp": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "apcu": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "apcu-bc": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "bcmath": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "bz2": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "cgi": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "cli": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "common": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "curl": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "dba": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "dev": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "enchant": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "event": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "fpm": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "gd": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "geoip": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "gmp": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "igbinary": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "imagick": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "imap": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "interbase": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "intl": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "json": {
-      "versions": [
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "ldap": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "mailparse": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "mbstring": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "mcrypt": {
-      "versions": [
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "memcached": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "mongodb": {
-      "versions": [
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "msgpack": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "mysql": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "oauth": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "odbc": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "opcache": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "openswoole": {
-      "versions": [
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "pdo-sqlsrv": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "pgsql": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "phpdbg": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "pspell": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "readline": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "recode": {
-      "versions": [
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "redis": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "snmp": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "soap": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "sodium": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "sqlite3": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "sqlsrv": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "ssh2": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "swoole": {
-      "versions": [
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "sybase": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "tideways-xhprof": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "tidy": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "twig": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "uuid": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "xcache": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "xdebug": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "xml": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "xmlrpc": {
-      "versions": [
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "xsl": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "zbarcode": {
-      "versions": [
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "zip": {
-      "versions": [
-        {
-          "5.x": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "5.x": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.0": {
-            "status": "available",
-            "options": []
-          }
+        "7.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.2": {
-            "status": "available",
-            "options": []
-          }
+        "8.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.3": {
-            "status": "available",
-            "options": []
-          }
+        "8.3": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     },
     "zts": {
-      "versions": [
-        {
-          "7.1": {
-            "status": "available",
-            "options": []
-          }
+      "versions": {
+        "7.1": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.2": {
-            "status": "available",
-            "options": []
-          }
+        "7.2": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.3": {
-            "status": "available",
-            "options": []
-          }
+        "7.3": {
+          "status": "available",
+          "options": []
         },
-        {
-          "7.4": {
-            "status": "available",
-            "options": []
-          }
+        "7.4": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.0": {
-            "status": "available",
-            "options": []
-          }
+        "8.0": {
+          "status": "available",
+          "options": []
         },
-        {
-          "8.1": {
-            "status": "available",
-            "options": []
-          }
+        "8.1": {
+          "status": "available",
+          "options": []
         }
-      ]
+      }
     }
   },
   "cloud": {
