@@ -14,6 +14,7 @@ import { regionRouter } from './routes/region.routes.js';
 import { extensionRouter } from './routes/extension.routes.js';
 import { validationRouter } from './routes/validation.routes.js';
 import { openapiRouter } from './routes/openapi.upsun.routes.js';
+import { composableRouter } from './routes/composable.routes.js';
 import { BaseSpec } from './routes/openapi.meta.routes.js';
 
 // ESM equivalent of __dirname
@@ -61,6 +62,7 @@ regionRouter.registerToExpress(app);
 extensionRouter.registerToExpress(app);
 validationRouter.registerToExpress(app);
 openapiRouter.registerToExpress(app);
+composableRouter.registerToExpress(app);
 
 // ========================================
 // AUTO-GENERATE OPENAPI SPEC
@@ -103,6 +105,13 @@ const openapiSpec = openapiRouter.generateOpenApiSpec({
   version: appVersion
 });
 
+const composableSpec = composableRouter.generateOpenApiSpec({
+  title: 'Composable Image',
+  tagName: 'Composable Image',
+  description: 'Access Composable Image configuration. This section provides an endpoint to retrieve the Composable Image configuration.',
+  version: appVersion
+});
+
 // Merge all specs into one
 const openApiSpec = {
   ...baseSpec,
@@ -111,14 +120,16 @@ const openApiSpec = {
     ...(regionSpec.tags || []),
     ...(extensionSpec.tags || []),
     ...(validationSpec.tags || []),
-    ...(openapiSpec.tags || [])
+    ...(openapiSpec.tags || []),
+    ...(composableSpec.tags || [])
   ],
   paths: {
     ...imageSpec.paths,
     ...regionSpec.paths,
     ...extensionSpec.paths,
     ...validationSpec.paths,
-    ...openapiSpec.paths
+    ...openapiSpec.paths,
+    ...composableSpec.paths
   },
   components: {
     schemas: {
@@ -126,7 +137,8 @@ const openApiSpec = {
       ...(regionSpec.components?.schemas || {}),
       ...(extensionSpec.components?.schemas || {}),
       ...(validationSpec.components?.schemas || {}),
-      ...(openapiSpec.components?.schemas || {})
+      ...(openapiSpec.components?.schemas || {}),
+      ...(composableSpec.components?.schemas || {})
     }
   }
 };
