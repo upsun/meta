@@ -1,0 +1,42 @@
+{
+  "composable": {
+    "description": "",
+    "name": "composable",
+    "internal": {
+      "repo_name": "composable"
+    },
+    "service": false,
+    "need_disk": false,
+    "docs": {
+      "relationship_name": "composable",
+      "service_name": "composable",
+      "url": "https://docs.upsun.com/docs/create-apps/app-reference/composable-image"
+    },
+    "versions": {
+      "25.11": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        }
+      },
+      "25.05": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": false
+        }
+      },
+      "24.11": {
+        "upsun": {
+          "status": "decommissioned",
+          "internal_support": false
+        }
+      },
+      "24.05": {
+        "upsun": {
+          "status": "decommissioned",
+          "internal_support": false
+        }
+      }
+    }
+  }
+}
