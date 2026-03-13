@@ -198,8 +198,14 @@ export function setCacheHeaders(res: Response, metadata: ResourceMetadata, maxAg
  * @param res - Express response object
  * @param metadata - Resource metadata (for setting etag/last-modified headers)
  * @param queryParams - Optional query parameters to include in ETag
+ * @param maxAge - Cache max-age in seconds for the 304 response (default: 300 = 5 minutes)
  */
-export function sendNotModified(res: Response, metadata: ResourceMetadata, queryParams?: Record<string, any>): void {
+export function sendNotModified(
+  res: Response,
+  metadata: ResourceMetadata,
+  queryParams?: Record<string, any>,
+  maxAge: number = 300
+): void {
   // Generate etag with query params if provided
   const etag = queryParams 
     ? generateEtagWithParams(metadata.etag, queryParams)
@@ -239,6 +245,11 @@ export function sendNotModified(res: Response, metadata: ResourceMetadata, query
       varySet.add('Accept');
     }
     res.setHeader('Vary', Array.from(varySet).join(', '));
+  }
+
+  // Ensure Cache-Control is present on 304 responses so caches can correctly apply/refresh TTL
+  if (!res.getHeader('Cache-Control')) {
+    res.setHeader('Cache-Control', `public, max-age=${maxAge}`);
   }
   
   res.status(304).end();
