@@ -4,22 +4,32 @@ on:
   pull_request:
     paths:
       - 'resources/image/registry.json'
+      - 'resources/image/composable.json'
       - 'resources/image/registry.schema.json'
-      - 'backend/src/scripts/validate-registry.ts'
+      - 'resources/extension/php_extensions.json'
+      - 'resources/host/regions.json'
+      - 'resources/validation/upsun.json'
+      - 'backend/src/scripts/*'
+      - 'backend/src/schemas/*'
       - 'backend/package.json'
       - 'backend/package-lock.json'
   push:
     paths:
       - 'resources/image/registry.json'
+      - 'resources/image/composable.json'
       - 'resources/image/registry.schema.json'
-      - 'backend/src/scripts/validate-registry.ts'
+      - 'resources/extension/php_extensions.json'
+      - 'resources/host/regions.json'
+      - 'resources/validation/upsun.json'
+      - 'backend/src/scripts/*'
+      - 'backend/src/schemas/*'
       - 'backend/package.json'
       - 'backend/package-lock.json'
 
 jobs:
-  validate-registry:
+  build:
+    name: Build backend
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -37,6 +47,144 @@ jobs:
         run: npm run build
         working-directory: ./backend
 
-      - name: Validate image registry
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-dist
+          path: backend/dist
+          retention-days: 1
+
+  validate-registry:
+    name: Validate image registry
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./backend
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: backend-dist
+          path: backend/dist
+
+      - name: Validate schema
         run: npm run validate:registry
+        working-directory: ./backend
+
+  validate-regions:
+    name: Validate host regions
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./backend
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: backend-dist
+          path: backend/dist
+
+      - name: Validate schema
+        run: npm run validate:regions
+        working-directory: ./backend
+
+  validate-composable:
+    name: Validate composable image
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./backend
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: backend-dist
+          path: backend/dist
+
+      - name: Validate schema
+        run: npm run validate:composable
+        working-directory: ./backend
+
+  validate-extensions:
+    name: Validate PHP extensions
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./backend
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: backend-dist
+          path: backend/dist
+
+      - name: Validate schema
+        run: npm run validate:extensions
+        working-directory: ./backend
+
+  validate-upsun:
+    name: Validate Upsun configuration schema
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./backend
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: backend-dist
+          path: backend/dist
+
+      - name: Validate schema
+        run: npm run validate:upsun
         working-directory: ./backend

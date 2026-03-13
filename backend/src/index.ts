@@ -187,7 +187,7 @@ app.get('/', (req: Request, res: Response) => {
   });
 
   // Generate and send HTML with BASE_URL
-  const html = generateHomePage(endpoints, config.server.BASE_URL, appVersion);
+  const html = generateHomePage(endpoints, config.server.BASE_URL, appVersion, config.docs.BASE_URL);
   res.send(html);
 });
 

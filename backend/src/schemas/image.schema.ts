@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
 import { LinkSchema } from './links.schema.js';
+import { config } from '../config/env.config.js';
 
 // Extend Zod with OpenAPI
 extendZodWithOpenApi(z);
@@ -276,10 +277,10 @@ export const DeployImageSchemaModel = z.object({
         }
       ),
       url: z.url()
-        .startsWith('https://docs.upsun.com/')
+        .startsWith(`${config.docs.BASE_URL}/`, { message: `Must start with "${config.docs.BASE_URL}/"` })
         .openapi({
           description: 'Documentation URL',
-          example: 'https://docs.upsun.com/languages/nodejs'
+          example: `${config.docs.BASE_URL}/languages/nodejs`
         }
       ),
       web: z.object({}).optional().openapi({
@@ -319,7 +320,7 @@ export const DeployImageSchemaModel = z.object({
       example: {
         "relationship_name": "nodejs",
         "service_name": "nodejs",
-        "url": "https://docs.upsun.com/languages/nodejs.html",
+        "url": `${config.docs.BASE_URL}/languages/nodejs.html`,
         "web": "        locations: {\n          \"/\": {\n            root: 'wwwroot',\n            allow: true,\n            passthru: true\n          }\n        },\n "
       }
     }),
@@ -338,12 +339,6 @@ export const DeployImageSchemaModel = z.object({
         repo_name: 'nodejs'
       }
   }),
-  runtime: z.boolean()
-    .openapi({
-      description: 'Indicates if the image is a runtime image (true)',
-      example: true
-    }
-  ),
   service: z.boolean()
     .openapi({
       description: 'Indicates if the image is a service image (true)',
@@ -393,7 +388,7 @@ export const DeployImageSchemaDtoInternal =
 export const DeployImageListSchemaDtoPublic = z.record(
   z.string().openapi('imageId').describe('Unique identifier for an image (e.g., nodejs, php, python)'),
   DeployImageSchemaModel
-    .omit({ docs: true, internal: true, runtime:true })
+    .omit({ docs: true, internal: true })
     .extend({
         versions: z.record(
           z.string().openapi('versionId').describe('Unique identifier for a version (e.g., 14, 16, 18)'),

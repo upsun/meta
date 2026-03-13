@@ -48,6 +48,11 @@ class EnvironmentConfig {
     TOKEN?: string;
   };
 
+  // Documentation Configuration
+  readonly docs: {
+    BASE_URL: string;
+  };
+
   constructor() {
     // Server Configuration
     this.server = {
@@ -87,6 +92,11 @@ class EnvironmentConfig {
       BRANCH: this.getString('GITHUB_BRANCH', 'main'),
       BASE_PATH: this.getString('GITHUB_BASE_PATH', 'shared/data'),
       TOKEN: process.env.GITHUB_TOKEN,
+    };
+
+    // Documentation Configuration
+    this.docs = {
+      BASE_URL: this.getString('DOCS_URL', 'https://developer.upsun.com/docs'),
     };
 
     // Validate configuration

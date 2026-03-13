@@ -32,14 +32,10 @@ async function main() {
   if (!result.success) {
     console.error('registry.json does not match the expected schema');
     console.error(JSON.stringify(result.error.format(), null, 2));
-  const testEnum = z.enum(["HIGH_CPU","BALANCED","HIGH_MEMORY","HIGHER_MEMORY"]);
-   console.log(testEnum.safeParse("HIGH_CPU")); // devrait afficher { success: true, ... }
-
     process.exit(1);
   }
 
   console.log('registry.json is valid.');
-
 }
 
 main().catch((error) => {
