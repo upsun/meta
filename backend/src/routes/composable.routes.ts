@@ -1,7 +1,7 @@
 import { config } from '../config/env.config.js';
 import { Request, Response } from 'express';
 import { ApiRouter } from '../utils/api.router.js';
-import { ResourceManager, logger, checkClientCache, setCacheHeaders, sendNotModified } from '../utils/index.js';
+import { ResourceManager, logger, extractConditionalHeaders, setCacheHeaders, sendNotModified } from '../utils/index.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import {
   ComposableImageDto,
@@ -48,11 +48,12 @@ composableRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      // Load composable resource with metadata
-      const { data: composableData, metadata } = await resourceManager.getResourceWithMetadata('image/composable.json');
+      // Load composable resource with metadata, supporting conditional requests
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data: composableData, metadata, notModified } = await resourceManager.getResourceWithMetadata('image/composable.json', conditionalHeaders);
 
-      // Check if client's cache is still valid
-      if (checkClientCache(req, metadata)) {
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
         return sendNotModified(res, metadata);
       }
 

@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { z } from 'zod';
 import { config } from '../config/env.config.js';
 import { ApiRouter } from '../utils/api.router.js';
-import { ResourceManager, logger, checkClientCache, setCacheHeaders, sendNotModified } from '../utils/index.js';
+import { ResourceManager, logger, extractConditionalHeaders, setCacheHeaders, sendNotModified } from '../utils/index.js';
 import { ErrorDetailsSchema } from '../schemas/api.schema.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import { Validation, ValidationSchema } from '../schemas/validation.schema.js';
@@ -59,10 +59,11 @@ This file is used to validate Upsun configuration files .upsun/config.yaml.
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const { data: schema, metadata } = await resourceManager.getResourceWithMetadata('validation/upsun.json');
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data: schema, metadata, notModified } = await resourceManager.getResourceWithMetadata('validation/upsun.json', conditionalHeaders);
       
-      // Check if client's cache is still valid
-      if (checkClientCache(req, metadata)) {
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
         return sendNotModified(res, metadata);
       }
       
@@ -102,10 +103,11 @@ validationRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const { data: schema, metadata } = await resourceManager.getResourceWithMetadata('image/registry.schema.json');
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data: schema, metadata, notModified } = await resourceManager.getResourceWithMetadata('image/registry.schema.json', conditionalHeaders);
       
-      // Check if client's cache is still valid
-      if (checkClientCache(req, metadata)) {
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
         return sendNotModified(res, metadata);
       }
       
@@ -161,10 +163,11 @@ The result is a JSON Schema snippet:
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const { data: registry, metadata } = await resourceManager.getResourceWithMetadata('image/registry.json');
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data: registry, metadata, notModified } = await resourceManager.getResourceWithMetadata('image/registry.json', conditionalHeaders);
       
-      // Check if client's cache is still valid
-      if (checkClientCache(req, metadata)) {
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
         return sendNotModified(res, metadata);
       }
 
@@ -245,10 +248,11 @@ for example: \`["php:7.2", "php:7.3", "nodejs:24"]\`.
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const { data: registry, metadata } = await resourceManager.getResourceWithMetadata('image/registry.json');
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data: registry, metadata, notModified } = await resourceManager.getResourceWithMetadata('image/registry.json', conditionalHeaders);
       
-      // Check if client's cache is still valid
-      if (checkClientCache(req, metadata)) {
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
         return sendNotModified(res, metadata);
       }
 

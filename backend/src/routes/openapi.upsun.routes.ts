@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { z } from 'zod';
 import { config } from '../config/env.config.js';
 import { ApiRouter } from '../utils/api.router.js';
-import { ResourceManager, logger, checkClientCache, setCacheHeaders, sendNotModified } from '../utils/index.js';
+import { ResourceManager, logger, extractConditionalHeaders, setCacheHeaders, sendNotModified } from '../utils/index.js';
 import { HeaderAcceptSchema, ErrorDetailsSchema } from '../schemas/api.schema.js';
 
 const TAG = 'OpenAPI Specification';
@@ -64,10 +64,11 @@ openapiRouter.route({
       }
       try {
         // serving the raw file according to the format with metadata
-        const { data, metadata } = await resourceManager.getResourceRawWithMetadata(`openapi/${fileName}`);
+        const conditionalHeaders = extractConditionalHeaders(req);
+        const { data, metadata, notModified } = await resourceManager.getResourceRawWithMetadata(`openapi/${fileName}`, conditionalHeaders);
         
-        // Check if client's cache is still valid
-        if (checkClientCache(req, metadata)) {
+        // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+        if (notModified) {
           return sendNotModified(res, metadata);
         }
         

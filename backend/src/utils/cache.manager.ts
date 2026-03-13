@@ -1,6 +1,25 @@
 import { Request, Response } from 'express';
-import { ResourceMetadata } from './resource.manager.js';
+import { ResourceMetadata, ConditionalHeaders } from './resource.manager.js';
 import crypto from 'crypto';
+
+/**
+ * Extract conditional request headers from Express request
+ * @param req - Express request object
+ * @returns ConditionalHeaders object with If-None-Match and If-Modified-Since if present
+ */
+export function extractConditionalHeaders(req: Request): ConditionalHeaders | undefined {
+  const ifNoneMatch = req.headers['if-none-match'];
+  const ifModifiedSince = req.headers['if-modified-since'];
+
+  if (!ifNoneMatch && !ifModifiedSince) {
+    return undefined;
+  }
+
+  return {
+    ifNoneMatch: ifNoneMatch as string | undefined,
+    ifModifiedSince: ifModifiedSince as string | undefined
+  };
+}
 
 /**
  * Generate a hash from query parameters for ETag generation
