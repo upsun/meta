@@ -10,7 +10,7 @@
     "docs": {
       "relationship_name": "composable",
       "service_name": "composable",
-      "url": "https://docs.upsun.com/docs/create-apps/app-reference/composable-image"
+      "url": "https://developer.upsun.com/docs/create-apps/app-reference/composable-image"
     },
     "versions": {
       "25.11": {
