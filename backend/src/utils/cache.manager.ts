@@ -46,9 +46,24 @@ export function generateEtagWithParams(baseEtag: string | undefined, queryParams
   }
 
   // Combine base etag with query hash
-  // Remove quotes from base etag if present, add them back at the end
-  const cleanEtag = baseEtag.replace(/^"(.*)"$/, '$1');
-  return `"${cleanEtag}-q${queryHash}"`;
+  // Normalize both strong and weak ETags:
+  // - Preserve an optional "W/" prefix
+  // - Unwrap optional quotes around the opaque tag
+  const etagMatch = baseEtag.match(/^(W\/)?\s*"?([^"]+?)"?$/);
+  let prefix: string;
+  let opaqueTag: string;
+
+  if (etagMatch) {
+    prefix = etagMatch[1] || '';
+    opaqueTag = etagMatch[2];
+  } else {
+    // Fallback: previous behavior for unexpected formats
+    prefix = '';
+    opaqueTag = baseEtag.replace(/^"(.*)"$/, '$1');
+  }
+
+  const newOpaqueTag = `${opaqueTag}-q${queryHash}`;
+  return `${prefix}"${newOpaqueTag}"`;
 }
 
 /**
