@@ -65,10 +65,12 @@ export class ResourceManager {
   }
 
   /**
-   * Get the content of a resource file with metadata (etag, last-modified)
-   * Supports conditional requests for GitHub mode to avoid unnecessary downloads
+   * Get the content of a resource file with metadata (etag, last-modified).
+   * Supports conditional requests (If-None-Match / If-Modified-Since, 304/notModified)
+   * for GitHub mode only to avoid unnecessary downloads. In local mode, any
+   * provided conditionalHeaders are ignored and notModified will never be set.
    * @param filePath - Relative path to the file (e.g., 'image/registry.json')
-   * @param conditionalHeaders - Optional If-None-Match/If-Modified-Since headers for conditional requests
+   * @param conditionalHeaders - Optional If-None-Match/If-Modified-Since headers for conditional requests (GitHub mode only)
    */
   async getResourceWithMetadata(filePath: string, conditionalHeaders?: ConditionalHeaders): Promise<ResourceWithMetadata> {
     if (this.config.mode === 'local') {
@@ -91,10 +93,12 @@ export class ResourceManager {
   }
 
   /**
-   * Get raw content of a resource file with metadata (no parsing)
-   * Supports conditional requests for GitHub mode to avoid unnecessary downloads
+   * Get raw content of a resource file with metadata (no parsing).
+   * Supports conditional requests (If-None-Match / If-Modified-Since, 304/notModified)
+   * for GitHub mode only to avoid unnecessary downloads. In local mode, any
+   * provided conditionalHeaders are ignored and notModified will never be set.
    * @param filePath - Relative path to the file (e.g., 'image/registry.json')
-   * @param conditionalHeaders - Optional If-None-Match/If-Modified-Since headers for conditional requests
+   * @param conditionalHeaders - Optional If-None-Match/If-Modified-Since headers for conditional requests (GitHub mode only)
    */
   async getResourceRawWithMetadata(filePath: string, conditionalHeaders?: ConditionalHeaders): Promise<ResourceWithMetadata<string>> {
     if (this.config.mode === 'local') {
