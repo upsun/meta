@@ -52,6 +52,20 @@ export function generateEtagWithParams(baseEtag: string | undefined, queryParams
 }
 
 /**
+ * Normalize an If-None-Match header value into a list of ETags
+ * Handles string | string[] and splits on commas, trims whitespace,
+ * and strips weak validators (W/ prefix).
+ */
+function parseIfNoneMatch(headerValue: string | string[]): string[] {
+  const rawValues = Array.isArray(headerValue) ? headerValue : headerValue.split(',');
+
+  return rawValues
+    .map(value => value.trim())
+    .filter(value => value.length > 0)
+    .map(value => (value.startsWith('W/') ? value.substring(2).trim() : value));
+}
+
+/**
  * Check if the client's cached version matches the resource's ETag
  * @param req - Express request object
  * @param metadata - Resource metadata containing etag
@@ -59,19 +73,29 @@ export function generateEtagWithParams(baseEtag: string | undefined, queryParams
  * @returns true if the client's cache is still valid (304 should be returned)
  */
 export function checkClientCache(req: Request, metadata: ResourceMetadata, queryParams?: Record<string, any>): boolean {
-  const clientEtag = req.headers['if-none-match'];
-  
-  if (!clientEtag || !metadata.etag) {
+  const rawClientEtag = req.headers['if-none-match'];
+
+  if (!rawClientEtag || !metadata.etag) {
     return false;
   }
-  
+
   // Generate server-side etag with query params if provided
-  const serverEtag = queryParams 
+  const serverEtag = queryParams
     ? generateEtagWithParams(metadata.etag, queryParams)
     : metadata.etag;
-  
-  // Compare client's etag with server's etag
-  return clientEtag === serverEtag;
+
+  if (!serverEtag) {
+    return false;
+  }
+
+  // Normalize server etag (strip weak validator if present)
+  const normalizedServerEtag = serverEtag.startsWith('W/')
+    ? serverEtag.substring(2).trim()
+    : serverEtag;
+
+  // Normalize client's etag(s) and check for a match
+  const clientEtags = parseIfNoneMatch(rawClientEtag);
+  return clientEtags.includes(normalizedServerEtag);
 }
 
 /**
