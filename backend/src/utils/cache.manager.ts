@@ -1,0 +1,126 @@
+import { Request, Response } from 'express';
+import { ResourceMetadata } from './resource.manager.js';
+import crypto from 'crypto';
+
+/**
+ * Generate a hash from query parameters for ETag generation
+ * @param queryParams - Query parameters object
+ * @returns Hash string or empty if no query params
+ */
+function hashQueryParams(queryParams: Record<string, any>): string {
+  // Filter out empty/undefined params and sort keys for consistency
+  const relevantParams = Object.keys(queryParams)
+    .filter(key => queryParams[key] !== undefined && queryParams[key] !== '')
+    .sort()
+    .reduce((acc, key) => {
+      acc[key] = queryParams[key];
+      return acc;
+    }, {} as Record<string, any>);
+
+  // If no params, return empty string
+  if (Object.keys(relevantParams).length === 0) {
+    return '';
+  }
+
+  // Generate a short hash of the query params
+  const paramString = JSON.stringify(relevantParams);
+  return crypto.createHash('md5').update(paramString).digest('hex').substring(0, 8);
+}
+
+/**
+ * Generate an ETag that includes query parameters for filtered responses
+ * @param baseEtag - Base ETag from the resource
+ * @param queryParams - Query parameters that affect the response
+ * @returns Enhanced ETag that includes query params
+ */
+export function generateEtagWithParams(baseEtag: string | undefined, queryParams: Record<string, any>): string | undefined {
+  if (!baseEtag) {
+    return undefined;
+  }
+
+  const queryHash = hashQueryParams(queryParams);
+  
+  // If no query params, return base etag as-is
+  if (!queryHash) {
+    return baseEtag;
+  }
+
+  // Combine base etag with query hash
+  // Remove quotes from base etag if present, add them back at the end
+  const cleanEtag = baseEtag.replace(/^"(.*)"$/, '$1');
+  return `"${cleanEtag}-q${queryHash}"`;
+}
+
+/**
+ * Check if the client's cached version matches the resource's ETag
+ * @param req - Express request object
+ * @param metadata - Resource metadata containing etag
+ * @param queryParams - Optional query parameters that affect the response
+ * @returns true if the client's cache is still valid (304 should be returned)
+ */
+export function checkClientCache(req: Request, metadata: ResourceMetadata, queryParams?: Record<string, any>): boolean {
+  const clientEtag = req.headers['if-none-match'];
+  
+  if (!clientEtag || !metadata.etag) {
+    return false;
+  }
+  
+  // Generate server-side etag with query params if provided
+  const serverEtag = queryParams 
+    ? generateEtagWithParams(metadata.etag, queryParams)
+    : metadata.etag;
+  
+  // Compare client's etag with server's etag
+  return clientEtag === serverEtag;
+}
+
+/**
+ * Set cache-related headers on the response
+ * @param res - Express response object
+ * @param metadata - Resource metadata
+ * @param maxAge - Cache max-age in seconds (default: 300 = 5 minutes)
+ * @param queryParams - Optional query parameters to include in ETag
+ */
+export function setCacheHeaders(res: Response, metadata: ResourceMetadata, maxAge: number = 300, queryParams?: Record<string, any>): void {
+  // Generate etag with query params if provided
+  const etag = queryParams 
+    ? generateEtagWithParams(metadata.etag, queryParams)
+    : metadata.etag;
+    
+  if (etag) {
+    res.setHeader('ETag', etag);
+  }
+  
+  if (metadata.lastModified) {
+    res.setHeader('Last-Modified', metadata.lastModified);
+  }
+  
+  // Set Cache-Control header
+  // - public: can be cached by browsers and CDNs
+  // - max-age: how long the cache is fresh
+  // - must-revalidate: must check with server after max-age expires
+  res.setHeader('Cache-Control', `public, max-age=${maxAge}, must-revalidate`);
+}
+
+/**
+ * Send a 304 Not Modified response
+ * @param res - Express response object
+ * @param metadata - Resource metadata (for setting etag/last-modified headers)
+ * @param queryParams - Optional query parameters to include in ETag
+ */
+export function sendNotModified(res: Response, metadata: ResourceMetadata, queryParams?: Record<string, any>): void {
+  // Generate etag with query params if provided
+  const etag = queryParams 
+    ? generateEtagWithParams(metadata.etag, queryParams)
+    : metadata.etag;
+    
+  if (etag) {
+    res.setHeader('ETag', etag);
+  }
+  
+  if (metadata.lastModified) {
+    res.setHeader('Last-Modified', metadata.lastModified);
+  }
+  
+  res.status(304).end();
+}
