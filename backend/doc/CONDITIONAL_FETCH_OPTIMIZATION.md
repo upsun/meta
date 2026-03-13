@@ -130,10 +130,10 @@ When GitHub mode is active, logs will show:
 
 ## Configuration
 
-The optimization is **automatic** and works in both modes:
+The optimization is **automatic** when using GitHub-backed resources:
 
-- **Local mode** (`RESOURCES_MODE=local`): Checks local file stats, returns 304 if unchanged
-- **GitHub mode** (`RESOURCES_MODE=github`): Passes conditional headers to GitHub, returns 304 if GitHub returns 304
+- **Local mode** (`RESOURCES_MODE=local`): Serves files directly from disk; conditional headers are not used and responses always include the full body
+- **GitHub mode** (`RESOURCES_MODE=github`): Passes conditional headers to GitHub and returns 304 if GitHub returns 304, skipping download and parse on cache hits
 
 No configuration changes needed - it's transparent to clients.
 
