@@ -8,16 +8,21 @@ import crypto from 'crypto';
  * @returns ConditionalHeaders object with If-None-Match and If-Modified-Since if present
  */
 export function extractConditionalHeaders(req: Request): ConditionalHeaders | undefined {
-  const ifNoneMatch = req.headers['if-none-match'];
-  const ifModifiedSince = req.headers['if-modified-since'];
+  const rawIfNoneMatch = req.headers['if-none-match'];
+  const rawIfModifiedSince = req.headers['if-modified-since'];
+
+  const ifNoneMatch =
+    Array.isArray(rawIfNoneMatch) ? rawIfNoneMatch.join(',') : rawIfNoneMatch;
+  const ifModifiedSince =
+    Array.isArray(rawIfModifiedSince) ? rawIfModifiedSince[0] : rawIfModifiedSince;
 
   if (!ifNoneMatch && !ifModifiedSince) {
     return undefined;
   }
 
   return {
-    ifNoneMatch: ifNoneMatch as string | undefined,
-    ifModifiedSince: ifModifiedSince as string | undefined
+    ifNoneMatch,
+    ifModifiedSince
   };
 }
 
