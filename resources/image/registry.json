@@ -5,7 +5,7 @@
     "docs": {
       "relationship_name": "chrome-headless",
       "service_name": "chrome-headless",
-      "url": "https://docs.upsun.com/docs/add-services/headless-chrome.html"
+      "url": "https://developer.upsun.com/docs/add-services/headless-chrome.html"
     },
     "runtime": false,
     "service": true,
@@ -21,9 +21,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-03-12T00:00:00.000Z",
+          "releaseDate": "2019-03-11T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2019-04-23T00:00:00.000Z",
+          "eolFrom": "2019-04-22T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -59,9 +59,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-02-04T00:00:00.000Z",
+          "releaseDate": "2020-02-03T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-04-07T00:00:00.000Z",
+          "eolFrom": "2020-04-06T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -97,9 +97,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-04-07T00:00:00.000Z",
+          "releaseDate": "2020-04-06T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-05-19T00:00:00.000Z",
+          "eolFrom": "2020-05-18T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -135,9 +135,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-05-19T00:00:00.000Z",
+          "releaseDate": "2020-05-18T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-07-14T00:00:00.000Z",
+          "eolFrom": "2020-07-13T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -173,9 +173,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-07-14T00:00:00.000Z",
+          "releaseDate": "2020-07-13T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-08-25T00:00:00.000Z",
+          "eolFrom": "2020-08-24T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -211,9 +211,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-10-06T00:00:00.000Z",
+          "releaseDate": "2020-10-05T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-11-17T00:00:00.000Z",
+          "eolFrom": "2020-11-16T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -249,9 +249,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2021-05-25T00:00:00.000Z",
+          "releaseDate": "2021-05-24T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2021-07-20T00:00:00.000Z",
+          "eolFrom": "2021-07-19T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -287,9 +287,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2021-10-19T00:00:00.000Z",
+          "releaseDate": "2021-10-18T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2021-11-16T00:00:00.000Z",
+          "eolFrom": "2021-11-15T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -325,9 +325,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2023-05-02T00:00:00.000Z",
+          "releaseDate": "2023-05-01T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2023-05-30T00:00:00.000Z",
+          "eolFrom": "2023-05-29T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -363,9 +363,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2023-12-05T00:00:00.000Z",
+          "releaseDate": "2023-12-04T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-01-23T00:00:00.000Z",
+          "eolFrom": "2024-01-22T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -402,7 +402,7 @@
     "docs": {
       "relationship_name": "clickhouse",
       "service_name": "clickhouse",
-      "url": "https://docs.upsun.com/docs/add-services/clickhouse.html"
+      "url": "https://developer.upsun.com/docs/add-services/clickhouse.html"
     },
     "runtime": false,
     "service": true,
@@ -589,7 +589,7 @@
     "docs": {
       "relationship_name": "dotnet",
       "service_name": "dotnet",
-      "url": "https://docs.upsun.com/docs/languages/dotnet.html",
+      "url": "https://developer.upsun.com/docs/languages/dotnet.html",
       "web": {
         "commands": {
           "start": "dotnet application.dll"
@@ -625,9 +625,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2025-11-11T00:00:00.000Z",
+          "releaseDate": "2025-11-10T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2028-11-14T00:00:00.000Z",
+          "eolFrom": "2028-11-13T23:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": false,
@@ -646,9 +646,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "10.0.200",
+            "raw": "10.0.201",
             "majorMinor": "10.0",
-            "normalized": "10.0.200"
+            "normalized": "10.0.201"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -663,9 +663,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2023-11-14T00:00:00.000Z",
+          "releaseDate": "2023-11-13T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-11-10T00:00:00.000Z",
+          "eolFrom": "2026-11-09T23:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": false,
@@ -701,9 +701,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2022-11-08T00:00:00.000Z",
+          "releaseDate": "2022-11-07T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-05-14T00:00:00.000Z",
+          "eolFrom": "2024-05-13T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -739,9 +739,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2021-11-08T00:00:00.000Z",
+          "releaseDate": "2021-11-07T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-11-12T00:00:00.000Z",
+          "eolFrom": "2024-11-11T23:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -777,9 +777,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-11-10T00:00:00.000Z",
+          "releaseDate": "2020-11-09T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-05-10T00:00:00.000Z",
+          "eolFrom": "2022-05-09T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -815,9 +815,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-12-03T00:00:00.000Z",
+          "releaseDate": "2019-12-02T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-12-13T00:00:00.000Z",
+          "eolFrom": "2022-12-12T23:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -853,9 +853,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2018-12-04T00:00:00.000Z",
+          "releaseDate": "2018-12-03T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2019-12-23T00:00:00.000Z",
+          "eolFrom": "2019-12-22T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -891,9 +891,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2018-05-30T00:00:00.000Z",
+          "releaseDate": "2018-05-29T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2021-08-21T00:00:00.000Z",
+          "eolFrom": "2021-08-20T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -929,9 +929,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2017-08-14T00:00:00.000Z",
+          "releaseDate": "2017-08-13T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2018-10-01T00:00:00.000Z",
+          "eolFrom": "2018-09-30T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -967,7 +967,7 @@
     "docs": {
       "relationship_name": "elasticsearch",
       "service_name": "elasticsearch",
-      "url": "https://docs.upsun.com/docs/add-services/elasticsearch.html"
+      "url": "https://developer.upsun.com/docs/add-services/elasticsearch.html"
     },
     "name": "Elasticsearch",
     "runtime": false,
@@ -984,9 +984,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-04-10T00:00:00.000Z",
+          "releaseDate": "2019-04-09T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-01-15T00:00:00.000Z",
+          "eolFrom": "2026-01-14T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -1023,9 +1023,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-04-10T00:00:00.000Z",
+          "releaseDate": "2019-04-09T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-01-15T00:00:00.000Z",
+          "eolFrom": "2026-01-14T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -1062,9 +1062,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-04-10T00:00:00.000Z",
+          "releaseDate": "2019-04-09T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-01-15T00:00:00.000Z",
+          "eolFrom": "2026-01-14T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -1101,9 +1101,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-04-10T00:00:00.000Z",
+          "releaseDate": "2019-04-09T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-01-15T00:00:00.000Z",
+          "eolFrom": "2026-01-14T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -1140,9 +1140,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-04-10T00:00:00.000Z",
+          "releaseDate": "2019-04-09T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-01-15T00:00:00.000Z",
+          "eolFrom": "2026-01-14T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -1179,9 +1179,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-04-10T00:00:00.000Z",
+          "releaseDate": "2019-04-09T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-01-15T00:00:00.000Z",
+          "eolFrom": "2026-01-14T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -1218,9 +1218,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2017-11-14T00:00:00.000Z",
+          "releaseDate": "2017-11-13T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-02-10T00:00:00.000Z",
+          "eolFrom": "2022-02-09T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -1257,9 +1257,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2017-11-14T00:00:00.000Z",
+          "releaseDate": "2017-11-13T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-02-10T00:00:00.000Z",
+          "eolFrom": "2022-02-09T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -1512,7 +1512,7 @@
     "docs": {
       "relationship_name": "elixir",
       "service_name": "elixir",
-      "url": "https://docs.upsun.com/docs/languages/elixir.html",
+      "url": "https://developer.upsun.com/docs/languages/elixir.html",
       "web": {
         "commands": {
           "start": "mix run --no-halt"
@@ -1549,8 +1549,8 @@
         },
         "upstream": {
           "status": "deprecated",
-          "releaseDate": "2024-12-19T00:00:00.000Z",
-          "eoasFrom": "2025-10-16T00:00:00.000Z",
+          "releaseDate": "2024-12-18T23:00:00.000Z",
+          "eoasFrom": "2025-10-15T22:00:00.000Z",
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
@@ -1587,8 +1587,8 @@
         },
         "upstream": {
           "status": "deprecated",
-          "releaseDate": "2023-06-19T00:00:00.000Z",
-          "eoasFrom": "2023-12-22T00:00:00.000Z",
+          "releaseDate": "2023-06-18T22:00:00.000Z",
+          "eoasFrom": "2023-12-21T23:00:00.000Z",
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
@@ -1625,9 +1625,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2022-09-01T00:00:00.000Z",
-          "eoasFrom": "2023-06-19T00:00:00.000Z",
-          "eolFrom": "2025-10-16T00:00:00.000Z",
+          "releaseDate": "2022-08-31T22:00:00.000Z",
+          "eoasFrom": "2023-06-18T22:00:00.000Z",
+          "eolFrom": "2025-10-15T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -1663,9 +1663,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2021-12-03T00:00:00.000Z",
-          "eoasFrom": "2022-09-01T00:00:00.000Z",
-          "eolFrom": "2024-12-19T00:00:00.000Z",
+          "releaseDate": "2021-12-02T23:00:00.000Z",
+          "eoasFrom": "2022-08-31T22:00:00.000Z",
+          "eolFrom": "2024-12-18T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -1701,9 +1701,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2021-05-19T00:00:00.000Z",
-          "eoasFrom": "2021-12-03T00:00:00.000Z",
-          "eolFrom": "2024-06-12T00:00:00.000Z",
+          "releaseDate": "2021-05-18T22:00:00.000Z",
+          "eoasFrom": "2021-12-02T23:00:00.000Z",
+          "eolFrom": "2024-06-11T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -1739,9 +1739,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-10-06T00:00:00.000Z",
-          "eoasFrom": "2021-05-19T00:00:00.000Z",
-          "eolFrom": "2023-12-22T00:00:00.000Z",
+          "releaseDate": "2020-10-05T22:00:00.000Z",
+          "eoasFrom": "2021-05-18T22:00:00.000Z",
+          "eolFrom": "2023-12-21T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -1777,9 +1777,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-01-27T00:00:00.000Z",
-          "eoasFrom": "2020-10-06T00:00:00.000Z",
-          "eolFrom": "2023-06-19T00:00:00.000Z",
+          "releaseDate": "2020-01-26T23:00:00.000Z",
+          "eoasFrom": "2020-10-05T22:00:00.000Z",
+          "eolFrom": "2023-06-18T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -1815,9 +1815,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-06-24T00:00:00.000Z",
-          "eoasFrom": "2020-01-27T00:00:00.000Z",
-          "eolFrom": "2022-09-01T00:00:00.000Z",
+          "releaseDate": "2019-06-23T22:00:00.000Z",
+          "eoasFrom": "2020-01-26T23:00:00.000Z",
+          "eolFrom": "2022-08-31T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -1853,7 +1853,7 @@
     "docs": {
       "relationship_name": "golang",
       "service_name": "golang",
-      "url": "https://docs.upsun.com/docs/languages/go.html",
+      "url": "https://developer.upsun.com/docs/languages/go.html",
       "web": {
         "upstream": {
           "socket_family": "tcp",
@@ -1890,7 +1890,7 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2026-02-11T00:00:00.000Z",
+          "releaseDate": "2026-02-10T23:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
@@ -1928,7 +1928,7 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2025-08-12T00:00:00.000Z",
+          "releaseDate": "2025-08-11T22:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
@@ -1966,9 +1966,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2025-02-11T00:00:00.000Z",
+          "releaseDate": "2025-02-10T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-02-11T00:00:00.000Z",
+          "eolFrom": "2026-02-10T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -2004,9 +2004,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2024-08-13T00:00:00.000Z",
+          "releaseDate": "2024-08-12T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2025-08-12T00:00:00.000Z",
+          "eolFrom": "2025-08-11T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -2042,9 +2042,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2024-02-06T00:00:00.000Z",
+          "releaseDate": "2024-02-05T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2025-02-11T00:00:00.000Z",
+          "eolFrom": "2025-02-10T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -2080,9 +2080,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2023-08-08T00:00:00.000Z",
+          "releaseDate": "2023-08-07T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-08-13T00:00:00.000Z",
+          "eolFrom": "2024-08-12T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -2118,9 +2118,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2023-02-01T00:00:00.000Z",
+          "releaseDate": "2023-01-31T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-02-06T00:00:00.000Z",
+          "eolFrom": "2024-02-05T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -2156,9 +2156,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2022-08-02T00:00:00.000Z",
+          "releaseDate": "2022-08-01T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2023-09-06T00:00:00.000Z",
+          "eolFrom": "2023-09-05T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -2194,9 +2194,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2022-03-15T00:00:00.000Z",
+          "releaseDate": "2022-03-14T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2023-02-01T00:00:00.000Z",
+          "eolFrom": "2023-01-31T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -2232,9 +2232,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2021-08-16T00:00:00.000Z",
+          "releaseDate": "2021-08-15T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-08-02T00:00:00.000Z",
+          "eolFrom": "2022-08-01T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -2270,9 +2270,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2021-02-16T00:00:00.000Z",
+          "releaseDate": "2021-02-15T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-03-15T00:00:00.000Z",
+          "eolFrom": "2022-03-14T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -2308,9 +2308,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-08-11T00:00:00.000Z",
+          "releaseDate": "2020-08-10T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2021-08-16T00:00:00.000Z",
+          "eolFrom": "2021-08-15T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -2346,9 +2346,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-02-25T00:00:00.000Z",
+          "releaseDate": "2020-02-24T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2021-02-16T00:00:00.000Z",
+          "eolFrom": "2021-02-15T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -2384,9 +2384,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-09-03T00:00:00.000Z",
+          "releaseDate": "2019-09-02T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-08-11T00:00:00.000Z",
+          "eolFrom": "2020-08-10T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -2422,9 +2422,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-02-25T00:00:00.000Z",
+          "releaseDate": "2019-02-24T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-02-25T00:00:00.000Z",
+          "eolFrom": "2020-02-24T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -2460,9 +2460,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2018-08-24T00:00:00.000Z",
+          "releaseDate": "2018-08-23T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2019-09-03T00:00:00.000Z",
+          "eolFrom": "2019-09-02T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -2498,9 +2498,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2018-02-16T00:00:00.000Z",
+          "releaseDate": "2018-02-15T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2019-02-25T00:00:00.000Z",
+          "eolFrom": "2019-02-24T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -2612,7 +2612,7 @@
     "docs": {
       "relationship_name": "influxdb",
       "service_name": "influxdb",
-      "url": "https://docs.upsun.com/docs/add-services/influxdb.html"
+      "url": "https://developer.upsun.com/docs/add-services/influxdb.html"
     },
     "name": "InfluxDB",
     "runtime": false,
@@ -2629,7 +2629,7 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2020-11-09T00:00:00.000Z",
+          "releaseDate": "2020-11-08T23:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
@@ -2667,7 +2667,7 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2020-11-09T00:00:00.000Z",
+          "releaseDate": "2020-11-08T23:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
@@ -2705,7 +2705,7 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2020-11-09T00:00:00.000Z",
+          "releaseDate": "2020-11-08T23:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
@@ -2738,7 +2738,7 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2020-11-09T00:00:00.000Z",
+          "releaseDate": "2020-11-08T23:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
@@ -2771,7 +2771,7 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2020-11-09T00:00:00.000Z",
+          "releaseDate": "2020-11-08T23:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
@@ -2804,7 +2804,7 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2016-09-07T00:00:00.000Z",
+          "releaseDate": "2016-09-06T22:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
@@ -2842,7 +2842,7 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2016-09-07T00:00:00.000Z",
+          "releaseDate": "2016-09-06T22:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
@@ -2880,7 +2880,7 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2016-09-07T00:00:00.000Z",
+          "releaseDate": "2016-09-06T22:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
@@ -2919,7 +2919,7 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2016-09-07T00:00:00.000Z",
+          "releaseDate": "2016-09-06T22:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
@@ -2952,7 +2952,7 @@
     "docs": {
       "relationship_name": "gotenberg",
       "service_name": "gotenberg",
-      "url": "https://docs.upsun.com/docs/add-services/gotenberg.html"
+      "url": "https://developer.upsun.com/docs/add-services/gotenberg.html"
     },
     "name": "Gotenberg",
     "internal": {
@@ -2990,7 +2990,7 @@
           "min_disk_size": null,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "8.27.0-0psh1~bpo12+1",
+            "raw": "8.27.0-0psh1",
             "majorMinor": "8.27",
             "normalized": "8.27.0"
           },
@@ -3007,7 +3007,7 @@
     "docs": {
       "relationship_name": "java",
       "service_name": "java",
-      "url": "https://docs.upsun.com/docs/languages/java.html",
+      "url": "https://developer.upsun.com/docs/languages/java.html",
       "web": {
         "commands": {
           "start": "java -jar target/application.jar --server.port=$PORT"
@@ -3034,9 +3034,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2014-03-18T00:00:00.000Z",
+          "releaseDate": "2014-03-17T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-03-31T00:00:00.000Z",
+          "eolFrom": "2022-03-30T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -3072,9 +3072,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2018-09-25T00:00:00.000Z",
+          "releaseDate": "2018-09-24T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2023-09-30T00:00:00.000Z",
+          "eolFrom": "2023-09-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -3110,9 +3110,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-03-19T00:00:00.000Z",
+          "releaseDate": "2019-03-18T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2019-09-17T00:00:00.000Z",
+          "eolFrom": "2019-09-16T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -3148,9 +3148,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-09-17T00:00:00.000Z",
+          "releaseDate": "2019-09-16T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-03-17T00:00:00.000Z",
+          "eolFrom": "2020-03-16T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -3186,9 +3186,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-03-17T00:00:00.000Z",
+          "releaseDate": "2020-03-16T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-09-16T00:00:00.000Z",
+          "eolFrom": "2020-09-15T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -3224,9 +3224,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2021-09-14T00:00:00.000Z",
+          "releaseDate": "2021-09-13T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-09-30T00:00:00.000Z",
+          "eolFrom": "2026-09-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": false,
@@ -3262,9 +3262,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2022-03-22T00:00:00.000Z",
+          "releaseDate": "2022-03-21T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-09-20T00:00:00.000Z",
+          "eolFrom": "2022-09-19T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -3300,9 +3300,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2022-09-20T00:00:00.000Z",
+          "releaseDate": "2022-09-19T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2023-03-21T00:00:00.000Z",
+          "eolFrom": "2023-03-20T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -3338,9 +3338,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2023-09-19T00:00:00.000Z",
+          "releaseDate": "2023-09-18T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2028-09-30T00:00:00.000Z",
+          "eolFrom": "2028-09-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": false,
@@ -3376,7 +3376,7 @@
     "docs": {
       "relationship_name": "kafka",
       "service_name": "kafka",
-      "url": "https://docs.upsun.com/docs/add-services/kafka.html"
+      "url": "https://developer.upsun.com/docs/add-services/kafka.html"
     },
     "name": "Kafka",
     "runtime": false,
@@ -3393,7 +3393,7 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2025-09-02T00:00:00.000Z",
+          "releaseDate": "2025-09-01T22:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
@@ -3431,9 +3431,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2024-02-26T00:00:00.000Z",
+          "releaseDate": "2024-02-25T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-07-26T00:00:00.000Z",
+          "eolFrom": "2024-07-25T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -3469,9 +3469,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2023-10-03T00:00:00.000Z",
+          "releaseDate": "2023-10-02T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-02-27T00:00:00.000Z",
+          "eolFrom": "2024-02-26T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -3507,9 +3507,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2023-02-06T00:00:00.000Z",
+          "releaseDate": "2023-02-05T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2023-06-13T00:00:00.000Z",
+          "eolFrom": "2023-06-12T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -3545,9 +3545,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2022-05-09T00:00:00.000Z",
+          "releaseDate": "2022-05-08T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-09-28T00:00:00.000Z",
+          "eolFrom": "2022-09-27T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -3583,9 +3583,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-12-19T00:00:00.000Z",
+          "releaseDate": "2020-12-18T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2021-11-15T00:00:00.000Z",
+          "eolFrom": "2021-11-14T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -3616,9 +3616,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-08-03T00:00:00.000Z",
+          "releaseDate": "2020-08-02T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2021-11-15T00:00:00.000Z",
+          "eolFrom": "2021-11-14T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -3649,9 +3649,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-04-14T00:00:00.000Z",
+          "releaseDate": "2020-04-13T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-08-10T00:00:00.000Z",
+          "eolFrom": "2020-08-09T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -3682,9 +3682,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-12-14T00:00:00.000Z",
+          "releaseDate": "2019-12-13T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-04-15T00:00:00.000Z",
+          "eolFrom": "2020-04-14T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -3715,9 +3715,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-06-24T00:00:00.000Z",
+          "releaseDate": "2019-06-23T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2019-12-16T00:00:00.000Z",
+          "eolFrom": "2019-12-15T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -3748,9 +3748,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-03-22T00:00:00.000Z",
+          "releaseDate": "2019-03-21T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2019-12-01T00:00:00.000Z",
+          "eolFrom": "2019-11-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -3781,9 +3781,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2018-11-20T00:00:00.000Z",
+          "releaseDate": "2018-11-19T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2019-03-22T00:00:00.000Z",
+          "eolFrom": "2019-03-21T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -3814,7 +3814,7 @@
     "docs": {
       "relationship_name": "mariadb",
       "service_name": "mariadb",
-      "url": "https://docs.upsun.com/docs/add-services/mysql.html"
+      "url": "https://developer.upsun.com/docs/add-services/mysql.html"
     },
     "name": "MariaDB/MySQL",
     "runtime": false,
@@ -3831,9 +3831,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2025-06-04T00:00:00.000Z",
+          "releaseDate": "2025-06-03T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2028-06-04T00:00:00.000Z",
+          "eolFrom": "2028-06-03T22:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": false,
@@ -3871,9 +3871,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2024-05-29T00:00:00.000Z",
+          "releaseDate": "2024-05-28T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2029-05-29T00:00:00.000Z",
+          "eolFrom": "2029-05-28T22:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": false,
@@ -3911,9 +3911,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2023-11-21T00:00:00.000Z",
+          "releaseDate": "2023-11-20T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-11-21T00:00:00.000Z",
+          "eolFrom": "2024-11-20T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -3951,9 +3951,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2023-06-06T00:00:00.000Z",
+          "releaseDate": "2023-06-05T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-06-06T00:00:00.000Z",
+          "eolFrom": "2024-06-05T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -3991,9 +3991,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2023-02-16T00:00:00.000Z",
+          "releaseDate": "2023-02-15T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2028-02-16T00:00:00.000Z",
+          "eolFrom": "2028-02-15T23:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": false,
@@ -4031,9 +4031,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2021-07-06T00:00:00.000Z",
+          "releaseDate": "2021-07-05T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-07-06T00:00:00.000Z",
+          "eolFrom": "2026-07-05T22:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": false,
@@ -4071,9 +4071,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-06-24T00:00:00.000Z",
+          "releaseDate": "2020-06-23T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2025-06-24T00:00:00.000Z",
+          "eolFrom": "2025-06-23T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -4111,9 +4111,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-06-18T00:00:00.000Z",
+          "releaseDate": "2019-06-17T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-06-18T00:00:00.000Z",
+          "eolFrom": "2024-06-17T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -4151,9 +4151,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2018-05-25T00:00:00.000Z",
+          "releaseDate": "2018-05-24T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2023-05-25T00:00:00.000Z",
+          "eolFrom": "2023-05-24T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -4191,9 +4191,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2017-05-23T00:00:00.000Z",
+          "releaseDate": "2017-05-22T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-05-23T00:00:00.000Z",
+          "eolFrom": "2022-05-22T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -4231,9 +4231,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2015-10-17T00:00:00.000Z",
+          "releaseDate": "2015-10-16T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-10-17T00:00:00.000Z",
+          "eolFrom": "2020-10-16T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -4271,9 +4271,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2014-03-31T00:00:00.000Z",
+          "releaseDate": "2014-03-30T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2019-03-31T00:00:00.000Z",
+          "eolFrom": "2019-03-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -4311,9 +4311,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2012-04-11T00:00:00.000Z",
+          "releaseDate": "2012-04-10T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-04-11T00:00:00.000Z",
+          "eolFrom": "2020-04-10T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -4351,7 +4351,7 @@
     "docs": {
       "relationship_name": "mysql",
       "service_name": "mysql",
-      "url": "https://docs.upsun.com/docs/add-services/mysql.html"
+      "url": "https://developer.upsun.com/docs/add-services/mysql.html"
     },
     "name": "MariaDB/MySQL",
     "runtime": false,
@@ -4368,9 +4368,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2025-06-04T00:00:00.000Z",
+          "releaseDate": "2025-06-03T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2028-06-04T00:00:00.000Z",
+          "eolFrom": "2028-06-03T22:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": false,
@@ -4408,9 +4408,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2024-05-29T00:00:00.000Z",
+          "releaseDate": "2024-05-28T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2029-05-29T00:00:00.000Z",
+          "eolFrom": "2029-05-28T22:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": false,
@@ -4448,9 +4448,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2023-11-21T00:00:00.000Z",
+          "releaseDate": "2023-11-20T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-11-21T00:00:00.000Z",
+          "eolFrom": "2024-11-20T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -4488,9 +4488,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2023-06-06T00:00:00.000Z",
+          "releaseDate": "2023-06-05T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-06-06T00:00:00.000Z",
+          "eolFrom": "2024-06-05T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -4528,9 +4528,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2023-02-16T00:00:00.000Z",
+          "releaseDate": "2023-02-15T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2028-02-16T00:00:00.000Z",
+          "eolFrom": "2028-02-15T23:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": false,
@@ -4568,9 +4568,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2021-07-06T00:00:00.000Z",
+          "releaseDate": "2021-07-05T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-07-06T00:00:00.000Z",
+          "eolFrom": "2026-07-05T22:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": false,
@@ -4608,9 +4608,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-06-24T00:00:00.000Z",
+          "releaseDate": "2020-06-23T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2025-06-24T00:00:00.000Z",
+          "eolFrom": "2025-06-23T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -4648,9 +4648,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-06-18T00:00:00.000Z",
+          "releaseDate": "2019-06-17T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-06-18T00:00:00.000Z",
+          "eolFrom": "2024-06-17T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -4688,9 +4688,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2018-05-25T00:00:00.000Z",
+          "releaseDate": "2018-05-24T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2023-05-25T00:00:00.000Z",
+          "eolFrom": "2023-05-24T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -4728,9 +4728,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2017-05-23T00:00:00.000Z",
+          "releaseDate": "2017-05-22T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-05-23T00:00:00.000Z",
+          "eolFrom": "2022-05-22T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -4768,9 +4768,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2015-10-17T00:00:00.000Z",
+          "releaseDate": "2015-10-16T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-10-17T00:00:00.000Z",
+          "eolFrom": "2020-10-16T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -4808,9 +4808,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2014-03-31T00:00:00.000Z",
+          "releaseDate": "2014-03-30T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2019-03-31T00:00:00.000Z",
+          "eolFrom": "2019-03-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -4848,9 +4848,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2012-04-11T00:00:00.000Z",
+          "releaseDate": "2012-04-10T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-04-11T00:00:00.000Z",
+          "eolFrom": "2020-04-10T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -4888,7 +4888,7 @@
     "docs": {
       "relationship_name": "memcached",
       "service_name": "memcached",
-      "url": "https://docs.upsun.com/docs/add-services/memcached.html"
+      "url": "https://developer.upsun.com/docs/add-services/memcached.html"
     },
     "name": "Memcached",
     "runtime": false,
@@ -4905,7 +4905,7 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2020-03-08T00:00:00.000Z",
+          "releaseDate": "2020-03-07T23:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
@@ -4944,9 +4944,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2017-07-21T00:00:00.000Z",
+          "releaseDate": "2017-07-20T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-03-09T00:00:00.000Z",
+          "eolFrom": "2020-03-08T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -4983,9 +4983,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2009-07-09T00:00:00.000Z",
+          "releaseDate": "2009-07-08T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2017-07-21T00:00:00.000Z",
+          "eolFrom": "2017-07-20T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -5017,249 +5017,12 @@
       }
     }
   },
-  "mongodb": {
-    "description": "Experimental MongoDB support on Upsun Fixed",
-    "docs": {
-      "relationship_name": "mongodb",
-      "service_name": "mongodb",
-      "url": "https://docs.upsun.com/docs/add-services/mongodb.html"
-    },
-    "name": "MongoDB",
-    "runtime": false,
-    "service": true,
-    "need_disk": true,
-    "internal": {
-      "repo_name": "mongodb"
-    },
-    "versions": {
-      "4.0": {
-        "upsun": {
-          "status": "supported",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "retired",
-          "releaseDate": "2018-06-30T00:00:00.000Z",
-          "eoasFrom": null,
-          "eolFrom": "2022-04-30T00:00:00.000Z",
-          "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
-        },
-        "manifest": {
-          "endpoints": {
-            "mongodb": {
-              "path": "main",
-              "port": 27017,
-              "query": {
-                "is_master": true
-              },
-              "scheme": "mongodb",
-              "password": "main",
-              "username": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 512,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "4.0.3",
-            "majorMinor": "4.0",
-            "normalized": "4.0.3"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      "3.6": {
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "releaseDate": "2017-11-30T00:00:00.000Z",
-          "eoasFrom": null,
-          "eolFrom": "2021-04-30T00:00:00.000Z",
-          "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
-        },
-        "manifest": {
-          "endpoints": {
-            "mongodb": {
-              "path": "main",
-              "port": 27017,
-              "query": {
-                "is_master": true
-              },
-              "scheme": "mongodb",
-              "password": "main",
-              "username": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "3.6.23",
-            "majorMinor": "3.6",
-            "normalized": "3.6.23"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      "3.4": {
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "releaseDate": "2016-11-30T00:00:00.000Z",
-          "eoasFrom": null,
-          "eolFrom": "2020-01-31T00:00:00.000Z",
-          "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
-        },
-        "manifest": {
-          "endpoints": {
-            "mongodb": {
-              "path": "main",
-              "port": 27017,
-              "query": {
-                "is_master": true
-              },
-              "scheme": "mongodb",
-              "password": "main",
-              "username": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "3.4.24",
-            "majorMinor": "3.4",
-            "normalized": "3.4.24"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      "3.2": {
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "releaseDate": "2015-12-31T00:00:00.000Z",
-          "eoasFrom": null,
-          "eolFrom": "2018-09-30T00:00:00.000Z",
-          "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
-        },
-        "manifest": {
-          "endpoints": {
-            "mongodb": {
-              "path": "main",
-              "port": 27017,
-              "query": {
-                "is_master": true
-              },
-              "scheme": "mongodb",
-              "password": "main",
-              "username": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "3.2.22",
-            "majorMinor": "3.2",
-            "normalized": "3.2.22"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      "3.0": {
-        "upsun": {
-          "status": "retired",
-          "internal_support": false
-        },
-        "upstream": {
-          "status": "retired",
-          "releaseDate": "2015-03-31T00:00:00.000Z",
-          "eoasFrom": null,
-          "eolFrom": "2018-02-28T00:00:00.000Z",
-          "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
-        },
-        "manifest": {
-          "endpoints": {
-            "mongodb": {
-              "path": "main",
-              "port": 27017,
-              "query": {
-                "is_master": true
-              },
-              "scheme": "mongodb",
-              "password": "main",
-              "username": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "3.0.15",
-            "majorMinor": "3.0",
-            "normalized": "3.0.15"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      }
-    }
-  },
   "mongodb-enterprise": {
     "description": "Support for the enterprise edition of MongoDB",
     "docs": {
       "relationship_name": "mongodb-enterprise",
       "service_name": "mongodb-enterprise",
-      "url": "https://docs.upsun.com/docs/add-services/mongodb.html"
+      "url": "https://developer.upsun.com/docs/add-services/mongodb.html"
     },
     "name": "MongoDB",
     "runtime": false,
@@ -5277,9 +5040,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2023-08-31T00:00:00.000Z",
+          "releaseDate": "2023-08-30T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2027-08-31T00:00:00.000Z",
+          "eolFrom": "2027-08-30T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -5316,9 +5079,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2022-07-31T00:00:00.000Z",
+          "releaseDate": "2022-07-30T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2025-07-31T00:00:00.000Z",
+          "eolFrom": "2025-07-30T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -5355,9 +5118,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2021-07-31T00:00:00.000Z",
+          "releaseDate": "2021-07-30T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-10-31T00:00:00.000Z",
+          "eolFrom": "2024-10-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -5394,9 +5157,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-07-31T00:00:00.000Z",
+          "releaseDate": "2020-07-30T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-02-29T00:00:00.000Z",
+          "eolFrom": "2024-02-28T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -5433,9 +5196,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-08-31T00:00:00.000Z",
+          "releaseDate": "2019-08-30T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2023-04-30T00:00:00.000Z",
+          "eolFrom": "2023-04-29T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -5472,9 +5235,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2018-06-30T00:00:00.000Z",
+          "releaseDate": "2018-06-29T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-04-30T00:00:00.000Z",
+          "eolFrom": "2022-04-29T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -5511,7 +5274,7 @@
     "docs": {
       "relationship_name": "network-storage",
       "service_name": "network-storage",
-      "url": "https://docs.upsun.com/docs/add-services/network-storage.html"
+      "url": "https://developer.upsun.com/docs/add-services/network-storage.html"
     },
     "name": "Network Storage",
     "runtime": false,
@@ -5523,7 +5286,7 @@
     "versions": {
       "2.0": {
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": true
         },
         "upstream": {
@@ -5532,9 +5295,9 @@
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": null,
@@ -5594,7 +5357,7 @@
     "docs": {
       "relationship_name": "nodejs",
       "service_name": "nodejs",
-      "url": "https://docs.upsun.com/docs/languages/nodejs.html",
+      "url": "https://developer.upsun.com/docs/languages/nodejs.html",
       "web": {
         "commands": {
           "start": "node index.js"
@@ -5616,9 +5379,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2021-04-20T00:00:00.000Z",
-          "eoasFrom": "2022-10-18T00:00:00.000Z",
-          "eolFrom": "2023-09-11T00:00:00.000Z",
+          "releaseDate": "2021-04-19T22:00:00.000Z",
+          "eoasFrom": "2022-10-17T22:00:00.000Z",
+          "eolFrom": "2023-09-10T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -5654,9 +5417,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2022-04-19T00:00:00.000Z",
-          "eoasFrom": "2023-10-18T00:00:00.000Z",
-          "eolFrom": "2025-04-30T00:00:00.000Z",
+          "releaseDate": "2022-04-18T22:00:00.000Z",
+          "eoasFrom": "2023-10-17T22:00:00.000Z",
+          "eolFrom": "2025-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -5692,9 +5455,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "releaseDate": "2023-04-18T00:00:00.000Z",
-          "eoasFrom": "2024-10-22T00:00:00.000Z",
-          "eolFrom": "2026-04-30T00:00:00.000Z",
+          "releaseDate": "2023-04-17T22:00:00.000Z",
+          "eoasFrom": "2024-10-21T22:00:00.000Z",
+          "eolFrom": "2026-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": true,
@@ -5730,9 +5493,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "releaseDate": "2024-04-24T00:00:00.000Z",
-          "eoasFrom": "2025-10-21T00:00:00.000Z",
-          "eolFrom": "2027-04-30T00:00:00.000Z",
+          "releaseDate": "2024-04-23T22:00:00.000Z",
+          "eoasFrom": "2025-10-20T22:00:00.000Z",
+          "eolFrom": "2027-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": true,
@@ -5768,9 +5531,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2025-05-06T00:00:00.000Z",
-          "eoasFrom": "2026-10-20T00:00:00.000Z",
-          "eolFrom": "2028-04-30T00:00:00.000Z",
+          "releaseDate": "2025-05-05T22:00:00.000Z",
+          "eoasFrom": "2026-10-19T22:00:00.000Z",
+          "eolFrom": "2028-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": false,
@@ -5806,9 +5569,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2017-05-30T00:00:00.000Z",
-          "eoasFrom": "2019-01-01T00:00:00.000Z",
-          "eolFrom": "2019-12-31T00:00:00.000Z",
+          "releaseDate": "2017-05-29T22:00:00.000Z",
+          "eoasFrom": "2018-12-31T23:00:00.000Z",
+          "eolFrom": "2019-12-30T23:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -5844,9 +5607,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2016-04-26T00:00:00.000Z",
-          "eoasFrom": "2018-04-30T00:00:00.000Z",
-          "eolFrom": "2019-04-30T00:00:00.000Z",
+          "releaseDate": "2016-04-25T22:00:00.000Z",
+          "eoasFrom": "2018-04-29T22:00:00.000Z",
+          "eolFrom": "2019-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -5882,9 +5645,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2016-04-26T00:00:00.000Z",
-          "eoasFrom": "2018-04-30T00:00:00.000Z",
-          "eolFrom": "2019-04-30T00:00:00.000Z",
+          "releaseDate": "2016-04-25T22:00:00.000Z",
+          "eoasFrom": "2018-04-29T22:00:00.000Z",
+          "eolFrom": "2019-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -5920,9 +5683,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2016-04-26T00:00:00.000Z",
-          "eoasFrom": "2018-04-30T00:00:00.000Z",
-          "eolFrom": "2019-04-30T00:00:00.000Z",
+          "releaseDate": "2016-04-25T22:00:00.000Z",
+          "eoasFrom": "2018-04-29T22:00:00.000Z",
+          "eolFrom": "2019-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -5958,9 +5721,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2016-04-26T00:00:00.000Z",
-          "eoasFrom": "2018-04-30T00:00:00.000Z",
-          "eolFrom": "2019-04-30T00:00:00.000Z",
+          "releaseDate": "2016-04-25T22:00:00.000Z",
+          "eoasFrom": "2018-04-29T22:00:00.000Z",
+          "eolFrom": "2019-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -5996,9 +5759,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2016-04-26T00:00:00.000Z",
-          "eoasFrom": "2018-04-30T00:00:00.000Z",
-          "eolFrom": "2019-04-30T00:00:00.000Z",
+          "releaseDate": "2016-04-25T22:00:00.000Z",
+          "eoasFrom": "2018-04-29T22:00:00.000Z",
+          "eolFrom": "2019-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -6034,9 +5797,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2016-04-26T00:00:00.000Z",
-          "eoasFrom": "2018-04-30T00:00:00.000Z",
-          "eolFrom": "2019-04-30T00:00:00.000Z",
+          "releaseDate": "2016-04-25T22:00:00.000Z",
+          "eoasFrom": "2018-04-29T22:00:00.000Z",
+          "eolFrom": "2019-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -6072,9 +5835,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2015-09-09T00:00:00.000Z",
-          "eoasFrom": "2017-04-01T00:00:00.000Z",
-          "eolFrom": "2018-04-30T00:00:00.000Z",
+          "releaseDate": "2015-09-08T22:00:00.000Z",
+          "eoasFrom": "2017-03-31T22:00:00.000Z",
+          "eolFrom": "2018-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -6110,9 +5873,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2015-09-09T00:00:00.000Z",
-          "eoasFrom": "2017-04-01T00:00:00.000Z",
-          "eolFrom": "2018-04-30T00:00:00.000Z",
+          "releaseDate": "2015-09-08T22:00:00.000Z",
+          "eoasFrom": "2017-03-31T22:00:00.000Z",
+          "eolFrom": "2018-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -6148,9 +5911,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2015-09-09T00:00:00.000Z",
-          "eoasFrom": "2017-04-01T00:00:00.000Z",
-          "eolFrom": "2018-04-30T00:00:00.000Z",
+          "releaseDate": "2015-09-08T22:00:00.000Z",
+          "eoasFrom": "2017-03-31T22:00:00.000Z",
+          "eolFrom": "2018-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -6186,9 +5949,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2015-09-09T00:00:00.000Z",
-          "eoasFrom": "2017-04-01T00:00:00.000Z",
-          "eolFrom": "2018-04-30T00:00:00.000Z",
+          "releaseDate": "2015-09-08T22:00:00.000Z",
+          "eoasFrom": "2017-03-31T22:00:00.000Z",
+          "eolFrom": "2018-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -6224,9 +5987,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2015-09-09T00:00:00.000Z",
-          "eoasFrom": "2017-04-01T00:00:00.000Z",
-          "eolFrom": "2018-04-30T00:00:00.000Z",
+          "releaseDate": "2015-09-08T22:00:00.000Z",
+          "eoasFrom": "2017-03-31T22:00:00.000Z",
+          "eolFrom": "2018-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -6262,9 +6025,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2015-09-09T00:00:00.000Z",
-          "eoasFrom": "2017-04-01T00:00:00.000Z",
-          "eolFrom": "2018-04-30T00:00:00.000Z",
+          "releaseDate": "2015-09-08T22:00:00.000Z",
+          "eoasFrom": "2017-03-31T22:00:00.000Z",
+          "eolFrom": "2018-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -6338,7 +6101,7 @@
     "docs": {
       "relationship_name": "opensearch",
       "service_name": "opensearch",
-      "url": "https://docs.upsun.com/docs/add-services/opensearch.html"
+      "url": "https://developer.upsun.com/docs/add-services/opensearch.html"
     },
     "name": "OpenSearch",
     "runtime": false,
@@ -6394,8 +6157,8 @@
         },
         "upstream": {
           "status": "deprecated",
-          "releaseDate": "2022-05-26T00:00:00.000Z",
-          "eoasFrom": "2025-05-06T00:00:00.000Z",
+          "releaseDate": "2022-05-25T22:00:00.000Z",
+          "eoasFrom": "2025-05-05T22:00:00.000Z",
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
@@ -6433,7 +6196,7 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2025-05-06T00:00:00.000Z",
+          "releaseDate": "2025-05-05T22:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
@@ -6472,9 +6235,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2021-07-12T00:00:00.000Z",
-          "eoasFrom": "2022-05-26T00:00:00.000Z",
-          "eolFrom": "2025-05-06T00:00:00.000Z",
+          "releaseDate": "2021-07-11T22:00:00.000Z",
+          "eoasFrom": "2022-05-25T22:00:00.000Z",
+          "eolFrom": "2025-05-05T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -6511,9 +6274,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2021-07-12T00:00:00.000Z",
-          "eoasFrom": "2022-05-26T00:00:00.000Z",
-          "eolFrom": "2025-05-06T00:00:00.000Z",
+          "releaseDate": "2021-07-11T22:00:00.000Z",
+          "eoasFrom": "2022-05-25T22:00:00.000Z",
+          "eolFrom": "2025-05-05T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -6550,7 +6313,7 @@
     "docs": {
       "relationship_name": "oracle-mysql",
       "service_name": "oracle-mysql",
-      "url": "https://docs.upsun.com/docs/add-services/mysql.html"
+      "url": "https://developer.upsun.com/docs/add-services/mysql.html"
     },
     "name": "Oracle MySQL",
     "runtime": false,
@@ -6567,9 +6330,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2024-04-10T00:00:00.000Z",
-          "eoasFrom": "2029-04-30T00:00:00.000Z",
-          "eolFrom": "2032-04-30T00:00:00.000Z",
+          "releaseDate": "2024-04-09T22:00:00.000Z",
+          "eoasFrom": "2029-04-29T22:00:00.000Z",
+          "eolFrom": "2032-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": false,
@@ -6609,9 +6372,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "releaseDate": "2018-04-08T00:00:00.000Z",
-          "eoasFrom": "2025-04-30T00:00:00.000Z",
-          "eolFrom": "2026-04-30T00:00:00.000Z",
+          "releaseDate": "2018-04-07T22:00:00.000Z",
+          "eoasFrom": "2025-04-29T22:00:00.000Z",
+          "eolFrom": "2026-04-29T22:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": true,
@@ -6651,9 +6414,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2015-10-09T00:00:00.000Z",
-          "eoasFrom": "2020-10-31T00:00:00.000Z",
-          "eolFrom": "2023-10-31T00:00:00.000Z",
+          "releaseDate": "2015-10-08T22:00:00.000Z",
+          "eoasFrom": "2020-10-30T23:00:00.000Z",
+          "eolFrom": "2023-10-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -6684,7 +6447,7 @@
     "docs": {
       "relationship_name": "php",
       "service_name": "php",
-      "url": "https://docs.upsun.com/docs/languages/php.html",
+      "url": "https://developer.upsun.com/docs/languages/php.html",
       "web": {
         "locations": {
           "/": {
@@ -6722,9 +6485,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2025-11-20T00:00:00.000Z",
-          "eoasFrom": "2027-12-31T00:00:00.000Z",
-          "eolFrom": "2029-12-31T00:00:00.000Z",
+          "releaseDate": "2025-11-19T23:00:00.000Z",
+          "eoasFrom": "2027-12-30T23:00:00.000Z",
+          "eolFrom": "2029-12-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -6764,9 +6527,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2024-11-21T00:00:00.000Z",
-          "eoasFrom": "2026-12-31T00:00:00.000Z",
-          "eolFrom": "2028-12-31T00:00:00.000Z",
+          "releaseDate": "2024-11-20T23:00:00.000Z",
+          "eoasFrom": "2026-12-30T23:00:00.000Z",
+          "eolFrom": "2028-12-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -6806,9 +6569,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "releaseDate": "2023-11-23T00:00:00.000Z",
-          "eoasFrom": "2025-12-31T00:00:00.000Z",
-          "eolFrom": "2027-12-31T00:00:00.000Z",
+          "releaseDate": "2023-11-22T23:00:00.000Z",
+          "eoasFrom": "2025-12-30T23:00:00.000Z",
+          "eolFrom": "2027-12-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": true,
@@ -6848,9 +6611,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "releaseDate": "2022-12-08T00:00:00.000Z",
-          "eoasFrom": "2024-12-31T00:00:00.000Z",
-          "eolFrom": "2026-12-31T00:00:00.000Z",
+          "releaseDate": "2022-12-07T23:00:00.000Z",
+          "eoasFrom": "2024-12-30T23:00:00.000Z",
+          "eolFrom": "2026-12-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": true,
@@ -6890,9 +6653,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2021-11-25T00:00:00.000Z",
-          "eoasFrom": "2023-11-25T00:00:00.000Z",
-          "eolFrom": "2025-12-31T00:00:00.000Z",
+          "releaseDate": "2021-11-24T23:00:00.000Z",
+          "eoasFrom": "2023-11-24T23:00:00.000Z",
+          "eolFrom": "2025-12-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -6932,9 +6695,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-11-26T00:00:00.000Z",
-          "eoasFrom": "2022-11-26T00:00:00.000Z",
-          "eolFrom": "2023-11-26T00:00:00.000Z",
+          "releaseDate": "2020-11-25T23:00:00.000Z",
+          "eoasFrom": "2022-11-25T23:00:00.000Z",
+          "eolFrom": "2023-11-25T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -6974,9 +6737,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-11-28T00:00:00.000Z",
-          "eoasFrom": "2021-11-28T00:00:00.000Z",
-          "eolFrom": "2022-11-28T00:00:00.000Z",
+          "releaseDate": "2019-11-27T23:00:00.000Z",
+          "eoasFrom": "2021-11-27T23:00:00.000Z",
+          "eolFrom": "2022-11-27T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -7016,9 +6779,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2018-12-06T00:00:00.000Z",
-          "eoasFrom": "2020-12-06T00:00:00.000Z",
-          "eolFrom": "2021-12-06T00:00:00.000Z",
+          "releaseDate": "2018-12-05T23:00:00.000Z",
+          "eoasFrom": "2020-12-05T23:00:00.000Z",
+          "eolFrom": "2021-12-05T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -7058,9 +6821,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2017-11-30T00:00:00.000Z",
-          "eoasFrom": "2019-11-30T00:00:00.000Z",
-          "eolFrom": "2020-11-30T00:00:00.000Z",
+          "releaseDate": "2017-11-29T23:00:00.000Z",
+          "eoasFrom": "2019-11-29T23:00:00.000Z",
+          "eolFrom": "2020-11-29T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -7100,9 +6863,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2016-12-01T00:00:00.000Z",
-          "eoasFrom": "2018-12-01T00:00:00.000Z",
-          "eolFrom": "2019-12-01T00:00:00.000Z",
+          "releaseDate": "2016-11-30T23:00:00.000Z",
+          "eoasFrom": "2018-11-30T23:00:00.000Z",
+          "eolFrom": "2019-11-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -7142,9 +6905,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2015-12-03T00:00:00.000Z",
-          "eoasFrom": "2018-01-04T00:00:00.000Z",
-          "eolFrom": "2019-01-10T00:00:00.000Z",
+          "releaseDate": "2015-12-02T23:00:00.000Z",
+          "eoasFrom": "2018-01-03T23:00:00.000Z",
+          "eolFrom": "2019-01-09T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -7184,9 +6947,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2014-08-28T00:00:00.000Z",
-          "eoasFrom": "2017-01-19T00:00:00.000Z",
-          "eolFrom": "2018-12-31T00:00:00.000Z",
+          "releaseDate": "2014-08-27T22:00:00.000Z",
+          "eoasFrom": "2017-01-18T23:00:00.000Z",
+          "eolFrom": "2018-12-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -7226,9 +6989,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2013-06-20T00:00:00.000Z",
-          "eoasFrom": "2015-07-10T00:00:00.000Z",
-          "eolFrom": "2016-07-21T00:00:00.000Z",
+          "releaseDate": "2013-06-19T22:00:00.000Z",
+          "eoasFrom": "2015-07-09T22:00:00.000Z",
+          "eolFrom": "2016-07-20T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -7268,9 +7031,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2012-03-01T00:00:00.000Z",
-          "eoasFrom": "2014-09-14T00:00:00.000Z",
-          "eolFrom": "2015-09-14T00:00:00.000Z",
+          "releaseDate": "2012-02-29T23:00:00.000Z",
+          "eoasFrom": "2014-09-13T22:00:00.000Z",
+          "eolFrom": "2015-09-13T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -7310,7 +7073,7 @@
     "docs": {
       "relationship_name": "postgresql",
       "service_name": "postgresql",
-      "url": "https://docs.upsun.com/docs/add-services/postgresql.html"
+      "url": "https://developer.upsun.com/docs/add-services/postgresql.html"
     },
     "name": "PostgreSQL",
     "runtime": false,
@@ -7327,9 +7090,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2017-10-05T00:00:00.000Z",
+          "releaseDate": "2017-10-04T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-11-10T00:00:00.000Z",
+          "eolFrom": "2022-11-09T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -7368,9 +7131,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2018-10-18T00:00:00.000Z",
+          "releaseDate": "2018-10-17T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2023-11-09T00:00:00.000Z",
+          "eolFrom": "2023-11-08T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -7409,9 +7172,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-10-03T00:00:00.000Z",
+          "releaseDate": "2019-10-02T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-11-21T00:00:00.000Z",
+          "eolFrom": "2024-11-20T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -7450,9 +7213,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-09-24T00:00:00.000Z",
+          "releaseDate": "2020-09-23T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2025-11-13T00:00:00.000Z",
+          "eolFrom": "2025-11-12T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -7491,9 +7254,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2021-09-30T00:00:00.000Z",
+          "releaseDate": "2021-09-29T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-11-12T00:00:00.000Z",
+          "eolFrom": "2026-11-11T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -7532,9 +7295,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2022-10-13T00:00:00.000Z",
+          "releaseDate": "2022-10-12T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2027-11-11T00:00:00.000Z",
+          "eolFrom": "2027-11-10T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -7573,9 +7336,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2023-09-14T00:00:00.000Z",
+          "releaseDate": "2023-09-13T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2028-11-09T00:00:00.000Z",
+          "eolFrom": "2028-11-08T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -7622,9 +7385,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2024-09-26T00:00:00.000Z",
+          "releaseDate": "2024-09-25T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2029-11-08T00:00:00.000Z",
+          "eolFrom": "2029-11-07T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -7671,9 +7434,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2025-09-25T00:00:00.000Z",
+          "releaseDate": "2025-09-24T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2030-11-14T00:00:00.000Z",
+          "eolFrom": "2030-11-13T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -7720,9 +7483,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2016-09-29T00:00:00.000Z",
+          "releaseDate": "2016-09-28T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2021-11-11T00:00:00.000Z",
+          "eolFrom": "2021-11-10T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -7761,9 +7524,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2016-01-07T00:00:00.000Z",
+          "releaseDate": "2016-01-06T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2021-02-11T00:00:00.000Z",
+          "eolFrom": "2021-02-10T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -7794,9 +7557,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2013-09-09T00:00:00.000Z",
+          "releaseDate": "2013-09-08T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2018-11-08T00:00:00.000Z",
+          "eolFrom": "2018-11-07T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -7835,7 +7598,7 @@
     "docs": {
       "relationship_name": "python",
       "service_name": "python",
-      "url": "https://docs.upsun.com/docs/languages/python.html",
+      "url": "https://developer.upsun.com/docs/languages/python.html",
       "web": {
         "commands": {
           "start": "python server.py"
@@ -7868,9 +7631,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2025-10-07T00:00:00.000Z",
-          "eoasFrom": "2027-10-01T00:00:00.000Z",
-          "eolFrom": "2030-10-31T00:00:00.000Z",
+          "releaseDate": "2025-10-06T22:00:00.000Z",
+          "eoasFrom": "2027-09-30T22:00:00.000Z",
+          "eolFrom": "2030-10-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -7906,9 +7669,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2024-10-07T00:00:00.000Z",
-          "eoasFrom": "2026-10-01T00:00:00.000Z",
-          "eolFrom": "2029-10-31T00:00:00.000Z",
+          "releaseDate": "2024-10-06T22:00:00.000Z",
+          "eoasFrom": "2026-09-30T22:00:00.000Z",
+          "eolFrom": "2029-10-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -7944,9 +7707,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "releaseDate": "2023-10-02T00:00:00.000Z",
-          "eoasFrom": "2025-04-02T00:00:00.000Z",
-          "eolFrom": "2028-10-31T00:00:00.000Z",
+          "releaseDate": "2023-10-01T22:00:00.000Z",
+          "eoasFrom": "2025-04-01T22:00:00.000Z",
+          "eolFrom": "2028-10-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": true,
@@ -7982,9 +7745,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "releaseDate": "2022-10-24T00:00:00.000Z",
-          "eoasFrom": "2024-04-01T00:00:00.000Z",
-          "eolFrom": "2027-10-31T00:00:00.000Z",
+          "releaseDate": "2022-10-23T22:00:00.000Z",
+          "eoasFrom": "2024-03-31T22:00:00.000Z",
+          "eolFrom": "2027-10-30T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": true,
@@ -8020,9 +7783,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "releaseDate": "2021-10-04T00:00:00.000Z",
-          "eoasFrom": "2023-04-05T00:00:00.000Z",
-          "eolFrom": "2026-10-31T00:00:00.000Z",
+          "releaseDate": "2021-10-03T22:00:00.000Z",
+          "eoasFrom": "2023-04-04T22:00:00.000Z",
+          "eolFrom": "2026-10-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": true,
@@ -8058,9 +7821,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-10-05T00:00:00.000Z",
-          "eoasFrom": "2022-05-17T00:00:00.000Z",
-          "eolFrom": "2025-10-31T00:00:00.000Z",
+          "releaseDate": "2020-10-04T22:00:00.000Z",
+          "eoasFrom": "2022-05-16T22:00:00.000Z",
+          "eolFrom": "2025-10-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -8096,9 +7859,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-10-14T00:00:00.000Z",
-          "eoasFrom": "2021-05-03T00:00:00.000Z",
-          "eolFrom": "2024-10-07T00:00:00.000Z",
+          "releaseDate": "2019-10-13T22:00:00.000Z",
+          "eoasFrom": "2021-05-02T22:00:00.000Z",
+          "eolFrom": "2024-10-06T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -8134,9 +7897,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2018-06-27T00:00:00.000Z",
-          "eoasFrom": "2020-06-27T00:00:00.000Z",
-          "eolFrom": "2023-06-27T00:00:00.000Z",
+          "releaseDate": "2018-06-26T22:00:00.000Z",
+          "eoasFrom": "2020-06-26T22:00:00.000Z",
+          "eolFrom": "2023-06-26T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -8172,9 +7935,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2016-12-23T00:00:00.000Z",
-          "eoasFrom": "2018-12-24T00:00:00.000Z",
-          "eolFrom": "2021-12-23T00:00:00.000Z",
+          "releaseDate": "2016-12-22T23:00:00.000Z",
+          "eoasFrom": "2018-12-23T23:00:00.000Z",
+          "eolFrom": "2021-12-22T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -8210,9 +7973,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2015-09-13T00:00:00.000Z",
+          "releaseDate": "2015-09-12T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-09-30T00:00:00.000Z",
+          "eolFrom": "2020-09-29T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -8248,9 +8011,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2010-07-03T00:00:00.000Z",
+          "releaseDate": "2010-07-02T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-01-01T00:00:00.000Z",
+          "eolFrom": "2019-12-31T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -8286,7 +8049,7 @@
     "docs": {
       "relationship_name": "rabbitmq",
       "service_name": "rabbitmq",
-      "url": "https://docs.upsun.com/docs/add-services/rabbitmq.html"
+      "url": "https://developer.upsun.com/docs/add-services/rabbitmq.html"
     },
     "name": "RabbitMQ",
     "runtime": false,
@@ -8303,9 +8066,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2025-04-15T00:00:00.000Z",
+          "releaseDate": "2025-04-14T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-01-30T00:00:00.000Z",
+          "eolFrom": "2026-01-29T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -8345,9 +8108,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2024-09-18T00:00:00.000Z",
+          "releaseDate": "2024-09-17T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2025-04-15T00:00:00.000Z",
+          "eolFrom": "2025-04-14T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -8387,9 +8150,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2024-02-22T00:00:00.000Z",
+          "releaseDate": "2024-02-21T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-09-17T00:00:00.000Z",
+          "eolFrom": "2024-09-16T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -8429,9 +8192,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2023-06-01T00:00:00.000Z",
+          "releaseDate": "2023-05-31T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-02-21T00:00:00.000Z",
+          "eolFrom": "2024-02-20T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -8471,9 +8234,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2022-09-26T00:00:00.000Z",
+          "releaseDate": "2022-09-25T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2023-06-01T00:00:00.000Z",
+          "eolFrom": "2023-05-31T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -8513,9 +8276,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2022-05-03T00:00:00.000Z",
+          "releaseDate": "2022-05-02T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-09-28T00:00:00.000Z",
+          "eolFrom": "2022-09-27T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -8555,9 +8318,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2021-07-23T00:00:00.000Z",
+          "releaseDate": "2021-07-22T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2023-01-31T00:00:00.000Z",
+          "eolFrom": "2023-01-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -8597,9 +8360,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-10-01T00:00:00.000Z",
+          "releaseDate": "2019-09-30T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-07-31T00:00:00.000Z",
+          "eolFrom": "2022-07-30T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -8639,9 +8402,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2017-11-28T00:00:00.000Z",
+          "releaseDate": "2017-11-27T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-09-30T00:00:00.000Z",
+          "eolFrom": "2020-09-29T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -8681,9 +8444,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2015-12-22T00:00:00.000Z",
+          "releaseDate": "2015-12-21T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2018-05-31T00:00:00.000Z",
+          "eolFrom": "2018-05-30T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -8723,9 +8486,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2015-03-11T00:00:00.000Z",
+          "releaseDate": "2015-03-10T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2016-10-31T00:00:00.000Z",
+          "eolFrom": "2016-10-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -8765,7 +8528,7 @@
     "docs": {
       "relationship_name": "redis",
       "service_name": "redis",
-      "url": "https://docs.upsun.com/docs/add-services/redis.html"
+      "url": "https://developer.upsun.com/docs/add-services/redis.html"
     },
     "name": "Redis",
     "runtime": false,
@@ -8782,9 +8545,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2025-05-02T00:00:00.000Z",
-          "eoasFrom": "2025-08-04T00:00:00.000Z",
-          "eolFrom": "2026-02-11T00:00:00.000Z",
+          "releaseDate": "2025-05-01T22:00:00.000Z",
+          "eoasFrom": "2025-08-03T22:00:00.000Z",
+          "eolFrom": "2026-02-10T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -8822,9 +8585,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "releaseDate": "2023-08-15T00:00:00.000Z",
-          "eoasFrom": "2024-07-29T00:00:00.000Z",
-          "eolFrom": "2026-02-28T00:00:00.000Z",
+          "releaseDate": "2023-08-14T22:00:00.000Z",
+          "eoasFrom": "2024-07-28T22:00:00.000Z",
+          "eolFrom": "2026-02-27T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": true,
@@ -8862,9 +8625,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2022-04-27T00:00:00.000Z",
-          "eoasFrom": "2023-08-15T00:00:00.000Z",
-          "eolFrom": "2024-07-29T00:00:00.000Z",
+          "releaseDate": "2022-04-26T22:00:00.000Z",
+          "eoasFrom": "2023-08-14T22:00:00.000Z",
+          "eolFrom": "2024-07-28T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -8902,9 +8665,9 @@
         },
         "upstream": {
           "status": "deprecated",
-          "releaseDate": "2021-02-22T00:00:00.000Z",
-          "eoasFrom": "2022-04-27T00:00:00.000Z",
-          "eolFrom": "2025-02-28T00:00:00.000Z",
+          "releaseDate": "2021-02-21T23:00:00.000Z",
+          "eoasFrom": "2022-04-26T22:00:00.000Z",
+          "eolFrom": "2025-02-27T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": true,
@@ -8942,9 +8705,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-04-30T00:00:00.000Z",
-          "eoasFrom": "2021-02-22T00:00:00.000Z",
-          "eolFrom": "2022-05-31T00:00:00.000Z",
+          "releaseDate": "2020-04-29T22:00:00.000Z",
+          "eoasFrom": "2021-02-21T23:00:00.000Z",
+          "eolFrom": "2022-05-30T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -8982,9 +8745,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2018-10-17T00:00:00.000Z",
-          "eoasFrom": "2020-04-30T00:00:00.000Z",
-          "eolFrom": "2022-04-27T00:00:00.000Z",
+          "releaseDate": "2018-10-16T22:00:00.000Z",
+          "eoasFrom": "2020-04-29T22:00:00.000Z",
+          "eolFrom": "2022-04-26T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -9175,7 +8938,7 @@
     "docs": {
       "relationship_name": "ruby",
       "service_name": "ruby",
-      "url": "https://docs.upsun.com/docs/languages/ruby.html",
+      "url": "https://developer.upsun.com/docs/languages/ruby.html",
       "web": {
         "upstream": {
           "socket_family": "unix"
@@ -9218,9 +8981,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2025-12-25T00:00:00.000Z",
+          "releaseDate": "2025-12-24T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2029-03-31T00:00:00.000Z",
+          "eolFrom": "2029-03-30T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -9256,9 +9019,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2024-12-24T00:00:00.000Z",
+          "releaseDate": "2024-12-23T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2028-03-31T00:00:00.000Z",
+          "eolFrom": "2028-03-30T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -9294,9 +9057,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2023-12-25T00:00:00.000Z",
+          "releaseDate": "2023-12-24T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2027-03-31T00:00:00.000Z",
+          "eolFrom": "2027-03-30T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -9332,9 +9095,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2022-12-25T00:00:00.000Z",
+          "releaseDate": "2022-12-24T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-03-31T00:00:00.000Z",
+          "eolFrom": "2026-03-30T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -9370,9 +9133,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2021-12-25T00:00:00.000Z",
+          "releaseDate": "2021-12-24T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2025-03-31T00:00:00.000Z",
+          "eolFrom": "2025-03-30T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -9408,9 +9171,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2020-12-25T00:00:00.000Z",
+          "releaseDate": "2020-12-24T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-04-23T00:00:00.000Z",
+          "eolFrom": "2024-04-22T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -9446,9 +9209,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-12-25T00:00:00.000Z",
+          "releaseDate": "2019-12-24T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2023-03-31T00:00:00.000Z",
+          "eolFrom": "2023-03-30T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -9484,9 +9247,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2018-12-25T00:00:00.000Z",
+          "releaseDate": "2018-12-24T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-03-31T00:00:00.000Z",
+          "eolFrom": "2022-03-30T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -9522,9 +9285,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2017-12-25T00:00:00.000Z",
+          "releaseDate": "2017-12-24T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2021-03-31T00:00:00.000Z",
+          "eolFrom": "2021-03-30T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -9560,9 +9323,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2016-12-23T00:00:00.000Z",
+          "releaseDate": "2016-12-22T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2020-03-31T00:00:00.000Z",
+          "eolFrom": "2020-03-30T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -9598,9 +9361,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2015-12-24T00:00:00.000Z",
+          "releaseDate": "2015-12-23T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2019-03-31T00:00:00.000Z",
+          "eolFrom": "2019-03-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -9636,7 +9399,7 @@
     "docs": {
       "relationship_name": "rust",
       "service_name": "rust",
-      "url": "https://docs.upsun.com/docs/languages/rust.html",
+      "url": "https://developer.upsun.com/docs/languages/rust.html",
       "web": {
         "commands": {
           "start": "./target/debug/hello"
@@ -9657,10 +9420,10 @@
           "internal_support": true
         },
         "upstream": {
-          "status": "retired",
-          "releaseDate": "2026-01-22T00:00:00.000Z",
+          "status": "supported",
+          "releaseDate": "2026-01-21T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-03-06T00:00:00.000Z",
+          "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -9696,7 +9459,7 @@
     "docs": {
       "relationship_name": "solr",
       "service_name": "solr",
-      "url": "https://docs.upsun.com/docs/add-services/solr.html"
+      "url": "https://developer.upsun.com/docs/add-services/solr.html"
     },
     "name": "Solr",
     "runtime": false,
@@ -9713,9 +9476,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2022-05-11T00:00:00.000Z",
+          "releaseDate": "2022-05-10T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-03-03T00:00:00.000Z",
+          "eolFrom": "2026-03-02T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -9752,9 +9515,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2022-05-11T00:00:00.000Z",
+          "releaseDate": "2022-05-10T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-03-03T00:00:00.000Z",
+          "eolFrom": "2026-03-02T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -9791,9 +9554,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2022-05-11T00:00:00.000Z",
+          "releaseDate": "2022-05-10T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-03-03T00:00:00.000Z",
+          "eolFrom": "2026-03-02T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -9830,9 +9593,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2022-05-11T00:00:00.000Z",
+          "releaseDate": "2022-05-10T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-03-03T00:00:00.000Z",
+          "eolFrom": "2026-03-02T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -9869,9 +9632,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2022-05-11T00:00:00.000Z",
+          "releaseDate": "2022-05-10T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-03-03T00:00:00.000Z",
+          "eolFrom": "2026-03-02T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -9908,9 +9671,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2022-05-11T00:00:00.000Z",
+          "releaseDate": "2022-05-10T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-03-03T00:00:00.000Z",
+          "eolFrom": "2026-03-02T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -9941,9 +9704,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-03-13T00:00:00.000Z",
+          "releaseDate": "2019-03-12T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-10-25T00:00:00.000Z",
+          "eolFrom": "2024-10-24T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -9980,9 +9743,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-03-13T00:00:00.000Z",
+          "releaseDate": "2019-03-12T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-10-25T00:00:00.000Z",
+          "eolFrom": "2024-10-24T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -10019,9 +9782,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2017-09-18T00:00:00.000Z",
+          "releaseDate": "2017-09-17T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-05-11T00:00:00.000Z",
+          "eolFrom": "2022-05-10T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -10058,9 +9821,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2017-09-18T00:00:00.000Z",
+          "releaseDate": "2017-09-17T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2022-05-11T00:00:00.000Z",
+          "eolFrom": "2022-05-10T22:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -10097,9 +9860,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2016-04-07T00:00:00.000Z",
+          "releaseDate": "2016-04-06T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2019-03-13T00:00:00.000Z",
+          "eolFrom": "2019-03-12T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -10136,9 +9899,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2016-04-07T00:00:00.000Z",
+          "releaseDate": "2016-04-06T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2019-03-13T00:00:00.000Z",
+          "eolFrom": "2019-03-12T23:00:00.000Z",
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -10175,7 +9938,7 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2012-10-11T00:00:00.000Z",
+          "releaseDate": "2012-10-10T22:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
@@ -10214,7 +9977,7 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2011-03-30T00:00:00.000Z",
+          "releaseDate": "2011-03-29T22:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
@@ -10253,7 +10016,7 @@
     "docs": {
       "relationship_name": "valkey",
       "service_name": "valkey",
-      "url": "https://docs.upsun.com/docs/add-services/valkey.html"
+      "url": "https://developer.upsun.com/docs/add-services/valkey.html"
     },
     "name": "Valkey",
     "runtime": false,
@@ -10270,9 +10033,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2025-03-31T00:00:00.000Z",
-          "eoasFrom": "2028-03-31T00:00:00.000Z",
-          "eolFrom": "2030-03-31T00:00:00.000Z",
+          "releaseDate": "2025-03-30T22:00:00.000Z",
+          "eoasFrom": "2028-03-30T22:00:00.000Z",
+          "eolFrom": "2030-03-30T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -10310,9 +10073,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2024-09-15T00:00:00.000Z",
-          "eoasFrom": "2027-09-15T00:00:00.000Z",
-          "eolFrom": "2027-09-15T00:00:00.000Z",
+          "releaseDate": "2024-09-14T22:00:00.000Z",
+          "eoasFrom": "2027-09-14T22:00:00.000Z",
+          "eolFrom": "2027-09-14T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -10350,7 +10113,7 @@
     "docs": {
       "relationship_name": "varnish",
       "service_name": "varnish",
-      "url": "https://docs.upsun.com/docs/add-services/varnish.html"
+      "url": "https://developer.upsun.com/docs/add-services/varnish.html"
     },
     "name": "Varnish",
     "runtime": false,
@@ -10367,9 +10130,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2024-09-13T00:00:00.000Z",
+          "releaseDate": "2024-09-12T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2025-09-15T00:00:00.000Z",
+          "eolFrom": "2025-09-14T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -10410,9 +10173,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2023-03-15T00:00:00.000Z",
+          "releaseDate": "2023-03-14T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2024-03-15T00:00:00.000Z",
+          "eolFrom": "2024-03-14T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -10453,9 +10216,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2022-09-15T00:00:00.000Z",
+          "releaseDate": "2022-09-14T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2023-09-15T00:00:00.000Z",
+          "eolFrom": "2023-09-14T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -10496,9 +10259,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2022-03-15T00:00:00.000Z",
+          "releaseDate": "2022-03-14T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2023-03-15T00:00:00.000Z",
+          "eolFrom": "2023-03-14T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -10582,7 +10345,7 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2018-03-15T00:00:00.000Z",
+          "releaseDate": "2018-03-14T23:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": true,
@@ -10709,7 +10472,7 @@
     "docs": {
       "relationship_name": "vault-kms",
       "service_name": "vault-kms",
-      "url": "https://docs.upsun.com/docs/add-services/vault.html"
+      "url": "https://developer.upsun.com/docs/add-services/vault.html"
     },
     "name": "Vault KMS",
     "runtime": false,
@@ -10726,9 +10489,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2022-10-10T00:00:00.000Z",
+          "releaseDate": "2022-10-09T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2023-09-27T00:00:00.000Z",
+          "eolFrom": "2023-09-26T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -10832,7 +10595,7 @@
     "docs": {
       "relationship_name": "mercure",
       "service_name": "mercure",
-      "url": "https://docs.upsun.com/docs/add-services/mercure.html"
+      "url": "https://developer.upsun.com/docs/add-services/mercure.html"
     },
     "versions": {
       "0": {
@@ -10888,7 +10651,7 @@
     "docs": {
       "relationship_name": "elasticsearch-enterprise",
       "service_name": "elasticsearch-enterprise",
-      "url": "https://docs.upsun.com/docs/add-services/elasticsearch.html"
+      "url": "https://developer.upsun.com/docs/add-services/elasticsearch-enterprise.html"
     },
     "versions": {
       "8.19": {
@@ -10898,9 +10661,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2025-07-23T00:00:00.000Z",
+          "releaseDate": "2025-07-22T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2027-07-15T00:00:00.000Z",
+          "eolFrom": "2027-07-14T22:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -10976,9 +10739,9 @@
         },
         "upstream": {
           "status": "retired",
-          "releaseDate": "2019-04-10T00:00:00.000Z",
+          "releaseDate": "2019-04-09T22:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-01-15T00:00:00.000Z",
+          "eolFrom": "2026-01-14T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -11010,31 +10773,30 @@
       }
     }
   },
-  "mariadb-replica": {
+  "activemq-artemis": {
     "description": "",
-    "name": "mariadb-replica",
+    "name": "activemq-artemis",
     "internal": {
-      "repo_name": "mariadb-replica"
+      "repo_name": "activemq-artemis"
     },
-    "runtime": false,
     "service": true,
     "need_disk": true,
     "docs": {
-      "relationship_name": "mariadb-replica",
-      "service_name": "mariadb-replica",
-      "url": "https://docs.upsun.com/docs/add-services/mysql/mysql-readonly-replication.html"
+      "relationship_name": "activemq-artemis",
+      "service_name": "activemq-artemis",
+      "url": "https://developer.upsun.com/docs/add-services/activemq-artemis.html"
     },
     "versions": {
-      "11.4": {
+      "2": {
         "upsun": {
           "status": "supported",
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
-          "releaseDate": null,
+          "status": "retired",
+          "releaseDate": "2025-10-28T23:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": null,
+          "eolFrom": "2026-01-22T23:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -11042,10 +10804,9 @@
         },
         "manifest": {
           "endpoints": {
-            "mysql": {
-              "port": 3306,
-              "schema": "mysql",
-              "scheme": "mysql",
+            "activemq-artemis": {
+              "port": 61616,
+              "scheme": "tcp",
               "default": true
             }
           },
@@ -11053,76 +10814,16 @@
           "min_mem_size": 448,
           "is_persistent": null,
           "min_disk_size": 256,
-          "allow_scale_up": true,
+          "allow_scale_up": null,
           "package_version": {
-            "raw": "1:11.4.10+maria~deb12",
-            "majorMinor": "11.4",
-            "normalized": "11.4.10"
+            "raw": "2.44.0-0psh2~bpo12+1",
+            "majorMinor": "2.44",
+            "normalized": "2.44.0"
           },
-          "allow_scale_down": true,
+          "allow_scale_down": null,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
-        }
-      }
-    }
-  },
-  "postgresql-replica": {
-    "description": "",
-    "name": "postgresql-replica",
-    "internal": {
-      "repo_name": "postgresql-replica"
-    },
-    "runtime": false,
-    "service": true,
-    "need_disk": true,
-    "docs": {
-      "relationship_name": "postgresql-replica",
-      "service_name": "postgresql-replica",
-      "url": "https://docs.upsun.com/docs/add-services/postgresql/postgresql-readonly-replication.html"
-    },
-    "versions": {
-      "15": {
-        "upsun": {
-          "status": "supported",
-          "internal_support": true
-        },
-        "upstream": {
-          "status": "supported",
-          "releaseDate": null,
-          "eoasFrom": null,
-          "eolFrom": null,
-          "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
-        },
-        "manifest": {
-          "endpoints": {
-            "postgresql": {
-              "port": 5432,
-              "scheme": "pgsql",
-              "default": true,
-              "privileges": {
-                "main": "admin"
-              },
-              "default_database": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "3.6.2+dfsg-1.pgdg12+1",
-            "majorMinor": "3.6",
-            "normalized": "3.6.2"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": null
         }
       }
     }
