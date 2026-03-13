@@ -124,6 +124,34 @@ export function setCacheHeaders(res: Response, metadata: ResourceMetadata, maxAg
   // - max-age: how long the cache is fresh
   // - must-revalidate: must check with server after max-age expires
   res.setHeader('Cache-Control', `public, max-age=${maxAge}, must-revalidate`);
+
+  // Ensure Vary: Accept is present so caches know the response varies by Accept header
+  const existingVary = res.getHeader('Vary');
+  if (existingVary === undefined) {
+    res.setHeader('Vary', 'Accept');
+  } else {
+    const headerValue = Array.isArray(existingVary)
+      ? existingVary.join(',')
+      : String(existingVary);
+    const varySet = new Set<string>();
+    headerValue.split(',').forEach(value => {
+      const trimmed = value.trim();
+      if (trimmed) {
+        varySet.add(trimmed);
+      }
+    });
+    let hasAccept = false;
+    for (const v of varySet) {
+      if (v.toLowerCase() === 'accept') {
+        hasAccept = true;
+        break;
+      }
+    }
+    if (!hasAccept) {
+      varySet.add('Accept');
+    }
+    res.setHeader('Vary', Array.from(varySet).join(', '));
+  }
 }
 
 /**
@@ -144,6 +172,34 @@ export function sendNotModified(res: Response, metadata: ResourceMetadata, query
   
   if (metadata.lastModified) {
     res.setHeader('Last-Modified', metadata.lastModified);
+  }
+
+  // Mirror Vary: Accept on 304 responses so caches handle negotiated variants correctly
+  const existingVary = res.getHeader('Vary');
+  if (existingVary === undefined) {
+    res.setHeader('Vary', 'Accept');
+  } else {
+    const headerValue = Array.isArray(existingVary)
+      ? existingVary.join(',')
+      : String(existingVary);
+    const varySet = new Set<string>();
+    headerValue.split(',').forEach(value => {
+      const trimmed = value.trim();
+      if (trimmed) {
+        varySet.add(trimmed);
+      }
+    });
+    let hasAccept = false;
+    for (const v of varySet) {
+      if (v.toLowerCase() === 'accept') {
+        hasAccept = true;
+        break;
+      }
+    }
+    if (!hasAccept) {
+      varySet.add('Accept');
+    }
+    res.setHeader('Vary', Array.from(varySet).join(', '));
   }
   
   res.status(304).end();
