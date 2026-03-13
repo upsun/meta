@@ -31,7 +31,7 @@ export interface ResourceMetadata {
 }
 
 export interface ResourceWithMetadata<T = any> {
-  data: T;
+  data?: T;
   metadata: ResourceMetadata;
   notModified?: boolean; // True when upstream returns 304 (data will be undefined)
 }
