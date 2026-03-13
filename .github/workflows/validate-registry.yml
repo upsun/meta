@@ -37,6 +37,18 @@ jobs:
         run: npm run build
         working-directory: ./backend
 
-      - name: Validate image registry
+      - name: Validate schema for image registry
         run: npm run validate:registry
+        working-directory: ./backend
+
+      - name: Validate schema for regions
+        run: npm run validate:regions
+        working-directory: ./backend
+
+      - name: Validate schema for Composable Image
+        run: npm run validate:composable
+        working-directory: ./backend
+
+      - name: Validate schema for PHP Extensions
+        run: npm run validate:extensions
         working-directory: ./backend

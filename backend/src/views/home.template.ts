@@ -7,7 +7,7 @@ interface Endpoint {
 
 import { escapeHtml } from '../utils/index.js';
 
-export function generateHomePage(endpoints: Endpoint[], baseUrl: string, version: string): string {
+export function generateHomePage(endpoints: Endpoint[], baseUrl: string, version: string, docsUrl: string): string {
   const endpointListHTML = endpoints.map(endpoint => `
                 <div class="endpoint">
                     <div>
@@ -305,7 +305,7 @@ ${endpointListHTML}
                 <br>
                 Upsun © ${new Date().getFullYear()} All rights reserved.
                 <br>
-                <a href="https://docs.upsun.com" target="_blank">Upsun Docs</a>
+                <a href="${docsUrl}" target="_blank">Upsun Docs</a>
             </p>
         </div>
     </div>

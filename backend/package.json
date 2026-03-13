@@ -10,7 +10,12 @@
     "dev": "nodemon --watch src --ext ts --exec node --loader ts-node/esm src/index.ts",
     "dev:debug": "nodemon --watch src --ext ts --exec node --inspect=9229 --loader ts-node/esm src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "validate:registry": "node dist/scripts/validate-registry.js"
+    "validate:registry": "node dist/scripts/validate-registry.js",
+    "validate:extensions": "node dist/scripts/validate-extensions.js",
+    "validate:regions": "node dist/scripts/validate-regions.js",
+    "validate:composable": "node dist/scripts/validate-composable.js",
+    "validate:upsun": "node dist/scripts/validate-upsun.js",
+    "validate:all": "npm run validate:registry && npm run validate:extensions && npm run validate:regions && npm run validate:composable && npm run validate:upsun"
   },
   "keywords": [
     "api",

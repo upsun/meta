@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
+import { config } from '../config/env.config.js';
 
 extendZodWithOpenApi(z);
 
@@ -398,7 +399,10 @@ const ImageDocsSchema = z.object({
     z.null()
   ]).optional(),
   service_name: z.union([z.string(), z.null()]).optional(),
-  url: z.string().regex(/^https:\/\/docs\.upsun\.com\//),
+  url: z.string().regex(
+    new RegExp(`^${config.docs.BASE_URL.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/`),
+    { message: `Invalid string: must start with "${config.docs.BASE_URL}/"` }
+  ),
   web: ImageDocsWebSchema.optional(),
   hooks: ImageDocsHooksSchema.optional()
 }).strict();

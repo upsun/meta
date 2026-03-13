@@ -23,7 +23,6 @@ export const ComposableImageVersionSchemaModel = z.object({
  */
 export const ComposableImageSchemaModel = DeployImageSchemaModel
   .omit({
-    runtime: true,
     premium: true,
   })
   .extend({
