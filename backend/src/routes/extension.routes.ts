@@ -172,7 +172,7 @@ extensionRouter.route({
       const extensionEntry = data?.cloud?.[id];
 
       if (!extensionEntry) {
-        sendErrorFormatted(res, {
+        return sendErrorFormatted(res, {
           title: 'Extension not found',
           detail: `Extension "${imageId}" not found. See extra.availableExtensions for a list of valid extension IDs.`,
           status: 404,
