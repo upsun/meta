@@ -48,6 +48,11 @@ class EnvironmentConfig {
     TOKEN?: string;
   };
 
+  // Cache Configuration
+  readonly cache: {
+    TTL: number;
+  };
+
   // Documentation Configuration
   readonly docs: {
     BASE_URL: string;
@@ -92,6 +97,11 @@ class EnvironmentConfig {
       BRANCH: this.getString('GITHUB_BRANCH', 'main'),
       BASE_PATH: this.getString('GITHUB_BASE_PATH', 'shared/data'),
       TOKEN: process.env.GITHUB_TOKEN,
+    };
+
+    // Cache Configuration
+    this.cache = {
+      TTL: this.getNumber('CACHE_TTL', 300), // 5 minutes by default
     };
 
     // Documentation Configuration

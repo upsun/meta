@@ -1,7 +1,7 @@
 import { config } from '../config/env.config.js';
 import { Request, Response } from 'express';
 import { ApiRouter } from '../utils/api.router.js';
-import { ResourceManager, logger } from '../utils/index.js';
+import { ResourceManager, logger, checkClientCache, setCacheHeaders, sendNotModified } from '../utils/index.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import {
   ComposableImageDto,
@@ -48,8 +48,13 @@ composableRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      // Load composable resource
-      const composableData = await resourceManager.getResource('image/composable.json');
+      // Load composable resource with metadata
+      const { data: composableData, metadata } = await resourceManager.getResourceWithMetadata('image/composable.json');
+
+      // Check if client's cache is still valid
+      if (checkClientCache(req, metadata)) {
+        return sendNotModified(res, metadata);
+      }
 
       // Extract the "composable" object from the file
       const composableRaw = composableData.composable;
@@ -68,6 +73,9 @@ composableRouter.route({
       const composableParsed = req.headers.internal === 'true'
         ? ComposableImageSchemaDtoInternal.parse(composableRaw)
         : ComposableImageSchemaDtoPublic.parse(composableRaw);
+
+      // Set cache headers
+      setCacheHeaders(res, metadata, config.cache.TTL);
 
       // Send formatted response
       sendFormatted<ComposableImageDto>(res, composableParsed);

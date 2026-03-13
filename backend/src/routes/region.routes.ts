@@ -2,7 +2,7 @@ import { config } from '../config/env.config.js';
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
-import { ResourceManager, escapeHtml, logger } from '../utils/index.js';
+import { ResourceManager, escapeHtml, logger, checkClientCache, setCacheHeaders, sendNotModified } from '../utils/index.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import {
   HostRegionSchema,
@@ -76,8 +76,17 @@ regionRouter.route({
       const safeZone = zone ? escapeHtml(zone) : undefined;
       const safeCountryCode = country_code ? escapeHtml(country_code) : undefined;
 
-      // Get regions record
-      let regionsRecord: Record<string, any> = await resourceManager.getResource('host/regions.json');
+      // Get regions list with metadata
+      const { data: regionsData, metadata } = await resourceManager.getResourceWithMetadata('host/regions.json');
+      let regionsRecord: Record<string, any> = regionsData;
+      
+      // Prepare query params for cache key
+      const queryParams = { name, provider, zone, country_code };
+      
+      // Check if client's cache is still valid (including query params in ETag)
+      if (checkClientCache(req, metadata, queryParams)) {
+        return sendNotModified(res, metadata, queryParams);
+      }
 
       // Apply filters
       if (name) {
@@ -100,7 +109,7 @@ regionRouter.route({
         );
         if (Object.keys(filtered).length === 0) {
           const availableProviders = [...new Set(
-            Object.values(regionsRecord)
+            Object.values(regionsData)
               .map((r: any) => r.provider?.name)
               .filter(Boolean)
           )];
@@ -121,7 +130,7 @@ regionRouter.route({
         );
         if (Object.keys(filtered).length === 0) {
           const availableZones = [...new Set(
-            Object.values(regionsRecord)
+            Object.values(regionsData)
               .map((r: any) => r.zone)
               .filter((z: string) => z)
           )];
@@ -142,7 +151,7 @@ regionRouter.route({
         );
         if (Object.keys(filtered).length === 0) {
           const availableCountryCodes = [...new Set(
-            Object.values(regionsRecord)
+            Object.values(regionsData)
               .map((r: any) => r.country_code)
               .filter(Boolean)
           )];
@@ -161,6 +170,9 @@ regionRouter.route({
       const parsed = HostRegionsListSchema.parse(regionsRecord);
       const baseUrl = `${config.server.BASE_URL}`;
       const regionsWithLinks = withSelfLink(parsed, (id) => `${baseUrl}${PATH}/${encodeURIComponent(id)}`);
+
+      // Set cache headers with query params for proper ETag
+      setCacheHeaders(res, metadata, config.cache.TTL, queryParams);
 
       sendFormatted<HostRegionsList>(res, regionsWithLinks);
 
@@ -207,8 +219,10 @@ regionRouter.route({
       const { id } = req.params as { id: string };
       const safeId = escapeHtml(id);
 
-      // Get regions record and look up by key
-      const regionsRecord = await resourceManager.getResource('host/regions.json');
+      // Get regions list
+      const { data: regionsData, metadata } = await resourceManager.getResourceWithMetadata('host/regions.json');
+
+      let regionsRecord: Record<string, any> = regionsData;
 
       // Apply filters
       if (id) {
@@ -223,6 +237,9 @@ regionRouter.route({
             extra: { availableRegions }
           });
         }
+
+        // Set cache headers
+        setCacheHeaders(res, metadata, config.cache.TTL);
 
         return sendFormatted<HostRegion>(res, region);
       }

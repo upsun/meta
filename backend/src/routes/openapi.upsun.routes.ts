@@ -1,7 +1,8 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
+import { config } from '../config/env.config.js';
 import { ApiRouter } from '../utils/api.router.js';
-import { ResourceManager, logger } from '../utils/index.js';
+import { ResourceManager, logger, checkClientCache, setCacheHeaders, sendNotModified } from '../utils/index.js';
 import { HeaderAcceptSchema, ErrorDetailsSchema } from '../schemas/api.schema.js';
 
 const TAG = 'OpenAPI Specification';
@@ -62,8 +63,17 @@ openapiRouter.route({
         fileName = format === 'yaml' ? 'openapispec-upsun.yaml' : 'openapispec-upsun.json';
       }
       try {
-        // serving the raw file according to the format
-        const data = await resourceManager.getResourceRaw(`openapi/${fileName}`);
+        // serving the raw file according to the format with metadata
+        const { data, metadata } = await resourceManager.getResourceRawWithMetadata(`openapi/${fileName}`);
+        
+        // Check if client's cache is still valid
+        if (checkClientCache(req, metadata)) {
+          return sendNotModified(res, metadata);
+        }
+        
+        // Set cache headers
+        setCacheHeaders(res, metadata, config.cache.TTL);
+        
         if (format === 'yaml' && !sdks) {
           res.type('text/plain; charset=utf-8').send(data);
         } else {
