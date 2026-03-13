@@ -456,12 +456,15 @@ export class ResourceManager {
 
       // Handle 304 Not Modified from GitHub
       if (response.status === 304) {
-        resourceLogger.info({ filePath, url }, 'GitHub returned 304 Not Modified for raw resource - cache still valid');
+        const etag = response.headers.get('etag') || conditionalHeaders?.ifNoneMatch;
+        const lastModified = response.headers.get('last-modified') || conditionalHeaders?.ifModifiedSince;
+
+        resourceLogger.info({ filePath, url, etag, lastModified }, 'GitHub returned 304 Not Modified for raw resource - cache still valid');
         return {
           data: undefined as any, // Data not needed when notModified is true
           metadata: {
-            etag: conditionalHeaders?.ifNoneMatch,
-            lastModified: conditionalHeaders?.ifModifiedSince,
+            etag,
+            lastModified,
             source: 'github'
           },
           notModified: true
