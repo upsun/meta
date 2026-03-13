@@ -99,9 +99,15 @@ class EnvironmentConfig {
       TOKEN: process.env.GITHUB_TOKEN,
     };
 
-    // Cache Configuration
+    const rawCacheTTL = this.getNumber('CACHE_TTL', 300);
+    const cacheTTL =
+      !Number.isFinite(rawCacheTTL) || rawCacheTTL < 0
+        ? 0
+        : Math.floor(rawCacheTTL);
+
+    // Cache Configuration (TTL in seconds, non-negative integer)
     this.cache = {
-      TTL: this.getNumber('CACHE_TTL', 300), // 5 minutes by default
+      TTL: cacheTTL, // 5 minutes by default when env var is not set
     };
 
     // Documentation Configuration
