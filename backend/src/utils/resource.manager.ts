@@ -33,6 +33,12 @@ export interface ResourceMetadata {
 export interface ResourceWithMetadata<T = any> {
   data: T;
   metadata: ResourceMetadata;
+  notModified?: boolean; // True when upstream returns 304 (data will be undefined)
+}
+
+export interface ConditionalHeaders {
+  ifNoneMatch?: string;
+  ifModifiedSince?: string;
 }
 
 export class ResourceManager {
@@ -60,13 +66,15 @@ export class ResourceManager {
 
   /**
    * Get the content of a resource file with metadata (etag, last-modified)
+   * Supports conditional requests for GitHub mode to avoid unnecessary downloads
    * @param filePath - Relative path to the file (e.g., 'image/registry.json')
+   * @param conditionalHeaders - Optional If-None-Match/If-Modified-Since headers for conditional requests
    */
-  async getResourceWithMetadata(filePath: string): Promise<ResourceWithMetadata> {
+  async getResourceWithMetadata(filePath: string, conditionalHeaders?: ConditionalHeaders): Promise<ResourceWithMetadata> {
     if (this.config.mode === 'local') {
       return this.getLocalResourceWithMetadata(filePath);
     } else {
-      return this.getGithubResourceWithMetadata(filePath);
+      return this.getGithubResourceWithMetadata(filePath, conditionalHeaders);
     }
   }
 
@@ -84,13 +92,15 @@ export class ResourceManager {
 
   /**
    * Get raw content of a resource file with metadata (no parsing)
+   * Supports conditional requests for GitHub mode to avoid unnecessary downloads
    * @param filePath - Relative path to the file (e.g., 'image/registry.json')
+   * @param conditionalHeaders - Optional If-None-Match/If-Modified-Since headers for conditional requests
    */
-  async getResourceRawWithMetadata(filePath: string): Promise<ResourceWithMetadata<string>> {
+  async getResourceRawWithMetadata(filePath: string, conditionalHeaders?: ConditionalHeaders): Promise<ResourceWithMetadata<string>> {
     if (this.config.mode === 'local') {
       return this.getLocalResourceRawWithMetadata(filePath);
     } else {
-      return this.getGithubResourceRawWithMetadata(filePath);
+      return this.getGithubResourceRawWithMetadata(filePath, conditionalHeaders);
     }
   }
 
@@ -288,8 +298,9 @@ export class ResourceManager {
 
   /**
    * Fetch resource from GitHub repository with metadata (etag, last-modified)
+   * Supports conditional requests to avoid unnecessary downloads
    */
-  private async getGithubResourceWithMetadata(filePath: string): Promise<ResourceWithMetadata> {
+  private async getGithubResourceWithMetadata(filePath: string, conditionalHeaders?: ConditionalHeaders): Promise<ResourceWithMetadata> {
     const { REPO_OWNER: owner, REPO_NAME: repo, BRANCH: branch, BASE_PATH: basePath, TOKEN: token } = this.config.githubConfig!;
 
     if (!owner || !repo) {
@@ -299,15 +310,37 @@ export class ResourceManager {
     const fullPath = basePath ? `${basePath}/${filePath}` : filePath;
     const url = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${fullPath}`;
 
-    resourceLogger.debug({ mode: this.config.mode, url }, 'Fetching resource with metadata from GitHub');
+    resourceLogger.debug({ mode: this.config.mode, url, conditionalHeaders }, 'Fetching resource with metadata from GitHub');
 
     try {
       const headers: Record<string, string> = {};
       if (token) {
         headers['Authorization'] = `token ${token}`;
       }
+      
+      // Add conditional request headers if provided
+      if (conditionalHeaders?.ifNoneMatch) {
+        headers['If-None-Match'] = conditionalHeaders.ifNoneMatch;
+      }
+      if (conditionalHeaders?.ifModifiedSince) {
+        headers['If-Modified-Since'] = conditionalHeaders.ifModifiedSince;
+      }
 
       const response = await fetch(url, { headers });
+
+      // Handle 304 Not Modified from GitHub
+      if (response.status === 304) {
+        resourceLogger.info({ filePath, url }, 'GitHub returned 304 Not Modified - cache still valid');
+        return {
+          data: undefined as any, // Data not needed when notModified is true
+          metadata: {
+            etag: conditionalHeaders?.ifNoneMatch,
+            lastModified: conditionalHeaders?.ifModifiedSince,
+            source: 'github'
+          },
+          notModified: true
+        };
+      }
 
       if (!response.ok) {
         if (response.status === 404) {
@@ -334,7 +367,8 @@ export class ResourceManager {
           etag,
           lastModified,
           source: 'github'
-        }
+        },
+        notModified: false
       };
     } catch (error) {
       if (error instanceof Error) {
@@ -390,8 +424,9 @@ export class ResourceManager {
 
   /**
    * Fetch raw resource content from GitHub repository with metadata
+   * Supports conditional requests to avoid unnecessary downloads
    */
-  private async getGithubResourceRawWithMetadata(filePath: string): Promise<ResourceWithMetadata<string>> {
+  private async getGithubResourceRawWithMetadata(filePath: string, conditionalHeaders?: ConditionalHeaders): Promise<ResourceWithMetadata<string>> {
     const { REPO_OWNER: owner, REPO_NAME: repo, BRANCH: branch, BASE_PATH: basePath, TOKEN: token } = this.config.githubConfig!;
 
     if (!owner || !repo) {
@@ -401,7 +436,7 @@ export class ResourceManager {
     const fullPath = basePath ? `${basePath}/${filePath}` : filePath;
     const url = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${fullPath}`;
 
-    resourceLogger.debug({ mode: this.config.mode, url }, 'Fetching raw resource with metadata from GitHub');
+    resourceLogger.debug({ mode: this.config.mode, url, conditionalHeaders }, 'Fetching raw resource with metadata from GitHub');
 
     try {
       const headers: Record<string, string> = {};
@@ -409,7 +444,29 @@ export class ResourceManager {
         headers['Authorization'] = `token ${token}`;
       }
 
+      // Add conditional request headers if provided
+      if (conditionalHeaders?.ifNoneMatch) {
+        headers['If-None-Match'] = conditionalHeaders.ifNoneMatch;
+      }
+      if (conditionalHeaders?.ifModifiedSince) {
+        headers['If-Modified-Since'] = conditionalHeaders.ifModifiedSince;
+      }
+
       const response = await fetch(url, { headers });
+
+      // Handle 304 Not Modified from GitHub
+      if (response.status === 304) {
+        resourceLogger.info({ filePath, url }, 'GitHub returned 304 Not Modified for raw resource - cache still valid');
+        return {
+          data: undefined as any, // Data not needed when notModified is true
+          metadata: {
+            etag: conditionalHeaders?.ifNoneMatch,
+            lastModified: conditionalHeaders?.ifModifiedSince,
+            source: 'github'
+          },
+          notModified: true
+        };
+      }
 
       if (!response.ok) {
         if (response.status === 404) {
@@ -434,7 +491,8 @@ export class ResourceManager {
           etag,
           lastModified,
           source: 'github'
-        }
+        },
+        notModified: false
       };
     } catch (error) {
       if (error instanceof Error) {

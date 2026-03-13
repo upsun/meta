@@ -2,7 +2,7 @@ import { config } from '../config/env.config.js';
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
-import { ResourceManager, escapeHtml, logger, checkClientCache, setCacheHeaders, sendNotModified } from '../utils/index.js';
+import { ResourceManager, escapeHtml, logger, extractConditionalHeaders, setCacheHeaders, sendNotModified } from '../utils/index.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import {
   HostRegionSchema,
@@ -76,17 +76,19 @@ regionRouter.route({
       const safeZone = zone ? escapeHtml(zone) : undefined;
       const safeCountryCode = country_code ? escapeHtml(country_code) : undefined;
 
-      // Get regions list with metadata
-      const { data: regionsData, metadata } = await resourceManager.getResourceWithMetadata('host/regions.json');
-      let regions = regionsData;
+      // Get regions list with metadata, supporting conditional requests
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data: regionsData, metadata, notModified } = await resourceManager.getResourceWithMetadata('host/regions.json', conditionalHeaders);
       
       // Prepare query params for cache key
       const queryParams = { name, provider, zone, country_code };
       
-      // Check if client's cache is still valid (including query params in ETag)
-      if (checkClientCache(req, metadata, queryParams)) {
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
         return sendNotModified(res, metadata, queryParams);
       }
+      
+      let regions = regionsData;
 
       // Apply filters
       if (name) {
@@ -216,11 +218,12 @@ regionRouter.route({
       const { id } = req.params as { id: string };
       const safeId = escapeHtml(id);
 
-      // Get regions list with metadata
-      const { data: regions, metadata } = await resourceManager.getResourceWithMetadata('host/regions.json');
+      // Get regions list with metadata, supporting conditional requests
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data: regions, metadata, notModified } = await resourceManager.getResourceWithMetadata('host/regions.json', conditionalHeaders);
       
-      // Check if client's cache is still valid
-      if (checkClientCache(req, metadata)) {
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
         return sendNotModified(res, metadata);
       }
 

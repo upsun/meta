@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import { registry, z } from 'zod';
 import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
 import { ApiRouter } from '../utils/api.router.js';
-import { ResourceManager, escapeHtml, logger, checkClientCache, setCacheHeaders, sendNotModified } from '../utils/index.js';
+import { ResourceManager, escapeHtml, logger, extractConditionalHeaders, setCacheHeaders, sendNotModified } from '../utils/index.js';
 import { ErrorDetailsSchema, HeaderAcceptSchema } from '../schemas/api.schema.js';
 import {
   RuntimeExtensionListSchema,
@@ -49,10 +49,11 @@ extensionRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const { data, metadata } = await resourceManager.getResourceWithMetadata('extension/php_extensions.json');
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data, metadata, notModified } = await resourceManager.getResourceWithMetadata('extension/php_extensions.json', conditionalHeaders);
       
-      // Check if client's cache is still valid
-      if (checkClientCache(req, metadata)) {
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
         return sendNotModified(res, metadata);
       }
       
@@ -101,10 +102,11 @@ extensionRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const { data, metadata } = await resourceManager.getResourceWithMetadata('extension/php_extensions.json');
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data, metadata, notModified } = await resourceManager.getResourceWithMetadata('extension/php_extensions.json', conditionalHeaders);
       
-      // Check if client's cache is still valid
-      if (checkClientCache(req, metadata)) {
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
         return sendNotModified(res, metadata);
       }
       
@@ -162,10 +164,11 @@ extensionRouter.route({
       const { id } = req.params as { id: string };
       const imageId = escapeHtml(id);
 
-      const { data, metadata } = await resourceManager.getResourceWithMetadata('extension/php_extensions.json');
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data, metadata, notModified } = await resourceManager.getResourceWithMetadata('extension/php_extensions.json', conditionalHeaders);
       
-      // Check if client's cache is still valid
-      if (checkClientCache(req, metadata)) {
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
         return sendNotModified(res, metadata);
       }
       
