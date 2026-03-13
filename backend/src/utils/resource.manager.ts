@@ -188,9 +188,8 @@ export class ResourceManager {
    * Read raw resource content from local file system with metadata
    */
   private getLocalResourceRawWithMetadata(filePath: string): ResourceWithMetadata<string> {
-    const projectRoot = path.resolve(__dirname, '../../..');
-    const resourcesBase = path.resolve(projectRoot, 'resources');
-    const fullPath = this.resolveLocalPath(resourcesBase, filePath);
+    const localBase = path.resolve(__dirname, this.config.localPath!);
+    const fullPath = this.resolveLocalPath(localBase, filePath);
 
     try {
       const content = fs.readFileSync(fullPath, 'utf-8');
