@@ -22,6 +22,33 @@ const apiLogger = logger.child({ component: 'API' });
 // Initialize Resource Manager
 const resourceManager = new ResourceManager();
 
+/**
+ * Strip a trailing query-hash suffix from an ETag value, if present.
+ * Example: W/"abcd1234-q1a2b3c4" -> W/"abcd1234"
+ */
+function stripQueryHashSuffix(etag: string | undefined): string | undefined {
+  if (!etag) {
+    return etag;
+  }
+  // Remove any "-q<hex>" suffix at the very end of the string (case-insensitive)
+  return etag.replace(/-q[0-9a-f]+(?="?$)/i, '');
+}
+
+/**
+ * Normalize an If-None-Match style header by removing query-hash suffixes
+ * from each ETag value while preserving multiple ETags and weak validators.
+ */
+function normalizeEtagHeader(header: string | undefined): string | undefined {
+  if (!header) {
+    return header;
+  }
+  return header
+    .split(',')
+    .map((part) => stripQueryHashSuffix(part.trim()))
+    .filter((part) => part && part.length > 0)
+    .join(', ');
+}
+
 // ========================================
 // REGION ROUTES - SINGLE SOURCE OF TRUTH
 // ========================================
@@ -77,7 +104,10 @@ regionRouter.route({
       const safeCountryCode = country_code ? escapeHtml(country_code) : undefined;
 
       // Get regions list with metadata, supporting conditional requests
-      const conditionalHeaders = extractConditionalHeaders(req);
+      const conditionalHeaders: any = extractConditionalHeaders(req);
+      if (conditionalHeaders && typeof conditionalHeaders === 'object' && 'ifNoneMatch' in conditionalHeaders) {
+        conditionalHeaders.ifNoneMatch = normalizeEtagHeader(conditionalHeaders.ifNoneMatch);
+      }
       const { data: regionsData, metadata, notModified } = await resourceManager.getResourceWithMetadata('host/regions.json', conditionalHeaders);
       
       // Prepare query params for cache key
@@ -85,7 +115,11 @@ regionRouter.route({
       
       // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
       if (notModified) {
-        return sendNotModified(res, metadata, queryParams);
+        const baseMetadata: any =
+          metadata && typeof metadata === 'object'
+            ? { ...(metadata as any), etag: stripQueryHashSuffix((metadata as any).etag) }
+            : metadata;
+        return sendNotModified(res, baseMetadata, queryParams);
       }
       
       let regions = regionsData;
