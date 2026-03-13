@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
 import { withSelfLink } from '../utils/api.schema.js';
-import { ResourceManager, escapeHtml, logger } from '../utils/index.js';
+import { ResourceManager, escapeHtml, logger, extractConditionalHeaders, setCacheHeaders, sendNotModified } from '../utils/index.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import {
   DeployImageListDto,
@@ -53,8 +53,14 @@ imageRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      // Load registry from resources
-      const registryRaw = await resourceManager.getResource('image/registry.json');
+      // Load registry from resources with metadata, supporting conditional requests
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data: registryRaw, metadata, notModified } = await resourceManager.getResourceWithMetadata('image/registry.json', conditionalHeaders);
+
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
+        return sendNotModified(res, metadata);
+      }
 
       // Add self links to each image in the registry
       const registryLink = withSelfLink(registryRaw, (id) => `${config.server.BASE_URL}${PATH}/${encodeURIComponent(id)}`);
@@ -63,6 +69,9 @@ imageRouter.route({
       const registryParsed = req.headers.internal === 'true'
         ? DeployImageListSchemaDtoInternal.parse(registryLink)
         : DeployImageListSchemaDtoPublic.parse(registryLink);
+
+      // Set cache headers
+      setCacheHeaders(res, metadata, config.cache.TTL);
 
       // Send formatted response
       sendFormatted<DeployImageListDto>(res, registryParsed);
@@ -114,8 +123,14 @@ imageRouter.route({
       const { id } = req.params as { id: string };
       const imageId = escapeHtml(id);
 
-      // Load registry from resources
-      const registryRaw = await resourceManager.getResource('image/registry.json');
+      // Load registry from resources with metadata, supporting conditional requests
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data: registryRaw, metadata, notModified } = await resourceManager.getResourceWithMetadata('image/registry.json', conditionalHeaders);
+
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
+        return sendNotModified(res, metadata);
+      }
 
       // Check if image exists
       if (!registryRaw[id]) {
@@ -135,6 +150,9 @@ imageRouter.route({
       const imageParsed = req.headers.internal === 'true'
         ? DeployImageSchemaDtoInternal.parse(imageRaw)
         : DeployImageSchemaDtoPublic.parse(imageRaw);
+
+      // Set cache headers
+      setCacheHeaders(res, metadata, config.cache.TTL);
 
       // Send formatted response
       sendFormatted<DeployImageDto>(res, imageParsed);
