@@ -416,17 +416,17 @@
     "versions": {
       "25.8": {
         "upsun": {
-          "status": "deprecated",
+          "status": "supported",
           "internal_support": true
         },
         "upstream": {
-          "status": "deprecated",
+          "status": "supported",
           "releaseDate": null,
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
-          "isEoas": true,
+          "isEoas": false,
           "isEol": false
         },
         "manifest": {
@@ -458,17 +458,17 @@
       },
       "25.3": {
         "upsun": {
-          "status": "deprecated",
+          "status": "supported",
           "internal_support": true
         },
         "upstream": {
-          "status": "deprecated",
+          "status": "supported",
           "releaseDate": null,
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
-          "isEoas": true,
+          "isEoas": false,
           "isEol": false
         },
         "manifest": {
