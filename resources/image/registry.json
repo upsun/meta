@@ -6690,7 +6690,7 @@
       },
       "8.0": {
         "upsun": {
-          "status": "deprecated",
+          "status": "retired",
           "internal_support": true
         },
         "upstream": {
@@ -6699,9 +6699,9 @@
           "eoasFrom": "2022-11-26T00:00:00.000Z",
           "eolFrom": "2023-11-26T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
+          "isMaintained": false,
           "isEoas": true,
-          "isEol": false
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
