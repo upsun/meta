@@ -6690,7 +6690,7 @@
       },
       "8.0": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true
         },
         "upstream": {
@@ -6700,7 +6700,7 @@
           "eolFrom": "2023-11-26T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -10656,8 +10656,8 @@
     "versions": {
       "9.3": {
         "upsun": {
-          "status": "retired",
-          "internal_support": false
+          "status": "supported",
+          "internal_support": true
         },
         "upstream": {
           "status": "supported",
@@ -10665,9 +10665,9 @@
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
