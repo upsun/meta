@@ -10654,6 +10654,45 @@
       "url": "https://developer.upsun.com/docs/add-services/elasticsearch.html"
     },
     "versions": {
+      "9.3": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2026-02-03T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "elasticsearch": {
+              "port": 9200,
+              "schema": "http",
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "8.19.10",
+            "majorMinor": "8.19",
+            "normalized": "8.19.10"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
       "8.19": {
         "upsun": {
           "status": "supported",
@@ -10734,8 +10773,8 @@
       },
       "7.17": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true
+          "status": "retired",
+          "internal_support": false
         },
         "upstream": {
           "status": "retired",
@@ -10743,9 +10782,9 @@
           "eoasFrom": null,
           "eolFrom": "2026-01-15T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
