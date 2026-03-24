@@ -1,5 +1,5 @@
-[
-  {
+{
+  "au": {
     "id": "au",
     "label": "Australia (au)",
     "name": "au.platform.sh",
@@ -41,7 +41,7 @@
     "update_date": "2024-10-21T16:09:17.273Z",
     "eol_date": null
   },
-  {
+  "au-2": {
     "id": "au-2",
     "label": "Australia (au-2)",
     "name": "au-2.platform.sh",
@@ -83,7 +83,7 @@
     "update_date": "2024-10-21T16:09:17.273Z",
     "eol_date": null
   },
-  {
+  "ca-1": {
     "id": "ca-1",
     "label": "Canada (ca-1)",
     "name": "ca-1.platform.sh",
@@ -125,7 +125,7 @@
     "update_date": "2025-10-09T16:18:04.260Z",
     "eol_date": null
   },
-  {
+  "ch-1": {
     "id": "ch-1",
     "label": "Switzerland (ch-1)",
     "name": "ch-1.platform.sh",
@@ -167,7 +167,7 @@
     "update_date": "2024-10-21T16:09:17.273Z",
     "eol_date": null
   },
-  {
+  "de-2": {
     "id": "de-2",
     "label": "Germany (de-2)",
     "name": "de-2.platform.sh",
@@ -209,7 +209,7 @@
     "update_date": "2024-10-21T16:09:17.273Z",
     "eol_date": null
   },
-  {
+  "eu": {
     "id": "eu",
     "label": "Europe - Ireland (eu)",
     "name": "eu.platform.sh",
@@ -251,7 +251,7 @@
     "update_date": "2024-10-21T16:09:17.273Z",
     "eol_date": null
   },
-  {
+  "eu-5": {
     "id": "eu-5",
     "label": "Europe - Sweden (eu-5)",
     "name": "eu-5.platform.sh",
@@ -291,7 +291,7 @@
     "update_date": "2024-10-21T16:09:17.273Z",
     "eol_date": null
   },
-  {
+  "fr-3": {
     "id": "fr-3",
     "label": "France (fr-3)",
     "name": "fr-3.platform.sh",
@@ -331,7 +331,7 @@
     "update_date": "2024-10-21T16:09:17.273Z",
     "eol_date": null
   },
-  {
+  "fr-4": {
     "id": "fr-4",
     "label": "France (fr-4)",
     "name": "fr-4.platform.sh",
@@ -373,7 +373,7 @@
     "update_date": "2024-10-21T16:09:17.273Z",
     "eol_date": null
   },
-  {
+  "uk-1": {
     "id": "uk-1",
     "label": "United Kingdom (uk-1)",
     "name": "uk-1.platform.sh",
@@ -416,7 +416,7 @@
     "update_date": "2024-10-21T16:09:17.273Z",
     "eol_date": null
   },
-  {
+  "us": {
     "id": "us",
     "label": "United States - East (us)",
     "name": "us.platform.sh",
@@ -458,7 +458,7 @@
     "update_date": "2024-10-21T16:09:17.273Z",
     "eol_date": null
   },
-  {
+  "us-2": {
     "id": "us-2",
     "label": "United States - East (us-2)",
     "name": "us-2.platform.sh",
@@ -500,7 +500,7 @@
     "update_date": "2025-08-09T07:05:33.080Z",
     "eol_date": null
   },
-  {
+  "us-3": {
     "id": "us-3",
     "label": "United States - West (us-3)",
     "name": "us-3.platform.sh",
@@ -542,7 +542,7 @@
     "update_date": "2025-10-09T16:15:09.555Z",
     "eol_date": null
   },
-  {
+  "us-4": {
     "id": "us-4",
     "label": "United States - East (us-4)",
     "name": "us-4.platform.sh",
@@ -584,4 +584,4 @@
     "update_date": "2024-10-21T16:09:17.273Z",
     "eol_date": null
   }
-]
+}

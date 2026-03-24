@@ -11,7 +11,7 @@ import {
   HostRegionsList
 } from '../schemas/region.schema.js';
 import { HeaderAcceptSchema, ErrorDetailsSchema } from '../schemas/api.schema.js';
-import { withSelfLinkArray } from '../utils/api.schema.js';
+import { withSelfLink } from '../utils/api.schema.js';
 
 const TAG = 'Regions';
 const PATH = '/regions';
@@ -76,14 +76,14 @@ regionRouter.route({
       const safeZone = zone ? escapeHtml(zone) : undefined;
       const safeCountryCode = country_code ? escapeHtml(country_code) : undefined;
 
-      // Get regions list
-      let regions = await resourceManager.getResource('host/regions.json');
+      // Get regions record
+      let regionsRecord: Record<string, any> = await resourceManager.getResource('host/regions.json');
 
       // Apply filters
       if (name) {
-        const region = regions.find((r: any) => r.name === name);
-        if (!region) {
-          const availableRegions = regions.map((r: any) => r.name);
+        const entry = Object.entries(regionsRecord).find(([, r]) => r.name === name);
+        if (!entry) {
+          const availableRegions = Object.values(regionsRecord).map((r: any) => r.name);
           apiLogger.warn({ region: safeName }, 'Region not found');
           return sendErrorFormatted(res, {
             title: `Region '${safeName}' not found`,
@@ -95,12 +95,12 @@ regionRouter.route({
       }
 
       if (provider) {
-        regions = regions.filter(
-          (r: any) => r.provider?.name?.toLowerCase() === provider.toLowerCase()
+        const filtered = Object.fromEntries(
+          Object.entries(regionsRecord).filter(([, r]) => r.provider?.name?.toLowerCase() === provider.toLowerCase())
         );
-        if (regions.length === 0) {
+        if (Object.keys(filtered).length === 0) {
           const availableProviders = [...new Set(
-            (await resourceManager.getResource('host/regions.json'))
+            Object.values(regionsRecord)
               .map((r: any) => r.provider?.name)
               .filter(Boolean)
           )];
@@ -112,15 +112,16 @@ regionRouter.route({
             extra: { availableProviders }
           });
         }
+        regionsRecord = filtered;
       }
 
       if (zone) {
-        regions = regions.filter(
-          (r: any) => r.zone && r.zone.toLowerCase() === zone.toLowerCase()
+        const filtered = Object.fromEntries(
+          Object.entries(regionsRecord).filter(([, r]) => r.zone && r.zone.toLowerCase() === zone.toLowerCase())
         );
-        if (regions.length === 0) {
+        if (Object.keys(filtered).length === 0) {
           const availableZones = [...new Set(
-            (await resourceManager.getResource('host/regions.json'))
+            Object.values(regionsRecord)
               .map((r: any) => r.zone)
               .filter((z: string) => z)
           )];
@@ -132,15 +133,16 @@ regionRouter.route({
             extra: { availableZones }
           });
         }
+        regionsRecord = filtered;
       }
 
       if (country_code) {
-        regions = regions.filter(
-          (r: any) => r.country_code?.toLowerCase() === country_code.toLowerCase()
+        const filtered = Object.fromEntries(
+          Object.entries(regionsRecord).filter(([, r]) => r.country_code?.toLowerCase() === country_code.toLowerCase())
         );
-        if (regions.length === 0) {
+        if (Object.keys(filtered).length === 0) {
           const availableCountryCodes = [...new Set(
-            (await resourceManager.getResource('host/regions.json'))
+            Object.values(regionsRecord)
               .map((r: any) => r.country_code)
               .filter(Boolean)
           )];
@@ -152,12 +154,13 @@ regionRouter.route({
             extra: { availableCountryCodes }
           });
         }
+        regionsRecord = filtered;
       }
 
-      // Return list
-      const regionSafe = HostRegionsListSchema.parse(regions);
+      // Return record with self links
+      const parsed = HostRegionsListSchema.parse(regionsRecord);
       const baseUrl = `${config.server.BASE_URL}`;
-      const regionsWithLinks = withSelfLinkArray(regionSafe, (id) => `${baseUrl}${PATH}/${encodeURIComponent(id)}`);
+      const regionsWithLinks = withSelfLink(parsed, (id) => `${baseUrl}${PATH}/${encodeURIComponent(id)}`);
 
       sendFormatted<HostRegionsList>(res, regionsWithLinks);
 
@@ -204,14 +207,14 @@ regionRouter.route({
       const { id } = req.params as { id: string };
       const safeId = escapeHtml(id);
 
-      // Get regions list
-      let regions = await resourceManager.getResource('host/regions.json');
+      // Get regions record and look up by key
+      const regionsRecord = await resourceManager.getResource('host/regions.json');
 
       // Apply filters
       if (id) {
-        const region = regions.find((r: any) => r.id === id);
+        const region = regionsRecord[id] ?? Object.values(regionsRecord).find((r: any) => r.id === id);
         if (!region) {
-          const availableRegions = regions.map((r: any) => r.id);
+          const availableRegions = Object.keys(regionsRecord);
           apiLogger.warn({ region: safeId }, 'Region not found');
           return sendErrorFormatted(res, {
             title: `Region '${safeId}' not found`,

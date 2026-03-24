@@ -128,10 +128,22 @@ export const HostRegionSchema = z.object({
   description: 'Detailed host region metadata mirrored from resources/host/regions.json',
 });
 
-export const HostRegionsListSchema = z.array(HostRegionSchema.omit({ private: true, note: true, datacenter: true }))
-  .openapi('HostRegionList', {
-    description: 'Complete list of host region metadata entries'
+export const HostRegionListItemSchema = HostRegionSchema.omit({ private: true, note: true, datacenter: true })
+  .openapi('HostRegionListItem', {
+    description: 'Region metadata entry without internal fields'
   });
+
+// export const HostRegionsListSchema = z.array(HostRegionListItemSchema)
+//   .openapi('HostRegionList', {
+//     description: 'Complete list of host region metadata entries'
+//   });
+
+export const HostRegionsListSchema = z.record(
+  z.string(),
+  HostRegionSchema
+).openapi('HostRegionsFile', {
+  description: 'Raw regions.json file structure: a record of region ID to full region object'
+});
 
 const providerFilterValues = ['AWS', 'Azure', 'Google', 'OVH', 'none'] as const;
 const zoneFilterValues = ['Australia', 'Europe', 'North America'] as const;
