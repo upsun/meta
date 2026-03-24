@@ -120,7 +120,10 @@ regionRouter.route({
           metadata && typeof metadata === 'object'
             ? { ...(metadata as any), etag: stripQueryHashSuffix((metadata as any).etag) }
             : metadata;
-        return sendNotModified(res, baseMetadata, queryParams);
+        return sendNotModified(res, baseMetadata, {
+          maxAge: config.cache.TTL,
+          queryParams
+        });
       }
       
       let regions = regionsData;
