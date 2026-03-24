@@ -249,7 +249,7 @@ export function sendNotModified(
 
   // Ensure Cache-Control is present on 304 responses so caches can correctly apply/refresh TTL
   if (!res.getHeader('Cache-Control')) {
-    res.setHeader('Cache-Control', `public, max-age=${maxAge}`);
+    res.setHeader('Cache-Control', `public, max-age=${maxAge}, must-revalidate`);
   }
   
   res.status(304).end();
