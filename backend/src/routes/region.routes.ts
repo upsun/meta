@@ -127,10 +127,10 @@ regionRouter.route({
           metadata && typeof metadata === 'object'
             ? { ...(metadata as any), etag: stripQueryHashSuffix((metadata as any).etag) }
             : metadata;
-        return sendNotModified(res, baseMetadata, {
-          maxAge: config.cache.TTL,
+        return sendNotModified(res, baseMetadata, 
+          config.cache.TTL,
           queryParams
-        });
+        );
       }
 
       // Apply filters
@@ -271,7 +271,7 @@ regionRouter.route({
 
       // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
       if (notModified) {
-        return sendNotModified(res, metadata, { maxAge: config.cache.TTL });
+        return sendNotModified(res, metadata, config.cache.TTL);
       }
 
       // Apply filters

@@ -203,8 +203,8 @@ export function setCacheHeaders(res: Response, metadata: ResourceMetadata, maxAg
 export function sendNotModified(
   res: Response,
   metadata: ResourceMetadata,
+  maxAge: number = 300,
   queryParams?: Record<string, any>,
-  maxAge: number = 300
 ): void {
   // Generate etag with query params if provided
   const etag = queryParams 

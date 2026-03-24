@@ -59,7 +59,7 @@ imageRouter.route({
 
       // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
       if (notModified) {
-        return sendNotModified(res, metadata, { maxAge: config.cache.TTL });
+        return sendNotModified(res, metadata, config.cache.TTL);
       }
 
       // Add self links to each image in the registry
@@ -129,7 +129,7 @@ imageRouter.route({
 
       // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
       if (notModified) {
-        return sendNotModified(res, metadata, { maxAge: config.cache.TTL });
+        return sendNotModified(res, metadata, config.cache.TTL);
       }
 
       // Check if image exists

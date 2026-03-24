@@ -64,7 +64,7 @@ This file is used to validate Upsun configuration files .upsun/config.yaml.
       
       // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
       if (notModified) {
-        return sendNotModified(res, metadata, { maxAge: config.cache.TTL });
+        return sendNotModified(res, metadata, config.cache.TTL);
       }
       
       // Set cache headers
@@ -108,7 +108,7 @@ validationRouter.route({
       
       // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
       if (notModified) {
-        return sendNotModified(res, metadata, { maxAge: config.cache.TTL });
+        return sendNotModified(res, metadata, config.cache.TTL);
       }
       
       // Set cache headers
@@ -168,7 +168,7 @@ The result is a JSON Schema snippet:
       
       // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
       if (notModified) {
-        return sendNotModified(res, metadata, { maxAge: config.cache.TTL });
+        return sendNotModified(res, metadata, config.cache.TTL);
       }
 
       const serviceSet = new Set<string>();
@@ -253,7 +253,7 @@ for example: \`["php:7.2", "php:7.3", "nodejs:24"]\`.
       
       // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
       if (notModified) {
-        return sendNotModified(res, metadata, { maxAge: config.cache.TTL });
+        return sendNotModified(res, metadata, config.cache.TTL);
       }
 
       const runtimeSet = new Set<string>();
