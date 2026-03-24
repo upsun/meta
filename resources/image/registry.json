@@ -7167,8 +7167,8 @@
       },
       "12": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true
+          "status": "retired",
+          "internal_support": false
         },
         "upstream": {
           "status": "retired",
@@ -7176,9 +7176,9 @@
           "eoasFrom": null,
           "eolFrom": "2024-11-21T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7208,8 +7208,8 @@
       },
       "13": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true
+          "status": "retired",
+          "internal_support": false
         },
         "upstream": {
           "status": "retired",
@@ -7217,9 +7217,9 @@
           "eoasFrom": null,
           "eolFrom": "2025-11-13T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7265,6 +7265,7 @@
         "manifest": {
           "endpoints": {
             "postgresql": {
+              "port": 5432,
               "default": true,
               "privileges": {
                 "main": "admin"
@@ -7306,6 +7307,7 @@
         "manifest": {
           "endpoints": {
             "postgresql": {
+              "port": 5432,
               "default": true,
               "privileges": {
                 "main": "admin"
