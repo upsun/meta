@@ -253,7 +253,7 @@ for example: \`["php:7.2", "php:7.3", "nodejs:24"]\`.
       
       // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
       if (notModified) {
-        return sendNotModified(res, metadata);
+        return sendNotModified(res, metadata, config.cache.TTL);
       }
 
       const runtimeSet = new Set<string>();
