@@ -107,7 +107,7 @@ extensionRouter.route({
       
       // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
       if (notModified) {
-        return sendNotModified(res, metadata);
+        return sendNotModified(res, metadata, config.cache.TTL);
       }
       
       const cloudExtensions: CloudExtensions = data?.cloud || {};
