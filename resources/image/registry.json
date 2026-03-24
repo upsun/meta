@@ -7167,8 +7167,8 @@
       },
       "12": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true
+          "status": "retired",
+          "internal_support": false
         },
         "upstream": {
           "status": "retired",
@@ -7176,9 +7176,9 @@
           "eoasFrom": null,
           "eolFrom": "2024-11-21T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7208,8 +7208,8 @@
       },
       "13": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true
+          "status": "retired",
+          "internal_support": false
         },
         "upstream": {
           "status": "retired",
@@ -7217,9 +7217,9 @@
           "eoasFrom": null,
           "eolFrom": "2025-11-13T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7265,6 +7265,7 @@
         "manifest": {
           "endpoints": {
             "postgresql": {
+              "port": 5432,
               "default": true,
               "privileges": {
                 "main": "admin"
@@ -7306,6 +7307,7 @@
         "manifest": {
           "endpoints": {
             "postgresql": {
+              "port": 5432,
               "default": true,
               "privileges": {
                 "main": "admin"
@@ -10026,6 +10028,46 @@
       "repo_name": "valkey"
     },
     "versions": {
+      "9.0": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": false
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2025-10-21T00:00:00.000Z",
+          "eoasFrom": "2028-10-21T00:00:00.000Z",
+          "eolFrom": "2028-10-21T00:00:00.000Z",
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
+        },
+        "manifest": {
+          "endpoints": {
+            "valkey": {
+              "port": 6379,
+              "schema": "valkey",
+              "scheme": "valkey",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "8.1.6-0psh1~bpo12+1",
+            "majorMinor": "8.1",
+            "normalized": "8.1.6"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": null,
+          "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": true
+        }
+      },
       "8.1": {
         "upsun": {
           "status": "supported",
@@ -10168,8 +10210,8 @@
       },
       "7.3": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true
+          "status": "retired",
+          "internal_support": false
         },
         "upstream": {
           "status": "retired",
@@ -10177,9 +10219,9 @@
           "eoasFrom": null,
           "eolFrom": "2024-03-15T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -10211,8 +10253,8 @@
       },
       "7.2": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true
+          "status": "retired",
+          "internal_support": false
         },
         "upstream": {
           "status": "retired",
@@ -10220,9 +10262,9 @@
           "eoasFrom": null,
           "eolFrom": "2023-09-15T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -10254,8 +10296,8 @@
       },
       "7.1": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true
+          "status": "retired",
+          "internal_support": false
         },
         "upstream": {
           "status": "retired",
@@ -10263,9 +10305,9 @@
           "eoasFrom": null,
           "eolFrom": "2023-03-15T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -10298,7 +10340,7 @@
       "6.3": {
         "upsun": {
           "status": "decommissioned",
-          "internal_support": true
+          "internal_support": false
         },
         "upstream": {
           "status": "decommissioned",
