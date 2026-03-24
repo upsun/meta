@@ -3,6 +3,7 @@ import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
 import { ResourceManager, escapeHtml, logger, extractConditionalHeaders, setCacheHeaders, sendNotModified } from '../utils/index.js';
+import type { ConditionalHeaders } from '../utils/index.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import {
   HostRegionSchema,
@@ -104,11 +105,17 @@ regionRouter.route({
       const safeCountryCode = country_code ? escapeHtml(country_code) : undefined;
 
       // Get regions list with metadata, supporting conditional requests
-      const conditionalHeaders: any = extractConditionalHeaders(req);
-      if (conditionalHeaders && typeof conditionalHeaders === 'object' && 'ifNoneMatch' in conditionalHeaders) {
+      const rawConditionalHeaders = extractConditionalHeaders(req);
+      const conditionalHeaders: ConditionalHeaders | undefined = rawConditionalHeaders
+        ? { ...rawConditionalHeaders }
+        : undefined;
+      if (conditionalHeaders && typeof conditionalHeaders.ifNoneMatch === 'string') {
         conditionalHeaders.ifNoneMatch = normalizeEtagHeader(conditionalHeaders.ifNoneMatch);
       }
-      const { data: regionsData, metadata, notModified } = await resourceManager.getResourceWithMetadata('host/regions.json', conditionalHeaders);
+      const { data: regionsData, metadata, notModified } = await resourceManager.getResourceWithMetadata(
+        'host/regions.json',
+        conditionalHeaders
+      );
       let regionsRecord: Record<string, any> = regionsData;
 
       // Prepare query params for cache key
@@ -125,8 +132,6 @@ regionRouter.route({
           queryParams
         });
       }
-      
-      let regions = regionsData;
 
       // Apply filters
       if (name) {
@@ -266,7 +271,7 @@ regionRouter.route({
 
       // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
       if (notModified) {
-        return sendNotModified(res, metadata);
+        return sendNotModified(res, metadata, { maxAge: config.cache.TTL });
       }
 
       // Apply filters

@@ -54,7 +54,7 @@ composableRouter.route({
 
       // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
       if (notModified) {
-        return sendNotModified(res, metadata, config.cache.TTL);
+        return sendNotModified(res, metadata, { maxAge: config.cache.TTL });
       }
 
       // Extract the "composable" object from the file

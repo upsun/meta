@@ -34,7 +34,7 @@ When GitHub's content matches the client's cached ETag or hasn't been modified s
 #### 4. Short-Circuit Response
 ```typescript
 if (notModified) {
-  return sendNotModified(res, metadata);  // No parsing, immediate 304
+  return sendNotModified(res, metadata, { maxAge: config.cache.TTL });  // No parsing, immediate 304
 }
 // Only reached if content changed - process data normally
 ```
