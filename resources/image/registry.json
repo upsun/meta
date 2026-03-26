@@ -10030,8 +10030,8 @@
     "versions": {
       "9.0": {
         "upsun": {
-          "status": "retired",
-          "internal_support": false
+          "status": "supported",
+          "internal_support": true
         },
         "upstream": {
           "status": "supported",
@@ -10039,9 +10039,9 @@
           "eoasFrom": "2028-10-21T00:00:00.000Z",
           "eolFrom": "2028-10-21T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
