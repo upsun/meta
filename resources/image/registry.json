@@ -458,17 +458,17 @@
       },
       "25.3": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "deprecated",
           "releaseDate": null,
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
