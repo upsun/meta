@@ -414,6 +414,48 @@
       "repo_name": "clickhouse"
     },
     "versions": {
+      "26.3": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "clickhouse": {
+              "port": 9000,
+              "schema": "clickhouse"
+            },
+            "clickhouse-http": {
+              "port": 8123,
+              "schema": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "26.3.2.3",
+            "majorMinor": "26.3",
+            "normalized": "26.3.2"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
       "25.8": {
         "upsun": {
           "status": "supported",
@@ -9096,7 +9138,7 @@
           "internal_support": true
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "releaseDate": "2022-12-25T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2026-03-31T00:00:00.000Z",
