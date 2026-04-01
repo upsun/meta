@@ -1,6 +1,5 @@
 # Meta Registry - Source of Reference for Upsun
 
-test 
 
 ## 📋 Description
 
