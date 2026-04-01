@@ -15,6 +15,7 @@ extendZodWithOpenApi(z);
  */
 export const ComposableImageVersionSchemaModel = z.object({
   upsun: DeployImageVersionSchemaModel.shape.upsun,
+  packages_versions: z.record(z.string().openapi('packageName').describe('Name of the package'), z.array(z.string().openapi('packageVersion').describe('Version of the package'))).optional()
 });
 
 /**
