@@ -25,12 +25,24 @@ export const DeployImageVersionStatusSchemaModel = z.enum([
   })
 ;
 
+export const DeployImageVersionInternalStatusSchemaModel = z.enum([
+    "active",      // group supported and deprecated versions together as active, since from an internal perspective both are still valid options to deploy, and the distinction is more relevant for public documentation
+    "sunset",     // Available but not maintained, please migrate to an active version.
+    "decommissioned"  // Not available anymore
+  ])
+  .openapi({
+    description: 'Upsun internal status of the image version, following official lifecycle.',
+    example: 'active'
+  })
+;
+
 /**
  * Schema for Image Version
  */
 export const DeployImageVersionSchemaModel = z.object({
   upsun: z.object({
     status: DeployImageVersionStatusSchemaModel,
+    internal_status: DeployImageVersionInternalStatusSchemaModel,
     internal_support: z.boolean()
       .openapi({
         description: 'Indicates if the version has support from Upsun (Internal branch is protected)',
@@ -40,7 +52,8 @@ export const DeployImageVersionSchemaModel = z.object({
     description: 'Upsun specific version information',
     example: {
       status: 'supported',
-      internal_support: true
+      internal_support: true,
+      internal_status: 'active'
     }
   }),
   upstream: z.object({
