@@ -3463,6 +3463,10 @@
         "8.4": {
           "status": "available",
           "options": []
+        },
+        "8.5": {
+          "status": "available",
+          "options": []
         }
       }
     },
