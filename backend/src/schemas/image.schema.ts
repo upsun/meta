@@ -390,6 +390,22 @@ export const DeployImageListSchemaModel = z.record(
 
 export const DeployImageSchemaDtoPublic =
   DeployImageSchemaModel
+    .omit({ docs: true, internal: true, premium: true })
+    .extend({
+        versions: z.record(
+          z.string().openapi('versionId').describe('Unique identifier for a version (e.g., 14, 16, 18)'),
+          DeployImageVersionSchemaModel
+            .omit({
+              upstream: true,
+              manifest: true,
+            })
+            .extend({
+              upsun: DeployImageVersionSchemaModel.shape.upsun.omit({
+                internal_support: true
+              })
+            })
+        ),
+      })
     .openapi('DeployImage', {"x-internal": false});
 
 
