@@ -5,7 +5,7 @@
     "docs": {
       "relationship_name": "chrome-headless",
       "service_name": "chrome-headless",
-      "url": "https://developer.upsun.com/docs/add-services/headless-chrome.html"
+      "url": "https://developer.upsun.com/docs/add-services/headless-chrome"
     },
     "runtime": false,
     "service": true,
@@ -412,7 +412,7 @@
     "docs": {
       "relationship_name": "clickhouse",
       "service_name": "clickhouse",
-      "url": "https://developer.upsun.com/docs/add-services/clickhouse.html"
+      "url": "https://developer.upsun.com/docs/add-services/clickhouse"
     },
     "runtime": false,
     "service": true,
@@ -646,7 +646,7 @@
     "docs": {
       "relationship_name": "dotnet",
       "service_name": "dotnet",
-      "url": "https://developer.upsun.com/docs/languages/dotnet.html",
+      "url": "https://developer.upsun.com/docs/languages/dotnet",
       "web": {
         "commands": {
           "start": "dotnet application.dll"
@@ -1033,7 +1033,7 @@
     "docs": {
       "relationship_name": "elasticsearch",
       "service_name": "elasticsearch",
-      "url": "https://developer.upsun.com/docs/add-services/elasticsearch.html"
+      "url": "https://developer.upsun.com/docs/add-services/elasticsearch"
     },
     "name": "Elasticsearch",
     "runtime": false,
@@ -1592,7 +1592,7 @@
     "docs": {
       "relationship_name": "elixir",
       "service_name": "elixir",
-      "url": "https://developer.upsun.com/docs/languages/elixir.html",
+      "url": "https://developer.upsun.com/docs/languages/elixir",
       "web": {
         "commands": {
           "start": "mix run --no-halt"
@@ -1941,7 +1941,7 @@
     "docs": {
       "relationship_name": "golang",
       "service_name": "golang",
-      "url": "https://developer.upsun.com/docs/languages/go.html",
+      "url": "https://developer.upsun.com/docs/languages/go",
       "web": {
         "upstream": {
           "socket_family": "tcp",
@@ -2719,7 +2719,7 @@
     "docs": {
       "relationship_name": "influxdb",
       "service_name": "influxdb",
-      "url": "https://developer.upsun.com/docs/add-services/influxdb.html"
+      "url": "https://developer.upsun.com/docs/add-services/influxdb"
     },
     "name": "InfluxDB",
     "runtime": false,
@@ -3068,7 +3068,7 @@
     "docs": {
       "relationship_name": "gotenberg",
       "service_name": "gotenberg",
-      "url": "https://developer.upsun.com/docs/add-services/gotenberg.html"
+      "url": "https://developer.upsun.com/docs/add-services/gotenberg"
     },
     "name": "Gotenberg",
     "internal": {
@@ -3124,7 +3124,7 @@
     "docs": {
       "relationship_name": "java",
       "service_name": "java",
-      "url": "https://developer.upsun.com/docs/languages/java.html",
+      "url": "https://developer.upsun.com/docs/languages/java",
       "web": {
         "commands": {
           "start": "java -jar target/application.jar --server.port=$PORT"
@@ -3502,7 +3502,7 @@
     "docs": {
       "relationship_name": "kafka",
       "service_name": "kafka",
-      "url": "https://developer.upsun.com/docs/add-services/kafka.html"
+      "url": "https://developer.upsun.com/docs/add-services/kafka"
     },
     "name": "Kafka",
     "runtime": false,
@@ -3952,7 +3952,7 @@
     "docs": {
       "relationship_name": "mariadb",
       "service_name": "mariadb",
-      "url": "https://developer.upsun.com/docs/add-services/mysql.html"
+      "url": "https://developer.upsun.com/docs/add-services/mysql"
     },
     "name": "MariaDB/MySQL",
     "runtime": false,
@@ -4502,7 +4502,7 @@
     "docs": {
       "relationship_name": "mysql",
       "service_name": "mysql",
-      "url": "https://developer.upsun.com/docs/add-services/mysql.html"
+      "url": "https://developer.upsun.com/docs/add-services/mysql"
     },
     "name": "MariaDB/MySQL",
     "runtime": false,
@@ -5052,7 +5052,7 @@
     "docs": {
       "relationship_name": "memcached",
       "service_name": "memcached",
-      "url": "https://developer.upsun.com/docs/add-services/memcached.html"
+      "url": "https://developer.upsun.com/docs/add-services/memcached"
     },
     "name": "Memcached",
     "runtime": false,
@@ -5189,7 +5189,7 @@
     "docs": {
       "relationship_name": "mongodb-enterprise",
       "service_name": "mongodb-enterprise",
-      "url": "https://developer.upsun.com/docs/add-services/mongodb.html"
+      "url": "https://developer.upsun.com/docs/add-services/mongodb"
     },
     "name": "MongoDB",
     "runtime": false,
@@ -5447,7 +5447,7 @@
     "docs": {
       "relationship_name": "network-storage",
       "service_name": "network-storage",
-      "url": "https://developer.upsun.com/docs/add-services/network-storage.html"
+      "url": "https://developer.upsun.com/docs/add-services/network-storage"
     },
     "name": "Network Storage",
     "runtime": false,
@@ -5532,7 +5532,7 @@
     "docs": {
       "relationship_name": "nodejs",
       "service_name": "nodejs",
-      "url": "https://developer.upsun.com/docs/languages/nodejs.html",
+      "url": "https://developer.upsun.com/docs/languages/nodejs",
       "web": {
         "commands": {
           "start": "node index.js"
@@ -6295,7 +6295,7 @@
     "docs": {
       "relationship_name": "opensearch",
       "service_name": "opensearch",
-      "url": "https://developer.upsun.com/docs/add-services/opensearch.html"
+      "url": "https://developer.upsun.com/docs/add-services/opensearch"
     },
     "name": "OpenSearch",
     "runtime": false,
@@ -6512,7 +6512,7 @@
     "docs": {
       "relationship_name": "oracle-mysql",
       "service_name": "oracle-mysql",
-      "url": "https://developer.upsun.com/docs/add-services/mysql.html"
+      "url": "https://developer.upsun.com/docs/add-services/mysql"
     },
     "name": "Oracle MySQL",
     "runtime": false,
@@ -6649,7 +6649,7 @@
     "docs": {
       "relationship_name": "php",
       "service_name": "php",
-      "url": "https://developer.upsun.com/docs/languages/php.html",
+      "url": "https://developer.upsun.com/docs/languages/php",
       "web": {
         "locations": {
           "/": {
@@ -7289,7 +7289,7 @@
     "docs": {
       "relationship_name": "postgresql",
       "service_name": "postgresql",
-      "url": "https://developer.upsun.com/docs/add-services/postgresql.html"
+      "url": "https://developer.upsun.com/docs/add-services/postgresql"
     },
     "name": "PostgreSQL",
     "runtime": false,
@@ -7828,7 +7828,7 @@
     "docs": {
       "relationship_name": "python",
       "service_name": "python",
-      "url": "https://developer.upsun.com/docs/languages/python.html",
+      "url": "https://developer.upsun.com/docs/languages/python",
       "web": {
         "commands": {
           "start": "python server.py"
@@ -8290,7 +8290,7 @@
     "docs": {
       "relationship_name": "rabbitmq",
       "service_name": "rabbitmq",
-      "url": "https://developer.upsun.com/docs/add-services/rabbitmq.html"
+      "url": "https://developer.upsun.com/docs/add-services/rabbitmq"
     },
     "name": "RabbitMQ",
     "runtime": false,
@@ -8780,7 +8780,7 @@
     "docs": {
       "relationship_name": "redis",
       "service_name": "redis",
-      "url": "https://developer.upsun.com/docs/add-services/redis.html"
+      "url": "https://developer.upsun.com/docs/add-services/redis"
     },
     "name": "Redis",
     "runtime": false,
@@ -9200,7 +9200,7 @@
     "docs": {
       "relationship_name": "ruby",
       "service_name": "ruby",
-      "url": "https://developer.upsun.com/docs/languages/ruby.html",
+      "url": "https://developer.upsun.com/docs/languages/ruby",
       "web": {
         "upstream": {
           "socket_family": "unix"
@@ -9672,7 +9672,7 @@
     "docs": {
       "relationship_name": "rust",
       "service_name": "rust",
-      "url": "https://developer.upsun.com/docs/languages/rust.html",
+      "url": "https://developer.upsun.com/docs/languages/rust",
       "web": {
         "commands": {
           "start": "./target/debug/hello"
@@ -9733,7 +9733,7 @@
     "docs": {
       "relationship_name": "solr",
       "service_name": "solr",
-      "url": "https://developer.upsun.com/docs/add-services/solr.html"
+      "url": "https://developer.upsun.com/docs/add-services/solr"
     },
     "name": "Solr",
     "runtime": false,
@@ -10304,7 +10304,7 @@
     "docs": {
       "relationship_name": "valkey",
       "service_name": "valkey",
-      "url": "https://developer.upsun.com/docs/add-services/valkey.html"
+      "url": "https://developer.upsun.com/docs/add-services/valkey"
     },
     "name": "Valkey",
     "runtime": false,
@@ -10444,7 +10444,7 @@
     "docs": {
       "relationship_name": "varnish",
       "service_name": "varnish",
-      "url": "https://developer.upsun.com/docs/add-services/varnish.html"
+      "url": "https://developer.upsun.com/docs/add-services/varnish"
     },
     "name": "Varnish",
     "runtime": false,
@@ -10811,7 +10811,7 @@
     "docs": {
       "relationship_name": "vault-kms",
       "service_name": "vault-kms",
-      "url": "https://developer.upsun.com/docs/add-services/vault.html"
+      "url": "https://developer.upsun.com/docs/add-services/vault"
     },
     "name": "Vault KMS",
     "runtime": false,
@@ -10937,7 +10937,7 @@
     "docs": {
       "relationship_name": "mercure",
       "service_name": "mercure",
-      "url": "https://developer.upsun.com/docs/add-services/mercure.html"
+      "url": "https://developer.upsun.com/docs/add-services/mercure"
     },
     "versions": {
       "0": {
@@ -10994,7 +10994,7 @@
     "docs": {
       "relationship_name": "elasticsearch-enterprise",
       "service_name": "elasticsearch-enterprise",
-      "url": "https://developer.upsun.com/docs/add-services/elasticsearch.html"
+      "url": "https://developer.upsun.com/docs/add-services/elasticsearch"
     },
     "versions": {
       "9.3": {
@@ -11170,7 +11170,7 @@
     "docs": {
       "relationship_name": "mariadb-replica",
       "service_name": "mariadb-replica",
-      "url": "https://developer.upsun.com/docs/add-services/mysql/mysql-readonly-replication.html"
+      "url": "https://developer.upsun.com/docs/add-services/mysql/mysql-readonly-replication"
     },
     "versions": {
       "11.4": {
@@ -11227,7 +11227,7 @@
     "docs": {
       "relationship_name": "mongodb",
       "service_name": "mongodb",
-      "url": "https://developer.upsun.com/docs/add-services/mongodb.html"
+      "url": "https://developer.upsun.com/docs/add-services/mongodb"
     },
     "versions": {
       "4.0": {
@@ -11468,7 +11468,7 @@
     "docs": {
       "relationship_name": "postgresql-replica",
       "service_name": "postgresql-replica",
-      "url": "https://developer.upsun.com/docs/add-services/postgresql/postgresql-readonly-replication.html"
+      "url": "https://developer.upsun.com/docs/add-services/postgresql/postgresql-readonly-replication"
     },
     "versions": {
       "15": {
