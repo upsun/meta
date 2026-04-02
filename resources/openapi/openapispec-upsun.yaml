@@ -9,7 +9,6 @@ info:
   description: |
     # Introduction
 
-
     Upsun, formerly Platform.sh, is a container-based Platform-as-a-Service. Our main API
     is simply Git. With a single `git push` and a couple of YAML files in
     your repository you can deploy an arbitrarily complex cluster.
