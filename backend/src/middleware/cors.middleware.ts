@@ -73,7 +73,8 @@ export function configureCors() {
     // Credentials are disabled to avoid reflecting sensitive cookies back to untrusted origins
     credentials: false,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    // Support both legacy/internal naming used by clients.
+    allowedHeaders: ['Content-Type', 'Authorization', 'internal'],
   };
 
   corsLogger.info({ allowedOrigins: sanitizedOrigins }, 'Configuration initialized');
