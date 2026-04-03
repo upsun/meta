@@ -18,6 +18,109 @@
           "status": "supported",
           "internal_support": true,
           "internal_status": "active"
+        },
+        "packages_versions": {
+          "bun": {
+            "versions": [
+              "1"
+            ],
+            "name": "",
+            "url": "https://",
+            "isExternal": true
+          },
+          "clojure": {
+            "versions": [
+              "1"
+            ],
+            "name": "",
+            "url": "https://",
+            "isExternal": true
+          },
+          "elixir": {
+            "versions": [
+              "1.17",
+              "1.18",
+              "1.19"
+            ],
+            "name": "",
+            "url": "https://",
+            "isExternal": true
+          },
+          "golang": {
+            "versions": [
+              "1.24",
+              "1.25"
+            ],
+            "name": "",
+            "url": "https://",
+            "isExternal": true
+          },
+          "java": {
+            "versions": [
+              "21",
+              "25"
+            ],
+            "name": "",
+            "url": "https://",
+            "isExternal": true
+          },
+          "nodejs": {
+            "versions": [
+              "20",
+              "22",
+              "24"
+            ],
+            "name": "",
+            "url": "https://",
+            "isExternal": true
+          },
+          "perl": {
+            "versions": [
+              "5"
+            ],
+            "name": "",
+            "url": "https://",
+            "isExternal": true
+          },
+          "php": {
+            "versions": [
+              "8.2",
+              "8.3",
+              "8.4",
+              "8.5"
+            ],
+            "name": "",
+            "url": "https://",
+            "isExternal": true
+          },
+          "python": {
+            "versions": [
+              "3.11",
+              "3.12",
+              "3.13"
+            ],
+            "name": "",
+            "url": "https://",
+            "isExternal": true
+          },
+          "ruby": {
+            "versions": [
+              "3.3",
+              "3.4",
+              "4.0"
+            ],
+            "name": "",
+            "url": "https://",
+            "isExternal": true
+          },
+          "sbcl": {
+            "versions": [
+              "2"
+            ],
+            "name": "",
+            "url": "https://",
+            "isExternal": true
+          }
         }
       },
       "25.05": {
