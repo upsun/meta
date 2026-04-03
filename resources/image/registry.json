@@ -457,9 +457,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.3.2.3",
+            "raw": "26.3.3.20",
             "majorMinor": "26.3",
-            "normalized": "26.3.2"
+            "normalized": "26.3.3"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -6524,19 +6524,19 @@
     "versions": {
       "8.4": {
         "upsun": {
-          "status": "supported",
+          "status": "decommissioned",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "supported",
+          "status": "decommissioned",
           "releaseDate": "2024-04-10T00:00:00.000Z",
           "eoasFrom": "2029-04-30T00:00:00.000Z",
           "eolFrom": "2032-04-30T00:00:00.000Z",
-          "isLts": true,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6567,19 +6567,19 @@
       },
       "8.0": {
         "upsun": {
-          "status": "deprecated",
+          "status": "decommissioned",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "deprecated",
+          "status": "decommissioned",
           "releaseDate": "2018-04-08T00:00:00.000Z",
           "eoasFrom": "2025-04-30T00:00:00.000Z",
           "eolFrom": "2026-04-30T00:00:00.000Z",
-          "isLts": true,
-          "isMaintained": true,
+          "isLts": false,
+          "isMaintained": false,
           "isEoas": true,
-          "isEol": false
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6610,12 +6610,12 @@
       },
       "5.7": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": "2015-10-09T00:00:00.000Z",
           "eoasFrom": "2020-10-31T00:00:00.000Z",
           "eolFrom": "2023-10-31T00:00:00.000Z",
@@ -9398,9 +9398,9 @@
       },
       "3.2": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true,
-          "internal_status": "active"
+          "status": "retired",
+          "internal_support": false,
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "retired",
@@ -9408,9 +9408,9 @@
           "eoasFrom": null,
           "eolFrom": "2026-03-31T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -11037,7 +11037,7 @@
     "docs": {
       "relationship_name": "elasticsearch-enterprise",
       "service_name": "elasticsearch-enterprise",
-      "url": "https://developer.upsun.com/docs/add-services/elasticsearch"
+      "url": "https://developer.upsun.com/docs/add-services/elasticsearch-enterprise"
     },
     "versions": {
       "9.3": {
@@ -11556,6 +11556,62 @@
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
           "supports_horizontal_scaling": true
+        }
+      }
+    }
+  },
+  "activemq-artemis": {
+    "description": "",
+    "name": "activemq-artemis",
+    "internal": {
+      "repo_name": "activemq-artemis"
+    },
+    "service": true,
+    "need_disk": true,
+    "docs": {
+      "relationship_name": "activemq-artemis",
+      "service_name": "activemq-artemis",
+      "url": "https://developer.upsun.com/docs/add-services/activemq-artemis"
+    },
+    "versions": {
+      "2": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2026-03-17T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "activemq-artemis": {
+              "port": 61616,
+              "scheme": "tcp",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.53.0-0psh2~bpo12+1",
+            "majorMinor": "2.53",
+            "normalized": "2.53.0"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
         }
       }
     }
