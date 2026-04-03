@@ -419,7 +419,7 @@
     "exclude_from": [
       "platformsh"
     ],
-    "need_disk": true,
+    "need_disk": false,
     "internal": {
       "repo_name": "clickhouse"
     },
@@ -457,9 +457,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.3.3.20",
+            "raw": "26.3.2.3",
             "majorMinor": "26.3",
-            "normalized": "26.3.3"
+            "normalized": "26.3.2"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -599,7 +599,7 @@
       "23.8": {
         "upsun": {
           "status": "deprecated",
-          "internal_support": false,
+          "internal_support": true,
           "internal_status": "active"
         },
         "upstream": {
