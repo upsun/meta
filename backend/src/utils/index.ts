@@ -4,7 +4,8 @@
  */
 
 export { logger, configureLogger } from './logger.js';
-export { ResourceManager } from './resource.manager.js';
+export { ResourceManager, type ResourceMetadata, type ResourceWithMetadata, type ConditionalHeaders } from './resource.manager.js';
+export { checkClientCache, setCacheHeaders, sendNotModified, generateEtagWithParams, extractConditionalHeaders } from './cache.manager.js';
 
 export function escapeHtml(unsafe: string): string {
   return unsafe.replaceAll(/[&<>"']/g, (char) => {

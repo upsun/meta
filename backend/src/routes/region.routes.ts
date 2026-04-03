@@ -2,7 +2,8 @@ import { config } from '../config/env.config.js';
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
-import { ResourceManager, escapeHtml, logger } from '../utils/index.js';
+import { ResourceManager, escapeHtml, logger, extractConditionalHeaders, setCacheHeaders, sendNotModified } from '../utils/index.js';
+import type { ConditionalHeaders } from '../utils/index.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import {
   HostRegionSchema,
@@ -21,6 +22,33 @@ const apiLogger = logger.child({ component: 'API' });
 
 // Initialize Resource Manager
 const resourceManager = new ResourceManager();
+
+/**
+ * Strip a trailing query-hash suffix from an ETag value, if present.
+ * Example: W/"abcd1234-q1a2b3c4" -> W/"abcd1234"
+ */
+function stripQueryHashSuffix(etag: string | undefined): string | undefined {
+  if (!etag) {
+    return etag;
+  }
+  // Remove any "-q<hex>" suffix at the very end of the string (case-insensitive)
+  return etag.replace(/-q[0-9a-f]+(?="?$)/i, '');
+}
+
+/**
+ * Normalize an If-None-Match style header by removing query-hash suffixes
+ * from each ETag value while preserving multiple ETags and weak validators.
+ */
+function normalizeEtagHeader(header: string | undefined): string | undefined {
+  if (!header) {
+    return header;
+  }
+  return header
+    .split(',')
+    .map((part) => stripQueryHashSuffix(part.trim()))
+    .filter((part) => part && part.length > 0)
+    .join(', ');
+}
 
 // ========================================
 // REGION ROUTES - SINGLE SOURCE OF TRUTH
@@ -76,8 +104,34 @@ regionRouter.route({
       const safeZone = zone ? escapeHtml(zone) : undefined;
       const safeCountryCode = country_code ? escapeHtml(country_code) : undefined;
 
-      // Get regions record
-      let regionsRecord: Record<string, any> = await resourceManager.getResource('host/regions.json');
+      // Get regions list with metadata, supporting conditional requests
+      const rawConditionalHeaders = extractConditionalHeaders(req);
+      const conditionalHeaders: ConditionalHeaders | undefined = rawConditionalHeaders
+        ? { ...rawConditionalHeaders }
+        : undefined;
+      if (conditionalHeaders && typeof conditionalHeaders.ifNoneMatch === 'string') {
+        conditionalHeaders.ifNoneMatch = normalizeEtagHeader(conditionalHeaders.ifNoneMatch);
+      }
+      const { data: regionsData, metadata, notModified } = await resourceManager.getResourceWithMetadata(
+        'host/regions.json',
+        conditionalHeaders
+      );
+      let regionsRecord: Record<string, any> = regionsData;
+
+      // Prepare query params for cache key
+      const queryParams = { name, provider, zone, country_code };
+      
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
+        const baseMetadata: any =
+          metadata && typeof metadata === 'object'
+            ? { ...(metadata as any), etag: stripQueryHashSuffix((metadata as any).etag) }
+            : metadata;
+        return sendNotModified(res, baseMetadata, 
+          config.cache.TTL,
+          queryParams
+        );
+      }
 
       // Apply filters
       if (name) {
@@ -100,7 +154,7 @@ regionRouter.route({
         );
         if (Object.keys(filtered).length === 0) {
           const availableProviders = [...new Set(
-            Object.values(regionsRecord)
+            Object.values(regionsData)
               .map((r: any) => r.provider?.name)
               .filter(Boolean)
           )];
@@ -121,7 +175,7 @@ regionRouter.route({
         );
         if (Object.keys(filtered).length === 0) {
           const availableZones = [...new Set(
-            Object.values(regionsRecord)
+            Object.values(regionsData)
               .map((r: any) => r.zone)
               .filter((z: string) => z)
           )];
@@ -142,7 +196,7 @@ regionRouter.route({
         );
         if (Object.keys(filtered).length === 0) {
           const availableCountryCodes = [...new Set(
-            Object.values(regionsRecord)
+            Object.values(regionsData)
               .map((r: any) => r.country_code)
               .filter(Boolean)
           )];
@@ -161,6 +215,9 @@ regionRouter.route({
       const parsed = HostRegionsListSchema.parse(regionsRecord);
       const baseUrl = `${config.server.BASE_URL}`;
       const regionsWithLinks = withSelfLink(parsed, (id) => `${baseUrl}${PATH}/${encodeURIComponent(id)}`);
+
+      // Set cache headers with query params for proper ETag
+      setCacheHeaders(res, metadata, config.cache.TTL, queryParams);
 
       sendFormatted<HostRegionsList>(res, regionsWithLinks);
 
@@ -207,8 +264,15 @@ regionRouter.route({
       const { id } = req.params as { id: string };
       const safeId = escapeHtml(id);
 
-      // Get regions record and look up by key
-      const regionsRecord = await resourceManager.getResource('host/regions.json');
+      // Get regions list with metadata, supporting conditional requests
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data: regions, metadata, notModified } = await resourceManager.getResourceWithMetadata('host/regions.json', conditionalHeaders);
+      let regionsRecord: Record<string, any> = regions;
+
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
+        return sendNotModified(res, metadata, config.cache.TTL);
+      }
 
       // Apply filters
       if (id) {
@@ -223,6 +287,9 @@ regionRouter.route({
             extra: { availableRegions }
           });
         }
+
+        // Set cache headers
+        setCacheHeaders(res, metadata, config.cache.TTL);
 
         return sendFormatted<HostRegion>(res, region);
       }

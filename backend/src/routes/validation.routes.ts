@@ -1,7 +1,8 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
+import { config } from '../config/env.config.js';
 import { ApiRouter } from '../utils/api.router.js';
-import { ResourceManager, logger } from '../utils/index.js';
+import { ResourceManager, logger, extractConditionalHeaders, setCacheHeaders, sendNotModified } from '../utils/index.js';
 import { ErrorDetailsSchema } from '../schemas/api.schema.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import { Validation, ValidationSchema } from '../schemas/validation.schema.js';
@@ -58,7 +59,17 @@ This file is used to validate Upsun configuration files .upsun/config.yaml.
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const schema = await resourceManager.getResource('validation/upsun.json');
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data: schema, metadata, notModified } = await resourceManager.getResourceWithMetadata('validation/upsun.json', conditionalHeaders);
+      
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
+        return sendNotModified(res, metadata, config.cache.TTL);
+      }
+      
+      // Set cache headers
+      setCacheHeaders(res, metadata, config.cache.TTL);
+      
       sendFormatted<Validation>(res, schema);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read Upsun validation schema');
@@ -92,7 +103,17 @@ validationRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const schema = await resourceManager.getResource('image/registry.schema.json');
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data: schema, metadata, notModified } = await resourceManager.getResourceWithMetadata('image/registry.schema.json', conditionalHeaders);
+      
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
+        return sendNotModified(res, metadata, config.cache.TTL);
+      }
+      
+      // Set cache headers
+      setCacheHeaders(res, metadata, config.cache.TTL);
+      
       sendFormatted(res, schema);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read image registry validation schema');
@@ -142,7 +163,13 @@ The result is a JSON Schema snippet:
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const registry = await resourceManager.getResource('image/registry.json');
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data: registry, metadata, notModified } = await resourceManager.getResourceWithMetadata('image/registry.json', conditionalHeaders);
+      
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
+        return sendNotModified(res, metadata, config.cache.TTL);
+      }
 
       const serviceSet = new Set<string>();
 
@@ -175,6 +202,9 @@ The result is a JSON Schema snippet:
         // Same service: descending semver order
         return compareSemver(verB, verA);
       });
+
+      // Set cache headers
+      setCacheHeaders(res, metadata, config.cache.TTL);
 
       res.json({
         type: 'string',
@@ -218,7 +248,13 @@ for example: \`["php:7.2", "php:7.3", "nodejs:24"]\`.
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const registry = await resourceManager.getResource('image/registry.json');
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data: registry, metadata, notModified } = await resourceManager.getResourceWithMetadata('image/registry.json', conditionalHeaders);
+      
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
+        return sendNotModified(res, metadata, config.cache.TTL);
+      }
 
       const runtimeSet = new Set<string>();
 
@@ -252,6 +288,9 @@ for example: \`["php:7.2", "php:7.3", "nodejs:24"]\`.
         // Same runtime: descending semver order
         return compareSemver(verB, verA);
       });
+
+      // Set cache headers
+      setCacheHeaders(res, metadata, config.cache.TTL);
 
       // Return a JSON Schema snippet suitable for use as:
       // { "runtime-version": { "$ref": "https://example.com/schema/runtime-versions.json" } }

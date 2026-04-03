@@ -10,6 +10,11 @@ const requestLogger = logger.child({ component: 'HTTP' });
  */
 export function httpLogger() {
   return (req: Request, res: Response, next: NextFunction) => {
+    // Skip logging for Socket.IO polling requests (from dev tools/extensions)
+    if (req.path.startsWith('/socket.io')) {
+      return next();
+    }
+
     const startTime = Date.now();
 
     // Log incoming request
