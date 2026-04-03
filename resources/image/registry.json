@@ -419,7 +419,7 @@
     "exclude_from": [
       "platformsh"
     ],
-    "need_disk": false,
+    "need_disk": true,
     "internal": {
       "repo_name": "clickhouse"
     },
@@ -457,9 +457,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.3.2.3",
+            "raw": "26.3.3.20",
             "majorMinor": "26.3",
-            "normalized": "26.3.2"
+            "normalized": "26.3.3"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -599,7 +599,7 @@
       "23.8": {
         "upsun": {
           "status": "deprecated",
-          "internal_support": true,
+          "internal_support": false,
           "internal_status": "active"
         },
         "upstream": {
@@ -6524,19 +6524,19 @@
     "versions": {
       "8.4": {
         "upsun": {
-          "status": "decommissioned",
+          "status": "supported",
           "internal_support": true,
-          "internal_status": "decommissioned"
+          "internal_status": "active"
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "supported",
           "releaseDate": "2024-04-10T00:00:00.000Z",
           "eoasFrom": "2029-04-30T00:00:00.000Z",
           "eolFrom": "2032-04-30T00:00:00.000Z",
-          "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -6567,19 +6567,19 @@
       },
       "8.0": {
         "upsun": {
-          "status": "decommissioned",
+          "status": "deprecated",
           "internal_support": true,
-          "internal_status": "decommissioned"
+          "internal_status": "active"
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "deprecated",
           "releaseDate": "2018-04-08T00:00:00.000Z",
           "eoasFrom": "2025-04-30T00:00:00.000Z",
           "eolFrom": "2026-04-30T00:00:00.000Z",
-          "isLts": false,
-          "isMaintained": false,
+          "isLts": true,
+          "isMaintained": true,
           "isEoas": true,
-          "isEol": true
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -6610,12 +6610,12 @@
       },
       "5.7": {
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false,
-          "internal_status": "decommissioned"
+          "internal_status": "sunset"
         },
         "upstream": {
-          "status": "decommissioned",
+          "status": "retired",
           "releaseDate": "2015-10-09T00:00:00.000Z",
           "eoasFrom": "2020-10-31T00:00:00.000Z",
           "eolFrom": "2023-10-31T00:00:00.000Z",
