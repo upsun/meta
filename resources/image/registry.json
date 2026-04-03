@@ -8302,9 +8302,9 @@
     "versions": {
       "4.2": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
           "status": "supported",
