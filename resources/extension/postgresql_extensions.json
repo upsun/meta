@@ -1,0 +1,2095 @@
+{
+  "cloud": {
+    "address_standardizer": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "address_standardizer_data_us": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "adminpack": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "autoinc": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "bloom": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "btree_gin": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "btree_gist": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "chkpass": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "citext": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "cube": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "dblink": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "dict_int": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "dict_xsyn": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "earthdistance": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "file_fdw": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "fuzzystrmatch": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "hstore": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "insert_username": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "intagg": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "intarray": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "isn": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "lo": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "ltree": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "moddatetime": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pageinspect": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pg_buffercache": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pg_freespacemap": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pg_prewarm": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pg_stat_statements": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pg_trgm": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pg_visibility": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pgcrypto": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pgrouting": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pgrowlocks": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pgstattuple": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "plpgsql": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "postgis": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "postgis_sfcgal": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "postgis_tiger_geocoder": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "postgis_topology": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "postgres_fdw": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "refint": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "seg": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "sslinfo": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "tablefunc": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "tcn": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "timetravel": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "tsearch2": {
+      "description": "",
+      "versions": {
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "tsm_system_rows": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "tsm_system_time": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "unaccent": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "uuid-ossp": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "vector": {
+      "description": "",
+      "versions": {
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        }
+      }
+    },
+    "xml2": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    }
+  }
+}
