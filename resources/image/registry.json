@@ -599,7 +599,7 @@
       "23.8": {
         "upsun": {
           "status": "deprecated",
-          "internal_support": true,
+          "internal_support": false,
           "internal_status": "active"
         },
         "upstream": {
@@ -8300,6 +8300,49 @@
       "repo_name": "rabbitmq"
     },
     "versions": {
+      "4.2": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": false,
+          "internal_status": "sunset"
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2025-10-27T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
+        },
+        "manifest": {
+          "endpoints": {
+            "rabbitmq": {
+              "path": "main",
+              "port": 5672,
+              "scheme": "amqp",
+              "default": true,
+              "password": "guest",
+              "username": "guest"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "4.1.8-1",
+            "majorMinor": "4.1",
+            "normalized": "4.1.8"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
       "4.1": {
         "upsun": {
           "status": "supported",
