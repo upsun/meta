@@ -37,12 +37,12 @@ export const ExtensionVersionConfigSchema = z.object({
 });
 
 /**
- * Mapping of PHP versions to extension configurations
- * This should be a single object, not an array
+ * Mapping of runtime versions to extension configurations
+ * Supports formats like "8.1", "5.x", "10", "9.6"
  */
 export const RuntimeExtensionVersionSchema = z.record(
-  z.string().regex(/^\d+\.\d+$|^\d+\.x$/).openapi({
-    description: 'PHP version (e.g., "8.0", "8.1", "5.x")',
+  z.string().regex(/^\d+(?:\.\d+|\.x)?$/).openapi({
+    description: 'Runtime version (e.g., "8.0", "8.1", "5.x", "10", "9.6")',
     example: "8.1"
   }),
   ExtensionVersionConfigSchema

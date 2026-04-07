@@ -13,9 +13,19 @@ extendZodWithOpenApi(z);
  * Schema for Composable Image Version
  * Simplified version that only requires upsun field
  */
+const ComposablePackageVersionSchemaModel = z.object({
+  versions: z.array(z.string().openapi('packageVersion').describe('Supported version of the package')),
+  name: z.string().openapi('packageDisplayName').describe('Human readable package name'),
+  url: z.string().openapi('packageUrl').describe('Documentation or website URL for the package'),
+  isExternal: z.boolean().openapi('isExternal').describe('Whether this package points to external documentation')
+});
+
 export const ComposableImageVersionSchemaModel = z.object({
   upsun: DeployImageVersionSchemaModel.shape.upsun,
-  packages_versions: z.record(z.string().openapi('packageName').describe('Name of the package'), z.array(z.string().openapi('packageVersion').describe('Version of the package'))).optional()
+  packages_versions: z.record(
+    z.string().openapi('packageName').describe('Package identifier key (e.g., php, python, nodejs)'),
+    ComposablePackageVersionSchemaModel
+  ).optional()
 });
 
 /**

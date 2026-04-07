@@ -14,6 +14,7 @@ extendZodWithOpenApi(z);
  * Schema for Images Registry
  */
 export const DeployImageVersionStatusSchemaModel = z.enum([
+    "incoming",       // Newly released version that is being evaluated and tested for inclusion in the registry, not yet available for deployment.
     "supported",      // Officially supported and maintained version, receiving regular updates and security patches.
     "deprecated",     // No longer recommended for use, may still receive critical security updates but no new features or regular maintenance.
     "retired",        // Available but not maintained
@@ -26,8 +27,8 @@ export const DeployImageVersionStatusSchemaModel = z.enum([
 ;
 
 export const DeployImageVersionInternalStatusSchemaModel = z.enum([
-    "active",      // group supported and deprecated versions together as active, since from an internal perspective both are still valid options to deploy, and the distinction is more relevant for public documentation
-    "sunset",     // Available but not maintained, please migrate to an active version.
+    "active",         // group supported and deprecated versions together as active, since from an internal perspective both are still valid options to deploy, and the distinction is more relevant for public documentation
+    "sunset",         // Available but not maintained, please migrate to an active version.
     "decommissioned"  // Not available anymore
   ])
   .openapi({
