@@ -7301,7 +7301,7 @@
     "extensions": {
       "cloud": {
         "address_standardizer": {
-          "description": "",
+          "description": "Used to parse an address into constituent elements. Generally used to support geocoding address normalization step.",
           "versions": {
             "10": {
               "status": "available"
@@ -7342,7 +7342,7 @@
           }
         },
         "address_standardizer_data_us": {
-          "description": "",
+          "description": "For standardizing addresses based on US dataset example.",
           "versions": {
             "10": {
               "status": "available"
@@ -7383,7 +7383,7 @@
           }
         },
         "adminpack": {
-          "description": "",
+          "description": "Administrative functions for PostgreSQL (only available in versions less than 17).",
           "versions": {
             "10": {
               "status": "available"
@@ -7418,7 +7418,7 @@
           }
         },
         "autoinc": {
-          "description": "",
+          "description": "Functions for auto-incrementing fields.",
           "versions": {
             "10": {
               "status": "available"
@@ -7459,7 +7459,7 @@
           }
         },
         "bloom": {
-          "description": "",
+          "description": "Bloom access method - signature file based index (requires 9.6 or higher).",
           "versions": {
             "10": {
               "status": "available"
@@ -7500,7 +7500,7 @@
           }
         },
         "btree_gin": {
-          "description": "",
+          "description": "Support for indexing common data types in GIN.",
           "versions": {
             "10": {
               "status": "available"
@@ -7541,7 +7541,7 @@
           }
         },
         "btree_gist": {
-          "description": "",
+          "description": "Support for indexing common data types in GiST.",
           "versions": {
             "10": {
               "status": "available"
@@ -7582,7 +7582,7 @@
           }
         },
         "chkpass": {
-          "description": "",
+          "description": "Data type for auto-encrypted passwords.",
           "versions": {
             "10": {
               "status": "available"
@@ -7599,7 +7599,7 @@
           }
         },
         "citext": {
-          "description": "",
+          "description": "Data type for case-insensitive character strings.",
           "versions": {
             "10": {
               "status": "available"
@@ -7640,7 +7640,7 @@
           }
         },
         "cube": {
-          "description": "",
+          "description": "Data type for multidimensional cubes.",
           "versions": {
             "10": {
               "status": "available"
@@ -7681,7 +7681,7 @@
           }
         },
         "dblink": {
-          "description": "",
+          "description": "Connect to other PostgreSQL databases from within a database.",
           "versions": {
             "10": {
               "status": "available"
@@ -7722,7 +7722,7 @@
           }
         },
         "dict_int": {
-          "description": "",
+          "description": "Text search dictionary template for integers.",
           "versions": {
             "10": {
               "status": "available"
@@ -7763,7 +7763,7 @@
           }
         },
         "dict_xsyn": {
-          "description": "",
+          "description": "Text search dictionary template for extended synonym processing.",
           "versions": {
             "10": {
               "status": "available"
@@ -7804,7 +7804,7 @@
           }
         },
         "earthdistance": {
-          "description": "",
+          "description": "Calculate great-circle distances on the surface of the Earth.",
           "versions": {
             "10": {
               "status": "available"
@@ -7845,7 +7845,7 @@
           }
         },
         "file_fdw": {
-          "description": "",
+          "description": "Foreign-data wrapper for flat file access.",
           "versions": {
             "10": {
               "status": "available"
@@ -7886,7 +7886,7 @@
           }
         },
         "fuzzystrmatch": {
-          "description": "",
+          "description": "Determine similarities and distance between strings.",
           "versions": {
             "10": {
               "status": "available"
@@ -7927,7 +7927,7 @@
           }
         },
         "hstore": {
-          "description": "",
+          "description": "Data type for storing sets of (key, value) pairs.",
           "versions": {
             "10": {
               "status": "available"
@@ -7968,7 +7968,7 @@
           }
         },
         "insert_username": {
-          "description": "",
+          "description": "Functions for tracking who changed a table.",
           "versions": {
             "10": {
               "status": "available"
@@ -8009,7 +8009,7 @@
           }
         },
         "intagg": {
-          "description": "",
+          "description": "Integer aggregator and enumerator (obsolete).",
           "versions": {
             "10": {
               "status": "available"
@@ -8050,7 +8050,7 @@
           }
         },
         "intarray": {
-          "description": "",
+          "description": "Functions, operators, and index support for 1-D arrays of integers.",
           "versions": {
             "10": {
               "status": "available"
@@ -8091,7 +8091,7 @@
           }
         },
         "isn": {
-          "description": "",
+          "description": "Data types for international product numbering standards.",
           "versions": {
             "10": {
               "status": "available"
@@ -8132,7 +8132,7 @@
           }
         },
         "lo": {
-          "description": "",
+          "description": "Large Object maintenance.",
           "versions": {
             "10": {
               "status": "available"
@@ -8173,7 +8173,7 @@
           }
         },
         "ltree": {
-          "description": "",
+          "description": "Data type for hierarchical tree-like structures.",
           "versions": {
             "10": {
               "status": "available"
@@ -8214,7 +8214,7 @@
           }
         },
         "moddatetime": {
-          "description": "",
+          "description": "Functions for tracking last modification time.",
           "versions": {
             "10": {
               "status": "available"
@@ -8255,7 +8255,7 @@
           }
         },
         "pageinspect": {
-          "description": "",
+          "description": "Inspect the contents of database pages at a low level.",
           "versions": {
             "10": {
               "status": "available"
@@ -8296,7 +8296,7 @@
           }
         },
         "pg_buffercache": {
-          "description": "",
+          "description": "Examine the shared buffer cache.",
           "versions": {
             "10": {
               "status": "available"
@@ -8337,7 +8337,7 @@
           }
         },
         "pg_freespacemap": {
-          "description": "",
+          "description": "Examine the free space map (FSM).",
           "versions": {
             "10": {
               "status": "available"
@@ -8378,7 +8378,7 @@
           }
         },
         "pg_prewarm": {
-          "description": "",
+          "description": "Prewarm relation data (requires 9.6 or higher).",
           "versions": {
             "10": {
               "status": "available"
@@ -8419,7 +8419,7 @@
           }
         },
         "pg_stat_statements": {
-          "description": "",
+          "description": "Track execution statistics of all SQL statements executed.",
           "versions": {
             "10": {
               "status": "available"
@@ -8460,7 +8460,7 @@
           }
         },
         "pg_trgm": {
-          "description": "",
+          "description": "Text similarity measurement and index searching based on trigrams.",
           "versions": {
             "10": {
               "status": "available"
@@ -8501,7 +8501,7 @@
           }
         },
         "pg_visibility": {
-          "description": "",
+          "description": "Examine the visibility map (VM) and page-level visibility info (requires 9.6 or higher).",
           "versions": {
             "10": {
               "status": "available"
@@ -8542,7 +8542,7 @@
           }
         },
         "pgcrypto": {
-          "description": "",
+          "description": "Cryptographic functions.",
           "versions": {
             "10": {
               "status": "available"
@@ -8583,7 +8583,7 @@
           }
         },
         "pgrouting": {
-          "description": "",
+          "description": "pgRouting Extension (requires 9.6 or higher).",
           "versions": {
             "10": {
               "status": "available"
@@ -8624,7 +8624,7 @@
           }
         },
         "pgrowlocks": {
-          "description": "",
+          "description": "Show row-level locking information.",
           "versions": {
             "10": {
               "status": "available"
@@ -8665,7 +8665,7 @@
           }
         },
         "pgstattuple": {
-          "description": "",
+          "description": "Show tuple-level statistics.",
           "versions": {
             "10": {
               "status": "available"
@@ -8706,7 +8706,7 @@
           }
         },
         "plpgsql": {
-          "description": "",
+          "description": "PL/pgSQL procedural language.",
           "versions": {
             "10": {
               "status": "available"
@@ -8747,7 +8747,7 @@
           }
         },
         "postgis": {
-          "description": "",
+          "description": "PostGIS geometry, geography, and raster spatial types and functions.",
           "versions": {
             "10": {
               "status": "available"
@@ -8788,7 +8788,7 @@
           }
         },
         "postgis_sfcgal": {
-          "description": "",
+          "description": "PostGIS SFCGAL functions.",
           "versions": {
             "10": {
               "status": "available"
@@ -8829,7 +8829,7 @@
           }
         },
         "postgis_tiger_geocoder": {
-          "description": "",
+          "description": "PostGIS tiger geocoder and reverse geocoder.",
           "versions": {
             "10": {
               "status": "available"
@@ -8870,7 +8870,7 @@
           }
         },
         "postgis_topology": {
-          "description": "",
+          "description": "PostGIS topology spatial types and functions.",
           "versions": {
             "10": {
               "status": "available"
@@ -8911,7 +8911,7 @@
           }
         },
         "postgres_fdw": {
-          "description": "",
+          "description": "Foreign-data wrapper for remote PostgreSQL servers.",
           "versions": {
             "10": {
               "status": "available"
@@ -8952,7 +8952,7 @@
           }
         },
         "refint": {
-          "description": "",
+          "description": "Functions for implementing referential integrity (obsolete).",
           "versions": {
             "10": {
               "status": "available"
@@ -8990,7 +8990,7 @@
           }
         },
         "seg": {
-          "description": "",
+          "description": "Data type for representing line segments or floating-point intervals.",
           "versions": {
             "10": {
               "status": "available"
@@ -9028,7 +9028,7 @@
           }
         },
         "sslinfo": {
-          "description": "",
+          "description": "Information about SSL certificates.",
           "versions": {
             "10": {
               "status": "available"
@@ -9066,7 +9066,7 @@
           }
         },
         "tablefunc": {
-          "description": "",
+          "description": "Functions that manipulate whole tables, including crosstab.",
           "versions": {
             "10": {
               "status": "available"
@@ -9104,7 +9104,7 @@
           }
         },
         "tcn": {
-          "description": "",
+          "description": "Triggered change notifications.",
           "versions": {
             "10": {
               "status": "available"
@@ -9162,7 +9162,7 @@
           }
         },
         "tsearch2": {
-          "description": "",
+          "description": "Compatibility package for pre-8.3 text search functions (obsolete, only available for 9.6 and 9.3).",
           "versions": {
             "9.6": {
               "status": "available"
@@ -9173,7 +9173,7 @@
           }
         },
         "tsm_system_rows": {
-          "description": "",
+          "description": "TABLESAMPLE method which accepts number of rows as a limit (requires 9.6 or higher).",
           "versions": {
             "10": {
               "status": "available"
@@ -9211,7 +9211,7 @@
           }
         },
         "tsm_system_time": {
-          "description": "",
+          "description": "TABLESAMPLE method which accepts time in milliseconds as a limit (requires 9.6 or higher).",
           "versions": {
             "10": {
               "status": "available"
@@ -9249,7 +9249,7 @@
           }
         },
         "unaccent": {
-          "description": "",
+          "description": "Text search dictionary that removes accents.",
           "versions": {
             "10": {
               "status": "available"
@@ -9287,7 +9287,7 @@
           }
         },
         "uuid-ossp": {
-          "description": "",
+          "description": "Generate universally unique identifiers (UUIDs).",
           "versions": {
             "10": {
               "status": "available"
@@ -9325,7 +9325,7 @@
           }
         },
         "vector": {
-          "description": "",
+          "description": "Open-source vector similarity search for PostgreSQL 11+.",
           "versions": {
             "11": {
               "status": "available"
@@ -9354,7 +9354,7 @@
           }
         },
         "xml2": {
-          "description": "",
+          "description": "XPath querying and XSLT.",
           "versions": {
             "10": {
               "status": "available"
