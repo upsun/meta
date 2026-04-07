@@ -1,0 +1,2095 @@
+{
+  "cloud": {
+    "address_standardizer": {
+      "description": "Used to parse an address into constituent elements. Generally used to support geocoding address normalization step.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "address_standardizer_data_us": {
+      "description": "For standardizing addresses based on US dataset example.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "adminpack": {
+      "description": "Administrative functions for PostgreSQL (only available in versions less than 17).",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "autoinc": {
+      "description": "Functions for auto-incrementing fields.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "bloom": {
+      "description": "Bloom access method - signature file based index (requires 9.6 or higher).",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "btree_gin": {
+      "description": "Support for indexing common data types in GIN.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "btree_gist": {
+      "description": "Support for indexing common data types in GiST.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "chkpass": {
+      "description": "Data type for auto-encrypted passwords.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "citext": {
+      "description": "Data type for case-insensitive character strings.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "cube": {
+      "description": "Data type for multidimensional cubes.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "dblink": {
+      "description": "Connect to other PostgreSQL databases from within a database.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "dict_int": {
+      "description": "Text search dictionary template for integers.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "dict_xsyn": {
+      "description": "Text search dictionary template for extended synonym processing.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "earthdistance": {
+      "description": "Calculate great-circle distances on the surface of the Earth.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "file_fdw": {
+      "description": "Foreign-data wrapper for flat file access.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "fuzzystrmatch": {
+      "description": "Determine similarities and distance between strings.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "hstore": {
+      "description": "Data type for storing sets of (key, value) pairs.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "insert_username": {
+      "description": "Functions for tracking who changed a table.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "intagg": {
+      "description": "Integer aggregator and enumerator (obsolete).",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "intarray": {
+      "description": "Functions, operators, and index support for 1-D arrays of integers.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "isn": {
+      "description": "Data types for international product numbering standards.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "lo": {
+      "description": "Large Object maintenance.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "ltree": {
+      "description": "Data type for hierarchical tree-like structures.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "moddatetime": {
+      "description": "Functions for tracking last modification time.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pageinspect": {
+      "description": "Inspect the contents of database pages at a low level.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pg_buffercache": {
+      "description": "Examine the shared buffer cache.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pg_freespacemap": {
+      "description": "Examine the free space map (FSM).",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pg_prewarm": {
+      "description": "Prewarm relation data (requires 9.6 or higher).",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pg_stat_statements": {
+      "description": "Track execution statistics of all SQL statements executed.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pg_trgm": {
+      "description": "Text similarity measurement and index searching based on trigrams.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pg_visibility": {
+      "description": "Examine the visibility map (VM) and page-level visibility info (requires 9.6 or higher).",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pgcrypto": {
+      "description": "Cryptographic functions.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pgrouting": {
+      "description": "pgRouting Extension (requires 9.6 or higher).",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pgrowlocks": {
+      "description": "Show row-level locking information.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "pgstattuple": {
+      "description": "Show tuple-level statistics.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "plpgsql": {
+      "description": "PL/pgSQL procedural language.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "postgis": {
+      "description": "PostGIS geometry, geography, and raster spatial types and functions.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "postgis_sfcgal": {
+      "description": "PostGIS SFCGAL functions.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "postgis_tiger_geocoder": {
+      "description": "PostGIS tiger geocoder and reverse geocoder.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "postgis_topology": {
+      "description": "PostGIS topology spatial types and functions.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "postgres_fdw": {
+      "description": "Foreign-data wrapper for remote PostgreSQL servers.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.5": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "refint": {
+      "description": "Functions for implementing referential integrity (obsolete).",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "seg": {
+      "description": "Data type for representing line segments or floating-point intervals.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "sslinfo": {
+      "description": "Information about SSL certificates.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "tablefunc": {
+      "description": "Functions that manipulate whole tables, including crosstab.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "tcn": {
+      "description": "Triggered change notifications.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "timetravel": {
+      "description": "",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "tsearch2": {
+      "description": "Compatibility package for pre-8.3 text search functions (obsolete, only available for 9.6 and 9.3).",
+      "versions": {
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "tsm_system_rows": {
+      "description": "TABLESAMPLE method which accepts number of rows as a limit (requires 9.6 or higher).",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "tsm_system_time": {
+      "description": "TABLESAMPLE method which accepts time in milliseconds as a limit (requires 9.6 or higher).",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "unaccent": {
+      "description": "Text search dictionary that removes accents.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "uuid-ossp": {
+      "description": "Generate universally unique identifiers (UUIDs).",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    },
+    "vector": {
+      "description": "Open-source vector similarity search for PostgreSQL 11+.",
+      "versions": {
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        }
+      }
+    },
+    "xml2": {
+      "description": "XPath querying and XSLT.",
+      "versions": {
+        "10": {
+          "status": "available"
+        },
+        "11": {
+          "status": "available"
+        },
+        "12": {
+          "status": "available"
+        },
+        "13": {
+          "status": "available"
+        },
+        "14": {
+          "status": "available"
+        },
+        "15": {
+          "status": "available"
+        },
+        "16": {
+          "status": "available"
+        },
+        "17": {
+          "status": "available"
+        },
+        "18": {
+          "status": "available"
+        },
+        "9.3": {
+          "status": "available"
+        },
+        "9.6": {
+          "status": "available"
+        }
+      }
+    }
+  }
+}
