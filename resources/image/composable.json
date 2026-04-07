@@ -20,52 +20,107 @@
           "internal_status": "active"
         },
         "packages_versions": {
-          "bun": [
-            "1"
-          ],
-          "clojure": [
-            "1"
-          ],
-          "elixir": [
-            "1.17",
-            "1.18",
-            "1.19"
-          ],
-          "golang": [
-            "1.24",
-            "1.25"
-          ],
-          "java": [
-            "21",
-            "25"
-          ],
-          "nodejs": [
-            "20",
-            "22",
-            "24"
-          ],
-          "perl": [
-            "5"
-          ],
-          "php": [
-            "8.2",
-            "8.3",
-            "8.4",
-            "8.5"
-          ],
-          "python": [
-            "3.11",
-            "3.12",
-            "3.13"
-          ],
-          "ruby": [
-            "3.3",
-            "3.4",
-            "4.0"
-          ],
-          "sbcl": [
-            "2"
-          ]
+          "bun": {
+            "versions": [
+              "1"
+            ],
+            "name": "Javascript/Bun",
+            "url": "https://bun.sh/",
+            "isExternal": true
+          },
+          "clojure": {
+            "versions": [
+              "1"
+            ],
+            "name": "Clojure",
+            "url": "https://clojure.org/",
+            "isExternal": true
+          },
+          "elixir": {
+            "versions": [
+              "1.17",
+              "1.18",
+              "1.19"
+            ],
+            "name": "Elixir",
+            "url": "/docs/languages/elixir",
+            "isExternal": false
+          },
+          "golang": {
+            "versions": [
+              "1.24",
+              "1.25"
+            ],
+            "name": "Go",
+            "url": "/docs/languages/go",
+            "isExternal": false
+          },
+          "java": {
+            "versions": [
+              "21",
+              "25"
+            ],
+            "name": "Java",
+            "url": "/docs/languages/java",
+            "isExternal": false
+          },
+          "nodejs": {
+            "versions": [
+              "20",
+              "22",
+              "24"
+            ],
+            "name": "Javascript/Node.js",
+            "url": "/docs/languages/nodejs",
+            "isExternal": false
+          },
+          "perl": {
+            "versions": [
+              "5"
+            ],
+            "name": "Perl",
+            "url": "https://www.perl.org/",
+            "isExternal": true
+          },
+          "php": {
+            "versions": [
+              "8.2",
+              "8.3",
+              "8.4",
+              "8.5"
+            ],
+            "name": "PHP",
+            "url": "/docs/languages/php",
+            "isExternal": false
+          },
+          "python": {
+            "versions": [
+              "3.11",
+              "3.12",
+              "3.13"
+            ],
+            "name": "Python",
+            "url": "/docs/languages/python",
+            "isExternal": false
+          },
+          "ruby": {
+            "versions": [
+              "3.3",
+              "3.4",
+              "4.0"
+            ],
+            "name": "Ruby",
+            "url": "/docs/languages/ruby",
+            "isExternal": false
+          },
+          "sbcl": {
+            "versions": [
+              "2"
+            ],
+            "name": "Common List/SBCL",
+            "url": "http://www.list-lang.org/",
+            "isExternal": true
+          }
         }
       },
       "25.05": {
