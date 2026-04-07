@@ -11037,7 +11037,7 @@
     "docs": {
       "relationship_name": "elasticsearch-enterprise",
       "service_name": "elasticsearch-enterprise",
-      "url": "https://developer.upsun.com/docs/add-services/elasticsearch-enterprise"
+      "url": "https://developer.upsun.com/docs/add-services/elasticsearch"
     },
     "versions": {
       "9.3": {
