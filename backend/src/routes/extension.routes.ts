@@ -256,7 +256,7 @@ extensionRouter.route({
   description: `Get a specific PostgreSQL extension entry by its Id from the \`cloud\` root node.`,
   tags: [TAG],
   params: z.object({
-    id: z.string().describe('Extension Id (e.g., json, imagick, gd)')
+    id: z.string().describe('Extension Id (e.g., bloom, pg_stat_statements, postgis)')
   }),
   query: z.object({}),
   headers: HeaderAcceptSchema,

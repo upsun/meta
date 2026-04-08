@@ -23,7 +23,7 @@ export const ExtensionStatusSchema = z.enum([
  * Configuration for a single PHP extension version
  */
 export const ExtensionVersionConfigSchema = z.object({
-  status: ExtensionStatusSchema.describe('Status of the extension for this PHP version'),
+  status: ExtensionStatusSchema.describe('Status of the extension for this version'),
   options: z.array(z.string()).default([]).openapi({
     description: 'Additional options for the extension (e.g. "webp" for imagick)',
     example: ["webp"]
@@ -47,7 +47,7 @@ export const RuntimeExtensionVersionSchema = z.record(
   }),
   ExtensionVersionConfigSchema
 ).openapi('RuntimeExtensionVersion', {
-  description: 'Mapping of PHP versions to their extension status and options',
+  description: 'Mapping of versions to their extension status and options',
   example: {
     "8.0": { status: "default", options: [] },
     "8.1": { status: "available", options: ["webp"] },
@@ -57,7 +57,7 @@ export const RuntimeExtensionVersionSchema = z.record(
 
 const RuntimeExtensionSchema = z.object({
   versions: RuntimeExtensionVersionSchema
-    .describe('Mapping of PHP versions to extension configurations'),
+    .describe('Mapping of versions to extension configurations'),
   _links: LinkSchema.optional().describe('Hypermedia links related to the extension entry')
 }).openapi('RuntimeExtension', {
   description: 'Entry for a specific extension with its version configurations',
