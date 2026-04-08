@@ -3,29 +3,10 @@ import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
 
 export const AcceptMimeTypeSchema = z.enum(['application/json', 'application/x-yaml']);
 
-const ACCEPT_MIME_TYPES = AcceptMimeTypeSchema.options;
-
-function isSupportedAcceptHeader(value: string): boolean {
-  const mediaTypes = value
-    .split(',')
-    .map((entry) => entry.split(';')[0]?.trim().toLowerCase())
-    .filter((entry): entry is string => Boolean(entry));
-
-  if (mediaTypes.length === 0) {
-    return false;
-  }
-
-  return mediaTypes.every((mediaType) => ACCEPT_MIME_TYPES.includes(mediaType as (typeof ACCEPT_MIME_TYPES)[number]));
-}
-
 const AcceptHeaderValueSchema = z
   .preprocess(
     (value) => Array.isArray(value) ? value.join(',') : value,
-    z.string()
-      .optional()
-      .refine((value) => value === undefined || isSupportedAcceptHeader(value), {
-        message: `Invalid option: expected one of ${ACCEPT_MIME_TYPES.map((value) => `"${value}"`).join('|')}`
-      })
+    z.string().optional()
   );
 
 /**
