@@ -248,12 +248,12 @@ extensionRouter.route({
   }
 });
 
-// GET /extensions/php/grid/:version - grid filtered by version
+// GET /extensions/postgresql/:id
 extensionRouter.route({
   method: 'get',
   path: `${PATH}/postgresql/:id`,
-  summary: 'Get PostgreSQL Cloud extension by Id',
-  description: `Get a specific PostgreSQL Cloud extension entry by its Id from the \`cloud\` root node.`,
+  summary: 'Get PostgreSQL extension by Id',
+  description: `Get a specific PostgreSQL extension entry by its Id from the \`cloud\` root node.`,
   tags: [TAG],
   params: z.object({
     id: z.string().describe('Extension Id (e.g., json, imagick, gd)')
@@ -283,7 +283,7 @@ extensionRouter.route({
       const imageId = escapeHtml(id);
 
       const conditionalHeaders = extractConditionalHeaders(req);
-      const { data, metadata, notModified } = await resourceManager.getResourceWithMetadata('extension/php_extensions.json', conditionalHeaders);
+      const { data, metadata, notModified } = await resourceManager.getResourceWithMetadata('extension/postgresql_extensions.json', conditionalHeaders);
       
       // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
       if (notModified) {
