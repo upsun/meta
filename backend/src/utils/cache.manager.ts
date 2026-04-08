@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { ResourceMetadata, ConditionalHeaders } from './resource.manager.js';
 import crypto from 'crypto';
+import { selectResponseFormat } from './response.format.js';
 
 type EtagContext = Record<string, any>;
 
@@ -59,9 +60,7 @@ function hashQueryParams(queryParams: Record<string, any>): string {
  */
 function getAcceptVariant(req: Request | undefined): 'json' | 'yaml' {
   const rawAccept = req?.headers['accept'];
-  const accept = (Array.isArray(rawAccept) ? rawAccept.join(',') : (rawAccept || '')).toLowerCase();
-
-  return accept.includes('application/x-yaml') ? 'yaml' : 'json';
+  return selectResponseFormat(rawAccept);
 }
 
 /**
