@@ -457,9 +457,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.3.3.20",
+            "raw": "26.3.4.11",
             "majorMinor": "26.3",
-            "normalized": "26.3.3"
+            "normalized": "26.3.4"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -3488,6 +3488,45 @@
             "raw": "21.0.10-3",
             "majorMinor": "21.0",
             "normalized": "21.0.10"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "25": {
+        "upsun": {
+          "status": "incoming",
+          "internal_support": false,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "incoming",
+          "releaseDate": "2025-09-16T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2030-09-30T00:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "2.5.13+dfsg-5",
+            "majorMinor": "2.5",
+            "normalized": "2.5.13"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
