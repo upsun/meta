@@ -6,6 +6,7 @@ import { ResourceManager, logger, extractConditionalHeaders, setCacheHeaders, se
 import { ErrorDetailsSchema } from '../schemas/api.schema.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import { Validation, ValidationSchema } from '../schemas/validation.schema.js';
+import { compareSemverLike } from '../utils/version.utils.js';
 
 const TAG = 'Validation Schema';
 const PATH = '/schema';
@@ -15,20 +16,6 @@ const apiLogger = logger.child({ component: 'API' });
 
 // Initialize Resource Manager
 const resourceManager = new ResourceManager();
-
-// Simple semver comparison (numeric segments, no pre-release handling)
-const compareSemver = (a: string, b: string): number => {
-  const as = a.split('.').map((n) => parseInt(n, 10));
-  const bs = b.split('.').map((n) => parseInt(n, 10));
-  const len = Math.max(as.length, bs.length);
-  for (let i = 0; i < len; i++) {
-    const av = as[i] ?? 0;
-    const bv = bs[i] ?? 0;
-    if (av > bv) return 1;
-    if (av < bv) return -1;
-  }
-  return 0;
-};
 
 // ========================================
 // VALIDATION ROUTES - SINGLE SOURCE OF TRUTH
@@ -200,7 +187,7 @@ The result is a JSON Schema snippet:
         if (nameA > nameB) return 1;
 
         // Same service: descending semver order
-        return compareSemver(verB, verA);
+        return compareSemverLike(verB, verA);
       });
 
       // Set cache headers
@@ -286,7 +273,7 @@ for example: \`["php:7.2", "php:7.3", "nodejs:24"]\`.
         if (nameA > nameB) return 1;
 
         // Same runtime: descending semver order
-        return compareSemver(verB, verA);
+        return compareSemverLike(verB, verA);
       });
 
       // Set cache headers
