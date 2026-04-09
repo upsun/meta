@@ -1,6 +1,14 @@
 import { z } from 'zod';
 import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
 
+export const AcceptMimeTypeSchema = z.enum(['application/json', 'application/x-yaml']);
+
+const AcceptHeaderValueSchema = z
+  .preprocess(
+    (value) => Array.isArray(value) ? value.join(',') : value,
+    z.string().optional()
+  );
+
 /**
  * Schema for API info response
  */
@@ -49,22 +57,23 @@ export const ApiInfoSchema = z.object({
   })
 }).openapi('ApiInfo');
 
-export const HeaderAcceptSchema = z
-  .object({
-    Accept: z.enum(['application/json', 'application/x-yaml'])
-      .optional()
-      .default('application/json')
-      .describe('Response format. Defaults to application/json.')
-      .openapi({
-        param: {
-          name: 'Accept',
-          in: 'header',
-          description: 'Response format. Defaults to application/json.',
-          example: 'application/json',
-          required: false
+export const HeaderAcceptSchema = z.object({
+  accept: AcceptHeaderValueSchema
+    .optional()
+    .describe('Response format. Defaults to application/json.')
+    .openapi({
+      param: {
+        name: 'accept',
+        in: 'header',
+        description: 'Response format. Defaults to application/json.',
+        required: false,
+        schema: {
+          enum: ['application/json', 'application/x-yaml'],
+          default: 'application/json'
         }
-      })
-  });
+      }
+    })
+});
 
 export const ErrorDetailsSchema = z
   .object({
@@ -82,4 +91,5 @@ export const ErrorDetailsSchema = z
 
 export type ApiInfo = z.infer<typeof ApiInfoSchema>;
 export type ErrorDetails = z.infer<typeof ErrorDetailsSchema>;
+export type AcceptMimeType = z.infer<typeof AcceptMimeTypeSchema>;
 

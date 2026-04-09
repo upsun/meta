@@ -457,9 +457,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.3.2.3",
+            "raw": "26.3.4.11",
             "majorMinor": "26.3",
-            "normalized": "26.3.2"
+            "normalized": "26.3.4"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -599,7 +599,7 @@
       "23.8": {
         "upsun": {
           "status": "deprecated",
-          "internal_support": true,
+          "internal_support": false,
           "internal_status": "active"
         },
         "upstream": {
@@ -3107,9 +3107,9 @@
           "min_disk_size": null,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "8.29.1-0psh1",
-            "majorMinor": "8.29",
-            "normalized": "8.29.1"
+            "raw": "8.30.1-0psh1",
+            "majorMinor": "8.30",
+            "normalized": "8.30.1"
           },
           "allow_scale_down": null,
           "storage_mount_point": null,
@@ -3488,6 +3488,45 @@
             "raw": "21.0.10-3",
             "majorMinor": "21.0",
             "normalized": "21.0.10"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "25": {
+        "upsun": {
+          "status": "incoming",
+          "internal_support": false,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "incoming",
+          "releaseDate": "2025-09-16T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2030-09-30T00:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "2.5.13+dfsg-5",
+            "majorMinor": "2.5",
+            "normalized": "2.5.13"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -5459,9 +5498,9 @@
     "versions": {
       "2.0": {
         "upsun": {
-          "status": "retired",
+          "status": "deprecated",
           "internal_support": true,
-          "internal_status": "sunset"
+          "internal_status": "active"
         },
         "upstream": {
           "status": "supported",
@@ -5469,9 +5508,9 @@
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
-          "isMaintained": false,
+          "isMaintained": true,
           "isEoas": true,
-          "isEol": true
+          "isEol": false
         },
         "manifest": {
           "endpoints": null,
@@ -8300,6 +8339,49 @@
       "repo_name": "rabbitmq"
     },
     "versions": {
+      "4.2": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2025-10-27T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "rabbitmq": {
+              "path": "main",
+              "port": 5672,
+              "scheme": "amqp",
+              "default": true,
+              "password": "guest",
+              "username": "guest"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "4.1.8-1",
+            "majorMinor": "4.1",
+            "normalized": "4.1.8"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
       "4.1": {
         "upsun": {
           "status": "supported",
@@ -9355,9 +9437,9 @@
       },
       "3.2": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true,
-          "internal_status": "active"
+          "status": "retired",
+          "internal_support": false,
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "retired",
@@ -9365,9 +9447,9 @@
           "eoasFrom": null,
           "eolFrom": "2026-03-31T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {

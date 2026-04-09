@@ -1,6 +1,9 @@
 import { Request, Response } from 'express';
 import { ResourceMetadata, ConditionalHeaders } from './resource.manager.js';
 import crypto from 'crypto';
+import { selectResponseFormat } from './response.format.js';
+
+type EtagContext = Record<string, any>;
 
 /**
  * Extract conditional request headers from Express request
@@ -49,6 +52,25 @@ function hashQueryParams(queryParams: Record<string, any>): string {
   // Generate a short hash of the query params
   const paramString = JSON.stringify(relevantParams);
   return crypto.createHash('md5').update(paramString).digest('hex').substring(0, 8);
+}
+
+/**
+ * Normalize the response variant from Accept header.
+ * We only vary by representation format, not the raw header value.
+ */
+function getAcceptVariant(req: Request | undefined): 'json' | 'yaml' {
+  const rawAccept = req?.headers['accept'];
+  return selectResponseFormat(rawAccept);
+}
+
+/**
+ * Build ETag context that always includes negotiated representation variant.
+ */
+function buildEtagContext(req: Request | undefined, queryParams?: Record<string, any>): EtagContext {
+  return {
+    ...(queryParams || {}),
+    accept: getAcceptVariant(req)
+  };
 }
 
 /**
@@ -119,9 +141,8 @@ export function checkClientCache(req: Request, metadata: ResourceMetadata, query
   }
 
   // Generate server-side etag with query params if provided
-  const serverEtag = queryParams
-    ? generateEtagWithParams(metadata.etag, queryParams)
-    : metadata.etag;
+  const etagContext = buildEtagContext(req, queryParams);
+  const serverEtag = generateEtagWithParams(metadata.etag, etagContext);
 
   if (!serverEtag) {
     return false;
@@ -145,10 +166,9 @@ export function checkClientCache(req: Request, metadata: ResourceMetadata, query
  * @param queryParams - Optional query parameters to include in ETag
  */
 export function setCacheHeaders(res: Response, metadata: ResourceMetadata, maxAge: number = 300, queryParams?: Record<string, any>): void {
-  // Generate etag with query params if provided
-  const etag = queryParams 
-    ? generateEtagWithParams(metadata.etag, queryParams)
-    : metadata.etag;
+  // Generate ETag with request-sensitive context (Accept variant + optional query params)
+  const etagContext = buildEtagContext(res.req, queryParams);
+  const etag = generateEtagWithParams(metadata.etag, etagContext);
     
   if (etag) {
     res.setHeader('ETag', etag);
@@ -206,10 +226,9 @@ export function sendNotModified(
   maxAge: number = 300,
   queryParams?: Record<string, any>,
 ): void {
-  // Generate etag with query params if provided
-  const etag = queryParams 
-    ? generateEtagWithParams(metadata.etag, queryParams)
-    : metadata.etag;
+  // Generate ETag with request-sensitive context (Accept variant + optional query params)
+  const etagContext = buildEtagContext(res.req, queryParams);
+  const etag = generateEtagWithParams(metadata.etag, etagContext);
     
   if (etag) {
     res.setHeader('ETag', etag);
