@@ -53,7 +53,7 @@ export const ComposableImageSchemaDtoPublic = ComposableImageSchemaModel
 export const ComposableImageSchemaDtoInternal = ComposableImageSchemaModel
   .openapi({ "x-internal": true });
 
-export const NixRuntimesResponseSchema = z.object({
+export const NixRuntimesResponseSchemaDto = z.object({
   version: z.string().describe('Selected Nix channel version'),
   packages_versions: z.record(
     z.string().describe('Package identifier key (e.g., php, python, nodejs)'),
@@ -66,9 +66,9 @@ export const NixRuntimesResponseSchema = z.object({
   )
 });
 
-export type NixRuntimesResponse = z.infer<typeof NixRuntimesResponseSchema>;
+//export type NixRuntimesResponse = z.infer<typeof NixRuntimesResponseSchema>;
   
 
 // Type exports for TypeScript
 export type ComposableImageDto = z.infer<typeof ComposableImageSchemaDtoInternal> | z.infer<typeof ComposableImageSchemaDtoPublic>;
-export type NixRuntimesResponseDto = NixRuntimesResponse;
+export type NixRuntimesResponseDto = z.infer<typeof NixRuntimesResponseSchemaDto>;

@@ -8,8 +8,8 @@ import {
   ComposableImageDto,
   ComposableImageSchemaDtoInternal,
   ComposableImageSchemaDtoPublic,
-  NixRuntimesResponse,
-  NixRuntimesResponseSchema
+  NixRuntimesResponseDto,
+  NixRuntimesResponseSchemaDto
 } from '../schemas/composable.schema.js';
 import { HeaderAcceptSchema, ErrorDetailsSchema } from '../schemas/api.schema.js';
 import { compareSemverLike, getHighestVersion } from '../utils/version.utils.js';
@@ -113,7 +113,7 @@ composableRouter.route({
   responses: {
     200: {
       description: 'List of Nix Runtimes',
-      schema: NixRuntimesResponseSchema,
+      schema: NixRuntimesResponseSchemaDto,
       contentTypes: ['application/json', 'application/x-yaml'],
     },
     404: {
@@ -193,18 +193,18 @@ composableRouter.route({
         });
       }
 
-      const responsePayload: NixRuntimesResponse = {
+      const responsePayload: NixRuntimesResponseDto = {
         version: selectedChannel,
         packages_versions: channelData.packages_versions
       };
 
-      const validatedPayload = NixRuntimesResponseSchema.parse(responsePayload);
+      const validatedPayload = NixRuntimesResponseSchemaDto.parse(responsePayload);
 
       // Set cache headers
       setCacheHeaders(res, metadata, config.cache.TTL, queryParams);
 
       // Send formatted response
-      sendFormatted<NixRuntimesResponse>(res, validatedPayload);
+      sendFormatted<NixRuntimesResponseDto>(res, validatedPayload);
 
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read composable configuration');
