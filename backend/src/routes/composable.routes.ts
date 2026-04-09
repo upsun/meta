@@ -102,7 +102,7 @@ composableRouter.route({
 // ========================================
 composableRouter.route({
   method: 'get',
-  path: `${PATH}/nix-runtimes`,
+  path: `${PATH}/runtimes`,
   summary: 'Get Nix Runtimes',
   description: `Returns the list of Nix runtimes available in packages_versions for a Nix channel. Defaults to the highest Nix channel version when no query param is provided.`,
   tags: [TAG],
