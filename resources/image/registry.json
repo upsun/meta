@@ -2824,11 +2824,16 @@
           "isEol": true
         },
         "manifest": {
-          "endpoints": null,
-          "min_cpu_size": null,
-          "min_mem_size": null,
+          "endpoints": {
+            "influxdb": {
+              "port": 8086,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
           "is_persistent": null,
-          "min_disk_size": null,
+          "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
             "raw": "2.2.0",
@@ -5783,19 +5788,19 @@
       },
       "26": {
         "upsun": {
-          "status": "incoming",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "active"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "incoming",
+          "status": "decommissioned",
           "releaseDate": null,
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
