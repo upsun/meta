@@ -9000,9 +9000,9 @@
       },
       "7.0": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true,
-          "internal_status": "active"
+          "status": "retired",
+          "internal_support": false,
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "retired",
@@ -9010,9 +9010,9 @@
           "eoasFrom": "2023-08-15T00:00:00.000Z",
           "eolFrom": "2024-07-29T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -11639,19 +11639,19 @@
     "versions": {
       "15": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true,
-          "internal_status": "active"
+          "status": "retired",
+          "internal_support": false,
+          "internal_status": "sunset"
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "releaseDate": null,
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
