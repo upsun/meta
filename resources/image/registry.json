@@ -2824,11 +2824,16 @@
           "isEol": true
         },
         "manifest": {
-          "endpoints": null,
-          "min_cpu_size": null,
-          "min_mem_size": null,
+          "endpoints": {
+            "influxdb": {
+              "port": 8086,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
           "is_persistent": null,
-          "min_disk_size": null,
+          "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
             "raw": "2.2.0",
@@ -5757,6 +5762,45 @@
           "isMaintained": true,
           "isEoas": false,
           "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "24.14.1-1nodesource1",
+            "majorMinor": "24.14",
+            "normalized": "24.14.1"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "26": {
+        "upsun": {
+          "status": "decommissioned",
+          "internal_support": false,
+          "internal_status": "decommissioned"
+        },
+        "upstream": {
+          "status": "decommissioned",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8956,9 +9000,9 @@
       },
       "7.0": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true,
-          "internal_status": "active"
+          "status": "retired",
+          "internal_support": false,
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "retired",
@@ -8966,9 +9010,9 @@
           "eoasFrom": "2023-08-15T00:00:00.000Z",
           "eolFrom": "2024-07-29T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -9825,6 +9869,46 @@
       "repo_name": "solr"
     },
     "versions": {
+      "10.0": {
+        "upsun": {
+          "status": "incoming",
+          "internal_support": false,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "incoming",
+          "releaseDate": "2026-03-03T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "solr": {
+              "port": 8080,
+              "scheme": "solr",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "9.9.0-0psh2",
+            "majorMinor": "9.9",
+            "normalized": "9.9.0"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
       "9.9": {
         "upsun": {
           "status": "supported",
@@ -11555,19 +11639,19 @@
     "versions": {
       "15": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true,
-          "internal_status": "active"
+          "status": "retired",
+          "internal_support": false,
+          "internal_status": "sunset"
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "releaseDate": null,
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
