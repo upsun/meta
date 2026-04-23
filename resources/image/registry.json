@@ -4008,19 +4008,19 @@
     "versions": {
       "12.3": {
         "upsun": {
-          "status": "incoming",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "active"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "incoming",
+          "status": "decommissioned",
           "releaseDate": null,
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4599,19 +4599,19 @@
     "versions": {
       "12.3": {
         "upsun": {
-          "status": "incoming",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "active"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "incoming",
+          "status": "decommissioned",
           "releaseDate": null,
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
