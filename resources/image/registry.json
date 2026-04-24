@@ -9953,12 +9953,12 @@
     "versions": {
       "10.0": {
         "upsun": {
-          "status": "incoming",
-          "internal_support": false,
+          "status": "supported",
+          "internal_support": true,
           "internal_status": "active"
         },
         "upstream": {
-          "status": "incoming",
+          "status": "supported",
           "releaseDate": "2026-03-03T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
