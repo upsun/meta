@@ -4704,6 +4704,63 @@
                 ]
             }
         },
+        "/access/{access_id}": {
+            "get": {
+                "summary": "Get access document by access ID",
+                "description": "Returns the full access document referenced by token claim `access_id`.",
+                "operationId": "get-access-document",
+                "tags": [
+                    "Grants"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "access_id",
+                        "required": true,
+                        "description": "Access document identifier.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "description": "Full access document."
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-property-id-kebab": "get-access-document",
+                "x-tag-id-kebab": "Grants",
+                "x-return-types-displayReturn": false,
+                "x-return-types": [
+                    "object"
+                ],
+                "x-phpdoc": {
+                    "return": "object"
+                },
+                "x-returnable": true,
+                "x-description": [
+                    "Returns the full access document referenced by token claim `access_id`."
+                ]
+            }
+        },
         "/projects/{projectId}/environments/{envId}/continuous-profiling": {
             "get": {
                 "operationId": "list_applications",
@@ -12161,11 +12218,11 @@
                                         "language": {
                                             "description": "Profiled application language",
                                             "type": "string",
+                                            "example": "php",
                                             "enum": [
                                                 "php",
                                                 "python"
-                                            ],
-                                            "example": "php"
+                                            ]
                                         }
                                     },
                                     "type": "object",
@@ -12559,11 +12616,11 @@
                                         "language": {
                                             "description": "Profiled application language",
                                             "type": "string",
+                                            "example": "php",
                                             "enum": [
                                                 "php",
                                                 "python"
-                                            ],
-                                            "example": "php"
+                                            ]
                                         }
                                     },
                                     "type": "object",
@@ -12655,9 +12712,9 @@
                         "required": false,
                         "schema": {
                             "type": "integer",
+                            "example": 50,
                             "maximum": 200,
-                            "minimum": 10,
-                            "example": 50
+                            "minimum": 10
                         }
                     }
                 ],
@@ -12756,14 +12813,14 @@
                                                                     "href": {
                                                                         "type": "string",
                                                                         "format": "uri",
-                                                                        "example": "https://api.upsun.com/api/projects/abc123/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/timeline"
+                                                                        "example": "https://api.upsun.com/projects/abc123/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/timeline"
                                                                     },
                                                                     "type": {
                                                                         "type": "string",
+                                                                        "example": "application/json",
                                                                         "enum": [
                                                                             "application/json"
-                                                                        ],
-                                                                        "example": "application/json"
+                                                                        ]
                                                                     }
                                                                 },
                                                                 "type": "object",
@@ -12779,14 +12836,14 @@
                                                                     "href": {
                                                                         "type": "string",
                                                                         "format": "uri",
-                                                                        "example": "https://api.upsun.com/api/projects/abc123/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/subprofiles"
+                                                                        "example": "https://api.upsun.com/projects/abc123/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/subprofiles"
                                                                     },
                                                                     "type": {
                                                                         "type": "string",
+                                                                        "example": "application/json",
                                                                         "enum": [
                                                                             "application/json"
-                                                                        ],
-                                                                        "example": "application/json"
+                                                                        ]
                                                                     }
                                                                 },
                                                                 "type": "object",
@@ -12802,14 +12859,14 @@
                                                                     "href": {
                                                                         "type": "string",
                                                                         "format": "uri",
-                                                                        "example": "https://api.upsun.com/api/projects/abc123/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/profile"
+                                                                        "example": "https://api.upsun.com/projects/abc123/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/profile"
                                                                     },
                                                                     "type": {
                                                                         "type": "string",
+                                                                        "example": "application/json",
                                                                         "enum": [
                                                                             "application/json"
-                                                                        ],
-                                                                        "example": "application/json"
+                                                                        ]
                                                                     }
                                                                 },
                                                                 "type": "object",
@@ -12825,14 +12882,14 @@
                                                                     "href": {
                                                                         "type": "string",
                                                                         "format": "uri",
-                                                                        "example": "https://api.upsun.com/api/projects/abc123/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/graph"
+                                                                        "example": "https://api.upsun.com/projects/abc123/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/graph"
                                                                     },
                                                                     "type": {
                                                                         "type": "string",
+                                                                        "example": "application/json",
                                                                         "enum": [
                                                                             "application/json"
-                                                                        ],
-                                                                        "example": "application/json"
+                                                                        ]
                                                                     }
                                                                 },
                                                                 "type": "object",
@@ -12887,19 +12944,19 @@
                                             "total": 15,
                                             "_links": {
                                                 "api_timeline": {
-                                                    "href": "https://api.upsun.com/api/projects/abc123def456/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/timeline",
+                                                    "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/timeline",
                                                     "type": "application/json"
                                                 },
                                                 "api_subprofiles": {
-                                                    "href": "https://api.upsun.com/api/projects/abc123def456/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/subprofiles",
+                                                    "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/subprofiles",
                                                     "type": "application/json"
                                                 },
                                                 "api_profile": {
-                                                    "href": "https://api.upsun.com/api/projects/abc123def456/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/profile",
+                                                    "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/profile",
                                                     "type": "application/json"
                                                 },
                                                 "api_graph": {
-                                                    "href": "https://api.upsun.com/api/projects/abc123def456/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/graph",
+                                                    "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/graph",
                                                     "type": "application/json"
                                                 }
                                             }
@@ -13075,11 +13132,11 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "true",
                             "enum": [
                                 "true",
                                 "false"
-                            ],
-                            "example": "true"
+                            ]
                         }
                     },
                     {
@@ -13089,6 +13146,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "date",
                             "default": null,
                             "enum": [
                                 "date",
@@ -13099,8 +13157,7 @@
                                 "nw",
                                 "sql",
                                 "http"
-                            ],
-                            "example": "date"
+                            ]
                         }
                     },
                     {
@@ -13110,12 +13167,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "desc",
                             "default": null,
                             "enum": [
                                 "asc",
                                 "desc"
-                            ],
-                            "example": "desc"
+                            ]
                         }
                     },
                     {
@@ -13147,6 +13204,7 @@
                         "required": false,
                         "schema": {
                             "type": "integer",
+                            "example": 64,
                             "enum": [
                                 -1,
                                 0,
@@ -13155,8 +13213,42 @@
                                 64,
                                 128,
                                 192
-                            ],
-                            "example": 64
+                            ]
+                        }
+                    },
+                    {
+                        "name": "owner",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/components/schemas/FilterSelect"
+                        }
+                    },
+                    {
+                        "name": "languages",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/components/schemas/FilterSelect"
+                        }
+                    },
+                    {
+                        "name": "frameworks",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/components/schemas/FilterSelect"
+                        }
+                    },
+                    {
+                        "name": "items_per_page",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": null,
+                            "maximum": 100,
+                            "minimum": 1
                         }
                     }
                 ],
@@ -13350,12 +13442,12 @@
                                                             "type": {
                                                                 "description": "Context type",
                                                                 "type": "string",
+                                                                "example": "http-request",
                                                                 "enum": [
                                                                     "http-request",
                                                                     "cli",
                                                                     "no-op"
-                                                                ],
-                                                                "example": "http-request"
+                                                                ]
                                                             },
                                                             "args": {
                                                                 "description": "Command arguments (CLI profiles)",
@@ -13477,10 +13569,10 @@
                                                                     },
                                                                     "type": {
                                                                         "type": "string",
+                                                                        "example": "text/html",
                                                                         "enum": [
                                                                             "text/html"
-                                                                        ],
-                                                                        "example": "text/html"
+                                                                        ]
                                                                     }
                                                                 },
                                                                 "type": "object",
@@ -13496,14 +13588,14 @@
                                                                     "href": {
                                                                         "type": "string",
                                                                         "format": "uri",
-                                                                        "example": "https://api.upsun.com/api/projects/abc123/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/timeline"
+                                                                        "example": "https://api.upsun.com/projects/abc123/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/timeline"
                                                                     },
                                                                     "type": {
                                                                         "type": "string",
+                                                                        "example": "application/json",
                                                                         "enum": [
                                                                             "application/json"
-                                                                        ],
-                                                                        "example": "application/json"
+                                                                        ]
                                                                     }
                                                                 },
                                                                 "type": "object",
@@ -13519,14 +13611,14 @@
                                                                     "href": {
                                                                         "type": "string",
                                                                         "format": "uri",
-                                                                        "example": "https://api.upsun.com/api/projects/abc123/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/subprofiles"
+                                                                        "example": "https://api.upsun.com/projects/abc123/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/subprofiles"
                                                                     },
                                                                     "type": {
                                                                         "type": "string",
+                                                                        "example": "application/json",
                                                                         "enum": [
                                                                             "application/json"
-                                                                        ],
-                                                                        "example": "application/json"
+                                                                        ]
                                                                     }
                                                                 },
                                                                 "type": "object",
@@ -13542,14 +13634,14 @@
                                                                     "href": {
                                                                         "type": "string",
                                                                         "format": "uri",
-                                                                        "example": "https://api.upsun.com/api/projects/abc123/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/profile"
+                                                                        "example": "https://api.upsun.com/projects/abc123/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/profile"
                                                                     },
                                                                     "type": {
                                                                         "type": "string",
+                                                                        "example": "application/json",
                                                                         "enum": [
                                                                             "application/json"
-                                                                        ],
-                                                                        "example": "application/json"
+                                                                        ]
                                                                     }
                                                                 },
                                                                 "type": "object",
@@ -13565,14 +13657,14 @@
                                                                     "href": {
                                                                         "type": "string",
                                                                         "format": "uri",
-                                                                        "example": "https://api.upsun.com/api/projects/abc123/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/graph"
+                                                                        "example": "https://api.upsun.com/projects/abc123/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/graph"
                                                                     },
                                                                     "type": {
                                                                         "type": "string",
+                                                                        "example": "application/json",
                                                                         "enum": [
                                                                             "application/json"
-                                                                        ],
-                                                                        "example": "application/json"
+                                                                        ]
                                                                     }
                                                                 },
                                                                 "type": "object",
@@ -13681,19 +13773,19 @@
                                                     "type": "text/html"
                                                 },
                                                 "api_timeline": {
-                                                    "href": "https://api.upsun.com/api/projects/abc123def456/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/timeline",
+                                                    "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/timeline",
                                                     "type": "application/json"
                                                 },
                                                 "api_subprofiles": {
-                                                    "href": "https://api.upsun.com/api/projects/abc123def456/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/subprofiles",
+                                                    "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/subprofiles",
                                                     "type": "application/json"
                                                 },
                                                 "api_profile": {
-                                                    "href": "https://api.upsun.com/api/projects/abc123def456/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/profile",
+                                                    "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/profile",
                                                     "type": "application/json"
                                                 },
                                                 "api_graph": {
-                                                    "href": "https://api.upsun.com/api/projects/abc123def456/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/graph",
+                                                    "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/graph",
                                                     "type": "application/json"
                                                 }
                                             }
@@ -13839,10 +13931,10 @@
                         "required": false,
                         "schema": {
                             "type": "integer",
+                            "example": 20,
                             "default": null,
                             "maximum": 100,
-                            "minimum": 1,
-                            "example": 20
+                            "minimum": 1
                         }
                     }
                 ],
@@ -13892,12 +13984,12 @@
                                         "_environment_type": {
                                             "description": "Environment type",
                                             "type": "string",
+                                            "example": "production",
                                             "enum": [
                                                 "production",
                                                 "staging",
                                                 "development"
-                                            ],
-                                            "example": "production"
+                                            ]
                                         },
                                         "_branch_machine_name": {
                                             "description": "Branch machine name",
@@ -13967,6 +14059,7 @@
                                                             "method": {
                                                                 "description": "HTTP method",
                                                                 "type": "string",
+                                                                "example": "GET",
                                                                 "enum": [
                                                                     "GET",
                                                                     "POST",
@@ -13975,8 +14068,7 @@
                                                                     "DELETE",
                                                                     "HEAD",
                                                                     "OPTIONS"
-                                                                ],
-                                                                "example": "GET"
+                                                                ]
                                                             },
                                                             "impact": {
                                                                 "description": "Performance impact score (ms \u00d7 count)",
@@ -14380,12 +14472,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -14399,6 +14491,7 @@
                             "type": "array",
                             "items": {
                                 "type": "string",
+                                "example": "GET",
                                 "enum": [
                                     "GET",
                                     "POST",
@@ -14407,8 +14500,7 @@
                                     "DELETE",
                                     "HEAD",
                                     "OPTIONS"
-                                ],
-                                "example": "GET"
+                                ]
                             }
                         }
                     },
@@ -14419,12 +14511,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -14449,12 +14541,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -14468,14 +14560,14 @@
                             "type": "array",
                             "items": {
                                 "type": "string",
+                                "example": "2XX",
                                 "enum": [
                                     "1XX",
                                     "2XX",
                                     "3XX",
                                     "4XX",
                                     "5XX"
-                                ],
-                                "example": "2XX"
+                                ]
                             }
                         }
                     },
@@ -14486,12 +14578,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -14516,12 +14608,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -14535,6 +14627,7 @@
                             "type": "array",
                             "items": {
                                 "type": "string",
+                                "example": "0-50",
                                 "enum": [
                                     "0-50",
                                     "50-100",
@@ -14543,8 +14636,7 @@
                                     "400-800",
                                     "800-1600",
                                     "1600+"
-                                ],
-                                "example": "0-50"
+                                ]
                             }
                         }
                     },
@@ -14555,12 +14647,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     }
                 ],
@@ -14612,12 +14704,12 @@
                                         "_environment_type": {
                                             "description": "Environment type",
                                             "type": "string",
+                                            "example": "production",
                                             "enum": [
                                                 "production",
                                                 "staging",
                                                 "development"
-                                            ],
-                                            "example": "production"
+                                            ]
                                         },
                                         "_branch_machine_name": {
                                             "description": "Branch machine name",
@@ -14663,11 +14755,11 @@
                                         "_applications_mode": {
                                             "description": "Application filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_methods": {
                                             "description": "Applied method filter values",
@@ -14681,11 +14773,11 @@
                                         "_methods_mode": {
                                             "description": "Method filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_domains": {
                                             "description": "Applied domain filter values",
@@ -14699,11 +14791,11 @@
                                         "_domains_mode": {
                                             "description": "Domain filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_code_slots": {
                                             "description": "Applied code slot filter values",
@@ -14717,11 +14809,11 @@
                                         "_code_slots_mode": {
                                             "description": "Code slot filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_codes": {
                                             "description": "Applied HTTP status code filter values",
@@ -14735,11 +14827,11 @@
                                         "_codes_mode": {
                                             "description": "Code filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_request_duration_slots": {
                                             "description": "Applied request duration slot filter values",
@@ -14753,11 +14845,11 @@
                                         "_request_duration_slots_mode": {
                                             "description": "Request duration slot filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "breakdown": {
                                             "description": "IP addresses ranked by impact",
@@ -14770,10 +14862,10 @@
                                                 "kind": {
                                                     "description": "The kind of grouping",
                                                     "type": "string",
+                                                    "example": "ip",
                                                     "enum": [
                                                         "ip"
-                                                    ],
-                                                    "example": "ip"
+                                                    ]
                                                 },
                                                 "total": {
                                                     "description": "Total request count across all IPs",
@@ -15179,12 +15271,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -15198,6 +15290,7 @@
                             "type": "array",
                             "items": {
                                 "type": "string",
+                                "example": "GET",
                                 "enum": [
                                     "GET",
                                     "POST",
@@ -15206,8 +15299,7 @@
                                     "DELETE",
                                     "HEAD",
                                     "OPTIONS"
-                                ],
-                                "example": "GET"
+                                ]
                             }
                         }
                     },
@@ -15218,12 +15310,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -15248,12 +15340,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -15267,14 +15359,14 @@
                             "type": "array",
                             "items": {
                                 "type": "string",
+                                "example": "2XX",
                                 "enum": [
                                     "1XX",
                                     "2XX",
                                     "3XX",
                                     "4XX",
                                     "5XX"
-                                ],
-                                "example": "2XX"
+                                ]
                             }
                         }
                     },
@@ -15285,12 +15377,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -15315,12 +15407,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -15334,6 +15426,7 @@
                             "type": "array",
                             "items": {
                                 "type": "string",
+                                "example": "0-50",
                                 "enum": [
                                     "0-50",
                                     "50-100",
@@ -15342,8 +15435,7 @@
                                     "400-800",
                                     "800-1600",
                                     "1600+"
-                                ],
-                                "example": "0-50"
+                                ]
                             }
                         }
                     },
@@ -15354,12 +15446,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     }
                 ],
@@ -15411,12 +15503,12 @@
                                         "_environment_type": {
                                             "description": "Environment type",
                                             "type": "string",
+                                            "example": "production",
                                             "enum": [
                                                 "production",
                                                 "staging",
                                                 "development"
-                                            ],
-                                            "example": "production"
+                                            ]
                                         },
                                         "_branch_machine_name": {
                                             "description": "Branch machine name",
@@ -15462,11 +15554,11 @@
                                         "_applications_mode": {
                                             "description": "Application filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_methods": {
                                             "description": "Applied method filter values",
@@ -15480,11 +15572,11 @@
                                         "_methods_mode": {
                                             "description": "Method filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_domains": {
                                             "description": "Applied domain filter values",
@@ -15498,11 +15590,11 @@
                                         "_domains_mode": {
                                             "description": "Domain filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_code_slots": {
                                             "description": "Applied code slot filter values",
@@ -15516,11 +15608,11 @@
                                         "_code_slots_mode": {
                                             "description": "Code slot filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_codes": {
                                             "description": "Applied HTTP status code filter values",
@@ -15534,11 +15626,11 @@
                                         "_codes_mode": {
                                             "description": "Code filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_request_duration_slots": {
                                             "description": "Applied request duration slot filter values",
@@ -15552,11 +15644,11 @@
                                         "_request_duration_slots_mode": {
                                             "description": "Request duration slot filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "breakdown": {
                                             "description": "User Agents ranked by impact",
@@ -15569,10 +15661,10 @@
                                                 "kind": {
                                                     "description": "The kind of grouping",
                                                     "type": "string",
+                                                    "example": "user_agent",
                                                     "enum": [
                                                         "user_agent"
-                                                    ],
-                                                    "example": "user_agent"
+                                                    ]
                                                 },
                                                 "total": {
                                                     "description": "Total request count across all User Agents",
@@ -15954,12 +16046,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -15973,6 +16065,7 @@
                             "type": "array",
                             "items": {
                                 "type": "string",
+                                "example": "GET",
                                 "enum": [
                                     "GET",
                                     "POST",
@@ -15981,8 +16074,7 @@
                                     "DELETE",
                                     "HEAD",
                                     "OPTIONS"
-                                ],
-                                "example": "GET"
+                                ]
                             }
                         }
                     },
@@ -15993,12 +16085,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -16023,12 +16115,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -16042,14 +16134,14 @@
                             "type": "array",
                             "items": {
                                 "type": "string",
+                                "example": "2XX",
                                 "enum": [
                                     "1XX",
                                     "2XX",
                                     "3XX",
                                     "4XX",
                                     "5XX"
-                                ],
-                                "example": "2XX"
+                                ]
                             }
                         }
                     },
@@ -16060,12 +16152,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -16090,12 +16182,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -16109,6 +16201,7 @@
                             "type": "array",
                             "items": {
                                 "type": "string",
+                                "example": "0-50",
                                 "enum": [
                                     "0-50",
                                     "50-100",
@@ -16117,8 +16210,7 @@
                                     "400-800",
                                     "800-1600",
                                     "1600+"
-                                ],
-                                "example": "0-50"
+                                ]
                             }
                         }
                     },
@@ -16129,12 +16221,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     }
                 ],
@@ -16187,12 +16279,12 @@
                                         "_environment_type": {
                                             "description": "Environment type",
                                             "type": "string",
+                                            "example": "production",
                                             "enum": [
                                                 "production",
                                                 "staging",
                                                 "development"
-                                            ],
-                                            "example": "production"
+                                            ]
                                         },
                                         "_branch_machine_name": {
                                             "description": "Branch machine name",
@@ -16238,11 +16330,11 @@
                                         "_applications_mode": {
                                             "description": "Application filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_methods": {
                                             "description": "Applied method filter values",
@@ -16256,11 +16348,11 @@
                                         "_methods_mode": {
                                             "description": "Method filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_domains": {
                                             "description": "Applied domain filter values",
@@ -16274,11 +16366,11 @@
                                         "_domains_mode": {
                                             "description": "Domain filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_code_slots": {
                                             "description": "Applied code slot filter values",
@@ -16292,11 +16384,11 @@
                                         "_code_slots_mode": {
                                             "description": "Code slot filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_codes": {
                                             "description": "Applied HTTP status code filter values",
@@ -16310,11 +16402,11 @@
                                         "_codes_mode": {
                                             "description": "Code filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_request_duration_slots": {
                                             "description": "Applied request duration slot filter values",
@@ -16328,11 +16420,11 @@
                                         "_request_duration_slots_mode": {
                                             "description": "Request duration slot filter mode (1=additive, -1=subtractive)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "1",
                                                 "-1"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "breakdown": {
                                             "description": "URLs ranked by impact",
@@ -16345,10 +16437,10 @@
                                                 "kind": {
                                                     "description": "The kind of grouping",
                                                     "type": "string",
+                                                    "example": "url",
                                                     "enum": [
                                                         "url"
-                                                    ],
-                                                    "example": "url"
+                                                    ]
                                                 },
                                                 "total": {
                                                     "description": "Total request count across all URLs",
@@ -16378,6 +16470,7 @@
                                                             "method": {
                                                                 "description": "HTTP method",
                                                                 "type": "string",
+                                                                "example": "GET",
                                                                 "enum": [
                                                                     "GET",
                                                                     "POST",
@@ -16386,8 +16479,7 @@
                                                                     "DELETE",
                                                                     "HEAD",
                                                                     "OPTIONS"
-                                                                ],
-                                                                "example": "GET"
+                                                                ]
                                                             },
                                                             "impact": {
                                                                 "description": "Performance impact score (ms x count)",
@@ -16872,12 +16964,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     }
                 ],
@@ -18241,12 +18333,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     }
                 ],
@@ -19687,12 +19779,12 @@
                                             "nullable": true,
                                             "additionalProperties": {
                                                 "type": "string",
+                                                "example": "web",
                                                 "enum": [
                                                     "web",
                                                     "unified",
                                                     ""
-                                                ],
-                                                "example": "web"
+                                                ]
                                             }
                                         },
                                         "data": {
@@ -20635,11 +20727,11 @@
                             "type": "array",
                             "items": {
                                 "type": "string",
+                                "example": "web",
                                 "enum": [
                                     "web",
                                     "cli"
-                                ],
-                                "example": "web"
+                                ]
                             }
                         }
                     },
@@ -20650,12 +20742,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -20739,11 +20831,11 @@
                                         "_contexts_mode": {
                                             "description": "Context filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_distribution_cost": {
                                             "description": "Applied distribution cost dimension (wt=wall time, pmu=peak memory usage)",
@@ -21062,11 +21154,11 @@
                             "type": "array",
                             "items": {
                                 "type": "string",
+                                "example": "web",
                                 "enum": [
                                     "web",
                                     "cli"
-                                ],
-                                "example": "web"
+                                ]
                             }
                         }
                     },
@@ -21077,12 +21169,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -21210,11 +21302,11 @@
                                         "_contexts_mode": {
                                             "description": "Context filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_distribution_cost": {
                                             "description": "Applied distribution cost dimension (wt=wall time, pmu=peak memory usage)",
@@ -21631,11 +21723,11 @@
                             "type": "array",
                             "items": {
                                 "type": "string",
+                                "example": "web",
                                 "enum": [
                                     "web",
                                     "cli"
-                                ],
-                                "example": "web"
+                                ]
                             }
                         }
                     },
@@ -21646,12 +21738,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -21676,12 +21768,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -21706,12 +21798,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -21736,12 +21828,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -21766,12 +21858,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -21796,12 +21888,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -21826,12 +21918,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -21856,12 +21948,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -21886,12 +21978,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -21916,12 +22008,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -21946,12 +22038,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -21976,12 +22068,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -22069,11 +22161,11 @@
                                         "_contexts_mode": {
                                             "description": "Context filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_transactions": {
                                             "description": "Applied transaction filter values",
@@ -22087,11 +22179,11 @@
                                         "_transactions_mode": {
                                             "description": "Transaction filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_wt_slot": {
                                             "description": "Applied wall-time slot filter values",
@@ -22105,11 +22197,11 @@
                                         "_wt_slot_mode": {
                                             "description": "Wall-time slot filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_pmu_slot": {
                                             "description": "Applied peak memory slot filter values",
@@ -22123,11 +22215,11 @@
                                         "_pmu_slot_mode": {
                                             "description": "Peak memory slot filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_http_status_codes": {
                                             "description": "Applied HTTP status code filter values",
@@ -22141,11 +22233,11 @@
                                         "_http_status_codes_mode": {
                                             "description": "HTTP status code filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_http_hosts": {
                                             "description": "Applied HTTP host filter values",
@@ -22159,11 +22251,11 @@
                                         "_http_hosts_mode": {
                                             "description": "HTTP host filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_hosts": {
                                             "description": "Applied host filter values",
@@ -22177,11 +22269,11 @@
                                         "_hosts_mode": {
                                             "description": "Host filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_frameworks": {
                                             "description": "Applied framework filter values",
@@ -22195,11 +22287,11 @@
                                         "_frameworks_mode": {
                                             "description": "Framework filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_languages": {
                                             "description": "Applied language filter values",
@@ -22213,11 +22305,11 @@
                                         "_languages_mode": {
                                             "description": "Language filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_methods": {
                                             "description": "Applied method filter values",
@@ -22231,11 +22323,11 @@
                                         "_methods_mode": {
                                             "description": "Method filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_runtimes": {
                                             "description": "Applied runtime filter values",
@@ -22249,11 +22341,11 @@
                                         "_runtimes_mode": {
                                             "description": "Runtime filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_oss": {
                                             "description": "Applied OS filter values",
@@ -22267,11 +22359,11 @@
                                         "_oss_mode": {
                                             "description": "OS filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_distribution_cost": {
                                             "description": "Applied distribution cost dimension (wt=wall time, pmu=peak memory usage)",
@@ -22284,16 +22376,17 @@
                                         "_breakdown_dimension": {
                                             "description": "Applied dimension for transaction breakdown calculations",
                                             "type": "string",
+                                            "nullable": false,
                                             "enum": [
                                                 "wt",
                                                 "pmu",
                                                 "stdout"
-                                            ],
-                                            "nullable": false
+                                            ]
                                         },
                                         "_sort": {
                                             "description": "Applied sort order for the transaction breakdown",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "impact",
                                                 "total_requests",
@@ -22302,8 +22395,7 @@
                                                 "avg_stdout",
                                                 "total_errors",
                                                 "wt_96th_percentile"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_breakdown_limit": {
                                             "description": "Maximum number of transactions returned",
@@ -22432,7 +22524,7 @@
                                                                             "href": {
                                                                                 "type": "string",
                                                                                 "format": "uri",
-                                                                                "example": "https://api.upsun.com/api/projects/abc123/environments/main/observability/server/top-spans?transactions%5B0%5D=App%5CController%3A%3Alist&from=1771348620&to=1771435020"
+                                                                                "example": "https://api.upsun.com/projects/abc123/environments/main/observability/server/top-spans?transactions%5B0%5D=App%5CController%3A%3Alist&from=1771348620&to=1771435020"
                                                                             }
                                                                         },
                                                                         "type": "object",
@@ -22447,7 +22539,7 @@
                                                                             "href": {
                                                                                 "type": "string",
                                                                                 "format": "uri",
-                                                                                "example": "https://api.upsun.com/api/projects/abc123/environments/main/observability/profiles/recommendations?transaction=App%5CController%3A%3Alist"
+                                                                                "example": "https://api.upsun.com/projects/abc123/environments/main/observability/profiles/recommendations?transaction=App%5CController%3A%3Alist"
                                                                             }
                                                                         },
                                                                         "type": "object",
@@ -22462,7 +22554,7 @@
                                                                             "href": {
                                                                                 "type": "string",
                                                                                 "format": "uri",
-                                                                                "example": "https://api.upsun.com/api/projects/abc123/environments/main/observability/profiles?transaction=App%5CController%3A%3Alist"
+                                                                                "example": "https://api.upsun.com/projects/abc123/environments/main/observability/profiles?transaction=App%5CController%3A%3Alist"
                                                                             }
                                                                         },
                                                                         "type": "object",
@@ -22586,13 +22678,13 @@
                                                 "top_hit": true,
                                                 "_links": {
                                                     "top_spans": {
-                                                        "href": "https://api.upsun.com/api/projects/abc123def456/environments/main/observability/server/top-spans?transactions%5B0%5D=App%5CController%5CProductController%3A%3Alist&from=1771348620&to=1771435020"
+                                                        "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/server/top-spans?transactions%5B0%5D=App%5CController%5CProductController%3A%3Alist&from=1771348620&to=1771435020"
                                                     },
                                                     "recommendations": {
-                                                        "href": "https://api.upsun.com/api/projects/abc123def456/environments/main/observability/profiles/recommendations?transaction=App%5CController%5CProductController%3A%3Alist"
+                                                        "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles/recommendations?transaction=App%5CController%5CProductController%3A%3Alist"
                                                     },
                                                     "profiles": {
-                                                        "href": "https://api.upsun.com/api/projects/abc123def456/environments/main/observability/profiles?transaction=App%5CController%5CProductController%3A%3Alist"
+                                                        "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles?transaction=App%5CController%5CProductController%3A%3Alist"
                                                     }
                                                 }
                                             },
@@ -22609,13 +22701,13 @@
                                                 "top_hit": true,
                                                 "_links": {
                                                     "top_spans": {
-                                                        "href": "https://api.upsun.com/api/projects/abc123def456/environments/main/observability/server/top-spans?transactions%5B0%5D=App%5CController%5CCartController%3A%3Acheckout&from=1771348620&to=1771435020"
+                                                        "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/server/top-spans?transactions%5B0%5D=App%5CController%5CCartController%3A%3Acheckout&from=1771348620&to=1771435020"
                                                     },
                                                     "recommendations": {
-                                                        "href": "https://api.upsun.com/api/projects/abc123def456/environments/main/observability/profiles/recommendations?transaction=App%5CController%5CCartController%3A%3Acheckout"
+                                                        "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles/recommendations?transaction=App%5CController%5CCartController%3A%3Acheckout"
                                                     },
                                                     "profiles": {
-                                                        "href": "https://api.upsun.com/api/projects/abc123def456/environments/main/observability/profiles?transaction=App%5CController%5CCartController%3A%3Acheckout"
+                                                        "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles?transaction=App%5CController%5CCartController%3A%3Acheckout"
                                                     }
                                                 }
                                             },
@@ -22632,13 +22724,13 @@
                                                 "top_hit": false,
                                                 "_links": {
                                                     "top_spans": {
-                                                        "href": "https://api.upsun.com/api/projects/abc123def456/environments/main/observability/server/top-spans?transactions%5B0%5D=App%5CController%5CUserController%3A%3Aprofile&from=1771348620&to=1771435020"
+                                                        "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/server/top-spans?transactions%5B0%5D=App%5CController%5CUserController%3A%3Aprofile&from=1771348620&to=1771435020"
                                                     },
                                                     "recommendations": {
-                                                        "href": "https://api.upsun.com/api/projects/abc123def456/environments/main/observability/profiles/recommendations?transaction=App%5CController%5CUserController%3A%3Aprofile"
+                                                        "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles/recommendations?transaction=App%5CController%5CUserController%3A%3Aprofile"
                                                     },
                                                     "profiles": {
-                                                        "href": "https://api.upsun.com/api/projects/abc123def456/environments/main/observability/profiles?transaction=App%5CController%5CUserController%3A%3Aprofile"
+                                                        "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles?transaction=App%5CController%5CUserController%3A%3Aprofile"
                                                     }
                                                 }
                                             }
@@ -22874,11 +22966,11 @@
                             "type": "array",
                             "items": {
                                 "type": "string",
+                                "example": "web",
                                 "enum": [
                                     "web",
                                     "cli"
-                                ],
-                                "example": "web"
+                                ]
                             }
                         }
                     },
@@ -22889,12 +22981,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -22919,12 +23011,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -22949,12 +23041,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -22979,12 +23071,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -23009,12 +23101,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -23039,12 +23131,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -23069,12 +23161,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -23099,12 +23191,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -23129,12 +23221,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -23159,12 +23251,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -23189,12 +23281,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -23219,12 +23311,12 @@
                         "required": false,
                         "schema": {
                             "type": "string",
+                            "example": "1",
                             "default": null,
                             "enum": [
                                 "1",
                                 "-1"
-                            ],
-                            "example": "1"
+                            ]
                         }
                     },
                     {
@@ -23309,11 +23401,11 @@
                                         "_contexts_mode": {
                                             "description": "Context filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_transactions": {
                                             "description": "Applied transaction filter values",
@@ -23327,11 +23419,11 @@
                                         "_transactions_mode": {
                                             "description": "Transaction filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_wt_slot": {
                                             "description": "Applied wall-time slot filter values",
@@ -23345,11 +23437,11 @@
                                         "_wt_slot_mode": {
                                             "description": "Wall-time slot filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_pmu_slot": {
                                             "description": "Applied peak memory slot filter values",
@@ -23363,11 +23455,11 @@
                                         "_pmu_slot_mode": {
                                             "description": "Peak memory slot filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_http_status_codes": {
                                             "description": "Applied HTTP status code filter values",
@@ -23381,11 +23473,11 @@
                                         "_http_status_codes_mode": {
                                             "description": "HTTP status code filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_http_hosts": {
                                             "description": "Applied HTTP host filter values",
@@ -23399,11 +23491,11 @@
                                         "_http_hosts_mode": {
                                             "description": "HTTP host filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_hosts": {
                                             "description": "Applied host filter values",
@@ -23417,11 +23509,11 @@
                                         "_hosts_mode": {
                                             "description": "Host filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_frameworks": {
                                             "description": "Applied framework filter values",
@@ -23435,11 +23527,11 @@
                                         "_frameworks_mode": {
                                             "description": "Framework filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_languages": {
                                             "description": "Applied language filter values",
@@ -23453,11 +23545,11 @@
                                         "_languages_mode": {
                                             "description": "Language filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_methods": {
                                             "description": "Applied method filter values",
@@ -23471,11 +23563,11 @@
                                         "_methods_mode": {
                                             "description": "Method filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_runtimes": {
                                             "description": "Applied runtime filter values",
@@ -23489,11 +23581,11 @@
                                         "_runtimes_mode": {
                                             "description": "Runtime filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_oss": {
                                             "description": "Applied OS filter values",
@@ -23507,11 +23599,11 @@
                                         "_oss_mode": {
                                             "description": "OS filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "additive",
                                                 "subtractive"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "_distribution_cost": {
                                             "description": "Applied distribution cost dimension (wt=wall time, pmu=peak memory usage)",
@@ -23524,6 +23616,7 @@
                                         "_sort": {
                                             "description": "Applied sort field for top spans",
                                             "type": "string",
+                                            "nullable": true,
                                             "enum": [
                                                 "percentage",
                                                 "p_96",
@@ -23531,8 +23624,7 @@
                                                 "wt",
                                                 "exec-time",
                                                 "impact"
-                                            ],
-                                            "nullable": true
+                                            ]
                                         },
                                         "top_spans": {
                                             "description": "Top spans aggregated data",
@@ -23936,21 +24028,21 @@
                                         "environment_type": {
                                             "description": "Environment type classification",
                                             "type": "string",
+                                            "example": "production",
                                             "enum": [
                                                 "production",
                                                 "staging",
                                                 "development"
-                                            ],
-                                            "example": "production"
+                                            ]
                                         },
                                         "vendor": {
                                             "description": "Platform vendor identifier",
                                             "type": "string",
+                                            "example": "upsun",
                                             "enum": [
                                                 "upsun",
                                                 "platformsh"
-                                            ],
-                                            "example": "upsun"
+                                            ]
                                         },
                                         "psh_user_identifier": {
                                             "description": "Authenticated user identifier",
@@ -24207,7 +24299,7 @@
                                                         "href": {
                                                             "type": "string",
                                                             "format": "uri",
-                                                            "example": "https://conprof.blackfire.io/projects/abc123def456/environments/main/continuous-profiling"
+                                                            "example": "https://api.upsun.com/projects/abc123def456/environments/main/continuous-profiling"
                                                         }
                                                     },
                                                     "type": "object",
@@ -24221,7 +24313,7 @@
                                                         "href": {
                                                             "type": "string",
                                                             "format": "uri",
-                                                            "example": "https://conprof.blackfire.io/projects/abc123def456/environments/main/continuous-profiling/app/myapp/filter"
+                                                            "example": "https://api.upsun.com/projects/abc123def456/environments/main/continuous-profiling/app/myapp/filter"
                                                         }
                                                     },
                                                     "type": "object",
@@ -24235,7 +24327,7 @@
                                                         "href": {
                                                             "type": "string",
                                                             "format": "uri",
-                                                            "example": "https://conprof.blackfire.io/projects/abc123def456/environments/main/continuous-profiling/app/myapp"
+                                                            "example": "https://api.upsun.com/projects/abc123def456/environments/main/continuous-profiling/app/myapp"
                                                         }
                                                     },
                                                     "type": "object",
@@ -24249,7 +24341,7 @@
                                                         "href": {
                                                             "type": "string",
                                                             "format": "uri",
-                                                            "example": "https://conprof.blackfire.io/projects/abc123def456/environments/main/continuous-profiling/app/myapp/merge"
+                                                            "example": "https://api.upsun.com/projects/abc123def456/environments/main/continuous-profiling/app/myapp/merge"
                                                         }
                                                     },
                                                     "type": "object",
@@ -28183,143 +28275,6 @@
                 ]
             }
         },
-        "/billing/profiles/{billing_profile_id}/organizations": {
-            "get": {
-                "summary": "Billing profile organizations",
-                "description": "Retrieves organizations that belong to the specified billing profile.",
-                "operationId": "list-billing-profile-orgs",
-                "tags": [
-                    "Billing"
-                ],
-                "parameters": [
-                    {
-                        "$ref": "#/components/parameters/BillingProfileID"
-                    },
-                    {
-                        "in": "query",
-                        "name": "filter[type]",
-                        "description": "Allows filtering by `type` using one or more operators.",
-                        "style": "deepObject",
-                        "explode": true,
-                        "schema": {
-                            "$ref": "#/components/schemas/StringFilter"
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "filter[status]",
-                        "description": "Allows filtering by `status` using one or more operators.<br>\nDefaults to excluding deleted organizations.\n",
-                        "style": "deepObject",
-                        "explode": true,
-                        "schema": {
-                            "$ref": "#/components/schemas/StringFilter"
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "filter[updated_at]",
-                        "description": "Allows filtering by `updated_at` using one or more operators.",
-                        "style": "deepObject",
-                        "explode": true,
-                        "schema": {
-                            "$ref": "#/components/schemas/DateTimeFilter"
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "page[size]",
-                        "description": "Determines the number of items to show.",
-                        "schema": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 100,
-                            "default": null
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "page[before]",
-                        "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "page[after]",
-                        "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "sort",
-                        "description": "Allows sorting by a single field.<br>\nUse a dash (\"-\") to sort descending.<br>\nSupported fields: `name`, `label`, `created_at`, `updated_at`.\n",
-                        "schema": {
-                            "type": "string",
-                            "example": "-updated_at"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "items": {
-                                            "type": "array",
-                                            "items": {
-                                                "$ref": "#/components/schemas/Organization"
-                                            }
-                                        },
-                                        "_links": {
-                                            "$ref": "#/components/schemas/ListLinks"
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "400": {
-                        "description": "Bad Request",
-                        "content": {
-                            "application/problem+json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Error"
-                                }
-                            }
-                        }
-                    },
-                    "403": {
-                        "description": "Forbidden",
-                        "content": {
-                            "application/problem+json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Error"
-                                }
-                            }
-                        }
-                    }
-                },
-                "x-property-id-kebab": "list-billing-profile-orgs",
-                "x-tag-id-kebab": "Billing",
-                "x-return-types-displayReturn": false,
-                "x-return-types": [
-                    "object"
-                ],
-                "x-phpdoc": {
-                    "return": "object"
-                },
-                "x-returnable": true,
-                "x-description": [
-                    "Retrieves organizations that belong to the specified billing profile."
-                ]
-            }
-        },
         "/organizations/{organization_id}/projects": {
             "get": {
                 "summary": "List projects",
@@ -30481,196 +30436,6 @@
                 "x-returnable": false,
                 "x-description": [
                     "Removes the team from the current project."
-                ]
-            }
-        },
-        "/billing/profiles/{billing_profile_id}/projects": {
-            "get": {
-                "summary": "List projects",
-                "description": "Retrieves a list of projects for the specified billing profile.",
-                "operationId": "list-billing-profile-projects",
-                "tags": [
-                    "Billing Profile Projects"
-                ],
-                "parameters": [
-                    {
-                        "$ref": "#/components/parameters/BillingProfileID"
-                    },
-                    {
-                        "in": "query",
-                        "name": "filter[id]",
-                        "description": "Allows filtering by `id` using one or more operators.",
-                        "style": "deepObject",
-                        "explode": true,
-                        "schema": {
-                            "$ref": "#/components/schemas/StringFilter"
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "filter[title]",
-                        "description": "Allows filtering by `title` using one or more operators.",
-                        "style": "deepObject",
-                        "explode": true,
-                        "schema": {
-                            "$ref": "#/components/schemas/StringFilter"
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "filter[subscription_id]",
-                        "description": "Allows filtering by `subscription_id` using one or more operators.",
-                        "style": "deepObject",
-                        "explode": true,
-                        "schema": {
-                            "$ref": "#/components/schemas/StringFilter"
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "filter[region]",
-                        "description": "Allows filtering by `region` using one or more operators.",
-                        "style": "deepObject",
-                        "explode": true,
-                        "schema": {
-                            "$ref": "#/components/schemas/StringFilter"
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "filter[type]",
-                        "description": "Allows filtering by `type` using one or more operators.",
-                        "style": "deepObject",
-                        "explode": true,
-                        "schema": {
-                            "$ref": "#/components/schemas/StringFilter"
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "filter[plan]",
-                        "description": "Allows filtering by `plan` using one or more operators.",
-                        "style": "deepObject",
-                        "explode": true,
-                        "schema": {
-                            "$ref": "#/components/schemas/StringFilter"
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "filter[status]",
-                        "description": "Allows filtering by `status` using one or more operators.",
-                        "style": "deepObject",
-                        "explode": true,
-                        "schema": {
-                            "$ref": "#/components/schemas/StringFilter"
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "filter[updated_at]",
-                        "description": "Allows filtering by `updated_at` using one or more operators.",
-                        "style": "deepObject",
-                        "explode": true,
-                        "schema": {
-                            "$ref": "#/components/schemas/DateTimeFilter"
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "filter[created_at]",
-                        "description": "Allows filtering by `created_at` using one or more operators.",
-                        "style": "deepObject",
-                        "explode": true,
-                        "schema": {
-                            "$ref": "#/components/schemas/DateTimeFilter"
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "page[size]",
-                        "description": "Determines the number of items to show.",
-                        "schema": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 100,
-                            "default": null
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "page[before]",
-                        "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "page[after]",
-                        "description": "Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "sort",
-                        "description": "Allows sorting by a single field.<br>\nUse a dash (\"-\") to sort descending.<br>\nSupported fields: `id`, `region`, `title`, `type`, `plan`, `status`, `created_at`, `updated_at`.\n",
-                        "schema": {
-                            "type": "string",
-                            "example": "-updated_at"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "count": {
-                                            "type": "integer",
-                                            "description": "Total number of items across pages."
-                                        },
-                                        "items": {
-                                            "type": "array",
-                                            "items": {
-                                                "$ref": "#/components/schemas/OrganizationProject"
-                                            }
-                                        },
-                                        "facets": {
-                                            "$ref": "#/components/schemas/ProjectFacets"
-                                        },
-                                        "_links": {
-                                            "$ref": "#/components/schemas/ListLinks"
-                                        }
-                                    },
-                                    "additionalProperties": false
-                                }
-                            }
-                        }
-                    },
-                    "400": {
-                        "$ref": "#/components/responses/BadRequest"
-                    },
-                    "403": {
-                        "$ref": "#/components/responses/Forbidden"
-                    },
-                    "404": {
-                        "$ref": "#/components/responses/NotFound"
-                    }
-                },
-                "x-property-id-kebab": "list-billing-profile-projects",
-                "x-tag-id-kebab": "Billing-Profile-Projects",
-                "x-return-types-displayReturn": false,
-                "x-return-types": {},
-                "x-phpdoc": {},
-                "x-returnable": true,
-                "x-description": [
-                    "Retrieves a list of projects for the specified billing profile."
                 ]
             }
         },
@@ -36408,8 +36173,8 @@
                         "enum": [
                             "dedicated",
                             "enterprise",
-                            "kubernetes",
-                            "local"
+                            "foundation",
+                            "kubernetes"
                         ],
                         "title": "Deployment target type",
                         "description": "The type of the deployment target",
@@ -36597,8 +36362,8 @@
                         "enum": [
                             "dedicated",
                             "enterprise",
-                            "kubernetes",
-                            "local"
+                            "foundation",
+                            "kubernetes"
                         ],
                         "title": "Deployment target type",
                         "description": "The type of the deployment target",
@@ -36643,8 +36408,8 @@
                         "enum": [
                             "dedicated",
                             "enterprise",
-                            "kubernetes",
-                            "local"
+                            "foundation",
+                            "kubernetes"
                         ],
                         "title": "Deployment target type",
                         "description": "The type of the deployment target",
@@ -38324,7 +38089,7 @@
                                                     "scripts": {
                                                         "type": "boolean",
                                                         "title": "Scripts",
-                                                        "description": "Whether to execute scripts in this location (for script based runtimes)."
+                                                        "description": "Whether to execute scripts in this location (for script based runtimes). The default value depends on the project setting `locations_script_default`"
                                                     },
                                                     "index": {
                                                         "type": "array",
@@ -38772,6 +38537,27 @@
                                     "title": "Composable images",
                                     "description": ""
                                 },
+                                "image": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "nullable": true,
+                                            "title": "Image name",
+                                            "description": "Image name with version to be deployed"
+                                        },
+                                        "buildfile": {
+                                            "type": "string",
+                                            "nullable": true,
+                                            "title": "Dockerfile",
+                                            "description": "Path to the dockerfile to use to build the container from"
+                                        }
+                                    },
+                                    "additionalProperties": false,
+                                    "nullable": true,
+                                    "title": "OCI image",
+                                    "description": "OCI image configuration"
+                                },
                                 "is_across_submodule": {
                                     "type": "boolean",
                                     "title": "Is Across Submodule",
@@ -38826,6 +38612,7 @@
                                 "build",
                                 "dependencies",
                                 "stack",
+                                "image",
                                 "is_across_submodule",
                                 "instance_count",
                                 "config_id",
@@ -39396,6 +39183,27 @@
                                     "title": "Composable images",
                                     "description": ""
                                 },
+                                "image": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "nullable": true,
+                                            "title": "Image name",
+                                            "description": "Image name with version to be deployed"
+                                        },
+                                        "buildfile": {
+                                            "type": "string",
+                                            "nullable": true,
+                                            "title": "Dockerfile",
+                                            "description": "Path to the dockerfile to use to build the container from"
+                                        }
+                                    },
+                                    "additionalProperties": false,
+                                    "nullable": true,
+                                    "title": "OCI image",
+                                    "description": "OCI image configuration"
+                                },
                                 "instance_count": {
                                     "type": "integer",
                                     "nullable": true,
@@ -39436,6 +39244,7 @@
                                 "worker",
                                 "app",
                                 "stack",
+                                "image",
                                 "instance_count",
                                 "slug_id",
                                 "supports_horizontal_scaling"
@@ -39495,10 +39304,10 @@
                         "$ref": "#/components/schemas/EnterpriseDeploymentTarget"
                     },
                     {
-                        "$ref": "#/components/schemas/KubernetesDeploymentTargetStorage"
+                        "$ref": "#/components/schemas/FoundationDeploymentTarget"
                     },
                     {
-                        "$ref": "#/components/schemas/FoundationDeploymentTarget"
+                        "$ref": "#/components/schemas/KubernetesDeploymentTargetStorage"
                     }
                 ],
                 "x-isOneOf": true,
@@ -39532,10 +39341,10 @@
                         "$ref": "#/components/schemas/EnterpriseDeploymentTargetCreateInput"
                     },
                     {
-                        "$ref": "#/components/schemas/KubernetesDeploymentTargetStorageCreateInput"
+                        "$ref": "#/components/schemas/FoundationDeploymentTargetCreateInput"
                     },
                     {
-                        "$ref": "#/components/schemas/FoundationDeploymentTargetCreateInput"
+                        "$ref": "#/components/schemas/KubernetesDeploymentTargetStorageCreateInput"
                     }
                 ],
                 "x-isOneOf": true,
@@ -39563,10 +39372,10 @@
                         "$ref": "#/components/schemas/EnterpriseDeploymentTargetPatch"
                     },
                     {
-                        "$ref": "#/components/schemas/KubernetesDeploymentTargetStoragePatch"
+                        "$ref": "#/components/schemas/FoundationDeploymentTargetPatch"
                     },
                     {
-                        "$ref": "#/components/schemas/FoundationDeploymentTargetPatch"
+                        "$ref": "#/components/schemas/KubernetesDeploymentTargetStoragePatch"
                     }
                 ],
                 "x-isOneOf": true,
@@ -40001,8 +39810,8 @@
                         "enum": [
                             "dedicated",
                             "enterprise",
-                            "kubernetes",
-                            "local"
+                            "foundation",
+                            "kubernetes"
                         ],
                         "title": "Deployment target type",
                         "description": "The type of the deployment target",
@@ -40128,8 +39937,8 @@
                         "enum": [
                             "dedicated",
                             "enterprise",
-                            "kubernetes",
-                            "local"
+                            "foundation",
+                            "kubernetes"
                         ],
                         "title": "Deployment target type",
                         "description": "The type of the deployment target",
@@ -40197,8 +40006,8 @@
                         "enum": [
                             "dedicated",
                             "enterprise",
-                            "kubernetes",
-                            "local"
+                            "foundation",
+                            "kubernetes"
                         ],
                         "title": "Deployment target type",
                         "description": "The type of the deployment target",
@@ -42582,8 +42391,8 @@
                         "enum": [
                             "dedicated",
                             "enterprise",
-                            "kubernetes",
-                            "local"
+                            "foundation",
+                            "kubernetes"
                         ],
                         "title": "Deployment target type",
                         "description": "The type of the deployment target",
@@ -42688,8 +42497,8 @@
                         "enum": [
                             "dedicated",
                             "enterprise",
-                            "kubernetes",
-                            "local"
+                            "foundation",
+                            "kubernetes"
                         ],
                         "title": "Deployment target type",
                         "description": "The type of the deployment target",
@@ -42780,8 +42589,8 @@
                         "enum": [
                             "dedicated",
                             "enterprise",
-                            "kubernetes",
-                            "local"
+                            "foundation",
+                            "kubernetes"
                         ],
                         "title": "Deployment target type",
                         "description": "The type of the deployment target",
@@ -44375,8 +44184,8 @@
                         "enum": [
                             "dedicated",
                             "enterprise",
-                            "kubernetes",
-                            "local"
+                            "foundation",
+                            "kubernetes"
                         ],
                         "title": "Deployment target type",
                         "description": "The type of the deployment target",
@@ -44396,6 +44205,7 @@
                     },
                     "k8s_config": {
                         "type": "string",
+                        "nullable": true,
                         "title": "K8S config",
                         "description": "K8S config",
                         "x-isDateTime": false,
@@ -44444,8 +44254,8 @@
                         "enum": [
                             "dedicated",
                             "enterprise",
-                            "kubernetes",
-                            "local"
+                            "foundation",
+                            "kubernetes"
                         ],
                         "title": "Deployment target type",
                         "description": "The type of the deployment target",
@@ -44481,8 +44291,8 @@
                         "enum": [
                             "dedicated",
                             "enterprise",
-                            "kubernetes",
-                            "local"
+                            "foundation",
+                            "kubernetes"
                         ],
                         "title": "Deployment target type",
                         "description": "The type of the deployment target",
@@ -47568,6 +47378,18 @@
                         "x-description": [
                             "Save vendors.json files locally after builds for SBOM generation."
                         ]
+                    },
+                    "locations_script_default": {
+                        "type": "boolean",
+                        "title": "Set the default for script execution in web locations",
+                        "description": "",
+                        "x-isDateTime": false
+                    },
+                    "support_oci_images": {
+                        "type": "boolean",
+                        "title": "Support OCI images",
+                        "description": "",
+                        "x-isDateTime": false
                     }
                 },
                 "required": [
@@ -47645,7 +47467,9 @@
                     "allow_burst",
                     "router_resources",
                     "allow_scaling_to_zero",
-                    "save_applications_vendors"
+                    "save_applications_vendors",
+                    "locations_script_default",
+                    "support_oci_images"
                 ],
                 "additionalProperties": false
             },
@@ -52371,6 +52195,42 @@
                     "Scaling triggers settings"
                 ]
             },
+            "Mode": {
+                "type": "string",
+                "enum": [
+                    "1",
+                    "-1"
+                ]
+            },
+            "FilterSelect": {
+                "properties": {
+                    "mode": {
+                        "$ref": "#/components/schemas/Mode"
+                    },
+                    "values": {
+                        "oneOf": [
+                            {
+                                "type": "array",
+                                "items": {
+                                    "nullable": true,
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "object",
+                                "additionalProperties": {
+                                    "nullable": true,
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "default": null,
+                        "x-isDateTime": false,
+                        "x-isOneOf": true
+                    }
+                },
+                "type": "object"
+            },
             "Invoice": {
                 "type": "object",
                 "description": "The invoice object.",
@@ -52630,6 +52490,37 @@
                         "x-isDateTime": false,
                         "x-description": [
                             "The security contact email address for the organization."
+                        ]
+                    },
+                    "ai_agent_settings": {
+                        "type": "object",
+                        "description": "AI agent consent settings for the organization.",
+                        "properties": {
+                            "can_enable": {
+                                "type": "boolean",
+                                "description": "Master switch for AI agent settings. Must be true to enable individual agents.",
+                                "x-description": [
+                                    "Master switch for AI agent settings. Must be true to enable individual agents."
+                                ]
+                            },
+                            "performance_agent_enabled": {
+                                "type": "boolean",
+                                "description": "Whether the performance agent is enabled.",
+                                "x-description": [
+                                    "Whether the performance agent is enabled."
+                                ]
+                            },
+                            "log_analyzer_agent_enabled": {
+                                "type": "boolean",
+                                "description": "Whether the log analyzer agent is enabled.",
+                                "x-description": [
+                                    "Whether the log analyzer agent is enabled."
+                                ]
+                            }
+                        },
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "AI agent consent settings for the organization."
                         ]
                     },
                     "status": {
@@ -56711,19 +56602,6 @@
                 "x-description": [
                     "The ID of the organization. Prefix with name= to retrieve the organization by",
                     "name instead."
-                ]
-            },
-            "BillingProfileID": {
-                "in": "path",
-                "name": "billing_profile_id",
-                "description": "The ID of the billing profile.",
-                "required": true,
-                "schema": {
-                    "type": "string",
-                    "format": "ulid"
-                },
-                "x-description": [
-                    "The ID of the billing profile."
                 ]
             },
             "OrderID": {
