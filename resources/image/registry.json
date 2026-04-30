@@ -5356,9 +5356,9 @@
           "min_disk_size": 512,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "7.0.31",
+            "raw": "7.0.32",
             "majorMinor": "7.0",
-            "normalized": "7.0.31"
+            "normalized": "7.0.32"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -5758,7 +5758,7 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "deprecated",
+          "status": "retired",
           "releaseDate": "2023-04-18T00:00:00.000Z",
           "eoasFrom": "2024-10-22T00:00:00.000Z",
           "eolFrom": "2026-04-30T00:00:00.000Z",
@@ -5858,9 +5858,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "24.14.1-1nodesource1",
-            "majorMinor": "24.14",
-            "normalized": "24.14.1"
+            "raw": "24.15.0-1nodesource1",
+            "majorMinor": "24.15",
+            "normalized": "24.15.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -6737,7 +6737,7 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "deprecated",
+          "status": "retired",
           "releaseDate": "2018-04-08T00:00:00.000Z",
           "eoasFrom": "2025-04-30T00:00:00.000Z",
           "eolFrom": "2026-04-30T00:00:00.000Z",
@@ -9894,47 +9894,7 @@
     "internal": {
       "repo_name": "rust"
     },
-    "versions": {
-      "1": {
-        "upsun": {
-          "status": "supported",
-          "internal_support": true,
-          "internal_status": "active"
-        },
-        "upstream": {
-          "status": "retired",
-          "releaseDate": "2026-01-22T00:00:00.000Z",
-          "eoasFrom": null,
-          "eolFrom": "2026-03-06T00:00:00.000Z",
-          "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 80,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 64,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "1.93.0-0psh1~bpo11+1",
-            "majorMinor": "1.93",
-            "normalized": "1.93.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": true
-        }
-      }
-    }
+    "versions": {}
   },
   "solr": {
     "description": "",
@@ -11218,9 +11178,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "0.23.2-0psh1",
+            "raw": "0.23.5-0psh1",
             "majorMinor": "0.23",
-            "normalized": "0.23.2"
+            "normalized": "0.23.5"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
