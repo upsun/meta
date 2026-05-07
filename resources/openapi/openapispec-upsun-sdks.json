@@ -13536,14 +13536,6 @@
                                                         "type": "object",
                                                         "nullable": true
                                                     },
-                                                    "vulnerable_usages": {
-                                                        "description": "Security vulnerabilities detected",
-                                                        "type": "array",
-                                                        "items": {
-                                                            "type": "object"
-                                                        },
-                                                        "nullable": true
-                                                    },
                                                     "key_page": {
                                                         "description": "Key page / transaction configuration",
                                                         "type": "object"
@@ -14379,7 +14371,7 @@
                     "Http Traffic"
                 ],
                 "summary": "Get HTTP traffic timeline by IP",
-                "description": "Returns HTTP traffic analytics grouped by IP address with IPs ranked by impact (response time \u00d7 request count). Use limit parameter to control total items returned (default: 200, max: 300) and top_hits_count to control how many are tracked in timelines (default: 15, max: 15). Items have a top_hit boolean indicating whether they appear in timeline data.",
+                "description": "Returns HTTP traffic analytics grouped by IP address with IPs ranked by impact (response time \u00d7 request count). Use limit parameter to control total items returned (default: 200, max: 300) and top_hits_count to control the upper cap on items tracked in timelines (default: 15, max: 15). At least _breakdown_top_hits.min_quantity IPs are always tracked, plus additional IPs up to top_hits_count while cumulative impact is below _breakdown_top_hits.max_percentage. Items have a top_hit boolean indicating whether they appear in timeline data.",
                 "operationId": "http_metrics_timeline_ips",
                 "parameters": [
                     {
@@ -14441,7 +14433,7 @@
                     {
                         "name": "top_hits_count",
                         "in": "query",
-                        "description": "Number of top items to include in timeline (default: 15, max: 15)",
+                        "description": "Upper cap on items tracked in timeline (default: 15, max: 15). When set below the default _breakdown_top_hits.min_quantity floor, the response min_quantity is reduced to match this cap.",
                         "required": false,
                         "schema": {
                             "type": "integer",
@@ -14722,19 +14714,25 @@
                                             "example": 200
                                         },
                                         "_breakdown_top_hits": {
-                                            "description": "Configuration for top hits selection",
+                                            "description": "Configuration for top hits selection. At least min_quantity items are tracked, up to max_quantity, stopping early once max_percentage of total impact is covered.",
                                             "required": [
+                                                "min_quantity",
                                                 "max_quantity",
                                                 "max_percentage"
                                             ],
                                             "properties": {
+                                                "min_quantity": {
+                                                    "description": "Minimum number of top hit items always tracked in timeline, regardless of cumulative impact",
+                                                    "type": "integer",
+                                                    "example": 10
+                                                },
                                                 "max_quantity": {
                                                     "description": "Maximum number of top hit items tracked in timeline",
                                                     "type": "integer",
                                                     "example": 15
                                                 },
                                                 "max_percentage": {
-                                                    "description": "Maximum cumulative impact percentage for top hits",
+                                                    "description": "Cumulative impact percentage at which top hit selection stops (above min_quantity)",
                                                     "type": "number",
                                                     "format": "float",
                                                     "example": 98
@@ -14873,7 +14871,7 @@
                                                     "example": 396519
                                                 },
                                                 "data": {
-                                                    "description": "List of items ranked by impact. First _breakdown_top_hits.max_quantity items are tracked in top_hits_timeline.",
+                                                    "description": "List of items ranked by impact. At least _breakdown_top_hits.min_quantity items are tracked in top_hits_timeline, up to _breakdown_top_hits.max_quantity, stopping early once _breakdown_top_hits.max_percentage of total impact is covered.",
                                                     "type": "array",
                                                     "items": {
                                                         "required": [
@@ -15166,9 +15164,10 @@
                 "x-returnable": true,
                 "x-description": [
                     "Returns HTTP traffic analytics grouped by IP address with IPs ranked by impact (response time \u00d7 request count).",
-                    "Use limit parameter to control total items returned (default: 200, max: 300) and top_hits_count to control how",
-                    "many are tracked in timelines (default: 15, max: 15). Items have a top_hit boolean indicating whether they appear",
-                    "in timeline data."
+                    "Use limit parameter to control total items returned (default: 200, max: 300) and top_hits_count to control the",
+                    "upper cap on items tracked in timelines (default: 15, max: 15). At least _breakdown_top_hits.min_quantity IPs are",
+                    "always tracked, plus additional IPs up to top_hits_count while cumulative impact is below",
+                    "_breakdown_top_hits.max_percentage. Items have a top_hit boolean indicating whether they appear in timeline data."
                 ]
             }
         },
@@ -15178,7 +15177,7 @@
                     "Http Traffic"
                 ],
                 "summary": "Get HTTP traffic timeline by user agent",
-                "description": "Returns HTTP traffic analytics grouped by User Agent with User Agents ranked by impact (response time \u00d7 request count). Use limit parameter to control total items returned (default: 200, max: 300) and top_hits_count to control how many are tracked in timelines (default: 15, max: 15). Items have a top_hit boolean indicating whether they appear in timeline data.",
+                "description": "Returns HTTP traffic analytics grouped by User Agent with User Agents ranked by impact (response time \u00d7 request count). Use limit parameter to control total items returned (default: 200, max: 300) and top_hits_count to control the upper cap on items tracked in timelines (default: 15, max: 15). At least _breakdown_top_hits.min_quantity User Agents are always tracked, plus additional User Agents up to top_hits_count while cumulative impact is below _breakdown_top_hits.max_percentage. Items have a top_hit boolean indicating whether they appear in timeline data.",
                 "operationId": "http_metrics_timeline_user_agents",
                 "parameters": [
                     {
@@ -15240,7 +15239,7 @@
                     {
                         "name": "top_hits_count",
                         "in": "query",
-                        "description": "Number of top items to include in timeline (default: 15, max: 15)",
+                        "description": "Upper cap on items tracked in timeline (default: 15, max: 15). When set below the default _breakdown_top_hits.min_quantity floor, the response min_quantity is reduced to match this cap.",
                         "required": false,
                         "schema": {
                             "type": "integer",
@@ -15521,19 +15520,25 @@
                                             "example": 200
                                         },
                                         "_breakdown_top_hits": {
-                                            "description": "Configuration for top hits selection",
+                                            "description": "Configuration for top hits selection. At least min_quantity items are tracked, up to max_quantity, stopping early once max_percentage of total impact is covered.",
                                             "required": [
+                                                "min_quantity",
                                                 "max_quantity",
                                                 "max_percentage"
                                             ],
                                             "properties": {
+                                                "min_quantity": {
+                                                    "description": "Minimum number of top hit items always tracked in timeline, regardless of cumulative impact",
+                                                    "type": "integer",
+                                                    "example": 10
+                                                },
                                                 "max_quantity": {
                                                     "description": "Maximum number of top hit items tracked in timeline",
                                                     "type": "integer",
                                                     "example": 15
                                                 },
                                                 "max_percentage": {
-                                                    "description": "Maximum cumulative impact percentage for top hits",
+                                                    "description": "Cumulative impact percentage at which top hit selection stops (above min_quantity)",
                                                     "type": "number",
                                                     "format": "float",
                                                     "example": 98
@@ -15672,7 +15677,7 @@
                                                     "example": 396519
                                                 },
                                                 "data": {
-                                                    "description": "List of items ranked by impact. First _breakdown_top_hits.max_quantity items are tracked in top_hits_timeline.",
+                                                    "description": "List of items ranked by impact. At least _breakdown_top_hits.min_quantity items are tracked in top_hits_timeline, up to _breakdown_top_hits.max_quantity, stopping early once _breakdown_top_hits.max_percentage of total impact is covered.",
                                                     "type": "array",
                                                     "items": {
                                                         "required": [
@@ -15942,8 +15947,10 @@
                 "x-description": [
                     "Returns HTTP traffic analytics grouped by User Agent with User Agents ranked by impact (response time \u00d7 request",
                     "count). Use limit parameter to control total items returned (default: 200, max: 300) and top_hits_count to",
-                    "control how many are tracked in timelines (default: 15, max: 15). Items have a top_hit boolean indicating whether",
-                    "they appear in timeline data."
+                    "control the upper cap on items tracked in timelines (default: 15, max: 15). At least",
+                    "_breakdown_top_hits.min_quantity User Agents are always tracked, plus additional User Agents up to top_hits_count",
+                    "while cumulative impact is below _breakdown_top_hits.max_percentage. Items have a top_hit boolean indicating",
+                    "whether they appear in timeline data."
                 ]
             }
         },
@@ -15953,7 +15960,7 @@
                     "Http Traffic"
                 ],
                 "summary": "Get HTTP traffic timeline by URL",
-                "description": "Returns HTTP traffic analytics with URLs ranked by impact (response time \u00d7 request count), aggregated metrics (average, median, p96 response times in milliseconds), status code distributions, and time-series data. Use limit parameter to control total items returned (default: 200, max: 300) and top_hits_count to control how many are tracked in timelines (default: 15, max: 15). Items have a top_hit boolean indicating whether they appear in timeline data.",
+                "description": "Returns HTTP traffic analytics with URLs ranked by impact (response time \u00d7 request count), aggregated metrics (average, median, p96 response times in milliseconds), status code distributions, and time-series data. Use limit parameter to control total items returned (default: 200, max: 300) and top_hits_count to control the upper cap on items tracked in timelines (default: 15, max: 15). At least _breakdown_top_hits.min_quantity URLs are always tracked, plus additional URLs up to top_hits_count while cumulative impact is below _breakdown_top_hits.max_percentage. Items have a top_hit boolean indicating whether they appear in timeline data.",
                 "operationId": "http_metrics_timeline_urls",
                 "parameters": [
                     {
@@ -16015,7 +16022,7 @@
                     {
                         "name": "top_hits_count",
                         "in": "query",
-                        "description": "Number of top items to include in timeline (default: 15, max: 15)",
+                        "description": "Upper cap on items tracked in timeline (default: 15, max: 15). When set below the default _breakdown_top_hits.min_quantity floor, the response min_quantity is reduced to match this cap.",
                         "required": false,
                         "schema": {
                             "type": "integer",
@@ -16297,19 +16304,25 @@
                                             "example": 200
                                         },
                                         "_breakdown_top_hits": {
-                                            "description": "Configuration for top hits selection",
+                                            "description": "Configuration for top hits selection. At least min_quantity items are tracked, up to max_quantity, stopping early once max_percentage of total impact is covered.",
                                             "required": [
+                                                "min_quantity",
                                                 "max_quantity",
                                                 "max_percentage"
                                             ],
                                             "properties": {
+                                                "min_quantity": {
+                                                    "description": "Minimum number of top hit items always tracked in timeline, regardless of cumulative impact",
+                                                    "type": "integer",
+                                                    "example": 10
+                                                },
                                                 "max_quantity": {
                                                     "description": "Maximum number of top hit items tracked in timeline",
                                                     "type": "integer",
                                                     "example": 15
                                                 },
                                                 "max_percentage": {
-                                                    "description": "Maximum cumulative impact percentage for top hits",
+                                                    "description": "Cumulative impact percentage at which top hit selection stops (above min_quantity)",
                                                     "type": "number",
                                                     "format": "float",
                                                     "example": 98
@@ -16448,7 +16461,7 @@
                                                     "example": 396519
                                                 },
                                                 "data": {
-                                                    "description": "List of URLs ranked by impact. First _breakdown_top_hits.max_quantity items are tracked in top_hits_timeline.",
+                                                    "description": "List of URLs ranked by impact. At least _breakdown_top_hits.min_quantity items are tracked in top_hits_timeline, up to _breakdown_top_hits.max_quantity, stopping early once _breakdown_top_hits.max_percentage of total impact is covered.",
                                                     "type": "array",
                                                     "items": {
                                                         "required": [
@@ -16873,9 +16886,10 @@
                 "x-description": [
                     "Returns HTTP traffic analytics with URLs ranked by impact (response time \u00d7 request count), aggregated metrics",
                     "(average, median, p96 response times in milliseconds), status code distributions, and time-series data. Use limit",
-                    "parameter to control total items returned (default: 200, max: 300) and top_hits_count to control how many are",
-                    "tracked in timelines (default: 15, max: 15). Items have a top_hit boolean indicating whether they appear in",
-                    "timeline data."
+                    "parameter to control total items returned (default: 200, max: 300) and top_hits_count to control the upper cap on",
+                    "items tracked in timelines (default: 15, max: 15). At least _breakdown_top_hits.min_quantity URLs are always",
+                    "tracked, plus additional URLs up to top_hits_count while cumulative impact is below",
+                    "_breakdown_top_hits.max_percentage. Items have a top_hit boolean indicating whether they appear in timeline data."
                 ]
             }
         },
@@ -20751,6 +20765,66 @@
                         }
                     },
                     {
+                        "name": "applications[]",
+                        "in": "query",
+                        "description": "Filter by application names",
+                        "required": false,
+                        "style": "form",
+                        "explode": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "app-frontend"
+                            }
+                        }
+                    },
+                    {
+                        "name": "applications_mode",
+                        "in": "query",
+                        "description": "Filter mode for applications parameter. \"1\" (additive) includes only specified applications. \"-1\" (subtractive, default) excludes specified applications and includes all others.",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "example": "1",
+                            "default": null,
+                            "enum": [
+                                "1",
+                                "-1"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "instances[]",
+                        "in": "query",
+                        "description": "Filter by instance names",
+                        "required": false,
+                        "style": "form",
+                        "explode": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "app-frontend.0"
+                            }
+                        }
+                    },
+                    {
+                        "name": "instances_mode",
+                        "in": "query",
+                        "description": "Filter mode for instances parameter. \"1\" (additive) includes only specified instances. \"-1\" (subtractive, default) excludes specified instances and includes all others.",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "example": "1",
+                            "default": null,
+                            "enum": [
+                                "1",
+                                "-1"
+                            ]
+                        }
+                    },
+                    {
                         "name": "distribution_cost",
                         "in": "query",
                         "description": "Cost distribution dimension for server load distribution.",
@@ -20830,6 +20904,42 @@
                                         },
                                         "_contexts_mode": {
                                             "description": "Context filter mode (additive=include only, subtractive=exclude)",
+                                            "type": "string",
+                                            "nullable": true,
+                                            "enum": [
+                                                "additive",
+                                                "subtractive"
+                                            ]
+                                        },
+                                        "_applications": {
+                                            "description": "Applied application filter values",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string",
+                                                "example": "app-frontend"
+                                            },
+                                            "nullable": true
+                                        },
+                                        "_applications_mode": {
+                                            "description": "Application filter mode (additive=include only, subtractive=exclude)",
+                                            "type": "string",
+                                            "nullable": true,
+                                            "enum": [
+                                                "additive",
+                                                "subtractive"
+                                            ]
+                                        },
+                                        "_instances": {
+                                            "description": "Applied instance filter values",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string",
+                                                "example": "app-frontend.0"
+                                            },
+                                            "nullable": true
+                                        },
+                                        "_instances_mode": {
+                                            "description": "Instance filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
                                             "nullable": true,
                                             "enum": [
@@ -21178,6 +21288,66 @@
                         }
                     },
                     {
+                        "name": "applications[]",
+                        "in": "query",
+                        "description": "Filter by application names",
+                        "required": false,
+                        "style": "form",
+                        "explode": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "app-frontend"
+                            }
+                        }
+                    },
+                    {
+                        "name": "applications_mode",
+                        "in": "query",
+                        "description": "Filter mode for applications parameter. \"1\" (additive) includes only specified applications. \"-1\" (subtractive, default) excludes specified applications and includes all others.",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "example": "1",
+                            "default": null,
+                            "enum": [
+                                "1",
+                                "-1"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "instances[]",
+                        "in": "query",
+                        "description": "Filter by instance names",
+                        "required": false,
+                        "style": "form",
+                        "explode": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "app-frontend.0"
+                            }
+                        }
+                    },
+                    {
+                        "name": "instances_mode",
+                        "in": "query",
+                        "description": "Filter mode for instances parameter. \"1\" (additive) includes only specified instances. \"-1\" (subtractive, default) excludes specified instances and includes all others.",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "example": "1",
+                            "default": null,
+                            "enum": [
+                                "1",
+                                "-1"
+                            ]
+                        }
+                    },
+                    {
                         "name": "distribution_cost",
                         "in": "query",
                         "description": "Cost distribution dimension for server load distribution.",
@@ -21301,6 +21471,42 @@
                                         },
                                         "_contexts_mode": {
                                             "description": "Context filter mode (additive=include only, subtractive=exclude)",
+                                            "type": "string",
+                                            "nullable": true,
+                                            "enum": [
+                                                "additive",
+                                                "subtractive"
+                                            ]
+                                        },
+                                        "_applications": {
+                                            "description": "Applied application filter values",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string",
+                                                "example": "app-frontend"
+                                            },
+                                            "nullable": true
+                                        },
+                                        "_applications_mode": {
+                                            "description": "Application filter mode (additive=include only, subtractive=exclude)",
+                                            "type": "string",
+                                            "nullable": true,
+                                            "enum": [
+                                                "additive",
+                                                "subtractive"
+                                            ]
+                                        },
+                                        "_instances": {
+                                            "description": "Applied instance filter values",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string",
+                                                "example": "app-frontend.0"
+                                            },
+                                            "nullable": true
+                                        },
+                                        "_instances_mode": {
+                                            "description": "Instance filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
                                             "nullable": true,
                                             "enum": [
@@ -21747,6 +21953,66 @@
                         }
                     },
                     {
+                        "name": "applications[]",
+                        "in": "query",
+                        "description": "Filter by application names",
+                        "required": false,
+                        "style": "form",
+                        "explode": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "app-frontend"
+                            }
+                        }
+                    },
+                    {
+                        "name": "applications_mode",
+                        "in": "query",
+                        "description": "Filter mode for applications parameter. \"1\" (additive) includes only specified applications. \"-1\" (subtractive, default) excludes specified applications and includes all others.",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "example": "1",
+                            "default": null,
+                            "enum": [
+                                "1",
+                                "-1"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "instances[]",
+                        "in": "query",
+                        "description": "Filter by instance names",
+                        "required": false,
+                        "style": "form",
+                        "explode": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "app-frontend.0"
+                            }
+                        }
+                    },
+                    {
+                        "name": "instances_mode",
+                        "in": "query",
+                        "description": "Filter mode for instances parameter. \"1\" (additive) includes only specified instances. \"-1\" (subtractive, default) excludes specified instances and includes all others.",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "example": "1",
+                            "default": null,
+                            "enum": [
+                                "1",
+                                "-1"
+                            ]
+                        }
+                    },
+                    {
                         "name": "transactions[]",
                         "in": "query",
                         "description": "Filter by transaction names",
@@ -22160,6 +22426,42 @@
                                         },
                                         "_contexts_mode": {
                                             "description": "Context filter mode (additive=include only, subtractive=exclude)",
+                                            "type": "string",
+                                            "nullable": true,
+                                            "enum": [
+                                                "additive",
+                                                "subtractive"
+                                            ]
+                                        },
+                                        "_applications": {
+                                            "description": "Applied application filter values",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string",
+                                                "example": "app-frontend"
+                                            },
+                                            "nullable": true
+                                        },
+                                        "_applications_mode": {
+                                            "description": "Application filter mode (additive=include only, subtractive=exclude)",
+                                            "type": "string",
+                                            "nullable": true,
+                                            "enum": [
+                                                "additive",
+                                                "subtractive"
+                                            ]
+                                        },
+                                        "_instances": {
+                                            "description": "Applied instance filter values",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string",
+                                                "example": "app-frontend.0"
+                                            },
+                                            "nullable": true
+                                        },
+                                        "_instances_mode": {
+                                            "description": "Instance filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
                                             "nullable": true,
                                             "enum": [
@@ -22990,6 +23292,66 @@
                         }
                     },
                     {
+                        "name": "applications[]",
+                        "in": "query",
+                        "description": "Filter by application names",
+                        "required": false,
+                        "style": "form",
+                        "explode": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "app-frontend"
+                            }
+                        }
+                    },
+                    {
+                        "name": "applications_mode",
+                        "in": "query",
+                        "description": "Filter mode for applications parameter. \"1\" (additive) includes only specified applications. \"-1\" (subtractive, default) excludes specified applications and includes all others.",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "example": "1",
+                            "default": null,
+                            "enum": [
+                                "1",
+                                "-1"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "instances[]",
+                        "in": "query",
+                        "description": "Filter by instance names",
+                        "required": false,
+                        "style": "form",
+                        "explode": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "app-frontend.0"
+                            }
+                        }
+                    },
+                    {
+                        "name": "instances_mode",
+                        "in": "query",
+                        "description": "Filter mode for instances parameter. \"1\" (additive) includes only specified instances. \"-1\" (subtractive, default) excludes specified instances and includes all others.",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "example": "1",
+                            "default": null,
+                            "enum": [
+                                "1",
+                                "-1"
+                            ]
+                        }
+                    },
+                    {
                         "name": "transactions[]",
                         "in": "query",
                         "description": "Filter by transaction names",
@@ -23400,6 +23762,42 @@
                                         },
                                         "_contexts_mode": {
                                             "description": "Context filter mode (additive=include only, subtractive=exclude)",
+                                            "type": "string",
+                                            "nullable": true,
+                                            "enum": [
+                                                "additive",
+                                                "subtractive"
+                                            ]
+                                        },
+                                        "_applications": {
+                                            "description": "Applied application filter values",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string",
+                                                "example": "app-frontend"
+                                            },
+                                            "nullable": true
+                                        },
+                                        "_applications_mode": {
+                                            "description": "Application filter mode (additive=include only, subtractive=exclude)",
+                                            "type": "string",
+                                            "nullable": true,
+                                            "enum": [
+                                                "additive",
+                                                "subtractive"
+                                            ]
+                                        },
+                                        "_instances": {
+                                            "description": "Applied instance filter values",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string",
+                                                "example": "app-frontend.0"
+                                            },
+                                            "nullable": true
+                                        },
+                                        "_instances_mode": {
+                                            "description": "Instance filter mode (additive=include only, subtractive=exclude)",
                                             "type": "string",
                                             "nullable": true,
                                             "enum": [
@@ -34676,6 +35074,16 @@
                             "Whether or not to clone parent data when building merge requests"
                         ]
                     },
+                    "pull_requests_max_pages": {
+                        "type": "integer",
+                        "nullable": true,
+                        "title": "Maximum pull request pages to fetch during full sync",
+                        "description": "Maximum number of Bitbucket pull request pages to iterate when syncing pull requests. Null means no limit",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "Maximum number of Bitbucket pull request pages to iterate when syncing pull requests. Null means no limit"
+                        ]
+                    },
                     "resync_pull_requests": {
                         "type": "boolean",
                         "title": "Sync environment data",
@@ -34697,6 +35105,7 @@
                     "repository",
                     "build_pull_requests",
                     "pull_requests_clone_parent_data",
+                    "pull_requests_max_pages",
                     "resync_pull_requests"
                 ],
                 "additionalProperties": false,
@@ -34849,6 +35258,16 @@
                         "x-isDateTime": false,
                         "x-description": [
                             "Whether or not to clone parent data when building merge requests"
+                        ]
+                    },
+                    "pull_requests_max_pages": {
+                        "type": "integer",
+                        "nullable": true,
+                        "title": "Maximum pull request pages to fetch during full sync",
+                        "description": "Maximum number of Bitbucket pull request pages to iterate when syncing pull requests. Null means no limit",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "Maximum number of Bitbucket pull request pages to iterate when syncing pull requests. Null means no limit"
                         ]
                     },
                     "resync_pull_requests": {
@@ -35015,6 +35434,16 @@
                         "x-isDateTime": false,
                         "x-description": [
                             "Whether or not to clone parent data when building merge requests"
+                        ]
+                    },
+                    "pull_requests_max_pages": {
+                        "type": "integer",
+                        "nullable": true,
+                        "title": "Maximum pull request pages to fetch during full sync",
+                        "description": "Maximum number of Bitbucket pull request pages to iterate when syncing pull requests. Null means no limit",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "Maximum number of Bitbucket pull request pages to iterate when syncing pull requests. Null means no limit"
                         ]
                     },
                     "resync_pull_requests": {
