@@ -5876,7 +5876,7 @@
         },
         "upstream": {
           "status": "decommissioned",
-          "releaseDate": null,
+          "releaseDate": "2026-05-05T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
