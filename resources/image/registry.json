@@ -457,9 +457,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.3.9.8",
+            "raw": "26.3.10.62",
             "majorMinor": "26.3",
-            "normalized": "26.3.9"
+            "normalized": "26.3.10"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -500,9 +500,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "25.8.22.28",
+            "raw": "25.8.23.13",
             "majorMinor": "25.8",
-            "normalized": "25.8.22"
+            "normalized": "25.8.23"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -704,9 +704,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "10.0.203",
+            "raw": "10.0.300",
             "majorMinor": "10.0",
-            "normalized": "10.0.203"
+            "normalized": "10.0.300"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -743,9 +743,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.0.420-1",
+            "raw": "8.0.421-1",
             "majorMinor": "8.0",
-            "normalized": "8.0.420"
+            "normalized": "8.0.421"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -1622,9 +1622,43 @@
       "repo_name": "elixir"
     },
     "versions": {
-      "1.18": {
+      "1.19": {
         "upsun": {
           "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2025-10-16T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "1.18": {
+        "upsun": {
+          "status": "deprecated",
           "internal_support": true,
           "internal_status": "active"
         },
@@ -1635,7 +1669,7 @@
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -1664,7 +1698,7 @@
       "1.15": {
         "upsun": {
           "status": "deprecated",
-          "internal_support": false,
+          "internal_support": true,
           "internal_status": "active"
         },
         "upstream": {
@@ -2000,9 +2034,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1.26.2-0psh1",
+            "raw": "1.26.3-0psh1",
             "majorMinor": "1.26",
-            "normalized": "1.26.2"
+            "normalized": "1.26.3"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -2039,9 +2073,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1.25.9-0psh1",
+            "raw": "1.25.10-0psh1",
             "majorMinor": "1.25",
-            "normalized": "1.25.9"
+            "normalized": "1.25.10"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -3112,9 +3146,9 @@
           "min_disk_size": null,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "8.31.0-0psh1",
-            "majorMinor": "8.31",
-            "normalized": "8.31.0"
+            "raw": "8.32.0-0psh1",
+            "majorMinor": "8.32",
+            "normalized": "8.32.0"
           },
           "allow_scale_down": null,
           "storage_mount_point": null,
@@ -3229,12 +3263,12 @@
       },
       "12": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": "2019-03-19T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2019-09-17T00:00:00.000Z",
@@ -3268,12 +3302,12 @@
       },
       "13": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": "2019-09-17T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2020-03-17T00:00:00.000Z",
@@ -3373,9 +3407,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "17.0.18-3",
+            "raw": "17.0.19-3",
             "majorMinor": "17.0",
-            "normalized": "17.0.18"
+            "normalized": "17.0.19"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -4014,9 +4048,9 @@
         },
         "upstream": {
           "status": "incoming",
-          "releaseDate": null,
+          "releaseDate": "2025-08-07T00:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": null,
+          "eolFrom": "2025-11-18T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -4605,9 +4639,9 @@
         },
         "upstream": {
           "status": "incoming",
-          "releaseDate": null,
+          "releaseDate": "2025-08-07T00:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": null,
+          "eolFrom": "2025-11-18T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -5356,9 +5390,9 @@
           "min_disk_size": 512,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "7.0.31",
+            "raw": "7.0.34",
             "majorMinor": "7.0",
-            "normalized": "7.0.31"
+            "normalized": "7.0.34"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -5396,9 +5430,9 @@
           "min_disk_size": 512,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "6.0.27",
+            "raw": "6.0.28",
             "majorMinor": "6.0",
-            "normalized": "6.0.27"
+            "normalized": "6.0.28"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -5436,9 +5470,9 @@
           "min_disk_size": 512,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "5.0.32",
+            "raw": "5.0.33",
             "majorMinor": "5.0",
-            "normalized": "5.0.32"
+            "normalized": "5.0.33"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -5675,16 +5709,16 @@
     "versions": {
       "16": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": "2021-04-20T00:00:00.000Z",
           "eoasFrom": "2022-10-18T00:00:00.000Z",
           "eolFrom": "2023-09-11T00:00:00.000Z",
-          "isLts": true,
+          "isLts": false,
           "isMaintained": false,
           "isEoas": true,
           "isEol": true
@@ -5714,16 +5748,16 @@
       },
       "18": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": "2022-04-19T00:00:00.000Z",
           "eoasFrom": "2023-10-18T00:00:00.000Z",
           "eolFrom": "2025-04-30T00:00:00.000Z",
-          "isLts": true,
+          "isLts": false,
           "isMaintained": false,
           "isEoas": true,
           "isEol": true
@@ -5753,19 +5787,19 @@
       },
       "20": {
         "upsun": {
-          "status": "deprecated",
+          "status": "decommissioned",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "deprecated",
+          "status": "decommissioned",
           "releaseDate": "2023-04-18T00:00:00.000Z",
           "eoasFrom": "2024-10-22T00:00:00.000Z",
           "eolFrom": "2026-04-30T00:00:00.000Z",
-          "isLts": true,
-          "isMaintained": true,
+          "isLts": false,
+          "isMaintained": false,
           "isEoas": true,
-          "isEol": false
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5792,19 +5826,19 @@
       },
       "22": {
         "upsun": {
-          "status": "deprecated",
+          "status": "decommissioned",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "deprecated",
+          "status": "decommissioned",
           "releaseDate": "2024-04-24T00:00:00.000Z",
           "eoasFrom": "2025-10-21T00:00:00.000Z",
           "eolFrom": "2027-04-30T00:00:00.000Z",
-          "isLts": true,
-          "isMaintained": true,
+          "isLts": false,
+          "isMaintained": false,
           "isEoas": true,
-          "isEol": false
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5831,19 +5865,19 @@
       },
       "24": {
         "upsun": {
-          "status": "supported",
+          "status": "decommissioned",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "supported",
+          "status": "decommissioned",
           "releaseDate": "2025-05-06T00:00:00.000Z",
           "eoasFrom": "2026-10-20T00:00:00.000Z",
           "eolFrom": "2028-04-30T00:00:00.000Z",
-          "isLts": true,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5858,9 +5892,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "24.14.1-1nodesource1",
-            "majorMinor": "24.14",
-            "normalized": "24.14.1"
+            "raw": "24.15.0-1nodesource1",
+            "majorMinor": "24.15",
+            "normalized": "24.15.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -5870,19 +5904,19 @@
       },
       "26": {
         "upsun": {
-          "status": "incoming",
-          "internal_support": false,
-          "internal_status": "active"
+          "status": "decommissioned",
+          "internal_support": true,
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "incoming",
-          "releaseDate": null,
+          "status": "decommissioned",
+          "releaseDate": "2026-05-05T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5897,9 +5931,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "24.14.1-1nodesource1",
-            "majorMinor": "24.14",
-            "normalized": "24.14.1"
+            "raw": "26.1.0-1nodesource1",
+            "majorMinor": "26.1",
+            "normalized": "26.1.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -6512,19 +6546,19 @@
       },
       "2": {
         "upsun": {
-          "status": "deprecated",
+          "status": "decommissioned",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "deprecated",
+          "status": "decommissioned",
           "releaseDate": "2022-05-26T00:00:00.000Z",
           "eoasFrom": "2025-05-06T00:00:00.000Z",
           "eolFrom": null,
           "isLts": false,
-          "isMaintained": true,
+          "isMaintained": false,
           "isEoas": true,
-          "isEol": false
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6552,19 +6586,19 @@
       },
       "3": {
         "upsun": {
-          "status": "supported",
+          "status": "decommissioned",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "supported",
+          "status": "decommissioned",
           "releaseDate": "2025-05-06T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6732,18 +6766,18 @@
       },
       "8.0": {
         "upsun": {
-          "status": "deprecated",
+          "status": "supported",
           "internal_support": true,
           "internal_status": "active"
         },
         "upstream": {
-          "status": "deprecated",
+          "status": "retired",
           "releaseDate": "2018-04-08T00:00:00.000Z",
           "eoasFrom": "2025-04-30T00:00:00.000Z",
           "eolFrom": "2026-04-30T00:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
-          "isEoas": true,
+          "isEoas": false,
           "isEol": false
         },
         "manifest": {
@@ -7466,12 +7500,12 @@
     "versions": {
       "10": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": "2017-10-05T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2022-11-10T00:00:00.000Z",
@@ -7508,12 +7542,12 @@
       },
       "11": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": "2018-10-18T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2023-11-09T00:00:00.000Z",
@@ -7550,12 +7584,12 @@
       },
       "12": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": "2019-10-03T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2024-11-21T00:00:00.000Z",
@@ -7592,12 +7626,12 @@
       },
       "13": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": "2020-09-24T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2025-11-13T00:00:00.000Z",
@@ -7634,19 +7668,19 @@
       },
       "14": {
         "upsun": {
-          "status": "supported",
+          "status": "decommissioned",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "supported",
+          "status": "decommissioned",
           "releaseDate": "2021-09-30T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2026-11-12T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7677,19 +7711,19 @@
       },
       "15": {
         "upsun": {
-          "status": "supported",
+          "status": "decommissioned",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "supported",
+          "status": "decommissioned",
           "releaseDate": "2022-10-13T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2027-11-11T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7720,19 +7754,19 @@
       },
       "16": {
         "upsun": {
-          "status": "supported",
+          "status": "decommissioned",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "supported",
+          "status": "decommissioned",
           "releaseDate": "2023-09-14T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2028-11-09T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7770,19 +7804,19 @@
       },
       "17": {
         "upsun": {
-          "status": "supported",
+          "status": "decommissioned",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "supported",
+          "status": "decommissioned",
           "releaseDate": "2024-09-26T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2029-11-08T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7820,19 +7854,19 @@
       },
       "18": {
         "upsun": {
-          "status": "supported",
+          "status": "decommissioned",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "supported",
+          "status": "decommissioned",
           "releaseDate": "2025-09-25T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2030-11-14T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -8048,9 +8082,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "3.14.4-0psh1",
+            "raw": "3.14.5-0psh1",
             "majorMinor": "3.14",
-            "normalized": "3.14.4"
+            "normalized": "3.14.5"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -8472,10 +8506,10 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "releaseDate": "2025-10-27T00:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": null,
+          "eolFrom": "2026-01-31T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -9070,9 +9104,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "7.2.13-0psh1~bpo12+1",
+            "raw": "7.2.14-0psh1",
             "majorMinor": "7.2",
-            "normalized": "7.2.13"
+            "normalized": "7.2.14"
           },
           "allow_scale_down": true,
           "storage_mount_point": null,
@@ -9473,9 +9507,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "4.0.3-0psh1",
+            "raw": "4.0.4-0psh1",
             "majorMinor": "4.0",
-            "normalized": "4.0.3"
+            "normalized": "4.0.4"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -9902,10 +9936,10 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "retired",
-          "releaseDate": "2026-01-22T00:00:00.000Z",
+          "status": "supported",
+          "releaseDate": "2026-04-16T00:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-03-06T00:00:00.000Z",
+          "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -9915,7 +9949,8 @@
           "endpoints": {
             "http": {
               "port": 80,
-              "scheme": "http"
+              "scheme": "http",
+              "default": true
             }
           },
           "min_cpu_size": 0.1,
@@ -9924,9 +9959,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1.93.0-0psh1~bpo11+1",
-            "majorMinor": "1.93",
-            "normalized": "1.93.0"
+            "raw": "1.95.0-0psh1",
+            "majorMinor": "1.95",
+            "normalized": "1.95.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -10634,9 +10669,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.1.6-0psh1~bpo12+1",
+            "raw": "8.1.7-0psh1",
             "majorMinor": "8.1",
-            "normalized": "8.1.6"
+            "normalized": "8.1.7"
           },
           "allow_scale_down": true,
           "storage_mount_point": null,
@@ -10675,9 +10710,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.0.7-0psh1~bpo12+1",
+            "raw": "8.0.9-0psh1",
             "majorMinor": "8.0",
-            "normalized": "8.0.7"
+            "normalized": "8.0.9"
           },
           "allow_scale_down": true,
           "storage_mount_point": null,
@@ -10702,6 +10737,50 @@
       "repo_name": "varnish"
     },
     "versions": {
+      "8.0": {
+        "upsun": {
+          "status": "incoming",
+          "internal_support": false,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "incoming",
+          "releaseDate": "2025-09-15T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2026-09-15T00:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 8080,
+              "scheme": "http",
+              "default": true
+            },
+            "http+stats": {
+              "port": 8081,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 128,
+          "is_persistent": false,
+          "min_disk_size": null,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "7.6.5-1~bookworm",
+            "majorMinor": "7.6",
+            "normalized": "7.6.5"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
       "7.6": {
         "upsun": {
           "status": "supported",
@@ -10880,16 +10959,16 @@
       },
       "6.3": {
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false,
-          "internal_status": "decommissioned"
+          "internal_status": "sunset"
         },
         "upstream": {
-          "status": "decommissioned",
-          "releaseDate": null,
+          "status": "supported",
+          "releaseDate": "2018-03-15T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
-          "isLts": false,
+          "isLts": true,
           "isMaintained": false,
           "isEoas": true,
           "isEol": true
@@ -11218,9 +11297,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "0.23.2-0psh1",
-            "majorMinor": "0.23",
-            "normalized": "0.23.2"
+            "raw": "0.24.0-0psh1",
+            "majorMinor": "0.24",
+            "normalized": "0.24.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -11275,9 +11354,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "9.3.3",
+            "raw": "9.3.4",
             "majorMinor": "9.3",
-            "normalized": "9.3.3"
+            "normalized": "9.3.4"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -11315,9 +11394,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "8.19.14",
+            "raw": "8.19.15",
             "majorMinor": "8.19",
-            "normalized": "8.19.14"
+            "normalized": "8.19.15"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
