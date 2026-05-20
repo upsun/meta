@@ -11513,6 +11513,908 @@
         }
       }
     },
+    "/projects/{projectId}/environments/{environmentId}/observability/http/breakdown/urls": {
+      "get": {
+        "tags": [
+          "Http Traffic"
+        ],
+        "summary": "Get HTTP traffic timeline by URL",
+        "description": "Returns HTTP traffic analytics with URLs ranked by impact (response time × request count), aggregated metrics (average, median, p96 response times in milliseconds), status code distributions, and time-series data. Use limit parameter to control total items returned (default: 200, max: 300) and top_hits_count to control how many items are flagged as top hits and tracked in the timeline (default: 10, max: 15). Items with index < top_hits_count are flagged with top_hit: true and tracked in top_hits_timeline; the remainder (up to limit) are returned with top_hit: false.",
+        "operationId": "http_metrics_timeline_urls",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "description": "The unique identifier of the Upsun project",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "[a-z0-9]+",
+              "example": "abc123def456"
+            }
+          },
+          {
+            "name": "environmentId",
+            "in": "path",
+            "description": "The environment identifier",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": ".+",
+              "example": "main"
+            }
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "description": "Start timestamp for the time range (Unix timestamp in seconds)",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "example": 1704067200
+            }
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "description": "End timestamp for the time range (Unix timestamp in seconds)",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "example": 1704153600
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Maximum number of items to return (default: 200, max: 300)",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": null,
+              "maximum": 300,
+              "minimum": 1
+            }
+          },
+          {
+            "name": "top_hits_count",
+            "in": "query",
+            "description": "Number of items to flag as top hits and track in the timeline (default: 10, max: 15). Items with index < top_hits_count have top_hit=true; the remainder up to limit are returned with top_hit=false.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": null,
+              "maximum": 15,
+              "minimum": 1
+            }
+          },
+          {
+            "name": "applications[]",
+            "in": "query",
+            "description": "Filter by application. Can be specified multiple times for multiple values (e.g., ?applications[]=app1&applications[]=app2). Use applications_mode to control inclusion/exclusion behavior.",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "app"
+              }
+            }
+          },
+          {
+            "name": "applications_mode",
+            "in": "query",
+            "description": "Filter mode for applications parameter. \"1\" (additive) includes only specified applications. \"-1\" (subtractive, default) excludes specified applications and includes all others.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "1",
+              "default": null,
+              "enum": [
+                "1",
+                "-1"
+              ]
+            }
+          },
+          {
+            "name": "methods[]",
+            "in": "query",
+            "description": "Filter by HTTP methods. Can be specified multiple times for multiple values (e.g., ?methods[]=GET&methods[]=POST). Use methods_mode to control inclusion/exclusion behavior.",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "GET",
+                "enum": [
+                  "GET",
+                  "POST",
+                  "PUT",
+                  "PATCH",
+                  "DELETE",
+                  "HEAD",
+                  "OPTIONS"
+                ]
+              }
+            }
+          },
+          {
+            "name": "methods_mode",
+            "in": "query",
+            "description": "Filter mode for methods parameter. \"1\" (additive) includes only specified methods. \"-1\" (subtractive, default) excludes specified methods and includes all others.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "1",
+              "default": null,
+              "enum": [
+                "1",
+                "-1"
+              ]
+            }
+          },
+          {
+            "name": "domains[]",
+            "in": "query",
+            "description": "Filter by request domains/hosts. Can be specified multiple times for multiple values (e.g., ?domains[]=api.example.com&domains[]=www.example.com). Use domains_mode to control inclusion/exclusion behavior.",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "api.example.com"
+              }
+            }
+          },
+          {
+            "name": "domains_mode",
+            "in": "query",
+            "description": "Filter mode for domains parameter. \"1\" (additive) includes only specified domains. \"-1\" (subtractive, default) excludes specified domains and includes all others.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "1",
+              "default": null,
+              "enum": [
+                "1",
+                "-1"
+              ]
+            }
+          },
+          {
+            "name": "code_slots[]",
+            "in": "query",
+            "description": "Filter by HTTP status code groups. Can be specified multiple times for multiple values (e.g., ?code_slots[]=4XX&code_slots[]=5XX). Use code_slots_mode to control inclusion/exclusion behavior.",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "2XX",
+                "enum": [
+                  "1XX",
+                  "2XX",
+                  "3XX",
+                  "4XX",
+                  "5XX"
+                ]
+              }
+            }
+          },
+          {
+            "name": "code_slots_mode",
+            "in": "query",
+            "description": "Filter mode for code_slots parameter. \"1\" (additive) includes only specified code groups. \"-1\" (subtractive, default) excludes specified code groups and includes all others.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "1",
+              "default": null,
+              "enum": [
+                "1",
+                "-1"
+              ]
+            }
+          },
+          {
+            "name": "codes[]",
+            "in": "query",
+            "description": "Filter by specific HTTP status codes. Can be specified multiple times for multiple values (e.g., ?codes[]=200&codes[]=404). Use codes_mode to control inclusion/exclusion behavior.",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "200"
+              }
+            }
+          },
+          {
+            "name": "codes_mode",
+            "in": "query",
+            "description": "Filter mode for codes parameter. \"1\" (additive) includes only specified codes. \"-1\" (subtractive, default) excludes specified codes and includes all others.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "1",
+              "default": null,
+              "enum": [
+                "1",
+                "-1"
+              ]
+            }
+          },
+          {
+            "name": "request_duration_slots[]",
+            "in": "query",
+            "description": "Filter by response time ranges (in milliseconds). Can be specified multiple times for multiple values (e.g., ?request_duration_slots[]=0-50&request_duration_slots[]=1600+). Use request_duration_slots_mode to control inclusion/exclusion behavior.",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "0-50",
+                "enum": [
+                  "0-50",
+                  "50-100",
+                  "100-200",
+                  "200-400",
+                  "400-800",
+                  "800-1600",
+                  "1600+"
+                ]
+              }
+            }
+          },
+          {
+            "name": "request_duration_slots_mode",
+            "in": "query",
+            "description": "Filter mode for request_duration_slots parameter. \"1\" (additive) includes only specified duration ranges. \"-1\" (subtractive, default) excludes specified duration ranges and includes all others.",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "1",
+              "default": null,
+              "enum": [
+                "1",
+                "-1"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "HTTP traffic overview retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "_grain",
+                    "_from",
+                    "_to",
+                    "_project_id",
+                    "_environment_id",
+                    "_environment_type",
+                    "_branch_machine_name",
+                    "_breakdown_limit",
+                    "_breakdown_top_hits",
+                    "breakdown",
+                    "top_hits_timeline",
+                    "filters"
+                  ],
+                  "properties": {
+                    "_grain": {
+                      "description": "Data granularity in seconds",
+                      "type": "integer",
+                      "example": 5
+                    },
+                    "_from": {
+                      "description": "Query start timestamp",
+                      "type": "integer",
+                      "example": 1704067200
+                    },
+                    "_to": {
+                      "description": "Query end timestamp",
+                      "type": "integer",
+                      "example": 1704153600
+                    },
+                    "_project_id": {
+                      "description": "Project identifier",
+                      "type": "string",
+                      "example": "abc123def456"
+                    },
+                    "_environment_id": {
+                      "description": "Environment identifier",
+                      "type": "string",
+                      "example": "main"
+                    },
+                    "_environment_type": {
+                      "description": "Environment type",
+                      "type": "string",
+                      "example": "production",
+                      "enum": [
+                        "production",
+                        "staging",
+                        "development"
+                      ]
+                    },
+                    "_branch_machine_name": {
+                      "description": "Branch machine name",
+                      "type": "string",
+                      "example": "main-bvxea6i"
+                    },
+                    "_breakdown_limit": {
+                      "description": "Maximum number of items returned",
+                      "type": "integer",
+                      "example": 200
+                    },
+                    "_breakdown_top_hits": {
+                      "description": "Number of items flagged as top hits (top_hit=true) and tracked in top_hits_timeline.",
+                      "type": "integer",
+                      "example": 10
+                    },
+                    "_applications": {
+                      "description": "Applied application filter values",
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "app"
+                      },
+                      "nullable": true
+                    },
+                    "_applications_mode": {
+                      "description": "Application filter mode (1=additive, -1=subtractive)",
+                      "type": "string",
+                      "nullable": true,
+                      "enum": [
+                        "1",
+                        "-1"
+                      ]
+                    },
+                    "_methods": {
+                      "description": "Applied method filter values",
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "GET"
+                      },
+                      "nullable": true
+                    },
+                    "_methods_mode": {
+                      "description": "Method filter mode (1=additive, -1=subtractive)",
+                      "type": "string",
+                      "nullable": true,
+                      "enum": [
+                        "1",
+                        "-1"
+                      ]
+                    },
+                    "_domains": {
+                      "description": "Applied domain filter values",
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "example.com"
+                      },
+                      "nullable": true
+                    },
+                    "_domains_mode": {
+                      "description": "Domain filter mode (1=additive, -1=subtractive)",
+                      "type": "string",
+                      "nullable": true,
+                      "enum": [
+                        "1",
+                        "-1"
+                      ]
+                    },
+                    "_code_slots": {
+                      "description": "Applied code slot filter values",
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "2XX"
+                      },
+                      "nullable": true
+                    },
+                    "_code_slots_mode": {
+                      "description": "Code slot filter mode (1=additive, -1=subtractive)",
+                      "type": "string",
+                      "nullable": true,
+                      "enum": [
+                        "1",
+                        "-1"
+                      ]
+                    },
+                    "_codes": {
+                      "description": "Applied HTTP status code filter values",
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "200"
+                      },
+                      "nullable": true
+                    },
+                    "_codes_mode": {
+                      "description": "Code filter mode (1=additive, -1=subtractive)",
+                      "type": "string",
+                      "nullable": true,
+                      "enum": [
+                        "1",
+                        "-1"
+                      ]
+                    },
+                    "_request_duration_slots": {
+                      "description": "Applied request duration slot filter values",
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "example": "0-100"
+                      },
+                      "nullable": true
+                    },
+                    "_request_duration_slots_mode": {
+                      "description": "Request duration slot filter mode (1=additive, -1=subtractive)",
+                      "type": "string",
+                      "nullable": true,
+                      "enum": [
+                        "1",
+                        "-1"
+                      ]
+                    },
+                    "breakdown": {
+                      "description": "URLs ranked by impact",
+                      "required": [
+                        "kind",
+                        "total",
+                        "data"
+                      ],
+                      "properties": {
+                        "kind": {
+                          "description": "The kind of grouping",
+                          "type": "string",
+                          "example": "url",
+                          "enum": [
+                            "url"
+                          ]
+                        },
+                        "total": {
+                          "description": "Total request count across all URLs",
+                          "type": "integer",
+                          "example": 396519
+                        },
+                        "data": {
+                          "description": "List of URLs ranked by impact. Items with index < top_hits_count are tracked in top_hits_timeline (flagged with top_hit: true); the remainder are returned for reference only.",
+                          "type": "array",
+                          "items": {
+                            "required": [
+                              "url",
+                              "method",
+                              "impact",
+                              "average",
+                              "p_50",
+                              "p_96",
+                              "count",
+                              "top_hit"
+                            ],
+                            "properties": {
+                              "url": {
+                                "description": "Request URL",
+                                "type": "string",
+                                "example": "https://example.com/api/products"
+                              },
+                              "method": {
+                                "description": "HTTP method",
+                                "type": "string",
+                                "example": "GET",
+                                "enum": [
+                                  "GET",
+                                  "POST",
+                                  "PUT",
+                                  "PATCH",
+                                  "DELETE",
+                                  "HEAD",
+                                  "OPTIONS"
+                                ]
+                              },
+                              "impact": {
+                                "description": "Performance impact score (ms x count)",
+                                "type": "number",
+                                "format": "float",
+                                "example": 15234.67,
+                                "nullable": true
+                              },
+                              "average": {
+                                "description": "Average response time in milliseconds",
+                                "type": "number",
+                                "format": "float",
+                                "example": 245.3
+                              },
+                              "p_50": {
+                                "description": "Median (50th percentile) response time in milliseconds",
+                                "type": "number",
+                                "format": "float",
+                                "example": 198.5
+                              },
+                              "p_96": {
+                                "description": "96th percentile response time in milliseconds",
+                                "type": "number",
+                                "format": "float",
+                                "example": 512.8
+                              },
+                              "count": {
+                                "description": "Total number of requests",
+                                "type": "integer",
+                                "example": 62143
+                              },
+                              "top_hit": {
+                                "description": "Whether this URL is tracked in top_hits_timeline",
+                                "type": "boolean",
+                                "example": true
+                              }
+                            },
+                            "type": "object",
+                            "additionalProperties": false
+                          },
+                          "example": [
+                            {
+                              "url": "https://example.com/api/products",
+                              "method": "GET",
+                              "impact": 15234.67,
+                              "average": 245.3,
+                              "p_50": 198.5,
+                              "p_96": 512.8,
+                              "count": 62143,
+                              "top_hit": true
+                            },
+                            {
+                              "url": "https://example.com/api/orders",
+                              "method": "POST",
+                              "impact": 6543.21,
+                              "average": 312.5,
+                              "p_50": 267.8,
+                              "p_96": 678.4,
+                              "count": 20945,
+                              "top_hit": false
+                            }
+                          ]
+                        }
+                      },
+                      "type": "object",
+                      "additionalProperties": false
+                    },
+                    "top_hits_timeline": {
+                      "description": "Time-series data for top hit URLs",
+                      "required": [
+                        "data"
+                      ],
+                      "properties": {
+                        "data": {
+                          "description": "Time-series HTTP traffic metrics for top hit URLs. Fields are omitted for timestamps with no data.",
+                          "type": "array",
+                          "items": {
+                            "required": [
+                              "timestamp"
+                            ],
+                            "properties": {
+                              "timestamp": {
+                                "description": "Data point timestamp",
+                                "type": "integer",
+                                "example": 1704067200
+                              },
+                              "_total_consumed": {
+                                "description": "Total wall-time consumed across all URLs at this interval",
+                                "type": "number",
+                                "format": "float",
+                                "example": 5678.9
+                              },
+                              "_total_count": {
+                                "description": "Total request count at this timestamp",
+                                "type": "integer",
+                                "example": 4120
+                              },
+                              "request_size": {
+                                "description": "Total request payload size in bytes",
+                                "type": "integer",
+                                "example": 524288
+                              },
+                              "response_size": {
+                                "description": "Total response payload size in bytes",
+                                "type": "integer",
+                                "example": 2097152
+                              },
+                              "urls": {
+                                "description": "Per-URL metrics at this timestamp. Only includes top hit items.",
+                                "type": "object",
+                                "example": {
+                                  "GET-https://example.com/api/products": {
+                                    "count": 1543,
+                                    "impact": 378.45
+                                  }
+                                },
+                                "additionalProperties": {
+                                  "required": [
+                                    "count",
+                                    "impact"
+                                  ],
+                                  "properties": {
+                                    "count": {
+                                      "description": "Request count for this URL",
+                                      "type": "integer",
+                                      "example": 1543
+                                    },
+                                    "impact": {
+                                      "description": "Performance impact score",
+                                      "type": "number",
+                                      "format": "float",
+                                      "example": 378.45,
+                                      "nullable": true
+                                    }
+                                  },
+                                  "type": "object",
+                                  "additionalProperties": false
+                                }
+                              },
+                              "codes": {
+                                "description": "HTTP status code distribution",
+                                "required": [
+                                  "UNKNOWN",
+                                  "1XX",
+                                  "2XX",
+                                  "3XX",
+                                  "4XX",
+                                  "5XX"
+                                ],
+                                "properties": {
+                                  "UNKNOWN": {
+                                    "description": "Count of unknown/unclassified status codes",
+                                    "type": "integer",
+                                    "example": 0
+                                  },
+                                  "1XX": {
+                                    "description": "Count of informational responses (100-199)",
+                                    "type": "integer",
+                                    "example": 0
+                                  },
+                                  "2XX": {
+                                    "description": "Count of successful responses (200-299)",
+                                    "type": "integer",
+                                    "example": 58234
+                                  },
+                                  "3XX": {
+                                    "description": "Count of redirect responses (300-399)",
+                                    "type": "integer",
+                                    "example": 1245
+                                  },
+                                  "4XX": {
+                                    "description": "Count of client error responses (400-499)",
+                                    "type": "integer",
+                                    "example": 847
+                                  },
+                                  "5XX": {
+                                    "description": "Count of server error responses (500-599)",
+                                    "type": "integer",
+                                    "example": 23
+                                  }
+                                },
+                                "type": "object",
+                                "additionalProperties": false
+                              }
+                            },
+                            "type": "object",
+                            "additionalProperties": false
+                          },
+                          "example": [
+                            {
+                              "timestamp": 1704067200,
+                              "_total_consumed": 5678.9,
+                              "_total_count": 1543,
+                              "request_size": 524288,
+                              "response_size": 2097152,
+                              "urls": {
+                                "GET-https://example.com/api/products": {
+                                  "count": 1543,
+                                  "impact": 378.45
+                                }
+                              },
+                              "codes": {
+                                "UNKNOWN": 0,
+                                "1XX": 0,
+                                "2XX": 1543,
+                                "3XX": 0,
+                                "4XX": 0,
+                                "5XX": 0
+                              }
+                            },
+                            {
+                              "timestamp": 1704070800
+                            }
+                          ]
+                        }
+                      },
+                      "type": "object",
+                      "additionalProperties": false
+                    },
+                    "filters": {
+                      "required": [
+                        "max_applicable_filters"
+                      ],
+                      "properties": {
+                        "fields": {
+                          "type": "object",
+                          "example": {
+                            "severity": {
+                              "distinct_values": 3,
+                              "type": "string",
+                              "values": [
+                                {
+                                  "value": "INFO",
+                                  "count": 297
+                                },
+                                {
+                                  "value": "ERROR",
+                                  "count": 2
+                                }
+                              ]
+                            }
+                          },
+                          "additionalProperties": {
+                            "required": [
+                              "distinct_values",
+                              "type",
+                              "values"
+                            ],
+                            "properties": {
+                              "distinct_values": {
+                                "type": "integer",
+                                "example": 5
+                              },
+                              "type": {
+                                "type": "string",
+                                "example": "string"
+                              },
+                              "values": {
+                                "type": "array",
+                                "items": {
+                                  "required": [
+                                    "value",
+                                    "count"
+                                  ],
+                                  "properties": {
+                                    "value": {
+                                      "type": "string",
+                                      "example": "INFO"
+                                    },
+                                    "count": {
+                                      "type": "integer",
+                                      "example": 297
+                                    }
+                                  },
+                                  "type": "object",
+                                  "additionalProperties": false
+                                }
+                              }
+                            },
+                            "type": "object",
+                            "additionalProperties": false
+                          }
+                        },
+                        "max_applicable_filters": {
+                          "type": "integer",
+                          "example": 45
+                        }
+                      },
+                      "type": "object",
+                      "additionalProperties": false
+                    }
+                  },
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - Invalid parameters. Please consult the API documentation to fix the request parameters.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "type",
+                    "title",
+                    "status",
+                    "violations"
+                  ],
+                  "properties": {
+                    "type": {
+                      "description": "RFC 2616 reference URL identifying the error type",
+                      "type": "string",
+                      "format": "uri",
+                      "example": "https://tools.ietf.org/html/rfc2616#section-1"
+                    },
+                    "title": {
+                      "description": "Human-readable summary of the validation error",
+                      "type": "string",
+                      "example": "Please ensure parameters are correct."
+                    },
+                    "status": {
+                      "description": "HTTP status code",
+                      "type": "integer",
+                      "example": 400
+                    },
+                    "violations": {
+                      "description": "Map of parameter names to their validation errors. Each parameter can have multiple error messages.",
+                      "type": "object",
+                      "example": {
+                        "grain": [
+                          "Grain can not be larger than the selection windows."
+                        ],
+                        "from": [
+                          "The from timestamp must be in the past."
+                        ],
+                        "to": [
+                          "The to timestamp must be greater than the from timestamp."
+                        ]
+                      },
+                      "additionalProperties": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "example": "The from timestamp must be in the past."
+                        }
+                      }
+                    }
+                  },
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden - Access denied due to insufficient permissions, or the requested project/environment does not exist (to prevent information disclosure)"
+          },
+          "499": {
+            "description": "Too much data fetched - The query is attempting to retrieve too much data. Please narrow down the query by reducing the time range or adding more specific filters to retrieve less data.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "error",
+                    "message"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "Too much data fetched"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Please reduce the time range or add more filters to narrow down the query"
+                    }
+                  },
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/projects/{projectId}/environments/{environmentId}/observability/http-metrics/overview": {
       "get": {
         "tags": [
@@ -12008,7 +12910,7 @@
           "Http Traffic"
         ],
         "summary": "Get HTTP traffic timeline by IP",
-        "description": "Returns HTTP traffic analytics grouped by IP address with IPs ranked by impact (response time × request count). Use limit parameter to control total items returned (default: 200, max: 300) and top_hits_count to control the upper cap on items tracked in timelines (default: 15, max: 15). At least _breakdown_top_hits.min_quantity IPs are always tracked, plus additional IPs up to top_hits_count while cumulative impact is below _breakdown_top_hits.max_percentage. Items have a top_hit boolean indicating whether they appear in timeline data.",
+        "description": "Returns HTTP traffic analytics grouped by IP address with IPs ranked by impact (response time × request count). Use limit parameter to control total items returned (default: 200, max: 300) and top_hits_count to control how many items are flagged as top hits and tracked in the timeline (default: 10, max: 15). Items with index < top_hits_count are flagged with top_hit: true and tracked in top_hits_timeline; the remainder (up to limit) are returned with top_hit: false.",
         "operationId": "http_metrics_timeline_ips",
         "parameters": [
           {
@@ -12070,7 +12972,7 @@
           {
             "name": "top_hits_count",
             "in": "query",
-            "description": "Upper cap on items tracked in timeline (default: 15, max: 15). When set below the default _breakdown_top_hits.min_quantity floor, the response min_quantity is reduced to match this cap.",
+            "description": "Number of items to flag as top hits and track in the timeline (default: 10, max: 15). Items with index < top_hits_count have top_hit=true; the remainder up to limit are returned with top_hit=false.",
             "required": false,
             "schema": {
               "type": "integer",
@@ -12351,32 +13253,9 @@
                       "example": 200
                     },
                     "_breakdown_top_hits": {
-                      "description": "Configuration for top hits selection. At least min_quantity items are tracked, up to max_quantity, stopping early once max_percentage of total impact is covered.",
-                      "required": [
-                        "min_quantity",
-                        "max_quantity",
-                        "max_percentage"
-                      ],
-                      "properties": {
-                        "min_quantity": {
-                          "description": "Minimum number of top hit items always tracked in timeline, regardless of cumulative impact",
-                          "type": "integer",
-                          "example": 10
-                        },
-                        "max_quantity": {
-                          "description": "Maximum number of top hit items tracked in timeline",
-                          "type": "integer",
-                          "example": 15
-                        },
-                        "max_percentage": {
-                          "description": "Cumulative impact percentage at which top hit selection stops (above min_quantity)",
-                          "type": "number",
-                          "format": "float",
-                          "example": 98
-                        }
-                      },
-                      "type": "object",
-                      "additionalProperties": false
+                      "description": "Number of items flagged as top hits (top_hit=true) and tracked in top_hits_timeline.",
+                      "type": "integer",
+                      "example": 10
                     },
                     "_applications": {
                       "description": "Applied application filter values",
@@ -12508,7 +13387,7 @@
                           "example": 396519
                         },
                         "data": {
-                          "description": "List of items ranked by impact. At least _breakdown_top_hits.min_quantity items are tracked in top_hits_timeline, up to _breakdown_top_hits.max_quantity, stopping early once _breakdown_top_hits.max_percentage of total impact is covered.",
+                          "description": "List of items ranked by impact. Items with index < top_hits_count are tracked in top_hits_timeline (flagged with top_hit: true); the remainder are returned for reference only.",
                           "type": "array",
                           "items": {
                             "required": [
@@ -12801,7 +13680,7 @@
           "Http Traffic"
         ],
         "summary": "Get HTTP traffic timeline by user agent",
-        "description": "Returns HTTP traffic analytics grouped by User Agent with User Agents ranked by impact (response time × request count). Use limit parameter to control total items returned (default: 200, max: 300) and top_hits_count to control the upper cap on items tracked in timelines (default: 15, max: 15). At least _breakdown_top_hits.min_quantity User Agents are always tracked, plus additional User Agents up to top_hits_count while cumulative impact is below _breakdown_top_hits.max_percentage. Items have a top_hit boolean indicating whether they appear in timeline data.",
+        "description": "Returns HTTP traffic analytics grouped by User Agent with User Agents ranked by impact (response time × request count). Use limit parameter to control total items returned (default: 200, max: 300) and top_hits_count to control how many items are flagged as top hits and tracked in the timeline (default: 10, max: 15). Items with index < top_hits_count are flagged with top_hit: true and tracked in top_hits_timeline; the remainder (up to limit) are returned with top_hit: false.",
         "operationId": "http_metrics_timeline_user_agents",
         "parameters": [
           {
@@ -12863,7 +13742,7 @@
           {
             "name": "top_hits_count",
             "in": "query",
-            "description": "Upper cap on items tracked in timeline (default: 15, max: 15). When set below the default _breakdown_top_hits.min_quantity floor, the response min_quantity is reduced to match this cap.",
+            "description": "Number of items to flag as top hits and track in the timeline (default: 10, max: 15). Items with index < top_hits_count have top_hit=true; the remainder up to limit are returned with top_hit=false.",
             "required": false,
             "schema": {
               "type": "integer",
@@ -13144,32 +14023,9 @@
                       "example": 200
                     },
                     "_breakdown_top_hits": {
-                      "description": "Configuration for top hits selection. At least min_quantity items are tracked, up to max_quantity, stopping early once max_percentage of total impact is covered.",
-                      "required": [
-                        "min_quantity",
-                        "max_quantity",
-                        "max_percentage"
-                      ],
-                      "properties": {
-                        "min_quantity": {
-                          "description": "Minimum number of top hit items always tracked in timeline, regardless of cumulative impact",
-                          "type": "integer",
-                          "example": 10
-                        },
-                        "max_quantity": {
-                          "description": "Maximum number of top hit items tracked in timeline",
-                          "type": "integer",
-                          "example": 15
-                        },
-                        "max_percentage": {
-                          "description": "Cumulative impact percentage at which top hit selection stops (above min_quantity)",
-                          "type": "number",
-                          "format": "float",
-                          "example": 98
-                        }
-                      },
-                      "type": "object",
-                      "additionalProperties": false
+                      "description": "Number of items flagged as top hits (top_hit=true) and tracked in top_hits_timeline.",
+                      "type": "integer",
+                      "example": 10
                     },
                     "_applications": {
                       "description": "Applied application filter values",
@@ -13301,7 +14157,7 @@
                           "example": 396519
                         },
                         "data": {
-                          "description": "List of items ranked by impact. At least _breakdown_top_hits.min_quantity items are tracked in top_hits_timeline, up to _breakdown_top_hits.max_quantity, stopping early once _breakdown_top_hits.max_percentage of total impact is covered.",
+                          "description": "List of items ranked by impact. Items with index < top_hits_count are tracked in top_hits_timeline (flagged with top_hit: true); the remainder are returned for reference only.",
                           "type": "array",
                           "items": {
                             "required": [
@@ -13464,931 +14320,6 @@
                               "timestamp": 1704070800
                             }
                           ]
-                        }
-                      },
-                      "type": "object",
-                      "additionalProperties": false
-                    }
-                  },
-                  "type": "object",
-                  "additionalProperties": false
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request - Invalid parameters. Please consult the API documentation to fix the request parameters.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "required": [
-                    "type",
-                    "title",
-                    "status",
-                    "violations"
-                  ],
-                  "properties": {
-                    "type": {
-                      "description": "RFC 2616 reference URL identifying the error type",
-                      "type": "string",
-                      "format": "uri",
-                      "example": "https://tools.ietf.org/html/rfc2616#section-1"
-                    },
-                    "title": {
-                      "description": "Human-readable summary of the validation error",
-                      "type": "string",
-                      "example": "Please ensure parameters are correct."
-                    },
-                    "status": {
-                      "description": "HTTP status code",
-                      "type": "integer",
-                      "example": 400
-                    },
-                    "violations": {
-                      "description": "Map of parameter names to their validation errors. Each parameter can have multiple error messages.",
-                      "type": "object",
-                      "example": {
-                        "grain": [
-                          "Grain can not be larger than the selection windows."
-                        ],
-                        "from": [
-                          "The from timestamp must be in the past."
-                        ],
-                        "to": [
-                          "The to timestamp must be greater than the from timestamp."
-                        ]
-                      },
-                      "additionalProperties": {
-                        "type": "array",
-                        "items": {
-                          "type": "string",
-                          "example": "The from timestamp must be in the past."
-                        }
-                      }
-                    }
-                  },
-                  "type": "object",
-                  "additionalProperties": false
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden - Access denied due to insufficient permissions, or the requested project/environment does not exist (to prevent information disclosure)"
-          },
-          "499": {
-            "description": "Too much data fetched - The query is attempting to retrieve too much data. Please narrow down the query by reducing the time range or adding more specific filters to retrieve less data.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "required": [
-                    "error",
-                    "message"
-                  ],
-                  "properties": {
-                    "error": {
-                      "type": "string",
-                      "example": "Too much data fetched"
-                    },
-                    "message": {
-                      "type": "string",
-                      "example": "Please reduce the time range or add more filters to narrow down the query"
-                    }
-                  },
-                  "type": "object",
-                  "additionalProperties": false
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/projects/{projectId}/environments/{environmentId}/observability/http/breakdown/urls": {
-      "get": {
-        "tags": [
-          "Http Traffic"
-        ],
-        "summary": "Get HTTP traffic timeline by URL",
-        "description": "Returns HTTP traffic analytics with URLs ranked by impact (response time × request count), aggregated metrics (average, median, p96 response times in milliseconds), status code distributions, and time-series data. Use limit parameter to control total items returned (default: 200, max: 300) and top_hits_count to control the upper cap on items tracked in timelines (default: 15, max: 15). At least _breakdown_top_hits.min_quantity URLs are always tracked, plus additional URLs up to top_hits_count while cumulative impact is below _breakdown_top_hits.max_percentage. Items have a top_hit boolean indicating whether they appear in timeline data.",
-        "operationId": "http_metrics_timeline_urls",
-        "parameters": [
-          {
-            "name": "projectId",
-            "in": "path",
-            "description": "The unique identifier of the Upsun project",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "pattern": "[a-z0-9]+",
-              "example": "abc123def456"
-            }
-          },
-          {
-            "name": "environmentId",
-            "in": "path",
-            "description": "The environment identifier",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "pattern": ".+",
-              "example": "main"
-            }
-          },
-          {
-            "name": "from",
-            "in": "query",
-            "description": "Start timestamp for the time range (Unix timestamp in seconds)",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64",
-              "example": 1704067200
-            }
-          },
-          {
-            "name": "to",
-            "in": "query",
-            "description": "End timestamp for the time range (Unix timestamp in seconds)",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64",
-              "example": 1704153600
-            }
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "Maximum number of items to return (default: 200, max: 300)",
-            "required": false,
-            "schema": {
-              "type": "integer",
-              "default": null,
-              "maximum": 300,
-              "minimum": 1
-            }
-          },
-          {
-            "name": "top_hits_count",
-            "in": "query",
-            "description": "Upper cap on items tracked in timeline (default: 15, max: 15). When set below the default _breakdown_top_hits.min_quantity floor, the response min_quantity is reduced to match this cap.",
-            "required": false,
-            "schema": {
-              "type": "integer",
-              "default": null,
-              "maximum": 15,
-              "minimum": 1
-            }
-          },
-          {
-            "name": "applications[]",
-            "in": "query",
-            "description": "Filter by application. Can be specified multiple times for multiple values (e.g., ?applications[]=app1&applications[]=app2). Use applications_mode to control inclusion/exclusion behavior.",
-            "required": false,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "example": "app"
-              }
-            }
-          },
-          {
-            "name": "applications_mode",
-            "in": "query",
-            "description": "Filter mode for applications parameter. \"1\" (additive) includes only specified applications. \"-1\" (subtractive, default) excludes specified applications and includes all others.",
-            "required": false,
-            "schema": {
-              "type": "string",
-              "example": "1",
-              "default": null,
-              "enum": [
-                "1",
-                "-1"
-              ]
-            }
-          },
-          {
-            "name": "methods[]",
-            "in": "query",
-            "description": "Filter by HTTP methods. Can be specified multiple times for multiple values (e.g., ?methods[]=GET&methods[]=POST). Use methods_mode to control inclusion/exclusion behavior.",
-            "required": false,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "example": "GET",
-                "enum": [
-                  "GET",
-                  "POST",
-                  "PUT",
-                  "PATCH",
-                  "DELETE",
-                  "HEAD",
-                  "OPTIONS"
-                ]
-              }
-            }
-          },
-          {
-            "name": "methods_mode",
-            "in": "query",
-            "description": "Filter mode for methods parameter. \"1\" (additive) includes only specified methods. \"-1\" (subtractive, default) excludes specified methods and includes all others.",
-            "required": false,
-            "schema": {
-              "type": "string",
-              "example": "1",
-              "default": null,
-              "enum": [
-                "1",
-                "-1"
-              ]
-            }
-          },
-          {
-            "name": "domains[]",
-            "in": "query",
-            "description": "Filter by request domains/hosts. Can be specified multiple times for multiple values (e.g., ?domains[]=api.example.com&domains[]=www.example.com). Use domains_mode to control inclusion/exclusion behavior.",
-            "required": false,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "example": "api.example.com"
-              }
-            }
-          },
-          {
-            "name": "domains_mode",
-            "in": "query",
-            "description": "Filter mode for domains parameter. \"1\" (additive) includes only specified domains. \"-1\" (subtractive, default) excludes specified domains and includes all others.",
-            "required": false,
-            "schema": {
-              "type": "string",
-              "example": "1",
-              "default": null,
-              "enum": [
-                "1",
-                "-1"
-              ]
-            }
-          },
-          {
-            "name": "code_slots[]",
-            "in": "query",
-            "description": "Filter by HTTP status code groups. Can be specified multiple times for multiple values (e.g., ?code_slots[]=4XX&code_slots[]=5XX). Use code_slots_mode to control inclusion/exclusion behavior.",
-            "required": false,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "example": "2XX",
-                "enum": [
-                  "1XX",
-                  "2XX",
-                  "3XX",
-                  "4XX",
-                  "5XX"
-                ]
-              }
-            }
-          },
-          {
-            "name": "code_slots_mode",
-            "in": "query",
-            "description": "Filter mode for code_slots parameter. \"1\" (additive) includes only specified code groups. \"-1\" (subtractive, default) excludes specified code groups and includes all others.",
-            "required": false,
-            "schema": {
-              "type": "string",
-              "example": "1",
-              "default": null,
-              "enum": [
-                "1",
-                "-1"
-              ]
-            }
-          },
-          {
-            "name": "codes[]",
-            "in": "query",
-            "description": "Filter by specific HTTP status codes. Can be specified multiple times for multiple values (e.g., ?codes[]=200&codes[]=404). Use codes_mode to control inclusion/exclusion behavior.",
-            "required": false,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "example": "200"
-              }
-            }
-          },
-          {
-            "name": "codes_mode",
-            "in": "query",
-            "description": "Filter mode for codes parameter. \"1\" (additive) includes only specified codes. \"-1\" (subtractive, default) excludes specified codes and includes all others.",
-            "required": false,
-            "schema": {
-              "type": "string",
-              "example": "1",
-              "default": null,
-              "enum": [
-                "1",
-                "-1"
-              ]
-            }
-          },
-          {
-            "name": "request_duration_slots[]",
-            "in": "query",
-            "description": "Filter by response time ranges (in milliseconds). Can be specified multiple times for multiple values (e.g., ?request_duration_slots[]=0-50&request_duration_slots[]=1600+). Use request_duration_slots_mode to control inclusion/exclusion behavior.",
-            "required": false,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "example": "0-50",
-                "enum": [
-                  "0-50",
-                  "50-100",
-                  "100-200",
-                  "200-400",
-                  "400-800",
-                  "800-1600",
-                  "1600+"
-                ]
-              }
-            }
-          },
-          {
-            "name": "request_duration_slots_mode",
-            "in": "query",
-            "description": "Filter mode for request_duration_slots parameter. \"1\" (additive) includes only specified duration ranges. \"-1\" (subtractive, default) excludes specified duration ranges and includes all others.",
-            "required": false,
-            "schema": {
-              "type": "string",
-              "example": "1",
-              "default": null,
-              "enum": [
-                "1",
-                "-1"
-              ]
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "HTTP traffic overview retrieved successfully",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "required": [
-                    "_grain",
-                    "_from",
-                    "_to",
-                    "_project_id",
-                    "_environment_id",
-                    "_environment_type",
-                    "_branch_machine_name",
-                    "_breakdown_limit",
-                    "_breakdown_top_hits",
-                    "breakdown",
-                    "top_hits_timeline",
-                    "filters"
-                  ],
-                  "properties": {
-                    "_grain": {
-                      "description": "Data granularity in seconds",
-                      "type": "integer",
-                      "example": 5
-                    },
-                    "_from": {
-                      "description": "Query start timestamp",
-                      "type": "integer",
-                      "example": 1704067200
-                    },
-                    "_to": {
-                      "description": "Query end timestamp",
-                      "type": "integer",
-                      "example": 1704153600
-                    },
-                    "_project_id": {
-                      "description": "Project identifier",
-                      "type": "string",
-                      "example": "abc123def456"
-                    },
-                    "_environment_id": {
-                      "description": "Environment identifier",
-                      "type": "string",
-                      "example": "main"
-                    },
-                    "_environment_type": {
-                      "description": "Environment type",
-                      "type": "string",
-                      "example": "production",
-                      "enum": [
-                        "production",
-                        "staging",
-                        "development"
-                      ]
-                    },
-                    "_branch_machine_name": {
-                      "description": "Branch machine name",
-                      "type": "string",
-                      "example": "main-bvxea6i"
-                    },
-                    "_breakdown_limit": {
-                      "description": "Maximum number of items returned",
-                      "type": "integer",
-                      "example": 200
-                    },
-                    "_breakdown_top_hits": {
-                      "description": "Configuration for top hits selection. At least min_quantity items are tracked, up to max_quantity, stopping early once max_percentage of total impact is covered.",
-                      "required": [
-                        "min_quantity",
-                        "max_quantity",
-                        "max_percentage"
-                      ],
-                      "properties": {
-                        "min_quantity": {
-                          "description": "Minimum number of top hit items always tracked in timeline, regardless of cumulative impact",
-                          "type": "integer",
-                          "example": 10
-                        },
-                        "max_quantity": {
-                          "description": "Maximum number of top hit items tracked in timeline",
-                          "type": "integer",
-                          "example": 15
-                        },
-                        "max_percentage": {
-                          "description": "Cumulative impact percentage at which top hit selection stops (above min_quantity)",
-                          "type": "number",
-                          "format": "float",
-                          "example": 98
-                        }
-                      },
-                      "type": "object",
-                      "additionalProperties": false
-                    },
-                    "_applications": {
-                      "description": "Applied application filter values",
-                      "type": "array",
-                      "items": {
-                        "type": "string",
-                        "example": "app"
-                      },
-                      "nullable": true
-                    },
-                    "_applications_mode": {
-                      "description": "Application filter mode (1=additive, -1=subtractive)",
-                      "type": "string",
-                      "nullable": true,
-                      "enum": [
-                        "1",
-                        "-1"
-                      ]
-                    },
-                    "_methods": {
-                      "description": "Applied method filter values",
-                      "type": "array",
-                      "items": {
-                        "type": "string",
-                        "example": "GET"
-                      },
-                      "nullable": true
-                    },
-                    "_methods_mode": {
-                      "description": "Method filter mode (1=additive, -1=subtractive)",
-                      "type": "string",
-                      "nullable": true,
-                      "enum": [
-                        "1",
-                        "-1"
-                      ]
-                    },
-                    "_domains": {
-                      "description": "Applied domain filter values",
-                      "type": "array",
-                      "items": {
-                        "type": "string",
-                        "example": "example.com"
-                      },
-                      "nullable": true
-                    },
-                    "_domains_mode": {
-                      "description": "Domain filter mode (1=additive, -1=subtractive)",
-                      "type": "string",
-                      "nullable": true,
-                      "enum": [
-                        "1",
-                        "-1"
-                      ]
-                    },
-                    "_code_slots": {
-                      "description": "Applied code slot filter values",
-                      "type": "array",
-                      "items": {
-                        "type": "string",
-                        "example": "2XX"
-                      },
-                      "nullable": true
-                    },
-                    "_code_slots_mode": {
-                      "description": "Code slot filter mode (1=additive, -1=subtractive)",
-                      "type": "string",
-                      "nullable": true,
-                      "enum": [
-                        "1",
-                        "-1"
-                      ]
-                    },
-                    "_codes": {
-                      "description": "Applied HTTP status code filter values",
-                      "type": "array",
-                      "items": {
-                        "type": "string",
-                        "example": "200"
-                      },
-                      "nullable": true
-                    },
-                    "_codes_mode": {
-                      "description": "Code filter mode (1=additive, -1=subtractive)",
-                      "type": "string",
-                      "nullable": true,
-                      "enum": [
-                        "1",
-                        "-1"
-                      ]
-                    },
-                    "_request_duration_slots": {
-                      "description": "Applied request duration slot filter values",
-                      "type": "array",
-                      "items": {
-                        "type": "string",
-                        "example": "0-100"
-                      },
-                      "nullable": true
-                    },
-                    "_request_duration_slots_mode": {
-                      "description": "Request duration slot filter mode (1=additive, -1=subtractive)",
-                      "type": "string",
-                      "nullable": true,
-                      "enum": [
-                        "1",
-                        "-1"
-                      ]
-                    },
-                    "breakdown": {
-                      "description": "URLs ranked by impact",
-                      "required": [
-                        "kind",
-                        "total",
-                        "data"
-                      ],
-                      "properties": {
-                        "kind": {
-                          "description": "The kind of grouping",
-                          "type": "string",
-                          "example": "url",
-                          "enum": [
-                            "url"
-                          ]
-                        },
-                        "total": {
-                          "description": "Total request count across all URLs",
-                          "type": "integer",
-                          "example": 396519
-                        },
-                        "data": {
-                          "description": "List of URLs ranked by impact. At least _breakdown_top_hits.min_quantity items are tracked in top_hits_timeline, up to _breakdown_top_hits.max_quantity, stopping early once _breakdown_top_hits.max_percentage of total impact is covered.",
-                          "type": "array",
-                          "items": {
-                            "required": [
-                              "url",
-                              "method",
-                              "impact",
-                              "average",
-                              "p_50",
-                              "p_96",
-                              "count",
-                              "top_hit"
-                            ],
-                            "properties": {
-                              "url": {
-                                "description": "Request URL",
-                                "type": "string",
-                                "example": "https://example.com/api/products"
-                              },
-                              "method": {
-                                "description": "HTTP method",
-                                "type": "string",
-                                "example": "GET",
-                                "enum": [
-                                  "GET",
-                                  "POST",
-                                  "PUT",
-                                  "PATCH",
-                                  "DELETE",
-                                  "HEAD",
-                                  "OPTIONS"
-                                ]
-                              },
-                              "impact": {
-                                "description": "Performance impact score (ms x count)",
-                                "type": "number",
-                                "format": "float",
-                                "example": 15234.67,
-                                "nullable": true
-                              },
-                              "average": {
-                                "description": "Average response time in milliseconds",
-                                "type": "number",
-                                "format": "float",
-                                "example": 245.3
-                              },
-                              "p_50": {
-                                "description": "Median (50th percentile) response time in milliseconds",
-                                "type": "number",
-                                "format": "float",
-                                "example": 198.5
-                              },
-                              "p_96": {
-                                "description": "96th percentile response time in milliseconds",
-                                "type": "number",
-                                "format": "float",
-                                "example": 512.8
-                              },
-                              "count": {
-                                "description": "Total number of requests",
-                                "type": "integer",
-                                "example": 62143
-                              },
-                              "top_hit": {
-                                "description": "Whether this URL is tracked in top_hits_timeline",
-                                "type": "boolean",
-                                "example": true
-                              }
-                            },
-                            "type": "object",
-                            "additionalProperties": false
-                          },
-                          "example": [
-                            {
-                              "url": "https://example.com/api/products",
-                              "method": "GET",
-                              "impact": 15234.67,
-                              "average": 245.3,
-                              "p_50": 198.5,
-                              "p_96": 512.8,
-                              "count": 62143,
-                              "top_hit": true
-                            },
-                            {
-                              "url": "https://example.com/api/orders",
-                              "method": "POST",
-                              "impact": 6543.21,
-                              "average": 312.5,
-                              "p_50": 267.8,
-                              "p_96": 678.4,
-                              "count": 20945,
-                              "top_hit": false
-                            }
-                          ]
-                        }
-                      },
-                      "type": "object",
-                      "additionalProperties": false
-                    },
-                    "top_hits_timeline": {
-                      "description": "Time-series data for top hit URLs",
-                      "required": [
-                        "data"
-                      ],
-                      "properties": {
-                        "data": {
-                          "description": "Time-series HTTP traffic metrics for top hit URLs. Fields are omitted for timestamps with no data.",
-                          "type": "array",
-                          "items": {
-                            "required": [
-                              "timestamp"
-                            ],
-                            "properties": {
-                              "timestamp": {
-                                "description": "Data point timestamp",
-                                "type": "integer",
-                                "example": 1704067200
-                              },
-                              "_total_consumed": {
-                                "description": "Total wall-time consumed across all URLs at this interval",
-                                "type": "number",
-                                "format": "float",
-                                "example": 5678.9
-                              },
-                              "_total_count": {
-                                "description": "Total request count at this timestamp",
-                                "type": "integer",
-                                "example": 4120
-                              },
-                              "request_size": {
-                                "description": "Total request payload size in bytes",
-                                "type": "integer",
-                                "example": 524288
-                              },
-                              "response_size": {
-                                "description": "Total response payload size in bytes",
-                                "type": "integer",
-                                "example": 2097152
-                              },
-                              "urls": {
-                                "description": "Per-URL metrics at this timestamp. Only includes top hit items.",
-                                "type": "object",
-                                "example": {
-                                  "GET-https://example.com/api/products": {
-                                    "count": 1543,
-                                    "impact": 378.45
-                                  }
-                                },
-                                "additionalProperties": {
-                                  "required": [
-                                    "count",
-                                    "impact"
-                                  ],
-                                  "properties": {
-                                    "count": {
-                                      "description": "Request count for this URL",
-                                      "type": "integer",
-                                      "example": 1543
-                                    },
-                                    "impact": {
-                                      "description": "Performance impact score",
-                                      "type": "number",
-                                      "format": "float",
-                                      "example": 378.45,
-                                      "nullable": true
-                                    }
-                                  },
-                                  "type": "object",
-                                  "additionalProperties": false
-                                }
-                              },
-                              "codes": {
-                                "description": "HTTP status code distribution",
-                                "required": [
-                                  "UNKNOWN",
-                                  "1XX",
-                                  "2XX",
-                                  "3XX",
-                                  "4XX",
-                                  "5XX"
-                                ],
-                                "properties": {
-                                  "UNKNOWN": {
-                                    "description": "Count of unknown/unclassified status codes",
-                                    "type": "integer",
-                                    "example": 0
-                                  },
-                                  "1XX": {
-                                    "description": "Count of informational responses (100-199)",
-                                    "type": "integer",
-                                    "example": 0
-                                  },
-                                  "2XX": {
-                                    "description": "Count of successful responses (200-299)",
-                                    "type": "integer",
-                                    "example": 58234
-                                  },
-                                  "3XX": {
-                                    "description": "Count of redirect responses (300-399)",
-                                    "type": "integer",
-                                    "example": 1245
-                                  },
-                                  "4XX": {
-                                    "description": "Count of client error responses (400-499)",
-                                    "type": "integer",
-                                    "example": 847
-                                  },
-                                  "5XX": {
-                                    "description": "Count of server error responses (500-599)",
-                                    "type": "integer",
-                                    "example": 23
-                                  }
-                                },
-                                "type": "object",
-                                "additionalProperties": false
-                              }
-                            },
-                            "type": "object",
-                            "additionalProperties": false
-                          },
-                          "example": [
-                            {
-                              "timestamp": 1704067200,
-                              "_total_consumed": 5678.9,
-                              "_total_count": 1543,
-                              "request_size": 524288,
-                              "response_size": 2097152,
-                              "urls": {
-                                "GET-https://example.com/api/products": {
-                                  "count": 1543,
-                                  "impact": 378.45
-                                }
-                              },
-                              "codes": {
-                                "UNKNOWN": 0,
-                                "1XX": 0,
-                                "2XX": 1543,
-                                "3XX": 0,
-                                "4XX": 0,
-                                "5XX": 0
-                              }
-                            },
-                            {
-                              "timestamp": 1704070800
-                            }
-                          ]
-                        }
-                      },
-                      "type": "object",
-                      "additionalProperties": false
-                    },
-                    "filters": {
-                      "required": [
-                        "max_applicable_filters"
-                      ],
-                      "properties": {
-                        "fields": {
-                          "type": "object",
-                          "example": {
-                            "severity": {
-                              "distinct_values": 3,
-                              "type": "string",
-                              "values": [
-                                {
-                                  "value": "INFO",
-                                  "count": 297
-                                },
-                                {
-                                  "value": "ERROR",
-                                  "count": 2
-                                }
-                              ]
-                            }
-                          },
-                          "additionalProperties": {
-                            "required": [
-                              "distinct_values",
-                              "type",
-                              "values"
-                            ],
-                            "properties": {
-                              "distinct_values": {
-                                "type": "integer",
-                                "example": 5
-                              },
-                              "type": {
-                                "type": "string",
-                                "example": "string"
-                              },
-                              "values": {
-                                "type": "array",
-                                "items": {
-                                  "required": [
-                                    "value",
-                                    "count"
-                                  ],
-                                  "properties": {
-                                    "value": {
-                                      "type": "string",
-                                      "example": "INFO"
-                                    },
-                                    "count": {
-                                      "type": "integer",
-                                      "example": 297
-                                    }
-                                  },
-                                  "type": "object",
-                                  "additionalProperties": false
-                                }
-                              }
-                            },
-                            "type": "object",
-                            "additionalProperties": false
-                          }
-                        },
-                        "max_applicable_filters": {
-                          "type": "integer",
-                          "example": 45
                         }
                       },
                       "type": "object",
@@ -25676,6 +25607,39 @@
         }
       }
     },
+    "/organizations/{organization_id}/projects/provisioning": {
+      "get": {
+        "summary": "Stream provisioning progress",
+        "description": "Streams real-time provisioning progress for projects being created in the\nspecified organization. The response is an NDJSON stream where each line\nis a JSON object representing a provisioning event.\n\nThe stream emits events as provisioning stages complete and terminates\nautomatically when all in-flight projects finish (or fail). A keep-alive\nevent is sent periodically to prevent connection timeouts.\n\nThe body is a newline-delimited stream of JSON objects.\nEach line is a single `ProvisionEvent`.\n\nThe `data`, `done`, and `error` events include a `steps` array listing the ordered provisioning steps.\n\nEvent types:\n- `data` — a provisioning stage completed\n- `done` — provisioning finished successfully\n- `error` — provisioning failed\n- `keep_alive` — connection keep-alive\n",
+        "operationId": "stream-org-project-provisioning",
+        "tags": [
+          "Organization Projects"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/OrganizationID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/x-ndjson": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProvisionEvent"
+                }
+              }
+            }
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
     "/organizations/{organization_id}/projects/{project_id}": {
       "get": {
         "summary": "Get project",
@@ -25801,6 +25765,63 @@
           },
           "503": {
             "$ref": "#/components/responses/ServiceUnavailable"
+          }
+        }
+      }
+    },
+    "/organizations/{organization_id}/projects/{project_id}/history": {
+      "get": {
+        "summary": "List project history",
+        "description": "Retrieves history records for the specified project, oldest first.",
+        "operationId": "list-org-project-history",
+        "tags": [
+          "Projects"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/OrganizationID"
+          },
+          {
+            "$ref": "#/components/parameters/ProjectID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "count": {
+                      "type": "integer",
+                      "description": "Total number of items returned."
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/History"
+                      }
+                    },
+                    "_links": {
+                      "$ref": "#/components/schemas/ListLinks"
+                    }
+                  },
+                  "additionalProperties": false,
+                  "required": [
+                    "count",
+                    "items",
+                    "_links"
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
           }
         }
       }
@@ -29041,69 +29062,6 @@
           }
         }
       },
-      "OrganizationSSOConfig": {
-        "description": "The SSO configuration for the organization.",
-        "type": "object",
-        "allOf": [
-          {
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/GoogleSSOConfig"
-              }
-            ]
-          },
-          {
-            "type": "object",
-            "properties": {
-              "organization_id": {
-                "type": "string",
-                "description": "Organization ID."
-              },
-              "enforced": {
-                "type": "boolean",
-                "description": "Whether the configuration is enforced for all the organization members."
-              },
-              "created_at": {
-                "type": "string",
-                "description": "The date and time when the SSO configuration was created.",
-                "format": "date-time"
-              },
-              "updated_at": {
-                "type": "string",
-                "format": "date-time",
-                "description": "The date and time when the SSO configuration was last updated."
-              }
-            }
-          }
-        ],
-        "x-examples": {
-          "example-1": {
-            "organization_id": "01EY8BWRSQ56EY1TDC32PARAJS",
-            "provider_type": "google",
-            "domain": "example.com",
-            "enforced": true,
-            "created_at": "2021-05-24T07:20:35.683264Z",
-            "updated_at": "2021-05-24T07:20:35.683264Z"
-          }
-        }
-      },
-      "GoogleSSOConfig": {
-        "type": "object",
-        "title": "GoogleSSO",
-        "properties": {
-          "provider_type": {
-            "type": "string",
-            "description": "SSO provider type.",
-            "enum": [
-              "google"
-            ]
-          },
-          "domain": {
-            "type": "string",
-            "description": "Google hosted domain."
-          }
-        }
-      },
       "Team": {
         "description": "",
         "type": "object",
@@ -32161,12 +32119,19 @@
                           "nullable": true,
                           "title": "Storage",
                           "description": ""
+                        },
+                        "object": {
+                          "type": "integer",
+                          "nullable": true,
+                          "title": "Object storage size",
+                          "description": ""
                         }
                       },
                       "required": [
                         "temporary",
                         "instance",
-                        "storage"
+                        "storage",
+                        "object"
                       ],
                       "additionalProperties": false,
                       "nullable": true,
@@ -32220,6 +32185,42 @@
                   },
                   "title": "Access Information",
                   "description": "Access information, a mapping between access type and roles."
+                },
+                "authorizations": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "env",
+                          "task"
+                        ],
+                        "title": "Authorization Type",
+                        "description": "The resource type for this authorization."
+                      },
+                      "action": {
+                        "type": "string",
+                        "title": "Authorization Action",
+                        "description": "The action to authorize on the target resource."
+                      },
+                      "resource": {
+                        "type": "string",
+                        "nullable": true,
+                        "title": "Authorization Resource",
+                        "description": "The target resource for this authorization."
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "action",
+                      "resource"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "title": "Authorizations",
+                  "description": "Authorizations available to this container."
                 },
                 "relationships": {
                   "type": "object",
@@ -33017,6 +33018,7 @@
                 "size",
                 "disk",
                 "access",
+                "authorizations",
                 "relationships",
                 "additional_hosts",
                 "mounts",
@@ -33252,6 +33254,42 @@
                   },
                   "title": "Access Information",
                   "description": "Access information, a mapping between access type and roles."
+                },
+                "authorizations": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "env",
+                          "task"
+                        ],
+                        "title": "Authorization Type",
+                        "description": "The resource type for this authorization."
+                      },
+                      "action": {
+                        "type": "string",
+                        "title": "Authorization Action",
+                        "description": "The action to authorize on the target resource."
+                      },
+                      "resource": {
+                        "type": "string",
+                        "nullable": true,
+                        "title": "Authorization Resource",
+                        "description": "The target resource for this authorization."
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "action",
+                      "resource"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "title": "Authorizations",
+                  "description": "Authorizations available to this container."
                 },
                 "relationships": {
                   "type": "object",
@@ -33649,6 +33687,7 @@
                 "size",
                 "disk",
                 "access",
+                "authorizations",
                 "relationships",
                 "additional_hosts",
                 "mounts",
@@ -33715,6 +33754,38 @@
             },
             "title": "Container profiles",
             "description": "The profiles of the containers"
+          },
+          "tasks": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "resources": {
+                  "type": "object",
+                  "properties": {
+                    "profile_size": {
+                      "type": "string",
+                      "nullable": true,
+                      "title": "Profile size",
+                      "description": "Profile size of the service."
+                    }
+                  },
+                  "required": [
+                    "profile_size"
+                  ],
+                  "additionalProperties": false,
+                  "nullable": true,
+                  "title": "Resources",
+                  "description": ""
+                }
+              },
+              "required": [
+                "resources"
+              ],
+              "additionalProperties": false
+            },
+            "title": "Tasks",
+            "description": "The tasks sizing (applied at task run time)"
           }
         },
         "required": [
@@ -33734,7 +33805,8 @@
           "routes",
           "webapps",
           "workers",
-          "container_profiles"
+          "container_profiles",
+          "tasks"
         ],
         "additionalProperties": false
       },
@@ -34689,12 +34761,45 @@
                 },
                 "title": "Workers",
                 "description": ""
+              },
+              "tasks": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "properties": {
+                    "resources": {
+                      "type": "object",
+                      "properties": {
+                        "profile_size": {
+                          "type": "string",
+                          "nullable": true,
+                          "title": "Profile size",
+                          "description": "Profile size of the service."
+                        }
+                      },
+                      "required": [
+                        "profile_size"
+                      ],
+                      "additionalProperties": false,
+                      "nullable": true,
+                      "title": "Resources",
+                      "description": ""
+                    }
+                  },
+                  "required": [
+                    "resources"
+                  ],
+                  "additionalProperties": false
+                },
+                "title": "Tasks",
+                "description": ""
               }
             },
             "required": [
               "services",
               "webapps",
-              "workers"
+              "workers",
+              "tasks"
             ],
             "additionalProperties": false,
             "nullable": true,
@@ -38350,6 +38455,34 @@
             "title": "Build Resources",
             "description": ""
           },
+          "object_storage": {
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "type": "boolean",
+                "title": "Enabled",
+                "description": "If true, implicit object-storage can be used."
+              },
+              "min_storage": {
+                "type": "integer",
+                "title": "Minimum storage",
+                "description": "Lower bound for the size of implicit object-storage on the project, in MiB."
+              },
+              "max_storage": {
+                "type": "integer",
+                "title": "Maximum storage",
+                "description": "Upper bound for the size of implicit object-storage on the project, in MiB."
+              }
+            },
+            "required": [
+              "enabled",
+              "min_storage",
+              "max_storage"
+            ],
+            "additionalProperties": false,
+            "title": "Object Storage",
+            "description": ""
+          },
           "data_retention": {
             "type": "object",
             "properties": {
@@ -38747,6 +38880,7 @@
           "images",
           "instance_limit",
           "build_resources",
+          "object_storage",
           "data_retention",
           "autoscaling"
         ],
@@ -41392,6 +41526,42 @@
             "title": "Environment Variables",
             "description": "Variables provide environment-sensitive information to control how your task behaves"
           },
+          "authorizations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "env",
+                    "task"
+                  ],
+                  "title": "Authorization Type",
+                  "description": "The resource type for this authorization."
+                },
+                "action": {
+                  "type": "string",
+                  "title": "Authorization Action",
+                  "description": "The action to authorize on the target resource."
+                },
+                "resource": {
+                  "type": "string",
+                  "nullable": true,
+                  "title": "Authorization Resource",
+                  "description": "The target resource for this authorization."
+                }
+              },
+              "required": [
+                "type",
+                "action",
+                "resource"
+              ],
+              "additionalProperties": false
+            },
+            "title": "Authorizations",
+            "description": "Authorizations available to this task"
+          },
           "run": {
             "type": "object",
             "properties": {
@@ -41414,6 +41584,35 @@
             "title": "Run Configuration",
             "description": "Configuration for task execution"
           },
+          "resources": {
+            "type": "object",
+            "properties": {
+              "base_memory": {
+                "type": "integer",
+                "title": "Base memory",
+                "description": "The base memory for the container"
+              },
+              "memory_ratio": {
+                "type": "integer",
+                "title": "Memory ratio",
+                "description": "The amount of memory to allocate per units of CPU"
+              }
+            },
+            "required": [
+              "base_memory",
+              "memory_ratio"
+            ],
+            "additionalProperties": false,
+            "nullable": true,
+            "title": "Resources",
+            "description": "Resources configuration (base memory and memory ratio)"
+          },
+          "container_profile": {
+            "type": "string",
+            "nullable": true,
+            "title": "Container Profile",
+            "description": "Selected container profile for the task"
+          },
           "name": {
             "type": "string",
             "title": "Task name",
@@ -41428,7 +41627,10 @@
           "relationships",
           "mounts",
           "variables",
+          "authorizations",
           "run",
+          "resources",
+          "container_profile",
           "name"
         ],
         "additionalProperties": false
@@ -43686,6 +43888,73 @@
           }
         }
       },
+      "ProvisionStep": {
+        "type": "object",
+        "description": "A single step in the provisioning plan.",
+        "required": [
+          "stage",
+          "label"
+        ],
+        "properties": {
+          "stage": {
+            "type": "string",
+            "description": "The step identifier."
+          },
+          "label": {
+            "type": "string",
+            "description": "A human-readable label for the step."
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProvisionEvent": {
+        "type": "object",
+        "description": "A single event in the provisioning progress stream.",
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The event type.",
+            "enum": [
+              "data",
+              "done",
+              "error",
+              "keep_alive"
+            ]
+          },
+          "project_id": {
+            "type": "string",
+            "description": "The ID of the project being provisioned."
+          },
+          "stage": {
+            "type": "string",
+            "description": "The current provisioning stage."
+          },
+          "label": {
+            "type": "string",
+            "description": "A human-readable label for the current stage."
+          },
+          "reason": {
+            "type": "string",
+            "description": "The reason for failure (only present on error events)."
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The time the event was emitted."
+          },
+          "steps": {
+            "type": "array",
+            "description": "Ordered list of provisioning steps.",
+            "items": {
+              "$ref": "#/components/schemas/ProvisionStep"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
       "OrganizationProject": {
         "type": "object",
         "properties": {
@@ -43918,172 +44187,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "ProjectAddon": {
-        "description": "Project add-on. Uses discriminator on `type` to select field shape.",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/ProjectAddonBase"
-          },
-          {
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/ProjectAddonWithSkuFields"
-              },
-              {
-                "$ref": "#/components/schemas/ProjectAddonWithQuantityFields"
-              }
-            ]
-          }
-        ],
-        "discriminator": {
-          "propertyName": "type",
-          "mapping": {
-            "backups": "#/components/schemas/ProjectAddonWithSkuFields",
-            "big_dev": "#/components/schemas/ProjectAddonWithSkuFields",
-            "big_dev_service": "#/components/schemas/ProjectAddonWithSkuFields",
-            "blackfire": "#/components/schemas/ProjectAddonWithSkuFields",
-            "continuous_profiling": "#/components/schemas/ProjectAddonWithSkuFields",
-            "project_support_level": "#/components/schemas/ProjectAddonWithSkuFields",
-            "observability_suite": "#/components/schemas/ProjectAddonWithSkuFields",
-            "user_licenses": "#/components/schemas/ProjectAddonWithQuantityFields",
-            "hipaa": "#/components/schemas/ProjectAddonWithSkuFields",
-            "environments": "#/components/schemas/ProjectAddonWithQuantityFields",
-            "storage": "#/components/schemas/ProjectAddonWithQuantityFields"
-          }
-        }
-      },
-      "ProjectAddonBase": {
-        "type": "object",
-        "required": [
-          "id",
-          "type"
-        ],
-        "properties": {
-          "id": {
-            "$ref": "#/components/schemas/ProjectAddonID"
-          },
-          "project_id": {
-            "$ref": "#/components/schemas/ProjectID"
-          },
-          "type": {
-            "$ref": "#/components/schemas/AddonType"
-          },
-          "status": {
-            "type": "string",
-            "description": "Lifecycle status of the add-on.",
-            "enum": [
-              "requested",
-              "active",
-              "failed"
-            ]
-          },
-          "title": {
-            "type": "string",
-            "description": "Human-friendly title of the add-on or SKU."
-          },
-          "unit": {
-            "type": "string",
-            "nullable": true,
-            "description": "Unit for quantity-based add-ons when applicable."
-          },
-          "allowed_values": {
-            "description": "Allowed values for the add-on depending on user role and options.",
-            "type": "array",
-            "nullable": true,
-            "items": {
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
-            }
-          },
-          "created_at": {
-            "$ref": "#/components/schemas/CreatedAt"
-          },
-          "updated_at": {
-            "$ref": "#/components/schemas/UpdatedAt"
-          },
-          "activities": {
-            "description": "Activities related to the add-on.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Activity"
-            },
-            "nullable": true
-          },
-          "_links": {
-            "type": "object",
-            "properties": {
-              "self": {
-                "type": "object",
-                "description": "Link to the current add-on.",
-                "properties": {
-                  "href": {
-                    "type": "string",
-                    "description": "URL of the link."
-                  }
-                }
-              },
-              "update": {
-                "type": "object",
-                "nullable": true,
-                "description": "Link for updating the current add-on.",
-                "properties": {
-                  "href": {
-                    "type": "string",
-                    "description": "URL of the link."
-                  },
-                  "method": {
-                    "type": "string",
-                    "description": "The HTTP method to use."
-                  }
-                }
-              },
-              "delete": {
-                "type": "object",
-                "nullable": true,
-                "description": "Link for deleting the current add-on.",
-                "properties": {
-                  "href": {
-                    "type": "string",
-                    "description": "URL of the link."
-                  },
-                  "method": {
-                    "type": "string",
-                    "description": "The HTTP method to use."
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "ProjectAddonWithSkuFields": {
-        "type": "object",
-        "required": [
-          "sku"
-        ],
-        "properties": {
-          "sku": {
-            "$ref": "#/components/schemas/ProjectAddonSKU"
-          }
-        }
-      },
-      "ProjectAddonWithQuantityFields": {
-        "type": "object",
-        "required": [
-          "quantity"
-        ],
-        "properties": {
-          "quantity": {
-            "$ref": "#/components/schemas/ProjectAddonQuantity"
-          }
-        }
       },
       "ProjectCarbon": {
         "type": "object",
@@ -44327,22 +44430,6 @@
         },
         "additionalProperties": false
       },
-      "AddonType": {
-        "type": "string",
-        "description": "The type of the add-on."
-      },
-      "ProjectAddonID": {
-        "type": "string",
-        "description": "The ID of the add-on."
-      },
-      "ProjectAddonSKU": {
-        "type": "string",
-        "description": "The SKU of the add-on."
-      },
-      "ProjectAddonQuantity": {
-        "type": "integer",
-        "description": "The quantity of the add-on."
-      },
       "ProjectID": {
         "type": "string",
         "description": "The ID of the project."
@@ -44566,6 +44653,49 @@
       "CarbonTotal": {
         "type": "number",
         "description": "The calculated total of the metric for the given interval."
+      },
+      "History": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier of the history record."
+          },
+          "project_id": {
+            "type": "string",
+            "description": "The ID of the project."
+          },
+          "event_type": {
+            "type": "string",
+            "description": "The type of event that triggered the record."
+          },
+          "event_id": {
+            "type": "string",
+            "description": "The ID of the event."
+          },
+          "resource": {
+            "type": "string",
+            "description": "The resource type (e.g., cpu_app, memory_services, storage)."
+          },
+          "environment": {
+            "type": "string",
+            "description": "The environment name."
+          },
+          "quantity": {
+            "type": "string",
+            "description": "The quantity of the resource."
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The timestamp when the record was created."
+          },
+          "user": {
+            "type": "string",
+            "description": "The ID of the user who triggered the event."
+          }
+        },
+        "additionalProperties": false
       },
       "CreatedAt": {
         "type": "string",
