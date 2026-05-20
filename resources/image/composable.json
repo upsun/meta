@@ -24,16 +24,16 @@
             "versions": [
               "1"
             ],
-            "name": "",
-            "url": "https://",
+            "name": "Javascript/Bun",
+            "url": "https://bun.sh/",
             "isExternal": true
           },
           "clojure": {
             "versions": [
               "1"
             ],
-            "name": "",
-            "url": "https://",
+            "name": "Clojure",
+            "url": "https://clojure.org/",
             "isExternal": true
           },
           "elixir": {
@@ -42,27 +42,27 @@
               "1.18",
               "1.19"
             ],
-            "name": "",
-            "url": "https://",
-            "isExternal": true
+            "name": "Elixir",
+            "url": "/docs/languages/elixir",
+            "isExternal": false
           },
           "golang": {
             "versions": [
               "1.24",
               "1.25"
             ],
-            "name": "",
-            "url": "https://",
-            "isExternal": true
+            "name": "Go",
+            "url": "/docs/languages/go",
+            "isExternal": false
           },
           "java": {
             "versions": [
               "21",
               "25"
             ],
-            "name": "",
-            "url": "https://",
-            "isExternal": true
+            "name": "Java",
+            "url": "/docs/languages/java",
+            "isExternal": false
           },
           "nodejs": {
             "versions": [
@@ -70,16 +70,16 @@
               "22",
               "24"
             ],
-            "name": "",
-            "url": "https://",
-            "isExternal": true
+            "name": "Javascript/Node.js",
+            "url": "/docs/languages/nodejs",
+            "isExternal": false
           },
           "perl": {
             "versions": [
               "5"
             ],
-            "name": "",
-            "url": "https://",
+            "name": "Perl",
+            "url": "https://www.perl.org/",
             "isExternal": true
           },
           "php": {
@@ -89,9 +89,9 @@
               "8.4",
               "8.5"
             ],
-            "name": "",
-            "url": "https://",
-            "isExternal": true
+            "name": "PHP",
+            "url": "/docs/languages/php",
+            "isExternal": false
           },
           "python": {
             "versions": [
@@ -99,9 +99,9 @@
               "3.12",
               "3.13"
             ],
-            "name": "",
-            "url": "https://",
-            "isExternal": true
+            "name": "Python",
+            "url": "/docs/languages/python",
+            "isExternal": false
           },
           "ruby": {
             "versions": [
@@ -109,16 +109,16 @@
               "3.4",
               "4.0"
             ],
-            "name": "",
-            "url": "https://",
-            "isExternal": true
+            "name": "Ruby",
+            "url": "/docs/languages/ruby",
+            "isExternal": false
           },
           "sbcl": {
             "versions": [
               "2"
             ],
-            "name": "",
-            "url": "https://",
+            "name": "Common List/SBCL",
+            "url": "http://www.list-lang.org/",
             "isExternal": true
           }
         }
