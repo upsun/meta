@@ -256,12 +256,9 @@ class OpenApiPreprocessor
 
     public function addXReturn(): void
     {
-        // Adding x-return info for better processing in the mustache template
         foreach ($this->schema['paths'] as $path => &$methods) {
-            preg_match_all('/\{([^\}]+)\}/', $path, $matches);
-
             foreach ($methods as $httpMethod => &$operation) {
-                if (!is_array($operation) || $httpMethod === "parameters") {
+                if (!\is_array($operation) || $httpMethod === 'parameters') {
                     continue;
                 }
 
@@ -270,120 +267,170 @@ class OpenApiPreprocessor
                     echo "  → {$httpMethod} {$path} => {$operation['operationId']}\n";
                 }
 
-                if (!empty($operation['tags'])) {
+                if (!empty($operation['tags']) && is_array($operation['tags'])) {
                     $operation['x-tag-id-kebab'] = preg_replace('/\s+/', '-', $operation['tags'][0]);
                 }
 
-                // --- Remove "default": null if $ref exists in requestBody schema ---
+                // Remove default:null on $ref payload properties
                 if (isset($operation['requestBody']['content']['application/json']['schema']['properties'])) {
-                    $properties = $operation['requestBody']['content']['application/json']['schema']['properties'];
-                    foreach ($properties as $key => &$prop) {
+                    foreach ($operation['requestBody']['content']['application/json']['schema']['properties'] as &$prop) {
                         if (isset($prop['$ref']) && array_key_exists('default', $prop)) {
                             unset($prop['default']);
                         }
                     }
                 }
 
-                // --- Auto x-return-types ---
+                $operation['x-return-types-displayReturn'] = false;
+                $operation['x-phpdoc'] = [];
+                $operation['x-ndjson-stream'] = false;
+                $operation['x-stream-item-type'] = null;
+
                 $returnTypes = [];
                 $phpDoc = [];
-                $operation['x-return-types-displayReturn'] = false;
+                $hasSuccessContent = false;
 
-                if (isset($operation['responses']) && is_array($operation['responses'])) {
-                    foreach ($operation['responses'] as $statusCode => $resp) {
-                        // Only process success codes (2xx or default)
-                        if (
-                            (
-                                !is_numeric($statusCode)
-                                || $statusCode < 200
-                                || $statusCode > 299
-                            ) && $statusCode !== 'default'
-                        ) {
-                            continue;
-                        }
+                $responses = $operation['responses'] ?? [];
+                if (!\is_array($responses)) {
+                    $responses = [];
+                }
 
-                        $schema = null;
-                        $contentTypes = array_keys($resp['content'] ?? []);
+                foreach ($responses as $statusCode => $resp) {
+                    $isSuccess = (is_numeric($statusCode) && (int)$statusCode >= 200 && (int)$statusCode < 300)
+                        || $statusCode === 'default';
 
-                        if (isset($resp['content']['application/json']['schema'])) {
-                            $schema = $resp['content']['application/json']['schema'];
-                        } elseif (isset($resp['content']['application/problem+json']['schema'])) {
-                            $schema = $resp['content']['application/problem+json']['schema'];
-                        } elseif (
-                            isset($resp['content']['application/pdf']['schema'])
-                            || in_array('application/pdf', $contentTypes, true)
-                        ) {
-                            $schema = ['type' => 'string', 'format' => 'binary'];
-                        }
+                    if (!$isSuccess || !is_array($resp)) {
+                        continue;
+                    }
 
-                        if ($schema && is_array($schema)) {
-                            if (
-                                isset($schema['type'])
-                                && $schema['type'] === 'object'
-                                && isset($schema['properties']['items']['$ref'])
-                            ) {
-                                $ref = $schema['properties']['items']['$ref'];
-                                $parts = explode('/', $ref);
-                                $class = '\\Upsun\\Model\\' . end($parts);
-                                $refs = ['refs' => [$class . '[]']];
-                            } else {
-                                $refs = $this->collectMainRefs($schema, $this->schema);
+                    $content = $resp['content'] ?? [];
+                    if (!is_array($content) || empty($content)) {
+                        continue;
+                    }
+
+                    $hasSuccessContent = true;
+
+                    $contentTypes = array_keys($content);
+                    $selectedType = null;
+                    $schema = null;
+
+                    // Preferred content types
+                    $preferred = [
+                        'application/json',
+                        'application/problem+json',
+                        'application/x-ndjson',
+                        'application/pdf',
+                    ];
+
+                    foreach ($preferred as $ct) {
+                        if (isset($content[$ct])) {
+                            $selectedType = $ct;
+                            if (isset($content[$ct]['schema']) && is_array($content[$ct]['schema'])) {
+                                $schema = $content[$ct]['schema'];
                             }
+                            break;
+                        }
+                    }
 
-                            $returnTypes = array_merge($returnTypes, $refs['refs'] ?? []);
-                            $phpDoc = $refs['phpdoc'] ?? null;
-                        } else {
-                            // If no schema, guess type via content-type
-                            if (in_array('application/pdf', $contentTypes, true)) {
-                                $returnTypes[] = 'string';
-                            } else {
-                                $returnTypes[] = 'void';
+                    // Fallback: first content type with schema
+                    if ($schema === null) {
+                        foreach ($content as $ct => $ctDef) {
+                            if (isset($ctDef['schema']) && is_array($ctDef['schema'])) {
+                                $selectedType = $ct;
+                                $schema = $ctDef['schema'];
+                                break;
                             }
                         }
                     }
+
+                    // Binary without explicit schema
+                    if ($schema === null && in_array('application/pdf', $contentTypes, true)) {
+                        $selectedType = 'application/pdf';
+                        $schema = ['type' => 'string', 'format' => 'binary'];
+                    }
+
+                    if ($schema === null) {
+                        // Content exists but no schema: keep it non-void
+                        $returnTypes[] = 'mixed';
+                        $phpDoc['return'] = true;
+                        continue;
+                    }
+
+                    // NDJSON stream: one JSON object per line
+                    if ($selectedType === 'application/x-ndjson') {
+                        $operation['x-ndjson-stream'] = true;
+
+                        $refs = $this->collectMainRefs($schema, $this->schema);
+                        $itemType = $refs['refs'][0] ?? 'mixed';
+                        $operation['x-stream-item-type'] = $itemType;
+
+                        // For PHP template routing (you can consume this in mustache)
+                        $returnTypes[] = '\\Generator';
+                        $phpDoc['return'] = "\\Generator<int,{$itemType}>";
+                        continue;
+                    }
+
+                    $refs = $this->collectMainRefs($schema, $this->schema);
+                    $returnTypes = array_merge($returnTypes, $refs['refs'] ?? []);
+                    if (!empty($refs['phpdoc'])) {
+                        $phpDoc = $refs['phpdoc'];
+                    }
                 }
 
-                // convert void|Error to null|Error
-                if (in_array('void', $returnTypes, true) && count($returnTypes) > 1) {
-                    $returnTypes = array_map(fn ($t) => $t === 'void' ? 'null' : $t, $returnTypes);
+                // If no success content at all => void
+                if (!$hasSuccessContent) {
+                    $returnTypes = ['void'];
+                    $operation['x-returnable'] = false;
+                } else {
+                    // Ensure not empty when content exists
+                    if (empty($returnTypes)) {
+                        $returnTypes = ['mixed'];
+                    }
+
+                    // If only void leaked in, this is not returnable
+                    if (count($returnTypes) === 1 && $returnTypes[0] === 'void') {
+                        $operation['x-returnable'] = false;
+                    } else {
+                        $operation['x-returnable'] = true;
+                    }
                 }
 
-                $operation['x-return-types'] = array_values(array_unique($returnTypes));
+                // convert void|X to null|X
+                if (\in_array('void', $returnTypes, true) && count($returnTypes) > 1) {
+                    $returnTypes = array_map(static fn($t) => $t === 'void' ? 'null' : $t, $returnTypes);
+                }
 
-                // Convert `Model[]` to `array` for union type
-                $unionTypes = array_map(function ($t) {
+                $returnTypes = array_values(array_unique($returnTypes));
+                $operation['x-return-types'] = $returnTypes;
+
+                // Build union for PHP signature
+                $unionTypes = array_map(static function ($t) {
+                    // keep Generator as-is
+                    if ($t === '\\Generator') {
+                        return '\\Generator';
+                    }
                     return str_ends_with($t, '[]') ? 'array' : $t;
                 }, $returnTypes);
 
                 $returnTypeUnion = implode('|', array_values(array_unique($unionTypes)));
-                if ($returnTypeUnion && $returnTypeUnion !== 'object') {
+                if ($returnTypeUnion !== '' && $returnTypeUnion !== 'object') {
                     $operation['x-return-types-union'] = $returnTypeUnion;
+                } else {
+                    unset($operation['x-return-types-union']);
                 }
 
+                // Show @return if useful
                 foreach ($returnTypes as $t) {
-                    if (str_ends_with($t, '[]') || str_contains($t, 'array<')) {
+                    if (
+                        $t === '\\Generator'
+                        || str_ends_with($t, '[]')
+                        || str_contains($t, 'array<')
+                    ) {
                         $operation['x-return-types-displayReturn'] = true;
                         break;
                     }
                 }
 
-                // Determine if the operation has a real return type
-                $hasReturn = false;
-                foreach ($operation['responses'] as $statusCode => $resp) {
-                    if (
-                        (is_numeric($statusCode) && $statusCode >= 200 && $statusCode < 300)
-                        || $statusCode === 'default'
-                    ) {
-                        $content = $resp['content'] ?? [];
-                        if (!empty($content)) {
-                            $hasReturn = true;
-                            break;
-                        }
-                    }
-                }
-
                 $operation['x-phpdoc'] = $phpDoc;
-                $operation['x-returnable'] = $hasReturn;
             }
         }
     }
@@ -500,18 +547,19 @@ class OpenApiPreprocessor
     private function forceEmptyObjects($data, array $path = [])
     {
         if (\is_array($data)) {
-            $isSecurityNode = !empty($path) && end($path) === 'BearerAuth';
-            $isRequiredField = !empty($path) && end($path) === 'required';
-            
-            // Handle empty arrays (convert to objects except for specific fields)
+            $lastKey = !empty($path) ? end($path) : null;
+
+            $isSecurityNode = ($lastKey === 'BearerAuth');
+            $isRequiredField = ($lastKey === 'required');
+            $isReturnTypesField = ($lastKey === 'x-return-types');
+
             if (empty($data)) {
-                if ($isSecurityNode || $isRequiredField) {
-                    return [];  // Keep as empty array
+                if ($isSecurityNode || $isRequiredField || $isReturnTypesField) {
+                    return [];
                 }
-                return new stdClass();  // Convert to empty object
+                return new stdClass();
             }
 
-            // Recursively process array elements
             $result = [];
             $isAssociative = array_keys($data) !== range(0, count($data) - 1);
 
