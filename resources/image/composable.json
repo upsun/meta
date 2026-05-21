@@ -132,16 +132,16 @@
       },
       "24.11": {
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false,
-          "internal_status": "decommissioned"
+          "internal_status": "sunset"
         }
       },
       "24.05": {
         "upsun": {
-          "status": "decommissioned",
+          "status": "retired",
           "internal_support": false,
-          "internal_status": "decommissioned"
+          "internal_status": "sunset"
         }
       }
     }
