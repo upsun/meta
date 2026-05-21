@@ -10781,50 +10781,6 @@
       "repo_name": "varnish"
     },
     "versions": {
-      "8.0": {
-        "upsun": {
-          "status": "incoming",
-          "internal_support": false,
-          "internal_status": "active"
-        },
-        "upstream": {
-          "status": "incoming",
-          "releaseDate": "2025-09-15T00:00:00.000Z",
-          "eoasFrom": null,
-          "eolFrom": "2026-09-15T00:00:00.000Z",
-          "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
-        },
-        "manifest": {
-          "endpoints": {
-            "http": {
-              "port": 8080,
-              "scheme": "http",
-              "default": true
-            },
-            "http+stats": {
-              "port": 8081,
-              "scheme": "http"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 128,
-          "is_persistent": false,
-          "min_disk_size": null,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "7.6.5-1~bookworm",
-            "majorMinor": "7.6",
-            "normalized": "7.6.5"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": null,
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
-        }
-      },
       "7.6": {
         "upsun": {
           "status": "supported",
