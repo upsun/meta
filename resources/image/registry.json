@@ -2768,6 +2768,45 @@
       "repo_name": "influxdb"
     },
     "versions": {
+      "3": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "retired",
+          "releaseDate": "2025-04-14T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2025-06-25T00:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "influxdb": {
+              "port": 8086,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "1.0.6-0psh",
+            "majorMinor": "1.0",
+            "normalized": "1.0.6"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
       "2.7": {
         "upsun": {
           "status": "supported",
@@ -5916,8 +5955,8 @@
         "upstream": {
           "status": "supported",
           "releaseDate": "2026-05-05T00:00:00.000Z",
-          "eoasFrom": null,
-          "eolFrom": null,
+          "eoasFrom": "2027-10-27T00:00:00.000Z",
+          "eolFrom": "2029-04-30T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -8511,10 +8550,10 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "retired",
+          "status": "supported",
           "releaseDate": "2025-10-27T00:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-01-31T00:00:00.000Z",
+          "eolFrom": "2026-07-31T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
