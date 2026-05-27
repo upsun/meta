@@ -10667,12 +10667,12 @@
     "versions": {
       "9.0": {
         "upsun": {
-          "status": "incoming",
+          "status": "supported",
           "internal_support": true,
           "internal_status": "active"
         },
         "upstream": {
-          "status": "incoming",
+          "status": "supported",
           "releaseDate": "2026-03-16T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2027-03-16T00:00:00.000Z",
@@ -10711,9 +10711,9 @@
       },
       "7.6": {
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "retired",
@@ -10721,9 +10721,9 @@
           "eoasFrom": null,
           "eolFrom": "2025-09-15T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
