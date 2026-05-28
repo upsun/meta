@@ -315,3 +315,121 @@ extensionRouter.route({
     }
   }
 });
+
+// GET /extensions/solr
+extensionRouter.route({
+  method: 'get',
+  path: `${PATH}/solr`,
+  summary: 'Get list of Solr extensions for cloud services',
+  description: `Returns the list of Solr extensions for \`cloud\` service.`,
+  tags: [TAG],
+  query: z.object({}),
+  headers: HeaderAcceptSchema,
+  responses: {
+    200: {
+      description: 'List of Solr extensions for cloud services',
+      schema: CloudExtensionsSchema,
+      contentTypes: ['application/json', 'application/x-yaml']
+    },
+    500: {
+      description: 'Internal server error',
+      schema: ErrorDetailsSchema
+    }
+  },
+  handler: async (req: Request, res: Response) => {
+    try {
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data, metadata, notModified } = await resourceManager.getResourceWithMetadata('extension/solr_extensions.json', conditionalHeaders);
+      
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
+        return sendNotModified(res, metadata, config.cache.TTL);
+      }
+      
+      const cloudExtensions: CloudExtensions = data?.cloud || {};
+
+      const baseUrl = `${config.server.BASE_URL}`;
+      const cloudExtensionsWithLinks = withSelfLink(cloudExtensions, (id) => `${baseUrl}${PATH}/solr/${encodeURIComponent(id)}`);
+
+      // Set cache headers
+      setCacheHeaders(res, metadata, config.cache.TTL);
+
+      sendFormatted<CloudExtensions>(res, cloudExtensionsWithLinks);
+    } catch (error: any) {
+      apiLogger.error({ error: error.message }, 'Failed to read Solr Cloud extensions');
+      sendErrorFormatted(res, {
+        title: 'Unable to read Solr Cloud extensions',
+        detail: error.message || 'An unexpected error occurred while reading Solr Cloud extensions',
+        status: 500
+      });
+    }
+  }
+});
+
+// GET /extensions/solr/:id
+extensionRouter.route({
+  method: 'get',
+  path: `${PATH}/solr/:id`,
+  summary: 'Get Solr extension by Id',
+  description: `Get a specific Solr extension entry by its Id from the \`cloud\` root node.`,
+  tags: [TAG],
+  params: z.object({
+    id: z.string().describe('Extension Id (e.g., analysis-extras, jwt-auth, ltr)')
+  }),
+  query: z.object({}),
+  headers: HeaderAcceptSchema,
+  responses: {
+    200: {
+      description: 'Map all Solr versions allowing usage of this extension',
+      schema: RuntimeExtensionVersionSchema,
+      contentTypes: ['application/json', 'application/x-yaml']
+    },
+    404: {
+      description: 'Version not found',
+      schema: ErrorDetailsSchema,
+      contentTypes: ['application/json', 'application/x-yaml'],
+    },
+    500: {
+      description: 'Internal server error',
+      schema: ErrorDetailsSchema,
+      contentTypes: ['application/json', 'application/x-yaml'],
+    }
+  },
+  handler: async (req: Request, res: Response) => {
+    try {
+      const { id } = req.params as { id: string };
+      const imageId = escapeHtml(id);
+
+      const conditionalHeaders = extractConditionalHeaders(req);
+      const { data, metadata, notModified } = await resourceManager.getResourceWithMetadata('extension/solr_extensions.json', conditionalHeaders);
+      
+      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
+      if (notModified) {
+        return sendNotModified(res, metadata, config.cache.TTL);
+      }
+      
+      const extensionEntry = data?.cloud?.[id];
+
+      if (!extensionEntry) {
+        return sendErrorFormatted(res, {
+          title: 'Extension not found',
+          detail: `Extension "${imageId}" not found. See extra.availableExtensions for a list of valid extension IDs.`,
+          status: 404,
+          extra: { availableExtensions: Object.keys(data?.cloud || {}) }
+        });
+      }
+      
+      // Set cache headers
+      setCacheHeaders(res, metadata, config.cache.TTL);
+      
+      sendFormatted<RuntimeExtensionVersion>(res, extensionEntry);
+    } catch (error: any) {
+      apiLogger.error({ error: error.message }, 'Failed to read Solr Cloud extensions');
+      sendErrorFormatted(res, {
+        title: 'Unable to read Solr Cloud extensions',
+        detail: error.message || 'An unexpected error occurred while reading Solr Cloud extensions',
+        status: 500
+      });
+    }
+  }
+});
