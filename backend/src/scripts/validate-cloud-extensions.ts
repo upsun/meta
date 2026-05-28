@@ -1,6 +1,69 @@
 import { promises as fs } from 'fs';
 import path from 'path';
-import { CloudExtensionsSchema } from '../schemas/extension.schema.js';
+import {
+  CloudExtensionsSchema,
+  PostgresqlCloudExtensionsSchema,
+  SolrCloudExtensionsSchema
+} from '../schemas/extension.schema.js';
+
+type ValidatorKind = 'php' | 'postgresql' | 'solr';
+
+function getValidatorKind(fileName: string): ValidatorKind {
+  if (fileName.includes('postgresql')) {
+    return 'postgresql';
+  }
+
+  if (fileName.includes('solr')) {
+    return 'solr';
+  }
+
+  return 'php';
+}
+
+function getSchema(kind: ValidatorKind) {
+  switch (kind) {
+    case 'postgresql':
+      return PostgresqlCloudExtensionsSchema;
+    case 'solr':
+      return SolrCloudExtensionsSchema;
+    default:
+      return CloudExtensionsSchema;
+  }
+}
+
+function getDescriptionMessage(kind: ValidatorKind, extensionName: string): string {
+  if (kind === 'postgresql') {
+    return `Please update description of the postgresql extension \`${extensionName}\` in Meta Version Updater tool and update the PR`;
+  }
+
+  if (kind === 'solr') {
+    return `Please update description for solr extension \`${extensionName}\` in Meta Version Updater tool and update the PR`;
+  }
+
+  return '';
+}
+
+function ensureDescriptionsPresent(kind: ValidatorKind, cloudData: unknown, fileName: string): void {
+  if (kind === 'php' || !cloudData || typeof cloudData !== 'object') {
+    return;
+  }
+
+  for (const [extensionName, extensionEntry] of Object.entries(cloudData as Record<string, unknown>)) {
+    if (extensionName === '_links') {
+      continue;
+    }
+
+    if (!extensionEntry || typeof extensionEntry !== 'object') {
+      continue;
+    }
+
+    const description = (extensionEntry as { description?: unknown }).description;
+    if (typeof description !== 'string' || description.trim().length === 0) {
+      console.error(getDescriptionMessage(kind, extensionName));
+      process.exit(1);
+    }
+  }
+}
 
 function getInputPath(): string {
   const inputPath = process.argv[2];
@@ -16,6 +79,8 @@ function getInputPath(): string {
 async function main() {
   const extensionsPath = getInputPath();
   const fileName = path.basename(extensionsPath);
+  const validatorKind = getValidatorKind(fileName);
+  const schema = getSchema(validatorKind);
 
   let raw: string;
   try {
@@ -42,7 +107,9 @@ async function main() {
     process.exit(1);
   }
 
-  const result = CloudExtensionsSchema.safeParse(cloudData);
+  ensureDescriptionsPresent(validatorKind, cloudData, fileName);
+
+  const result = schema.safeParse(cloudData);
 
   if (!result.success) {
     console.error(`${fileName} cloud section does not match the expected schema`);

@@ -70,6 +70,22 @@ const RuntimeExtensionSchema = z.object({
   }
 });
 
+const RuntimeExtensionWithDescriptionSchema = RuntimeExtensionSchema.extend({
+  description: z.string().trim().min(1).openapi({
+    description: 'Human-readable extension description',
+    example: 'PostGIS support for PostgreSQL'
+  })
+}).openapi('RuntimeExtensionWithDescription', {
+  description: 'Entry for a specific extension with a required description and version configurations',
+  example: {
+    description: 'PostGIS support for PostgreSQL',
+    versions: {
+      '15': { status: 'available', options: [] },
+      '16': { status: 'available', options: [] }
+    }
+  }
+});
+
 /**
  * Schema for cloud extensions (with optional hypermedia links)
  */
@@ -87,6 +103,38 @@ export const CloudExtensionsSchema = z.record(
   })
 ).openapi('CloudExtensions', {
   description: 'Mapping of Cloud extension IDs to their version entries, with optional links'
+});
+
+export const PostgresqlCloudExtensionsSchema = z.record(
+  z.string().openapi({
+    description: 'PostgreSQL extension name (e.g., "postgis", "pg_stat_statements")',
+    example: 'postgis'
+  }),
+  RuntimeExtensionWithDescriptionSchema
+).and(
+  z.object({
+    _links: z.record(z.string(), LinkSchema).optional().openapi({
+      description: 'Hypermedia links related to the PostgreSQL cloud extensions'
+    })
+  })
+).openapi('PostgresqlCloudExtensions', {
+  description: 'Mapping of PostgreSQL extension IDs to their version entries with required descriptions and optional links'
+});
+
+export const SolrCloudExtensionsSchema = z.record(
+  z.string().openapi({
+    description: 'Solr extension name (e.g., "analysis-extras", "jwt-auth")',
+    example: 'analysis-extras'
+  }),
+  RuntimeExtensionWithDescriptionSchema
+).and(
+  z.object({
+    _links: z.record(z.string(), LinkSchema).optional().openapi({
+      description: 'Hypermedia links related to the Solr cloud extensions'
+    })
+  })
+).openapi('SolrCloudExtensions', {
+  description: 'Mapping of Solr extension IDs to their version entries with required descriptions and optional links'
 });
 
 /**
@@ -244,6 +292,8 @@ export const SolrExtensionNotFoundExample = {
 // Type exports
 export type RuntimeExtensionList = z.infer<typeof RuntimeExtensionListSchema>;
 export type CloudExtensions = z.infer<typeof CloudExtensionsSchema>;
+export type PostgresqlCloudExtensions = z.infer<typeof PostgresqlCloudExtensionsSchema>;
+export type SolrCloudExtensions = z.infer<typeof SolrCloudExtensionsSchema>;
 export type RuntimeExtensionVersion = z.infer<typeof RuntimeExtensionVersionSchema>;
 export type ExtensionVersionConfig = z.infer<typeof ExtensionVersionConfigSchema>;
 export type ExtensionStatus = z.infer<typeof ExtensionStatusSchema>;
