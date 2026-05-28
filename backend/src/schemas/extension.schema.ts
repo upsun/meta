@@ -109,6 +109,138 @@ export const RuntimeExtensionListSchema = z.object({
   description: 'Complete list of PHP extensions for dedicated and cloud environments'
 });
 
+export function createPhpFullListExample(baseUrl: string, path = '/extensions') {
+  return {
+    dedicated: {
+      redis: {
+        versions: {
+          '8.3': { status: 'available', options: [] }
+        }
+      }
+    },
+    cloud: {
+      redis: {
+        versions: {
+          '8.3': { status: 'available', options: [] },
+          '8.4': { status: 'built-in', options: [] }
+        },
+        _links: { self: `${baseUrl}${path}/php/cloud/redis` }
+      },
+      _links: { self: `${baseUrl}${path}/php/cloud` }
+    }
+  };
+}
+
+export function createPhpCloudListExample(baseUrl: string, path = '/extensions') {
+  return {
+    redis: {
+      versions: {
+        '8.3': { status: 'available', options: [] },
+        '8.4': { status: 'built-in', options: [] }
+      },
+      _links: { self: `${baseUrl}${path}/php/cloud/redis` }
+    },
+    imagick: {
+      versions: {
+        '8.3': { status: 'available', options: ['webp'] }
+      },
+      _links: { self: `${baseUrl}${path}/php/cloud/imagick` }
+    },
+    _links: { self: `${baseUrl}${path}/php/cloud` }
+  };
+}
+
+export const PhpCloudExtensionExample: RuntimeExtensionVersion = {
+  '8.3': { status: 'available', options: ['webp'] },
+  '8.4': { status: 'built-in', options: [] }
+};
+
+export function createPostgresqlExtensionsExample(baseUrl: string, path = '/extensions') {
+  return {
+    postgis: {
+      versions: {
+        '15': { status: 'available', options: [] },
+        '16': { status: 'available', options: [] }
+      },
+      _links: { self: `${baseUrl}${path}/postgresql/postgis` }
+    },
+    pg_stat_statements: {
+      versions: {
+        '15': { status: 'default', options: [] },
+        '16': { status: 'default', options: [] }
+      },
+      _links: { self: `${baseUrl}${path}/postgresql/pg_stat_statements` }
+    },
+    _links: { self: `${baseUrl}${path}/postgresql` }
+  };
+}
+
+export const PostgresqlExtensionExample: RuntimeExtensionVersion = {
+  '15': { status: 'available', options: [] },
+  '16': { status: 'available', options: [] }
+};
+
+export function createSolrExtensionsExample(baseUrl: string, path = '/extensions') {
+  return {
+    'analysis-extras': {
+      versions: {
+        '9.9': { status: 'available', options: [] },
+        '10.0': { status: 'available', options: [] }
+      },
+      _links: { self: `${baseUrl}${path}/solr/analysis-extras` }
+    },
+    'jwt-auth': {
+      versions: {
+        '9.9': { status: 'available', options: [] },
+        '10.0': { status: 'available', options: [] }
+      },
+      _links: { self: `${baseUrl}${path}/solr/jwt-auth` }
+    },
+    _links: { self: `${baseUrl}${path}/solr` }
+  };
+}
+
+export const SolrExtensionExample: RuntimeExtensionVersion = {
+  '9.9': { status: 'available', options: [] },
+  '10.0': { status: 'available', options: [] }
+};
+
+export const PhpExtensionNotFoundExample = {
+  notFound: {
+    summary: 'Unknown PHP extension id',
+    value: {
+      title: 'Extension not found',
+      detail: 'Extension "unknown-ext" not found. See extra.availableExtensions for a list of valid extension IDs.',
+      status: 404,
+      extra: { availableExtensions: ['imagick', 'redis', 'xdebug'] }
+    }
+  }
+};
+
+export const PostgresqlExtensionNotFoundExample = {
+  notFound: {
+    summary: 'Unknown PostgreSQL extension id',
+    value: {
+      title: 'Extension not found',
+      detail: 'Extension "unknown-ext" not found. See extra.availableExtensions for a list of valid extension IDs.',
+      status: 404,
+      extra: { availableExtensions: ['pg_stat_statements', 'postgis'] }
+    }
+  }
+};
+
+export const SolrExtensionNotFoundExample = {
+  notFound: {
+    summary: 'Unknown Solr extension id',
+    value: {
+      title: 'Extension not found',
+      detail: 'Extension "unknown-ext" not found. See extra.availableExtensions for a list of valid extension IDs.',
+      status: 404,
+      extra: { availableExtensions: ['analysis-extras', 'jwt-auth', 'ltr'] }
+    }
+  }
+};
+
 // Type exports
 export type RuntimeExtensionList = z.infer<typeof RuntimeExtensionListSchema>;
 export type CloudExtensions = z.infer<typeof CloudExtensionsSchema>;

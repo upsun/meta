@@ -457,9 +457,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.3.10.62",
+            "raw": "26.3.12.3",
             "majorMinor": "26.3",
-            "normalized": "26.3.10"
+            "normalized": "26.3.12"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -2771,7 +2771,7 @@
       "3": {
         "upsun": {
           "status": "supported",
-          "internal_support": true,
+          "internal_support": false,
           "internal_status": "active"
         },
         "upstream": {
@@ -2797,9 +2797,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "1.0.6-0psh",
-            "majorMinor": "1.0",
-            "normalized": "1.0.6"
+            "raw": "2.7.12-1",
+            "majorMinor": "2.7",
+            "normalized": "2.7.12"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -2917,40 +2917,6 @@
             "raw": "2.2.0",
             "majorMinor": "2.2",
             "normalized": "2.2.0"
-          },
-          "allow_scale_down": null,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
-      "2.1": {
-        "upsun": {
-          "status": "retired",
-          "internal_support": false,
-          "internal_status": "sunset"
-        },
-        "upstream": {
-          "status": "supported",
-          "releaseDate": "2020-11-09T00:00:00.000Z",
-          "eoasFrom": null,
-          "eolFrom": null,
-          "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
-        },
-        "manifest": {
-          "endpoints": null,
-          "min_cpu_size": null,
-          "min_mem_size": null,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": null,
-          "package_version": {
-            "raw": "2.0.8",
-            "majorMinor": "2.0",
-            "normalized": "2.0.8"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -4084,47 +4050,6 @@
       "repo_name": "mariadb"
     },
     "versions": {
-      "12.3": {
-        "upsun": {
-          "status": "incoming",
-          "internal_support": false,
-          "internal_status": "active"
-        },
-        "upstream": {
-          "status": "incoming",
-          "releaseDate": "2025-08-07T00:00:00.000Z",
-          "eoasFrom": null,
-          "eolFrom": "2025-11-18T00:00:00.000Z",
-          "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
-        },
-        "manifest": {
-          "endpoints": {
-            "mysql": {
-              "port": 3306,
-              "schema": "mysql",
-              "scheme": "mysql",
-              "default": true
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "1:11.8.6+maria~deb13",
-            "majorMinor": "11.8",
-            "normalized": "11.8.6"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
       "11.8": {
         "upsun": {
           "status": "supported",
@@ -4361,9 +4286,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1:10.6.26+maria~deb11",
+            "raw": "1:10.6.27+maria~deb11",
             "majorMinor": "10.6",
-            "normalized": "10.6.26"
+            "normalized": "10.6.27"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -4525,9 +4450,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1:10.6.12.0psh1+maria~deb913",
-            "majorMinor": "10.6",
-            "normalized": "10.6.12"
+            "raw": "10.2.44+maria~stretch",
+            "majorMinor": "10.2",
+            "normalized": "10.2.44"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -4566,9 +4491,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1:10.6.12.0psh1+maria~deb913",
-            "majorMinor": "10.6",
-            "normalized": "10.6.12"
+            "raw": "10.1.48+maria-1~stretch",
+            "majorMinor": "10.1",
+            "normalized": "10.1.48"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -4675,47 +4600,6 @@
       "repo_name": "mysql"
     },
     "versions": {
-      "12.3": {
-        "upsun": {
-          "status": "incoming",
-          "internal_support": false,
-          "internal_status": "active"
-        },
-        "upstream": {
-          "status": "incoming",
-          "releaseDate": "2025-08-07T00:00:00.000Z",
-          "eoasFrom": null,
-          "eolFrom": "2025-11-18T00:00:00.000Z",
-          "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
-        },
-        "manifest": {
-          "endpoints": {
-            "mysql": {
-              "port": 3306,
-              "schema": "mysql",
-              "scheme": "mysql",
-              "default": true
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "1:11.8.6+maria~deb13",
-            "majorMinor": "11.8",
-            "normalized": "11.8.6"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": null
-        }
-      },
       "11.8": {
         "upsun": {
           "status": "supported",
@@ -4952,9 +4836,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1:10.6.26+maria~deb11",
+            "raw": "1:10.6.27+maria~deb11",
             "majorMinor": "10.6",
-            "normalized": "10.6.26"
+            "normalized": "10.6.27"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -5116,9 +5000,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1:10.6.12.0psh1+maria~deb913",
-            "majorMinor": "10.6",
-            "normalized": "10.6.12"
+            "raw": "10.2.44+maria~stretch",
+            "majorMinor": "10.2",
+            "normalized": "10.2.44"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -5157,9 +5041,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1:10.6.12.0psh1+maria~deb913",
-            "majorMinor": "10.6",
-            "normalized": "10.6.12"
+            "raw": "10.1.48+maria-1~stretch",
+            "majorMinor": "10.1",
+            "normalized": "10.1.48"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -5975,9 +5859,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.1.0-1nodesource1",
-            "majorMinor": "26.1",
-            "normalized": "26.1.0"
+            "raw": "26.2.0-1nodesource1",
+            "majorMinor": "26.2",
+            "normalized": "26.2.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -8576,9 +8460,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "4.2.6-1",
+            "raw": "4.2.7-1",
             "majorMinor": "4.2",
-            "normalized": "4.2.6"
+            "normalized": "4.2.7"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -9469,9 +9353,9 @@
           "min_disk_size": null,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "2.10.5-0platform1",
-            "majorMinor": "2.10",
-            "normalized": "2.10.5"
+            "raw": "2:2.8.17-1+deb8u10",
+            "majorMinor": "2.8",
+            "normalized": "2.8.17"
           },
           "allow_scale_down": null,
           "storage_mount_point": null,
@@ -10672,9 +10556,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "9.0.3-0psh1",
+            "raw": "9.0.4-0psh1",
             "majorMinor": "9.0",
-            "normalized": "9.0.3"
+            "normalized": "9.0.4"
           },
           "allow_scale_down": true,
           "storage_mount_point": null,
@@ -10781,11 +10665,55 @@
       "repo_name": "varnish"
     },
     "versions": {
-      "7.6": {
+      "9.0": {
         "upsun": {
           "status": "supported",
           "internal_support": true,
           "internal_status": "active"
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2026-03-16T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2027-03-16T00:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 8080,
+              "scheme": "http",
+              "default": true
+            },
+            "http+stats": {
+              "port": 8081,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 128,
+          "is_persistent": false,
+          "min_disk_size": null,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "9.0.3-1~bookworm",
+            "majorMinor": "9.0",
+            "normalized": "9.0.3"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": null,
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "7.6": {
+        "upsun": {
+          "status": "retired",
+          "internal_support": true,
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "retired",
@@ -10793,9 +10721,9 @@
           "eoasFrom": null,
           "eolFrom": "2025-09-15T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -11531,9 +11459,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1:11.4.11+maria~deb12",
+            "raw": "1:11.4.12+maria~deb12",
             "majorMinor": "11.4",
-            "normalized": "11.4.11"
+            "normalized": "11.4.12"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -11832,9 +11760,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "3.6.3+dfsg-1.pgdg12+1",
-            "majorMinor": "3.6",
-            "normalized": "3.6.3"
+            "raw": "15.17-1.pgdg12+1",
+            "majorMinor": "15.17",
+            "normalized": "15.17.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",

@@ -1,0 +1,192 @@
+{
+  "cloud": {
+    "analysis-extras": {
+      "description": "",
+      "versions": {
+        "9.9": {
+          "status": "available"
+        },
+        "10.0": {
+          "status": "available"
+        }
+      }
+    },
+    "analytics": {
+      "description": "",
+      "versions": {
+        "9.9": {
+          "status": "available"
+        }
+      }
+    },
+    "clustering": {
+      "description": "",
+      "versions": {
+        "9.9": {
+          "status": "available"
+        },
+        "10.0": {
+          "status": "available"
+        }
+      }
+    },
+    "cross-dc": {
+      "description": "",
+      "versions": {
+        "9.9": {
+          "status": "available"
+        },
+        "10.0": {
+          "status": "available"
+        }
+      }
+    },
+    "cuvs": {
+      "description": "",
+      "versions": {
+        "10.0": {
+          "status": "available"
+        }
+      }
+    },
+    "extraction": {
+      "description": "",
+      "versions": {
+        "9.9": {
+          "status": "available"
+        },
+        "10.0": {
+          "status": "available"
+        }
+      }
+    },
+    "gcs-repository": {
+      "description": "",
+      "versions": {
+        "9.9": {
+          "status": "available"
+        },
+        "10.0": {
+          "status": "available"
+        }
+      }
+    },
+    "hadoop-auth": {
+      "description": "",
+      "versions": {
+        "9.9": {
+          "status": "available"
+        }
+      }
+    },
+    "hdfs": {
+      "description": "",
+      "versions": {
+        "9.9": {
+          "status": "available"
+        }
+      }
+    },
+    "jaegertracer-configurator": {
+      "description": "",
+      "versions": {
+        "9.9": {
+          "status": "available"
+        }
+      }
+    },
+    "jwt-auth": {
+      "description": "",
+      "versions": {
+        "9.9": {
+          "status": "available"
+        },
+        "10.0": {
+          "status": "available"
+        }
+      }
+    },
+    "langid": {
+      "description": "",
+      "versions": {
+        "9.9": {
+          "status": "available"
+        },
+        "10.0": {
+          "status": "available"
+        }
+      }
+    },
+    "language-models": {
+      "description": "",
+      "versions": {
+        "10.0": {
+          "status": "available"
+        }
+      }
+    },
+    "llm": {
+      "description": "",
+      "versions": {
+        "9.9": {
+          "status": "available"
+        }
+      }
+    },
+    "ltr": {
+      "description": "",
+      "versions": {
+        "9.9": {
+          "status": "available"
+        },
+        "10.0": {
+          "status": "available"
+        }
+      }
+    },
+    "opentelemetry": {
+      "description": "",
+      "versions": {
+        "9.9": {
+          "status": "available"
+        },
+        "10.0": {
+          "status": "available"
+        }
+      }
+    },
+    "s3-repository": {
+      "description": "",
+      "versions": {
+        "9.9": {
+          "status": "available"
+        },
+        "10.0": {
+          "status": "available"
+        }
+      }
+    },
+    "scripting": {
+      "description": "",
+      "versions": {
+        "9.9": {
+          "status": "available"
+        },
+        "10.0": {
+          "status": "available"
+        }
+      }
+    },
+    "sql": {
+      "description": "",
+      "versions": {
+        "9.9": {
+          "status": "available"
+        },
+        "10.0": {
+          "status": "available"
+        }
+      }
+    }
+  }
+}

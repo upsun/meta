@@ -1,18 +1,27 @@
 import { promises as fs } from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 import { CloudExtensionsSchema } from '../schemas/extension.schema.js';
 
+function getInputPath(): string {
+  const inputPath = process.argv[2];
+
+  if (!inputPath) {
+    console.error('Usage: node dist/scripts/validate-cloud-extensions.js <path-to-extensions-json>');
+    process.exit(1);
+  }
+
+  return path.resolve(inputPath);
+}
+
 async function main() {
-  const scriptDir = path.dirname(fileURLToPath(import.meta.url));
-  const defaultExtensionsPath = path.resolve(scriptDir, '../../../resources/extension/postgresql_extensions.json');
-  const extensionsPath = process.argv[2] ? path.resolve(process.argv[2]) : defaultExtensionsPath;
+  const extensionsPath = getInputPath();
+  const fileName = path.basename(extensionsPath);
 
   let raw: string;
   try {
     raw = await fs.readFile(extensionsPath, 'utf8');
   } catch (error) {
-    console.error(`Failed to read PostgreSQL extensions file at ${extensionsPath}`);
+    console.error(`Failed to read extensions file at ${extensionsPath}`);
     console.error(error);
     process.exit(1);
   }
@@ -21,7 +30,7 @@ async function main() {
   try {
     data = JSON.parse(raw);
   } catch (error) {
-    console.error('postgresql_extensions.json is not valid JSON');
+    console.error(`${fileName} is not valid JSON`);
     console.error(error);
     process.exit(1);
   }
@@ -29,23 +38,23 @@ async function main() {
   const cloudData = (data as { cloud?: unknown })?.cloud;
 
   if (!cloudData) {
-    console.error('postgresql_extensions.json must contain a top-level "cloud" object');
+    console.error(`${fileName} must contain a top-level "cloud" object`);
     process.exit(1);
   }
 
   const result = CloudExtensionsSchema.safeParse(cloudData);
 
   if (!result.success) {
-    console.error('postgresql_extensions.json cloud section does not match the expected schema');
+    console.error(`${fileName} cloud section does not match the expected schema`);
     console.error(JSON.stringify(result.error.format(), null, 2));
     process.exit(1);
   }
 
-  console.log('postgresql_extensions.json is valid.');
+  console.log(`${fileName} is valid.`);
 }
 
 main().catch((error) => {
-  console.error('Unexpected error during PostgreSQL extensions validation');
+  console.error('Unexpected error during cloud extensions validation');
   console.error(error);
   process.exit(1);
 });
