@@ -1,7 +1,7 @@
 {
   "cloud": {
     "analysis-extras": {
-      "description": "",
+      "description": "Additional text analysis components (tokenizers, filters, phonetics).",
       "versions": {
         "9.9": {
           "status": "available"
