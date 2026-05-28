@@ -11,7 +11,17 @@ import {
   CloudExtensionsSchema,
   CloudExtensions,
   RuntimeExtensionVersionSchema,
-  RuntimeExtensionVersion
+  RuntimeExtensionVersion,
+  createPhpFullListExample,
+  createPhpCloudListExample,
+  PhpCloudExtensionExample,
+  createPostgresqlExtensionsExample,
+  PostgresqlExtensionExample,
+  createSolrExtensionsExample,
+  SolrExtensionExample,
+  PhpExtensionNotFoundExample,
+  PostgresqlExtensionNotFoundExample,
+  SolrExtensionNotFoundExample
 } from '../schemas/extension.schema.js';
 import { sendFormatted, sendErrorFormatted } from '../utils/response.format.js';
 import { withSelfLink } from '../utils/api.schema.js';
@@ -23,6 +33,24 @@ const resourceManager = new ResourceManager();
 
 const PATH = '/extensions';
 const TAG = 'Extensions';
+
+const baseUrl = config.server.BASE_URL;
+
+const genericErrorExample = {
+  internalError: {
+    summary: 'Internal server error',
+    value: {
+      title: 'Unable to read extensions',
+      detail: 'An unexpected error occurred while reading extensions',
+      status: 500
+    }
+  }
+};
+
+const phpFullListExample = createPhpFullListExample(baseUrl, PATH);
+const phpCloudListExample = createPhpCloudListExample(baseUrl, PATH);
+const postgresqlExtensionsExample = createPostgresqlExtensionsExample(baseUrl, PATH);
+const solrExtensionsExample = createSolrExtensionsExample(baseUrl, PATH);
 
 
 export const extensionRouter = new ApiRouter();
@@ -40,11 +68,22 @@ extensionRouter.route({
     200: {
       description: 'Full list of PHP extensions',
       schema: RuntimeExtensionListSchema,
-      contentTypes: ['application/json', 'application/x-yaml']
+      contentTypes: ['application/json', 'application/x-yaml'],
+      examples: {
+        'application/json': {
+          success: {
+            summary: 'Full PHP extensions payload',
+            value: phpFullListExample
+          }
+        }
+      }
     },
     500: {
       description: 'Internal server error',
-      schema: ErrorDetailsSchema
+      schema: ErrorDetailsSchema,
+      examples: {
+        'application/json': genericErrorExample
+      }
     }
   },
   handler: async (req: Request, res: Response) => {
@@ -93,11 +132,22 @@ extensionRouter.route({
     200: {
       description: 'List of PHP extensions for cloud services',
       schema: CloudExtensionsSchema,
-      contentTypes: ['application/json', 'application/x-yaml']
+      contentTypes: ['application/json', 'application/x-yaml'],
+      examples: {
+        'application/json': {
+          success: {
+            summary: 'PHP cloud extensions payload',
+            value: phpCloudListExample
+          }
+        }
+      }
     },
     500: {
       description: 'Internal server error',
-      schema: ErrorDetailsSchema
+      schema: ErrorDetailsSchema,
+      examples: {
+        'application/json': genericErrorExample
+      }
     }
   },
   handler: async (req: Request, res: Response) => {
@@ -146,17 +196,31 @@ extensionRouter.route({
     200: {
       description: 'Map all PHP versions allowing usage of this extension, with their status (e.g. "default", "built-in" or "available") and possible options (e.g. "wepb" for imagick)',
       schema: RuntimeExtensionVersionSchema,
-      contentTypes: ['application/json', 'application/x-yaml']
+      contentTypes: ['application/json', 'application/x-yaml'],
+      examples: {
+        'application/json': {
+          success: {
+            summary: 'PHP extension versions payload',
+            value: PhpCloudExtensionExample
+          }
+        }
+      }
     },
     404: {
       description: 'Version not found',
       schema: ErrorDetailsSchema,
       contentTypes: ['application/json', 'application/x-yaml'],
+      examples: {
+        'application/json': PhpExtensionNotFoundExample
+      },
     },
     500: {
       description: 'Internal server error',
       schema: ErrorDetailsSchema,
       contentTypes: ['application/json', 'application/x-yaml'],
+      examples: {
+        'application/json': genericErrorExample
+      },
     }
   },
   handler: async (req: Request, res: Response) => {
@@ -211,11 +275,22 @@ extensionRouter.route({
     200: {
       description: 'List of PostgreSQL extensions for cloud services',
       schema: CloudExtensionsSchema,
-      contentTypes: ['application/json', 'application/x-yaml']
+      contentTypes: ['application/json', 'application/x-yaml'],
+      examples: {
+        'application/json': {
+          success: {
+            summary: 'PostgreSQL extensions payload',
+            value: postgresqlExtensionsExample
+          }
+        }
+      }
     },
     500: {
       description: 'Internal server error',
-      schema: ErrorDetailsSchema
+      schema: ErrorDetailsSchema,
+      examples: {
+        'application/json': genericErrorExample
+      }
     }
   },
   handler: async (req: Request, res: Response) => {
@@ -264,17 +339,31 @@ extensionRouter.route({
     200: {
       description: 'Map all PostgreSQL versions allowing usage of this extension',
       schema: RuntimeExtensionVersionSchema,
-      contentTypes: ['application/json', 'application/x-yaml']
+      contentTypes: ['application/json', 'application/x-yaml'],
+      examples: {
+        'application/json': {
+          success: {
+            summary: 'PostgreSQL extension versions payload',
+            value: PostgresqlExtensionExample
+          }
+        }
+      }
     },
     404: {
       description: 'Version not found',
       schema: ErrorDetailsSchema,
       contentTypes: ['application/json', 'application/x-yaml'],
+      examples: {
+        'application/json': PostgresqlExtensionNotFoundExample
+      },
     },
     500: {
       description: 'Internal server error',
       schema: ErrorDetailsSchema,
       contentTypes: ['application/json', 'application/x-yaml'],
+      examples: {
+        'application/json': genericErrorExample
+      },
     }
   },
   handler: async (req: Request, res: Response) => {
@@ -329,11 +418,22 @@ extensionRouter.route({
     200: {
       description: 'List of Solr extensions for cloud services',
       schema: CloudExtensionsSchema,
-      contentTypes: ['application/json', 'application/x-yaml']
+      contentTypes: ['application/json', 'application/x-yaml'],
+      examples: {
+        'application/json': {
+          success: {
+            summary: 'Solr extensions payload',
+            value: solrExtensionsExample
+          }
+        }
+      }
     },
     500: {
       description: 'Internal server error',
-      schema: ErrorDetailsSchema
+      schema: ErrorDetailsSchema,
+      examples: {
+        'application/json': genericErrorExample
+      }
     }
   },
   handler: async (req: Request, res: Response) => {
@@ -382,17 +482,31 @@ extensionRouter.route({
     200: {
       description: 'Map all Solr versions allowing usage of this extension',
       schema: RuntimeExtensionVersionSchema,
-      contentTypes: ['application/json', 'application/x-yaml']
+      contentTypes: ['application/json', 'application/x-yaml'],
+      examples: {
+        'application/json': {
+          success: {
+            summary: 'Solr extension versions payload',
+            value: SolrExtensionExample
+          }
+        }
+      }
     },
     404: {
       description: 'Version not found',
       schema: ErrorDetailsSchema,
       contentTypes: ['application/json', 'application/x-yaml'],
+      examples: {
+        'application/json': SolrExtensionNotFoundExample
+      },
     },
     500: {
       description: 'Internal server error',
       schema: ErrorDetailsSchema,
       contentTypes: ['application/json', 'application/x-yaml'],
+      examples: {
+        'application/json': genericErrorExample
+      },
     }
   },
   handler: async (req: Request, res: Response) => {

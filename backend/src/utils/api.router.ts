@@ -25,6 +25,16 @@ export interface ApiRoute {
       description: string;
       schema: z.ZodSchema;
       contentTypes?: string[];
+      example?: unknown;
+      examples?: {
+        [contentType: string]: {
+          [exampleName: string]: {
+            summary?: string;
+            description?: string;
+            value: unknown;
+          };
+        };
+      };
     };
   };
   handler: RequestHandler;
@@ -175,8 +185,9 @@ export class ApiRouter {
 
       // Add response schemas
       if (responses) {
-        Object.entries(responses).forEach(([statusCode, { description: desc, schema }]) => {
-          const contentTypes = responses[Number(statusCode)].contentTypes || ['application/json'];
+        Object.entries(responses).forEach(([statusCode, response]) => {
+          const { description: desc, schema, example, examples } = response;
+          const contentTypes = response.contentTypes || ['application/json'];
 
           routeConfig.responses[statusCode] = {
             description: desc,
@@ -184,7 +195,11 @@ export class ApiRouter {
               ...Object.fromEntries(
                 contentTypes.map((contentType) => [
                   contentType,
-                  { schema }
+                  {
+                    schema,
+                    ...(example !== undefined ? { example } : {}),
+                    ...(examples?.[contentType] ? { examples: examples[contentType] } : {})
+                  }
                 ])
               )
             }
