@@ -3054,7 +3054,7 @@
       }
     },
     "timetravel": {
-      "description": "",
+      "description": "Trigger-based functions to record and query the history of row changes over time.",
       "versions": {
         "10": {
           "status": "available"
