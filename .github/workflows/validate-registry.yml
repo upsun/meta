@@ -85,6 +85,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+          cache: 'npm'
+          cache-dependency-path: backend/package-lock.json
 
       - name: Install dependencies
         run: npm ci
@@ -101,11 +103,10 @@ jobs:
           path: backend/dist
           retention-days: 1
 
-  validate-registry:
-    name: Validate image registry
+  validate-extensions:
+    name: Validate Schemas
     runs-on: ubuntu-latest
     needs: [build, detect-changes]
-    if: ${{ needs.detect-changes.outputs.registry == 'true' || needs.detect-changes.outputs.backend == 'true' }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -114,6 +115,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+          cache: 'npm'
+          cache-dependency-path: backend/package-lock.json
 
       - name: Install dependencies
         run: npm ci
@@ -125,174 +128,37 @@ jobs:
           name: backend-dist
           path: backend/dist
 
-      - name: Validate schema
-        run: npm run validate:registry
+      - name: Validate Solr modules
+        if: ${{ needs.detect-changes.outputs.ext_solr == 'true' || needs.detect-changes.outputs.backend == 'true' }}
+        run: npm run validate:extensions:solr
         working-directory: ./backend
-
-  validate-regions:
-    name: Validate host regions
-    runs-on: ubuntu-latest
-    needs: [build, detect-changes]
-    if: ${{ needs.detect-changes.outputs.regions == 'true' || needs.detect-changes.outputs.backend == 'true' }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-
-      - name: Install dependencies
-        run: npm ci
-        working-directory: ./backend
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: backend-dist
-          path: backend/dist
-
-      - name: Validate schema
-        run: npm run validate:regions
-        working-directory: ./backend
-
-  validate-composable:
-    name: Validate composable image
-    runs-on: ubuntu-latest
-    needs: [build, detect-changes]
-    if: ${{ needs.detect-changes.outputs.composable == 'true' || needs.detect-changes.outputs.backend == 'true' }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-
-      - name: Install dependencies
-        run: npm ci
-        working-directory: ./backend
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: backend-dist
-          path: backend/dist
-
-      - name: Validate schema
-        run: npm run validate:composable
-        working-directory: ./backend
-
-  validate-extensions-php:
-    name: Validate PHP extensions
-    runs-on: ubuntu-latest
-    needs: [build, detect-changes]
-    if: ${{ needs.detect-changes.outputs.ext_php == 'true' || needs.detect-changes.outputs.backend == 'true' }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-
-      - name: Install dependencies
-        run: npm ci
-        working-directory: ./backend
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: backend-dist
-          path: backend/dist
-
-      - name: Validate schema
-        run: npm run validate:extensions:php
-        working-directory: ./backend
-
-  validate-extensions-postgresql:
-    name: Validate PostgreSQL extensions
-    runs-on: ubuntu-latest
-    needs: [build, detect-changes]
-    if: ${{ needs.detect-changes.outputs.ext_postgresql == 'true' || needs.detect-changes.outputs.backend == 'true' }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-
-      - name: Install dependencies
-        run: npm ci
-        working-directory: ./backend
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: backend-dist
-          path: backend/dist
-
-      - name: Validate schema
+        
+      - name: Validate PostgreSQL extensions
+        if: ${{ needs.detect-changes.outputs.ext_postgresql == 'true' || needs.detect-changes.outputs.backend == 'true' }}
         run: npm run validate:extensions:postgresql
         working-directory: ./backend
 
-  validate-extensions-solr:
-    name: Validate Solr extensions
-    runs-on: ubuntu-latest
-    needs: [build, detect-changes]
-    if: ${{ needs.detect-changes.outputs.ext_solr == 'true' || needs.detect-changes.outputs.backend == 'true' }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-
-      - name: Install dependencies
-        run: npm ci
+      - name: Validate PHP extensions
+        if: ${{ needs.detect-changes.outputs.ext_php == 'true' || needs.detect-changes.outputs.backend == 'true' }}
+        run: npm run validate:extensions:php
         working-directory: ./backend
 
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: backend-dist
-          path: backend/dist
-
-      - name: Validate schema
-        run: npm run validate:extensions:solr
+      - name: Validate registry
+        if: ${{ needs.detect-changes.outputs.registry == 'true' || needs.detect-changes.outputs.backend == 'true' }}
+        run: npm run validate:registry
+        working-directory: ./backend
+      
+      - name: Validate Regions
+        if: ${{ needs.detect-changes.outputs.regions == 'true' || needs.detect-changes.outputs.backend == 'true' }}
+        run: npm run validate:regions
         working-directory: ./backend
 
-  validate-upsun:
-    name: Validate Upsun configuration schema
-    runs-on: ubuntu-latest
-    needs: [build, detect-changes]
-    if: ${{ needs.detect-changes.outputs.upsun == 'true' || needs.detect-changes.outputs.backend == 'true' }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-
-      - name: Install dependencies
-        run: npm ci
+      - name: Validate Composable
+        if: ${{ needs.detect-changes.outputs.composable == 'true' || needs.detect-changes.outputs.backend == 'true' }}
+        run: npm run validate:composable
         working-directory: ./backend
 
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: backend-dist
-          path: backend/dist
-
-      - name: Validate schema
+      - name: Validate Upsun config.yaml schema
+        if: ${{ needs.detect-changes.outputs.upsun == 'true' || needs.detect-changes.outputs.backend == 'true' }}
         run: npm run validate:upsun
         working-directory: ./backend

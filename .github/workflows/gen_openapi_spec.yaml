@@ -37,13 +37,16 @@ jobs:
           # URL-encode path to the project (replace `/` by `%2F`)
           PROJECT_ENCODED=$(echo "$PROJECT_PATH" | sed 's/\//%2F/g')
 
+          JSON_FILE="web%2Fopenapispec-upsun.json"
+          YAML_FILE="web%2Fopenapispec-upsun.yaml"
+
           # Download openapispec-upsun.(json|yaml) into resources/openapi using the Git API
-          curl --header "PRIVATE-TOKEN: $GIT_TOKEN" \
+          curl --fail --header "PRIVATE-TOKEN: $GIT_TOKEN" \
             --output resources/openapi/openapispec-upsun.json \
-            "${GIT_URL_BASE}/${PROJECT_ENCODED}/repository/files/$(python3 -c "import urllib.parse; print(urllib.parse.quote('web/openapispec-upsun.json',safe=''))")/raw?ref=${REF}"
-          curl --header "PRIVATE-TOKEN: $GIT_TOKEN" \
+            "${GIT_URL_BASE}/${PROJECT_ENCODED}/repository/files/${JSON_FILE}/raw?ref=${REF}"
+          curl --fail --header "PRIVATE-TOKEN: $GIT_TOKEN" \
             --output resources/openapi/openapispec-upsun.yaml \
-            "${GIT_URL_BASE}/${PROJECT_ENCODED}/repository/files/$(python3 -c "import urllib.parse; print(urllib.parse.quote('web/openapispec-upsun.yaml',safe=''))")/raw?ref=${REF}"
+            "${GIT_URL_BASE}/${PROJECT_ENCODED}/repository/files/${YAML_FILE}/raw?ref=${REF}"
           
       - name: Patch OpenAPI specs (json) for SDK generation 
         run: composer run spec:patch
@@ -57,8 +60,6 @@ jobs:
             This PR updates the OpenAPI spec from upstream and applies formatting changes to generate the SDK version.
 
           author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
-          draft: false
-          delete-branch: false
           branch: update-openapi-spec
           title: "[API-BOT] Get and Patch OpenAPI spec for SDKs"
           base: master
