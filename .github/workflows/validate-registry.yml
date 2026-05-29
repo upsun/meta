@@ -147,7 +147,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: '@copilot if there is an empty comment in one of the Solr extensions, add a suggestion'
+              body: '@copilot if there is an empty comment in one of the Solr extensions, add a comment with a suggestion, asking to report this description in Meta Version Updater tool'
             });
 
       - name: Validate PostgreSQL extensions
@@ -167,7 +167,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: '@copilot if there is an empty comment in one of the Postgresql extensions, add a suggestion'
+              body: '@copilot if there is an empty comment in one of the Postgresql extensions, add a comment with a suggestion, asking to report this description in Meta Version Updater tool'
             });
 
       - name: Fail if Solr or PostgreSQL validation failed
