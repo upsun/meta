@@ -1,7 +1,7 @@
 {
   "cloud": {
     "analysis-extras": {
-      "description": "Extra analyzers and token filters for advanced text analysis use cases.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
