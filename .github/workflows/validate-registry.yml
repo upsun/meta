@@ -137,18 +137,6 @@ jobs:
         run: npm run validate:extensions:solr
         working-directory: ./backend
 
-      - name: Request Copilot review on failure
-        if: ${{ steps.validate-solr.outcome == 'failure' && github.event_name == 'pull_request' }}
-        uses: actions/github-script@v7
-        with:
-          script: |
-            await github.request('POST /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers', {
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.issue.number,
-              reviewers: ['copilot-pull-request-reviewer']
-            });
-
       - name: Validate PostgreSQL extensions
         id: validate-postgresql
         if: ${{ needs.detect-changes.outputs.ext_postgresql == 'true' || needs.detect-changes.outputs.backend == 'true' }}
@@ -157,7 +145,7 @@ jobs:
         working-directory: ./backend
 
       - name: Request Copilot review on failure
-        if: ${{ steps.validate-postgresql.outcome == 'failure' && github.event_name == 'pull_request' }}
+        if: ${{ (steps.validate-postgresql.outcome == 'failure' || steps.validate-solr.outcome == 'failure') && github.event_name == 'pull_request' }}
         uses: actions/github-script@v7
         with:
           script: |
@@ -165,7 +153,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: context.issue.number,
-              reviewers: ['copilot-pull-request-reviewer']
+              reviewers: ['copilot']
             });
 
       - name: Fail if Solr or PostgreSQL validation failed
