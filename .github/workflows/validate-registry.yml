@@ -129,14 +129,46 @@ jobs:
           path: backend/dist
 
       - name: Validate Solr modules
+        id: validate-solr
         if: ${{ needs.detect-changes.outputs.ext_solr == 'true' || needs.detect-changes.outputs.backend == 'true' }}
+        continue-on-error: true
         run: npm run validate:extensions:solr
         working-directory: ./backend
-        
+
+      - name: Comment PR on Solr validation failure
+        if: ${{ steps.validate-solr.outcome == 'failure' && github.event_name == 'pull_request' }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: '@copilot if there is an empty comment in one of the Solr extensions, add a suggestion'
+            });
+
       - name: Validate PostgreSQL extensions
+        id: validate-postgresql
         if: ${{ needs.detect-changes.outputs.ext_postgresql == 'true' || needs.detect-changes.outputs.backend == 'true' }}
+        continue-on-error: true
         run: npm run validate:extensions:postgresql
         working-directory: ./backend
+
+      - name: Comment PR on PostgreSQL validation failure
+        if: ${{ steps.validate-postgresql.outcome == 'failure' && github.event_name == 'pull_request' }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: '@copilot if there is an empty comment in one of the Postgresql extensions, add a suggestion'
+            });
+
+      - name: Fail if Solr or PostgreSQL validation failed
+        if: ${{ steps.validate-solr.outcome == 'failure' || steps.validate-postgresql.outcome == 'failure' }}
+        run: exit 1
 
       - name: Validate PHP extensions
         if: ${{ needs.detect-changes.outputs.ext_php == 'true' || needs.detect-changes.outputs.backend == 'true' }}
