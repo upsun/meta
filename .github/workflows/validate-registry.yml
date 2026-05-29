@@ -107,6 +107,8 @@ jobs:
     name: Validate Schemas
     runs-on: ubuntu-latest
     needs: [build, detect-changes]
+    permissions:
+      pull-requests: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
