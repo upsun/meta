@@ -2770,9 +2770,9 @@
     "versions": {
       "3": {
         "upsun": {
-          "status": "supported",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "active"
+          "internal_status": "decommissioned"
         },
         "upstream": {
           "status": "retired",
@@ -2780,9 +2780,9 @@
           "eoasFrom": null,
           "eolFrom": "2025-06-25T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
