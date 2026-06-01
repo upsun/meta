@@ -2775,7 +2775,7 @@
           "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": "2025-04-14T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2025-06-25T00:00:00.000Z",
