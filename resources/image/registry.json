@@ -372,7 +372,7 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "retired",
+          "status": "supported",
           "releaseDate": "2023-12-05T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2024-01-23T00:00:00.000Z",
@@ -1050,7 +1050,7 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "retired",
+          "status": "supported",
           "releaseDate": "2019-04-10T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2026-01-15T00:00:00.000Z",
@@ -2797,9 +2797,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "1.0.8-0psh",
-            "majorMinor": "1.0",
-            "normalized": "1.0.8"
+            "raw": "3.9.3-1",
+            "majorMinor": "3.9",
+            "normalized": "3.9.3"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -8967,7 +8967,7 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "retired",
+          "status": "supported",
           "releaseDate": "2025-05-02T00:00:00.000Z",
           "eoasFrom": "2025-08-04T00:00:00.000Z",
           "eolFrom": "2026-02-11T00:00:00.000Z",
@@ -11083,7 +11083,7 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "retired",
+          "status": "supported",
           "releaseDate": "2022-10-10T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2023-09-27T00:00:00.000Z",
@@ -11492,7 +11492,7 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "retired",
+          "status": "supported",
           "releaseDate": "2018-06-30T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2022-04-30T00:00:00.000Z",
