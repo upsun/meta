@@ -56,32 +56,21 @@ export const RuntimeExtensionVersionSchema = z.record(
 });
 
 const RuntimeExtensionSchema = z.object({
+  description: z.string().trim().min(1).openapi({
+    description: 'Human-readable extension description',
+    example: 'AMQP messaging support'
+  }),
   versions: RuntimeExtensionVersionSchema
     .describe('Mapping of versions to extension configurations'),
   _links: LinkSchema.optional().describe('Hypermedia links related to the extension entry')
 }).openapi('RuntimeExtension', {
-  description: 'Entry for a specific extension with its version configurations',
+  description: 'Entry for a specific extension with a required description and version configurations',
   example: {
+    description: 'AMQP messaging support',
     versions: {
       "8.0": { status: "default", options: [] },
       "8.1": { status: "available", options: ["webp"] },
       "8.2": { status: "built-in", options: [] }
-    }
-  }
-});
-
-const RuntimeExtensionWithDescriptionSchema = RuntimeExtensionSchema.extend({
-  description: z.string().trim().min(1).openapi({
-    description: 'Human-readable extension description',
-    example: 'PostGIS support for PostgreSQL'
-  })
-}).openapi('RuntimeExtensionWithDescription', {
-  description: 'Entry for a specific extension with a required description and version configurations',
-  example: {
-    description: 'PostGIS support for PostgreSQL',
-    versions: {
-      '15': { status: 'available', options: [] },
-      '16': { status: 'available', options: [] }
     }
   }
 });
@@ -110,7 +99,7 @@ export const PostgresqlCloudExtensionsSchema = z.record(
     description: 'PostgreSQL extension name (e.g., "postgis", "pg_stat_statements")',
     example: 'postgis'
   }),
-  RuntimeExtensionWithDescriptionSchema
+  RuntimeExtensionSchema
 ).and(
   z.object({
     _links: z.record(z.string(), LinkSchema).optional().openapi({
@@ -126,7 +115,7 @@ export const SolrCloudExtensionsSchema = z.record(
     description: 'Solr extension name (e.g., "analysis-extras", "jwt-auth")',
     example: 'analysis-extras'
   }),
-  RuntimeExtensionWithDescriptionSchema
+  RuntimeExtensionSchema
 ).and(
   z.object({
     _links: z.record(z.string(), LinkSchema).optional().openapi({
