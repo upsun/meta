@@ -111,11 +111,6 @@ async function main() {
   ensureDescriptionsPresent(validatorKind, cloudData, fileName);
 
   if (validatorKind === 'php') {
-    const dedicatedData = (data as { dedicated?: unknown })?.dedicated;
-    if (dedicatedData) {
-      ensureDescriptionsPresent(validatorKind, dedicatedData, fileName);
-    }
-
     const result = RuntimeExtensionListSchema.safeParse(data);
     if (!result.success) {
       console.error(`${fileName} does not match the expected schema`);

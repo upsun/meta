@@ -75,6 +75,25 @@ const RuntimeExtensionSchema = z.object({
   }
 });
 
+const DedicatedExtensionSchema = z.object({
+  description: z.string().nullable().optional().openapi({
+    description: 'Human-readable extension description (optional for dedicated)',
+    example: null
+  }),
+  versions: RuntimeExtensionVersionSchema
+    .describe('Mapping of versions to extension configurations'),
+  _links: LinkSchema.optional().describe('Hypermedia links related to the extension entry')
+}).openapi('DedicatedExtension', {
+  description: 'Entry for a dedicated extension where description can be null',
+  example: {
+    description: null,
+    versions: {
+      "8.0": { status: "default", options: [] },
+      "8.1": { status: "available", options: [] }
+    }
+  }
+});
+
 /**
  * Schema for cloud extensions (with optional hypermedia links)
  */
@@ -135,7 +154,7 @@ export const RuntimeExtensionListSchema = z.object({
       description: 'Extension name for dedicated environment',
       example: 'amqp'
     }),
-    RuntimeExtensionSchema
+    DedicatedExtensionSchema
   ).openapi({
     description: 'Extensions available in dedicated environments'
   }),
