@@ -56,12 +56,17 @@ export const RuntimeExtensionVersionSchema = z.record(
 });
 
 const RuntimeExtensionSchema = z.object({
+  description: z.string().trim().min(1).openapi({
+    description: 'Human-readable extension description',
+    example: 'AMQP messaging support'
+  }),
   versions: RuntimeExtensionVersionSchema
     .describe('Mapping of versions to extension configurations'),
   _links: LinkSchema.optional().describe('Hypermedia links related to the extension entry')
 }).openapi('RuntimeExtension', {
-  description: 'Entry for a specific extension with its version configurations',
+  description: 'Entry for a specific extension with a required description and version configurations',
   example: {
+    description: 'AMQP messaging support',
     versions: {
       "8.0": { status: "default", options: [] },
       "8.1": { status: "available", options: ["webp"] },
@@ -70,18 +75,21 @@ const RuntimeExtensionSchema = z.object({
   }
 });
 
-const RuntimeExtensionWithDescriptionSchema = RuntimeExtensionSchema.extend({
-  description: z.string().trim().min(1).openapi({
-    description: 'Human-readable extension description',
-    example: 'PostGIS support for PostgreSQL'
-  })
-}).openapi('RuntimeExtensionWithDescription', {
-  description: 'Entry for a specific extension with a required description and version configurations',
+const DedicatedExtensionSchema = z.object({
+  description: z.string().nullable().optional().openapi({
+    description: 'Human-readable extension description (optional for dedicated)',
+    example: null
+  }),
+  versions: RuntimeExtensionVersionSchema
+    .describe('Mapping of versions to extension configurations'),
+  _links: LinkSchema.optional().describe('Hypermedia links related to the extension entry')
+}).openapi('DedicatedExtension', {
+  description: 'Entry for a dedicated extension where description can be null',
   example: {
-    description: 'PostGIS support for PostgreSQL',
+    description: null,
     versions: {
-      '15': { status: 'available', options: [] },
-      '16': { status: 'available', options: [] }
+      "8.0": { status: "default", options: [] },
+      "8.1": { status: "available", options: [] }
     }
   }
 });
@@ -110,7 +118,7 @@ export const PostgresqlCloudExtensionsSchema = z.record(
     description: 'PostgreSQL extension name (e.g., "postgis", "pg_stat_statements")',
     example: 'postgis'
   }),
-  RuntimeExtensionWithDescriptionSchema
+  RuntimeExtensionSchema
 ).and(
   z.object({
     _links: z.record(z.string(), LinkSchema).optional().openapi({
@@ -126,7 +134,7 @@ export const SolrCloudExtensionsSchema = z.record(
     description: 'Solr extension name (e.g., "analysis-extras", "jwt-auth")',
     example: 'analysis-extras'
   }),
-  RuntimeExtensionWithDescriptionSchema
+  RuntimeExtensionSchema
 ).and(
   z.object({
     _links: z.record(z.string(), LinkSchema).optional().openapi({
@@ -146,7 +154,7 @@ export const RuntimeExtensionListSchema = z.object({
       description: 'Extension name for dedicated environment',
       example: 'amqp'
     }),
-    RuntimeExtensionSchema
+    DedicatedExtensionSchema
   ).openapi({
     description: 'Extensions available in dedicated environments'
   }),

@@ -3,6 +3,7 @@ import path from 'path';
 import {
   CloudExtensionsSchema,
   PostgresqlCloudExtensionsSchema,
+  RuntimeExtensionListSchema,
   SolrCloudExtensionsSchema
 } from '../schemas/extension.schema.js';
 
@@ -40,11 +41,11 @@ function getDescriptionMessage(kind: ValidatorKind, extensionName: string): stri
     return `Please update description for solr extension \`${extensionName}\` in Meta Version Updater tool and update the PR`;
   }
 
-  return '';
+  return `Please update description of the php extension \`${extensionName}\` in Meta Version Updater tool and update the PR`;
 }
 
 function ensureDescriptionsPresent(kind: ValidatorKind, cloudData: unknown, fileName: string): void {
-  if (kind === 'php' || !cloudData || typeof cloudData !== 'object') {
+  if (!cloudData || typeof cloudData !== 'object') {
     return;
   }
 
@@ -109,12 +110,20 @@ async function main() {
 
   ensureDescriptionsPresent(validatorKind, cloudData, fileName);
 
-  const result = schema.safeParse(cloudData);
-
-  if (!result.success) {
-    console.error(`${fileName} cloud section does not match the expected schema`);
-    console.error(JSON.stringify(result.error.format(), null, 2));
-    process.exit(1);
+  if (validatorKind === 'php') {
+    const result = RuntimeExtensionListSchema.safeParse(data);
+    if (!result.success) {
+      console.error(`${fileName} does not match the expected schema`);
+      console.error(JSON.stringify(result.error.format(), null, 2));
+      process.exit(1);
+    }
+  } else {
+    const result = schema.safeParse(cloudData);
+    if (!result.success) {
+      console.error(`${fileName} cloud section does not match the expected schema`);
+      console.error(JSON.stringify(result.error.format(), null, 2));
+      process.exit(1);
+    }
   }
 
   console.log(`${fileName} is valid.`);
