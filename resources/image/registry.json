@@ -5547,9 +5547,9 @@
     "versions": {
       "2.0": {
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "supported",
@@ -5557,9 +5557,9 @@
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": null,
