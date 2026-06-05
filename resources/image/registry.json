@@ -284,7 +284,7 @@
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "95": {
@@ -323,7 +323,7 @@
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "113": {
@@ -362,7 +362,7 @@
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "120": {
@@ -401,7 +401,7 @@
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       }
     }
@@ -3163,7 +3163,7 @@
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       }
     }
@@ -5547,7 +5547,7 @@
     "versions": {
       "2.0": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true,
           "internal_status": "active"
         },
@@ -5558,7 +5558,7 @@
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -9864,8 +9864,8 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "decommissioned",
-          "releaseDate": "2026-04-16T00:00:00.000Z",
+          "status": "supported",
+          "releaseDate": "2026-05-28T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
@@ -10563,7 +10563,7 @@
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "8.1": {
@@ -10604,7 +10604,7 @@
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "8.0": {
@@ -10645,7 +10645,7 @@
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       }
     }
@@ -10706,7 +10706,7 @@
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "7.6": {
@@ -10750,7 +10750,7 @@
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "7.3": {
@@ -10794,7 +10794,7 @@
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "7.2": {
@@ -10838,7 +10838,7 @@
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "7.1": {
@@ -10882,7 +10882,7 @@
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "6.3": {
@@ -10926,7 +10926,7 @@
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "6.0": {
@@ -10970,7 +10970,7 @@
           "allow_scale_down": null,
           "storage_mount_point": null,
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "5.2": {
