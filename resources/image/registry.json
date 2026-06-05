@@ -711,7 +711,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "8.0": {
@@ -750,7 +750,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "7.0": {
@@ -789,7 +789,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "6.0": {
@@ -1658,7 +1658,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "1.18": {
@@ -1697,7 +1697,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "1.15": {
@@ -1736,7 +1736,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "1.14": {
@@ -1775,7 +1775,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "1.13": {
@@ -2046,7 +2046,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "1.25": {
@@ -2085,7 +2085,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "1.24": {
@@ -2124,7 +2124,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "1.23": {
@@ -2163,7 +2163,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "1.22": {
@@ -2202,7 +2202,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "1.21": {
@@ -2241,7 +2241,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "1.20": {
@@ -2280,7 +2280,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "1.19": {
@@ -2319,7 +2319,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "1.18": {
@@ -2358,7 +2358,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "1.17": {
@@ -2397,7 +2397,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "1.16": {
@@ -2475,7 +2475,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "1.14": {
@@ -2514,7 +2514,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "1.13": {
@@ -3229,7 +3229,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "11": {
@@ -3268,7 +3268,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "12": {
@@ -3307,7 +3307,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "13": {
@@ -3346,7 +3346,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "14": {
@@ -3385,7 +3385,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "17": {
@@ -3424,7 +3424,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "18": {
@@ -3463,7 +3463,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "19": {
@@ -3502,7 +3502,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "21": {
@@ -3541,7 +3541,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "25": {
@@ -3580,7 +3580,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       }
     }
@@ -5671,7 +5671,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "18": {
@@ -5710,7 +5710,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "20": {
@@ -5749,7 +5749,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "22": {
@@ -5788,7 +5788,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "24": {
@@ -5827,7 +5827,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "26": {
@@ -5866,7 +5866,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "8.9": {
@@ -6847,7 +6847,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "8.4": {
@@ -6890,7 +6890,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "8.3": {
@@ -6933,7 +6933,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "8.2": {
@@ -6976,7 +6976,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "8.1": {
@@ -7019,7 +7019,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "8.0": {
@@ -7062,7 +7062,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "7.4": {
@@ -8017,7 +8017,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "3.13": {
@@ -8056,7 +8056,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "3.12": {
@@ -8095,7 +8095,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "3.11": {
@@ -8134,7 +8134,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "3.10": {
@@ -8173,7 +8173,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "3.9": {
@@ -8212,7 +8212,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "3.8": {
@@ -8251,7 +8251,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "3.7": {
@@ -8290,7 +8290,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "3.6": {
@@ -9442,7 +9442,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "3.4": {
@@ -9481,7 +9481,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "3.3": {
@@ -9520,7 +9520,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "3.2": {
@@ -9559,7 +9559,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "3.1": {
@@ -9598,7 +9598,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "3.0": {
@@ -9637,7 +9637,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       },
       "2.7": {
@@ -9894,7 +9894,7 @@
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
-          "supports_horizontal_scaling": false
+          "supports_horizontal_scaling": true
         }
       }
     }
@@ -10563,7 +10563,7 @@
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "8.1": {
@@ -10604,7 +10604,7 @@
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "8.0": {
@@ -10645,7 +10645,7 @@
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       }
     }
