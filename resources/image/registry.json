@@ -5552,7 +5552,7 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "supported",
+          "status": "incoming",
           "releaseDate": null,
           "eoasFrom": null,
           "eolFrom": null,
@@ -8998,7 +8998,7 @@
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "7.2": {
@@ -9039,7 +9039,7 @@
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "7.0": {
@@ -9080,7 +9080,7 @@
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "6.2": {
@@ -9114,14 +9114,14 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "6.2.21-0psh2~bpo11+1",
+            "raw": "6.2.22-0psh1",
             "majorMinor": "6.2",
-            "normalized": "6.2.21"
+            "normalized": "6.2.22"
           },
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "6.0": {
