@@ -1629,9 +1629,9 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "supported",
+          "status": "deprecated",
           "releaseDate": "2025-10-16T00:00:00.000Z",
-          "eoasFrom": null,
+          "eoasFrom": "2026-06-03T00:00:00.000Z",
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
@@ -1702,18 +1702,18 @@
       },
       "1.15": {
         "upsun": {
-          "status": "deprecated",
+          "status": "supported",
           "internal_support": true,
           "internal_status": "active"
         },
         "upstream": {
-          "status": "deprecated",
+          "status": "retired",
           "releaseDate": "2023-06-19T00:00:00.000Z",
           "eoasFrom": "2023-12-22T00:00:00.000Z",
-          "eolFrom": null,
+          "eolFrom": "2026-06-03T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
-          "isEoas": true,
+          "isEoas": false,
           "isEol": false
         },
         "manifest": {
@@ -2770,12 +2770,12 @@
     "versions": {
       "3": {
         "upsun": {
-          "status": "incoming",
+          "status": "supported",
           "internal_support": true,
           "internal_status": "active"
         },
         "upstream": {
-          "status": "incoming",
+          "status": "supported",
           "releaseDate": "2025-04-14T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2025-06-25T00:00:00.000Z",
