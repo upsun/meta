@@ -704,9 +704,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "10.0.300",
+            "raw": "10.0.301",
             "majorMinor": "10.0",
-            "normalized": "10.0.300"
+            "normalized": "10.0.301"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -743,9 +743,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.0.421-1",
+            "raw": "8.0.422-1",
             "majorMinor": "8.0",
-            "normalized": "8.0.421"
+            "normalized": "8.0.422"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -1629,9 +1629,9 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "supported",
+          "status": "deprecated",
           "releaseDate": "2025-10-16T00:00:00.000Z",
-          "eoasFrom": null,
+          "eoasFrom": "2026-06-03T00:00:00.000Z",
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
@@ -1702,18 +1702,18 @@
       },
       "1.15": {
         "upsun": {
-          "status": "deprecated",
+          "status": "supported",
           "internal_support": true,
           "internal_status": "active"
         },
         "upstream": {
-          "status": "deprecated",
+          "status": "retired",
           "releaseDate": "2023-06-19T00:00:00.000Z",
           "eoasFrom": "2023-12-22T00:00:00.000Z",
-          "eolFrom": null,
+          "eolFrom": "2026-06-03T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
-          "isEoas": true,
+          "isEoas": false,
           "isEol": false
         },
         "manifest": {
@@ -2770,12 +2770,12 @@
     "versions": {
       "3": {
         "upsun": {
-          "status": "incoming",
+          "status": "supported",
           "internal_support": true,
           "internal_status": "active"
         },
         "upstream": {
-          "status": "incoming",
+          "status": "supported",
           "releaseDate": "2025-04-14T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2025-06-25T00:00:00.000Z",
@@ -5318,9 +5318,9 @@
           "min_disk_size": 512,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "7.0.34",
+            "raw": "7.0.35",
             "majorMinor": "7.0",
-            "normalized": "7.0.34"
+            "normalized": "7.0.35"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -5552,7 +5552,7 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "supported",
+          "status": "incoming",
           "releaseDate": null,
           "eoasFrom": null,
           "eolFrom": null,
@@ -6840,9 +6840,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.5.6-3+0~20260514.18+debian13~1.gbpe4e1f6",
+            "raw": "8.5.7-1+0~20260606.19+debian13~1.gbp741f99",
             "majorMinor": "8.5",
-            "normalized": "8.5.6"
+            "normalized": "8.5.7"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -6883,9 +6883,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.4.21-3+0~20260514.49+debian12~1.gbp45ccaf",
+            "raw": "8.4.22-1+0~20260606.50+debian12~1.gbpc1d74e",
             "majorMinor": "8.4",
-            "normalized": "8.4.21"
+            "normalized": "8.4.22"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -8998,7 +8998,7 @@
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "7.2": {
@@ -9039,7 +9039,7 @@
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "7.0": {
@@ -9080,7 +9080,7 @@
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "6.2": {
@@ -9114,14 +9114,14 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "6.2.21-0psh2~bpo11+1",
+            "raw": "6.2.22-0psh1",
             "majorMinor": "6.2",
-            "normalized": "6.2.21"
+            "normalized": "6.2.22"
           },
           "allow_scale_down": true,
           "storage_mount_point": null,
           "default_container_profile": "BALANCED",
-          "supports_horizontal_scaling": true
+          "supports_horizontal_scaling": false
         }
       },
       "6.0": {
@@ -9513,9 +9513,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "3.3.10-0psh1~bpo12+1",
+            "raw": "3.3.11-0psh2",
             "majorMinor": "3.3",
-            "normalized": "3.3.10"
+            "normalized": "3.3.11"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -11262,7 +11262,7 @@
           "status": "supported",
           "releaseDate": "2026-02-03T00:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": null,
+          "eolFrom": "2026-05-26T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
