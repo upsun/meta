@@ -48,8 +48,8 @@
           },
           "golang": {
             "versions": [
-              "1.24",
-              "1.25"
+              "1.25",
+              "1.26"
             ],
             "name": "Go",
             "url": "/docs/languages/go",
@@ -66,9 +66,9 @@
           },
           "nodejs": {
             "versions": [
-              "20",
               "22",
-              "24"
+              "24",
+              "26"
             ],
             "name": "Javascript/Node.js",
             "url": "/docs/languages/nodejs",
@@ -95,9 +95,9 @@
           },
           "python": {
             "versions": [
-              "3.11",
               "3.12",
-              "3.13"
+              "3.13",
+              "3.14"
             ],
             "name": "Python",
             "url": "/docs/languages/python",
