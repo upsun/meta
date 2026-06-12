@@ -5318,9 +5318,9 @@
           "min_disk_size": 512,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "7.0.35",
+            "raw": "7.0.37",
             "majorMinor": "7.0",
-            "normalized": "7.0.35"
+            "normalized": "7.0.37"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -5358,9 +5358,9 @@
           "min_disk_size": 512,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "6.0.28",
+            "raw": "6.0.29",
             "majorMinor": "6.0",
-            "normalized": "6.0.28"
+            "normalized": "6.0.29"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -5398,9 +5398,9 @@
           "min_disk_size": 512,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "5.0.33",
+            "raw": "5.0.34",
             "majorMinor": "5.0",
-            "normalized": "5.0.33"
+            "normalized": "5.0.34"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -11414,63 +11414,6 @@
       }
     }
   },
-  "mariadb-replica": {
-    "description": "",
-    "name": "mariadb-replica",
-    "internal": {
-      "repo_name": "mariadb-replica"
-    },
-    "service": true,
-    "need_disk": true,
-    "docs": {
-      "relationship_name": "mariadb-replica",
-      "service_name": "mariadb-replica",
-      "url": "https://developer.upsun.com/docs/add-services/mysql/mysql-readonly-replication"
-    },
-    "versions": {
-      "11.4": {
-        "upsun": {
-          "status": "retired",
-          "internal_support": false,
-          "internal_status": "sunset"
-        },
-        "upstream": {
-          "status": "retired",
-          "releaseDate": null,
-          "eoasFrom": null,
-          "eolFrom": null,
-          "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
-        },
-        "manifest": {
-          "endpoints": {
-            "mysql": {
-              "port": 3306,
-              "schema": "mysql",
-              "scheme": "mysql",
-              "default": true
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "1:11.4.12+maria~deb12",
-            "majorMinor": "11.4",
-            "normalized": "11.4.12"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
-        }
-      }
-    }
-  },
   "mongodb": {
     "description": "",
     "name": "mongodb",
@@ -11708,66 +11651,6 @@
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
           "supports_horizontal_scaling": null
-        }
-      }
-    }
-  },
-  "postgresql-replica": {
-    "description": "",
-    "name": "postgresql-replica",
-    "internal": {
-      "repo_name": "postgresql-replica"
-    },
-    "service": true,
-    "need_disk": true,
-    "docs": {
-      "relationship_name": "postgresql-replica",
-      "service_name": "postgresql-replica",
-      "url": "https://developer.upsun.com/docs/add-services/postgresql/postgresql-readonly-replication"
-    },
-    "versions": {
-      "15": {
-        "upsun": {
-          "status": "retired",
-          "internal_support": false,
-          "internal_status": "sunset"
-        },
-        "upstream": {
-          "status": "retired",
-          "releaseDate": null,
-          "eoasFrom": null,
-          "eolFrom": null,
-          "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
-        },
-        "manifest": {
-          "endpoints": {
-            "postgresql": {
-              "port": 5432,
-              "scheme": "pgsql",
-              "default": true,
-              "privileges": {
-                "main": "admin"
-              },
-              "default_database": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "15.17-1.pgdg12+1",
-            "majorMinor": "15.17",
-            "normalized": "15.17.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
         }
       }
     }
