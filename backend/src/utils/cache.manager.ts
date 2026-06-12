@@ -65,11 +65,19 @@ function getAcceptVariant(req: Request | undefined): 'json' | 'yaml' {
 
 /**
  * Build ETag context that always includes negotiated representation variant.
+ *
+ * The context captures every request input that changes the response body so
+ * that the generated ETag is unique per variant:
+ * - the negotiated representation format (Accept: json/yaml)
+ * - the `internal` request header (public vs internal payloads)
+ * - any route-specific params (path/query) provided by the caller
  */
 function buildEtagContext(req: Request | undefined, queryParams?: Record<string, any>): EtagContext {
+  const internal = req?.headers['internal'] === 'true' ? 'true' : undefined;
   return {
     ...(queryParams || {}),
-    accept: getAcceptVariant(req)
+    accept: getAcceptVariant(req),
+    ...(internal ? { internal } : {})
   };
 }
 
@@ -166,53 +174,51 @@ export function checkClientCache(req: Request, metadata: ResourceMetadata, query
  * @param queryParams - Optional query parameters to include in ETag
  */
 export function setCacheHeaders(res: Response, metadata: ResourceMetadata, maxAge: number = 300, queryParams?: Record<string, any>): void {
-  // Disable caching for now while we iterate on ETag logic and monitor cache behavior in production. We will re-enable with proper ETag handling once we are confident in the implementation.
+  // Generate ETag with request-sensitive context (Accept variant + internal header + optional params)
+  const etagContext = buildEtagContext(res.req, queryParams);
+  const etag = generateEtagWithParams(metadata.etag, etagContext);
 
-  // // Generate ETag with request-sensitive context (Accept variant + optional query params)
-  // const etagContext = buildEtagContext(res.req, queryParams);
-  // const etag = generateEtagWithParams(metadata.etag, etagContext);
+  if (etag) {
+    res.setHeader('ETag', etag);
+  }
 
-  // if (etag) {
-  //   res.setHeader('ETag', etag);
-  // }
+  if (metadata.lastModified) {
+    res.setHeader('Last-Modified', metadata.lastModified);
+  }
 
-  // if (metadata.lastModified) {
-  //   res.setHeader('Last-Modified', metadata.lastModified);
-  // }
+  // Set Cache-Control header
+  // - public: can be cached by browsers and CDNs
+  // - max-age: how long the cache is fresh
+  // - must-revalidate: must check with server after max-age expires
+  res.setHeader('Cache-Control', `public, max-age=${maxAge}, must-revalidate`);
 
-  // // Set Cache-Control header
-  // // - public: can be cached by browsers and CDNs
-  // // - max-age: how long the cache is fresh
-  // // - must-revalidate: must check with server after max-age expires
-  // res.setHeader('Cache-Control', `public, max-age=${maxAge}, must-revalidate`);
-
-  // // Ensure Vary: Accept is present so caches know the response varies by Accept header
-  // const existingVary = res.getHeader('Vary');
-  // if (existingVary === undefined) {
-  //   res.setHeader('Vary', 'Accept');
-  // } else {
-  //   const headerValue = Array.isArray(existingVary)
-  //     ? existingVary.join(',')
-  //     : String(existingVary);
-  //   const varySet = new Set<string>();
-  //   headerValue.split(',').forEach(value => {
-  //     const trimmed = value.trim();
-  //     if (trimmed) {
-  //       varySet.add(trimmed);
-  //     }
-  //   });
-  //   let hasAccept = false;
-  //   for (const v of varySet) {
-  //     if (v.toLowerCase() === 'accept') {
-  //       hasAccept = true;
-  //       break;
-  //     }
-  //   }
-  //   if (!hasAccept) {
-  //     varySet.add('Accept');
-  //   }
-  //   res.setHeader('Vary', Array.from(varySet).join(', '));
-  // }
+  // Ensure Vary: Accept is present so caches know the response varies by Accept header
+  const existingVary = res.getHeader('Vary');
+  if (existingVary === undefined) {
+    res.setHeader('Vary', 'Accept');
+  } else {
+    const headerValue = Array.isArray(existingVary)
+      ? existingVary.join(',')
+      : String(existingVary);
+    const varySet = new Set<string>();
+    headerValue.split(',').forEach(value => {
+      const trimmed = value.trim();
+      if (trimmed) {
+        varySet.add(trimmed);
+      }
+    });
+    let hasAccept = false;
+    for (const v of varySet) {
+      if (v.toLowerCase() === 'accept') {
+        hasAccept = true;
+        break;
+      }
+    }
+    if (!hasAccept) {
+      varySet.add('Accept');
+    }
+    res.setHeader('Vary', Array.from(varySet).join(', '));
+  }
 }
 
 /**
