@@ -245,6 +245,7 @@
                     }
                 },
                 "x-vendor": "upsun",
+                "x-deprecated": true,
                 "x-property-id-kebab": "get-org-addons",
                 "x-tag-id-kebab": "Add-ons",
                 "x-return-types-displayReturn": false,
@@ -9082,6 +9083,7 @@
                     }
                 },
                 "x-vendor": "upsun",
+                "x-deprecated": true,
                 "x-property-id-kebab": "list-org-discounts",
                 "x-tag-id-kebab": "Discounts",
                 "x-return-types-displayReturn": false,
@@ -15176,6 +15178,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "list-org-invoices",
                 "x-tag-id-kebab": "Invoices",
                 "x-return-types-displayReturn": false,
@@ -15241,6 +15244,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "get-org-invoice",
                 "x-tag-id-kebab": "Invoices",
                 "x-return-types-displayReturn": false,
@@ -15882,6 +15886,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "list-org-orders",
                 "x-tag-id-kebab": "Orders",
                 "x-return-types-displayReturn": false,
@@ -15950,6 +15955,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "get-org-order",
                 "x-tag-id-kebab": "Orders",
                 "x-return-types-displayReturn": false,
@@ -16046,6 +16052,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "create-authorization-credentials",
                 "x-tag-id-kebab": "Orders",
                 "x-return-types-displayReturn": false,
@@ -16359,6 +16366,7 @@
                     }
                 },
                 "x-vendor": "upsun",
+                "x-deprecated": true,
                 "x-property-id-kebab": "estimate-org",
                 "x-tag-id-kebab": "Organization-Management",
                 "x-return-types-displayReturn": false,
@@ -16423,6 +16431,7 @@
                     }
                 },
                 "x-vendor": "upsun",
+                "x-deprecated": true,
                 "x-property-id-kebab": "get-org-billing-alert-config",
                 "x-tag-id-kebab": "Organization-Management",
                 "x-return-types-displayReturn": false,
@@ -16514,6 +16523,7 @@
                     }
                 },
                 "x-vendor": "upsun",
+                "x-deprecated": true,
                 "x-property-id-kebab": "update-org-billing-alert-config",
                 "x-tag-id-kebab": "Organization-Management",
                 "x-return-types-displayReturn": false,
@@ -16608,6 +16618,7 @@
                     }
                 },
                 "x-vendor": "upsun",
+                "x-deprecated": true,
                 "x-property-id-kebab": "get-org-prepayment-info",
                 "x-tag-id-kebab": "Organization-Management",
                 "x-return-types-displayReturn": false,
@@ -16728,6 +16739,7 @@
                     }
                 },
                 "x-vendor": "upsun",
+                "x-deprecated": true,
                 "x-property-id-kebab": "list-org-prepayment-transactions",
                 "x-tag-id-kebab": "Organization-Management",
                 "x-return-types-displayReturn": false,
@@ -17536,6 +17548,12 @@
                     },
                     "404": {
                         "$ref": "#/components/responses/NotFound"
+                    },
+                    "409": {
+                        "$ref": "#/components/responses/Conflict"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/UnprocessableEntity"
                     },
                     "503": {
                         "$ref": "#/components/responses/ServiceUnavailable"
@@ -18622,6 +18640,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "get-org-address",
                 "x-tag-id-kebab": "Profiles",
                 "x-return-types-displayReturn": false,
@@ -18702,6 +18721,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "update-org-address",
                 "x-tag-id-kebab": "Profiles",
                 "x-return-types-displayReturn": false,
@@ -18765,6 +18785,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "get-org-profile",
                 "x-tag-id-kebab": "Profiles",
                 "x-return-types-displayReturn": false,
@@ -18882,6 +18903,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "update-org-profile",
                 "x-tag-id-kebab": "Profiles",
                 "x-return-types-displayReturn": false,
@@ -20141,6 +20163,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "list-org-plan-records",
                 "x-tag-id-kebab": "Records",
                 "x-return-types-displayReturn": false,
@@ -20229,6 +20252,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "list-org-usage-records",
                 "x-tag-id-kebab": "Records",
                 "x-return-types-displayReturn": false,
@@ -20808,261 +20832,6 @@
                 "x-description": [
                     "Retrieves the specified region."
                 ]
-            }
-        },
-        "/projects/{projectId}/oci-registries": {
-            "get": {
-                "parameters": [
-                    {
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "name": "projectId"
-                    }
-                ],
-                "operationId": "list-projects-oci-registries",
-                "responses": {
-                    "default": {
-                        "description": "",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/RegistryCredentialCollection"
-                                }
-                            }
-                        }
-                    }
-                },
-                "tags": [
-                    "RegistryCredential"
-                ],
-                "x-property-id-kebab": "list-projects-oci-registries",
-                "x-tag-id-kebab": "RegistryCredential",
-                "x-return-types-displayReturn": true,
-                "x-phpdoc": {
-                    "return": "\\Upsun\\Model\\RegistryCredential[]"
-                },
-                "x-ndjson-stream": false,
-                "x-stream-item-type": null,
-                "x-returnable": true,
-                "x-return-types": [
-                    "\\Upsun\\Model\\RegistryCredential[]"
-                ],
-                "x-return-types-union": "array"
-            },
-            "post": {
-                "parameters": [
-                    {
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "name": "projectId"
-                    }
-                ],
-                "operationId": "create-projects-oci-registries",
-                "responses": {
-                    "default": {
-                        "description": "",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/AcceptedResponse"
-                                }
-                            }
-                        }
-                    }
-                },
-                "requestBody": {
-                    "description": "",
-                    "required": true,
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/RegistryCredentialCreateInput"
-                            }
-                        }
-                    }
-                },
-                "tags": [
-                    "RegistryCredential"
-                ],
-                "x-property-id-kebab": "create-projects-oci-registries",
-                "x-tag-id-kebab": "RegistryCredential",
-                "x-return-types-displayReturn": false,
-                "x-phpdoc": {
-                    "return": "\\Upsun\\Model\\AcceptedResponse"
-                },
-                "x-ndjson-stream": false,
-                "x-stream-item-type": null,
-                "x-returnable": true,
-                "x-return-types": [
-                    "\\Upsun\\Model\\AcceptedResponse"
-                ],
-                "x-return-types-union": "\\Upsun\\Model\\AcceptedResponse"
-            }
-        },
-        "/projects/{projectId}/oci-registries/{registryCredentialId}": {
-            "get": {
-                "parameters": [
-                    {
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "name": "projectId"
-                    },
-                    {
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "name": "registryCredentialId"
-                    }
-                ],
-                "operationId": "get-projects-oci-registries",
-                "responses": {
-                    "default": {
-                        "description": "",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/RegistryCredential"
-                                }
-                            }
-                        }
-                    }
-                },
-                "tags": [
-                    "RegistryCredential"
-                ],
-                "x-property-id-kebab": "get-projects-oci-registries",
-                "x-tag-id-kebab": "RegistryCredential",
-                "x-return-types-displayReturn": false,
-                "x-phpdoc": {
-                    "return": "\\Upsun\\Model\\RegistryCredential"
-                },
-                "x-ndjson-stream": false,
-                "x-stream-item-type": null,
-                "x-returnable": true,
-                "x-return-types": [
-                    "\\Upsun\\Model\\RegistryCredential"
-                ],
-                "x-return-types-union": "\\Upsun\\Model\\RegistryCredential"
-            },
-            "patch": {
-                "requestBody": {
-                    "description": "",
-                    "required": true,
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/RegistryCredentialPatch"
-                            }
-                        }
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "name": "projectId"
-                    },
-                    {
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "name": "registryCredentialId"
-                    }
-                ],
-                "operationId": "update-projects-oci-registries",
-                "responses": {
-                    "default": {
-                        "description": "",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/AcceptedResponse"
-                                }
-                            }
-                        }
-                    }
-                },
-                "tags": [
-                    "RegistryCredential"
-                ],
-                "x-property-id-kebab": "update-projects-oci-registries",
-                "x-tag-id-kebab": "RegistryCredential",
-                "x-return-types-displayReturn": false,
-                "x-phpdoc": {
-                    "return": "\\Upsun\\Model\\AcceptedResponse"
-                },
-                "x-ndjson-stream": false,
-                "x-stream-item-type": null,
-                "x-returnable": true,
-                "x-return-types": [
-                    "\\Upsun\\Model\\AcceptedResponse"
-                ],
-                "x-return-types-union": "\\Upsun\\Model\\AcceptedResponse"
-            },
-            "delete": {
-                "parameters": [
-                    {
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "name": "projectId"
-                    },
-                    {
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "name": "registryCredentialId"
-                    }
-                ],
-                "operationId": "delete-projects-oci-registries",
-                "responses": {
-                    "default": {
-                        "description": "",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/AcceptedResponse"
-                                }
-                            }
-                        }
-                    }
-                },
-                "tags": [
-                    "RegistryCredential"
-                ],
-                "x-property-id-kebab": "delete-projects-oci-registries",
-                "x-tag-id-kebab": "RegistryCredential",
-                "x-return-types-displayReturn": false,
-                "x-phpdoc": {
-                    "return": "\\Upsun\\Model\\AcceptedResponse"
-                },
-                "x-ndjson-stream": false,
-                "x-stream-item-type": null,
-                "x-returnable": true,
-                "x-return-types": [
-                    "\\Upsun\\Model\\AcceptedResponse"
-                ],
-                "x-return-types-union": "\\Upsun\\Model\\AcceptedResponse"
             }
         },
         "/projects/{projectId}/git/blobs/{repositoryBlobId}": {
@@ -25344,132 +25113,6 @@
                 ]
             }
         },
-        "/projects/{projectId}/environments/{environmentId}/deployments/{deploymentId}/sboms": {
-            "get": {
-                "parameters": [
-                    {
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "name": "projectId"
-                    },
-                    {
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "name": "environmentId"
-                    },
-                    {
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "name": "deploymentId"
-                    }
-                ],
-                "operationId": "list-projects-environments-deployments-sboms",
-                "responses": {
-                    "default": {
-                        "description": "",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SbomCollection"
-                                }
-                            }
-                        }
-                    }
-                },
-                "tags": [
-                    "Sbom"
-                ],
-                "x-property-id-kebab": "list-projects-environments-deployments-sboms",
-                "x-tag-id-kebab": "Sbom",
-                "x-return-types-displayReturn": true,
-                "x-phpdoc": {
-                    "return": "\\Upsun\\Model\\Sbom[]"
-                },
-                "x-ndjson-stream": false,
-                "x-stream-item-type": null,
-                "x-returnable": true,
-                "x-return-types": [
-                    "\\Upsun\\Model\\Sbom[]"
-                ],
-                "x-return-types-union": "array"
-            }
-        },
-        "/projects/{projectId}/environments/{environmentId}/deployments/{deploymentId}/sboms/{sbomServiceId}": {
-            "get": {
-                "parameters": [
-                    {
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "name": "projectId"
-                    },
-                    {
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "name": "environmentId"
-                    },
-                    {
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "name": "deploymentId"
-                    },
-                    {
-                        "in": "path",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "name": "sbomServiceId"
-                    }
-                ],
-                "operationId": "get-projects-environments-deployments-sboms",
-                "responses": {
-                    "default": {
-                        "description": "",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Sbom"
-                                }
-                            }
-                        }
-                    }
-                },
-                "tags": [
-                    "Sbom"
-                ],
-                "x-property-id-kebab": "get-projects-environments-deployments-sboms",
-                "x-tag-id-kebab": "Sbom",
-                "x-return-types-displayReturn": false,
-                "x-phpdoc": {
-                    "return": "\\Upsun\\Model\\Sbom"
-                },
-                "x-ndjson-stream": false,
-                "x-stream-item-type": null,
-                "x-returnable": true,
-                "x-return-types": [
-                    "\\Upsun\\Model\\Sbom"
-                ],
-                "x-return-types-union": "\\Upsun\\Model\\Sbom"
-            }
-        },
         "/projects/{projectId}/environments/{environmentId}/source-operation": {
             "post": {
                 "parameters": [
@@ -25942,6 +25585,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "estimate-new-org-subscription",
                 "x-tag-id-kebab": "Subscriptions",
                 "x-return-types-displayReturn": false,
@@ -26036,6 +25680,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "can-create-new-org-subscription",
                 "x-tag-id-kebab": "Subscriptions",
                 "x-return-types-displayReturn": false,
@@ -26132,6 +25777,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "estimate-org-subscription",
                 "x-tag-id-kebab": "Subscriptions",
                 "x-return-types-displayReturn": false,
@@ -26200,6 +25846,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "get-org-subscription-current-usage",
                 "x-tag-id-kebab": "Subscriptions",
                 "x-return-types-displayReturn": false,
@@ -26253,6 +25900,7 @@
                     }
                 },
                 "x-vendor": "upsun",
+                "x-deprecated": true,
                 "x-property-id-kebab": "list-subscription-addons",
                 "x-tag-id-kebab": "Subscriptions",
                 "x-return-types-displayReturn": false,
@@ -26332,6 +25980,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "get-subscription-usage-alerts",
                 "x-tag-id-kebab": "Subscriptions",
                 "x-return-types-displayReturn": false,
@@ -26450,6 +26099,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "update-subscription-usage-alerts",
                 "x-tag-id-kebab": "Subscriptions",
                 "x-return-types-displayReturn": false,
@@ -26828,6 +26478,9 @@
                     },
                     "404": {
                         "$ref": "#/components/responses/NotFound"
+                    },
+                    "409": {
+                        "$ref": "#/components/responses/Conflict"
                     }
                 },
                 "x-property-id-kebab": "update-org-subscription",
@@ -30809,6 +30462,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "list-org-vouchers",
                 "x-tag-id-kebab": "Vouchers",
                 "x-return-types-displayReturn": false,
@@ -30884,6 +30538,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "apply-org-voucher",
                 "x-tag-id-kebab": "Vouchers",
                 "x-return-types-displayReturn": false,
@@ -34829,6 +34484,16 @@
                             "Total size of space used on volumes backed up"
                         ]
                     },
+                    "size_object_storage": {
+                        "type": "integer",
+                        "nullable": true,
+                        "title": "Size of object storage",
+                        "description": "Total object-storage quota configured on webapps at backup time",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "Total object-storage quota configured on webapps at backup time"
+                        ]
+                    },
                     "deployment": {
                         "type": "string",
                         "nullable": true,
@@ -34871,6 +34536,7 @@
                     "safe",
                     "size_of_volumes",
                     "size_used",
+                    "size_object_storage",
                     "deployment",
                     "restorable",
                     "automated"
@@ -38174,40 +37840,6 @@
                                     "title": "Resources",
                                     "description": ""
                                 },
-                                "size": {
-                                    "type": "string",
-                                    "enum": [
-                                        "2XL",
-                                        "4XL",
-                                        "AUTO",
-                                        "L",
-                                        "M",
-                                        "S",
-                                        "XL",
-                                        "XS"
-                                    ],
-                                    "title": "Container Size",
-                                    "description": "The container size for this application in production. Leave blank to allow it to be set dynamically."
-                                },
-                                "disk": {
-                                    "type": "integer",
-                                    "nullable": true,
-                                    "title": "Disk size",
-                                    "description": "The size of the disk."
-                                },
-                                "access": {
-                                    "type": "object",
-                                    "additionalProperties": {
-                                        "type": "string",
-                                        "enum": [
-                                            "admin",
-                                            "contributor",
-                                            "viewer"
-                                        ]
-                                    },
-                                    "title": "Access Information",
-                                    "description": "Access information, a mapping between access type and roles."
-                                },
                                 "authorizations": {
                                     "type": "array",
                                     "items": {
@@ -38242,7 +37874,7 @@
                                         "additionalProperties": false
                                     },
                                     "title": "Authorizations",
-                                    "description": "Authorizations available to this container."
+                                    "description": "Authorizations available to this container"
                                 },
                                 "relationships": {
                                     "type": "object",
@@ -38270,7 +37902,7 @@
                                         "nullable": true
                                     },
                                     "title": "Service Relationships",
-                                    "description": "The relationships of the application to defined services."
+                                    "description": "The relationships of the container to defined services"
                                 },
                                 "additional_hosts": {
                                     "type": "object",
@@ -38317,7 +37949,7 @@
                                         "additionalProperties": false
                                     },
                                     "title": "Mounts",
-                                    "description": "Filesystem mounts of this application.  If not specified the application will have no writeable disk space."
+                                    "description": "Filesystem mounts of this container. If not specified the container will have no writeable disk space"
                                 },
                                 "timezone": {
                                     "type": "string",
@@ -38332,7 +37964,47 @@
                                         "additionalProperties": {}
                                     },
                                     "title": "Environment Variables",
-                                    "description": "Variables provide environment-sensitive information to control how your application behaves.  To set a Unix environment variable, specify a key of `env:`, and then each sub-item of that is a key/value pair that will be injected into the environment."
+                                    "description": "Variables provide environment-sensitive information to control how this container behaves. To set a Unix environment variable, specify a key of `env:`, and then each sub-item of that is a key/value pair that will be injected into the environment"
+                                },
+                                "container_profile": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "title": "Container Profile",
+                                    "description": "Selected container profile for this container"
+                                },
+                                "size": {
+                                    "type": "string",
+                                    "enum": [
+                                        "2XL",
+                                        "4XL",
+                                        "AUTO",
+                                        "L",
+                                        "M",
+                                        "S",
+                                        "XL",
+                                        "XS"
+                                    ],
+                                    "title": "Container Size",
+                                    "description": "The container size for this application in production. Leave blank to allow it to be set dynamically."
+                                },
+                                "disk": {
+                                    "type": "integer",
+                                    "nullable": true,
+                                    "title": "Disk size",
+                                    "description": "The size of the disk."
+                                },
+                                "access": {
+                                    "type": "object",
+                                    "additionalProperties": {
+                                        "type": "string",
+                                        "enum": [
+                                            "admin",
+                                            "contributor",
+                                            "viewer"
+                                        ]
+                                    },
+                                    "title": "Access Information",
+                                    "description": "Access information, a mapping between access type and roles."
                                 },
                                 "firewall": {
                                     "type": "object",
@@ -38396,11 +38068,94 @@
                                     "title": "Firewall",
                                     "description": ""
                                 },
-                                "container_profile": {
-                                    "type": "string",
+                                "egress": {
+                                    "type": "object",
+                                    "properties": {
+                                        "build": {
+                                            "type": "object",
+                                            "properties": {
+                                                "allowed_domains": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "host": {
+                                                                "type": "string",
+                                                                "title": "Hostname",
+                                                                "description": "The destination hostname."
+                                                            },
+                                                            "port": {
+                                                                "type": "integer",
+                                                                "nullable": true,
+                                                                "title": "Port",
+                                                                "description": "Destination port. Omit for the default web ports (80/443), or specify explicitly for non-HTTP destinations (e.g. databases) reached over a CONNECT tunnel."
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "host",
+                                                            "port"
+                                                        ],
+                                                        "additionalProperties": false
+                                                    },
+                                                    "title": "Allowed Domains",
+                                                    "description": "Destinations the container is permitted to reach."
+                                                }
+                                            },
+                                            "required": [
+                                                "allowed_domains"
+                                            ],
+                                            "additionalProperties": false,
+                                            "nullable": true,
+                                            "title": "Build-phase egress",
+                                            "description": "Egress allowlist applied to build containers."
+                                        },
+                                        "runtime": {
+                                            "type": "object",
+                                            "properties": {
+                                                "allowed_domains": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "host": {
+                                                                "type": "string",
+                                                                "title": "Hostname",
+                                                                "description": "The destination hostname."
+                                                            },
+                                                            "port": {
+                                                                "type": "integer",
+                                                                "nullable": true,
+                                                                "title": "Port",
+                                                                "description": "Destination port. Omit for the default web ports (80/443), or specify explicitly for non-HTTP destinations (e.g. databases) reached over a CONNECT tunnel."
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "host",
+                                                            "port"
+                                                        ],
+                                                        "additionalProperties": false
+                                                    },
+                                                    "title": "Allowed Domains",
+                                                    "description": "Destinations the container is permitted to reach."
+                                                }
+                                            },
+                                            "required": [
+                                                "allowed_domains"
+                                            ],
+                                            "additionalProperties": false,
+                                            "nullable": true,
+                                            "title": "Runtime-phase egress",
+                                            "description": "Egress allowlist applied to runtime containers."
+                                        }
+                                    },
+                                    "required": [
+                                        "build",
+                                        "runtime"
+                                    ],
+                                    "additionalProperties": false,
                                     "nullable": true,
-                                    "title": "Container Profile",
-                                    "description": "Selected container profile for the application"
+                                    "title": "Egress",
+                                    "description": ""
                                 },
                                 "operations": {
                                     "type": "object",
@@ -39037,17 +38792,18 @@
                             },
                             "required": [
                                 "resources",
-                                "size",
-                                "disk",
-                                "access",
                                 "authorizations",
                                 "relationships",
                                 "additional_hosts",
                                 "mounts",
                                 "timezone",
                                 "variables",
-                                "firewall",
                                 "container_profile",
+                                "size",
+                                "disk",
+                                "access",
+                                "firewall",
+                                "egress",
                                 "operations",
                                 "name",
                                 "type",
@@ -39247,40 +39003,6 @@
                                     "title": "Resources",
                                     "description": ""
                                 },
-                                "size": {
-                                    "type": "string",
-                                    "enum": [
-                                        "2XL",
-                                        "4XL",
-                                        "AUTO",
-                                        "L",
-                                        "M",
-                                        "S",
-                                        "XL",
-                                        "XS"
-                                    ],
-                                    "title": "Container Size",
-                                    "description": "The container size for this application in production. Leave blank to allow it to be set dynamically."
-                                },
-                                "disk": {
-                                    "type": "integer",
-                                    "nullable": true,
-                                    "title": "Disk size",
-                                    "description": "The writeable disk size to reserve on this application container."
-                                },
-                                "access": {
-                                    "type": "object",
-                                    "additionalProperties": {
-                                        "type": "string",
-                                        "enum": [
-                                            "admin",
-                                            "contributor",
-                                            "viewer"
-                                        ]
-                                    },
-                                    "title": "Access Information",
-                                    "description": "Access information, a mapping between access type and roles."
-                                },
                                 "authorizations": {
                                     "type": "array",
                                     "items": {
@@ -39315,7 +39037,7 @@
                                         "additionalProperties": false
                                     },
                                     "title": "Authorizations",
-                                    "description": "Authorizations available to this container."
+                                    "description": "Authorizations available to this container"
                                 },
                                 "relationships": {
                                     "type": "object",
@@ -39343,7 +39065,7 @@
                                         "nullable": true
                                     },
                                     "title": "Service Relationships",
-                                    "description": "The relationships of the application to defined services."
+                                    "description": "The relationships of the container to defined services"
                                 },
                                 "additional_hosts": {
                                     "type": "object",
@@ -39390,7 +39112,7 @@
                                         "additionalProperties": false
                                     },
                                     "title": "Mounts",
-                                    "description": "Filesystem mounts of this application.  If not specified the application will have no writeable disk space."
+                                    "description": "Filesystem mounts of this container. If not specified the container will have no writeable disk space"
                                 },
                                 "timezone": {
                                     "type": "string",
@@ -39405,7 +39127,47 @@
                                         "additionalProperties": {}
                                     },
                                     "title": "Environment Variables",
-                                    "description": "Variables provide environment-sensitive information to control how your application behaves.  To set a Unix environment variable, specify a key of `env:`, and then each sub-item of that is a key/value pair that will be injected into the environment."
+                                    "description": "Variables provide environment-sensitive information to control how this container behaves. To set a Unix environment variable, specify a key of `env:`, and then each sub-item of that is a key/value pair that will be injected into the environment"
+                                },
+                                "container_profile": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "title": "Container Profile",
+                                    "description": "Selected container profile for this container"
+                                },
+                                "size": {
+                                    "type": "string",
+                                    "enum": [
+                                        "2XL",
+                                        "4XL",
+                                        "AUTO",
+                                        "L",
+                                        "M",
+                                        "S",
+                                        "XL",
+                                        "XS"
+                                    ],
+                                    "title": "Container Size",
+                                    "description": "The container size for this application in production. Leave blank to allow it to be set dynamically."
+                                },
+                                "disk": {
+                                    "type": "integer",
+                                    "nullable": true,
+                                    "title": "Disk size",
+                                    "description": "The writeable disk size to reserve on this application container."
+                                },
+                                "access": {
+                                    "type": "object",
+                                    "additionalProperties": {
+                                        "type": "string",
+                                        "enum": [
+                                            "admin",
+                                            "contributor",
+                                            "viewer"
+                                        ]
+                                    },
+                                    "title": "Access Information",
+                                    "description": "Access information, a mapping between access type and roles."
                                 },
                                 "firewall": {
                                     "type": "object",
@@ -39469,11 +39231,94 @@
                                     "title": "Firewall",
                                     "description": ""
                                 },
-                                "container_profile": {
-                                    "type": "string",
+                                "egress": {
+                                    "type": "object",
+                                    "properties": {
+                                        "build": {
+                                            "type": "object",
+                                            "properties": {
+                                                "allowed_domains": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "host": {
+                                                                "type": "string",
+                                                                "title": "Hostname",
+                                                                "description": "The destination hostname."
+                                                            },
+                                                            "port": {
+                                                                "type": "integer",
+                                                                "nullable": true,
+                                                                "title": "Port",
+                                                                "description": "Destination port. Omit for the default web ports (80/443), or specify explicitly for non-HTTP destinations (e.g. databases) reached over a CONNECT tunnel."
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "host",
+                                                            "port"
+                                                        ],
+                                                        "additionalProperties": false
+                                                    },
+                                                    "title": "Allowed Domains",
+                                                    "description": "Destinations the container is permitted to reach."
+                                                }
+                                            },
+                                            "required": [
+                                                "allowed_domains"
+                                            ],
+                                            "additionalProperties": false,
+                                            "nullable": true,
+                                            "title": "Build-phase egress",
+                                            "description": "Egress allowlist applied to build containers."
+                                        },
+                                        "runtime": {
+                                            "type": "object",
+                                            "properties": {
+                                                "allowed_domains": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "host": {
+                                                                "type": "string",
+                                                                "title": "Hostname",
+                                                                "description": "The destination hostname."
+                                                            },
+                                                            "port": {
+                                                                "type": "integer",
+                                                                "nullable": true,
+                                                                "title": "Port",
+                                                                "description": "Destination port. Omit for the default web ports (80/443), or specify explicitly for non-HTTP destinations (e.g. databases) reached over a CONNECT tunnel."
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "host",
+                                                            "port"
+                                                        ],
+                                                        "additionalProperties": false
+                                                    },
+                                                    "title": "Allowed Domains",
+                                                    "description": "Destinations the container is permitted to reach."
+                                                }
+                                            },
+                                            "required": [
+                                                "allowed_domains"
+                                            ],
+                                            "additionalProperties": false,
+                                            "nullable": true,
+                                            "title": "Runtime-phase egress",
+                                            "description": "Egress allowlist applied to runtime containers."
+                                        }
+                                    },
+                                    "required": [
+                                        "build",
+                                        "runtime"
+                                    ],
+                                    "additionalProperties": false,
                                     "nullable": true,
-                                    "title": "Container Profile",
-                                    "description": "Selected container profile for the application"
+                                    "title": "Egress",
+                                    "description": ""
                                 },
                                 "operations": {
                                     "type": "object",
@@ -39710,17 +39555,18 @@
                             },
                             "required": [
                                 "resources",
-                                "size",
-                                "disk",
-                                "access",
                                 "authorizations",
                                 "relationships",
                                 "additional_hosts",
                                 "mounts",
                                 "timezone",
                                 "variables",
-                                "firewall",
                                 "container_profile",
+                                "size",
+                                "disk",
+                                "access",
+                                "firewall",
+                                "egress",
                                 "operations",
                                 "name",
                                 "type",
@@ -46377,6 +46223,27 @@
                         "description": "",
                         "x-isDateTime": false
                     },
+                    "egress_proxy": {
+                        "type": "object",
+                        "properties": {
+                            "enabled": {
+                                "type": "boolean",
+                                "title": "Enabled",
+                                "description": "If true, the egress proxy is on for every container in the project: outbound traffic is denied by default and must traverse the proxy. Applies project-wide regardless of whether an application declares an egress allowlist.",
+                                "x-description": [
+                                    "If true, the egress proxy is on for every container in the project: outbound traffic is denied by default and",
+                                    "must traverse the proxy. Applies project-wide regardless of whether an application declares an egress allowlist."
+                                ]
+                            }
+                        },
+                        "required": [
+                            "enabled"
+                        ],
+                        "additionalProperties": false,
+                        "title": "Egress Proxy",
+                        "description": "",
+                        "x-isDateTime": false
+                    },
                     "metrics": {
                         "type": "object",
                         "properties": {
@@ -46628,10 +46495,19 @@
                                 "x-description": [
                                     "If true, autoscaling can be configured."
                                 ]
+                            },
+                            "supports_horizontal_scaling_services": {
+                                "type": "boolean",
+                                "title": "Enable autoscaling for services",
+                                "description": "Allow autoscaling to be configured for services (not just apps and workers)",
+                                "x-description": [
+                                    "Allow autoscaling to be configured for services (not just apps and workers)"
+                                ]
                             }
                         },
                         "required": [
-                            "enabled"
+                            "enabled",
+                            "supports_horizontal_scaling_services"
                         ],
                         "additionalProperties": false,
                         "title": "Autoscaling",
@@ -49432,262 +49308,6 @@
                     "$ref": "#/components/schemas/Ref"
                 }
             },
-            "RegistryCredential": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "type": "string",
-                        "title": "RegistryCredential Identifier",
-                        "description": "The identifier of RegistryCredential",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "The identifier of RegistryCredential"
-                        ]
-                    },
-                    "created_at": {
-                        "type": "string",
-                        "format": "date-time",
-                        "nullable": true,
-                        "title": "Creation date",
-                        "description": "The creation date",
-                        "x-isDateTime": true,
-                        "x-description": [
-                            "The creation date"
-                        ]
-                    },
-                    "updated_at": {
-                        "type": "string",
-                        "format": "date-time",
-                        "nullable": true,
-                        "title": "Update date",
-                        "description": "The update date",
-                        "x-isDateTime": true,
-                        "x-description": [
-                            "The update date"
-                        ]
-                    },
-                    "registry": {
-                        "type": "string",
-                        "title": "Registry URL",
-                        "description": "Registry hostname with optional port and optional path namespace, e.g. 'ghcr.io', 'registry.example.com:5000', 'quay.io/myorg' (no scheme, no trailing slash, lowercase only)",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "Registry hostname with optional port and optional path namespace, e.g. 'ghcr.io', 'registry.example.com:5000',",
-                            "'quay.io/myorg' (no scheme, no trailing slash, lowercase only)"
-                        ]
-                    },
-                    "auth": {
-                        "type": "object",
-                        "properties": {
-                            "username": {
-                                "type": "string",
-                                "title": "Username",
-                                "description": "Username used to basic auth to container registry",
-                                "x-description": [
-                                    "Username used to basic auth to container registry"
-                                ]
-                            },
-                            "password": {
-                                "type": "string",
-                                "title": "Password",
-                                "description": "Password used to basic auth to container registry",
-                                "x-description": [
-                                    "Password used to basic auth to container registry"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "username",
-                            "password"
-                        ],
-                        "additionalProperties": false,
-                        "nullable": true,
-                        "title": "Basic Auth",
-                        "description": "Basic Auth for the container registry",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "Basic Auth for the container registry"
-                        ]
-                    },
-                    "identity_token": {
-                        "type": "string",
-                        "nullable": true,
-                        "title": "Identity Token",
-                        "description": "Refresh token to exchange for bearer token with container registry auth",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "Refresh token to exchange for bearer token with container registry auth"
-                        ]
-                    },
-                    "registry_token": {
-                        "type": "string",
-                        "nullable": true,
-                        "title": "Registry token",
-                        "description": "Bearer token used to auth with container registry auth",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "Bearer token used to auth with container registry auth"
-                        ]
-                    }
-                },
-                "required": [
-                    "id",
-                    "created_at",
-                    "updated_at",
-                    "registry",
-                    "auth",
-                    "identity_token",
-                    "registry_token"
-                ],
-                "additionalProperties": false
-            },
-            "RegistryCredentialCollection": {
-                "type": "array",
-                "items": {
-                    "$ref": "#/components/schemas/RegistryCredential"
-                }
-            },
-            "RegistryCredentialCreateInput": {
-                "type": "object",
-                "properties": {
-                    "registry": {
-                        "type": "string",
-                        "title": "Registry URL",
-                        "description": "Registry hostname with optional port and optional path namespace, e.g. 'ghcr.io', 'registry.example.com:5000', 'quay.io/myorg' (no scheme, no trailing slash, lowercase only)",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "Registry hostname with optional port and optional path namespace, e.g. 'ghcr.io', 'registry.example.com:5000',",
-                            "'quay.io/myorg' (no scheme, no trailing slash, lowercase only)"
-                        ]
-                    },
-                    "auth": {
-                        "type": "object",
-                        "properties": {
-                            "username": {
-                                "type": "string",
-                                "title": "Username",
-                                "description": "Username used to basic auth to container registry",
-                                "x-description": [
-                                    "Username used to basic auth to container registry"
-                                ]
-                            },
-                            "password": {
-                                "type": "string",
-                                "title": "Password",
-                                "description": "Password used to basic auth to container registry",
-                                "x-description": [
-                                    "Password used to basic auth to container registry"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "username",
-                            "password"
-                        ],
-                        "additionalProperties": false,
-                        "nullable": true,
-                        "title": "Basic Auth",
-                        "description": "Basic Auth for the container registry",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "Basic Auth for the container registry"
-                        ]
-                    },
-                    "identity_token": {
-                        "type": "string",
-                        "nullable": true,
-                        "title": "Identity Token",
-                        "description": "Refresh token to exchange for bearer token with container registry auth",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "Refresh token to exchange for bearer token with container registry auth"
-                        ]
-                    },
-                    "registry_token": {
-                        "type": "string",
-                        "nullable": true,
-                        "title": "Registry token",
-                        "description": "Bearer token used to auth with container registry auth",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "Bearer token used to auth with container registry auth"
-                        ]
-                    }
-                },
-                "required": [
-                    "registry"
-                ],
-                "additionalProperties": false
-            },
-            "RegistryCredentialPatch": {
-                "type": "object",
-                "properties": {
-                    "registry": {
-                        "type": "string",
-                        "title": "Registry URL",
-                        "description": "Registry hostname with optional port and optional path namespace, e.g. 'ghcr.io', 'registry.example.com:5000', 'quay.io/myorg' (no scheme, no trailing slash, lowercase only)",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "Registry hostname with optional port and optional path namespace, e.g. 'ghcr.io', 'registry.example.com:5000',",
-                            "'quay.io/myorg' (no scheme, no trailing slash, lowercase only)"
-                        ]
-                    },
-                    "auth": {
-                        "type": "object",
-                        "properties": {
-                            "username": {
-                                "type": "string",
-                                "title": "Username",
-                                "description": "Username used to basic auth to container registry",
-                                "x-description": [
-                                    "Username used to basic auth to container registry"
-                                ]
-                            },
-                            "password": {
-                                "type": "string",
-                                "title": "Password",
-                                "description": "Password used to basic auth to container registry",
-                                "x-description": [
-                                    "Password used to basic auth to container registry"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "username",
-                            "password"
-                        ],
-                        "additionalProperties": false,
-                        "nullable": true,
-                        "title": "Basic Auth",
-                        "description": "Basic Auth for the container registry",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "Basic Auth for the container registry"
-                        ]
-                    },
-                    "identity_token": {
-                        "type": "string",
-                        "nullable": true,
-                        "title": "Identity Token",
-                        "description": "Refresh token to exchange for bearer token with container registry auth",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "Refresh token to exchange for bearer token with container registry auth"
-                        ]
-                    },
-                    "registry_token": {
-                        "type": "string",
-                        "nullable": true,
-                        "title": "Registry token",
-                        "description": "Bearer token used to auth with container registry auth",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "Bearer token used to auth with container registry auth"
-                        ]
-                    }
-                },
-                "additionalProperties": false
-            },
             "ReplacementDomainStorage": {
                 "type": "object",
                 "properties": {
@@ -49979,15 +49599,6 @@
                 "type": "array",
                 "items": {
                     "$ref": "#/components/schemas/Route"
-                }
-            },
-            "Sbom": {
-                "type": "object"
-            },
-            "SbomCollection": {
-                "type": "array",
-                "items": {
-                    "$ref": "#/components/schemas/Sbom"
                 }
             },
             "ScriptIntegration": {
@@ -51510,6 +51121,201 @@
                             "The identifier of Task"
                         ]
                     },
+                    "resources": {
+                        "type": "object",
+                        "properties": {
+                            "base_memory": {
+                                "type": "integer",
+                                "title": "Base memory",
+                                "description": "The base memory for the container",
+                                "x-description": [
+                                    "The base memory for the container"
+                                ]
+                            },
+                            "memory_ratio": {
+                                "type": "integer",
+                                "title": "Memory ratio",
+                                "description": "The amount of memory to allocate per units of CPU",
+                                "x-description": [
+                                    "The amount of memory to allocate per units of CPU"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "base_memory",
+                            "memory_ratio"
+                        ],
+                        "additionalProperties": false,
+                        "nullable": true,
+                        "title": "Resources",
+                        "description": "Resources configuration (base memory and memory ratio)",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "Resources configuration (base memory and memory ratio)"
+                        ]
+                    },
+                    "authorizations": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "enum": [
+                                        "env",
+                                        "task"
+                                    ],
+                                    "title": "Authorization Type",
+                                    "description": "The resource type for this authorization."
+                                },
+                                "action": {
+                                    "type": "string",
+                                    "title": "Authorization Action",
+                                    "description": "The action to authorize on the target resource."
+                                },
+                                "resource": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "title": "Authorization Resource",
+                                    "description": "The target resource for this authorization."
+                                }
+                            },
+                            "required": [
+                                "type",
+                                "action",
+                                "resource"
+                            ],
+                            "additionalProperties": false
+                        },
+                        "title": "Authorizations",
+                        "description": "Authorizations available to this container",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "Authorizations available to this container"
+                        ]
+                    },
+                    "relationships": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "properties": {
+                                "service": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "title": "Service Name",
+                                    "description": "The name of the service."
+                                },
+                                "endpoint": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "title": "Endpoint Name",
+                                    "description": "The name of the endpoint on the service."
+                                }
+                            },
+                            "required": [
+                                "service",
+                                "endpoint"
+                            ],
+                            "additionalProperties": false,
+                            "nullable": true
+                        },
+                        "title": "Service Relationships",
+                        "description": "The relationships of the container to defined services",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "The relationships of the container to defined services"
+                        ]
+                    },
+                    "additional_hosts": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "title": "Additional hosts",
+                        "description": "A mapping of hostname to ip address to be added to the container's hosts file",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "A mapping of hostname to ip address to be added to the container's hosts file"
+                        ]
+                    },
+                    "mounts": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "properties": {
+                                "source": {
+                                    "type": "string",
+                                    "enum": [
+                                        "instance",
+                                        "local",
+                                        "service",
+                                        "storage",
+                                        "temporary",
+                                        "tmp"
+                                    ],
+                                    "title": "Mount type",
+                                    "description": "The type of mount that will provide the data."
+                                },
+                                "source_path": {
+                                    "type": "string",
+                                    "title": "Source Path",
+                                    "description": "The path to be mounted, relative to the root directory of the volume that's being mounted from."
+                                },
+                                "service": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "title": "Service Name",
+                                    "description": "The name of the service that the volume will be mounted from. Must be a service in `services.yaml` of type `network-storage`."
+                                }
+                            },
+                            "required": [
+                                "source",
+                                "source_path"
+                            ],
+                            "additionalProperties": false
+                        },
+                        "title": "Mounts",
+                        "description": "Filesystem mounts of this container. If not specified the container will have no writeable disk space",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "Filesystem mounts of this container. If not specified the container will have no writeable disk space"
+                        ]
+                    },
+                    "timezone": {
+                        "type": "string",
+                        "nullable": true,
+                        "title": "Timezone",
+                        "description": "The timezone of the task. Defaults to the project's timezone if not specified",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "The timezone of the task. Defaults to the project's timezone if not specified"
+                        ]
+                    },
+                    "variables": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "additionalProperties": {}
+                        },
+                        "title": "Environment Variables",
+                        "description": "Variables provide environment-sensitive information to control how this container behaves. To set a Unix environment variable, specify a key of `env:`, and then each sub-item of that is a key/value pair that will be injected into the environment",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "Variables provide environment-sensitive information to control how this container behaves. To set a Unix",
+                            "environment variable, specify a key of `env:`, and then each sub-item of that is a key/value pair that will be",
+                            "injected into the environment"
+                        ]
+                    },
+                    "container_profile": {
+                        "type": "string",
+                        "nullable": true,
+                        "title": "Container Profile",
+                        "description": "Selected container profile for this container",
+                        "x-isDateTime": false,
+                        "x-description": [
+                            "Selected container profile for this container"
+                        ]
+                    },
                     "type": {
                         "type": "string",
                         "title": "Image type",
@@ -51576,116 +51382,6 @@
                             "Scripts executed at various points in the lifecycle of the task"
                         ]
                     },
-                    "relationships": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "object",
-                            "properties": {
-                                "service": {
-                                    "type": "string",
-                                    "nullable": true,
-                                    "title": "Service Name",
-                                    "description": "The name of the service."
-                                },
-                                "endpoint": {
-                                    "type": "string",
-                                    "nullable": true,
-                                    "title": "Endpoint Name",
-                                    "description": "The name of the endpoint on the service."
-                                }
-                            },
-                            "required": [
-                                "service",
-                                "endpoint"
-                            ],
-                            "additionalProperties": false,
-                            "nullable": true
-                        },
-                        "title": "Relationships",
-                        "description": "The relationships of the task to defined services and applications",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "The relationships of the task to defined services and applications"
-                        ]
-                    },
-                    "additional_hosts": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "string"
-                        },
-                        "title": "Additional hosts",
-                        "description": "A mapping of hostname to ip address to be added to the task container's hosts file",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "A mapping of hostname to ip address to be added to the task container's hosts file"
-                        ]
-                    },
-                    "mounts": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "object",
-                            "properties": {
-                                "source": {
-                                    "type": "string",
-                                    "enum": [
-                                        "instance",
-                                        "local",
-                                        "service",
-                                        "storage",
-                                        "temporary",
-                                        "tmp"
-                                    ],
-                                    "title": "Mount type",
-                                    "description": "The type of mount that will provide the data."
-                                },
-                                "source_path": {
-                                    "type": "string",
-                                    "title": "Source Path",
-                                    "description": "The path to be mounted, relative to the root directory of the volume that's being mounted from."
-                                },
-                                "service": {
-                                    "type": "string",
-                                    "nullable": true,
-                                    "title": "Service Name",
-                                    "description": "The name of the service that the volume will be mounted from. Must be a service in `services.yaml` of type `network-storage`."
-                                }
-                            },
-                            "required": [
-                                "source",
-                                "source_path"
-                            ],
-                            "additionalProperties": false
-                        },
-                        "title": "Mounts",
-                        "description": "Filesystem mounts of this task",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "Filesystem mounts of this task"
-                        ]
-                    },
-                    "timezone": {
-                        "type": "string",
-                        "nullable": true,
-                        "title": "Timezone",
-                        "description": "The timezone of the task. Defaults to the project's timezone if not specified",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "The timezone of the task. Defaults to the project's timezone if not specified"
-                        ]
-                    },
-                    "variables": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "object",
-                            "additionalProperties": {}
-                        },
-                        "title": "Environment Variables",
-                        "description": "Variables provide environment-sensitive information to control how your task behaves",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "Variables provide environment-sensitive information to control how your task behaves"
-                        ]
-                    },
                     "dependencies": {
                         "type": "object",
                         "additionalProperties": {
@@ -51705,46 +51401,6 @@
                         "x-isDateTime": false,
                         "x-description": [
                             "Runtime-specific configuration"
-                        ]
-                    },
-                    "authorizations": {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "type": {
-                                    "type": "string",
-                                    "enum": [
-                                        "env",
-                                        "task"
-                                    ],
-                                    "title": "Authorization Type",
-                                    "description": "The resource type for this authorization."
-                                },
-                                "action": {
-                                    "type": "string",
-                                    "title": "Authorization Action",
-                                    "description": "The action to authorize on the target resource."
-                                },
-                                "resource": {
-                                    "type": "string",
-                                    "nullable": true,
-                                    "title": "Authorization Resource",
-                                    "description": "The target resource for this authorization."
-                                }
-                            },
-                            "required": [
-                                "type",
-                                "action",
-                                "resource"
-                            ],
-                            "additionalProperties": false
-                        },
-                        "title": "Authorizations",
-                        "description": "Authorizations available to this task",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "Authorizations available to this task"
                         ]
                     },
                     "run": {
@@ -51779,49 +51435,6 @@
                             "Configuration for task execution"
                         ]
                     },
-                    "resources": {
-                        "type": "object",
-                        "properties": {
-                            "base_memory": {
-                                "type": "integer",
-                                "title": "Base memory",
-                                "description": "The base memory for the container",
-                                "x-description": [
-                                    "The base memory for the container"
-                                ]
-                            },
-                            "memory_ratio": {
-                                "type": "integer",
-                                "title": "Memory ratio",
-                                "description": "The amount of memory to allocate per units of CPU",
-                                "x-description": [
-                                    "The amount of memory to allocate per units of CPU"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "base_memory",
-                            "memory_ratio"
-                        ],
-                        "additionalProperties": false,
-                        "nullable": true,
-                        "title": "Resources",
-                        "description": "Resources configuration (base memory and memory ratio)",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "Resources configuration (base memory and memory ratio)"
-                        ]
-                    },
-                    "container_profile": {
-                        "type": "string",
-                        "nullable": true,
-                        "title": "Container Profile",
-                        "description": "Selected container profile for the task",
-                        "x-isDateTime": false,
-                        "x-description": [
-                            "Selected container profile for the task"
-                        ]
-                    },
                     "name": {
                         "type": "string",
                         "title": "Task name",
@@ -51834,20 +51447,20 @@
                 },
                 "required": [
                     "id",
-                    "type",
-                    "source",
-                    "hooks",
+                    "resources",
+                    "authorizations",
                     "relationships",
                     "additional_hosts",
                     "mounts",
                     "timezone",
                     "variables",
+                    "container_profile",
+                    "type",
+                    "source",
+                    "hooks",
                     "dependencies",
                     "runtime",
-                    "authorizations",
                     "run",
-                    "resources",
-                    "container_profile",
                     "name"
                 ],
                 "additionalProperties": false
@@ -58131,6 +57744,16 @@
             },
             "Conflict": {
                 "description": "Conflict",
+                "content": {
+                    "application/problem+json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/Error"
+                        }
+                    }
+                }
+            },
+            "UnprocessableEntity": {
+                "description": "Unprocessable Entity",
                 "content": {
                     "application/problem+json": {
                         "schema": {
