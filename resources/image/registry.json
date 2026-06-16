@@ -4050,6 +4050,47 @@
       "repo_name": "mariadb"
     },
     "versions": {
+      "12.3": {
+        "upsun": {
+          "status": "incoming",
+          "internal_support": false,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "incoming",
+          "releaseDate": "2026-05-28T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2029-06-30T00:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:11.8.8+maria~deb13",
+            "majorMinor": "11.8",
+            "normalized": "11.8.8"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
       "11.8": {
         "upsun": {
           "status": "supported",
@@ -4600,6 +4641,47 @@
       "repo_name": "mysql"
     },
     "versions": {
+      "12.3": {
+        "upsun": {
+          "status": "incoming",
+          "internal_support": false,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "incoming",
+          "releaseDate": "2026-05-28T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2029-06-30T00:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:11.8.8+maria~deb13",
+            "majorMinor": "11.8",
+            "normalized": "11.8.8"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
       "11.8": {
         "upsun": {
           "status": "supported",
@@ -8847,9 +8929,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "3.8.9-3+deb11u1",
+            "raw": "3.8.35-1",
             "majorMinor": "3.8",
-            "normalized": "3.8.9"
+            "normalized": "3.8.35"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
