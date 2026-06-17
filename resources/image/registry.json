@@ -1702,9 +1702,9 @@
       },
       "1.15": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true,
-          "internal_status": "active"
+          "status": "retired",
+          "internal_support": false,
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "retired",
@@ -1712,9 +1712,9 @@
           "eoasFrom": "2023-12-22T00:00:00.000Z",
           "eolFrom": "2026-06-03T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4052,12 +4052,12 @@
     "versions": {
       "12.3": {
         "upsun": {
-          "status": "incoming",
-          "internal_support": false,
+          "status": "supported",
+          "internal_support": true,
           "internal_status": "active"
         },
         "upstream": {
-          "status": "incoming",
+          "status": "supported",
           "releaseDate": "2026-05-28T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2029-06-30T00:00:00.000Z",
@@ -4081,9 +4081,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1:11.8.8+maria~deb13",
-            "majorMinor": "11.8",
-            "normalized": "11.8.8"
+            "raw": "1:12.3.2+maria~deb13",
+            "majorMinor": "12.3",
+            "normalized": "12.3.2"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -4643,12 +4643,12 @@
     "versions": {
       "12.3": {
         "upsun": {
-          "status": "incoming",
-          "internal_support": false,
+          "status": "supported",
+          "internal_support": true,
           "internal_status": "active"
         },
         "upstream": {
-          "status": "incoming",
+          "status": "supported",
           "releaseDate": "2026-05-28T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2029-06-30T00:00:00.000Z",
@@ -4672,9 +4672,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1:11.8.8+maria~deb13",
-            "majorMinor": "11.8",
-            "normalized": "11.8.8"
+            "raw": "1:12.3.2+maria~deb13",
+            "majorMinor": "12.3",
+            "normalized": "12.3.2"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -8585,9 +8585,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "4.2.7-1",
+            "raw": "4.2.8-1",
             "majorMinor": "4.2",
-            "normalized": "4.2.7"
+            "normalized": "4.2.8"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
