@@ -8550,12 +8550,12 @@
     "versions": {
       "4.3": {
         "upsun": {
-          "status": "incoming",
-          "internal_support": false,
+          "status": "supported",
+          "internal_support": true,
           "internal_status": "active"
         },
         "upstream": {
-          "status": "incoming",
+          "status": "supported",
           "releaseDate": "2026-04-23T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": null,
