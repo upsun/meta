@@ -1650,6 +1650,11 @@
           "is_persistent": null,
           "min_disk_size": null,
           "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.20.1-0psh2",
+            "majorMinor": "1.20",
+            "normalized": "1.20.1"
+          },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_CPU",
