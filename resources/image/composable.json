@@ -15,8 +15,8 @@
     "versions": {
       "26.05": {
         "upsun": {
-          "status": "incoming",
-          "internal_support": false,
+          "status": "supported",
+          "internal_support": true,
           "internal_status": "active"
         },
         "packages_versions": {
@@ -125,9 +125,9 @@
       },
       "25.11": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true,
-          "internal_status": "active"
+          "status": "retired",
+          "internal_support": false,
+          "internal_status": "sunset"
         },
         "packages_versions": {
           "bun": {

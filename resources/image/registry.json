@@ -1622,9 +1622,48 @@
       "repo_name": "elixir"
     },
     "versions": {
-      "1.19": {
+      "1.20": {
         "upsun": {
           "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2026-06-03T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.20.1-0psh2",
+            "majorMinor": "1.20",
+            "normalized": "1.20.1"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "1.19": {
+        "upsun": {
+          "status": "deprecated",
           "internal_support": true,
           "internal_status": "active"
         },
@@ -1635,7 +1674,7 @@
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -1702,9 +1741,9 @@
       },
       "1.15": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true,
-          "internal_status": "active"
+          "status": "retired",
+          "internal_support": false,
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "retired",
@@ -1712,9 +1751,9 @@
           "eoasFrom": "2023-12-22T00:00:00.000Z",
           "eolFrom": "2026-06-03T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -2797,9 +2836,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "3.9.3-1",
-            "majorMinor": "3.9",
-            "normalized": "3.9.3"
+            "raw": "3.10.0-1",
+            "majorMinor": "3.10",
+            "normalized": "3.10.0"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -3156,9 +3195,9 @@
           "min_disk_size": null,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "8.33.0-0psh1",
-            "majorMinor": "8.33",
-            "normalized": "8.33.0"
+            "raw": "8.34.0-0psh1",
+            "majorMinor": "8.34",
+            "normalized": "8.34.0"
           },
           "allow_scale_down": null,
           "storage_mount_point": null,
@@ -4050,6 +4089,47 @@
       "repo_name": "mariadb"
     },
     "versions": {
+      "12.3": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2026-05-28T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2029-06-30T00:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:12.3.2+maria~deb13",
+            "majorMinor": "12.3",
+            "normalized": "12.3.2"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
       "11.8": {
         "upsun": {
           "status": "supported",
@@ -4600,6 +4680,47 @@
       "repo_name": "mysql"
     },
     "versions": {
+      "12.3": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2026-05-28T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2029-06-30T00:00:00.000Z",
+          "isLts": true,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "schema": "mysql",
+              "scheme": "mysql",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:12.3.2+maria~deb13",
+            "majorMinor": "12.3",
+            "normalized": "12.3.2"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
       "11.8": {
         "upsun": {
           "status": "supported",
@@ -5318,9 +5439,9 @@
           "min_disk_size": 512,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "7.0.35",
+            "raw": "7.0.37",
             "majorMinor": "7.0",
-            "normalized": "7.0.35"
+            "normalized": "7.0.37"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -5358,9 +5479,9 @@
           "min_disk_size": 512,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "6.0.28",
+            "raw": "6.0.29",
             "majorMinor": "6.0",
-            "normalized": "6.0.28"
+            "normalized": "6.0.29"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -5398,9 +5519,9 @@
           "min_disk_size": 512,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "5.0.33",
+            "raw": "5.0.34",
             "majorMinor": "5.0",
-            "normalized": "5.0.33"
+            "normalized": "5.0.34"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -8427,6 +8548,49 @@
       "repo_name": "rabbitmq"
     },
     "versions": {
+      "4.3": {
+        "upsun": {
+          "status": "incoming",
+          "internal_support": false,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "incoming",
+          "releaseDate": "2026-04-23T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "rabbitmq": {
+              "path": "main",
+              "port": 5672,
+              "scheme": "amqp",
+              "default": true,
+              "password": "guest",
+              "username": "guest"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "4.3.2-1",
+            "majorMinor": "4.3",
+            "normalized": "4.3.2"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
       "4.2": {
         "upsun": {
           "status": "supported",
@@ -8460,9 +8624,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "4.2.7-1",
+            "raw": "4.2.8-1",
             "majorMinor": "4.2",
-            "normalized": "4.2.7"
+            "normalized": "4.2.8"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -8804,9 +8968,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "3.8.9-3+deb11u1",
+            "raw": "3.8.35-1",
             "majorMinor": "3.8",
-            "normalized": "3.8.9"
+            "normalized": "3.8.35"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -11414,63 +11578,6 @@
       }
     }
   },
-  "mariadb-replica": {
-    "description": "",
-    "name": "mariadb-replica",
-    "internal": {
-      "repo_name": "mariadb-replica"
-    },
-    "service": true,
-    "need_disk": true,
-    "docs": {
-      "relationship_name": "mariadb-replica",
-      "service_name": "mariadb-replica",
-      "url": "https://developer.upsun.com/docs/add-services/mysql/mysql-readonly-replication"
-    },
-    "versions": {
-      "11.4": {
-        "upsun": {
-          "status": "retired",
-          "internal_support": false,
-          "internal_status": "sunset"
-        },
-        "upstream": {
-          "status": "retired",
-          "releaseDate": null,
-          "eoasFrom": null,
-          "eolFrom": null,
-          "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
-        },
-        "manifest": {
-          "endpoints": {
-            "mysql": {
-              "port": 3306,
-              "schema": "mysql",
-              "scheme": "mysql",
-              "default": true
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "1:11.4.12+maria~deb12",
-            "majorMinor": "11.4",
-            "normalized": "11.4.12"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
-        }
-      }
-    }
-  },
   "mongodb": {
     "description": "",
     "name": "mongodb",
@@ -11708,66 +11815,6 @@
           "storage_mount_point": "/mnt",
           "default_container_profile": "HIGH_MEMORY",
           "supports_horizontal_scaling": null
-        }
-      }
-    }
-  },
-  "postgresql-replica": {
-    "description": "",
-    "name": "postgresql-replica",
-    "internal": {
-      "repo_name": "postgresql-replica"
-    },
-    "service": true,
-    "need_disk": true,
-    "docs": {
-      "relationship_name": "postgresql-replica",
-      "service_name": "postgresql-replica",
-      "url": "https://developer.upsun.com/docs/add-services/postgresql/postgresql-readonly-replication"
-    },
-    "versions": {
-      "15": {
-        "upsun": {
-          "status": "retired",
-          "internal_support": false,
-          "internal_status": "sunset"
-        },
-        "upstream": {
-          "status": "retired",
-          "releaseDate": null,
-          "eoasFrom": null,
-          "eolFrom": null,
-          "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
-        },
-        "manifest": {
-          "endpoints": {
-            "postgresql": {
-              "port": 5432,
-              "scheme": "pgsql",
-              "default": true,
-              "privileges": {
-                "main": "admin"
-              },
-              "default_database": "main"
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 448,
-          "is_persistent": null,
-          "min_disk_size": 256,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "15.17-1.pgdg12+1",
-            "majorMinor": "15.17",
-            "normalized": "15.17.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": "/mnt",
-          "default_container_profile": "HIGH_MEMORY",
-          "supports_horizontal_scaling": true
         }
       }
     }
