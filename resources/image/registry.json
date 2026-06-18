@@ -1622,9 +1622,43 @@
       "repo_name": "elixir"
     },
     "versions": {
-      "1.19": {
+      "1.20": {
         "upsun": {
           "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2026-06-03T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
+      "1.19": {
+        "upsun": {
+          "status": "deprecated",
           "internal_support": true,
           "internal_status": "active"
         },
@@ -1635,7 +1669,7 @@
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -2797,9 +2831,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "3.9.3-1",
-            "majorMinor": "3.9",
-            "normalized": "3.9.3"
+            "raw": "3.10.0-1",
+            "majorMinor": "3.10",
+            "normalized": "3.10.0"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -8542,9 +8576,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "4.2.7-1",
-            "majorMinor": "4.2",
-            "normalized": "4.2.7"
+            "raw": "4.3.2-1",
+            "majorMinor": "4.3",
+            "normalized": "4.3.2"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
