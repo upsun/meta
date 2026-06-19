@@ -4296,9 +4296,9 @@
       },
       "10.11": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true,
-          "internal_status": "active"
+          "status": "retired",
+          "internal_support": false,
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "supported",
@@ -4306,9 +4306,9 @@
           "eoasFrom": null,
           "eolFrom": "2028-02-16T00:00:00.000Z",
           "isLts": true,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4887,9 +4887,9 @@
       },
       "10.11": {
         "upsun": {
-          "status": "supported",
-          "internal_support": true,
-          "internal_status": "active"
+          "status": "retired",
+          "internal_support": false,
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "supported",
@@ -4897,9 +4897,9 @@
           "eoasFrom": null,
           "eolFrom": "2028-02-16T00:00:00.000Z",
           "isLts": true,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5837,7 +5837,7 @@
       "20": {
         "upsun": {
           "status": "retired",
-          "internal_support": true,
+          "internal_support": false,
           "internal_status": "sunset"
         },
         "upstream": {
@@ -5902,9 +5902,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "22.22.3-1nodesource1",
-            "majorMinor": "22.22",
-            "normalized": "22.22.3"
+            "raw": "22.23.0-1nodesource1",
+            "majorMinor": "22.23",
+            "normalized": "22.23.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -5941,9 +5941,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "24.16.0-1nodesource1",
-            "majorMinor": "24.16",
-            "normalized": "24.16.0"
+            "raw": "24.17.0-1nodesource1",
+            "majorMinor": "24.17",
+            "normalized": "24.17.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -5980,9 +5980,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.3.0-1nodesource1",
+            "raw": "26.3.1-1nodesource1",
             "majorMinor": "26.3",
-            "normalized": "26.3.0"
+            "normalized": "26.3.1"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -6803,9 +6803,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.4.9-1debian12",
+            "raw": "8.4.10-1debian12",
             "majorMinor": "8.4",
-            "normalized": "8.4.9"
+            "normalized": "8.4.10"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -6846,9 +6846,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.0.46-1debian12",
+            "raw": "8.0.47-1debian12",
             "majorMinor": "8.0",
-            "normalized": "8.0.46"
+            "normalized": "8.0.47"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -7103,7 +7103,7 @@
       "8.1": {
         "upsun": {
           "status": "retired",
-          "internal_support": true,
+          "internal_support": false,
           "internal_status": "sunset"
         },
         "upstream": {
@@ -7146,7 +7146,7 @@
       "8.0": {
         "upsun": {
           "status": "retired",
-          "internal_support": true,
+          "internal_support": false,
           "internal_status": "sunset"
         },
         "upstream": {
