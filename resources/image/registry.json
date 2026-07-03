@@ -7004,9 +7004,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.4.22-1+0~20260606.50+debian12~1.gbpc1d74e",
+            "raw": "8.4.23-1+0~20260702.51+debian12~1.gbp817a0c",
             "majorMinor": "8.4",
-            "normalized": "8.4.22"
+            "normalized": "8.4.23"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -7090,9 +7090,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.2.31-0psh1",
+            "raw": "8.2.32-0psh1",
             "majorMinor": "8.2",
-            "normalized": "8.2.31"
+            "normalized": "8.2.32"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
