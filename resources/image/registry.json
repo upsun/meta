@@ -500,9 +500,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "25.8.25.37",
+            "raw": "25.8.26.11",
             "majorMinor": "25.8",
-            "normalized": "25.8.25"
+            "normalized": "25.8.26"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -5301,9 +5301,9 @@
           "min_disk_size": null,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "1.6.42-0psh1",
+            "raw": "1.6.43-0psh1",
             "majorMinor": "1.6",
-            "normalized": "1.6.42"
+            "normalized": "1.6.43"
           },
           "allow_scale_down": null,
           "storage_mount_point": null,
@@ -6961,9 +6961,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.5.7-1+0~20260606.19+debian13~1.gbp741f99",
+            "raw": "8.5.8-1+0~20260703.21+debian13~1.gbp0c4f0f",
             "majorMinor": "8.5",
-            "normalized": "8.5.7"
+            "normalized": "8.5.8"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -7004,7 +7004,7 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.4.23-1+0~20260702.51+debian12~1.gbp817a0c",
+            "raw": "8.4.23-1+0~20260703.52+debian12~1.gbp817a0c",
             "majorMinor": "8.4",
             "normalized": "8.4.23"
           },
