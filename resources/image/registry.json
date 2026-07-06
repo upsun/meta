@@ -500,9 +500,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "25.8.27.1",
+            "raw": "25.8.28.1",
             "majorMinor": "25.8",
-            "normalized": "25.8.27"
+            "normalized": "25.8.28"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -4342,7 +4342,7 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "releaseDate": "2021-07-06T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2026-07-06T00:00:00.000Z",
@@ -4933,7 +4933,7 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "releaseDate": "2021-07-06T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2026-07-06T00:00:00.000Z",
