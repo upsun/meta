@@ -4337,9 +4337,9 @@
       },
       "10.6": {
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "retired",
@@ -4347,9 +4347,9 @@
           "eoasFrom": null,
           "eolFrom": "2026-07-06T00:00:00.000Z",
           "isLts": true,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -4928,9 +4928,9 @@
       },
       "10.6": {
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "retired",
@@ -4938,9 +4938,9 @@
           "eoasFrom": null,
           "eolFrom": "2026-07-06T00:00:00.000Z",
           "isLts": true,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -6623,9 +6623,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "2.19.5~0psh1",
+            "raw": "2.19.6~0psh1",
             "majorMinor": "2.19",
-            "normalized": "2.19.5"
+            "normalized": "2.19.6"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
