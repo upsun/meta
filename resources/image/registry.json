@@ -3639,6 +3639,45 @@
       "repo_name": "kafka"
     },
     "versions": {
+      "4.3": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2026-05-20T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "kafka": {
+              "port": 9092,
+              "scheme": "kafka"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 512,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "4.3.1-0psh3",
+            "majorMinor": "4.3",
+            "normalized": "4.3.1"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
       "4.1": {
         "upsun": {
           "status": "supported",
