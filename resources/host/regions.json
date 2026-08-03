@@ -33,7 +33,7 @@
       "13.54.88.239",
       "13.55.140.143"
     ],
-    "inbound_location": "gw.au.platformsh.site",
+    "inbound_location": "gw.au",
     "compliance": {
       "hipaa": false
     },
@@ -75,7 +75,7 @@
       "20.92.240.236",
       "20.92.240.74"
     ],
-    "inbound_location": "gw.au-2.platformsh.site",
+    "inbound_location": "gw.au-2",
     "compliance": {
       "hipaa": false
     },
@@ -117,7 +117,7 @@
       "35.182.59.77",
       "52.60.219.22"
     ],
-    "inbound_location": "gw.ca-1.platformsh.site",
+    "inbound_location": "gw.ca-1",
     "compliance": {
       "hipaa": false
     },
@@ -159,7 +159,7 @@
       "34.65.236.213",
       "34.65.244.185"
     ],
-    "inbound_location": "gw.ch-1.platformsh.site",
+    "inbound_location": "gw.ch-1",
     "compliance": {
       "hipaa": false
     },
@@ -201,7 +201,7 @@
       "35.246.184.45",
       "35.246.248.138"
     ],
-    "inbound_location": "gw.de-2.platformsh.site",
+    "inbound_location": "gw.de-2",
     "compliance": {
       "hipaa": false
     },
@@ -243,7 +243,7 @@
       "54.76.137.151",
       "54.76.137.79"
     ],
-    "inbound_location": "gw.eu.platformsh.site",
+    "inbound_location": "gw.eu",
     "compliance": {
       "hipaa": false
     },
@@ -275,17 +275,9 @@
       "carbon_intensity": 301,
       "green": false
     },
-    "outbound_ips": [
-      "52.208.123.9",
-      "52.214.63.84",
-      "52.30.200.164"
-    ],
-    "inbound_ips": [
-      "34.241.191.143",
-      "34.248.104.12",
-      "52.210.208.94"
-    ],
-    "inbound_location": "gw.eu-2.platformsh.site",
+    "outbound_ips": [],
+    "inbound_ips": [],
+    "inbound_location": null,
     "compliance": {
       "hipaa": false
     },
@@ -317,17 +309,9 @@
       "carbon_intensity": 301,
       "green": false
     },
-    "outbound_ips": [
-      "18.200.157.200",
-      "18.200.158.188",
-      "18.200.184.206"
-    ],
-    "inbound_ips": [
-      "18.200.179.139",
-      "52.208.179.40",
-      "52.215.88.119"
-    ],
-    "inbound_location": "gw.eu-4.platformsh.site",
+    "outbound_ips": [],
+    "inbound_ips": [],
+    "inbound_location": null,
     "compliance": {
       "hipaa": false
     },
@@ -367,7 +351,7 @@
     "inbound_ips": [
       "13.51.62.86"
     ],
-    "inbound_location": "gw.eu-5.platformsh.site",
+    "inbound_location": "gw.eu-5",
     "compliance": {
       "hipaa": false
     },
@@ -407,7 +391,7 @@
     "inbound_ips": [
       "94.23.123.122"
     ],
-    "inbound_location": "gw.fr-3.platformsh.site",
+    "inbound_location": "gw.fr-3",
     "compliance": {
       "hipaa": false
     },
@@ -449,7 +433,7 @@
       "20.74.41.218",
       "20.74.42.30"
     ],
-    "inbound_location": "gw.fr-4.platformsh.site",
+    "inbound_location": "gw.fr-4",
     "compliance": {
       "hipaa": false
     },
@@ -492,7 +476,7 @@
       "35.242.142.110",
       "35.242.183.249"
     ],
-    "inbound_location": "gw.uk-1.platformsh.site",
+    "inbound_location": "gw.uk-1",
     "compliance": {
       "hipaa": false
     },
@@ -534,7 +518,7 @@
       "54.210.55.162",
       "54.88.225.116"
     ],
-    "inbound_location": "gw.us.platformsh.site",
+    "inbound_location": "gw.us",
     "compliance": {
       "hipaa": false
     },
@@ -576,7 +560,7 @@
       "34.238.11.122",
       "54.89.106.200"
     ],
-    "inbound_location": "gw.us-2.platformsh.site",
+    "inbound_location": "gw.us-2",
     "compliance": {
       "hipaa": false
     },
@@ -618,7 +602,7 @@
       "52.137.90.183",
       "52.156.93.30"
     ],
-    "inbound_location": "gw.us-3.platformsh.site",
+    "inbound_location": "gw.us-3",
     "compliance": {
       "hipaa": false
     },
@@ -660,7 +644,7 @@
       "34.74.8.155",
       "34.75.104.115"
     ],
-    "inbound_location": "gw.us-4.platformsh.site",
+    "inbound_location": "gw.us-4",
     "compliance": {
       "hipaa": true
     },
