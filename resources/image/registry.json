@@ -3639,6 +3639,45 @@
       "repo_name": "kafka"
     },
     "versions": {
+      "4.3": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2026-05-20T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "kafka": {
+              "port": 9092,
+              "scheme": "kafka"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 512,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "4.3.1-0psh3",
+            "majorMinor": "4.3",
+            "normalized": "4.3.1"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
       "4.1": {
         "upsun": {
           "status": "retired",
@@ -9398,6 +9437,47 @@
     },
     "versions": {
       "8.8": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2026-05-25T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "redis": {
+              "port": 6379,
+              "schema": "redis",
+              "scheme": "redis",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "8.8.0-0psh2",
+            "majorMinor": "8.8",
+            "normalized": "8.8.0"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": null,
+          "default_container_profile": "BALANCED",
+          "supports_horizontal_scaling": false
+        }
+      },
+      "8.0": {
         "upsun": {
           "status": "supported",
           "internal_support": true,
