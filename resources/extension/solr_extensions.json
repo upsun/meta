@@ -1,7 +1,7 @@
 {
   "cloud": {
     "analysis-extras": {
-      "description": "Extra analyzers and token filters for advanced text analysis use cases.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
@@ -12,7 +12,7 @@
       }
     },
     "analytics": {
-      "description": "Streaming expressions and advanced analytics functions.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
@@ -20,7 +20,7 @@
       }
     },
     "clustering": {
-      "description": "Result clustering capabilities for grouped search output.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
@@ -31,7 +31,7 @@
       }
     },
     "cross-dc": {
-      "description": "Cross-data-center replication and failover tooling.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
@@ -42,7 +42,7 @@
       }
     },
     "cuvs": {
-      "description": "Vector search acceleration module based on cuVS.",
+      "description": "",
       "versions": {
         "10.0": {
           "status": "available"
@@ -50,7 +50,7 @@
       }
     },
     "extraction": {
-      "description": "Tika-based extraction for PDF, Office, and other document formats.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
@@ -61,7 +61,7 @@
       }
     },
     "gcs-repository": {
-      "description": "Repository plugin for backups and snapshots on Google Cloud Storage.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
@@ -72,7 +72,7 @@
       }
     },
     "hadoop-auth": {
-      "description": "Hadoop-compatible authentication integrations.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
@@ -80,7 +80,7 @@
       }
     },
     "hdfs": {
-      "description": "HDFS integration for repository and storage operations.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
@@ -88,7 +88,7 @@
       }
     },
     "jaegertracer-configurator": {
-      "description": "Jaeger tracing configuration helpers.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
@@ -96,7 +96,7 @@
       }
     },
     "jwt-auth": {
-      "description": "JWT authentication support for Solr APIs.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
@@ -107,7 +107,7 @@
       }
     },
     "langid": {
-      "description": "Automatic language identification update processor.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
@@ -118,7 +118,7 @@
       }
     },
     "language-models": {
-      "description": "Language model resources used by NLP-oriented features.",
+      "description": "",
       "versions": {
         "10.0": {
           "status": "available"
@@ -126,7 +126,7 @@
       }
     },
     "llm": {
-      "description": "Large language model integration components.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
@@ -134,7 +134,7 @@
       }
     },
     "ltr": {
-      "description": "Learning To Rank query reranking framework.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
@@ -145,7 +145,7 @@
       }
     },
     "opentelemetry": {
-      "description": "OpenTelemetry instrumentation for traces and metrics.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
@@ -156,7 +156,7 @@
       }
     },
     "s3-repository": {
-      "description": "Repository plugin for backups and snapshots on S3-compatible storage.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
@@ -167,7 +167,7 @@
       }
     },
     "scripting": {
-      "description": "Script engine integrations for custom processing.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
@@ -178,7 +178,7 @@
       }
     },
     "sql": {
-      "description": "SQL query parser and SQL request handler support.",
+      "description": "",
       "versions": {
         "9.9": {
           "status": "available"
