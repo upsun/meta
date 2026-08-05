@@ -426,18 +426,18 @@
     "versions": {
       "26.3": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true,
           "internal_status": "active"
         },
         "upstream": {
-          "status": "supported",
+          "status": "deprecated",
           "releaseDate": null,
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -469,18 +469,18 @@
       },
       "25.8": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true,
           "internal_status": "active"
         },
         "upstream": {
-          "status": "supported",
+          "status": "deprecated",
           "releaseDate": null,
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -6214,9 +6214,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "24.18.1-1nodesource1",
-            "majorMinor": "24.18",
-            "normalized": "24.18.1"
+            "raw": "24.19.0-1nodesource1",
+            "majorMinor": "24.19",
+            "normalized": "24.19.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -6253,9 +6253,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.5.1-1nodesource1",
-            "majorMinor": "26.5",
-            "normalized": "26.5.1"
+            "raw": "26.6.0-1nodesource1",
+            "majorMinor": "26.6",
+            "normalized": "26.6.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
