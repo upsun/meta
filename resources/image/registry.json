@@ -328,9 +328,9 @@
       },
       "113": {
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "retired",
@@ -338,9 +338,9 @@
           "eoasFrom": null,
           "eolFrom": "2023-05-30T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -457,7 +457,7 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.3.17.56",
+            "raw": "26.3.17.110",
             "majorMinor": "26.3",
             "normalized": "26.3.17"
           },
@@ -1651,9 +1651,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1.20.2-0psh1",
+            "raw": "1.20.3-0psh1",
             "majorMinor": "1.20",
-            "normalized": "1.20.2"
+            "normalized": "1.20.3"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -3680,9 +3680,9 @@
       },
       "4.1": {
         "upsun": {
-          "status": "retired",
-          "internal_support": false,
-          "internal_status": "sunset"
+          "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
         },
         "upstream": {
           "status": "supported",
@@ -3690,9 +3690,9 @@
           "eoasFrom": null,
           "eolFrom": null,
           "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -3719,9 +3719,9 @@
       },
       "3.7": {
         "upsun": {
-          "status": "retired",
-          "internal_support": false,
-          "internal_status": "sunset"
+          "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
         },
         "upstream": {
           "status": "retired",
@@ -3729,9 +3729,9 @@
           "eoasFrom": null,
           "eolFrom": "2024-07-26T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -3758,9 +3758,9 @@
       },
       "3.6": {
         "upsun": {
-          "status": "retired",
-          "internal_support": false,
-          "internal_status": "sunset"
+          "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
         },
         "upstream": {
           "status": "retired",
@@ -3768,9 +3768,9 @@
           "eoasFrom": null,
           "eolFrom": "2024-02-27T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -4138,7 +4138,7 @@
           "status": "supported",
           "releaseDate": "2026-05-28T00:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2029-06-30T00:00:00.000Z",
+          "eolFrom": null,
           "isLts": true,
           "isMaintained": true,
           "isEoas": false,
@@ -4729,7 +4729,7 @@
           "status": "supported",
           "releaseDate": "2026-05-28T00:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2029-06-30T00:00:00.000Z",
+          "eolFrom": null,
           "isLts": true,
           "isMaintained": true,
           "isEoas": false,
@@ -5707,7 +5707,7 @@
     "versions": {
       "2.0": {
         "upsun": {
-          "status": "deprecated",
+          "status": "incoming",
           "internal_support": true,
           "internal_status": "active"
         },
@@ -5718,7 +5718,7 @@
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
-          "isEoas": true,
+          "isEoas": false,
           "isEol": false
         },
         "manifest": {
@@ -6253,9 +6253,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "24.18.1-1nodesource1",
-            "majorMinor": "24.18",
-            "normalized": "24.18.1"
+            "raw": "24.19.0-1nodesource1",
+            "majorMinor": "24.19",
+            "normalized": "24.19.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -6292,9 +6292,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.5.1-1nodesource1",
-            "majorMinor": "26.5",
-            "normalized": "26.5.1"
+            "raw": "26.6.0-1nodesource1",
+            "majorMinor": "26.6",
+            "normalized": "26.6.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -7084,19 +7084,19 @@
     "versions": {
       "8.4": {
         "upsun": {
-          "status": "supported",
+          "status": "decommissioned",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "supported",
-          "releaseDate": "2024-04-10T00:00:00.000Z",
-          "eoasFrom": "2029-04-30T00:00:00.000Z",
-          "eolFrom": "2032-04-30T00:00:00.000Z",
-          "isLts": true,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "status": "decommissioned",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -7127,16 +7127,16 @@
       },
       "8.0": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": true,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
-          "releaseDate": "2018-04-08T00:00:00.000Z",
-          "eoasFrom": "2025-04-30T00:00:00.000Z",
-          "eolFrom": "2026-04-30T00:00:00.000Z",
-          "isLts": true,
+          "status": "decommissioned",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
           "isMaintained": false,
           "isEoas": true,
           "isEol": true
@@ -7170,15 +7170,15 @@
       },
       "5.7": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
-          "releaseDate": "2015-10-09T00:00:00.000Z",
-          "eoasFrom": "2020-10-31T00:00:00.000Z",
-          "eolFrom": "2023-10-31T00:00:00.000Z",
+          "status": "decommissioned",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
           "isLts": false,
           "isMaintained": false,
           "isEoas": true,
@@ -7248,9 +7248,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2025-11-20T00:00:00.000Z",
-          "eoasFrom": "2027-12-31T00:00:00.000Z",
-          "eolFrom": "2029-12-31T00:00:00.000Z",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -7291,9 +7291,9 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2024-11-21T00:00:00.000Z",
-          "eoasFrom": "2026-12-31T00:00:00.000Z",
-          "eolFrom": "2028-12-31T00:00:00.000Z",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -7328,18 +7328,18 @@
       },
       "8.3": {
         "upsun": {
-          "status": "deprecated",
+          "status": "supported",
           "internal_support": true,
           "internal_status": "active"
         },
         "upstream": {
-          "status": "deprecated",
-          "releaseDate": "2023-11-23T00:00:00.000Z",
-          "eoasFrom": "2025-12-31T00:00:00.000Z",
-          "eolFrom": "2027-12-31T00:00:00.000Z",
+          "status": "supported",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
-          "isEoas": true,
+          "isEoas": false,
           "isEol": false
         },
         "manifest": {
@@ -7371,18 +7371,18 @@
       },
       "8.2": {
         "upsun": {
-          "status": "deprecated",
+          "status": "supported",
           "internal_support": true,
           "internal_status": "active"
         },
         "upstream": {
-          "status": "deprecated",
-          "releaseDate": "2022-12-08T00:00:00.000Z",
-          "eoasFrom": "2024-12-31T00:00:00.000Z",
-          "eolFrom": "2026-12-31T00:00:00.000Z",
+          "status": "supported",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
-          "isEoas": true,
+          "isEoas": false,
           "isEol": false
         },
         "manifest": {
@@ -7414,19 +7414,19 @@
       },
       "8.1": {
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "active"
         },
         "upstream": {
-          "status": "retired",
-          "releaseDate": "2021-11-25T00:00:00.000Z",
-          "eoasFrom": "2023-11-25T00:00:00.000Z",
-          "eolFrom": "2025-12-31T00:00:00.000Z",
+          "status": "supported",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
           "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7457,19 +7457,19 @@
       },
       "8.0": {
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "active"
         },
         "upstream": {
-          "status": "retired",
-          "releaseDate": "2020-11-26T00:00:00.000Z",
-          "eoasFrom": "2022-11-26T00:00:00.000Z",
-          "eolFrom": "2023-11-26T00:00:00.000Z",
+          "status": "supported",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
           "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7500,19 +7500,19 @@
       },
       "7.4": {
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "active"
         },
         "upstream": {
-          "status": "retired",
-          "releaseDate": "2019-11-28T00:00:00.000Z",
-          "eoasFrom": "2021-11-28T00:00:00.000Z",
-          "eolFrom": "2022-11-28T00:00:00.000Z",
+          "status": "supported",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
           "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7543,19 +7543,19 @@
       },
       "7.3": {
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "active"
         },
         "upstream": {
-          "status": "retired",
-          "releaseDate": "2018-12-06T00:00:00.000Z",
-          "eoasFrom": "2020-12-06T00:00:00.000Z",
-          "eolFrom": "2021-12-06T00:00:00.000Z",
+          "status": "supported",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
           "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7586,19 +7586,19 @@
       },
       "7.2": {
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "active"
         },
         "upstream": {
-          "status": "retired",
-          "releaseDate": "2017-11-30T00:00:00.000Z",
-          "eoasFrom": "2019-11-30T00:00:00.000Z",
-          "eolFrom": "2020-11-30T00:00:00.000Z",
+          "status": "supported",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
           "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7629,19 +7629,19 @@
       },
       "7.1": {
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "active"
         },
         "upstream": {
-          "status": "retired",
-          "releaseDate": "2016-12-01T00:00:00.000Z",
-          "eoasFrom": "2018-12-01T00:00:00.000Z",
-          "eolFrom": "2019-12-01T00:00:00.000Z",
+          "status": "supported",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
           "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7672,19 +7672,19 @@
       },
       "7.0": {
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "active"
         },
         "upstream": {
-          "status": "retired",
-          "releaseDate": "2015-12-03T00:00:00.000Z",
-          "eoasFrom": "2018-01-04T00:00:00.000Z",
-          "eolFrom": "2019-01-10T00:00:00.000Z",
+          "status": "supported",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
           "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7715,19 +7715,19 @@
       },
       "5.6": {
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "active"
         },
         "upstream": {
-          "status": "retired",
-          "releaseDate": "2014-08-28T00:00:00.000Z",
-          "eoasFrom": "2017-01-19T00:00:00.000Z",
-          "eolFrom": "2018-12-31T00:00:00.000Z",
+          "status": "supported",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
           "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7758,19 +7758,19 @@
       },
       "5.5": {
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "active"
         },
         "upstream": {
-          "status": "retired",
-          "releaseDate": "2013-06-20T00:00:00.000Z",
-          "eoasFrom": "2015-07-10T00:00:00.000Z",
-          "eolFrom": "2016-07-21T00:00:00.000Z",
+          "status": "supported",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
           "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -7801,19 +7801,19 @@
       },
       "5.4": {
         "upsun": {
-          "status": "retired",
+          "status": "supported",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "active"
         },
         "upstream": {
-          "status": "retired",
-          "releaseDate": "2012-03-01T00:00:00.000Z",
-          "eoasFrom": "2014-09-14T00:00:00.000Z",
-          "eolFrom": "2015-09-14T00:00:00.000Z",
+          "status": "supported",
+          "releaseDate": null,
+          "eoasFrom": null,
+          "eolFrom": null,
           "isLts": false,
-          "isMaintained": false,
-          "isEoas": true,
-          "isEol": true
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
         },
         "manifest": {
           "endpoints": {
@@ -9445,47 +9445,6 @@
         "upstream": {
           "status": "supported",
           "releaseDate": "2026-05-25T00:00:00.000Z",
-          "eoasFrom": null,
-          "eolFrom": null,
-          "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
-        },
-        "manifest": {
-          "endpoints": {
-            "redis": {
-              "port": 6379,
-              "schema": "redis",
-              "scheme": "redis",
-              "default": true
-            }
-          },
-          "min_cpu_size": 0.1,
-          "min_mem_size": 64,
-          "is_persistent": null,
-          "min_disk_size": null,
-          "allow_scale_up": true,
-          "package_version": {
-            "raw": "8.8.0-0psh2",
-            "majorMinor": "8.8",
-            "normalized": "8.8.0"
-          },
-          "allow_scale_down": true,
-          "storage_mount_point": null,
-          "default_container_profile": "BALANCED",
-          "supports_horizontal_scaling": false
-        }
-      },
-      "8.0": {
-        "upsun": {
-          "status": "supported",
-          "internal_support": true,
-          "internal_status": "active"
-        },
-        "upstream": {
-          "status": "supported",
-          "releaseDate": "2026-05-25T00:00:00.000Z",
           "eoasFrom": "2026-07-29T00:00:00.000Z",
           "eolFrom": null,
           "isLts": false,
@@ -9520,7 +9479,7 @@
       },
       "8.0": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true,
           "internal_status": "active"
         },
@@ -9531,7 +9490,7 @@
           "eolFrom": "2026-12-01T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -9561,7 +9520,7 @@
       },
       "7.2": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true,
           "internal_status": "active"
         },
@@ -9572,7 +9531,7 @@
           "eolFrom": "2029-12-01T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -9766,12 +9725,12 @@
       },
       "4.0": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": null,
           "eoasFrom": null,
           "eolFrom": null,
@@ -9807,12 +9766,12 @@
       },
       "3.2": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": null,
           "eoasFrom": null,
           "eolFrom": null,
@@ -9848,12 +9807,12 @@
       },
       "3.0": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": null,
           "eoasFrom": null,
           "eolFrom": null,
@@ -9889,12 +9848,12 @@
       },
       "2.8": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": null,
           "eoasFrom": null,
           "eolFrom": null,
@@ -11114,9 +11073,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "9.0.5-0psh1",
-            "majorMinor": "9.0",
-            "normalized": "9.0.5"
+            "raw": "9.1.1-0psh2",
+            "majorMinor": "9.1",
+            "normalized": "9.1.1"
           },
           "allow_scale_down": true,
           "storage_mount_point": null,
@@ -11848,7 +11807,7 @@
     "docs": {
       "relationship_name": "elasticsearch-enterprise",
       "service_name": "elasticsearch-enterprise",
-      "url": "https://developer.upsun.com/docs/add-services/elasticsearch"
+      "url": "https://developer.upsun.com/docs/add-services/elasticsearch-enterprise"
     },
     "versions": {
       "9.3": {
@@ -11861,7 +11820,7 @@
           "status": "supported",
           "releaseDate": "2026-02-03T00:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2026-05-26T00:00:00.000Z",
+          "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -11899,7 +11858,7 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2025-07-23T00:00:00.000Z",
+          "releaseDate": "2025-07-29T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2027-07-15T00:00:00.000Z",
           "isLts": false,
@@ -12245,6 +12204,62 @@
             "raw": "3.0.15",
             "majorMinor": "3.0",
             "normalized": "3.0.15"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    }
+  },
+  "activemq-artemis": {
+    "description": "",
+    "name": "activemq-artemis",
+    "internal": {
+      "repo_name": "activemq-artemis"
+    },
+    "service": true,
+    "need_disk": true,
+    "docs": {
+      "relationship_name": "activemq-artemis",
+      "service_name": "activemq-artemis",
+      "url": "https://developer.upsun.com/docs/add-services/activemq-artemis"
+    },
+    "versions": {
+      "2": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2017-03-10T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2017-05-08T00:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "activemq-artemis": {
+              "port": 61616,
+              "scheme": "tcp",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.54.0-0psh1",
+            "majorMinor": "2.54",
+            "normalized": "2.54.0"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",

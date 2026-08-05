@@ -2319,7 +2319,7 @@
   },
   "cloud": {
     "amqp": {
-      "description": "RabbitMQ/AMQP messaging client.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -2368,7 +2368,7 @@
       }
     },
     "apc": {
-      "description": "Legacy APC opcode/user cache.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -2377,7 +2377,7 @@
       }
     },
     "apcu": {
-      "description": "In-memory user data cache (APCu).",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -2438,7 +2438,7 @@
       }
     },
     "apcu_bc": {
-      "description": "Backward-compatibility layer for APCu.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -2463,7 +2463,7 @@
       }
     },
     "applepay": {
-      "description": "PHP extension for applepay support.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -2484,7 +2484,7 @@
       }
     },
     "bcmath": {
-      "description": "Arbitrary precision mathematics.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -2533,7 +2533,7 @@
       }
     },
     "blackfire": {
-      "description": "Blackfire profiling probe.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -2594,7 +2594,7 @@
       }
     },
     "bz2": {
-      "description": "bzip2 compression support.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -2643,7 +2643,7 @@
       }
     },
     "calendar": {
-      "description": "Calendar conversion functions.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -2692,7 +2692,7 @@
       }
     },
     "ctype": {
-      "description": "Character type checking functions.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -2741,7 +2741,7 @@
       }
     },
     "curl": {
-      "description": "HTTP and network requests via libcurl.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "default",
@@ -2802,7 +2802,7 @@
       }
     },
     "datadog-profiling": {
-      "description": "Datadog continuous profiler.",
+      "description": "",
       "versions": {
         "8.2": {
           "status": "available",
@@ -2823,7 +2823,7 @@
       }
     },
     "dba": {
-      "description": "DBA key-value database abstraction.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -2872,7 +2872,7 @@
       }
     },
     "dom": {
-      "description": "DOM XML document manipulation.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -2921,7 +2921,7 @@
       }
     },
     "enchant": {
-      "description": "Spell checking via Enchant.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -2982,7 +2982,7 @@
       }
     },
     "event": {
-      "description": "High-performance event loop bindings.",
+      "description": "",
       "versions": {
         "7.1": {
           "status": "available",
@@ -3027,7 +3027,7 @@
       }
     },
     "exif": {
-      "description": "Read image EXIF metadata.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -3076,7 +3076,7 @@
       }
     },
     "ffi": {
-      "description": "Foreign Function Interface (C libraries).",
+      "description": "",
       "versions": {
         "7.4": {
           "status": "available",
@@ -3109,7 +3109,7 @@
       }
     },
     "fileinfo": {
-      "description": "MIME type and file metadata detection.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -3158,7 +3158,7 @@
       }
     },
     "ftp": {
-      "description": "FTP client functions.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -3207,7 +3207,7 @@
       }
     },
     "gd": {
-      "description": "Image creation and manipulation (GD).",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "default",
@@ -3268,7 +3268,7 @@
       }
     },
     "gearman": {
-      "description": "Gearman job queue client/worker.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -3285,7 +3285,7 @@
       }
     },
     "geoip": {
-      "description": "IP geolocation lookups.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -3346,7 +3346,7 @@
       }
     },
     "gettext": {
-      "description": "Native gettext i18n support.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -3395,7 +3395,7 @@
       }
     },
     "gmp": {
-      "description": "Big integer arithmetic (GMP).",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -3456,7 +3456,7 @@
       }
     },
     "gnupg": {
-      "description": "GnuPG encryption/signature support.",
+      "description": "",
       "versions": {
         "8.0": {
           "status": "available",
@@ -3485,7 +3485,7 @@
       }
     },
     "grpc": {
-      "description": "gRPC client/server support.",
+      "description": "",
       "versions": {
         "8.4": {
           "status": "available",
@@ -3498,7 +3498,7 @@
       }
     },
     "http": {
-      "description": "PHP extension for http support.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -3539,7 +3539,7 @@
       }
     },
     "iconv": {
-      "description": "Character set conversion.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -3588,7 +3588,7 @@
       }
     },
     "igbinary": {
-      "description": "Compact binary serializer.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -3637,7 +3637,7 @@
       }
     },
     "imagick": {
-      "description": "Image processing with ImageMagick.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -3710,7 +3710,7 @@
       }
     },
     "imap": {
-      "description": "IMAP/POP3/NNTP mail access.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -3771,7 +3771,7 @@
       }
     },
     "interbase": {
-      "description": "Firebird/InterBase database driver.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -3820,7 +3820,7 @@
       }
     },
     "intl": {
-      "description": "Internationalization (ICU) features.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "default",
@@ -3881,7 +3881,7 @@
       }
     },
     "ioncube": {
-      "description": "ionCube loader support.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -3926,7 +3926,7 @@
       }
     },
     "json": {
-      "description": "JSON encode/decode functions.",
+      "description": "",
       "versions": {
         "5.5": {
           "status": "available",
@@ -3983,7 +3983,7 @@
       }
     },
     "ldap": {
-      "description": "LDAP directory access.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -4044,7 +4044,7 @@
       }
     },
     "mailparse": {
-      "description": "Email/MIME parsing utilities.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -4093,7 +4093,7 @@
       }
     },
     "mbstring": {
-      "description": "Multibyte string functions.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -4142,7 +4142,7 @@
       }
     },
     "mcrypt": {
-      "description": "Legacy mcrypt encryption functions.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "default",
@@ -4167,7 +4167,7 @@
       }
     },
     "memcache": {
-      "description": "Memcache client extension.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -4184,7 +4184,7 @@
       }
     },
     "memcached": {
-      "description": "Memcached client extension.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -4245,7 +4245,7 @@
       }
     },
     "mongo": {
-      "description": "Legacy MongoDB driver.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -4262,7 +4262,7 @@
       }
     },
     "mongodb": {
-      "description": "MongoDB driver.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -4311,7 +4311,7 @@
       }
     },
     "msgpack": {
-      "description": "MessagePack serialization.",
+      "description": "",
       "versions": {
         "5.6": {
           "status": "available",
@@ -4364,7 +4364,7 @@
       }
     },
     "mssql": {
-      "description": "Legacy Microsoft SQL Server driver.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -4381,7 +4381,7 @@
       }
     },
     "mysql": {
-      "description": "Legacy MySQL driver.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "default",
@@ -4398,7 +4398,7 @@
       }
     },
     "mysqli": {
-      "description": "MySQL improved driver.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "default",
@@ -4459,7 +4459,7 @@
       }
     },
     "mysqlnd": {
-      "description": "MySQL native driver.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "default",
@@ -4520,7 +4520,7 @@
       }
     },
     "newrelic": {
-      "description": "New Relic PHP agent.",
+      "description": "",
       "versions": {
         "5.6": {
           "status": "available",
@@ -4573,7 +4573,7 @@
       }
     },
     "oauth": {
-      "description": "OAuth client utilities.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -4622,7 +4622,7 @@
       }
     },
     "odbc": {
-      "description": "ODBC database connectivity.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -4683,7 +4683,7 @@
       }
     },
     "opcache": {
-      "description": "Bytecode cache and optimizer.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "default",
@@ -4744,7 +4744,7 @@
       }
     },
     "openswoole": {
-      "description": "OpenSwoole async networking/server.",
+      "description": "",
       "versions": {
         "8.2": {
           "status": "available",
@@ -4761,7 +4761,7 @@
       }
     },
     "opentelemetry": {
-      "description": "OpenTelemetry tracing/metrics SDK.",
+      "description": "",
       "versions": {
         "8.2": {
           "status": "available",
@@ -4782,7 +4782,7 @@
       }
     },
     "pdo": {
-      "description": "PHP Data Objects core.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "default",
@@ -4843,7 +4843,7 @@
       }
     },
     "pdo_dblib": {
-      "description": "PDO driver for FreeTDS/MSSQL/Sybase.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -4904,7 +4904,7 @@
       }
     },
     "pdo_firebird": {
-      "description": "PDO driver for Firebird.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -4945,7 +4945,7 @@
       }
     },
     "pdo_mysql": {
-      "description": "PDO driver for MySQL/MariaDB.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "default",
@@ -5006,7 +5006,7 @@
       }
     },
     "pdo_odbc": {
-      "description": "PDO driver for ODBC.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -5067,7 +5067,7 @@
       }
     },
     "pdo_pgsql": {
-      "description": "PDO driver for PostgreSQL.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -5128,7 +5128,7 @@
       }
     },
     "pdo_sqlite": {
-      "description": "PDO driver for SQLite.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "default",
@@ -5189,7 +5189,7 @@
       }
     },
     "pdo_sqlsrv": {
-      "description": "PDO driver for SQL Server.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -5238,7 +5238,7 @@
       }
     },
     "pecl-http": {
-      "description": "PHP extension for pecl-http support.",
+      "description": "",
       "versions": {
         "5.5": {
           "status": "available",
@@ -5251,7 +5251,7 @@
       }
     },
     "pgsql": {
-      "description": "PostgreSQL driver.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -5312,7 +5312,7 @@
       }
     },
     "phar": {
-      "description": "PHAR archive support.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -5361,7 +5361,7 @@
       }
     },
     "pinba": {
-      "description": "PHP extension for pinba support.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -5378,7 +5378,7 @@
       }
     },
     "posix": {
-      "description": "POSIX process and system functions.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -5427,7 +5427,7 @@
       }
     },
     "propro": {
-      "description": "PHP extension for propro support.",
+      "description": "",
       "versions": {
         "5.6": {
           "status": "available",
@@ -5444,7 +5444,7 @@
       }
     },
     "protobuf": {
-      "description": "Protocol Buffers support.",
+      "description": "",
       "versions": {
         "8.1": {
           "status": "available",
@@ -5469,7 +5469,7 @@
       }
     },
     "pspell": {
-      "description": "Spell checking via Pspell/Aspell.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -5522,7 +5522,7 @@
       }
     },
     "raphf": {
-      "description": "PHP extension for raphf support.",
+      "description": "",
       "versions": {
         "5.6": {
           "status": "available",
@@ -5563,7 +5563,7 @@
       }
     },
     "rdkafka": {
-      "description": "Apache Kafka client (librdkafka).",
+      "description": "",
       "versions": {
         "8.1": {
           "status": "available",
@@ -5588,7 +5588,7 @@
       }
     },
     "readline": {
-      "description": "Interactive readline support.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -5649,7 +5649,7 @@
       }
     },
     "recode": {
-      "description": "PHP extension for recode support.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -5682,7 +5682,7 @@
       }
     },
     "redis": {
-      "description": "Redis client extension.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -5743,7 +5743,7 @@
       }
     },
     "shmop": {
-      "description": "Shared memory operations.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -5792,7 +5792,7 @@
       }
     },
     "simplexml": {
-      "description": "SimpleXML parsing API.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -5841,7 +5841,7 @@
       }
     },
     "snmp": {
-      "description": "SNMP protocol support.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -5902,7 +5902,7 @@
       }
     },
     "soap": {
-      "description": "SOAP client/server support.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -5951,7 +5951,7 @@
       }
     },
     "sockets": {
-      "description": "Low-level socket API.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -6000,7 +6000,7 @@
       }
     },
     "sodium": {
-      "description": "Modern cryptography (libsodium).",
+      "description": "",
       "versions": {
         "7.2": {
           "status": "available",
@@ -6041,7 +6041,7 @@
       }
     },
     "sourceguardian": {
-      "description": "PHP extension for sourceguardian support.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -6090,7 +6090,7 @@
       }
     },
     "spplus": {
-      "description": "PHP extension for spplus support.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -6103,7 +6103,7 @@
       }
     },
     "sqlite3": {
-      "description": "SQLite3 driver.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "default",
@@ -6164,7 +6164,7 @@
       }
     },
     "sqlsrv": {
-      "description": "Microsoft SQL Server driver.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -6205,7 +6205,7 @@
       }
     },
     "ssh2": {
-      "description": "SSH2 and SFTP support.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -6266,7 +6266,7 @@
       }
     },
     "swoole": {
-      "description": "Async networking and coroutine server.",
+      "description": "",
       "versions": {
         "8.2": {
           "status": "available",
@@ -6287,7 +6287,7 @@
       }
     },
     "sybase": {
-      "description": "PHP extension for sybase support.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -6336,7 +6336,7 @@
       }
     },
     "sysvmsg": {
-      "description": "System V message queue support.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -6385,7 +6385,7 @@
       }
     },
     "sysvsem": {
-      "description": "System V semaphore support.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -6434,7 +6434,7 @@
       }
     },
     "sysvshm": {
-      "description": "System V shared memory support.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -6483,7 +6483,7 @@
       }
     },
     "tideways": {
-      "description": "PHP extension for tideways support.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -6532,7 +6532,7 @@
       }
     },
     "tideways_xhprof": {
-      "description": "PHP extension for tideways_xhprof support.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -6573,7 +6573,7 @@
       }
     },
     "tidy": {
-      "description": "HTML/XML cleanup and repair.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -6634,7 +6634,7 @@
       }
     },
     "tokenizer": {
-      "description": "PHP tokenizer functions.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -6683,7 +6683,7 @@
       }
     },
     "uuid": {
-      "description": "UUID generation and handling.",
+      "description": "",
       "versions": {
         "7.1": {
           "status": "available",
@@ -6728,7 +6728,7 @@
       }
     },
     "uv": {
-      "description": "libuv event loop bindings.",
+      "description": "",
       "versions": {
         "8.3": {
           "status": "available",
@@ -6741,7 +6741,7 @@
       }
     },
     "wddx": {
-      "description": "WDDX serialization support.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -6762,7 +6762,7 @@
       }
     },
     "xcache": {
-      "description": "Legacy opcode/user cache.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -6775,7 +6775,7 @@
       }
     },
     "xdebug": {
-      "description": "Debugging and code coverage tools.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -6836,7 +6836,7 @@
       }
     },
     "xhprof": {
-      "description": "Function-level profiler.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -6853,7 +6853,7 @@
       }
     },
     "xml": {
-      "description": "Core XML parser support.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -6902,7 +6902,7 @@
       }
     },
     "xmlreader": {
-      "description": "Streaming XML reader.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -6951,7 +6951,7 @@
       }
     },
     "xmlrpc": {
-      "description": "XML-RPC protocol support.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -7012,7 +7012,7 @@
       }
     },
     "xmlwriter": {
-      "description": "Streaming XML writer.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
@@ -7061,7 +7061,7 @@
       }
     },
     "xsl": {
-      "description": "XSLT transformations.",
+      "description": "",
       "versions": {
         "5.4": {
           "status": "available",
@@ -7122,7 +7122,7 @@
       }
     },
     "yaml": {
-      "description": "YAML parsing and emitting.",
+      "description": "",
       "versions": {
         "7.1": {
           "status": "available",
@@ -7167,7 +7167,7 @@
       }
     },
     "zbarcode": {
-      "description": "PHP extension for zbarcode support.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "available",
@@ -7188,7 +7188,7 @@
       }
     },
     "zip": {
-      "description": "ZIP archive support.",
+      "description": "",
       "versions": {
         "7.0": {
           "status": "default",
