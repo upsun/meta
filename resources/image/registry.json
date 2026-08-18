@@ -9467,9 +9467,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.8.1-0psh1",
+            "raw": "8.8.2-0psh1",
             "majorMinor": "8.8",
-            "normalized": "8.8.1"
+            "normalized": "8.8.2"
           },
           "allow_scale_down": true,
           "storage_mount_point": null,
@@ -9549,9 +9549,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "7.2.15-0psh1",
+            "raw": "7.2.16-0psh1",
             "majorMinor": "7.2",
-            "normalized": "7.2.15"
+            "normalized": "7.2.16"
           },
           "allow_scale_down": true,
           "storage_mount_point": null,
