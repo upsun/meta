@@ -457,9 +457,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.3.18.32",
+            "raw": "26.3.19.3",
             "majorMinor": "26.3",
-            "normalized": "26.3.18"
+            "normalized": "26.3.19"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -7185,7 +7185,16 @@
           "isEol": true
         },
         "manifest": {
-          "endpoints": null,
+          "endpoints": {
+            "mysql": {
+              "port": 3306,
+              "scheme": "mysql"
+            },
+            "mysqlx": {
+              "port": 33060,
+              "scheme": "mysqlx"
+            }
+          },
           "min_cpu_size": 0.1,
           "min_mem_size": 448,
           "is_persistent": null,
@@ -8893,9 +8902,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "4.3.4-1",
+            "raw": "4.3.5-1",
             "majorMinor": "4.3",
-            "normalized": "4.3.4"
+            "normalized": "4.3.5"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
