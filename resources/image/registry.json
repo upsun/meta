@@ -3456,7 +3456,7 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "17.0.20-1",
+            "raw": "17.0.20.1-1",
             "majorMinor": "17.0",
             "normalized": "17.0.20"
           },
@@ -3573,7 +3573,7 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "21.0.12-1",
+            "raw": "21.0.12.1-1",
             "majorMinor": "21.0",
             "normalized": "21.0.12"
           },
