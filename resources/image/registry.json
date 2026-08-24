@@ -328,9 +328,9 @@
       },
       "113": {
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "retired",
@@ -338,9 +338,9 @@
           "eoasFrom": null,
           "eolFrom": "2023-05-30T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -5707,7 +5707,7 @@
     "versions": {
       "2.0": {
         "upsun": {
-          "status": "deprecated",
+          "status": "incoming",
           "internal_support": true,
           "internal_status": "active"
         },
@@ -5718,7 +5718,7 @@
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
-          "isEoas": true,
+          "isEoas": false,
           "isEol": false
         },
         "manifest": {
@@ -9369,6 +9369,13 @@
               "username": "guest"
             }
           },
+          "deprecation": {
+            "latest": "3.6.16",
+            "status": "decommissioned",
+            "released_at": "2015-12-22",
+            "decommissioned_at": "2018-11-27",
+            "security_support_until": "2018-05-31"
+          },
           "min_cpu_size": 0.1,
           "min_mem_size": 448,
           "is_persistent": null,
@@ -9470,6 +9477,12 @@
               "default": true
             }
           },
+          "deprecation": {
+            "is_lts": false,
+            "latest": "8.8.1",
+            "status": "active",
+            "released_at": "2026-05-25"
+          },
           "min_cpu_size": 0.1,
           "min_mem_size": 64,
           "is_persistent": null,
@@ -9488,7 +9501,7 @@
       },
       "8.0": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true,
           "internal_status": "active"
         },
@@ -9499,7 +9512,7 @@
           "eolFrom": "2026-12-01T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -9510,6 +9523,14 @@
               "scheme": "redis",
               "default": true
             }
+          },
+          "deprecation": {
+            "is_lts": false,
+            "latest": "8.0.6",
+            "status": "active",
+            "sunset_at": "2026-12-01",
+            "released_at": "2025-05-02",
+            "decommissioned_at": "2027-05-30"
           },
           "min_cpu_size": 0.1,
           "min_mem_size": 64,
@@ -9529,7 +9550,7 @@
       },
       "7.2": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true,
           "internal_status": "active"
         },
@@ -9540,7 +9561,7 @@
           "eolFrom": "2029-12-01T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -9551,6 +9572,14 @@
               "scheme": "redis",
               "default": true
             }
+          },
+          "deprecation": {
+            "is_lts": false,
+            "latest": "7.2.15",
+            "status": "active",
+            "sunset_at": "2029-12-01",
+            "released_at": "2023-08-15",
+            "decommissioned_at": "2030-05-30"
           },
           "min_cpu_size": 0.1,
           "min_mem_size": 64,
@@ -9593,6 +9622,14 @@
               "default": true
             }
           },
+          "deprecation": {
+            "is_lts": false,
+            "latest": "7.0.15",
+            "status": "sunset",
+            "sunset_at": "2026-08-01",
+            "released_at": "2022-04-27",
+            "decommissioned_at": "2027-01-28"
+          },
           "min_cpu_size": 0.1,
           "min_mem_size": 64,
           "is_persistent": null,
@@ -9613,7 +9650,7 @@
         "upsun": {
           "status": "deprecated",
           "internal_support": false,
-          "internal_status": "active"
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "deprecated",
@@ -9633,6 +9670,14 @@
               "scheme": "redis",
               "default": true
             }
+          },
+          "deprecation": {
+            "is_lts": false,
+            "latest": "6.2.23",
+            "status": "sunset",
+            "sunset_at": "2026-08-01",
+            "released_at": "2021-02-22",
+            "decommissioned_at": "2027-01-28"
           },
           "min_cpu_size": 0.1,
           "min_mem_size": 64,
@@ -9675,6 +9720,14 @@
               "default": true
             }
           },
+          "deprecation": {
+            "is_lts": false,
+            "latest": "6.0.20",
+            "status": "sunset",
+            "sunset_at": "2026-08-01",
+            "released_at": "2020-04-30",
+            "decommissioned_at": "2027-01-28"
+          },
           "min_cpu_size": 0.1,
           "min_mem_size": 352,
           "is_persistent": null,
@@ -9716,6 +9769,14 @@
               "default": true
             }
           },
+          "deprecation": {
+            "is_lts": false,
+            "latest": "5.0.14",
+            "status": "sunset",
+            "sunset_at": "2026-08-01",
+            "released_at": "2018-10-17",
+            "decommissioned_at": "2027-01-28"
+          },
           "min_cpu_size": 0.1,
           "min_mem_size": 352,
           "is_persistent": null,
@@ -9736,7 +9797,7 @@
         "upsun": {
           "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "decommissioned"
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "decommissioned",
@@ -9756,6 +9817,12 @@
               "scheme": "redis",
               "default": true
             }
+          },
+          "deprecation": {
+            "is_lts": false,
+            "status": "sunset",
+            "sunset_at": "2026-08-01",
+            "decommissioned_at": "2027-01-28"
           },
           "min_cpu_size": 0.1,
           "min_mem_size": 352,
@@ -9777,7 +9844,7 @@
         "upsun": {
           "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "decommissioned"
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "decommissioned",
@@ -9797,6 +9864,12 @@
               "scheme": "redis",
               "default": true
             }
+          },
+          "deprecation": {
+            "is_lts": false,
+            "status": "sunset",
+            "sunset_at": "2026-08-01",
+            "decommissioned_at": "2027-01-28"
           },
           "min_cpu_size": 0.1,
           "min_mem_size": 352,
@@ -9818,7 +9891,7 @@
         "upsun": {
           "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "decommissioned"
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "decommissioned",
@@ -9838,6 +9911,12 @@
               "scheme": "redis",
               "default": true
             }
+          },
+          "deprecation": {
+            "is_lts": false,
+            "status": "sunset",
+            "sunset_at": "2026-08-01",
+            "decommissioned_at": "2027-01-28"
           },
           "min_cpu_size": 0.1,
           "min_mem_size": 352,
@@ -9859,7 +9938,7 @@
         "upsun": {
           "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "decommissioned"
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "decommissioned",
@@ -9873,6 +9952,12 @@
         },
         "manifest": {
           "endpoints": null,
+          "deprecation": {
+            "is_lts": false,
+            "status": "sunset",
+            "sunset_at": "2026-08-01",
+            "decommissioned_at": "2027-01-28"
+          },
           "min_cpu_size": null,
           "min_mem_size": null,
           "is_persistent": null,
@@ -11816,7 +11901,7 @@
     "docs": {
       "relationship_name": "elasticsearch-enterprise",
       "service_name": "elasticsearch-enterprise",
-      "url": "https://developer.upsun.com/docs/add-services/elasticsearch"
+      "url": "https://developer.upsun.com/docs/add-services/elasticsearch-enterprise"
     },
     "versions": {
       "9.3": {
@@ -12213,6 +12298,62 @@
             "raw": "3.0.15",
             "majorMinor": "3.0",
             "normalized": "3.0.15"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    }
+  },
+  "activemq-artemis": {
+    "description": "",
+    "name": "activemq-artemis",
+    "internal": {
+      "repo_name": "activemq-artemis"
+    },
+    "service": true,
+    "need_disk": true,
+    "docs": {
+      "relationship_name": "activemq-artemis",
+      "service_name": "activemq-artemis",
+      "url": "https://developer.upsun.com/docs/add-services/activemq-artemis"
+    },
+    "versions": {
+      "2": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2017-03-10T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2017-05-08T00:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "activemq-artemis": {
+              "port": 61616,
+              "scheme": "tcp",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.54.0-0psh1",
+            "majorMinor": "2.54",
+            "normalized": "2.54.0"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
