@@ -9613,7 +9613,7 @@
         "upsun": {
           "status": "deprecated",
           "internal_support": false,
-          "internal_status": "active"
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "deprecated",
@@ -9736,7 +9736,7 @@
         "upsun": {
           "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "decommissioned"
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "decommissioned",
@@ -9777,7 +9777,7 @@
         "upsun": {
           "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "decommissioned"
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "decommissioned",
@@ -9818,7 +9818,7 @@
         "upsun": {
           "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "decommissioned"
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "decommissioned",
@@ -9859,7 +9859,7 @@
         "upsun": {
           "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "decommissioned"
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "decommissioned",
