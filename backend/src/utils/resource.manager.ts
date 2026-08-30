@@ -41,8 +41,25 @@ export interface ConditionalHeaders {
   ifModifiedSince?: string;
 }
 
+/**
+ * In-memory cache entry for a GitHub resource.
+ * Stores the upstream (GitHub) ETag/Last-Modified so we can revalidate with
+ * conditional requests, and the timestamp of the last successful fetch.
+ */
+interface ResourceCacheEntry<T = any> {
+  data: T;
+  etag?: string;
+  lastModified?: string;
+  fetchedAt: number; // epoch ms of last successful fetch/revalidation
+}
+
 export class ResourceManager {
   private config: ResourceConfig;
+
+  // Server-side in-memory caches keyed by filePath.
+  // Parsed (JSON/YAML) and raw (string) representations are cached separately.
+  private parsedCache = new Map<string, ResourceCacheEntry>();
+  private rawCache = new Map<string, ResourceCacheEntry<string>>();
 
   constructor() {
     this.config = {
@@ -50,6 +67,19 @@ export class ResourceManager {
       localPath: config.resources.LOCAL_PATH,
       githubConfig: config.github,
     };
+  }
+
+  /**
+   * Whether a cache entry is still within the server-side freshness window.
+   * When RESOURCE_TTL is 0, entries are never considered fresh and GitHub is
+   * always revalidated (conditionally), but stale-on-error still applies.
+   */
+  private isCacheFresh(entry: ResourceCacheEntry | undefined, now: number): entry is ResourceCacheEntry {
+    if (!entry) {
+      return false;
+    }
+    const freshMs = config.cache.RESOURCE_TTL * 1000;
+    return freshMs > 0 && now - entry.fetchedAt < freshMs;
   }
 
   /**
@@ -66,18 +96,24 @@ export class ResourceManager {
 
   /**
    * Get the content of a resource file with metadata (etag, last-modified).
-   * Supports conditional requests (If-None-Match / If-Modified-Since, 304/notModified)
-   * for GitHub mode only to avoid unnecessary downloads. In local mode, any
-   * provided conditionalHeaders are ignored and notModified will never be set.
+   *
+   * In GitHub mode this is backed by an in-memory server-side cache:
+   * - Within the freshness window (RESOURCE_TTL) data is served from cache with
+   *   no upstream request.
+   * - Otherwise GitHub is revalidated with a conditional request using the
+   *   cached upstream ETag; a 304 refreshes the cache without re-downloading.
+   * - If GitHub is unreachable or errors, the last known good (stale) copy is
+   *   served when available (stale-on-error), so transient upstream failures do
+   *   not break the API.
+   *
+   * In local mode the file is read fresh on every call.
    * @param filePath - Relative path to the file (e.g., 'image/registry.json')
-   * @param conditionalHeaders - Optional If-None-Match/If-Modified-Since headers for conditional requests (GitHub mode only)
    */
-  async getResourceWithMetadata(filePath: string, conditionalHeaders?: ConditionalHeaders): Promise<ResourceWithMetadata> {
+  async getResourceWithMetadata(filePath: string): Promise<ResourceWithMetadata> {
     if (this.config.mode === 'local') {
       return this.getLocalResourceWithMetadata(filePath);
-    } else {
-      return this.getGithubResourceWithMetadata(filePath, conditionalHeaders);
     }
+    return this.getGithubParsedCached(filePath);
   }
 
   /**
@@ -94,17 +130,126 @@ export class ResourceManager {
 
   /**
    * Get raw content of a resource file with metadata (no parsing).
-   * Supports conditional requests (If-None-Match / If-Modified-Since, 304/notModified)
-   * for GitHub mode only to avoid unnecessary downloads. In local mode, any
-   * provided conditionalHeaders are ignored and notModified will never be set.
+   *
+   * In GitHub mode this is backed by the same in-memory server-side cache and
+   * stale-on-error behaviour as {@link getResourceWithMetadata}. In local mode
+   * the file is read fresh on every call.
    * @param filePath - Relative path to the file (e.g., 'image/registry.json')
-   * @param conditionalHeaders - Optional If-None-Match/If-Modified-Since headers for conditional requests (GitHub mode only)
    */
-  async getResourceRawWithMetadata(filePath: string, conditionalHeaders?: ConditionalHeaders): Promise<ResourceWithMetadata<string>> {
+  async getResourceRawWithMetadata(filePath: string): Promise<ResourceWithMetadata<string>> {
     if (this.config.mode === 'local') {
       return this.getLocalResourceRawWithMetadata(filePath);
-    } else {
-      return this.getGithubResourceRawWithMetadata(filePath, conditionalHeaders);
+    }
+    return this.getGithubRawCached(filePath);
+  }
+
+  /**
+   * Serve a parsed GitHub resource through the server-side cache.
+   * Handles freshness, conditional revalidation and stale-on-error fallback.
+   */
+  private async getGithubParsedCached(filePath: string): Promise<ResourceWithMetadata> {
+    const now = Date.now();
+    const cached = this.parsedCache.get(filePath);
+
+    if (this.isCacheFresh(cached, now)) {
+      resourceLogger.debug({ filePath }, 'Serving parsed resource from fresh server cache');
+      return {
+        data: cached.data,
+        metadata: { etag: cached.etag, lastModified: cached.lastModified, source: 'github' }
+      };
+    }
+
+    try {
+      const conditional: ConditionalHeaders | undefined = cached
+        ? { ifNoneMatch: cached.etag, ifModifiedSince: cached.lastModified }
+        : undefined;
+      const result = await this.getGithubResourceWithMetadata(filePath, conditional);
+
+      if (result.notModified && cached) {
+        cached.fetchedAt = now;
+        if (result.metadata.etag) cached.etag = result.metadata.etag;
+        if (result.metadata.lastModified) cached.lastModified = result.metadata.lastModified;
+        resourceLogger.debug({ filePath }, 'Revalidated parsed resource (304), serving cached copy');
+        return {
+          data: cached.data,
+          metadata: { etag: cached.etag, lastModified: cached.lastModified, source: 'github' }
+        };
+      }
+
+      this.parsedCache.set(filePath, {
+        data: result.data,
+        etag: result.metadata.etag,
+        lastModified: result.metadata.lastModified,
+        fetchedAt: now
+      });
+      return result;
+    } catch (error: any) {
+      if (cached) {
+        resourceLogger.warn(
+          { filePath, error: error?.message },
+          'GitHub fetch failed; serving stale cached resource (stale-on-error)'
+        );
+        return {
+          data: cached.data,
+          metadata: { etag: cached.etag, lastModified: cached.lastModified, source: 'github' }
+        };
+      }
+      throw error;
+    }
+  }
+
+  /**
+   * Serve a raw GitHub resource through the server-side cache.
+   * Handles freshness, conditional revalidation and stale-on-error fallback.
+   */
+  private async getGithubRawCached(filePath: string): Promise<ResourceWithMetadata<string>> {
+    const now = Date.now();
+    const cached = this.rawCache.get(filePath);
+
+    if (this.isCacheFresh(cached, now)) {
+      resourceLogger.debug({ filePath }, 'Serving raw resource from fresh server cache');
+      return {
+        data: cached.data,
+        metadata: { etag: cached.etag, lastModified: cached.lastModified, source: 'github' }
+      };
+    }
+
+    try {
+      const conditional: ConditionalHeaders | undefined = cached
+        ? { ifNoneMatch: cached.etag, ifModifiedSince: cached.lastModified }
+        : undefined;
+      const result = await this.getGithubResourceRawWithMetadata(filePath, conditional);
+
+      if (result.notModified && cached) {
+        cached.fetchedAt = now;
+        if (result.metadata.etag) cached.etag = result.metadata.etag;
+        if (result.metadata.lastModified) cached.lastModified = result.metadata.lastModified;
+        resourceLogger.debug({ filePath }, 'Revalidated raw resource (304), serving cached copy');
+        return {
+          data: cached.data,
+          metadata: { etag: cached.etag, lastModified: cached.lastModified, source: 'github' }
+        };
+      }
+
+      this.rawCache.set(filePath, {
+        data: result.data as string,
+        etag: result.metadata.etag,
+        lastModified: result.metadata.lastModified,
+        fetchedAt: now
+      });
+      return result;
+    } catch (error: any) {
+      if (cached) {
+        resourceLogger.warn(
+          { filePath, error: error?.message },
+          'GitHub fetch failed; serving stale cached raw resource (stale-on-error)'
+        );
+        return {
+          data: cached.data,
+          metadata: { etag: cached.etag, lastModified: cached.lastModified, source: 'github' }
+        };
+      }
+      throw error;
     }
   }
 

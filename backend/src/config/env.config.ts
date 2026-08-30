@@ -51,6 +51,7 @@ class EnvironmentConfig {
   // Cache Configuration
   readonly cache: {
     TTL: number;
+    RESOURCE_TTL: number;
   };
 
   // Documentation Configuration
@@ -105,9 +106,19 @@ class EnvironmentConfig {
         ? 0
         : Math.floor(rawCacheTTL);
 
+    // Server-side resource cache freshness window (seconds).
+    // Within this window, resources are served from the in-memory cache without
+    // contacting GitHub at all. Helps absorb upstream rate limits/outages.
+    const rawResourceTTL = this.getNumber('RESOURCE_CACHE_TTL', 60);
+    const resourceTTL =
+      !Number.isFinite(rawResourceTTL) || rawResourceTTL < 0
+        ? 0
+        : Math.floor(rawResourceTTL);
+
     // Cache Configuration (TTL in seconds, non-negative integer)
     this.cache = {
       TTL: cacheTTL, // 5 minutes by default when env var is not set
+      RESOURCE_TTL: resourceTTL, // 60 seconds server-side freshness by default
     };
 
     // Documentation Configuration

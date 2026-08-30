@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import { z } from 'zod';
 import { extendZodWithOpenApi } from '@asteasolutions/zod-to-openapi';
 import { ApiRouter } from '../utils/api.router.js';
-import { ResourceManager, escapeHtml, logger, extractConditionalHeaders, setCacheHeaders, sendNotModified } from '../utils/index.js';
+import { ResourceManager, escapeHtml, logger, checkClientCache, setCacheHeaders, sendNotModified } from '../utils/index.js';
 import { ErrorDetailsSchema, HeaderAcceptSchema } from '../schemas/api.schema.js';
 import {
   RuntimeExtensionListSchema,
@@ -88,11 +88,10 @@ extensionRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const conditionalHeaders = extractConditionalHeaders(req);
-      const { data, metadata, notModified } = await resourceManager.getResourceWithMetadata('extension/php_extensions.json', conditionalHeaders);
-      
-      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
-      if (notModified) {
+      const { data, metadata } = await resourceManager.getResourceWithMetadata('extension/php_extensions.json');
+
+      // Return 304 when the client's cached representation still matches
+      if (checkClientCache(req, metadata)) {
         return sendNotModified(res, metadata, config.cache.TTL);
       }
       
@@ -152,11 +151,10 @@ extensionRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const conditionalHeaders = extractConditionalHeaders(req);
-      const { data, metadata, notModified } = await resourceManager.getResourceWithMetadata('extension/php_extensions.json', conditionalHeaders);
+      const { data, metadata } = await resourceManager.getResourceWithMetadata('extension/php_extensions.json');
       
-      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
-      if (notModified) {
+      // Return 304 when the client's cached representation still matches
+      if (checkClientCache(req, metadata)) {
         return sendNotModified(res, metadata, config.cache.TTL);
       }
       
@@ -228,12 +226,11 @@ extensionRouter.route({
       const { id } = req.params as { id: string };
       const imageId = escapeHtml(id);
 
-      const conditionalHeaders = extractConditionalHeaders(req);
-      const { data, metadata, notModified } = await resourceManager.getResourceWithMetadata('extension/php_extensions.json', conditionalHeaders);
-      
-      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
-      if (notModified) {
-        return sendNotModified(res, metadata, config.cache.TTL);
+      const { data, metadata } = await resourceManager.getResourceWithMetadata('extension/php_extensions.json');
+
+      // Return 304 when the client's cached representation still matches (keyed by extension id)
+      if (checkClientCache(req, metadata, { id })) {
+        return sendNotModified(res, metadata, config.cache.TTL, { id });
       }
       
       const extensionEntry = data?.cloud?.[id];
@@ -247,8 +244,8 @@ extensionRouter.route({
         });
       }
       
-      // Set cache headers
-      setCacheHeaders(res, metadata, config.cache.TTL);
+      // Set cache headers (keyed by extension id)
+      setCacheHeaders(res, metadata, config.cache.TTL, { id });
       
       sendFormatted<RuntimeExtensionVersion>(res, extensionEntry);
     } catch (error: any) {
@@ -295,11 +292,10 @@ extensionRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const conditionalHeaders = extractConditionalHeaders(req);
-      const { data, metadata, notModified } = await resourceManager.getResourceWithMetadata('extension/postgresql_extensions.json', conditionalHeaders);
+      const { data, metadata } = await resourceManager.getResourceWithMetadata('extension/postgresql_extensions.json');
       
-      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
-      if (notModified) {
+      // Return 304 when the client's cached representation still matches
+      if (checkClientCache(req, metadata)) {
         return sendNotModified(res, metadata, config.cache.TTL);
       }
       
@@ -371,12 +367,11 @@ extensionRouter.route({
       const { id } = req.params as { id: string };
       const imageId = escapeHtml(id);
 
-      const conditionalHeaders = extractConditionalHeaders(req);
-      const { data, metadata, notModified } = await resourceManager.getResourceWithMetadata('extension/postgresql_extensions.json', conditionalHeaders);
-      
-      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
-      if (notModified) {
-        return sendNotModified(res, metadata, config.cache.TTL);
+      const { data, metadata } = await resourceManager.getResourceWithMetadata('extension/postgresql_extensions.json');
+
+      // Return 304 when the client's cached representation still matches (keyed by extension id)
+      if (checkClientCache(req, metadata, { id })) {
+        return sendNotModified(res, metadata, config.cache.TTL, { id });
       }
       
       const extensionEntry = data?.cloud?.[id];
@@ -390,8 +385,8 @@ extensionRouter.route({
         });
       }
       
-      // Set cache headers
-      setCacheHeaders(res, metadata, config.cache.TTL);
+      // Set cache headers (keyed by extension id)
+      setCacheHeaders(res, metadata, config.cache.TTL, { id });
       
       sendFormatted<RuntimeExtensionVersion>(res, extensionEntry);
     } catch (error: any) {
@@ -438,11 +433,10 @@ extensionRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      const conditionalHeaders = extractConditionalHeaders(req);
-      const { data, metadata, notModified } = await resourceManager.getResourceWithMetadata('extension/solr_extensions.json', conditionalHeaders);
+      const { data, metadata } = await resourceManager.getResourceWithMetadata('extension/solr_extensions.json');
       
-      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
-      if (notModified) {
+      // Return 304 when the client's cached representation still matches
+      if (checkClientCache(req, metadata)) {
         return sendNotModified(res, metadata, config.cache.TTL);
       }
       
@@ -514,12 +508,11 @@ extensionRouter.route({
       const { id } = req.params as { id: string };
       const imageId = escapeHtml(id);
 
-      const conditionalHeaders = extractConditionalHeaders(req);
-      const { data, metadata, notModified } = await resourceManager.getResourceWithMetadata('extension/solr_extensions.json', conditionalHeaders);
-      
-      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
-      if (notModified) {
-        return sendNotModified(res, metadata, config.cache.TTL);
+      const { data, metadata } = await resourceManager.getResourceWithMetadata('extension/solr_extensions.json');
+
+      // Return 304 when the client's cached representation still matches (keyed by extension id)
+      if (checkClientCache(req, metadata, { id })) {
+        return sendNotModified(res, metadata, config.cache.TTL, { id });
       }
       
       const extensionEntry = data?.cloud?.[id];
@@ -533,8 +526,8 @@ extensionRouter.route({
         });
       }
       
-      // Set cache headers
-      setCacheHeaders(res, metadata, config.cache.TTL);
+      // Set cache headers (keyed by extension id)
+      setCacheHeaders(res, metadata, config.cache.TTL, { id });
       
       sendFormatted<RuntimeExtensionVersion>(res, extensionEntry);
     } catch (error: any) {
