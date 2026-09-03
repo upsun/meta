@@ -457,9 +457,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.3.28.5",
+            "raw": "26.3.29.7",
             "majorMinor": "26.3",
-            "normalized": "26.3.28"
+            "normalized": "26.3.29"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -2078,9 +2078,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1.26.7-0psh1",
+            "raw": "1.26.8-0psh1",
             "majorMinor": "1.26",
-            "normalized": "1.26.7"
+            "normalized": "1.26.8"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -7282,9 +7282,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.5.9-1+0~20260730.22+debian13~1.gbp617955",
+            "raw": "8.5.10-1+0~20260828.25+debian13~1.gbpfea0b8",
             "majorMinor": "8.5",
-            "normalized": "8.5.9"
+            "normalized": "8.5.10"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -7325,9 +7325,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.4.24-1+0~20260730.53+debian12~1.gbp0fce29",
+            "raw": "8.4.25-1+0~20260828.55+debian12~1.gbp259445",
             "majorMinor": "8.4",
-            "normalized": "8.4.24"
+            "normalized": "8.4.25"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -11123,9 +11123,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "9.0.5-0psh1",
+            "raw": "9.0.6-0psh1",
             "majorMinor": "9.0",
-            "normalized": "9.0.5"
+            "normalized": "9.0.6"
           },
           "allow_scale_down": true,
           "storage_mount_point": null,
