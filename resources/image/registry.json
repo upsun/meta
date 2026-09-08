@@ -2049,6 +2049,45 @@
       "repo_name": "golang"
     },
     "versions": {
+      "1.27": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2026-08-19T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": null,
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "1.27.1-0psh1",
+            "majorMinor": "1.27",
+            "normalized": "1.27.1"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
       "1.26": {
         "upsun": {
           "status": "supported",
@@ -2247,7 +2286,7 @@
       "1.21": {
         "upsun": {
           "status": "retired",
-          "internal_support": true,
+          "internal_support": false,
           "internal_status": "sunset"
         },
         "upstream": {
@@ -2286,7 +2325,7 @@
       "1.20": {
         "upsun": {
           "status": "retired",
-          "internal_support": true,
+          "internal_support": false,
           "internal_status": "sunset"
         },
         "upstream": {
