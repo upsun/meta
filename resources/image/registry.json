@@ -6374,9 +6374,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.9.0-1nodesource1",
-            "majorMinor": "26.9",
-            "normalized": "26.9.0"
+            "raw": "26.10.0-1nodesource1",
+            "majorMinor": "26.10",
+            "normalized": "26.10.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -7450,9 +7450,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.3.33-0psh1",
+            "raw": "8.3.35-0psh1",
             "majorMinor": "8.3",
-            "normalized": "8.3.33"
+            "normalized": "8.3.35"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
