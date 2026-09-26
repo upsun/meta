@@ -4043,6 +4043,36 @@
         }
       }
     },
+    "lz4": {
+      "description": "",
+      "versions": {
+        "8.4": {
+          "status": "available",
+          "options": []
+        },
+        "8.5": {
+          "status": "available",
+          "options": []
+        }
+      }
+    },
+    "lzf": {
+      "description": "",
+      "versions": {
+        "8.3": {
+          "status": "available",
+          "options": []
+        },
+        "8.4": {
+          "status": "available",
+          "options": []
+        },
+        "8.5": {
+          "status": "available",
+          "options": []
+        }
+      }
+    },
     "mailparse": {
       "description": "Email/MIME parsing utilities.",
       "versions": {
@@ -5840,6 +5870,23 @@
         }
       }
     },
+    "snappy": {
+      "description": "",
+      "versions": {
+        "8.3": {
+          "status": "available",
+          "options": []
+        },
+        "8.4": {
+          "status": "available",
+          "options": []
+        },
+        "8.5": {
+          "status": "available",
+          "options": []
+        }
+      }
+    },
     "snmp": {
       "description": "SNMP protocol support.",
       "versions": {
@@ -7232,6 +7279,19 @@
         },
         "8.5": {
           "status": "default",
+          "options": []
+        }
+      }
+    },
+    "zstd": {
+      "description": "",
+      "versions": {
+        "8.4": {
+          "status": "available",
+          "options": []
+        },
+        "8.5": {
+          "status": "available",
           "options": []
         }
       }
