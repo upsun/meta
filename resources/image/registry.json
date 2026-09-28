@@ -457,9 +457,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.8.12.53",
+            "raw": "26.8.13.2",
             "majorMinor": "26.8",
-            "normalized": "26.8.12"
+            "normalized": "26.8.13"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
