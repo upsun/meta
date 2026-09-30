@@ -457,9 +457,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.8.14.3",
+            "raw": "26.8.15.10",
             "majorMinor": "26.8",
-            "normalized": "26.8.14"
+            "normalized": "26.8.15"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -500,9 +500,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.3.35.3",
+            "raw": "26.3.36.6",
             "majorMinor": "26.3",
-            "normalized": "26.3.35"
+            "normalized": "26.3.36"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -3516,7 +3516,7 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "releaseDate": "2021-09-14T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2026-09-30T00:00:00.000Z",
@@ -5530,6 +5530,46 @@
       "repo_name": "mongodb-enterprise"
     },
     "versions": {
+      "8.0": {
+        "upsun": {
+          "status": "incoming",
+          "internal_support": false,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "incoming",
+          "releaseDate": "2024-10-31T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2029-10-31T00:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "mongodb": {
+              "port": 27017,
+              "schema": "mongodb",
+              "scheme": "mongodb"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 512,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "7.0.43",
+            "majorMinor": "7.0",
+            "normalized": "7.0.43"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      },
       "7.0": {
         "upsun": {
           "status": "supported",
