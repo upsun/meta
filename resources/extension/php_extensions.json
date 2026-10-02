@@ -4044,7 +4044,7 @@
       }
     },
     "lz4": {
-      "description": "",
+      "description": "LZ4 compression support.",
       "versions": {
         "8.4": {
           "status": "available",
@@ -4057,7 +4057,7 @@
       }
     },
     "lzf": {
-      "description": "",
+      "description": "LZF compression support.",
       "versions": {
         "8.3": {
           "status": "available",
@@ -5871,7 +5871,7 @@
       }
     },
     "snappy": {
-      "description": "",
+      "description": "Snappy compression support.",
       "versions": {
         "8.3": {
           "status": "available",
@@ -7284,7 +7284,7 @@
       }
     },
     "zstd": {
-      "description": "",
+      "description": "Zstandard compression support.",
       "versions": {
         "8.4": {
           "status": "available",
