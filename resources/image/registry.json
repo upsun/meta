@@ -328,9 +328,9 @@
       },
       "113": {
         "upsun": {
-          "status": "supported",
+          "status": "retired",
           "internal_support": true,
-          "internal_status": "active"
+          "internal_status": "sunset"
         },
         "upstream": {
           "status": "retired",
@@ -338,9 +338,9 @@
           "eoasFrom": null,
           "eolFrom": "2023-05-30T00:00:00.000Z",
           "isLts": false,
-          "isMaintained": true,
-          "isEoas": false,
-          "isEol": false
+          "isMaintained": false,
+          "isEoas": true,
+          "isEol": true
         },
         "manifest": {
           "endpoints": {
@@ -500,9 +500,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.3.49.3",
+            "raw": "26.3.50.11",
             "majorMinor": "26.3",
-            "normalized": "26.3.49"
+            "normalized": "26.3.50"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -5829,7 +5829,7 @@
     "versions": {
       "2.0": {
         "upsun": {
-          "status": "deprecated",
+          "status": "incoming",
           "internal_support": true,
           "internal_status": "active"
         },
@@ -5840,7 +5840,7 @@
           "eolFrom": null,
           "isLts": false,
           "isMaintained": true,
-          "isEoas": true,
+          "isEoas": false,
           "isEol": false
         },
         "manifest": {
@@ -9610,7 +9610,7 @@
       },
       "8.0": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true,
           "internal_status": "active"
         },
@@ -9621,7 +9621,7 @@
           "eolFrom": "2026-12-01T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -9651,7 +9651,7 @@
       },
       "7.2": {
         "upsun": {
-          "status": "supported",
+          "status": "deprecated",
           "internal_support": true,
           "internal_status": "active"
         },
@@ -9662,7 +9662,7 @@
           "eolFrom": "2029-12-01T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
-          "isEoas": false,
+          "isEoas": true,
           "isEol": false
         },
         "manifest": {
@@ -11938,7 +11938,7 @@
     "docs": {
       "relationship_name": "elasticsearch-enterprise",
       "service_name": "elasticsearch-enterprise",
-      "url": "https://developer.upsun.com/docs/add-services/elasticsearch"
+      "url": "https://developer.upsun.com/docs/add-services/elasticsearch-enterprise"
     },
     "versions": {
       "9.3": {
@@ -12335,6 +12335,62 @@
             "raw": "3.0.15",
             "majorMinor": "3.0",
             "normalized": "3.0.15"
+          },
+          "allow_scale_down": null,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_MEMORY",
+          "supports_horizontal_scaling": null
+        }
+      }
+    }
+  },
+  "activemq-artemis": {
+    "description": "",
+    "name": "activemq-artemis",
+    "internal": {
+      "repo_name": "activemq-artemis"
+    },
+    "service": true,
+    "need_disk": true,
+    "docs": {
+      "relationship_name": "activemq-artemis",
+      "service_name": "activemq-artemis",
+      "url": "https://developer.upsun.com/docs/add-services/activemq-artemis"
+    },
+    "versions": {
+      "2": {
+        "upsun": {
+          "status": "supported",
+          "internal_support": true,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "supported",
+          "releaseDate": "2017-03-10T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2017-05-08T00:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "activemq-artemis": {
+              "port": 61616,
+              "scheme": "tcp",
+              "default": true
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 448,
+          "is_persistent": null,
+          "min_disk_size": 256,
+          "allow_scale_up": null,
+          "package_version": {
+            "raw": "2.57.0-0psh1.1",
+            "majorMinor": "2.57",
+            "normalized": "2.57.0"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
