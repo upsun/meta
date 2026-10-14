@@ -12155,6 +12155,7 @@
       "service_name": "mongodb",
       "url": "https://developer.upsun.com/docs/add-services/mongodb"
     },
+    "runtime": false,
     "versions": {
       "4.0": {
         "upsun": {
@@ -12389,13 +12390,14 @@
     "internal": {
       "repo_name": "frankenphp"
     },
-    "service": true,
+    "service": false,
     "need_disk": false,
     "docs": {
       "relationship_name": "frankenphp",
       "service_name": "frankenphp",
       "url": "https://developer.upsun.com/docs/languages/frankenphp"
     },
+    "runtime": true,
     "versions": {
       "1.8.5": {
         "upsun": {
