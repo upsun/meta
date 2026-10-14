@@ -457,9 +457,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.8.25.14",
+            "raw": "26.8.26.12",
             "majorMinor": "26.8",
-            "normalized": "26.8.25"
+            "normalized": "26.8.26"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -747,9 +747,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "10.0.401-1",
+            "raw": "10.0.402-1",
             "majorMinor": "10.0",
-            "normalized": "10.0.401"
+            "normalized": "10.0.402"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -786,9 +786,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.0.425-1",
+            "raw": "8.0.426-1",
             "majorMinor": "8.0",
-            "normalized": "8.0.425"
+            "normalized": "8.0.426"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -5600,9 +5600,9 @@
           "min_disk_size": 512,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "7.0.43",
+            "raw": "7.0.45",
             "majorMinor": "7.0",
-            "normalized": "7.0.43"
+            "normalized": "7.0.45"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -10054,6 +10054,45 @@
       "repo_name": "ruby"
     },
     "versions": {
+      "4.1": {
+        "upsun": {
+          "status": "incoming",
+          "internal_support": false,
+          "internal_status": "active"
+        },
+        "upstream": {
+          "status": "incoming",
+          "releaseDate": "2025-12-25T00:00:00.000Z",
+          "eoasFrom": null,
+          "eolFrom": "2029-03-31T00:00:00.000Z",
+          "isLts": false,
+          "isMaintained": true,
+          "isEoas": false,
+          "isEol": false
+        },
+        "manifest": {
+          "endpoints": {
+            "http": {
+              "port": 80,
+              "scheme": "http"
+            }
+          },
+          "min_cpu_size": 0.1,
+          "min_mem_size": 64,
+          "is_persistent": null,
+          "min_disk_size": null,
+          "allow_scale_up": true,
+          "package_version": {
+            "raw": "1:3.3+b1",
+            "majorMinor": "3.3",
+            "normalized": "3.3.0"
+          },
+          "allow_scale_down": true,
+          "storage_mount_point": "/mnt",
+          "default_container_profile": "HIGH_CPU",
+          "supports_horizontal_scaling": true
+        }
+      },
       "4.0": {
         "upsun": {
           "status": "supported",
