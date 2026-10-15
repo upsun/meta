@@ -534,7 +534,7 @@
               "deploy": {
                 "type": "string",
                 "title": "Hook executed after the deployment of new code",
-                "description": "More information: \nhttps://docs.upsun.com\t\n/anchors/app/reference/hooks/",
+                "description": "More information: \nhttps://docs.upsun.com/anchors/app/reference/hooks/",
                 "default": null
               },
               "post_deploy": {
@@ -913,8 +913,7 @@
               }
             ],
             "title": "The service type",
-            "description": "One of the available services in the format `type:version`. \nMore information:  \nhttps://docs.upsun.com/anchors/services/available/",
-            "default": {}
+            "description": "One of the available services in the format `type:version`. \nMore information:  \nhttps://docs.upsun.com/anchors/services/available/"
           },
           "size": {
             "$ref": "#/definitions/deprecated/size"
@@ -1127,6 +1126,14 @@
           },
           "type": {
             "type": "string",
+            "anyOf": [
+              {
+                "$ref": "https://meta.upsun.com/schema/runtime-versions"
+              },
+              {
+                "pattern": "^(composable|docker):"
+              }
+            ],
             "title": "The runtime image and version to use for this task",
             "description": "The base image to use with a specific app language.  \nFormat: runtime:version. \nMore information: \nhttps://docs.upsun.com/anchors/app/reference/type/"
           },
