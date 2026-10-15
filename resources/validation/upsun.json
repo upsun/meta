@@ -15,7 +15,7 @@
                 "$ref": "https://meta.upsun.com/schema/runtime-versions"
               },
               {
-                "pattern": "^composable:"
+                "pattern": "^(composable|docker):"
               }
             ],
             "title": "The base runtime (language) and version to use for this application",
