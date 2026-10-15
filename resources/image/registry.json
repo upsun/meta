@@ -12395,7 +12395,7 @@
     "docs": {
       "relationship_name": "frankenphp",
       "service_name": "frankenphp",
-      "url": "https://developer.upsun.com/docs/languages/frankenphp"
+      "url": "https://developer.upsun.com/docs/languages/php/frankenphp"
     },
     "runtime": true,
     "versions": {
