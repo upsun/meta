@@ -85,12 +85,20 @@
                 "description": "Overrides the application's value for this container."
               },
               "mounts": {
-                "$ref": "#/definitions/mounts",
-                "description": "Overrides the application's value for this container."
+                "description": "Overrides the application's value for this container.",
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/mounts"
+                  }
+                ]
               },
               "relationships": {
-                "$ref": "#/definitions/relationships",
-                "description": "Overrides the application's value for this container."
+                "description": "Overrides the application's value for this container.",
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/relationships"
+                  }
+                ]
               },
               "access": {
                 "type": "object",
@@ -101,12 +109,20 @@
                 "description": "Overrides the application's value for this container."
               },
               "size": {
-                "$ref": "#/definitions/deprecated/size",
-                "description": "Overrides the application's value for this container."
+                "description": "Overrides the application's value for this container.",
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/deprecated/size"
+                  }
+                ]
               },
               "resources": {
-                "$ref": "#/definitions/deprecated/resources",
-                "description": "Overrides the application's value for this container."
+                "description": "Overrides the application's value for this container.",
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/deprecated/resources"
+                  }
+                ]
               },
               "locations": {
                 "type": "object",
@@ -330,24 +346,44 @@
                 "deprecationMessage": "Deprecated"
               },
               "authorizations": {
-                "$ref": "#/definitions/authorizations",
-                "description": "Overrides the application's value for this container."
+                "description": "Overrides the application's value for this container.",
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/authorizations"
+                  }
+                ]
               },
               "egress": {
-                "$ref": "#/definitions/egress",
-                "description": "Overrides the application's value for this container."
+                "description": "Overrides the application's value for this container.",
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/container_egress"
+                  }
+                ]
               },
               "container_profile": {
-                "$ref": "#/definitions/container_profile",
-                "description": "Overrides the application's value for this container."
+                "description": "Overrides the application's value for this container.",
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/container_profile"
+                  }
+                ]
               },
               "additional_hosts": {
-                "$ref": "#/definitions/additional_hosts",
-                "description": "Overrides the application's value for this container."
+                "description": "Overrides the application's value for this container.",
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/additional_hosts"
+                  }
+                ]
               },
               "operations": {
-                "$ref": "#/definitions/operations",
-                "description": "Overrides the application's value for this container."
+                "description": "Overrides the application's value for this container.",
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/operations"
+                  }
+                ]
               }
             },
             "additionalProperties": false,
@@ -412,8 +448,12 @@
                   "description": "Overrides the application's value for this container."
                 },
                 "relationships": {
-                  "$ref": "#/definitions/relationships",
-                  "description": "Overrides the application's value for this container."
+                  "description": "Overrides the application's value for this container.",
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/relationships"
+                    }
+                  ]
                 },
                 "access": {
                   "type": "object",
@@ -424,16 +464,28 @@
                   "description": "Overrides the application's value for this container."
                 },
                 "size": {
-                  "$ref": "#/definitions/deprecated/size",
-                  "description": "Overrides the application's value for this container."
+                  "description": "Overrides the application's value for this container.",
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/deprecated/size"
+                    }
+                  ]
                 },
                 "resources": {
-                  "$ref": "#/definitions/deprecated/resources",
-                  "description": "Overrides the application's value for this container."
+                  "description": "Overrides the application's value for this container.",
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/deprecated/resources"
+                    }
+                  ]
                 },
                 "container_profile": {
-                  "$ref": "#/definitions/container_profile",
-                  "description": "Overrides the application's value for this container."
+                  "description": "Overrides the application's value for this container.",
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/container_profile"
+                    }
+                  ]
                 },
                 "commands": {
                   "type": "object",
@@ -462,20 +514,36 @@
                   "description": "More information: \nhttps://docs.upsun.com/anchors/app/reference/workers/"
                 },
                 "authorizations": {
-                  "$ref": "#/definitions/authorizations",
-                  "description": "Overrides the application's value for this container."
+                  "description": "Overrides the application's value for this container.",
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/authorizations"
+                    }
+                  ]
                 },
                 "egress": {
-                  "$ref": "#/definitions/worker_egress",
-                  "description": "Overrides the application's value for this container."
+                  "description": "Overrides the application's value for this container.",
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/container_egress"
+                    }
+                  ]
                 },
                 "additional_hosts": {
-                  "$ref": "#/definitions/additional_hosts",
-                  "description": "Overrides the application's value for this container."
+                  "description": "Overrides the application's value for this container.",
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/additional_hosts"
+                    }
+                  ]
                 },
                 "operations": {
-                  "$ref": "#/definitions/operations",
-                  "description": "Overrides the application's value for this container."
+                  "description": "Overrides the application's value for this container.",
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/operations"
+                    }
+                  ]
                 }
               },
               "required": [
@@ -1689,7 +1757,7 @@
       },
       "additionalProperties": false
     },
-    "worker_egress": {
+    "container_egress": {
       "type": "object",
       "title": "Egress proxy allowlists",
       "description": "Routes outbound traffic through the egress proxy at runtime, allowing only the listed domains. Build-phase egress is set on the application.",
