@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { z } from 'zod';
 import { config } from '../config/env.config.js';
 import { ApiRouter } from '../utils/api.router.js';
-import { ResourceManager, logger, extractConditionalHeaders, setCacheHeaders, sendNotModified } from '../utils/index.js';
+import { ResourceManager, logger, checkClientCache, setCacheHeaders, sendNotModified } from '../utils/index.js';
 import { HeaderAcceptSchema, ErrorDetailsSchema } from '../schemas/api.schema.js';
 
 const TAG = 'OpenAPI Specification';
@@ -63,17 +63,17 @@ openapiRouter.route({
         fileName = format === 'yaml' ? 'openapispec-upsun.yaml' : 'openapispec-upsun.json';
       }
       try {
-        // serving the raw file according to the format with metadata
-        const conditionalHeaders = extractConditionalHeaders(req);
-        const { data, metadata, notModified } = await resourceManager.getResourceRawWithMetadata(`openapi/${fileName}`, conditionalHeaders);
-        
-        // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
-        if (notModified) {
-          return sendNotModified(res, metadata, config.cache.TTL);
+        // serving the raw file according to the format (server-side cache + stale-on-error)
+        const cacheParams = { sdks: sdks ? 'true' : 'false' };
+        const { data, metadata } = await resourceManager.getResourceRawWithMetadata(`openapi/${fileName}`);
+
+        // Return 304 when the client's cached representation still matches
+        if (checkClientCache(req, metadata, cacheParams)) {
+          return sendNotModified(res, metadata, config.cache.TTL, cacheParams);
         }
-        
+
         // Set cache headers
-        setCacheHeaders(res, metadata, config.cache.TTL);
+        setCacheHeaders(res, metadata, config.cache.TTL, cacheParams);
         
         if (format === 'yaml' && !sdks) {
           res.type('text/plain; charset=utf-8').send(data);
