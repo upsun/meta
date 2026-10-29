@@ -6375,9 +6375,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "24.22.1-1nodesource1",
+            "raw": "24.22.2-1nodesource1",
             "majorMinor": "24.22",
-            "normalized": "24.22.1"
+            "normalized": "24.22.2"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -6396,7 +6396,7 @@
           "releaseDate": "2026-05-05T00:00:00.000Z",
           "eoasFrom": "2027-10-27T00:00:00.000Z",
           "eolFrom": "2029-04-30T00:00:00.000Z",
-          "isLts": false,
+          "isLts": true,
           "isMaintained": true,
           "isEoas": false,
           "isEol": false
@@ -6414,9 +6414,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.12.1-1nodesource1",
-            "majorMinor": "26.12",
-            "normalized": "26.12.1"
+            "raw": "26.13.0-1nodesource1",
+            "majorMinor": "26.13",
+            "normalized": "26.13.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -8574,9 +8574,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "3.14.8-0psh1",
+            "raw": "3.14.10-0psh1",
             "majorMinor": "3.14",
-            "normalized": "3.14.8"
+            "normalized": "3.14.10"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -8691,9 +8691,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "3.11.17-0psh1",
+            "raw": "3.11.18-0psh1",
             "majorMinor": "3.11",
-            "normalized": "3.11.17"
+            "normalized": "3.11.18"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -10552,7 +10552,7 @@
         },
         "upstream": {
           "status": "supported",
-          "releaseDate": "2026-08-20T00:00:00.000Z",
+          "releaseDate": "2026-10-01T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2026-10-01T00:00:00.000Z",
           "isLts": false,
@@ -10574,9 +10574,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1.98.1-0psh1",
-            "majorMinor": "1.98",
-            "normalized": "1.98.1"
+            "raw": "1.99.1-0psh1",
+            "majorMinor": "1.99",
+            "normalized": "1.99.1"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
