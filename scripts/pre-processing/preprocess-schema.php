@@ -27,11 +27,11 @@ class OpenApiPreprocessor
         $content = $this->replaceHTTPAccessPermission($content);
         $this->schema = json_decode($content, true, 512, JSON_THROW_ON_ERROR);
 
-        $this->fixAllRefsWithAllOf($this->schema);
-
         if (!$this->schema) {
             throw new InvalidArgumentException("Unable to parse schema JSON");
         }
+
+        $this->fixAllRefsWithAllOf($this->schema);
     }
 
     /**
