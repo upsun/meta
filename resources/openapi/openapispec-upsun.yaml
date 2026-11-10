@@ -426,6 +426,100 @@ paths:
           $ref: '#/components/responses/Forbidden'
         '404':
           $ref: '#/components/responses/NotFound'
+  /projects/{projectId}/environments/{environmentId}/tasks/{taskDefinitionId}/activities:
+    get:
+      parameters:
+        - in: path
+          required: true
+          schema:
+            type: string
+          name: projectId
+        - in: path
+          required: true
+          schema:
+            type: string
+          name: environmentId
+        - in: path
+          required: true
+          schema:
+            type: string
+          name: taskDefinitionId
+      operationId: list-projects-environments-tasks-activities
+      responses:
+        default:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ActivityCollection'
+      tags:
+        - Activity
+  /projects/{projectId}/environments/{environmentId}/tasks/{taskDefinitionId}/activities/{activityId}:
+    get:
+      parameters:
+        - in: path
+          required: true
+          schema:
+            type: string
+          name: projectId
+        - in: path
+          required: true
+          schema:
+            type: string
+          name: environmentId
+        - in: path
+          required: true
+          schema:
+            type: string
+          name: taskDefinitionId
+        - in: path
+          required: true
+          schema:
+            type: string
+          name: activityId
+      operationId: get-projects-environments-tasks-activities
+      responses:
+        default:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Activity'
+      tags:
+        - Activity
+  /projects/{projectId}/environments/{environmentId}/tasks/{taskDefinitionId}/activities/{activityId}/cancel:
+    post:
+      parameters:
+        - in: path
+          required: true
+          schema:
+            type: string
+          name: projectId
+        - in: path
+          required: true
+          schema:
+            type: string
+          name: environmentId
+        - in: path
+          required: true
+          schema:
+            type: string
+          name: taskDefinitionId
+        - in: path
+          required: true
+          schema:
+            type: string
+          name: activityId
+      operationId: action-projects-environments-tasks-activities-cancel
+      responses:
+        default:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AcceptedResponse'
+      tags:
+        - Activity
   /organizations/{organization_id}/addons:
     get:
       summary: Get add-ons
@@ -482,6 +576,7 @@ paths:
                     items:
                       $ref: '#/components/schemas/Alert'
                 type: object
+      deprecated: true
     patch:
       tags:
         - Alerts
@@ -518,6 +613,7 @@ paths:
                     items:
                       $ref: '#/components/schemas/Alert'
                 type: object
+      deprecated: true
   /users/{user_id}/api-tokens:
     parameters:
       - $ref: '#/components/parameters/UserID'
@@ -6141,6 +6237,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Discount'
+      deprecated: true
       x-vendor: upsun
   /discounts/types/allowance:
     get:
@@ -6792,8 +6889,6 @@ paths:
                       - blackfire_php_server_caches
                       - blackfire_server_global
                       - blackfire_server_transactions_breakdown
-                      - logs_query
-                      - logs_overview
                       - http_metrics_timeline_urls
                       - http_metrics_timeline_ips
                       - http_metrics_timeline_user_agents
@@ -7046,9 +7141,9 @@ paths:
                             type: integer
                             example: 43200
                           max_range:
-                            description: Maximum query time range in minutes
+                            description: Maximum width of the [from, to] window the API will accept, in minutes. Rows older than retention_period are returned as empty buckets.
                             type: integer
-                            example: 43200
+                            example: 64800
                           recommended_default_range:
                             description: Recommended default query time range in minutes, for user interfaces
                             type: integer
@@ -7067,7 +7162,7 @@ paths:
                             type: integer
                             example: 80640
                           max_range:
-                            description: Maximum query time range in minutes
+                            description: Maximum width of the [from, to] window the API will accept, in minutes. Rows older than retention_period are returned as empty buckets.
                             type: integer
                             example: 20160
                           recommended_default_range:
@@ -7088,9 +7183,9 @@ paths:
                             type: integer
                             example: 43200
                           max_range:
-                            description: Maximum query time range in minutes
+                            description: Maximum width of the [from, to] window the API will accept, in minutes. Rows older than retention_period are returned as empty buckets.
                             type: integer
-                            example: 43200
+                            example: 64800
                           recommended_default_range:
                             description: Recommended default query time range in minutes, for user interfaces
                             type: integer
@@ -7109,9 +7204,9 @@ paths:
                             type: integer
                             example: 43200
                           max_range:
-                            description: Maximum query time range in minutes
+                            description: Maximum width of the [from, to] window the API will accept, in minutes. Rows older than retention_period are returned as empty buckets.
                             type: integer
-                            example: 43200
+                            example: 64800
                           recommended_default_range:
                             description: Recommended default query time range in minutes, for user interfaces
                             type: integer
@@ -7130,9 +7225,9 @@ paths:
                             type: integer
                             example: 43200
                           max_range:
-                            description: Maximum query time range in minutes
+                            description: Maximum width of the [from, to] window the API will accept, in minutes. Rows older than retention_period are returned as empty buckets.
                             type: integer
-                            example: 43200
+                            example: 64800
                           recommended_default_range:
                             description: Recommended default query time range in minutes, for user interfaces
                             type: integer
@@ -10584,7 +10679,7 @@ paths:
             type: string
             enum:
               - updated_at
-              - '-updated_at'
+              - -updated_at
       responses:
         '200':
           description: OK
@@ -10890,7 +10985,7 @@ paths:
             Supported fields: `created_at`, `updated_at`.
           schema:
             type: string
-            example: '-updated_at'
+            example: -updated_at
       responses:
         '200':
           description: OK
@@ -11100,7 +11195,7 @@ paths:
             Supported fields: `id`, `region`, `title`, `type`, `plan`, `status`, `created_at`, `updated_at`.
           schema:
             type: string
-            example: '-updated_at'
+            example: -updated_at
       responses:
         '200':
           description: OK
@@ -11389,7 +11484,7 @@ paths:
             Supported fields: `name`, `label`, `created_at`, `updated_at`.
           schema:
             type: string
-            example: '-updated_at'
+            example: -updated_at
       responses:
         '200':
           description: OK
@@ -11524,7 +11619,7 @@ paths:
             Supported fields: `name`, `label`, `created_at`, `updated_at`.
           schema:
             type: string
-            example: '-updated_at'
+            example: -updated_at
       responses:
         '200':
           description: OK
@@ -11704,7 +11799,11 @@ paths:
                 $ref: '#/components/schemas/Error'
     delete:
       summary: Delete organization
-      description: Deletes the specified organization.
+      description: |-
+        Deletes the specified organization.
+
+        The organization must not have any projects with the status `active`, `suspended` or `requested` (still provisioning).
+        Projects with the status `failed` or `deleted` do not block the deletion.
       operationId: delete-org
       tags:
         - Organizations
@@ -11714,7 +11813,7 @@ paths:
         '204':
           description: No Content
         '400':
-          description: Bad Request
+          description: Bad Request - The organization cannot be deleted yet, for example because it still has `active`, `suspended` or `requested` projects
           content:
             application/problem+json:
               schema:
@@ -12338,7 +12437,7 @@ paths:
             type: string
             enum:
               - updated_at
-              - '-updated_at'
+              - -updated_at
       responses:
         '200':
           description: OK
@@ -12564,16 +12663,65 @@ paths:
         - Project Variables
       summary: Delete a project variable
       description: Delete a single user-defined project variable.
-  /organizations/{organization_id}/projects/{project_id}/history:
+  /organizations/{organization_id}/projects/{project_id}/usage-history:
     get:
-      summary: List project history
-      description: Retrieves history records for the specified project, oldest first.
-      operationId: list-org-project-history
+      summary: List a project's resource usage history
+      description: |-
+        Retrieves the specified project's resource usage records, oldest first.
+        Plan and addon changes are served by `plan-history` instead.
+      operationId: list-org-project-usage-history
       tags:
         - Projects
       parameters:
         - $ref: '#/components/parameters/OrganizationID'
         - $ref: '#/components/parameters/ProjectID'
+        - name: filter[id]
+          in: query
+          description: Allows filtering by `id` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/StringFilter'
+        - name: filter[resource]
+          in: query
+          description: Allows filtering by `resource` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/StringFilter'
+        - name: filter[environment]
+          in: query
+          description: Allows filtering by `environment` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/StringFilter'
+        - name: filter[user_id]
+          in: query
+          description: Allows filtering by `user_id` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/StringFilter'
+        - name: filter[timestamp]
+          in: query
+          description: Allows filtering by `timestamp` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/DateTimeFilter'
+        - $ref: '#/components/parameters/PageSize'
+        - $ref: '#/components/parameters/PageBefore'
+        - $ref: '#/components/parameters/PageAfter'
+        - in: query
+          name: sort
+          description: |
+            Allows sorting by a single field.<br>
+            Use a dash ("-") to sort descending.<br>
+            Supported fields: `timestamp`.
+          schema:
+            type: string
+            example: -timestamp
       responses:
         '200':
           description: OK
@@ -12584,11 +12732,11 @@ paths:
                 properties:
                   count:
                     type: integer
-                    description: Total number of items returned.
+                    description: Total number of items across pages.
                   items:
                     type: array
                     items:
-                      $ref: '#/components/schemas/History'
+                      $ref: '#/components/schemas/UsageRecord'
                   _links:
                     $ref: '#/components/schemas/ListLinks'
                 additionalProperties: false
@@ -12596,6 +12744,193 @@ paths:
                   - count
                   - items
                   - _links
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /organizations/{organization_id}/projects/{project_id}/history:
+    get:
+      summary: List project history
+      description: |-
+        Retrieves history records for the specified project, oldest first.
+
+        Deprecated: use `usage-history` instead, which pairs with `plan-history`.
+      operationId: list-org-project-history
+      deprecated: true
+      tags:
+        - Projects
+      parameters:
+        - $ref: '#/components/parameters/OrganizationID'
+        - $ref: '#/components/parameters/ProjectID'
+        - name: filter[id]
+          in: query
+          description: Allows filtering by `id` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/StringFilter'
+        - name: filter[resource]
+          in: query
+          description: Allows filtering by `resource` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/StringFilter'
+        - name: filter[environment]
+          in: query
+          description: Allows filtering by `environment` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/StringFilter'
+        - name: filter[user_id]
+          in: query
+          description: Allows filtering by `user_id` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/StringFilter'
+        - name: filter[timestamp]
+          in: query
+          description: Allows filtering by `timestamp` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/DateTimeFilter'
+        - $ref: '#/components/parameters/PageSize'
+        - $ref: '#/components/parameters/PageBefore'
+        - $ref: '#/components/parameters/PageAfter'
+        - in: query
+          name: sort
+          description: |
+            Allows sorting by a single field.<br>
+            Use a dash ("-") to sort descending.<br>
+            Supported fields: `timestamp`.
+          schema:
+            type: string
+            example: -timestamp
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                    description: Total number of items across pages.
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/UsageRecord'
+                  _links:
+                    $ref: '#/components/schemas/ListLinks'
+                additionalProperties: false
+                required:
+                  - count
+                  - items
+                  - _links
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /organizations/{organization_id}/projects/{project_id}/plan-history:
+    get:
+      summary: List a project's plan and addon change history
+      description: |-
+        Retrieves plan and addon change records for the specified project,
+        oldest first. Pre-allocated quantities (`environments`, `storage`,
+        `user_licenses`) are measured, and are served by the resource usage
+        endpoints instead.
+      operationId: list-org-project-plan-history
+      tags:
+        - Projects
+      parameters:
+        - $ref: '#/components/parameters/OrganizationID'
+        - $ref: '#/components/parameters/ProjectID'
+        - name: filter[id]
+          in: query
+          description: Allows filtering by `id` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/StringFilter'
+        - name: filter[type]
+          in: query
+          description: Allows filtering by `type` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/StringFilter'
+        - name: filter[value]
+          in: query
+          description: Allows filtering by `value` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/StringFilter'
+        - name: filter[event_type]
+          in: query
+          description: Allows filtering by `event_type` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/StringFilter'
+        - name: filter[user_id]
+          in: query
+          description: Allows filtering by `user_id` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/StringFilter'
+        - name: filter[timestamp]
+          in: query
+          description: Allows filtering by `timestamp` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/DateTimeFilter'
+        - $ref: '#/components/parameters/PageSize'
+        - $ref: '#/components/parameters/PageBefore'
+        - $ref: '#/components/parameters/PageAfter'
+        - in: query
+          name: sort
+          description: |
+            Allows sorting by a single field.<br>
+            Use a dash ("-") to sort descending.<br>
+            Supported fields: `timestamp`.
+          schema:
+            type: string
+            example: -timestamp
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                    description: Total number of items across pages.
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/PlanRecord'
+                  _links:
+                    $ref: '#/components/schemas/ListLinks'
+                additionalProperties: false
+                required:
+                  - count
+                  - items
+                  - _links
+        '400':
+          $ref: '#/components/responses/BadRequest'
         '403':
           $ref: '#/components/responses/Forbidden'
         '404':
@@ -12929,7 +13264,7 @@ paths:
             Supported fields: `id`, `created_at`, `updated_at`.
           schema:
             type: string
-            example: '-updated_at'
+            example: -updated_at
       responses:
         '200':
           description: OK
@@ -16318,71 +16653,225 @@ paths:
         Lists all the source operations, defined in `.upsun/config.yaml`, that are available in an environment.
         More information on source code operations is
         [available in our user documentation](https://docs.upsun.com/anchors/app/reference/source/operations/).
-  /ssh_keys/{key_id}:
+  /users/{user_id}/ssh-keys:
+    parameters:
+      - $ref: '#/components/parameters/UserID'
     get:
+      summary: List a user's SSH keys
+      description: Retrieves the SSH public keys registered by a single user.
+      operationId: list-user-ssh-keys
       tags:
-        - SSH Keys
-      summary: Get an SSH key
-      operationId: get-ssh-key
+        - SSH
       parameters:
-        - name: key_id
-          in: path
-          description: The ID of the ssh key.
-          required: true
+        - in: query
+          name: filter[created_at]
+          description: Allows filtering by `created_at` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/DateTimeFilter'
+        - in: query
+          name: filter[updated_at]
+          description: Allows filtering by `updated_at` using one or more operators.
+          style: deepObject
+          explode: true
+          schema:
+            $ref: '#/components/schemas/DateTimeFilter'
+        - in: query
+          name: page[size]
+          description: Determines the number of items to show.
           schema:
             type: integer
+            minimum: 1
+            maximum: 100
+            default: null
+        - in: query
+          name: page[before]
+          description: Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.
+          schema:
+            type: string
+        - in: query
+          name: page[after]
+          description: Pagination cursor. This is automatically generated as necessary and provided in HAL links (_links); it should not be constructed externally.
+          schema:
+            type: string
+        - in: query
+          name: sort
+          description: |
+            Allows sorting by a single field.<br>
+            Use a dash ("-") to sort descending.
+          schema:
+            type: string
+            default: null
+            enum:
+              - created_at
+              - -created_at
+              - updated_at
+              - -updated_at
       responses:
         '200':
-          description: A single SSH public key record.
+          description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SSHKey'
-    delete:
-      tags:
-        - SSH Keys
-      summary: Delete an SSH key
-      operationId: delete-ssh-key
-      parameters:
-        - name: key_id
-          in: path
-          description: The ID of the ssh key.
-          required: true
-          schema:
-            type: integer
-      responses:
-        '204':
-          description: Success.
-  /ssh_keys:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/SSHKey'
+                  count:
+                    type: integer
+                    description: Number of SSH keys in this page.
+                  _links:
+                    $ref: '#/components/schemas/ListLinks'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
     post:
+      summary: Add an SSH key
+      description: Registers an SSH public key for the specified user. Requires a recent authentication.
+      operationId: create-user-ssh-key
       tags:
-        - SSH Keys
-      summary: Add a new public SSH key to a user
-      operationId: create-ssh-key
+        - SSH
       requestBody:
+        required: true
         content:
           application/json:
             schema:
-              required:
-                - value
+              type: object
               properties:
                 value:
-                  description: The value of the ssh key.
                   type: string
-                title:
-                  description: The title of the ssh key.
+                  description: An SSH public key in the OpenSSH authorized keys format.
+                  example: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI... user@example.com
+                label:
                   type: string
-                uuid:
-                  description: The uuid of the user.
-                  type: string
-              type: object
+                  maxLength: 255
+                  description: A human-readable name for the key. Defaults to the comment in the key.
+              required:
+                - value
       responses:
         '201':
-          description: The newly created ssh key.
+          description: Created
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/SSHKey'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized, including when a more recent authentication is required (`insufficient_user_authentication`)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: insufficient_user_authentication
+                  error_description:
+                    type: string
+                    example: More recent authentication is required.
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not Found when the user does not exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: Conflict when the SSH public key is already registered
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /users/{user_id}/ssh-keys/{key_id}:
+    parameters:
+      - $ref: '#/components/parameters/UserID'
+      - schema:
+          type: string
+        name: key_id
+        in: path
+        required: true
+        description: The ID of the SSH key.
+    get:
+      summary: Get an SSH key
+      description: Retrieves the specified SSH public key.
+      operationId: get-user-ssh-key
+      tags:
+        - SSH
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SSHKey'
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Delete an SSH key
+      description: Deletes the specified SSH public key. Requires a recent authentication.
+      operationId: delete-user-ssh-key
+      tags:
+        - SSH
+      responses:
+        '204':
+          description: No Content
+        '401':
+          description: Unauthorized, including when a more recent authentication is required (`insufficient_user_authentication`)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: insufficient_user_authentication
+                  error_description:
+                    type: string
+                    example: More recent authentication is required.
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
   /subscriptions/{subscriptionId}/can-update:
     get:
       tags:
@@ -16814,7 +17303,7 @@ paths:
             Supported fields: `region`, `project_title`, `type`, `plan`, `status`, `created_at`, `updated_at`.
           schema:
             type: string
-            example: '-updated_at'
+            example: -updated_at
       responses:
         '200':
           description: OK
@@ -17297,7 +17786,7 @@ paths:
                 $ref: '#/components/schemas/TaskCollection'
       tags:
         - Task
-  /projects/{projectId}/environments/{environmentId}/tasks/{taskId}:
+  /projects/{projectId}/environments/{environmentId}/tasks/{taskDefinitionId}:
     get:
       parameters:
         - in: path
@@ -17314,7 +17803,7 @@ paths:
           required: true
           schema:
             type: string
-          name: taskId
+          name: taskDefinitionId
       operationId: get-projects-environments-tasks
       responses:
         default:
@@ -17325,7 +17814,7 @@ paths:
                 $ref: '#/components/schemas/Task'
       tags:
         - Task
-  /projects/{projectId}/environments/{environmentId}/tasks/{taskId}/run:
+  /projects/{projectId}/environments/{environmentId}/tasks/{taskDefinitionId}/run:
     post:
       parameters:
         - in: path
@@ -17342,7 +17831,7 @@ paths:
           required: true
           schema:
             type: string
-          name: taskId
+          name: taskDefinitionId
       operationId: run-task
       responses:
         default:
@@ -17381,7 +17870,7 @@ paths:
             Supported fields: `granted_at`, `updated_at`.
           schema:
             type: string
-            example: '-updated_at'
+            example: -updated_at
       responses:
         '200':
           description: OK
@@ -17487,7 +17976,7 @@ paths:
             Supported fields: `project_title`, `granted_at`, `updated_at`.
           schema:
             type: string
-            example: '-updated_at'
+            example: -updated_at
       responses:
         '200':
           description: OK
@@ -17630,11 +18119,11 @@ paths:
             type: string
             enum:
               - label
-              - '-label'
+              - -label
               - created_at
-              - '-created_at'
+              - -created_at
               - updated_at
-              - '-updated_at'
+              - -updated_at
       responses:
         '200':
           description: OK
@@ -17828,9 +18317,9 @@ paths:
             type: string
             enum:
               - created_at
-              - '-created_at'
+              - -created_at
               - updated_at
-              - '-updated_at'
+              - -updated_at
       responses:
         '200':
           description: OK
@@ -18002,9 +18491,9 @@ paths:
             type: string
             enum:
               - created_at
-              - '-created_at'
+              - -created_at
               - updated_at
-              - '-updated_at'
+              - -updated_at
       responses:
         '200':
           description: OK
@@ -18176,7 +18665,7 @@ paths:
             Supported fields: `granted_at`, `updated_at`.
           schema:
             type: string
-            example: '-updated_at'
+            example: -updated_at
       responses:
         '200':
           description: OK
@@ -18319,7 +18808,7 @@ paths:
             Supported fields: `project_title`, `granted_at`, `updated_at`.
           schema:
             type: string
-            example: '-updated_at'
+            example: -updated_at
       responses:
         '200':
           description: OK
@@ -18472,6 +18961,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Profile'
+      deprecated: true
     patch:
       tags:
         - User Profiles
@@ -18532,6 +19022,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Profile'
+      deprecated: true
   /profiles/{userId}/address:
     get:
       tags:
@@ -18549,6 +19040,7 @@ paths:
                 allOf:
                   - $ref: '#/components/schemas/Address'
                   - $ref: '#/components/schemas/AddressMetadata'
+      deprecated: true
     patch:
       tags:
         - User Profiles
@@ -18571,6 +19063,7 @@ paths:
                 allOf:
                   - $ref: '#/components/schemas/Address'
                   - $ref: '#/components/schemas/AddressMetadata'
+      deprecated: true
   /profile/{uuid}/picture:
     post:
       tags:
@@ -19234,28 +19727,6 @@ components:
           description: The full name of the owner.
           type: string
       type: object
-    SSHKey:
-      description: The ssh key object.
-      properties:
-        key_id:
-          description: The ID of the public key.
-          type: integer
-        uid:
-          description: The internal user ID.
-          type: integer
-        fingerprint:
-          description: The fingerprint of the public key.
-          type: string
-        title:
-          description: The title of the public key.
-          type: string
-        value:
-          description: The actual value of the public key.
-          type: string
-        changed:
-          description: The time of the last key modification (ISO 8601)
-          type: string
-      type: object
     Region:
       description: The hosting region.
       properties:
@@ -19862,7 +20333,26 @@ components:
           description: The list of user's public SSH keys.
           type: array
           items:
-            $ref: '#/components/schemas/SSHKey'
+            properties:
+              key_id:
+                description: The ID of the public key.
+                type: integer
+              uid:
+                description: The internal user ID.
+                type: integer
+              fingerprint:
+                description: The fingerprint of the public key.
+                type: string
+              title:
+                description: The title of the public key.
+                type: string
+              value:
+                description: The actual value of the public key.
+                type: string
+              changed:
+                description: The time of the last key modification (ISO 8601)
+                type: string
+            type: object
         has_key:
           description: The indicator whether the user has a public ssh key on file or not.
           type: boolean
@@ -20236,6 +20726,47 @@ components:
         href:
           type: string
           description: URL of the link
+    SSHKey:
+      title: SSHKey
+      type: object
+      properties:
+        id:
+          type: string
+          description: The ID of the SSH key.
+        sha256:
+          type: string
+          description: The SHA-256 fingerprint of the public key.
+        value:
+          type: string
+          description: The SSH public key in the OpenSSH authorized keys format.
+        label:
+          type: string
+          description: A human-readable name for the key.
+        active:
+          type: boolean
+          description: Whether the key can be used for authentication.
+        user_id:
+          type: string
+          format: uuid
+          description: The ID of the user who owns the key.
+        created_at:
+          type: string
+          format: date-time
+          description: The date and time when the key was added.
+        updated_at:
+          type: string
+          format: date-time
+          description: The date and time when the key was last updated.
+      x-examples:
+        example-1:
+          id: 01ARZ3NDEKTSV4RRFFQ69G5FAV
+          sha256: SHA256:Ay0Vv7pFTvV6QpEDGwGtQhVwqB8ZLYnLLQhBSGqLcnE
+          value: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI... user@example.com
+          label: laptop
+          active: true
+          user_id: d81c8ee2-44b3-429f-b944-a33ad7437690
+          created_at: '2019-08-24T14:15:22Z'
+          updated_at: '2019-08-24T14:15:22Z'
     APIToken:
       description: ''
       type: object
@@ -20885,14 +21416,45 @@ components:
           title: Prune Branches
           description: Whether or not to remove branches that disappeared remotely (requires `fetch_branches`)
         environment_init_resources:
-          type: string
-          enum:
-            - default
-            - manual
-            - minimum
-            - parent
+          type: object
+          properties:
+            production:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+              title: Production
+              description: ''
+            staging:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Staging
+              description: ''
+            development:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Development
+              description: ''
+          required:
+            - production
+            - staging
+            - development
+          additionalProperties: false
           title: Environment Init Resources
-          description: The resources used when initializing a new service
+          description: The resources used when initializing a new environment, per environment type
+        repository_url:
+          type: string
+          title: Repository URL
+          description: The URL of the remote git repository
         app_credentials:
           type: object
           properties:
@@ -20975,14 +21537,37 @@ components:
           title: Prune Branches
           description: Whether or not to remove branches that disappeared remotely (requires `fetch_branches`)
         environment_init_resources:
-          type: string
-          enum:
-            - default
-            - manual
-            - minimum
-            - parent
+          type: object
+          properties:
+            production:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+              title: Production
+              description: ''
+            staging:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Staging
+              description: ''
+            development:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Development
+              description: ''
+          additionalProperties: false
           title: Environment Init Resources
-          description: The resources used when initializing a new service
+          description: The resources used when initializing a new environment, per environment type
         app_credentials:
           type: object
           properties:
@@ -21065,14 +21650,37 @@ components:
           title: Prune Branches
           description: Whether or not to remove branches that disappeared remotely (requires `fetch_branches`)
         environment_init_resources:
-          type: string
-          enum:
-            - default
-            - manual
-            - minimum
-            - parent
+          type: object
+          properties:
+            production:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+              title: Production
+              description: ''
+            staging:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Staging
+              description: ''
+            development:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Development
+              description: ''
+          additionalProperties: false
           title: Environment Init Resources
-          description: The resources used when initializing a new service
+          description: The resources used when initializing a new environment, per environment type
         app_credentials:
           type: object
           properties:
@@ -21175,14 +21783,45 @@ components:
           title: Prune Branches
           description: Whether or not to remove branches that disappeared remotely (requires `fetch_branches`)
         environment_init_resources:
-          type: string
-          enum:
-            - default
-            - manual
-            - minimum
-            - parent
+          type: object
+          properties:
+            production:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+              title: Production
+              description: ''
+            staging:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Staging
+              description: ''
+            development:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Development
+              description: ''
+          required:
+            - production
+            - staging
+            - development
+          additionalProperties: false
           title: Environment Init Resources
-          description: The resources used when initializing a new service
+          description: The resources used when initializing a new environment, per environment type
+        repository_url:
+          type: string
+          title: Repository URL
+          description: The URL of the remote git repository
         url:
           type: string
           title: URL
@@ -21238,14 +21877,37 @@ components:
           title: Prune Branches
           description: Whether or not to remove branches that disappeared remotely (requires `fetch_branches`)
         environment_init_resources:
-          type: string
-          enum:
-            - default
-            - manual
-            - minimum
-            - parent
+          type: object
+          properties:
+            production:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+              title: Production
+              description: ''
+            staging:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Staging
+              description: ''
+            development:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Development
+              description: ''
+          additionalProperties: false
           title: Environment Init Resources
-          description: The resources used when initializing a new service
+          description: The resources used when initializing a new environment, per environment type
         url:
           type: string
           title: URL
@@ -21298,14 +21960,37 @@ components:
           title: Prune Branches
           description: Whether or not to remove branches that disappeared remotely (requires `fetch_branches`)
         environment_init_resources:
-          type: string
-          enum:
-            - default
-            - manual
-            - minimum
-            - parent
+          type: object
+          properties:
+            production:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+              title: Production
+              description: ''
+            staging:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Staging
+              description: ''
+            development:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Development
+              description: ''
+          additionalProperties: false
           title: Environment Init Resources
-          description: The resources used when initializing a new service
+          description: The resources used when initializing a new environment, per environment type
         url:
           type: string
           title: URL
@@ -21452,6 +22137,240 @@ components:
         - size
         - encoding
         - content
+      additionalProperties: false
+    CISIntegration:
+      type: object
+      properties:
+        id:
+          type: string
+          title: CISIntegration Identifier
+          description: The identifier of CISIntegration
+        created_at:
+          type: string
+          format: date-time
+          nullable: true
+          title: Creation date
+          description: The creation date
+        updated_at:
+          type: string
+          format: date-time
+          nullable: true
+          title: Update date
+          description: The update date
+        type:
+          type: string
+          title: Integration type
+          description: The type of the integration
+        role:
+          type: string
+          title: Integration role
+          description: The role of the integration
+        events:
+          type: array
+          items:
+            type: string
+          title: Events
+          description: Events to execute the hook on
+        environments:
+          type: array
+          items:
+            type: string
+          title: Environments
+          description: The environments to manage through this integration
+        excluded_environments:
+          type: array
+          items:
+            type: string
+          title: Excluded Environments
+          description: The environments to not execute the hook on
+        states:
+          type: array
+          items:
+            type: string
+          title: States
+          description: Events to execute the hook on
+        result:
+          type: string
+          enum:
+            - '*'
+            - failure
+            - success
+          title: Result
+          description: Result to execute the hook on
+        cis_id:
+          type: string
+          title: CIS Instance ID
+          description: IBM Cloud Internet Services instance identifier
+        domain_id:
+          type: string
+          nullable: true
+          title: CIS Domain ID
+          description: IBM Cloud Internet Services domain or zone identifier
+        zone_name:
+          type: string
+          nullable: true
+          title: CIS Zone Name
+          description: IBM CIS zone name (the zone apex, e.g. example.com). When set without an explicit domain_id, the integration resolves the zone id from this name on validate() and persists it as domain_id
+        api_base_url:
+          type: string
+          nullable: true
+          title: CIS API Base URL
+          description: Optional IBM CIS API base URL override
+        name_servers:
+          type: array
+          items:
+            type: string
+          title: Name servers
+          description: IBM CIS-assigned nameservers for the managed zone. Read-only; refreshed by the integration on each sync. Configure these as NS records at the registrar of the zone's parent domain to delegate DNS resolution to CIS
+      required:
+        - created_at
+        - updated_at
+        - type
+        - role
+        - events
+        - environments
+        - excluded_environments
+        - states
+        - result
+        - cis_id
+        - domain_id
+        - zone_name
+        - api_base_url
+        - name_servers
+      additionalProperties: false
+    CISIntegrationCreateInput:
+      type: object
+      properties:
+        type:
+          type: string
+          title: Integration type
+          description: The type of the integration
+        events:
+          type: array
+          items:
+            type: string
+          title: Events
+          description: Events to execute the hook on
+        environments:
+          type: array
+          items:
+            type: string
+          title: Environments
+          description: The environments to manage through this integration
+        excluded_environments:
+          type: array
+          items:
+            type: string
+          title: Excluded Environments
+          description: The environments to not execute the hook on
+        states:
+          type: array
+          items:
+            type: string
+          title: States
+          description: Events to execute the hook on
+        result:
+          type: string
+          enum:
+            - '*'
+            - failure
+            - success
+          title: Result
+          description: Result to execute the hook on
+        token:
+          type: string
+          title: Token
+          description: IBM Cloud IAM API key for this CIS integration
+        cis_id:
+          type: string
+          title: CIS Instance ID
+          description: IBM Cloud Internet Services instance identifier
+        domain_id:
+          type: string
+          nullable: true
+          title: CIS Domain ID
+          description: IBM Cloud Internet Services domain or zone identifier
+        zone_name:
+          type: string
+          nullable: true
+          title: CIS Zone Name
+          description: IBM CIS zone name (the zone apex, e.g. example.com). When set without an explicit domain_id, the integration resolves the zone id from this name on validate() and persists it as domain_id
+        api_base_url:
+          type: string
+          nullable: true
+          title: CIS API Base URL
+          description: Optional IBM CIS API base URL override
+      required:
+        - type
+        - token
+        - cis_id
+      additionalProperties: false
+    CISIntegrationPatch:
+      type: object
+      properties:
+        type:
+          type: string
+          title: Integration type
+          description: The type of the integration
+        events:
+          type: array
+          items:
+            type: string
+          title: Events
+          description: Events to execute the hook on
+        environments:
+          type: array
+          items:
+            type: string
+          title: Environments
+          description: The environments to manage through this integration
+        excluded_environments:
+          type: array
+          items:
+            type: string
+          title: Excluded Environments
+          description: The environments to not execute the hook on
+        states:
+          type: array
+          items:
+            type: string
+          title: States
+          description: Events to execute the hook on
+        result:
+          type: string
+          enum:
+            - '*'
+            - failure
+            - success
+          title: Result
+          description: Result to execute the hook on
+        token:
+          type: string
+          title: Token
+          description: IBM Cloud IAM API key for this CIS integration
+        cis_id:
+          type: string
+          title: CIS Instance ID
+          description: IBM Cloud Internet Services instance identifier
+        domain_id:
+          type: string
+          nullable: true
+          title: CIS Domain ID
+          description: IBM Cloud Internet Services domain or zone identifier
+        zone_name:
+          type: string
+          nullable: true
+          title: CIS Zone Name
+          description: IBM CIS zone name (the zone apex, e.g. example.com). When set without an explicit domain_id, the integration resolves the zone id from this name on validate() and persists it as domain_id
+        api_base_url:
+          type: string
+          nullable: true
+          title: CIS API Base URL
+          description: Optional IBM CIS API base URL override
+      required:
+        - type
+        - token
+        - cis_id
       additionalProperties: false
     Certificate:
       type: object
@@ -21731,6 +22650,39 @@ components:
         - tree
         - parents
       additionalProperties: false
+    ComposableBuilder:
+      type: object
+      properties:
+        id:
+          type: string
+          title: ComposableBuilder Identifier
+          description: The identifier of ComposableBuilder
+        stack:
+          type: object
+          properties:
+            runtimes:
+              type: array
+              items:
+                type: object
+              title: Runtime packages
+              description: ''
+            packages:
+              type: array
+              items:
+                oneOf:
+                  - type: string
+                  - type: object
+              title: Community packages
+              description: ''
+          required:
+            - runtimes
+            - packages
+          additionalProperties: false
+          title: Composable images
+          description: Composable image runtimes and packages
+      required:
+        - stack
+      additionalProperties: false
     DedicatedDeploymentTarget:
       type: object
       properties:
@@ -21918,6 +22870,11 @@ components:
           type: string
           title: Cluster name
           description: The name of the cluster
+        head_commit:
+          type: string
+          nullable: true
+          title: Head commit
+          description: The deployed commit for current; the branch tip for next
         project_info:
           type: object
           properties:
@@ -22184,12 +23141,19 @@ components:
                 type: boolean
                 title: Visible at runtime
                 description: The variable is visible at runtime
+              application_scope:
+                type: array
+                items:
+                  type: string
+                title: Application scope
+                description: Names of the containers this variable is restricted to; empty means it applies to all containers.
             required:
               - name
               - is_sensitive
               - is_json
               - visible_build
               - visible_runtime
+              - application_scope
             additionalProperties: false
           title: Environment variables
           description: The variables applying to this environment
@@ -22636,6 +23600,12 @@ components:
         routes:
           type: object
           additionalProperties:
+            discriminator:
+              propertyName: type
+              mapping:
+                proxy: '#/components/schemas/ProxyRoute'
+                redirect: '#/components/schemas/RedirectRoute'
+                upstream: '#/components/schemas/UpstreamRoute'
             oneOf:
               - $ref: '#/components/schemas/ProxyRoute'
               - $ref: '#/components/schemas/RedirectRoute'
@@ -23189,6 +24159,10 @@ components:
                                   type: string
                                 title: Headers
                                 description: A set of header fields set to the HTTP response. Replaces headers set on the location block.
+                              dynamic_compression:
+                                type: boolean
+                                title: Dynamic Compression
+                                description: Whether to compress dynamic responses (gzip/brotli) at the container web server. Disabled by default; only enable when the application framework mitigates BREACH (e.g. CSRF-token masking).
                             additionalProperties: false
                           title: Specific overrides
                           description: Specific overrides.
@@ -23210,6 +24184,10 @@ components:
                           additionalProperties: false
                           title: Request Buffering
                           description: Configuration for supporting request buffering.
+                        dynamic_compression:
+                          type: boolean
+                          title: Dynamic Compression
+                          description: Whether to compress dynamic responses (gzip/brotli) at the container web server. Disabled by default; only enable when the application framework mitigates BREACH (e.g. CSRF-token masking).
                       required:
                         - root
                         - expires
@@ -24158,6 +25136,15 @@ components:
             additionalProperties: false
           title: Workers
           description: The workers
+        tasks:
+          type: object
+          additionalProperties:
+            oneOf:
+              - $ref: '#/components/schemas/ComposableBuilder'
+              - $ref: '#/components/schemas/OCIBuilder'
+              - $ref: '#/components/schemas/TypeBuilder'
+          title: Tasks
+          description: The task definitions with the resources frozen on this deployment
         container_profiles:
           type: object
           additionalProperties:
@@ -24188,33 +25175,10 @@ components:
               additionalProperties: false
           title: Container profiles
           description: The profiles of the containers
-        tasks:
-          type: object
-          additionalProperties:
-            type: object
-            properties:
-              resources:
-                type: object
-                properties:
-                  profile_size:
-                    type: string
-                    nullable: true
-                    title: Profile size
-                    description: Profile size of the service.
-                required:
-                  - profile_size
-                additionalProperties: false
-                nullable: true
-                title: Resources
-                description: ''
-            required:
-              - resources
-            additionalProperties: false
-          title: Tasks
-          description: The tasks sizing (applied at task run time)
       required:
         - id
         - cluster_name
+        - head_commit
         - project_info
         - environment_info
         - deployment_target
@@ -24229,14 +25193,21 @@ components:
         - routes
         - webapps
         - workers
-        - container_profiles
         - tasks
+        - container_profiles
       additionalProperties: false
     DeploymentCollection:
       type: array
       items:
         $ref: '#/components/schemas/Deployment'
     DeploymentTarget:
+      discriminator:
+        propertyName: type
+        mapping:
+          dedicated: '#/components/schemas/DedicatedDeploymentTarget'
+          enterprise: '#/components/schemas/EnterpriseDeploymentTarget'
+          foundation: '#/components/schemas/FoundationDeploymentTarget'
+          kubernetes: '#/components/schemas/KubernetesDeploymentTargetStorage'
       oneOf:
         - $ref: '#/components/schemas/DedicatedDeploymentTarget'
         - $ref: '#/components/schemas/EnterpriseDeploymentTarget'
@@ -24247,12 +25218,26 @@ components:
       items:
         $ref: '#/components/schemas/DeploymentTarget'
     DeploymentTargetCreateInput:
+      discriminator:
+        propertyName: type
+        mapping:
+          dedicated: '#/components/schemas/DedicatedDeploymentTargetCreateInput'
+          enterprise: '#/components/schemas/EnterpriseDeploymentTargetCreateInput'
+          foundation: '#/components/schemas/FoundationDeploymentTargetCreateInput'
+          kubernetes: '#/components/schemas/KubernetesDeploymentTargetStorageCreateInput'
       oneOf:
         - $ref: '#/components/schemas/DedicatedDeploymentTargetCreateInput'
         - $ref: '#/components/schemas/EnterpriseDeploymentTargetCreateInput'
         - $ref: '#/components/schemas/FoundationDeploymentTargetCreateInput'
         - $ref: '#/components/schemas/KubernetesDeploymentTargetStorageCreateInput'
     DeploymentTargetPatch:
+      discriminator:
+        propertyName: type
+        mapping:
+          dedicated: '#/components/schemas/DedicatedDeploymentTargetPatch'
+          enterprise: '#/components/schemas/EnterpriseDeploymentTargetPatch'
+          foundation: '#/components/schemas/FoundationDeploymentTargetPatch'
+          kubernetes: '#/components/schemas/KubernetesDeploymentTargetStoragePatch'
       oneOf:
         - $ref: '#/components/schemas/DedicatedDeploymentTargetPatch'
         - $ref: '#/components/schemas/EnterpriseDeploymentTargetPatch'
@@ -24302,6 +25287,11 @@ components:
       items:
         $ref: '#/components/schemas/Diff'
     Domain:
+      discriminator:
+        propertyName: type
+        mapping:
+          production: '#/components/schemas/ProdDomainStorage'
+          replacement: '#/components/schemas/ReplacementDomainStorage'
       oneOf:
         - $ref: '#/components/schemas/ProdDomainStorage'
         - $ref: '#/components/schemas/ReplacementDomainStorage'
@@ -24398,7 +25388,7 @@ components:
           items:
             type: string
           title: Recipients
-          description: Recipients of the email
+          description: 'Recipients of the email: email addresses, or #admins / #viewers for the emails of the project members holding that role'
       required:
         - created_at
         - updated_at
@@ -24424,7 +25414,7 @@ components:
           items:
             type: string
           title: Recipients
-          description: Recipients of the email
+          description: 'Recipients of the email: email addresses, or #admins / #viewers for the emails of the project members holding that role'
       required:
         - type
         - recipients
@@ -24446,7 +25436,7 @@ components:
           items:
             type: string
           title: Recipients
-          description: Recipients of the email
+          description: 'Recipients of the email: email addresses, or #admins / #viewers for the emails of the project members holding that role'
       required:
         - type
         - recipients
@@ -24619,6 +25609,12 @@ components:
           nullable: true
           title: Update date
           description: The update date
+        attributes:
+          type: object
+          additionalProperties:
+            type: string
+          title: Arbitrary attributes
+          description: Arbitrary attributes attached to this resource
         name:
           type: string
           title: Name
@@ -24631,12 +25627,6 @@ components:
           type: string
           title: Title
           description: The title of the environment
-        attributes:
-          type: object
-          additionalProperties:
-            type: string
-          title: Arbitrary attributes
-          description: Arbitrary attributes attached to this resource
         type:
           type: string
           enum:
@@ -24650,6 +25640,29 @@ components:
           nullable: true
           title: Parent environment
           description: The name of the parent environment
+        status:
+          type: string
+          enum:
+            - active
+            - deleting
+            - dirty
+            - inactive
+            - paused
+          title: Status
+          description: The status of the environment
+        project:
+          type: string
+          title: Project
+          description: The project the environment belongs to
+        is_main:
+          type: boolean
+          title: Is main environment
+          description: Is this environment the main environment
+        head_commit:
+          type: string
+          nullable: true
+          title: Head commit
+          description: The SHA of the head commit for this environment
         default_domain:
           type: string
           nullable: true
@@ -24676,16 +25689,6 @@ components:
           type: boolean
           title: Has remote
           description: Does this environment have a remote repository
-        status:
-          type: string
-          enum:
-            - active
-            - deleting
-            - dirty
-            - inactive
-            - paused
-          title: Status
-          description: The status of the environment
         http_access:
           type: object
           properties:
@@ -24754,6 +25757,7 @@ components:
             last_deployment_failure_reason:
               type: string
               enum:
+                - build
                 - error
                 - shell
               nullable: true
@@ -25079,14 +26083,6 @@ components:
           nullable: true
           title: Last backup date
           description: Last backup date
-        project:
-          type: string
-          title: Project
-          description: The project the environment belongs to
-        is_main:
-          type: boolean
-          title: Is main environment
-          description: Is this environment the main environment
         is_dirty:
           type: boolean
           title: Is dirty
@@ -25107,11 +26103,6 @@ components:
           type: boolean
           title: Has code
           description: Does this environment have code
-        head_commit:
-          type: string
-          nullable: true
-          title: Head commit
-          description: The SHA of the head commit for this environment
         merge_info:
           type: object
           properties:
@@ -25149,19 +26140,22 @@ components:
         - id
         - created_at
         - updated_at
+        - attributes
         - name
         - machine_name
         - title
-        - attributes
         - type
         - parent
+        - status
+        - project
+        - is_main
+        - head_commit
         - default_domain
         - has_domains
         - clone_parent_on_create
         - deployment_target
         - is_pr
         - has_remote
-        - status
         - http_access
         - enable_smtp
         - restrict_robots
@@ -25172,14 +26166,11 @@ components:
         - max_instance_count
         - last_active_at
         - last_backup_at
-        - project
-        - is_main
         - is_dirty
         - has_staged_activities
         - can_rolling_deploy
         - supports_rolling_deployments
         - has_code
-        - head_commit
         - merge_info
         - has_deployment
         - supports_restrict_robots
@@ -25371,6 +26362,12 @@ components:
     EnvironmentPatch:
       type: object
       properties:
+        attributes:
+          type: object
+          additionalProperties:
+            type: string
+          title: Arbitrary attributes
+          description: Arbitrary attributes attached to this resource
         name:
           type: string
           title: Name
@@ -25379,12 +26376,6 @@ components:
           type: string
           title: Title
           description: The title of the environment
-        attributes:
-          type: object
-          additionalProperties:
-            type: string
-          title: Arbitrary attributes
-          description: Arbitrary attributes attached to this resource
         type:
           type: string
           enum:
@@ -25650,6 +26641,10 @@ components:
           type: boolean
           title: Is inheritable
           description: The variable is inheritable to child environments
+        is_overridden:
+          type: boolean
+          title: Is overridden
+          description: The variable overrides an inheritable variable from a parent environment
       required:
         - id
         - created_at
@@ -25666,6 +26661,7 @@ components:
         - inherited
         - is_enabled
         - is_inheritable
+        - is_overridden
       additionalProperties: false
     EnvironmentVariableCollection:
       type: array
@@ -26200,14 +27196,45 @@ components:
           title: Prune Branches
           description: Whether or not to remove branches that disappeared remotely (requires `fetch_branches`)
         environment_init_resources:
-          type: string
-          enum:
-            - default
-            - manual
-            - minimum
-            - parent
+          type: object
+          properties:
+            production:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+              title: Production
+              description: ''
+            staging:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Staging
+              description: ''
+            development:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Development
+              description: ''
+          required:
+            - production
+            - staging
+            - development
+          additionalProperties: false
           title: Environment Init Resources
-          description: The resources used when initializing a new service
+          description: The resources used when initializing a new environment, per environment type
+        repository_url:
+          type: string
+          title: Repository URL
+          description: The URL of the remote git repository
         token_expires_at:
           type: string
           format: date-time
@@ -26275,14 +27302,37 @@ components:
           title: Prune Branches
           description: Whether or not to remove branches that disappeared remotely (requires `fetch_branches`)
         environment_init_resources:
-          type: string
-          enum:
-            - default
-            - manual
-            - minimum
-            - parent
+          type: object
+          properties:
+            production:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+              title: Production
+              description: ''
+            staging:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Staging
+              description: ''
+            development:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Development
+              description: ''
+          additionalProperties: false
           title: Environment Init Resources
-          description: The resources used when initializing a new service
+          description: The resources used when initializing a new environment, per environment type
         token:
           type: string
           title: GitLab Private Token
@@ -26336,14 +27386,37 @@ components:
           title: Prune Branches
           description: Whether or not to remove branches that disappeared remotely (requires `fetch_branches`)
         environment_init_resources:
-          type: string
-          enum:
-            - default
-            - manual
-            - minimum
-            - parent
+          type: object
+          properties:
+            production:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+              title: Production
+              description: ''
+            staging:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Staging
+              description: ''
+            development:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Development
+              description: ''
+          additionalProperties: false
           title: Environment Init Resources
-          description: The resources used when initializing a new service
+          description: The resources used when initializing a new environment, per environment type
         token:
           type: string
           title: GitLab Private Token
@@ -26417,14 +27490,45 @@ components:
           title: Prune Branches
           description: Whether or not to remove branches that disappeared remotely (requires `fetch_branches`)
         environment_init_resources:
-          type: string
-          enum:
-            - default
-            - manual
-            - minimum
-            - parent
+          type: object
+          properties:
+            production:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+              title: Production
+              description: ''
+            staging:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Staging
+              description: ''
+            development:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Development
+              description: ''
+          required:
+            - production
+            - staging
+            - development
+          additionalProperties: false
           title: Environment Init Resources
-          description: The resources used when initializing a new service
+          description: The resources used when initializing a new environment, per environment type
+        repository_url:
+          type: string
+          title: Repository URL
+          description: The URL of the remote git repository
         base_url:
           type: string
           nullable: true
@@ -26489,14 +27593,37 @@ components:
           title: Prune Branches
           description: Whether or not to remove branches that disappeared remotely (requires `fetch_branches`)
         environment_init_resources:
-          type: string
-          enum:
-            - default
-            - manual
-            - minimum
-            - parent
+          type: object
+          properties:
+            production:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+              title: Production
+              description: ''
+            staging:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Staging
+              description: ''
+            development:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Development
+              description: ''
+          additionalProperties: false
           title: Environment Init Resources
-          description: The resources used when initializing a new service
+          description: The resources used when initializing a new environment, per environment type
         token:
           type: string
           title: Token
@@ -26547,14 +27674,37 @@ components:
           title: Prune Branches
           description: Whether or not to remove branches that disappeared remotely (requires `fetch_branches`)
         environment_init_resources:
-          type: string
-          enum:
-            - default
-            - manual
-            - minimum
-            - parent
+          type: object
+          properties:
+            production:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+              title: Production
+              description: ''
+            staging:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Staging
+              description: ''
+            development:
+              type: string
+              enum:
+                - default
+                - manual
+                - minimum
+                - parent
+              title: Development
+              description: ''
+          additionalProperties: false
           title: Environment Init Resources
-          description: The resources used when initializing a new service
+          description: The resources used when initializing a new environment, per environment type
         token:
           type: string
           title: Token
@@ -26700,6 +27850,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         url:
           type: string
           title: HTTP endpoint
@@ -26714,22 +27874,17 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - created_at
         - updated_at
         - type
         - role
         - extra
+        - redaction
+        - excluded_services
         - url
         - headers
         - tls_verify
-        - excluded_services
       additionalProperties: false
     HttpLogIntegrationCreateInput:
       type: object
@@ -26744,6 +27899,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         url:
           type: string
           title: HTTP endpoint
@@ -26758,12 +27923,6 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - type
         - url
@@ -26781,6 +27940,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         url:
           type: string
           title: HTTP endpoint
@@ -26795,21 +27964,38 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - type
         - url
       additionalProperties: false
     Integration:
+      discriminator:
+        propertyName: type
+        mapping:
+          bitbucket: '#/components/schemas/BitbucketIntegration'
+          bitbucket_server: '#/components/schemas/BitbucketServerIntegration'
+          blackfire: '#/components/schemas/BlackfireIntegration'
+          cdn.cis: '#/components/schemas/CISIntegration'
+          cdn.fastly: '#/components/schemas/FastlyIntegration'
+          github: '#/components/schemas/GithubIntegration'
+          gitlab: '#/components/schemas/GitLabIntegration'
+          health.email: '#/components/schemas/EmailIntegration'
+          health.pagerduty: '#/components/schemas/PagerDutyIntegration'
+          health.slack: '#/components/schemas/SlackIntegration'
+          health.webhook: '#/components/schemas/HealthWebHookIntegration'
+          httplog: '#/components/schemas/HttpLogIntegration'
+          newrelic: '#/components/schemas/NewRelicIntegration'
+          otlplog: '#/components/schemas/OtlpLogIntegration'
+          script: '#/components/schemas/ScriptIntegration'
+          splunk: '#/components/schemas/SplunkIntegration'
+          sumologic: '#/components/schemas/SumologicIntegration'
+          syslog: '#/components/schemas/SyslogIntegration'
+          webhook: '#/components/schemas/WebHookIntegration'
       oneOf:
         - $ref: '#/components/schemas/BitbucketIntegration'
         - $ref: '#/components/schemas/BitbucketServerIntegration'
         - $ref: '#/components/schemas/BlackfireIntegration'
+        - $ref: '#/components/schemas/CISIntegration'
         - $ref: '#/components/schemas/FastlyIntegration'
         - $ref: '#/components/schemas/GithubIntegration'
         - $ref: '#/components/schemas/GitLabIntegration'
@@ -26830,10 +28016,33 @@ components:
       items:
         $ref: '#/components/schemas/Integration'
     IntegrationCreateCreateInput:
+      discriminator:
+        propertyName: type
+        mapping:
+          bitbucket: '#/components/schemas/BitbucketIntegrationCreateInput'
+          bitbucket_server: '#/components/schemas/BitbucketServerIntegrationCreateInput'
+          blackfire: '#/components/schemas/BlackfireIntegrationCreateInput'
+          cdn.cis: '#/components/schemas/CISIntegrationCreateInput'
+          cdn.fastly: '#/components/schemas/FastlyIntegrationCreateInput'
+          github: '#/components/schemas/GithubIntegrationCreateInput'
+          gitlab: '#/components/schemas/GitLabIntegrationCreateInput'
+          health.email: '#/components/schemas/EmailIntegrationCreateInput'
+          health.pagerduty: '#/components/schemas/PagerDutyIntegrationCreateInput'
+          health.slack: '#/components/schemas/SlackIntegrationCreateInput'
+          health.webhook: '#/components/schemas/HealthWebHookIntegrationCreateInput'
+          httplog: '#/components/schemas/HttpLogIntegrationCreateInput'
+          newrelic: '#/components/schemas/NewRelicIntegrationCreateInput'
+          otlplog: '#/components/schemas/OtlpLogIntegrationCreateCreateInput'
+          script: '#/components/schemas/ScriptIntegrationCreateInput'
+          splunk: '#/components/schemas/SplunkIntegrationCreateInput'
+          sumologic: '#/components/schemas/SumologicIntegrationCreateInput'
+          syslog: '#/components/schemas/SyslogIntegrationCreateInput'
+          webhook: '#/components/schemas/WebHookIntegrationCreateInput'
       oneOf:
         - $ref: '#/components/schemas/BitbucketIntegrationCreateInput'
         - $ref: '#/components/schemas/BitbucketServerIntegrationCreateInput'
         - $ref: '#/components/schemas/BlackfireIntegrationCreateInput'
+        - $ref: '#/components/schemas/CISIntegrationCreateInput'
         - $ref: '#/components/schemas/FastlyIntegrationCreateInput'
         - $ref: '#/components/schemas/GithubIntegrationCreateInput'
         - $ref: '#/components/schemas/GitLabIntegrationCreateInput'
@@ -26850,10 +28059,33 @@ components:
         - $ref: '#/components/schemas/SyslogIntegrationCreateInput'
         - $ref: '#/components/schemas/WebHookIntegrationCreateInput'
     IntegrationPatch:
+      discriminator:
+        propertyName: type
+        mapping:
+          bitbucket: '#/components/schemas/BitbucketIntegrationPatch'
+          bitbucket_server: '#/components/schemas/BitbucketServerIntegrationPatch'
+          blackfire: '#/components/schemas/BlackfireIntegrationPatch'
+          cdn.cis: '#/components/schemas/CISIntegrationPatch'
+          cdn.fastly: '#/components/schemas/FastlyIntegrationPatch'
+          github: '#/components/schemas/GithubIntegrationPatch'
+          gitlab: '#/components/schemas/GitLabIntegrationPatch'
+          health.email: '#/components/schemas/EmailIntegrationPatch'
+          health.pagerduty: '#/components/schemas/PagerDutyIntegrationPatch'
+          health.slack: '#/components/schemas/SlackIntegrationPatch'
+          health.webhook: '#/components/schemas/HealthWebHookIntegrationPatch'
+          httplog: '#/components/schemas/HttpLogIntegrationPatch'
+          newrelic: '#/components/schemas/NewRelicIntegrationPatch'
+          otlplog: '#/components/schemas/OtlpLogIntegrationPatch'
+          script: '#/components/schemas/ScriptIntegrationPatch'
+          splunk: '#/components/schemas/SplunkIntegrationPatch'
+          sumologic: '#/components/schemas/SumologicIntegrationPatch'
+          syslog: '#/components/schemas/SyslogIntegrationPatch'
+          webhook: '#/components/schemas/WebHookIntegrationPatch'
       oneOf:
         - $ref: '#/components/schemas/BitbucketIntegrationPatch'
         - $ref: '#/components/schemas/BitbucketServerIntegrationPatch'
         - $ref: '#/components/schemas/BlackfireIntegrationPatch'
+        - $ref: '#/components/schemas/CISIntegrationPatch'
         - $ref: '#/components/schemas/FastlyIntegrationPatch'
         - $ref: '#/components/schemas/GithubIntegrationPatch'
         - $ref: '#/components/schemas/GitLabIntegrationPatch'
@@ -26984,6 +28216,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         url:
           type: string
           title: NewRelic Logs endpoint
@@ -26992,21 +28234,16 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - created_at
         - updated_at
         - type
         - role
         - extra
+        - redaction
+        - excluded_services
         - url
         - tls_verify
-        - excluded_services
       additionalProperties: false
     NewRelicIntegrationCreateInput:
       type: object
@@ -27021,6 +28258,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         url:
           type: string
           title: NewRelic Logs endpoint
@@ -27033,12 +28280,6 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - type
         - url
@@ -27057,6 +28298,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         url:
           type: string
           title: NewRelic Logs endpoint
@@ -27069,16 +28320,34 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - type
         - url
         - license_key
+      additionalProperties: false
+    OCIBuilder:
+      type: object
+      properties:
+        id:
+          type: string
+          title: OCIBuilder Identifier
+          description: The identifier of OCIBuilder
+        image:
+          type: object
+          properties:
+            name:
+              type: string
+              nullable: true
+              title: Image name
+              description: Image name with version to be deployed
+            buildfile:
+              type: string
+              nullable: true
+              title: Dockerfile
+              description: Path to the dockerfile to use to build the container from
+          additionalProperties: false
+          title: OCI images
+          description: OCI image reference or buildfile
       additionalProperties: false
     OtlpLogIntegration:
       type: object
@@ -27113,6 +28382,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         url:
           type: string
           title: HTTP endpoint
@@ -27127,22 +28406,17 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - created_at
         - updated_at
         - type
         - role
         - extra
+        - redaction
+        - excluded_services
         - url
         - headers
         - tls_verify
-        - excluded_services
       additionalProperties: false
     OtlpLogIntegrationCreateCreateInput:
       type: object
@@ -27157,6 +28431,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         url:
           type: string
           title: HTTP endpoint
@@ -27171,12 +28455,6 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - type
         - url
@@ -27194,6 +28472,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         url:
           type: string
           title: HTTP endpoint
@@ -27208,12 +28496,6 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - type
         - url
@@ -27336,6 +28618,7 @@ components:
         - updated_at
         - type
         - name
+        - registered_name
         - attributes
       additionalProperties: false
     ProdDomainStorageCreateInput:
@@ -27645,9 +28928,23 @@ components:
               type: string
               format: date-time
               title: Next maintenance date and time
-              description: Estimated date and time of the next maintenance activity
+              description: Date and time of the next maintenance activity. While a booked run is under way this is its start time, so it can be in the past
+            source:
+              type: string
+              enum:
+                - projected
+                - scheduled
+              title: Source of the next maintenance date
+              description: '''scheduled'' when a production maintenance run is booked or under way and ''next_maintenance'' is its scheduled date, ''projected'' when it is the recurrence projection'
+            activity:
+              type: string
+              nullable: true
+              title: Scheduled maintenance activity
+              description: The id of the scheduled maintenance activity, or null when the date is a projection
           required:
             - next_maintenance
+            - source
+            - activity
           additionalProperties: false
           nullable: true
           title: Maintenance
@@ -27722,8 +29019,20 @@ components:
               type: boolean
               title: Enabled
               description: If true, background tasks can be triggered.
+            limit:
+              type: integer
+              nullable: true
+              title: Tasks limit
+              description: Maximum number of tasks that can be defined in the project configuration.
+            concurrency_limit:
+              type: integer
+              nullable: true
+              title: Tasks concurrency limit
+              description: Maximum number of task activities that can run in parallel.
           required:
             - enabled
+            - limit
+            - concurrency_limit
           additionalProperties: false
           title: Tasks
           description: ''
@@ -28147,6 +29456,20 @@ components:
                   additionalProperties: false
                   title: Fastly CDN
                   description: Fastly CDN integration configurations
+                cdn.cis:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      title: Enabled
+                      description: The integration is enabled.
+                    role:
+                      type: string
+                      title: Role
+                      description: Minimum required role for creating the integration.
+                  additionalProperties: false
+                  title: IBM CIS CDN
+                  description: IBM Cloud Internet Services CDN integration configurations
                 blackfire:
                   type: object
                   properties:
@@ -28216,6 +29539,11 @@ components:
           type: string
           title: Product Code
           description: The lowercase ASCII code of the product.
+        cli_name:
+          type: string
+          nullable: true
+          title: CLI Name
+          description: The command name of the CLI for this product. Falls back to the name known for the product code.
         ui_uri_template:
           type: string
           title: UI URI Template
@@ -28500,6 +29828,10 @@ components:
           type: integer
           title: Glue Server Max Request Size
           description: Maximum size of request to glue-server (in MB)
+        use_patina:
+          type: boolean
+          title: Use Patina
+          description: Run runtime scripts on patina instead of glue
         persistent_endpoints_ssh:
           type: boolean
           title: Persistent Endpoints SSH
@@ -28524,6 +29856,13 @@ components:
           type: boolean
           title: Enable explicit empty routes
           description: 'When enabled, explicitly empty routes configuration (routes: or routes: {}) will result in no routes being generated instead of fallback routes.'
+        validation_engine:
+          type: string
+          enum:
+            - colander
+            - pydantic
+          title: Validation engine
+          description: Selects the validator used for the project configuration files. Switching between engines is safe.
         enable_routes_tracing:
           type: boolean
           title: Enable routes tracing
@@ -28625,6 +29964,10 @@ components:
           type: boolean
           title: Allow activity reschedule
           description: Allow certain types of activities to be rescheduled
+        enable_maintenance_window_hard_check:
+          type: boolean
+          title: Enable Maintenance Window hard check
+          description: Forbid rolling deployments if Maintenance Window is not set
         allow_burst:
           type: boolean
           title: Allow burst
@@ -28658,6 +30001,24 @@ components:
           additionalProperties: false
           title: Router Resources
           description: Router resource settings for flex plan
+        internal_storage_resources:
+          type: object
+          properties:
+            cpu:
+              type: number
+              format: float
+              title: CPU
+              description: Implicit internal storage service CPU for flex plan
+            memory:
+              type: integer
+              title: Memory
+              description: Implicit internal storage service memory (MB) for flex plan
+          required:
+            - cpu
+            - memory
+          additionalProperties: false
+          title: Internal Storage Resources
+          description: Resource settings for the implicit internal storage services of flex plan projects
         allow_scaling_to_zero:
           type: boolean
           title: Allow scaling apps and workers without a relationship pointing to them to 0
@@ -28674,10 +30035,28 @@ components:
           type: boolean
           title: Support OCI images
           description: ''
+        image_lifecycle:
+          type: object
+          properties:
+            enabled:
+              type: boolean
+              title: Image lifecycle validation enabled
+              description: Enable image lifecycle validation on push.
+            enforce:
+              type: boolean
+              title: Image lifecycle validation enforce
+              description: 'When True: decommissioned images block code pushes (a version upgrade from a decommissioned image is still allowed); sunset images block only when they were sunset before the project was created. When False, emit warnings only.'
+          required:
+            - enabled
+            - enforce
+          additionalProperties: false
+          title: Image lifecycle validation
+          description: Settings gating push-time image lifecycle validation.
       required:
         - initialize
         - product_name
         - product_code
+        - cli_name
         - ui_uri_template
         - variables_prefix
         - bot_email
@@ -28726,12 +30105,14 @@ components:
         - certifier_url
         - centralized_permissions
         - glue_server_max_request_size
+        - use_patina
         - persistent_endpoints_ssh
         - persistent_endpoints_ssl_certificates
         - enable_disk_health_monitoring
         - enable_paused_environments
         - enable_unified_configuration
         - enable_explicit_empty_routes
+        - validation_engine
         - enable_routes_tracing
         - image_deployment_validation
         - support_generic_images
@@ -28746,12 +30127,15 @@ components:
         - allow_rolling_deployments
         - maintenance_window
         - allow_activity_reschedule
+        - enable_maintenance_window_hard_check
         - allow_burst
         - router_resources
+        - internal_storage_resources
         - allow_scaling_to_zero
         - save_applications_vendors
         - locations_script_default
         - support_oci_images
+        - image_lifecycle
       additionalProperties: false
     ProjectSettingsPatch:
       type: object
@@ -29367,6 +30751,7 @@ components:
         - updated_at
         - type
         - name
+        - registered_name
         - attributes
       additionalProperties: false
     ReplacementDomainStorageCreateInput:
@@ -29400,6 +30785,12 @@ components:
           description: Arbitrary attributes attached to this resource
       additionalProperties: false
     Route:
+      discriminator:
+        propertyName: type
+        mapping:
+          proxy: '#/components/schemas/ProxyRoute'
+          redirect: '#/components/schemas/RedirectRoute'
+          upstream: '#/components/schemas/UpstreamRoute'
       oneOf:
         - $ref: '#/components/schemas/ProxyRoute'
         - $ref: '#/components/schemas/RedirectRoute'
@@ -29688,6 +31079,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         url:
           type: string
           title: URL
@@ -29704,23 +31105,18 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - created_at
         - updated_at
         - type
         - role
         - extra
+        - redaction
+        - excluded_services
         - url
         - index
         - sourcetype
         - tls_verify
-        - excluded_services
       additionalProperties: false
     SplunkIntegrationCreateInput:
       type: object
@@ -29735,6 +31131,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         url:
           type: string
           title: URL
@@ -29755,12 +31161,6 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - type
         - url
@@ -29780,6 +31180,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         url:
           type: string
           title: URL
@@ -29800,12 +31210,6 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - type
         - url
@@ -29845,6 +31249,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         url:
           type: string
           title: Sumologic HTTPS endpoint
@@ -29857,22 +31271,17 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - created_at
         - updated_at
         - type
         - role
         - extra
+        - redaction
+        - excluded_services
         - url
         - category
         - tls_verify
-        - excluded_services
       additionalProperties: false
     SumologicIntegrationCreateInput:
       type: object
@@ -29887,6 +31296,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         url:
           type: string
           title: Sumologic HTTPS endpoint
@@ -29899,12 +31318,6 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - type
         - url
@@ -29922,6 +31335,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         url:
           type: string
           title: Sumologic HTTPS endpoint
@@ -29934,12 +31357,6 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - type
         - url
@@ -29977,6 +31394,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         host:
           type: string
           title: Host
@@ -30008,25 +31435,20 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - created_at
         - updated_at
         - type
         - role
         - extra
+        - redaction
+        - excluded_services
         - host
         - port
         - protocol
         - facility
         - message_format
         - tls_verify
-        - excluded_services
       additionalProperties: false
     SyslogIntegrationCreateInput:
       type: object
@@ -30041,6 +31463,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         host:
           type: string
           title: Host
@@ -30083,12 +31515,6 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - type
       additionalProperties: false
@@ -30105,6 +31531,16 @@ components:
             type: string
           title: Extra
           description: Arbitrary key/value pairs to include with forwarded logs
+        redaction:
+          type: boolean
+          title: Redaction
+          description: Enable built-in PII redaction (e.g. email addresses) before forwarding log lines
+        excluded_services:
+          type: array
+          items:
+            type: string
+          title: Excluded Services
+          description: Comma separated list of service and application names to exclude from logging
         host:
           type: string
           title: Host
@@ -30147,12 +31583,6 @@ components:
           type: boolean
           title: TLS Verify
           description: Enable/Disable HTTPS certificate verification
-        excluded_services:
-          type: array
-          items:
-            type: string
-          title: Excluded Services
-          description: Comma separated list of service and application names to exclude from logging
       required:
         - type
       additionalProperties: false
@@ -30178,218 +31608,10 @@ components:
         - started_at
       additionalProperties: false
     Task:
-      type: object
-      properties:
-        id:
-          type: string
-          title: Task Identifier
-          description: The identifier of Task
-        resources:
-          type: object
-          properties:
-            base_memory:
-              type: integer
-              title: Base memory
-              description: The base memory for the container
-            memory_ratio:
-              type: integer
-              title: Memory ratio
-              description: The amount of memory to allocate per units of CPU
-          required:
-            - base_memory
-            - memory_ratio
-          additionalProperties: false
-          nullable: true
-          title: Resources
-          description: Resources configuration (base memory and memory ratio)
-        authorizations:
-          type: array
-          items:
-            type: object
-            properties:
-              type:
-                type: string
-                enum:
-                  - env
-                  - task
-                title: Authorization Type
-                description: The resource type for this authorization.
-              action:
-                type: string
-                title: Authorization Action
-                description: The action to authorize on the target resource.
-              resource:
-                type: string
-                nullable: true
-                title: Authorization Resource
-                description: The target resource for this authorization.
-            required:
-              - type
-              - action
-              - resource
-            additionalProperties: false
-          title: Authorizations
-          description: Authorizations available to this container
-        relationships:
-          type: object
-          additionalProperties:
-            type: object
-            properties:
-              service:
-                type: string
-                nullable: true
-                title: Service Name
-                description: The name of the service.
-              endpoint:
-                type: string
-                nullable: true
-                title: Endpoint Name
-                description: The name of the endpoint on the service.
-            required:
-              - service
-              - endpoint
-            additionalProperties: false
-            nullable: true
-          title: Service Relationships
-          description: The relationships of the container to defined services
-        additional_hosts:
-          type: object
-          additionalProperties:
-            type: string
-          title: Additional hosts
-          description: A mapping of hostname to ip address to be added to the container's hosts file
-        mounts:
-          type: object
-          additionalProperties:
-            type: object
-            properties:
-              source:
-                type: string
-                enum:
-                  - instance
-                  - local
-                  - service
-                  - storage
-                  - temporary
-                  - tmp
-                title: Mount type
-                description: The type of mount that will provide the data.
-              source_path:
-                type: string
-                title: Source Path
-                description: The path to be mounted, relative to the root directory of the volume that's being mounted from.
-              service:
-                type: string
-                nullable: true
-                title: Service Name
-                description: The name of the service that the volume will be mounted from. Must be a service in `services.yaml` of type `network-storage`.
-            required:
-              - source
-              - source_path
-            additionalProperties: false
-          title: Mounts
-          description: Filesystem mounts of this container. If not specified the container will have no writeable disk space
-        timezone:
-          type: string
-          nullable: true
-          title: Timezone
-          description: The timezone of the task. Defaults to the project's timezone if not specified
-        variables:
-          type: object
-          additionalProperties:
-            type: object
-            additionalProperties: {}
-          title: Environment Variables
-          description: Variables provide environment-sensitive information to control how this container behaves. To set a Unix environment variable, specify a key of `env:`, and then each sub-item of that is a key/value pair that will be injected into the environment
-        container_profile:
-          type: string
-          nullable: true
-          title: Container Profile
-          description: Selected container profile for this container
-        type:
-          type: string
-          title: Image type
-          description: The runtime type and version for the task (e.g., python:3.8)
-        source:
-          type: object
-          properties:
-            root:
-              type: string
-              title: Task Source Root
-              description: The root of the task relative to the repository root
-          required:
-            - root
-          additionalProperties: false
-          title: Source Code Configuration
-          description: Configuration related to the source code of the task
-        hooks:
-          type: object
-          properties:
-            build:
-              type: string
-              nullable: true
-              title: Build Hook
-              description: Hook executed after the build process
-            deploy:
-              type: string
-              nullable: true
-              title: Deploy Hook
-              description: Hook executed before the task's run command
-          required:
-            - build
-            - deploy
-          additionalProperties: false
-          title: Hooks
-          description: Scripts executed at various points in the lifecycle of the task
-        dependencies:
-          type: object
-          additionalProperties:
-            type: object
-          title: Dependencies
-          description: External global dependencies of this task. They will be downloaded by the language's package manager
-        runtime:
-          type: object
-          title: Runtime Configuration
-          description: Runtime-specific configuration
-        run:
-          type: object
-          properties:
-            command:
-              type: string
-              title: Run Command
-              description: The command to execute when running the task
-            timeout:
-              type: integer
-              title: Timeout
-              description: The maximum timeout in seconds after which the task will be forcefully killed
-          required:
-            - command
-            - timeout
-          additionalProperties: false
-          title: Run Configuration
-          description: Configuration for task execution
-        name:
-          type: string
-          title: Task name
-          description: The unique name of the task
-      required:
-        - id
-        - resources
-        - authorizations
-        - relationships
-        - additional_hosts
-        - mounts
-        - timezone
-        - variables
-        - container_profile
-        - type
-        - source
-        - hooks
-        - dependencies
-        - runtime
-        - run
-        - name
-      additionalProperties: false
+      oneOf:
+        - $ref: '#/components/schemas/ComposableBuilder'
+        - $ref: '#/components/schemas/OCIBuilder'
+        - $ref: '#/components/schemas/TypeBuilder'
     TaskCollection:
       type: array
       items:
@@ -30456,6 +31678,27 @@ components:
         - id
         - sha
         - tree
+      additionalProperties: false
+    TypeBuilder:
+      type: object
+      properties:
+        id:
+          type: string
+          title: TypeBuilder Identifier
+          description: The identifier of TypeBuilder
+        dependencies:
+          type: object
+          additionalProperties:
+            type: object
+          title: Dependencies
+          description: External global dependencies. They will be downloaded by the language's package manager
+        runtime:
+          type: object
+          title: Runtime Configuration
+          description: Runtime-specific configuration
+      required:
+        - dependencies
+        - runtime
       additionalProperties: false
     UpstreamRoute:
       type: object
@@ -30879,12 +32122,12 @@ components:
           description: Whether the trigger is enabled
         down:
           allOf:
-            - description: Lower bound on resource usage. Uses a longer duration than scale-up to prevent premature downscaling.
             - $ref: '#/components/schemas/AutoscalerCondition'
+          description: Lower bound on resource usage. Uses a longer duration than scale-up to prevent premature downscaling.
         up:
           allOf:
-            - description: Upper bound on resource usage
             - $ref: '#/components/schemas/AutoscalerCondition'
+          description: Upper bound on resource usage
       title: AutoscalerCPUPressureTrigger
       type: object
     AutoscalerCPUResources:
@@ -30916,12 +32159,12 @@ components:
           description: Whether the trigger is enabled
         down:
           allOf:
-            - description: Lower bound on resource usage. Uses a longer duration than scale-up to prevent premature downscaling.
             - $ref: '#/components/schemas/AutoscalerCondition'
+          description: Lower bound on resource usage. Uses a longer duration than scale-up to prevent premature downscaling.
         up:
           allOf:
-            - description: Upper bound on resource usage
             - $ref: '#/components/schemas/AutoscalerCondition'
+          description: Upper bound on resource usage
       title: AutoscalerCPUTrigger
       type: object
     AutoscalerCondition:
@@ -30935,8 +32178,8 @@ components:
           type: number
         duration:
           allOf:
-            - description: Number of seconds during which the condition must be satisfied
             - $ref: '#/components/schemas/AutoscalerDuration'
+          description: Number of seconds during which the condition must be satisfied
         enabled:
           type: boolean
           nullable: true
@@ -30983,12 +32226,12 @@ components:
           description: Whether the trigger is enabled
         down:
           allOf:
-            - description: Lower bound on resource usage. Uses a longer duration than scale-up to prevent premature downscaling.
             - $ref: '#/components/schemas/AutoscalerCondition'
+          description: Lower bound on resource usage. Uses a longer duration than scale-up to prevent premature downscaling.
         up:
           allOf:
-            - description: Upper bound on resource usage
             - $ref: '#/components/schemas/AutoscalerCondition'
+          description: Upper bound on resource usage
       title: AutoscalerMemoryPressureTrigger
       type: object
     AutoscalerMemoryResources:
@@ -31020,12 +32263,12 @@ components:
           description: Whether the trigger is enabled
         down:
           allOf:
-            - description: Lower bound on resource usage. Uses a longer duration than scale-up to prevent premature downscaling.
             - $ref: '#/components/schemas/AutoscalerCondition'
+          description: Lower bound on resource usage. Uses a longer duration than scale-up to prevent premature downscaling.
         up:
           allOf:
-            - description: Upper bound on resource usage
             - $ref: '#/components/schemas/AutoscalerCondition'
+          description: Upper bound on resource usage
       title: AutoscalerMemoryTrigger
       type: object
     AutoscalerResources:
@@ -31080,24 +32323,24 @@ components:
       properties:
         triggers:
           allOf:
-            - description: Metrics should be evaluated as triggers for autoscaling
             - $ref: '#/components/schemas/AutoscalerTriggers'
+          description: Metrics should be evaluated as triggers for autoscaling
         instances:
           allOf:
-            - description: Lower/Upper bounds on number of instances for horizontal scaling
             - $ref: '#/components/schemas/AutoscalerInstances'
+          description: Lower/Upper bounds on number of instances for horizontal scaling
         resources:
           allOf:
-            - description: Lower/Upper bounds on cpu/memory for vertical scaling
             - $ref: '#/components/schemas/AutoscalerResources'
+          description: Lower/Upper bounds on cpu/memory for vertical scaling
         scale_factor:
           allOf:
-            - description: How many instances to add/remove on each scaling attempt
             - $ref: '#/components/schemas/AutoscalerScalingFactor'
+          description: How many instances to add/remove on each scaling attempt
         scale_cooldown:
           allOf:
-            - description: How long to wait before the next scaling attempt can be performed
             - $ref: '#/components/schemas/AutoscalerScalingCooldown'
+          description: How long to wait before the next scaling attempt can be performed
       title: AutoscalerServiceSettings
       type: object
     AutoscalerSettings:
@@ -31161,13 +32404,9 @@ components:
         values:
           oneOf:
             - type: array
-              items:
-                nullable: true
-                type: string
+              items: {}
             - type: object
-              additionalProperties:
-                nullable: true
-                type: string
+              additionalProperties: {}
           default: null
       type: object
     Invoice:
@@ -32630,8 +33869,11 @@ components:
     CarbonTotal:
       type: number
       description: The calculated total of the metric for the given interval.
-    History:
+    UsageRecord:
       type: object
+      description: |-
+        A change to a project's resource usage: consumption by one environment,
+        or a quantity granted to the project as a whole.
       properties:
         id:
           type: string
@@ -32641,16 +33883,29 @@ components:
           description: The ID of the project.
         event_type:
           type: string
-          description: The type of event that triggered the record.
+          description: |-
+            What produced the record: `activity:<activity type>` for a deployment,
+            a platform event such as `project_addon_updated` for a change to a
+            pre-allocated quantity, or `accounts_usage.migrated` for an imported
+            historical record.
         event_id:
           type: string
           description: The ID of the event.
         resource:
           type: string
-          description: The resource type (e.g., cpu_app, memory_services, storage).
+          description: |-
+            The resource that changed. Per-environment consumption uses
+            `cpu_app`, `memory_services`, `storage`, `object_storage` and the
+            like; a pre-allocated project quantity uses `environments`,
+            `storage` or `user_licenses`. Note `storage` appears in both forms,
+            told apart by whether the record carries an `environment`. Storage
+            and memory quantities are in GB, everything else is a count.
         environment:
           type: string
-          description: The environment name.
+          description: |-
+            The environment name. Absent when the record is a quantity granted
+            to the project as a whole rather than consumption by one
+            environment.
         quantity:
           type: string
           description: The quantity of the resource.
@@ -32661,6 +33916,45 @@ components:
         user:
           type: string
           description: The ID of the user who triggered the event.
+      additionalProperties: false
+    PlanRecord:
+      type: object
+      description: A change to a project's plan or one of its addons.
+      properties:
+        id:
+          type: string
+          description: The unique identifier of the record.
+        project_id:
+          type: string
+          description: The ID of the project.
+        event_type:
+          type: string
+          description: |-
+            The event that produced the record, named as the platform event it
+            corresponds to — for example `project_addon_created`,
+            `project_addon_deleted` or `project_updated`.
+        event_id:
+          type: string
+          description: The ID of the event.
+        type:
+          type: string
+          description: |-
+            The item that changed: `plan`, or an addon type such as `backups`,
+            `blackfire` or `project_support_level`. Pre-allocated allowances
+            (`environments`, `storage`, `user_licenses`) are measured quantities
+            and are reported by the resource usage endpoints instead.
+        value:
+          type: string
+          description: |-
+            The value after the change: a plan ID or an addon SKU. Empty when
+            the item was removed.
+        timestamp:
+          type: string
+          format: date-time
+          description: The time the change took effect.
+        user:
+          type: string
+          description: The ID of the user who triggered the change, if known.
       additionalProperties: false
     CreatedAt:
       type: string
