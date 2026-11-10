@@ -25,12 +25,13 @@ class OpenApiPreprocessor
 
         $content = file_get_contents($schemaPath);
         $content = $this->replaceHTTPAccessPermission($content);
-        $this->schema = json_decode($content, true, 512, JSON_THROW_ON_ERROR);
+        $decoded = json_decode($content, true, 512, JSON_THROW_ON_ERROR);
 
-        if (!$this->schema) {
-            throw new InvalidArgumentException("Unable to parse schema JSON");
+        if (!is_array($decoded) || $decoded === []) {
+            throw new InvalidArgumentException("Schema JSON must be a non-empty object: {$schemaPath}");
         }
 
+        $this->schema = $decoded;
         $this->fixAllRefsWithAllOf($this->schema);
     }
 
