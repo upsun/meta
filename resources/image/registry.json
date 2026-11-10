@@ -764,7 +764,7 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "releaseDate": "2023-11-14T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2026-11-10T00:00:00.000Z",
@@ -12432,7 +12432,7 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1.13.5+php85.12-1",
+            "raw": "1.13.5+php85.12-2",
             "majorMinor": "1.13",
             "normalized": "1.13.5"
           },
@@ -12475,7 +12475,7 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1.13.5+php84.27-1",
+            "raw": "1.13.5+php84.27-2",
             "majorMinor": "1.13",
             "normalized": "1.13.5"
           },
@@ -12518,7 +12518,7 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1.13.5+php83.36-1",
+            "raw": "1.13.5+php83.36-2",
             "majorMinor": "1.13",
             "normalized": "1.13.5"
           },
@@ -12561,7 +12561,7 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1.13.5+php82.35-1",
+            "raw": "1.13.5+php82.35-2",
             "majorMinor": "1.13",
             "normalized": "1.13.5"
           },
