@@ -1,18 +1,7 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { z } from 'zod';
-
-// JSON Schema validation - basic structure check
-// The upsun.json file is a JSON Schema that validates .upsun.yaml configuration files
-const JSONSchemaSchema = z.object({
-  '$schema': z.string().optional(),
-  title: z.string().optional(),
-  type: z.string().optional(),
-  properties: z.record(z.string(), z.unknown()).optional(),
-  definitions: z.record(z.string(), z.unknown()).optional(),
-  required: z.array(z.string()).optional(),
-}).passthrough(); // Allow additional properties since JSON Schema can have many fields
+import { UpsunJsonSchemaSchema } from '../schemas/validation.schema.js';
 
 async function main() {
   const scriptDir = path.dirname(fileURLToPath(import.meta.url));
@@ -37,7 +26,7 @@ async function main() {
     process.exit(1);
   }
 
-  const result = JSONSchemaSchema.safeParse(data);
+  const result = UpsunJsonSchemaSchema.safeParse(data);
 
   if (!result.success) {
     console.error('upsun.json does not match the expected JSON Schema structure');
