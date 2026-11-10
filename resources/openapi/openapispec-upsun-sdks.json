@@ -39636,12 +39636,39 @@
                         ]
                     },
                     "tasks": {
-                        "type": "string",
-                        "title": "Deployment target name",
-                        "description": "The name of the deployment target",
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "properties": {
+                                "resources": {
+                                    "type": "object",
+                                    "properties": {
+                                        "profile_size": {
+                                            "type": "string",
+                                            "nullable": true,
+                                            "title": "Profile size",
+                                            "description": "Profile size of the service."
+                                        }
+                                    },
+                                    "required": [
+                                        "profile_size"
+                                    ],
+                                    "additionalProperties": false,
+                                    "nullable": true,
+                                    "title": "Resources",
+                                    "description": ""
+                                }
+                            },
+                            "required": [
+                                "resources"
+                            ],
+                            "additionalProperties": false
+                        },
+                        "title": "Tasks",
+                        "description": "The tasks sizing (applied at task run time)",
                         "x-isDateTime": false,
                         "x-description": [
-                            "The name of the deployment target"
+                            "The tasks sizing (applied at task run time)"
                         ]
                     }
                 },
@@ -39824,15 +39851,13 @@
                         ]
                     },
                     "old_id": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "string"
-                        },
-                        "title": "Arbitrary attributes",
-                        "description": "Arbitrary attributes attached to this resource",
+                        "type": "string",
+                        "nullable": true,
+                        "title": "Old ID",
+                        "description": "The old object ID of the file in the diff",
                         "x-isDateTime": false,
                         "x-description": [
-                            "Arbitrary attributes attached to this resource"
+                            "The old object ID of the file in the diff"
                         ]
                     }
                 },
@@ -39927,12 +39952,12 @@
                         ]
                     },
                     "count": {
-                        "type": "string",
-                        "title": "Domain name",
-                        "description": "The domain name",
+                        "type": "integer",
+                        "title": "Claim count",
+                        "description": "Number of domains using this claim",
                         "x-isDateTime": false,
                         "x-description": [
-                            "The domain name"
+                            "Number of domains using this claim"
                         ]
                     }
                 },
@@ -44365,12 +44390,15 @@
                         ]
                     },
                     "excluded_services": {
-                        "type": "string",
-                        "title": "Integration type",
-                        "description": "The type of the integration",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "title": "Excluded Services",
+                        "description": "Comma separated list of service and application names to exclude from logging",
                         "x-isDateTime": false,
                         "x-description": [
-                            "The type of the integration"
+                            "Comma separated list of service and application names to exclude from logging"
                         ]
                     }
                 },
@@ -49459,100 +49487,14 @@
                 "properties": {
                     "attributes": {
                         "type": "object",
-                        "properties": {
-                            "strict_transport_security": {
-                                "type": "object",
-                                "properties": {
-                                    "enabled": {
-                                        "type": "boolean",
-                                        "nullable": true,
-                                        "title": "Is enabled",
-                                        "description": "Whether strict transport security is enabled or not",
-                                        "x-description": [
-                                            "Whether strict transport security is enabled or not"
-                                        ]
-                                    },
-                                    "include_subdomains": {
-                                        "type": "boolean",
-                                        "nullable": true,
-                                        "title": "Is subdomains included",
-                                        "description": "Whether the strict transport security policy should include all subdomains",
-                                        "x-description": [
-                                            "Whether the strict transport security policy should include all subdomains"
-                                        ]
-                                    },
-                                    "preload": {
-                                        "type": "boolean",
-                                        "nullable": true,
-                                        "title": "Is strict transport security preloaded",
-                                        "description": "Whether the strict transport security policy should be preloaded in browsers",
-                                        "x-description": [
-                                            "Whether the strict transport security policy should be preloaded in browsers"
-                                        ]
-                                    }
-                                },
-                                "required": [
-                                    "enabled",
-                                    "include_subdomains",
-                                    "preload"
-                                ],
-                                "additionalProperties": false,
-                                "title": "Strict-Transport-Security options.",
-                                "description": ""
-                            },
-                            "min_version": {
-                                "type": "string",
-                                "enum": [
-                                    "TLSv1.0",
-                                    "TLSv1.1",
-                                    "TLSv1.2",
-                                    "TLSv1.3"
-                                ],
-                                "nullable": true,
-                                "title": "Minimum TLS version",
-                                "description": "The minimum TLS version to support.",
-                                "x-description": [
-                                    "The minimum TLS version to support."
-                                ]
-                            },
-                            "client_authentication": {
-                                "type": "string",
-                                "enum": [
-                                    "request",
-                                    "require"
-                                ],
-                                "nullable": true,
-                                "title": "Client authentication",
-                                "description": "The type of client authentication to request.",
-                                "x-description": [
-                                    "The type of client authentication to request."
-                                ]
-                            },
-                            "client_certificate_authorities": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                },
-                                "title": "Client certificate authorities",
-                                "description": "Certificate authorities to validate the client certificate against. If not specified, a default set of trusted CAs will be used.",
-                                "x-description": [
-                                    "Certificate authorities to validate the client certificate against. If not specified, a default set of trusted",
-                                    "CAs will be used."
-                                ]
-                            }
+                        "additionalProperties": {
+                            "type": "string"
                         },
-                        "required": [
-                            "strict_transport_security",
-                            "min_version",
-                            "client_authentication",
-                            "client_certificate_authorities"
-                        ],
-                        "additionalProperties": false,
-                        "title": "TLS settings",
-                        "description": "TLS settings for the route",
+                        "title": "Arbitrary attributes",
+                        "description": "Arbitrary attributes attached to this resource",
                         "x-isDateTime": false,
                         "x-description": [
-                            "TLS settings for the route"
+                            "Arbitrary attributes attached to this resource"
                         ]
                     }
                 },
