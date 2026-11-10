@@ -1067,7 +1067,7 @@ class OpenApiPreprocessor
                             '$ref' => '#/components/schemas/AcceptedResponse',
                         ];
 
-                        echo "🔄 Replaced empty \$ref $refName with AcceptedResponse" 
+                        echo "🔄 Replaced empty \$ref $refName with AcceptedResponse"
                         ." for {$httpMethod} {$path} [$statusCode]\n";
                     }
                 }
@@ -1185,7 +1185,7 @@ class OpenApiPreprocessor
     public function handleOneOfSchemas(): void
     {
         echo "\n🔀 Processing oneOf schemas...\n";
-        
+
         if (!isset($this->schema['components']['schemas'])) {
             echo "⚠️ No schemas found\n";
             return;
@@ -1202,7 +1202,7 @@ class OpenApiPreprocessor
                 $schema['x-isOneOf'] = true;
                 $oneOfCount++;
                 echo "  ✓ $schemaName\n";
-                
+
                 // Extract child schema names from oneOf
                 $childSchemaNames = [];
                 foreach ($schema['oneOf'] as $oneOfItem) {
@@ -1213,10 +1213,10 @@ class OpenApiPreprocessor
                         }
                     }
                 }
-                
+
                 // Calculate shared required fields from all children
                 $sharedRequired = $this->calculateSharedRequiredFields($childSchemaNames, $schemas);
-                
+
                 // Build x-required as array of objects with name and type
                 $requiredArray = [];
                 if (!empty($sharedRequired)) {
@@ -1225,16 +1225,16 @@ class OpenApiPreprocessor
                         if (isset($schemas[$childName]['properties'])) {
                             foreach ($sharedRequired as $fieldName) {
                                 if (isset($schemas[$childName]['properties'][$fieldName])) {
-                                    $property = $schemas[$childName]['properties'][$fieldName];
-                                    $fieldType = $property['type'] ?? 'mixed';
-                                    $format = $property['format'] ?? null;
-                                    
+                                    $fieldSchema = $schemas[$childName]['properties'][$fieldName];
+                                    $fieldType = $fieldSchema['type'] ?? 'mixed';
+                                    $format = $fieldSchema['format'] ?? null;
+
                                     // Check if this is a date-time field
                                     $isDateTime = ($fieldType === 'string' && $format === 'date-time');
-                                    
+
                                     // Check if this is an object field that should be treated as a collection of items (for x-isArray semantics, e.g. tags)
                                     $isArray = ($fieldType === 'object');
-                                    
+
                                     // Capitalize field name for display
                                     $displayName = $this->capitalizeFieldName($fieldName);
                                     $requiredArray[] = [
@@ -1249,12 +1249,12 @@ class OpenApiPreprocessor
                         }
                     }
                 }
-                
+
                 if (!empty($requiredArray)) {
                     $schema['x-required'] = $requiredArray;
                     echo "      ✓ Required fields: " . implode(', ', array_column($requiredArray, 'name')) . "\n";
                 }
-                
+
                 // Add x-parentInterface to each child schema
                 foreach ($schema['oneOf'] as $oneOfItem) {
                     if (isset($oneOfItem['$ref'])) {
@@ -1288,8 +1288,10 @@ class OpenApiPreprocessor
                                 $propertyOneOfCount++;
                             }
                         }
+                        unset($property);
                     }
                 }
+                unset($allOfItem);
             }
 
             // Process oneOf within properties
@@ -1299,8 +1301,10 @@ class OpenApiPreprocessor
                         $propertyOneOfCount++;
                     }
                 }
+                unset($property);
             }
         }
+        unset($schema);
 
         echo "\n✅ Marked $oneOfCount root oneOf schema(s), $propertyOneOfCount nested oneOf(s), and $parentInterfaceCount parent interface(s)\n";
     }

@@ -52,8 +52,8 @@ jobs:
           printf 'PRIVATE-TOKEN: %s\n' "$GIT_TOKEN" | curl "${CURL_OPTS[@]}" \
             --output resources/openapi/openapispec-upsun.yaml \
             "${GIT_URL_BASE}/${PROJECT_ENCODED}/repository/files/${YAML_FILE}/raw?ref=${REF}"
-          
-      - name: Patch OpenAPI specs (json) for SDK generation 
+
+      - name: Patch OpenAPI specs (json) for SDK generation
         run: composer run spec:patch
 
       - name: Create Pull Request if changes
