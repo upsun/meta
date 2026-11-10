@@ -6,7 +6,11 @@ on:
   workflow_dispatch: ~
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: openapi-spec-update
+  cancel-in-progress: false
 
 env:
   DEFAULT_BRANCH: "master"
@@ -14,16 +18,14 @@ env:
 jobs:
   check-and-update:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     if: ${{ github.repository_owner == 'upsun' }}
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
-
-      - name: Set up Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Download openapispec-upsun.json from upstream
         env:
@@ -31,6 +33,7 @@ jobs:
           GIT_URL_BASE: ${{ secrets.GIT_URL_BASE }}
 
         run: |
+          set -euo pipefail
           PROJECT_PATH="devrel/docs/api-site"
           REF="main"
 
@@ -41,10 +44,12 @@ jobs:
           YAML_FILE="web%2Fopenapispec-upsun.yaml"
 
           # Download openapispec-upsun.(json|yaml) into resources/openapi using the Git API
-          curl --fail --header "PRIVATE-TOKEN: $GIT_TOKEN" \
+          # Token is piped via stdin to keep it out of the process list
+          CURL_OPTS=(--fail --silent --show-error --retry 3 --retry-all-errors --max-time 60 --header @-)
+          printf 'PRIVATE-TOKEN: %s\n' "$GIT_TOKEN" | curl "${CURL_OPTS[@]}" \
             --output resources/openapi/openapispec-upsun.json \
             "${GIT_URL_BASE}/${PROJECT_ENCODED}/repository/files/${JSON_FILE}/raw?ref=${REF}"
-          curl --fail --header "PRIVATE-TOKEN: $GIT_TOKEN" \
+          printf 'PRIVATE-TOKEN: %s\n' "$GIT_TOKEN" | curl "${CURL_OPTS[@]}" \
             --output resources/openapi/openapispec-upsun.yaml \
             "${GIT_URL_BASE}/${PROJECT_ENCODED}/repository/files/${YAML_FILE}/raw?ref=${REF}"
           
@@ -52,7 +57,7 @@ jobs:
         run: composer run spec:patch
 
       - name: Create Pull Request if changes
-        uses: peter-evans/create-pull-request@v8
+        uses: peter-evans/create-pull-request@v8.1.2
         with:
           token: ${{ secrets.OPENAPI_WORKFLOW_TOKEN }}
           commit-message: "Generate OpenAPI spec for SDKs"
@@ -62,7 +67,7 @@ jobs:
           author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
           branch: update-openapi-spec
           title: "[API-BOT] Get and Patch OpenAPI spec for SDKs"
-          base: master
+          base: ${{ env.DEFAULT_BRANCH }}
           labels: |
             automated pr
           add-paths: |
