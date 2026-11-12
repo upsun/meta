@@ -2160,9 +2160,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1.26.10-0psh1",
+            "raw": "1.26.11-0psh1",
             "majorMinor": "1.26",
-            "normalized": "1.26.10"
+            "normalized": "1.26.11"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -6336,9 +6336,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "22.23.4-1nodesource1",
+            "raw": "22.23.5-1nodesource1",
             "majorMinor": "22.23",
-            "normalized": "22.23.4"
+            "normalized": "22.23.5"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -6375,9 +6375,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "24.22.2-1nodesource1",
+            "raw": "24.22.3-1nodesource1",
             "majorMinor": "24.22",
-            "normalized": "24.22.2"
+            "normalized": "24.22.3"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -6414,9 +6414,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.13.0-1nodesource1",
+            "raw": "26.13.1-1nodesource1",
             "majorMinor": "26.13",
-            "normalized": "26.13.0"
+            "normalized": "26.13.1"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -7404,7 +7404,7 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.5.12-1+0~20261021.27+debian13~1.gbp1a3e8a",
+            "raw": "8.5.12-3+0~deb.sury.org.1+debian13",
             "majorMinor": "8.5",
             "normalized": "8.5.12"
           },
@@ -7447,7 +7447,7 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.4.27-1+0~20261021.57+debian12~1.gbp7636b9",
+            "raw": "8.4.27-2+0~deb.sury.org.1+debian12",
             "majorMinor": "8.4",
             "normalized": "8.4.27"
           },
@@ -8165,7 +8165,7 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "supported",
+          "status": "retired",
           "releaseDate": "2021-09-30T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2026-11-12T00:00:00.000Z",
