@@ -48933,6 +48933,7 @@
       "name": "User Activity",
       "tags": [
         "Project Activity",
+        "Integration Activity",
         "Environment Activity"
       ]
     },
