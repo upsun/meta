@@ -7794,7 +7794,7 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "7.0.33-79+freexian8.1+php+1",
+            "raw": "7.0.33-1~dotdeb+8.1",
             "majorMinor": "7.0",
             "normalized": "7.0.33"
           },
@@ -9961,7 +9961,7 @@
           "min_disk_size": null,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "2:2.8.17-1+deb8u10",
+            "raw": "2:2.8.17-1+deb8u15",
             "majorMinor": "2.8",
             "normalized": "2.8.17"
           },
@@ -10511,7 +10511,7 @@
           "internal_status": "active"
         },
         "upstream": {
-          "status": "supported",
+          "status": "decommissioned",
           "releaseDate": "2026-10-01T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2026-10-01T00:00:00.000Z",
@@ -10534,9 +10534,9 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1.99.1-0psh1",
-            "majorMinor": "1.99",
-            "normalized": "1.99.1"
+            "raw": "1.100.0-0psh1",
+            "majorMinor": "1.100",
+            "normalized": "1.100.0"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
