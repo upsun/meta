@@ -500,9 +500,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.3.63.123",
+            "raw": "26.3.64.3",
             "majorMinor": "26.3",
-            "normalized": "26.3.63"
+            "normalized": "26.3.64"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -8984,9 +8984,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "4.3.6-1",
+            "raw": "4.3.7-1",
             "majorMinor": "4.3",
-            "normalized": "4.3.6"
+            "normalized": "4.3.7"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -12392,7 +12392,7 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1.13.5+php85.12-4",
+            "raw": "1.13.5+php85.12-5",
             "majorMinor": "1.13",
             "normalized": "1.13.5"
           },
@@ -12435,7 +12435,7 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1.13.5+php84.27-4",
+            "raw": "1.13.5+php84.27-5",
             "majorMinor": "1.13",
             "normalized": "1.13.5"
           },
@@ -12478,7 +12478,7 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1.13.5+php83.36-4",
+            "raw": "1.13.5+php83.36-5",
             "majorMinor": "1.13",
             "normalized": "1.13.5"
           },
@@ -12521,7 +12521,7 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1.13.5+php82.35-4",
+            "raw": "1.13.5+php82.35-5",
             "majorMinor": "1.13",
             "normalized": "1.13.5"
           },
