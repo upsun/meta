@@ -457,9 +457,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.8.38.9",
+            "raw": "26.8.39.19",
             "majorMinor": "26.8",
-            "normalized": "26.8.38"
+            "normalized": "26.8.39"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -500,9 +500,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.3.65.10",
+            "raw": "26.3.66.4",
             "majorMinor": "26.3",
-            "normalized": "26.3.65"
+            "normalized": "26.3.66"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -3538,7 +3538,7 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "17.0.21.0.3-5",
+            "raw": "17.0.21.1-1",
             "majorMinor": "17.0",
             "normalized": "17.0.21"
           },
@@ -3655,7 +3655,7 @@
           "min_disk_size": null,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "21.0.13.0.3-5",
+            "raw": "21.0.13.1-1",
             "majorMinor": "21.0",
             "normalized": "21.0.13"
           },
@@ -4241,9 +4241,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1:12.3.3+maria~deb13",
+            "raw": "1:12.3.4+maria~deb13",
             "majorMinor": "12.3",
-            "normalized": "12.3.3"
+            "normalized": "12.3.4"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -4832,9 +4832,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "1:12.3.3+maria~deb13",
+            "raw": "1:12.3.4+maria~deb13",
             "majorMinor": "12.3",
-            "normalized": "12.3.3"
+            "normalized": "12.3.4"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
