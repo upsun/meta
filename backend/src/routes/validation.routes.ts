@@ -5,7 +5,7 @@ import { ApiRouter } from '../utils/api.router.js';
 import { ResourceManager, logger, extractConditionalHeaders, setCacheHeaders, sendNotModified } from '../utils/index.js';
 import { ErrorDetailsSchema } from '../schemas/api.schema.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
-import { Validation, ValidationSchema } from '../schemas/validation.schema.js';
+import { UpsunJsonSchema, UpsunJsonSchemaSchema } from '../schemas/validation.schema.js';
 import { compareSemverLike } from '../utils/version.utils.js';
 
 const TAG = 'Validation Schema';
@@ -37,7 +37,7 @@ This file is used to validate Upsun configuration files .upsun/config.yaml.
   responses: {
     200: {
       description: 'Upsun validation JSON schema',
-      schema: ValidationSchema
+      schema: UpsunJsonSchemaSchema
     },
     500: {
       description: 'Internal server error',
@@ -57,7 +57,7 @@ This file is used to validate Upsun configuration files .upsun/config.yaml.
       // Set cache headers
       setCacheHeaders(res, metadata, config.cache.TTL);
       
-      sendFormatted<Validation>(res, schema);
+      sendFormatted<UpsunJsonSchema>(res, schema);
     } catch (error: any) {
       apiLogger.error({ error: error.message }, 'Failed to read Upsun validation schema');
       sendErrorFormatted(res, {
