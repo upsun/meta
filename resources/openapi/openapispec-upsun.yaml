@@ -36286,6 +36286,7 @@ x-tagGroups:
   - name: User Activity
     tags:
       - Project Activity
+      - Integration Activity
       - Environment Activity
   - name: Project Access
     tags:
