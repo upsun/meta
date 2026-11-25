@@ -2221,7 +2221,7 @@
           {
             "name": "http_status_codes[]",
             "in": "query",
-            "description": "Filter by HTTP status codes or ranges (e.g., 200, 5xx)",
+            "description": "Filter by HTTP status codes or ranges (e.g., 200, 5xx) for web transactions, or by exit codes (0-255, e.g., 0) for CLI transactions",
             "required": false,
             "style": "form",
             "explode": true,
@@ -2900,7 +2900,7 @@
                                 "example": 0
                               },
                               "total_errors": {
-                                "description": "Total 5xx error count (float because APM may be sampled)",
+                                "description": "Total error count: 5xx responses for web transactions, non-zero exit codes for CLI transactions (float because APM may be sampled)",
                                 "type": "number",
                                 "format": "float",
                                 "example": 12.3
@@ -3535,7 +3535,7 @@
           {
             "name": "http_status_codes[]",
             "in": "query",
-            "description": "Filter by HTTP status codes or ranges (e.g., 200, 5xx)",
+            "description": "Filter by HTTP status codes or ranges (e.g., 200, 5xx) for web transactions, or by exit codes (0-255, e.g., 0) for CLI transactions",
             "required": false,
             "style": "form",
             "explode": true,
@@ -9178,6 +9178,7 @@
                         "http_metrics_timeline_urls",
                         "http_metrics_timeline_ips",
                         "http_metrics_timeline_user_agents",
+                        "http_metrics_edge_timeline",
                         "console_sandbox_access",
                         "conprof_applications",
                         "conprof_application_filters",
@@ -9371,6 +9372,20 @@
                               "type": "string",
                               "format": "uri",
                               "example": "https://api.upsun.com/projects/abc123def456/environments/main/observability/http/breakdown/user-agents"
+                            }
+                          },
+                          "type": "object",
+                          "additionalProperties": false
+                        },
+                        "http_metrics_edge_timeline": {
+                          "required": [
+                            "href"
+                          ],
+                          "properties": {
+                            "href": {
+                              "type": "string",
+                              "format": "uri",
+                              "example": "https://api.upsun.com/projects/abc123def456/environments/main/observability/http/edge"
                             }
                           },
                           "type": "object",
@@ -10085,6 +10100,17 @@
                 "schema": {
                   "$ref": "#/components/schemas/AcceptedResponse"
                 }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnvironmentMaintenanceRedeployInput"
               }
             }
           }
@@ -13536,6 +13562,301 @@
                               "timestamp": 1704070800
                             }
                           ]
+                        }
+                      },
+                      "type": "object",
+                      "additionalProperties": false
+                    }
+                  },
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - Invalid parameters. Please consult the API documentation to fix the request parameters.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "type",
+                    "title",
+                    "status",
+                    "violations"
+                  ],
+                  "properties": {
+                    "type": {
+                      "description": "RFC 2616 reference URL identifying the error type",
+                      "type": "string",
+                      "format": "uri",
+                      "example": "https://tools.ietf.org/html/rfc2616#section-1"
+                    },
+                    "title": {
+                      "description": "Human-readable summary of the validation error",
+                      "type": "string",
+                      "example": "Please ensure parameters are correct."
+                    },
+                    "status": {
+                      "description": "HTTP status code",
+                      "type": "integer",
+                      "example": 400
+                    },
+                    "violations": {
+                      "description": "Map of parameter names to their validation errors. Each parameter can have multiple error messages.",
+                      "type": "object",
+                      "example": {
+                        "grain": [
+                          "Grain can not be larger than the selection windows."
+                        ],
+                        "from": [
+                          "The from timestamp must be in the past."
+                        ],
+                        "to": [
+                          "The to timestamp must be greater than the from timestamp."
+                        ]
+                      },
+                      "additionalProperties": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "example": "The from timestamp must be in the past."
+                        }
+                      }
+                    }
+                  },
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden - Access denied due to insufficient permissions, or the requested project/environment does not exist (to prevent information disclosure)"
+          },
+          "499": {
+            "description": "Too much data fetched - The query is attempting to retrieve too much data. Please narrow down the query by reducing the time range or adding more specific filters to retrieve less data.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "error",
+                    "message"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "Too much data fetched"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Please reduce the time range or add more filters to narrow down the query"
+                    }
+                  },
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/projects/{projectId}/environments/{environmentId}/observability/http/edge": {
+      "get": {
+        "tags": [
+          "Http Traffic"
+        ],
+        "summary": "Get edge HTTP traffic timeline",
+        "description": "Returns the HTTP requests and bandwidth seen by the global edge (Cloudflare) for the environment, including requests answered from the edge cache or blocked there. The grain is at least 60 seconds.",
+        "operationId": "http_metrics_edge_timeline",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "description": "The unique identifier of the Upsun project",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "[a-z0-9]+",
+              "example": "abc123def456"
+            }
+          },
+          {
+            "name": "environmentId",
+            "in": "path",
+            "description": "The environment identifier",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": ".+",
+              "example": "main"
+            }
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "description": "Start timestamp for the time range (Unix timestamp in seconds)",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "example": 1704067200
+            }
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "description": "End timestamp for the time range (Unix timestamp in seconds)",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "example": 1704153600
+            }
+          },
+          {
+            "name": "grain",
+            "in": "query",
+            "description": "Seconds between two points, at least 60",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "example": 60,
+              "minimum": 60
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Edge HTTP traffic timeline retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "_grain",
+                    "_from",
+                    "_to",
+                    "_project_id",
+                    "_environment_id",
+                    "_environment_type",
+                    "_branch_machine_name",
+                    "top_hits_timeline"
+                  ],
+                  "properties": {
+                    "_grain": {
+                      "description": "Data granularity in seconds, at least 60",
+                      "type": "integer",
+                      "example": 60,
+                      "minimum": 60
+                    },
+                    "_from": {
+                      "description": "Query start timestamp",
+                      "type": "integer",
+                      "example": 1704067200
+                    },
+                    "_to": {
+                      "description": "Query end timestamp",
+                      "type": "integer",
+                      "example": 1704153600
+                    },
+                    "_project_id": {
+                      "description": "Project identifier",
+                      "type": "string",
+                      "example": "abc123def456"
+                    },
+                    "_environment_id": {
+                      "description": "Environment identifier",
+                      "type": "string",
+                      "example": "main"
+                    },
+                    "_environment_type": {
+                      "description": "Environment type",
+                      "type": "string",
+                      "example": "production",
+                      "enum": [
+                        "production",
+                        "staging",
+                        "development"
+                      ]
+                    },
+                    "_branch_machine_name": {
+                      "description": "Branch machine name",
+                      "type": "string",
+                      "example": "main-bvxea6i"
+                    },
+                    "top_hits_timeline": {
+                      "description": "Edge HTTP traffic over time",
+                      "required": [
+                        "data"
+                      ],
+                      "properties": {
+                        "data": {
+                          "description": "Time-series edge HTTP traffic. Fields are omitted for timestamps with no data.",
+                          "type": "array",
+                          "items": {
+                            "required": [
+                              "timestamp"
+                            ],
+                            "properties": {
+                              "timestamp": {
+                                "description": "Data point timestamp",
+                                "type": "integer",
+                                "example": 1704067200
+                              },
+                              "_total_count": {
+                                "description": "Requests seen by the edge at this timestamp",
+                                "type": "integer",
+                                "example": 4120
+                              },
+                              "response_size": {
+                                "description": "Bytes sent by the edge to clients",
+                                "type": "integer",
+                                "example": 2097152
+                              },
+                              "codes": {
+                                "description": "HTTP status code distribution of edge responses",
+                                "required": [
+                                  "UNKNOWN",
+                                  "1XX",
+                                  "2XX",
+                                  "3XX",
+                                  "4XX",
+                                  "5XX"
+                                ],
+                                "properties": {
+                                  "UNKNOWN": {
+                                    "type": "integer",
+                                    "example": 0
+                                  },
+                                  "1XX": {
+                                    "type": "integer",
+                                    "example": 0
+                                  },
+                                  "2XX": {
+                                    "type": "integer",
+                                    "example": 3900
+                                  },
+                                  "3XX": {
+                                    "type": "integer",
+                                    "example": 150
+                                  },
+                                  "4XX": {
+                                    "type": "integer",
+                                    "example": 65
+                                  },
+                                  "5XX": {
+                                    "type": "integer",
+                                    "example": 5
+                                  }
+                                },
+                                "type": "object",
+                                "additionalProperties": false
+                              }
+                            },
+                            "type": "object",
+                            "additionalProperties": false
+                          }
                         }
                       },
                       "type": "object",
@@ -18676,6 +18997,17 @@
                 "schema": {
                   "$ref": "#/components/schemas/AcceptedResponse"
                 }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnvironmentMaintenanceRedeployInput"
               }
             }
           }
@@ -37748,6 +38080,17 @@
         ],
         "additionalProperties": false
       },
+      "EnvironmentMaintenanceRedeployInput": {
+        "type": "object",
+        "properties": {
+          "safe": {
+            "type": "boolean",
+            "title": "Safe maintenance redeploy",
+            "description": "Redeploy even if the last state update was not successful, and always upgrade the service images"
+          }
+        },
+        "additionalProperties": false
+      },
       "EnvironmentMergeInput": {
         "type": "object",
         "properties": {
@@ -42541,11 +42884,17 @@
                 "type": "boolean",
                 "title": "Image lifecycle validation enforce",
                 "description": "When True: decommissioned images block code pushes (a version upgrade from a decommissioned image is still allowed); sunset images block only when they were sunset before the project was created. When False, emit warnings only."
+              },
+              "show_dates": {
+                "type": "boolean",
+                "title": "Image lifecycle show dates",
+                "description": "When True, image lifecycle messages include the sunset and decommission dates and the days-remaining countdown. When False, they keep their warning or blocking meaning but carry no date."
               }
             },
             "required": [
               "enabled",
-              "enforce"
+              "enforce",
+              "show_dates"
             ],
             "additionalProperties": false,
             "title": "Image lifecycle validation",
@@ -48933,6 +49282,7 @@
       "name": "User Activity",
       "tags": [
         "Project Activity",
+        "Integration Activity",
         "Environment Activity"
       ]
     },
