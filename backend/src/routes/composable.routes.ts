@@ -2,7 +2,7 @@ import { config } from '../config/env.config.js';
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import { ApiRouter } from '../utils/api.router.js';
-import { ResourceManager, logger, extractConditionalHeaders, setCacheHeaders, sendNotModified } from '../utils/index.js';
+import { ResourceManager, logger, checkClientCache, setCacheHeaders, sendNotModified } from '../utils/index.js';
 import { sendErrorFormatted, sendFormatted } from '../utils/response.format.js';
 import {
   ComposableImageDto,
@@ -52,12 +52,11 @@ composableRouter.route({
   },
   handler: async (req: Request, res: Response) => {
     try {
-      // Load composable resource with metadata, supporting conditional requests
-      const conditionalHeaders = extractConditionalHeaders(req);
-      const { data: composableData, metadata, notModified } = await resourceManager.getResourceWithMetadata('image/composable.json', conditionalHeaders);
+      // Load composable resource with metadata (server-side cache + stale-on-error)
+      const { data: composableData, metadata } = await resourceManager.getResourceWithMetadata('image/composable.json');
 
-      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
-      if (notModified) {
+      // Return 304 when the client's cached representation still matches
+      if (checkClientCache(req, metadata)) {
         return sendNotModified(res, metadata, config.cache.TTL);
       }
 
@@ -132,12 +131,11 @@ composableRouter.route({
       const requestedChannel = typeof req.query.channel === 'string' ? req.query.channel : undefined;
       const queryParams = requestedChannel ? { channel: requestedChannel } : undefined;
 
-      // Load composable resource with metadata, supporting conditional requests
-      const conditionalHeaders = extractConditionalHeaders(req);
-      const { data: composableData, metadata, notModified } = await resourceManager.getResourceWithMetadata('image/composable.json', conditionalHeaders);
+      // Load composable resource with metadata (server-side cache + stale-on-error)
+      const { data: composableData, metadata } = await resourceManager.getResourceWithMetadata('image/composable.json');
 
-      // If upstream returned 304, respond with 304 (avoids unnecessary parsing)
-      if (notModified) {
+      // Return 304 when the client's cached representation still matches
+      if (checkClientCache(req, metadata, queryParams)) {
         return sendNotModified(res, metadata, config.cache.TTL, queryParams);
       }
 
