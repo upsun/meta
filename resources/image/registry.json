@@ -7333,12 +7333,12 @@
     "versions": {
       "8.6": {
         "upsun": {
-          "status": "incoming",
-          "internal_support": false,
+          "status": "supported",
+          "internal_support": true,
           "internal_status": "active"
         },
         "upstream": {
-          "status": "incoming",
+          "status": "supported",
           "releaseDate": "2026-11-19T00:00:00.000Z",
           "eoasFrom": "2028-12-31T00:00:00.000Z",
           "eolFrom": "2030-12-31T00:00:00.000Z",
