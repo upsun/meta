@@ -2364,6 +2364,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -2432,6 +2436,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -2529,6 +2537,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -2590,6 +2602,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -2637,6 +2653,10 @@
           "options": []
         },
         "8.5": {
+          "status": "default",
+          "options": []
+        },
+        "8.6": {
           "status": "default",
           "options": []
         }
@@ -2688,6 +2708,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -2735,6 +2759,10 @@
           "options": []
         },
         "8.5": {
+          "status": "default",
+          "options": []
+        },
+        "8.6": {
           "status": "default",
           "options": []
         }
@@ -2798,6 +2826,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -2817,6 +2849,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -2868,6 +2904,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -2915,6 +2955,10 @@
           "options": []
         },
         "8.5": {
+          "status": "default",
+          "options": []
+        },
+        "8.6": {
           "status": "default",
           "options": []
         }
@@ -2978,6 +3022,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -3021,6 +3069,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -3072,6 +3124,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -3103,6 +3159,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -3154,6 +3214,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -3201,6 +3265,10 @@
           "options": []
         },
         "8.5": {
+          "status": "default",
+          "options": []
+        },
+        "8.6": {
           "status": "default",
           "options": []
         }
@@ -3262,6 +3330,10 @@
           "options": []
         },
         "8.5": {
+          "status": "default",
+          "options": []
+        },
+        "8.6": {
           "status": "default",
           "options": []
         }
@@ -3342,6 +3414,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -3389,6 +3465,10 @@
           "options": []
         },
         "8.5": {
+          "status": "default",
+          "options": []
+        },
+        "8.6": {
           "status": "default",
           "options": []
         }
@@ -3452,6 +3532,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -3481,6 +3565,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -3492,6 +3580,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -3533,6 +3625,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -3584,6 +3680,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -3631,6 +3731,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -3706,6 +3810,12 @@
           "options": [
             "webp"
           ]
+        },
+        "8.6": {
+          "status": "available",
+          "options": [
+            "webp"
+          ]
         }
       }
     },
@@ -3765,6 +3875,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -3877,6 +3991,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -3979,6 +4097,10 @@
         "8.5": {
           "status": "built-in",
           "options": []
+        },
+        "8.6": {
+          "status": "built-in",
+          "options": []
         }
       }
     },
@@ -4040,6 +4162,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -4051,6 +4177,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -4119,6 +4249,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -4166,6 +4300,10 @@
           "options": []
         },
         "8.5": {
+          "status": "default",
+          "options": []
+        },
+        "8.6": {
           "status": "default",
           "options": []
         }
@@ -4271,6 +4409,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -4337,6 +4479,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -4388,6 +4534,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -4485,6 +4635,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -4544,6 +4698,10 @@
           "options": []
         },
         "8.5": {
+          "status": "default",
+          "options": []
+        },
+        "8.6": {
           "status": "default",
           "options": []
         }
@@ -4648,6 +4806,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -4707,6 +4869,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -4770,6 +4936,10 @@
         "8.5": {
           "status": "built-in",
           "options": []
+        },
+        "8.6": {
+          "status": "built-in",
+          "options": []
         }
       }
     },
@@ -4785,6 +4955,10 @@
           "options": []
         },
         "8.4": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -4806,6 +4980,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -4869,6 +5047,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -4930,6 +5112,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -4969,6 +5155,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -5032,6 +5222,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -5091,6 +5285,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -5154,6 +5352,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -5215,6 +5417,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -5262,6 +5468,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -5338,6 +5548,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -5385,6 +5599,10 @@
           "options": []
         },
         "8.5": {
+          "status": "default",
+          "options": []
+        },
+        "8.6": {
           "status": "default",
           "options": []
         }
@@ -5453,6 +5671,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -5493,6 +5715,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -5589,6 +5815,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -5612,6 +5842,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -5673,6 +5907,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -5769,6 +6007,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -5816,6 +6058,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -5867,6 +6113,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -5882,6 +6132,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -5945,6 +6199,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -5992,6 +6250,10 @@
           "options": []
         },
         "8.5": {
+          "status": "default",
+          "options": []
+        },
+        "8.6": {
           "status": "default",
           "options": []
         }
@@ -6043,6 +6305,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -6082,6 +6348,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -6207,6 +6477,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -6309,6 +6583,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -6379,6 +6657,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -6426,6 +6708,10 @@
           "options": []
         },
         "8.5": {
+          "status": "default",
+          "options": []
+        },
+        "8.6": {
           "status": "default",
           "options": []
         }
@@ -6477,6 +6763,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -6526,6 +6816,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -6573,6 +6867,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -6677,6 +6975,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -6726,6 +7028,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -6769,6 +7075,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -6879,6 +7189,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -6945,6 +7259,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -6992,6 +7310,10 @@
           "options": []
         },
         "8.5": {
+          "status": "default",
+          "options": []
+        },
+        "8.6": {
           "status": "default",
           "options": []
         }
@@ -7055,6 +7377,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -7102,6 +7428,10 @@
           "options": []
         },
         "8.5": {
+          "status": "default",
+          "options": []
+        },
+        "8.6": {
           "status": "default",
           "options": []
         }
@@ -7165,6 +7495,10 @@
         "8.5": {
           "status": "available",
           "options": []
+        },
+        "8.6": {
+          "status": "available",
+          "options": []
         }
       }
     },
@@ -7208,6 +7542,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
@@ -7280,6 +7618,10 @@
         "8.5": {
           "status": "default",
           "options": []
+        },
+        "8.6": {
+          "status": "default",
+          "options": []
         }
       }
     },
@@ -7291,6 +7633,10 @@
           "options": []
         },
         "8.5": {
+          "status": "available",
+          "options": []
+        },
+        "8.6": {
           "status": "available",
           "options": []
         }
