@@ -457,9 +457,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "26.8.46.6",
+            "raw": "26.8.47.5",
             "majorMinor": "26.8",
-            "normalized": "26.8.46"
+            "normalized": "26.8.47"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -7017,9 +7017,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "2.19.7",
+            "raw": "2.19.8",
             "majorMinor": "2.19",
-            "normalized": "2.19.7"
+            "normalized": "2.19.8"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -7057,9 +7057,9 @@
           "min_disk_size": 256,
           "allow_scale_up": null,
           "package_version": {
-            "raw": "3.10.0",
+            "raw": "3.10.1",
             "majorMinor": "3.10",
-            "normalized": "3.10.0"
+            "normalized": "3.10.1"
           },
           "allow_scale_down": null,
           "storage_mount_point": "/mnt",
@@ -7240,9 +7240,9 @@
           "min_disk_size": 256,
           "allow_scale_up": true,
           "package_version": {
-            "raw": "8.0.50-1debian12",
+            "raw": "8.0.51-1debian12",
             "majorMinor": "8.0",
-            "normalized": "8.0.50"
+            "normalized": "8.0.51"
           },
           "allow_scale_down": true,
           "storage_mount_point": "/mnt",
@@ -11406,7 +11406,7 @@
           "status": "supported",
           "releaseDate": "2026-03-16T00:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2027-03-16T00:00:00.000Z",
+          "eolFrom": "2027-04-30T00:00:00.000Z",
           "isLts": false,
           "isMaintained": true,
           "isEoas": false,
@@ -11442,12 +11442,12 @@
       },
       "7.6": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": true,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": "2024-09-13T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2025-09-15T00:00:00.000Z",
@@ -11486,12 +11486,12 @@
       },
       "7.3": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": "2023-03-15T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2024-03-15T00:00:00.000Z",
@@ -11530,12 +11530,12 @@
       },
       "7.2": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": "2022-09-15T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2023-09-15T00:00:00.000Z",
@@ -11574,12 +11574,12 @@
       },
       "7.1": {
         "upsun": {
-          "status": "retired",
+          "status": "decommissioned",
           "internal_support": false,
-          "internal_status": "sunset"
+          "internal_status": "decommissioned"
         },
         "upstream": {
-          "status": "retired",
+          "status": "decommissioned",
           "releaseDate": "2022-03-15T00:00:00.000Z",
           "eoasFrom": null,
           "eolFrom": "2023-03-15T00:00:00.000Z",
@@ -11626,7 +11626,7 @@
           "status": "supported",
           "releaseDate": "2018-03-15T00:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2027-04-15T00:00:00.000Z",
+          "eolFrom": "2027-04-30T00:00:00.000Z",
           "isLts": true,
           "isMaintained": false,
           "isEoas": true,
@@ -11670,7 +11670,7 @@
           "status": "supported",
           "releaseDate": "2018-03-15T00:00:00.000Z",
           "eoasFrom": null,
-          "eolFrom": "2027-04-15T00:00:00.000Z",
+          "eolFrom": "2027-04-30T00:00:00.000Z",
           "isLts": true,
           "isMaintained": true,
           "isEoas": false,
