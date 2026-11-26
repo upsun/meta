@@ -177,13 +177,14 @@ export class ResourceManager {
    * Read raw resource content from local file system
    */
   private getLocalResourceRaw(filePath: string): string {
-    const localBase = path.resolve(__dirname, this.config.localPath!);
-    const fullPath = this.resolveLocalPath(localBase, filePath);
+    // Keep raw reads aligned with parsed reads to avoid path drift in local mode.
+    const projectRoot = path.resolve(__dirname, '../../..');
+    const resourcesBase = path.resolve(projectRoot, 'resources');
+    const fullPath = this.resolveLocalPath(resourcesBase, filePath);
 
     resourceLogger.debug({
       mode: this.config.mode,
       dirname: __dirname,
-      localPath: this.config.localPath,
       filePath,
       fullPath
     }, 'Reading local raw resource');
@@ -202,8 +203,10 @@ export class ResourceManager {
    * Read raw resource content from local file system with metadata
    */
   private getLocalResourceRawWithMetadata(filePath: string): ResourceWithMetadata<string> {
-    const localBase = path.resolve(__dirname, this.config.localPath!);
-    const fullPath = this.resolveLocalPath(localBase, filePath);
+    // Keep raw reads aligned with parsed reads to avoid path drift in local mode.
+    const projectRoot = path.resolve(__dirname, '../../..');
+    const resourcesBase = path.resolve(projectRoot, 'resources');
+    const fullPath = this.resolveLocalPath(resourcesBase, filePath);
 
     try {
       const content = fs.readFileSync(fullPath, 'utf-8');
