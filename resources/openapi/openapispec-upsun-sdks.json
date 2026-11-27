@@ -1327,7 +1327,7 @@
                                             "example": 1704153600
                                         },
                                         "_agent": {
-                                            "description": "Blackfire Agent UUID",
+                                            "description": "UUID of the Blackfire agent (server ID).",
                                             "type": "string",
                                             "format": "uuid",
                                             "example": "a38f69ca-3b56-4ea6-beac-272b2568164a"
@@ -1912,7 +1912,7 @@
                                             ]
                                         },
                                         "_agent": {
-                                            "description": "Blackfire Agent UUID",
+                                            "description": "UUID of the Blackfire agent (server ID).",
                                             "type": "string",
                                             "format": "uuid",
                                             "example": "a38f69ca-3b56-4ea6-beac-272b2568164a"
@@ -2844,7 +2844,7 @@
                                             "example": 1704153600
                                         },
                                         "_agent": {
-                                            "description": "Blackfire Agent UUID",
+                                            "description": "UUID of the Blackfire agent (server ID).",
                                             "type": "string",
                                             "format": "uuid",
                                             "example": "a38f69ca-3b56-4ea6-beac-272b2568164a"
@@ -3275,7 +3275,7 @@
                                                                             "href": {
                                                                                 "type": "string",
                                                                                 "format": "uri",
-                                                                                "example": "https://api.upsun.com/projects/abc123/environments/main/observability/server/top-spans?transactions%5B0%5D=App%5CController%3A%3Alist&from=1771348620&to=1771435020"
+                                                                                "example": "https://api.upsun.com/projects/abc123/environments/main/observability/server/top-spans?transactions%5B0%5D=App%5CController%3A%3Alist&transactions_mode=1&from=1771348620&to=1771435020"
                                                                             }
                                                                         },
                                                                         "type": "object",
@@ -3429,7 +3429,7 @@
                                                 "top_hit": true,
                                                 "_links": {
                                                     "top_spans": {
-                                                        "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/server/top-spans?transactions%5B0%5D=App%5CController%5CProductController%3A%3Alist&from=1771348620&to=1771435020"
+                                                        "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/server/top-spans?transactions%5B0%5D=App%5CController%5CProductController%3A%3Alist&transactions_mode=1&from=1771348620&to=1771435020"
                                                     },
                                                     "recommendations": {
                                                         "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles/recommendations?transaction=App%5CController%5CProductController%3A%3Alist"
@@ -3452,7 +3452,7 @@
                                                 "top_hit": true,
                                                 "_links": {
                                                     "top_spans": {
-                                                        "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/server/top-spans?transactions%5B0%5D=App%5CController%5CCartController%3A%3Acheckout&from=1771348620&to=1771435020"
+                                                        "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/server/top-spans?transactions%5B0%5D=App%5CController%5CCartController%3A%3Acheckout&transactions_mode=1&from=1771348620&to=1771435020"
                                                     },
                                                     "recommendations": {
                                                         "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles/recommendations?transaction=App%5CController%5CCartController%3A%3Acheckout"
@@ -3475,7 +3475,7 @@
                                                 "top_hit": false,
                                                 "_links": {
                                                     "top_spans": {
-                                                        "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/server/top-spans?transactions%5B0%5D=App%5CController%5CUserController%3A%3Aprofile&from=1771348620&to=1771435020"
+                                                        "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/server/top-spans?transactions%5B0%5D=App%5CController%5CUserController%3A%3Aprofile&transactions_mode=1&from=1771348620&to=1771435020"
                                                     },
                                                     "recommendations": {
                                                         "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles/recommendations?transaction=App%5CController%5CUserController%3A%3Aprofile"
@@ -4172,7 +4172,7 @@
                                             "example": 1704153600
                                         },
                                         "_agent": {
-                                            "description": "Blackfire Agent UUID",
+                                            "description": "UUID of the Blackfire agent (server ID).",
                                             "type": "string",
                                             "format": "uuid",
                                             "example": "a38f69ca-3b56-4ea6-beac-272b2568164a"
@@ -4876,7 +4876,7 @@
                                             "example": "main-bvxea6i"
                                         },
                                         "_agent": {
-                                            "description": "Blackfire Agent UUID",
+                                            "description": "UUID of the Blackfire agent (server ID).",
                                             "type": "string",
                                             "format": "uuid",
                                             "example": "a38f69ca-3b56-4ea6-beac-272b2568164a"
@@ -5012,7 +5012,7 @@
                                             "example": "main-bvxea6i"
                                         },
                                         "_agent": {
-                                            "description": "Blackfire Agent UUID",
+                                            "description": "UUID of the Blackfire agent (server ID).",
                                             "type": "string",
                                             "format": "uuid",
                                             "example": "a38f69ca-3b56-4ea6-beac-272b2568164a"
@@ -5129,7 +5129,7 @@
                                             "example": "main-bvxea6i"
                                         },
                                         "_agent": {
-                                            "description": "Blackfire Agent UUID",
+                                            "description": "UUID of the Blackfire agent (server ID).",
                                             "type": "string",
                                             "format": "uuid",
                                             "example": "a38f69ca-3b56-4ea6-beac-272b2568164a"
@@ -5251,7 +5251,7 @@
                                             "example": "main-bvxea6i"
                                         },
                                         "_agent": {
-                                            "description": "Blackfire Agent UUID",
+                                            "description": "UUID of the Blackfire agent (server ID).",
                                             "type": "string",
                                             "format": "uuid",
                                             "example": "a38f69ca-3b56-4ea6-beac-272b2568164a"
@@ -5457,7 +5457,7 @@
                                             "example": "main-bvxea6i"
                                         },
                                         "_agent": {
-                                            "description": "Blackfire Agent UUID",
+                                            "description": "UUID of the Blackfire agent (server ID).",
                                             "type": "string",
                                             "format": "uuid",
                                             "example": "a38f69ca-3b56-4ea6-beac-272b2568164a"
@@ -5500,6 +5500,11 @@
                                                         "description": "Number of profiles failing this recommendation",
                                                         "type": "integer",
                                                         "example": 15
+                                                    },
+                                                    "profile_uuid": {
+                                                        "description": "UUID of the latest profile that triggered this recommendation. Only present when a latest profile is available.",
+                                                        "type": "string",
+                                                        "format": "uuid"
                                                     },
                                                     "_links": {
                                                         "description": "API links to the latest profile that triggered this recommendation. Only present when a latest profile is available.",
@@ -5648,6 +5653,7 @@
                                                 "name": "tests.symfony.kernel.secret_is_set"
                                             },
                                             "total": 15,
+                                            "profile_uuid": "4b5266a2-fd71-468b-bf05-87b342079cbf",
                                             "_links": {
                                                 "api_timeline": {
                                                     "href": "https://api.upsun.com/projects/abc123def456/environments/main/observability/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/timeline",
@@ -5996,7 +6002,7 @@
                                             "example": "main-bvxea6i"
                                         },
                                         "_agent": {
-                                            "description": "Blackfire Agent UUID",
+                                            "description": "UUID of the Blackfire agent (server ID).",
                                             "type": "string",
                                             "format": "uuid",
                                             "example": "a38f69ca-3b56-4ea6-beac-272b2568164a"
@@ -6202,6 +6208,7 @@
                                                         "description": "Blackfire agent/environment info",
                                                         "properties": {
                                                             "uuid": {
+                                                                "description": "UUID of the Blackfire agent (server ID).",
                                                                 "type": "string",
                                                                 "format": "uuid"
                                                             },
@@ -6209,6 +6216,7 @@
                                                                 "type": "string"
                                                             },
                                                             "env_uuid": {
+                                                                "description": "UUID of the Blackfire environment.",
                                                                 "type": "string",
                                                                 "format": "uuid"
                                                             },
@@ -6268,7 +6276,7 @@
                                                                     "href": {
                                                                         "type": "string",
                                                                         "format": "uri",
-                                                                        "example": "https://blackfire.io/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/graph"
+                                                                        "example": "https://blackfire.io/envs/e5b3c2f1-7d4a-4c8e-9b21-3f6a8d0c5e17/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/graph"
                                                                     },
                                                                     "type": {
                                                                         "type": "string",
@@ -6456,7 +6464,7 @@
                                             "agent": {
                                                 "uuid": "a38f69ca-3b56-4ea6-beac-272b2568164a",
                                                 "name": "Production",
-                                                "env_uuid": "a38f69ca-3b56-4ea6-beac-272b2568164a",
+                                                "env_uuid": "e5b3c2f1-7d4a-4c8e-9b21-3f6a8d0c5e17",
                                                 "is_env": true
                                             },
                                             "has_timeline": true,
@@ -6472,7 +6480,7 @@
                                             },
                                             "_links": {
                                                 "graph_url": {
-                                                    "href": "https://blackfire.io/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/graph",
+                                                    "href": "https://blackfire.io/envs/e5b3c2f1-7d4a-4c8e-9b21-3f6a8d0c5e17/profiles/4b5266a2-fd71-468b-bf05-87b342079cbf/graph",
                                                     "type": "text/html"
                                                 },
                                                 "api_timeline": {
@@ -10269,7 +10277,6 @@
                                                 "http_metrics_timeline_ips",
                                                 "http_metrics_timeline_user_agents",
                                                 "http_metrics_edge_timeline",
-                                                "console_sandbox_access",
                                                 "conprof_applications",
                                                 "conprof_application_filters",
                                                 "conprof_timeline",
@@ -10476,20 +10483,6 @@
                                                             "type": "string",
                                                             "format": "uri",
                                                             "example": "https://api.upsun.com/projects/abc123def456/environments/main/observability/http/edge"
-                                                        }
-                                                    },
-                                                    "type": "object",
-                                                    "additionalProperties": false
-                                                },
-                                                "console_sandbox_access": {
-                                                    "required": [
-                                                        "href"
-                                                    ],
-                                                    "properties": {
-                                                        "href": {
-                                                            "type": "string",
-                                                            "format": "uri",
-                                                            "example": "https://api.upsun.com/projects/abc123def456/environments/main/observability/console/sandbox-access"
                                                         }
                                                     },
                                                     "type": "object",
@@ -29644,7 +29637,11 @@
         },
         "/tickets": {
             "get": {
+                "tags": [
+                    "Support"
+                ],
                 "summary": "List support tickets",
+                "description": "Deprecated. This endpoint will be removed on 2027-03-01.",
                 "operationId": "list-tickets",
                 "parameters": [
                     {
@@ -29720,7 +29717,9 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "list-tickets",
+                "x-tag-id-kebab": "Support",
                 "x-return-types-displayReturn": false,
                 "x-phpdoc": {
                     "return": "object"
@@ -29730,6 +29729,9 @@
                 "x-returnable": true,
                 "x-return-types": [
                     "object"
+                ],
+                "x-description": [
+                    "Deprecated. This endpoint will be removed on 2027-03-01."
                 ]
             },
             "post": {
@@ -29737,6 +29739,7 @@
                     "Support"
                 ],
                 "summary": "Create a new support ticket",
+                "description": "Deprecated. This endpoint will be removed on 2027-03-01.",
                 "operationId": "create-ticket",
                 "requestBody": {
                     "content": {
@@ -29846,6 +29849,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "create-ticket",
                 "x-tag-id-kebab": "Support",
                 "x-return-types-displayReturn": false,
@@ -29858,7 +29862,10 @@
                 "x-return-types": [
                     "\\Upsun\\Model\\Ticket"
                 ],
-                "x-return-types-union": "\\Upsun\\Model\\Ticket"
+                "x-return-types-union": "\\Upsun\\Model\\Ticket",
+                "x-description": [
+                    "Deprecated. This endpoint will be removed on 2027-03-01."
+                ]
             }
         },
         "/tickets/{ticket_id}": {
@@ -29867,6 +29874,7 @@
                     "Support"
                 ],
                 "summary": "Update a ticket",
+                "description": "Deprecated. This endpoint will be removed on 2027-03-01.",
                 "operationId": "update-ticket",
                 "parameters": [
                     {
@@ -29925,6 +29933,7 @@
                         "description": "The ticket was not updated."
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "update-ticket",
                 "x-tag-id-kebab": "Support",
                 "x-return-types-displayReturn": false,
@@ -29937,7 +29946,10 @@
                 "x-return-types": [
                     "\\Upsun\\Model\\Ticket"
                 ],
-                "x-return-types-union": "\\Upsun\\Model\\Ticket"
+                "x-return-types-union": "\\Upsun\\Model\\Ticket",
+                "x-description": [
+                    "Deprecated. This endpoint will be removed on 2027-03-01."
+                ]
             }
         },
         "/tickets/priority": {
@@ -29946,6 +29958,7 @@
                     "Support"
                 ],
                 "summary": "List support ticket priorities",
+                "description": "Deprecated. This endpoint will be removed on 2027-03-01.",
                 "operationId": "list-ticket-priorities",
                 "parameters": [
                     {
@@ -30000,6 +30013,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "list-ticket-priorities",
                 "x-tag-id-kebab": "Support",
                 "x-return-types-displayReturn": true,
@@ -30012,7 +30026,10 @@
                 "x-return-types": [
                     "object[]"
                 ],
-                "x-return-types-union": "array"
+                "x-return-types-union": "array",
+                "x-description": [
+                    "Deprecated. This endpoint will be removed on 2027-03-01."
+                ]
             }
         },
         "/tickets/category": {
@@ -30021,6 +30038,7 @@
                     "Support"
                 ],
                 "summary": "List support ticket categories",
+                "description": "Deprecated. This endpoint will be removed on 2027-03-01.",
                 "operationId": "list-ticket-categories",
                 "parameters": [
                     {
@@ -30067,6 +30085,7 @@
                         }
                     }
                 },
+                "x-deprecated": true,
                 "x-property-id-kebab": "list-ticket-categories",
                 "x-tag-id-kebab": "Support",
                 "x-return-types-displayReturn": true,
@@ -30079,7 +30098,10 @@
                 "x-return-types": [
                     "object[]"
                 ],
-                "x-return-types-union": "array"
+                "x-return-types-union": "array",
+                "x-description": [
+                    "Deprecated. This endpoint will be removed on 2027-03-01."
+                ]
             }
         },
         "/projects/{projectId}/system": {
